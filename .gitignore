@@ -8,11 +8,6 @@
 *.so
 *.pyc
 
-# Per user settings #
-###################
-*.iws
-.mps/workspace.xml
-
 
 # Logs and databases #
 ######################
