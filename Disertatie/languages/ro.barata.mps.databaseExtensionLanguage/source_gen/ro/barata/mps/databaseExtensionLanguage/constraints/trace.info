@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<debug-info>
+  <concept fqn="jetbrains.mps.baseLanguage.structure.BlockStatement" />
+  <concept fqn="jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" />
+  <concept fqn="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+  <concept fqn="jetbrains.mps.baseLanguage.structure.IfStatement" />
+  <concept fqn="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" />
+  <concept fqn="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+  <concept fqn="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+  <concept fqn="jetbrains.mps.baseLanguage.structure.StaticFieldDeclaration" />
+  <concept fqn="jetbrains.mps.baseLanguage.structure.SuperConstructorInvocation" />
+  <root>
+    <file name="ConstraintsAspectDescriptor.java">
+      <unit at="10,0,30,0" name="ro.barata.mps.databaseExtensionLanguage.constraints.ConstraintsAspectDescriptor" />
+    </file>
+  </root>
+  <root nodeRef="r:f121d09d-0814-41b5-ab7f-977f07691406(ro.barata.mps.databaseExtensionLanguage.constraints)/2715870822990583269">
+    <file name="DAOMapping_Constraints.java">
+      <node id="2715870822990583269" at="34,35,35,98" concept="8" />
+      <node id="2715870822990583269" at="38,98,39,135" concept="5" />
+      <node id="2715870822990583269" at="42,44,43,20" concept="6" />
+      <node id="2715870822990583269" at="50,63,51,58" concept="6" />
+      <node id="2715870822993095364" at="55,13,56,253" concept="5" />
+      <node id="2715870822991886800" at="56,253,57,86" concept="5" />
+      <node id="2715870822993153807" at="60,60,61,88" concept="2" />
+      <node id="2715870822991833468" at="64,17,65,253" concept="5" />
+      <node id="2715870822991837448" at="65,253,66,107" concept="5" />
+      <node id="2715870822992508846" at="72,52,73,347" concept="6" />
+      <node id="2715870822990583269" at="80,7,81,22" concept="6" />
+      <node id="2715870822990583269" at="83,0,84,0" concept="7" trace="breakingNode_gq0g4p_a0a0a0a0a1a0b0a1a1" />
+      <node id="2715870822991900706" at="68,0,70,0" concept="4" trace="visit#(Lorg/jetbrains/mps/openapi/language/SAbstractConcept;)V" />
+      <node id="2715870822990583269" at="34,0,37,0" concept="1" trace="DAOMapping_Constraints#()V" />
+      <node id="2715870822993175554" at="59,56,62,19" concept="3" />
+      <node id="2715870822991535964" at="72,0,75,0" concept="4" trace="getName#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljava/lang/String;" />
+      <node id="2715870822990583269" at="41,0,45,0" concept="4" trace="hasOwnScopeProvider#()Z" />
+      <node id="2715870822990583269" at="49,0,53,0" concept="4" trace="getSearchScopeValidatorNode#()Lorg/jetbrains/mps/openapi/model/SNodeReference;" />
+      <node id="2715870822991892458" at="66,107,70,17" concept="2" />
+      <node id="2715870822993149534" at="59,0,64,0" concept="4" trace="visit#(Lorg/jetbrains/mps/openapi/language/SAbstractConcept;)V" />
+      <node id="2715870822991533709" at="70,17,75,16" concept="6" />
+      <node id="2715870822993101663" at="57,86,64,17" concept="2" />
+      <node id="2715870822990583269" at="54,122,76,13" concept="0" />
+      <node id="2715870822990583269" at="53,0,78,0" concept="4" trace="createScope#(Ljetbrains/mps/smodel/IOperationContext;Ljetbrains/mps/smodel/runtime/ReferenceConstraintsContext;)Ljetbrains/mps/scope/Scope;" />
+      <node id="2715870822990583269" at="47,56,78,10" concept="6" />
+      <node id="2715870822990583269" at="45,0,80,0" concept="4" trace="getScopeProvider#()Ljetbrains/mps/smodel/runtime/ReferenceScopeProvider;" />
+      <node id="2715870822990583269" at="39,135,80,7" concept="2" />
+      <node id="2715870822990583269" at="37,0,83,0" concept="4" trace="getNotDefaultSReferenceLinks#()Ljava/util/Map;" />
+      <scope id="2715870822991900707" at="68,56,68,56" />
+      <scope id="2715870822990583269" at="34,35,35,98" />
+      <scope id="2715870822990583269" at="42,44,43,20" />
+      <scope id="2715870822990583269" at="50,63,51,58" />
+      <scope id="2715870822993175556" at="60,60,61,88" />
+      <scope id="2715870822991535970" at="72,52,73,347" />
+      <scope id="2715870822991900706" at="68,0,70,0">
+        <var name="it" id="2715870822991900706" />
+      </scope>
+      <scope id="2715870822990583269" at="34,0,37,0" />
+      <scope id="2715870822993149535" at="59,56,62,19" />
+      <scope id="2715870822991535964" at="72,0,75,0">
+        <var name="child" id="2715870822991535968" />
+      </scope>
+      <scope id="2715870822990583269" at="41,0,45,0" />
+      <scope id="2715870822990583269" at="49,0,53,0" />
+      <scope id="2715870822993149534" at="59,0,64,0">
+        <var name="it" id="2715870822993149534" />
+      </scope>
+      <scope id="2715870822991922888" at="55,13,75,16">
+        <var name="dummy" id="2715870822993095367" />
+        <var name="nodes" id="2715870822991886803" />
+        <var name="obj" id="2715870822991833471" />
+        <var name="subs" id="2715870822991837451" />
+      </scope>
+      <scope id="2715870822990583269" at="54,122,76,13" />
+      <scope id="2715870822990583269" at="53,0,78,0">
+        <var name="_context" id="2715870822990583269" />
+        <var name="operationContext" id="2715870822990583269" />
+      </scope>
+      <scope id="2715870822990583269" at="47,56,78,10" />
+      <scope id="2715870822990583269" at="45,0,80,0" />
+      <scope id="2715870822990583269" at="38,98,81,22">
+        <var name="references" id="2715870822990583269" />
+      </scope>
+      <scope id="2715870822990583269" at="37,0,83,0" />
+      <unit id="2715870822991900706" at="67,55,70,15" name="ro.barata.mps.databaseExtensionLanguage.constraints.DAOMapping_Constraints$3" />
+      <unit id="2715870822991535962" at="71,25,75,15" name="ro.barata.mps.databaseExtensionLanguage.constraints.DAOMapping_Constraints$3" />
+      <unit id="2715870822993149534" at="58,143,64,15" name="ro.barata.mps.databaseExtensionLanguage.constraints.DAOMapping_Constraints$3" />
+      <unit id="2715870822990583269" at="48,19,78,9" name="ro.barata.mps.databaseExtensionLanguage.constraints.DAOMapping_Constraints$2" />
+      <unit id="2715870822990583269" at="40,128,80,5" name="ro.barata.mps.databaseExtensionLanguage.constraints.DAOMapping_Constraints$1" />
+      <unit id="2715870822990583269" at="33,0,85,0" name="ro.barata.mps.databaseExtensionLanguage.constraints.DAOMapping_Constraints" />
+    </file>
+  </root>
+</debug-info>
+
