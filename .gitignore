@@ -1,43 +1,39 @@
-# Windows image file caches
-Thumbs.db
-ehthumbs.db
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+*.pyc
 
-# Folder config file
-Desktop.ini
+# Per user settings #
+###################
+*.iws
+.mps/workspace.xml
 
-# Recycle Bin used on file shares
-$RECYCLE.BIN/
 
-# Windows Installer files
-*.cab
-*.msi
-*.msm
-*.msp
+# Logs and databases #
+######################
+*.log
+*.sql
+*.sqlite
 
-# Windows shortcuts
-*.lnk
-
-# =========================
-# Operating System Files
-# =========================
-
-# OSX
-# =========================
-
+# OS generated files #
+######################
 .DS_Store
-.AppleDouble
-.LSOverride
+ehthumbs.db
+Icon?
+Thumbs.db
 
-# Thumbnails
-._*
+# Compiled folders #
+######################
+test_classes/
+classes/
+classes_gen/
 
-# Files that might appear on external disk
-.Spotlight-V100
-.Trashes
-
-# Directories potentially created on remote AFP share
-.AppleDB
-.AppleDesktop
-Network Trash Folder
-Temporary Items
-.apdisk
+# Other folders #
+######################
+.svn
+.ivy
