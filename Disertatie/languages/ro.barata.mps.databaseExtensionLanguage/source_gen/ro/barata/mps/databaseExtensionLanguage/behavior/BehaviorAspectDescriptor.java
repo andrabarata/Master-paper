@@ -11,19 +11,25 @@ public class BehaviorAspectDescriptor implements jetbrains.mps.smodel.runtime.Be
   }
   public BehaviorDescriptor getDescriptor(String fqName) {
     switch (Arrays.binarySearch(stringSwitchCases_846f5o_a0a0b, fqName)) {
-      case 3:
+      case 5:
         return new DummyConcept_BehaviorDescriptor();
-      case 4:
+      case 6:
         return new EntityMapper_BehaviorDescriptor();
-      case 2:
-        return new DAOString_BehaviorDescriptor();
       case 0:
+        return new DAOAttributeMapping_BehaviorDescriptor();
+      case 4:
+        return new DAOString_BehaviorDescriptor();
+      case 2:
         return new DAOMapping_BehaviorDescriptor();
-      case 1:
+      case 3:
         return new DAOObjectContainer_BehaviorDescriptor();
+      case 1:
+        return new DAOEntity_BehaviorDescriptor();
+      case 7:
+        return new anotherDummy_BehaviorDescriptor();
       default:
         return BehaviorAspectInterpreted.getInstance().getDescriptor(fqName);
     }
   }
-  private static String[] stringSwitchCases_846f5o_a0a0b = new String[]{"ro.barata.mps.databaseExtensionLanguage.structure.DAOMapping", "ro.barata.mps.databaseExtensionLanguage.structure.DAOObjectContainer", "ro.barata.mps.databaseExtensionLanguage.structure.DAOString", "ro.barata.mps.databaseExtensionLanguage.structure.DummyConcept", "ro.barata.mps.databaseExtensionLanguage.structure.EntityMapper"};
+  private static String[] stringSwitchCases_846f5o_a0a0b = new String[]{"ro.barata.mps.databaseExtensionLanguage.structure.DAOAttributeMapping", "ro.barata.mps.databaseExtensionLanguage.structure.DAOEntity", "ro.barata.mps.databaseExtensionLanguage.structure.DAOMapping", "ro.barata.mps.databaseExtensionLanguage.structure.DAOObjectContainer", "ro.barata.mps.databaseExtensionLanguage.structure.DAOString", "ro.barata.mps.databaseExtensionLanguage.structure.DummyConcept", "ro.barata.mps.databaseExtensionLanguage.structure.EntityMapper", "ro.barata.mps.databaseExtensionLanguage.structure.anotherDummy"};
 }

@@ -7,7 +7,7 @@
     <use id="df79127f-1d35-4fad-ba9c-649fbb60fa4a" name="ro.barata.mps.databaseExtensionLanguage" version="-1" />
   </languages>
   <imports>
-    <import index="8x8c" ref="r:a04b5765-cf01-40d4-b535-7c1bb2dbe496(ro.barata.mps.databaseExtensionLanguage.structure)" implicit="true" />
+    <import index="8x8c" ref="r:a04b5765-cf01-40d4-b535-7c1bb2dbe496(ro.barata.mps.databaseExtensionLanguage.structure)" />
   </imports>
   <registry>
     <language id="5cba771a-86ff-496b-a121-6ae83a039560" name="ro.barata.mps.rootLanguage">
@@ -33,6 +33,8 @@
       <concept id="7269698806477901731" name="ro.barata.mps.rootLanguage.structure.EntityType" flags="ng" index="GOmsJ">
         <reference id="7269698806477901778" name="entity" index="GOmtu" />
       </concept>
+      <concept id="7269698806477901593" name="ro.barata.mps.rootLanguage.structure.BooleanType" flags="ng" index="GOmul" />
+      <concept id="7269698806477901634" name="ro.barata.mps.rootLanguage.structure.IntType" flags="ng" index="GOmve" />
       <concept id="7269698806477855622" name="ro.barata.mps.rootLanguage.structure.Module" flags="ng" index="GOFca">
         <child id="7269698806478156224" name="entityResource" index="GPh_c" />
       </concept>
@@ -41,14 +43,15 @@
       </concept>
     </language>
     <language id="df79127f-1d35-4fad-ba9c-649fbb60fa4a" name="ro.barata.mps.databaseExtensionLanguage">
-      <concept id="2715870822990391609" name="ro.barata.mps.databaseExtensionLanguage.structure.DummyConcept" flags="ng" index="3Dw1WA">
-        <child id="2715870822990504157" name="lastName" index="3DwHr2" />
-        <child id="2715870822990504154" name="firstName" index="3DwHr5" />
+      <concept id="943743190239452956" name="ro.barata.mps.databaseExtensionLanguage.structure.DAOEntity" flags="ng" index="1ws$pM">
+        <child id="943743190239453011" name="propertyMappings" index="1ws$oX" />
       </concept>
-      <concept id="2715870822990504099" name="ro.barata.mps.databaseExtensionLanguage.structure.DAOString" flags="ng" index="3DwHqW" />
       <concept id="2715870822990504226" name="ro.barata.mps.databaseExtensionLanguage.structure.DAOMapping" flags="ng" index="3DwHsX">
         <reference id="2715870822991528892" name="conceptReference" index="3DWFmz" />
         <child id="2715870822990504420" name="entity" index="3DwHvV" />
+      </concept>
+      <concept id="2715870822990503683" name="ro.barata.mps.databaseExtensionLanguage.structure.DAOAttributeMapping" flags="ng" index="3DwI$s">
+        <reference id="943743190239444564" name="property" index="1wsEsU" />
       </concept>
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
@@ -98,19 +101,21 @@
   <node concept="2$SKl0" id="1q3tVwYxmN9">
     <ref role="2$SKiI" node="4tZNoJzvMX8" resolve="entityTest" />
   </node>
-  <node concept="3DwHsX" id="2mKHxZclzOG">
+  <node concept="3DwHsX" id="6hc$cxbMqAz">
     <ref role="3DWFmz" to="8x8c:2mKHxZcca$T" resolve="DummyConcept" />
-    <node concept="GOm4x" id="2mKHxZclVxK" role="3DwHvV">
-      <property role="TrG5h" value="a" />
-      <node concept="GOmoK" id="2mKHxZcm1KG" role="GOmpH">
-        <property role="TrG5h" value="b" />
-        <node concept="GOms9" id="2mKHxZcm1KO" role="GPI$P" />
+    <node concept="1ws$pM" id="6hc$cxbMqA$" role="3DwHvV">
+      <property role="TrG5h" value="DummyConcept" />
+      <node concept="3DwI$s" id="6hc$cxbMqAA" role="1ws$oX">
+        <property role="TrG5h" value="firstName" />
+        <ref role="1wsEsU" to="8x8c:6hc$cxbLksL" resolve="firstName" />
+        <node concept="GOmul" id="6hc$cxbMtry" role="GPI$P" />
+      </node>
+      <node concept="3DwI$s" id="6hc$cxbMqAE" role="1ws$oX">
+        <property role="TrG5h" value="lastName" />
+        <ref role="1wsEsU" to="8x8c:6hc$cxbLksN" resolve="lastName" />
+        <node concept="GOmve" id="6hc$cxbMtr_" role="GPI$P" />
       </node>
     </node>
-  </node>
-  <node concept="3Dw1WA" id="2mKHxZcm9TK">
-    <node concept="3DwHqW" id="2mKHxZcm9TL" role="3DwHr5" />
-    <node concept="3DwHqW" id="2mKHxZcm9TM" role="3DwHr2" />
   </node>
 </model>
 

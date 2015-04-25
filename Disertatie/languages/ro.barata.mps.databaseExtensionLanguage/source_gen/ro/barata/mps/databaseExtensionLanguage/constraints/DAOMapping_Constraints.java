@@ -17,17 +17,13 @@ import jetbrains.mps.scope.Scope;
 import jetbrains.mps.smodel.IOperationContext;
 import jetbrains.mps.smodel.runtime.ReferenceConstraintsContext;
 import org.jetbrains.mps.openapi.model.SNode;
-import jetbrains.mps.lang.smodel.generator.smodelAdapter.SConceptOperations;
-import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
-import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
-import java.util.List;
 import jetbrains.mps.internal.collections.runtime.ListSequence;
-import java.util.ArrayList;
-import jetbrains.mps.internal.collections.runtime.IVisitor;
-import org.jetbrains.mps.openapi.language.SAbstractConcept;
-import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
-import jetbrains.mps.scope.ListScope;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SConceptOperations;
+import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
+import jetbrains.mps.internal.collections.runtime.IWhereFilter;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
+import jetbrains.mps.scope.ListScope;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 import jetbrains.mps.smodel.SNodePointer;
 
 public class DAOMapping_Constraints extends BaseConstraintsDescriptor {
@@ -53,19 +49,9 @@ public class DAOMapping_Constraints extends BaseConstraintsDescriptor {
           @Override
           public Scope createScope(final IOperationContext operationContext, final ReferenceConstraintsContext _context) {
             {
-              SNode dummy = SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(MetaAdapterFactory.getConcept(0xdf79127f1d354fadL, 0xba9c649fbb60fa4aL, 0x25b0b61fcc32602cL, "ro.barata.mps.databaseExtensionLanguage.structure.DAOObject")));
-              final List<SNode> nodes = ListSequence.fromList(new ArrayList<SNode>());
-              ListSequence.fromList(SConceptOperations.getAllSubConcepts(SNodeOperations.getConcept(dummy), _context.getModel())).visitAll(new IVisitor<SAbstractConcept>() {
-                public void visit(SAbstractConcept it) {
-                  if (!(it.getName().equals("DAOObject"))) {
-                    ListSequence.fromList(nodes).addElement(SNodeOperations.asNode(it));
-                  }
-                }
-              });
-              SAbstractConcept obj = SNodeOperations.getConcept(SLinkOperations.getTarget(_context.getReferenceNode(), MetaAdapterFactory.getContainmentLink(0xdf79127f1d354fadL, 0xba9c649fbb60fa4aL, 0x25b0b61fcc326122L, 0x25b0b61fcc3261daL, "object")));
-              List<SAbstractConcept> subs = SConceptOperations.getAllSubConcepts(obj, _context.getModel());
-              ListSequence.fromList(subs).visitAll(new IVisitor<SAbstractConcept>() {
-                public void visit(SAbstractConcept it) {
+              Iterable<SNode> nodes = ListSequence.fromList(SConceptOperations.getAllSubConcepts(MetaAdapterFactory.getConcept(0xdf79127f1d354fadL, 0xba9c649fbb60fa4aL, 0x25b0b61fcc32602cL, "ro.barata.mps.databaseExtensionLanguage.structure.DAOObject").getDeclarationNode(), _context.getModel())).where(new IWhereFilter<SNode>() {
+                public boolean accept(SNode it) {
+                  return !(SPropertyOperations.hasValue(it, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "DAOObject"));
                 }
               });
               return new ListScope(nodes) {

@@ -47,10 +47,8 @@
     <classNode dependClassName="java.util.Arrays" />
     <classNode dependClassName="java.util.Collection" />
     <classNode dependClassName="java.util.Collections" />
-    <classNode dependClassName="jetbrains.mps.editor.runtime.desctiptor.ConceptEditorHintImpl" />
     <classNode dependClassName="jetbrains.mps.openapi.editor.descriptor.ConceptEditor" />
     <classNode dependClassName="jetbrains.mps.openapi.editor.descriptor.ConceptEditorComponent" />
-    <classNode dependClassName="jetbrains.mps.openapi.editor.descriptor.ConceptEditorHint" />
     <classNode dependClassName="jetbrains.mps.smodel.runtime.ConceptDescriptor" />
     <classNode dependClassName="ro.barata.mps.rootLanguage.editor.Attribute_Editor" />
     <classNode dependClassName="ro.barata.mps.rootLanguage.editor.BooleanType_Editor" />
@@ -63,7 +61,6 @@
     <classNode dependClassName="ro.barata.mps.rootLanguage.editor.SchemaCreator_Editor" />
     <classNode dependClassName="ro.barata.mps.rootLanguage.editor.StringType_Editor" />
     <classNode extendsClassName="jetbrains.mps.openapi.editor.descriptor.EditorAspectDescriptor" />
-    <classNode extendsClassName="jetbrains.mps.openapi.editor.descriptor.EditorHintsProvider" />
   </dependency>
   <dependency className="ro.barata.mps.rootLanguage.editor.EntityResource_Editor" file="EntityResource_Editor.java">
     <classNode dependClassName="java.lang.String" />

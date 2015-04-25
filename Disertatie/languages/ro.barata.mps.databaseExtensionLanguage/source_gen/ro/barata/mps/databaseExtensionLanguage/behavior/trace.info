@@ -2,10 +2,13 @@
 <debug-info>
   <root>
     <file name="BehaviorAspectDescriptor.java">
-      <unit at="9,0,30,0" name="ro.barata.mps.databaseExtensionLanguage.behavior.BehaviorAspectDescriptor" />
+      <unit at="9,0,36,0" name="ro.barata.mps.databaseExtensionLanguage.behavior.BehaviorAspectDescriptor" />
     </file>
-    <file name="DAOAttribute_BehaviorDescriptor.java">
-      <unit at="7,0,15,0" name="ro.barata.mps.databaseExtensionLanguage.behavior.DAOAttribute_BehaviorDescriptor" />
+    <file name="DAOAttributeMapping_BehaviorDescriptor.java">
+      <unit at="7,0,15,0" name="ro.barata.mps.databaseExtensionLanguage.behavior.DAOAttributeMapping_BehaviorDescriptor" />
+    </file>
+    <file name="DAOEntity_BehaviorDescriptor.java">
+      <unit at="7,0,15,0" name="ro.barata.mps.databaseExtensionLanguage.behavior.DAOEntity_BehaviorDescriptor" />
     </file>
     <file name="DAOMapping_BehaviorDescriptor.java">
       <unit at="10,0,21,0" name="ro.barata.mps.databaseExtensionLanguage.behavior.DAOMapping_BehaviorDescriptor" />
@@ -24,6 +27,9 @@
     </file>
     <file name="EntityMapper_BehaviorDescriptor.java">
       <unit at="7,0,15,0" name="ro.barata.mps.databaseExtensionLanguage.behavior.EntityMapper_BehaviorDescriptor" />
+    </file>
+    <file name="anotherDummy_BehaviorDescriptor.java">
+      <unit at="6,0,14,0" name="ro.barata.mps.databaseExtensionLanguage.behavior.anotherDummy_BehaviorDescriptor" />
     </file>
   </root>
 </debug-info>

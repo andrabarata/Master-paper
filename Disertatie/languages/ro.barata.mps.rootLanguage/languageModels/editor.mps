@@ -25,12 +25,6 @@
       <concept id="1080736578640" name="jetbrains.mps.lang.editor.structure.BaseEditorComponent" flags="ig" index="2wURMF">
         <child id="1080736633877" name="cellModel" index="2wV5jI" />
       </concept>
-      <concept id="5944657839000868711" name="jetbrains.mps.lang.editor.structure.ConceptEditorContextHints" flags="ig" index="2ABfQD">
-        <child id="5944657839000877563" name="hints" index="2ABdcP" />
-      </concept>
-      <concept id="5944657839003601246" name="jetbrains.mps.lang.editor.structure.ConceptEditorHintDeclaration" flags="ig" index="2BsEeg">
-        <property id="168363875802087287" name="showInUI" index="2gpH_U" />
-      </concept>
       <concept id="1186414536763" name="jetbrains.mps.lang.editor.structure.BooleanStyleSheetItem" flags="ln" index="VOi$J">
         <property id="1186414551515" name="flag" index="VOm3f" />
       </concept>
@@ -98,9 +92,6 @@
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
       <concept id="1133920641626" name="jetbrains.mps.lang.core.structure.BaseConcept" flags="ng" index="2VYdi">
         <property id="1193676396447" name="virtualPackage" index="3GE5qa" />
-      </concept>
-      <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ng" index="TrEIO">
-        <property id="1169194664001" name="name" index="TrG5h" />
       </concept>
     </language>
   </registry>
@@ -427,14 +418,6 @@
         <ref role="1NtTu8" to="h5of:4tZNoJzBc$D" resolve="dropTables" />
       </node>
       <node concept="l2Vlx" id="4tZNoJzBqiT" role="2iSdaV" />
-    </node>
-  </node>
-  <node concept="2ABfQD" id="2mKHxZccS2T">
-    <property role="3GE5qa" value="db.dao" />
-    <property role="TrG5h" value="StructuralHint" />
-    <node concept="2BsEeg" id="2mKHxZccS52" role="2ABdcP">
-      <property role="2gpH_U" value="true" />
-      <property role="TrG5h" value="Structural" />
     </node>
   </node>
 </model>

@@ -12,8 +12,10 @@ public class ConstraintsAspectDescriptor implements jetbrains.mps.smodel.runtime
   }
   public ConstraintsDescriptor getDescriptor(String fqName) {
     switch (Arrays.binarySearch(stringSwitchCases_2qnle6_a0a0b, fqName)) {
-      case 0:
+      case 1:
         return new DAOMapping_Constraints();
+      case 0:
+        return new DAOAttributeMapping_Constraints();
       default:
         return new BaseConstraintsDescriptor(fqName);
     }
@@ -23,7 +25,10 @@ public class ConstraintsAspectDescriptor implements jetbrains.mps.smodel.runtime
     if (id == 0x25b0b61fcc326122L) {
       return new DAOMapping_Constraints();
     }
+    if (id == 0x25b0b61fcc325f03L) {
+      return new DAOAttributeMapping_Constraints();
+    }
     return new BaseConstraintsDescriptor(conceptId);
   }
-  private static String[] stringSwitchCases_2qnle6_a0a0b = new String[]{"ro.barata.mps.databaseExtensionLanguage.structure.DAOMapping"};
+  private static String[] stringSwitchCases_2qnle6_a0a0b = new String[]{"ro.barata.mps.databaseExtensionLanguage.structure.DAOAttributeMapping", "ro.barata.mps.databaseExtensionLanguage.structure.DAOMapping"};
 }
