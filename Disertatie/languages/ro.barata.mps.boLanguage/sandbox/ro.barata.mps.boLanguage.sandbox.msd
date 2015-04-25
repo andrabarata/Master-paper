@@ -6,13 +6,20 @@
     </modelRoot>
   </models>
   <sourcePath />
+  <dependencies>
+    <dependency reexport="false">d9d0a256-4d64-40cf-b5a3-70c8c237890b(ro.barata.mps.boLanguage)</dependency>
+    <dependency reexport="false">5cba771a-86ff-496b-a121-6ae83a039560(ro.barata.mps.databaseLanguage)</dependency>
+  </dependencies>
   <usedLanguages>
     <usedLanguage>d9d0a256-4d64-40cf-b5a3-70c8c237890b(ro.barata.mps.boLanguage)</usedLanguage>
     <usedLanguage>ceab5195-25ea-4f22-9b92-103b95ca8c0c(jetbrains.mps.lang.core)</usedLanguage>
+    <usedLanguage>5cba771a-86ff-496b-a121-6ae83a039560(ro.barata.mps.databaseLanguage)</usedLanguage>
   </usedLanguages>
   <languageVersions>
+    <language id="4caf0310-491e-41f5-8a9b-2006b3a94898" fqName="jetbrains.mps.execution.util" version="0" />
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" fqName="jetbrains.mps.lang.core" version="1" />
     <language id="d9d0a256-4d64-40cf-b5a3-70c8c237890b" fqName="ro.barata.mps.boLanguage" version="-1" />
+    <language id="5cba771a-86ff-496b-a121-6ae83a039560" fqName="ro.barata.mps.databaseLanguage" version="0" />
   </languageVersions>
 </solution>
 

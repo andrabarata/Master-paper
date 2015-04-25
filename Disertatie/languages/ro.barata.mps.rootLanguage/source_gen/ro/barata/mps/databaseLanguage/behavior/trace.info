@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<debug-info>
+  <concept fqn="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+  <concept fqn="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+  <concept fqn="jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" />
+  <root>
+    <file name="Attribute_BehaviorDescriptor.java">
+      <unit at="10,0,21,0" name="ro.barata.mps.databaseLanguage.behavior.Attribute_BehaviorDescriptor" />
+    </file>
+    <file name="BehaviorAspectDescriptor.java">
+      <unit at="9,0,48,0" name="ro.barata.mps.databaseLanguage.behavior.BehaviorAspectDescriptor" />
+    </file>
+    <file name="BooleanType_BehaviorDescriptor.java">
+      <unit at="6,0,14,0" name="ro.barata.mps.databaseLanguage.behavior.BooleanType_BehaviorDescriptor" />
+    </file>
+    <file name="DAOAttributeMapper_BehaviorDescriptor.java">
+      <unit at="6,0,14,0" name="ro.barata.mps.databaseLanguage.behavior.DAOAttributeMapper_BehaviorDescriptor" />
+    </file>
+    <file name="DAOEntityMapper_BehaviorDescriptor.java">
+      <unit at="7,0,15,0" name="ro.barata.mps.databaseLanguage.behavior.DAOEntityMapper_BehaviorDescriptor" />
+    </file>
+    <file name="DAOEntity_BehaviorDescriptor.java">
+      <unit at="6,0,14,0" name="ro.barata.mps.databaseLanguage.behavior.DAOEntity_BehaviorDescriptor" />
+    </file>
+    <file name="DAOMapping_BehaviorDescriptor.java">
+      <unit at="10,0,21,0" name="ro.barata.mps.databaseLanguage.behavior.DAOMapping_BehaviorDescriptor" />
+    </file>
+    <file name="DAOObject_BehaviorDescriptor.java">
+      <unit at="7,0,15,0" name="ro.barata.mps.databaseLanguage.behavior.DAOObject_BehaviorDescriptor" />
+    </file>
+    <file name="DatabaseSettings_BehaviorDescriptor.java">
+      <unit at="7,0,15,0" name="ro.barata.mps.databaseLanguage.behavior.DatabaseSettings_BehaviorDescriptor" />
+    </file>
+    <file name="EntityResource_BehaviorDescriptor.java">
+      <unit at="10,0,21,0" name="ro.barata.mps.databaseLanguage.behavior.EntityResource_BehaviorDescriptor" />
+    </file>
+    <file name="EntityType_BehaviorDescriptor.java">
+      <unit at="6,0,14,0" name="ro.barata.mps.databaseLanguage.behavior.EntityType_BehaviorDescriptor" />
+    </file>
+    <file name="Entity_BehaviorDescriptor.java">
+      <unit at="10,0,21,0" name="ro.barata.mps.databaseLanguage.behavior.Entity_BehaviorDescriptor" />
+    </file>
+    <file name="IntType_BehaviorDescriptor.java">
+      <unit at="6,0,14,0" name="ro.barata.mps.databaseLanguage.behavior.IntType_BehaviorDescriptor" />
+    </file>
+    <file name="Module_BehaviorDescriptor.java">
+      <unit at="10,0,21,0" name="ro.barata.mps.databaseLanguage.behavior.Module_BehaviorDescriptor" />
+    </file>
+    <file name="PrimaryType_BehaviorDescriptor.java">
+      <unit at="6,0,14,0" name="ro.barata.mps.databaseLanguage.behavior.PrimaryType_BehaviorDescriptor" />
+    </file>
+    <file name="SchemaCreator_BehaviorDescriptor.java">
+      <unit at="10,0,24,0" name="ro.barata.mps.databaseLanguage.behavior.SchemaCreator_BehaviorDescriptor" />
+    </file>
+    <file name="StringType_BehaviorDescriptor.java">
+      <unit at="6,0,14,0" name="ro.barata.mps.databaseLanguage.behavior.StringType_BehaviorDescriptor" />
+    </file>
+    <file name="Type_BehaviorDescriptor.java">
+      <unit at="11,0,25,0" name="ro.barata.mps.databaseLanguage.behavior.Type_BehaviorDescriptor" />
+    </file>
+  </root>
+  <root nodeRef="r:330110a4-0a87-4cc0-a72b-63c9198f45d4(ro.barata.mps.databaseLanguage.behavior)/2715870822990233208">
+    <file name="Attribute_Behavior.java">
+      <node id="2715870822990032981" at="12,78,13,176" concept="0" />
+      <node id="2715870822990039756" at="13,176,14,209" concept="0" />
+      <node id="2715870822990068021" at="14,209,15,355" concept="0" />
+      <node id="2715870822990241917" at="15,355,16,36" concept="1" />
+      <node id="2715870822990233208" at="10,0,12,0" concept="2" trace="init#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <node id="2715870822990233208" at="12,0,18,0" concept="2" trace="call_getCamelName_2715870822990233265#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljava/lang/String;" />
+      <scope id="2715870822990233210" at="10,43,10,43" />
+      <scope id="2715870822990233208" at="10,0,12,0">
+        <var name="thisNode" id="2715870822990233208" />
+      </scope>
+      <scope id="2715870822990233267" at="12,78,16,36">
+        <var name="firstLetter" id="2715870822990039759" />
+        <var name="nodeName" id="2715870822990032984" />
+        <var name="restOfName" id="2715870822990068024" />
+      </scope>
+      <scope id="2715870822990233208" at="12,0,18,0">
+        <var name="thisNode" id="2715870822990233208" />
+      </scope>
+      <unit id="2715870822990233208" at="9,0,19,0" name="ro.barata.mps.databaseLanguage.behavior.Attribute_Behavior" />
+    </file>
+  </root>
+</debug-info>
+

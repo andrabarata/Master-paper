@@ -9,6 +9,7 @@ import java.util.Collection;
 import jetbrains.mps.generator.runtime.TemplateModule;
 import jetbrains.mps.generator.runtime.TemplateUtil;
 import jetbrains.mps.smodel.runtime.LanguageAspectDescriptor;
+import jetbrains.mps.smodel.runtime.StructureAspectDescriptor;
 
 public class Language extends LanguageRuntime {
   public static String MODULE_REF = "d9d0a256-4d64-40cf-b5a3-70c8c237890b(ro.barata.mps.boLanguage)";
@@ -29,7 +30,7 @@ public class Language extends LanguageRuntime {
   }
   @Override
   protected String[] getExtendedLanguageIDs() {
-    return new String[]{};
+    return new String[]{"ro.barata.mps.databaseLanguage"};
   }
   @Override
   public Collection<TemplateModule> getGenerators() {
@@ -37,6 +38,9 @@ public class Language extends LanguageRuntime {
   }
   @Override
   protected <T extends LanguageAspectDescriptor> T createAspectDescriptor(Class<T> descriptorClass) {
+    if (descriptorClass == StructureAspectDescriptor.class) {
+      return (T) new ro.barata.mps.boLanguage.structure.StructureAspectDescriptor();
+    }
     return super.createAspectDescriptor(descriptorClass);
   }
 }
