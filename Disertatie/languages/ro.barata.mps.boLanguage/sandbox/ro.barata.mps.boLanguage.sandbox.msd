@@ -5,6 +5,9 @@
       <sourceRoot location="models" />
     </modelRoot>
   </models>
+  <stubModelEntries>
+    <stubModelEntry path="C:/Users/Andra/Documents/GitHub/Master-paper/Disertatie/languages/ro.barata.mps.rootLanguage/lib/ojdbc6.jar" />
+  </stubModelEntries>
   <sourcePath />
   <dependencies>
     <dependency reexport="false">d9d0a256-4d64-40cf-b5a3-70c8c237890b(ro.barata.mps.boLanguage)</dependency>
