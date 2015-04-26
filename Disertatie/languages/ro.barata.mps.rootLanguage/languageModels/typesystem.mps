@@ -182,7 +182,7 @@
   </registry>
   <node concept="18kY7G" id="6hc$cxbSc$$">
     <property role="TrG5h" value="check_DAOEntityMapper" />
-    <property role="3GE5qa" value="db.mapping" />
+    <property role="3GE5qa" value="db.dao" />
     <node concept="3clFbS" id="6hc$cxbSc$_" role="18ibNy">
       <node concept="3cpWs8" id="6hc$cxbScI0" role="3cqZAp">
         <node concept="3cpWsn" id="6hc$cxbScI1" role="3cpWs9">
@@ -301,7 +301,7 @@
     </node>
   </node>
   <node concept="Q5z_Y" id="6hc$cxbSsG_">
-    <property role="3GE5qa" value="db.mapping" />
+    <property role="3GE5qa" value="db.dao" />
     <property role="TrG5h" value="RemoveDupplicates" />
     <node concept="Q5ZZ6" id="6hc$cxbSsGA" role="Q6x$H">
       <node concept="3clFbS" id="6hc$cxbSsGB" role="2VODD2">
@@ -324,7 +324,7 @@
     </node>
   </node>
   <node concept="18kY7G" id="6hc$cxbSvAr">
-    <property role="3GE5qa" value="db.mapping" />
+    <property role="3GE5qa" value="db.dao" />
     <property role="TrG5h" value="CheckForProperties" />
     <node concept="3clFbS" id="6hc$cxbSvAs" role="18ibNy">
       <node concept="3cpWs8" id="6hc$cxbJNBi" role="3cqZAp">

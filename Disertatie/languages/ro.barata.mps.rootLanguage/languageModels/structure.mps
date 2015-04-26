@@ -19,6 +19,7 @@
         <child id="1071489727083" name="linkDeclaration" index="1TKVEi" />
         <child id="1071489727084" name="propertyDeclaration" index="1TKVEl" />
       </concept>
+      <concept id="1169125989551" name="jetbrains.mps.lang.structure.structure.InterfaceConceptDeclaration" flags="ig" index="PlHQZ" />
       <concept id="1169127622168" name="jetbrains.mps.lang.structure.structure.InterfaceConceptReference" flags="ig" index="PrWs8">
         <reference id="1169127628841" name="intfc" index="PrY4T" />
       </concept>
@@ -48,7 +49,7 @@
   </registry>
   <node concept="1TIwiD" id="6jza8L8c$UW">
     <property role="TrG5h" value="Attribute" />
-    <property role="3GE5qa" value="db.dao" />
+    <property role="3GE5qa" value="db.model" />
     <property role="R5$K7" value="false" />
     <property role="R5$K2" value="false" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
@@ -68,13 +69,13 @@
   </node>
   <node concept="1TIwiD" id="6jza8L8c$Wp">
     <property role="TrG5h" value="BooleanType" />
-    <property role="3GE5qa" value="db.dao" />
+    <property role="3GE5qa" value="db.model" />
     <property role="34LRSv" value="boolean" />
     <ref role="1TJDcQ" node="6hc$cxbNw08" resolve="PrimaryType" />
   </node>
   <node concept="1TIwiD" id="6jza8L8c$AH">
     <property role="TrG5h" value="Entity" />
-    <property role="3GE5qa" value="db.dao" />
+    <property role="3GE5qa" value="db.model" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="PrWs8" id="6jza8L8c$Bf" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
@@ -86,23 +87,9 @@
       <ref role="20lvS9" node="6jza8L8c$UW" resolve="Attribute" />
     </node>
   </node>
-  <node concept="1TIwiD" id="6jza8L8ds7s">
-    <property role="3GE5qa" value="db.dao" />
-    <property role="TrG5h" value="EntityResource" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
-    <node concept="1TJgyj" id="6jza8L8ds88" role="1TKVEi">
-      <property role="20lmBu" value="aggregation" />
-      <property role="20kJfa" value="entities" />
-      <property role="20lbJX" value="0..n" />
-      <ref role="20lvS9" node="6jza8L8c$AH" resolve="Entity" />
-    </node>
-    <node concept="PrWs8" id="4tZNoJzBczD" role="PzmwI">
-      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
-    </node>
-  </node>
   <node concept="1TIwiD" id="6jza8L8c$Yz">
     <property role="TrG5h" value="EntityType" />
-    <property role="3GE5qa" value="db.dao" />
+    <property role="3GE5qa" value="db.model" />
     <ref role="1TJDcQ" node="6jza8L8c$VF" resolve="Type" />
     <node concept="1TJgyj" id="6jza8L8c$Zi" role="1TKVEi">
       <property role="20lmBu" value="reference" />
@@ -113,28 +100,13 @@
   </node>
   <node concept="1TIwiD" id="6jza8L8c$X2">
     <property role="TrG5h" value="IntType" />
-    <property role="3GE5qa" value="db.dao" />
+    <property role="3GE5qa" value="db.model" />
     <property role="34LRSv" value="int" />
     <ref role="1TJDcQ" node="6hc$cxbNw08" resolve="PrimaryType" />
   </node>
-  <node concept="1TIwiD" id="6jza8L8cpI6">
-    <property role="TrG5h" value="Module" />
-    <property role="3GE5qa" value="db.dao" />
-    <property role="19KtqR" value="true" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
-    <node concept="PrWs8" id="6jza8L8c$AD" role="PzmwI">
-      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
-    </node>
-    <node concept="1TJgyj" id="6jza8L8dz70" role="1TKVEi">
-      <property role="20lmBu" value="aggregation" />
-      <property role="20kJfa" value="entityResource" />
-      <property role="20lbJX" value="1" />
-      <ref role="20lvS9" node="6jza8L8ds7s" resolve="EntityResource" />
-    </node>
-  </node>
   <node concept="1TIwiD" id="6jza8L8c$Y5">
     <property role="TrG5h" value="StringType" />
-    <property role="3GE5qa" value="db.dao" />
+    <property role="3GE5qa" value="db.model" />
     <property role="34LRSv" value="string" />
     <ref role="1TJDcQ" node="6hc$cxbNw08" resolve="PrimaryType" />
   </node>
@@ -142,7 +114,7 @@
     <property role="R5$K7" value="true" />
     <property role="R5$K2" value="false" />
     <property role="TrG5h" value="Type" />
-    <property role="3GE5qa" value="db.dao" />
+    <property role="3GE5qa" value="db.model" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="PrWs8" id="6hc$cxbNOPe" role="PzmwI">
       <ref role="PrY4T" to="tpck:3fifI_xCcJN" resolve="ScopeProvider" />
@@ -151,7 +123,6 @@
   <node concept="1TIwiD" id="4tZNoJzvN9f">
     <property role="TrG5h" value="DatabaseSettings" />
     <property role="3GE5qa" value="db.settings" />
-    <property role="19KtqR" value="true" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyi" id="4tZNoJzxj0X" role="1TKVEl">
       <property role="TrG5h" value="driverName" />
@@ -191,24 +162,30 @@
       <property role="TrG5h" value="dropTables" />
       <ref role="AX2Wp" to="tpck:fKAQMTB" resolve="boolean" />
     </node>
-    <node concept="1TJgyj" id="4tZNoJzBc$_" role="1TKVEi">
-      <property role="20lmBu" value="reference" />
-      <property role="20kJfa" value="moduleReference" />
-      <property role="20lbJX" value="1" />
-      <ref role="20lvS9" node="6jza8L8cpI6" resolve="Module" />
-    </node>
-    <node concept="PrWs8" id="1q3tVwYwSVQ" role="PzmwI">
+    <node concept="PrWs8" id="6hc$cxbU8oR" role="PzmwI">
       <ref role="PrY4T" to="4fqr:431DWIovi3l" resolve="IMainClass" />
+    </node>
+    <node concept="1TJgyj" id="6hc$cxbZD8E" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="databaseSettings" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="4tZNoJzvN9f" resolve="DatabaseSettings" />
+    </node>
+    <node concept="1TJgyj" id="6hc$cxbZD9u" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="mapping" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="6hc$cxbO1se" resolve="DAOMapping" />
     </node>
   </node>
   <node concept="1TIwiD" id="2mKHxZccA4y">
     <property role="TrG5h" value="DAOEntityMapper" />
-    <property role="3GE5qa" value="db.mapping" />
+    <property role="3GE5qa" value="db.dao" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyj" id="2mKHxZccA7$" role="1TKVEi">
       <property role="20lmBu" value="aggregation" />
       <property role="20kJfa" value="entity" />
-      <property role="20lbJX" value="0..1" />
+      <property role="20lbJX" value="1" />
       <ref role="20lvS9" node="OoQmTHqDWs" resolve="DAOEntity" />
     </node>
     <node concept="1TJgyj" id="2mKHxZcgweW" role="1TKVEi">
@@ -220,7 +197,7 @@
   </node>
   <node concept="1TIwiD" id="OoQmTHqDWs">
     <property role="TrG5h" value="DAOEntity" />
-    <property role="3GE5qa" value="db.mapping" />
+    <property role="3GE5qa" value="db.dao" />
     <ref role="1TJDcQ" node="6jza8L8c$AH" resolve="Entity" />
     <node concept="1TJgyj" id="OoQmTHqDXj" role="1TKVEi">
       <property role="20lmBu" value="aggregation" />
@@ -233,7 +210,7 @@
     <property role="TrG5h" value="DAOAttributeMapper" />
     <property role="R5$K7" value="false" />
     <property role="R5$K2" value="false" />
-    <property role="3GE5qa" value="db.mapping" />
+    <property role="3GE5qa" value="db.dao" />
     <ref role="1TJDcQ" node="6jza8L8c$UW" resolve="Attribute" />
     <node concept="1TJgyj" id="OoQmTHqBTk" role="1TKVEi">
       <property role="20lmBu" value="reference" />
@@ -242,34 +219,27 @@
       <ref role="20lvS9" to="tpce:f_TJgxF" resolve="PropertyDeclaration" />
     </node>
   </node>
-  <node concept="1TIwiD" id="2mKHxZccA0G">
-    <property role="R5$K7" value="true" />
-    <property role="R5$K2" value="false" />
-    <property role="TrG5h" value="DAOObject" />
-    <property role="3GE5qa" value="db.mapping" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
-  </node>
   <node concept="1TIwiD" id="6hc$cxbNw08">
-    <property role="3GE5qa" value="db.dao" />
+    <property role="3GE5qa" value="db.model" />
     <property role="R5$K7" value="true" />
     <property role="R5$K2" value="false" />
     <property role="TrG5h" value="PrimaryType" />
     <ref role="1TJDcQ" node="6jza8L8c$VF" resolve="Type" />
   </node>
   <node concept="1TIwiD" id="6hc$cxbO1se">
-    <property role="3GE5qa" value="db.mapping" />
+    <property role="3GE5qa" value="db.dao" />
     <property role="TrG5h" value="DAOMapping" />
-    <property role="19KtqR" value="true" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
-    <node concept="PrWs8" id="6hc$cxbO1tk" role="PzmwI">
-      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
-    </node>
     <node concept="1TJgyj" id="6hc$cxbO1tn" role="1TKVEi">
       <property role="20lmBu" value="aggregation" />
       <property role="20kJfa" value="entityMappers" />
       <property role="20lbJX" value="1..n" />
       <ref role="20lvS9" node="2mKHxZccA4y" resolve="DAOEntityMapper" />
     </node>
+  </node>
+  <node concept="PlHQZ" id="6hc$cxbYn_3">
+    <property role="3GE5qa" value="db.dao" />
+    <property role="TrG5h" value="DAOObject" />
   </node>
 </model>
 

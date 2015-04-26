@@ -28,11 +28,9 @@
     <classNode dependClassName="ro.barata.mps.databaseLanguage.behavior.DAOEntity_BehaviorDescriptor" />
     <classNode dependClassName="ro.barata.mps.databaseLanguage.behavior.DAOMapping_BehaviorDescriptor" />
     <classNode dependClassName="ro.barata.mps.databaseLanguage.behavior.DatabaseSettings_BehaviorDescriptor" />
-    <classNode dependClassName="ro.barata.mps.databaseLanguage.behavior.EntityResource_BehaviorDescriptor" />
     <classNode dependClassName="ro.barata.mps.databaseLanguage.behavior.EntityType_BehaviorDescriptor" />
     <classNode dependClassName="ro.barata.mps.databaseLanguage.behavior.Entity_BehaviorDescriptor" />
     <classNode dependClassName="ro.barata.mps.databaseLanguage.behavior.IntType_BehaviorDescriptor" />
-    <classNode dependClassName="ro.barata.mps.databaseLanguage.behavior.Module_BehaviorDescriptor" />
     <classNode dependClassName="ro.barata.mps.databaseLanguage.behavior.SchemaCreator_BehaviorDescriptor" />
     <classNode dependClassName="ro.barata.mps.databaseLanguage.behavior.StringType_BehaviorDescriptor" />
     <classNode extendsClassName="jetbrains.mps.smodel.runtime.BehaviorAspectDescriptor" />
@@ -42,6 +40,13 @@
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="ro.barata.mps.databaseLanguage.behavior.PrimaryType_BehaviorDescriptor" />
     <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="ro.barata.mps.databaseLanguage.behavior.DAOAttributeMapper_Behavior" file="DAOAttributeMapper_Behavior.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
   </dependency>
   <dependency className="ro.barata.mps.databaseLanguage.behavior.DAOAttributeMapper_BehaviorDescriptor" file="DAOAttributeMapper_BehaviorDescriptor.java">
     <classNode dependClassName="java.lang.Override" />
@@ -65,32 +70,13 @@
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />
-    <classNode dependClassName="jetbrains.mps.lang.core.behavior.INamedConcept_Behavior" />
-    <classNode dependClassName="jetbrains.mps.lang.core.behavior.INamedConcept_BehaviorDescriptor" />
-    <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
-    <classNode extendsClassName="java.lang.Cloneable" />
     <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
   </dependency>
-  <dependency className="ro.barata.mps.databaseLanguage.behavior.DAOObject_BehaviorDescriptor" file="DAOObject_BehaviorDescriptor.java">
-    <classNode dependClassName="java.lang.Override" />
-    <classNode dependClassName="java.lang.String" />
-    <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />
-    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
-  </dependency>
+  <dependency className="ro.barata.mps.databaseLanguage.behavior.DAOObject_BehaviorDescriptor" file="DAOObject_BehaviorDescriptor.java" />
   <dependency className="ro.barata.mps.databaseLanguage.behavior.DatabaseSettings_BehaviorDescriptor" file="DatabaseSettings_BehaviorDescriptor.java">
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />
-    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
-  </dependency>
-  <dependency className="ro.barata.mps.databaseLanguage.behavior.EntityResource_BehaviorDescriptor" file="EntityResource_BehaviorDescriptor.java">
-    <classNode dependClassName="java.lang.Override" />
-    <classNode dependClassName="java.lang.String" />
-    <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />
-    <classNode dependClassName="jetbrains.mps.lang.core.behavior.INamedConcept_Behavior" />
-    <classNode dependClassName="jetbrains.mps.lang.core.behavior.INamedConcept_BehaviorDescriptor" />
-    <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
-    <classNode extendsClassName="java.lang.Cloneable" />
     <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
   </dependency>
   <dependency className="ro.barata.mps.databaseLanguage.behavior.EntityType_BehaviorDescriptor" file="EntityType_BehaviorDescriptor.java">
@@ -113,16 +99,6 @@
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="ro.barata.mps.databaseLanguage.behavior.PrimaryType_BehaviorDescriptor" />
-    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
-  </dependency>
-  <dependency className="ro.barata.mps.databaseLanguage.behavior.Module_BehaviorDescriptor" file="Module_BehaviorDescriptor.java">
-    <classNode dependClassName="java.lang.Override" />
-    <classNode dependClassName="java.lang.String" />
-    <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />
-    <classNode dependClassName="jetbrains.mps.lang.core.behavior.INamedConcept_Behavior" />
-    <classNode dependClassName="jetbrains.mps.lang.core.behavior.INamedConcept_BehaviorDescriptor" />
-    <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
-    <classNode extendsClassName="java.lang.Cloneable" />
     <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
   </dependency>
   <dependency className="ro.barata.mps.databaseLanguage.behavior.PrimaryType_BehaviorDescriptor" file="PrimaryType_BehaviorDescriptor.java">

@@ -183,6 +183,7 @@
     </language>
   </registry>
   <node concept="1M2fIO" id="OoQmTHslmJ">
+    <property role="3GE5qa" value="db.dao" />
     <ref role="1M2myG" to="h5of:2mKHxZcc_W3" resolve="DAOAttributeMapper" />
     <node concept="1N5Pfh" id="OoQmTHslnb" role="1Mr941">
       <ref role="1N5Vy1" to="h5of:OoQmTHqBTk" />
@@ -350,6 +351,7 @@
     </node>
   </node>
   <node concept="1M2fIO" id="2mKHxZccTn_">
+    <property role="3GE5qa" value="db.dao" />
     <ref role="1M2myG" to="h5of:2mKHxZccA4y" resolve="DAOEntityMapper" />
     <node concept="1N5Pfh" id="2mKHxZcgwCS" role="1Mr941">
       <ref role="1N5Vy1" to="h5of:2mKHxZcgweW" />
@@ -364,7 +366,7 @@
               <node concept="2OqwBi" id="OoQmTHxMor" role="33vP2m">
                 <node concept="2OqwBi" id="OoQmTHxL5t" role="2Oq$k0">
                   <node concept="3TUQnm" id="OoQmTHxKG1" role="2Oq$k0">
-                    <ref role="3TV0OU" to="h5of:2mKHxZccA0G" resolve="DAOObject" />
+                    <ref role="3TV0OU" to="h5of:6hc$cxbYn_3" resolve="DAOObject" />
                   </node>
                   <node concept="LSoRf" id="OoQmTHxL$z" role="2OqNvi">
                     <node concept="1Q6Npb" id="OoQmTHxLMt" role="1iTxcG" />
@@ -447,7 +449,7 @@
     </node>
   </node>
   <node concept="1M2fIO" id="6hc$cxbNBSB">
-    <property role="3GE5qa" value="db.dao" />
+    <property role="3GE5qa" value="db.model" />
     <ref role="1M2myG" to="h5of:6jza8L8c$Yz" resolve="EntityType" />
     <node concept="1N5Pfh" id="6hc$cxbNBSC" role="1Mr941">
       <ref role="1N5Vy1" to="h5of:6jza8L8c$Zi" />

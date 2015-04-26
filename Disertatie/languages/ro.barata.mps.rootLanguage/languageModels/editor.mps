@@ -97,7 +97,7 @@
     </language>
   </registry>
   <node concept="24kQdi" id="6jza8L8dF9O">
-    <property role="3GE5qa" value="db.dao" />
+    <property role="3GE5qa" value="db.model" />
     <ref role="1XX52x" to="h5of:6jza8L8c$UW" resolve="Attribute" />
     <node concept="3EZMnI" id="6jza8L8dFag" role="2wV5jI">
       <node concept="3F1sOY" id="6jza8L8dFan" role="3EZMnx">
@@ -186,25 +186,14 @@
     </node>
   </node>
   <node concept="24kQdi" id="6jza8L8dII$">
-    <property role="3GE5qa" value="db.dao" />
+    <property role="3GE5qa" value="db.model" />
     <ref role="1XX52x" to="h5of:6jza8L8c$Wp" resolve="BooleanType" />
     <node concept="3F0ifn" id="6jza8L8dIIA" role="2wV5jI">
       <property role="3F0ifm" value="boolean" />
     </node>
   </node>
-  <node concept="24kQdi" id="6jza8L8ds8M">
-    <property role="3GE5qa" value="db.dao" />
-    <ref role="1XX52x" to="h5of:6jza8L8ds7s" resolve="EntityResource" />
-    <node concept="3F2HdR" id="6jza8L8dz5l" role="2wV5jI">
-      <ref role="1NtTu8" to="h5of:6jza8L8ds88" />
-      <node concept="2iRkQZ" id="6jza8L8dz5n" role="2czzBx" />
-      <node concept="lj46D" id="6jza8L8dEat" role="3F10Kt">
-        <property role="VOm3f" value="true" />
-      </node>
-    </node>
-  </node>
   <node concept="24kQdi" id="6jza8L8dPC0">
-    <property role="3GE5qa" value="db.dao" />
+    <property role="3GE5qa" value="db.model" />
     <ref role="1XX52x" to="h5of:6jza8L8c$Yz" resolve="EntityType" />
     <node concept="1iCGBv" id="6jza8L8dPCN" role="2wV5jI">
       <ref role="1NtTu8" to="h5of:6jza8L8c$Zi" />
@@ -217,7 +206,7 @@
     </node>
   </node>
   <node concept="24kQdi" id="6jza8L8ds99">
-    <property role="3GE5qa" value="db.dao" />
+    <property role="3GE5qa" value="db.model" />
     <ref role="1XX52x" to="h5of:6jza8L8c$AH" resolve="Entity" />
     <node concept="3EZMnI" id="6jza8L8ds9n" role="2wV5jI">
       <node concept="3F0ifn" id="6jza8L8ds9u" role="3EZMnx">
@@ -252,36 +241,14 @@
     </node>
   </node>
   <node concept="24kQdi" id="6jza8L8dHti">
-    <property role="3GE5qa" value="db.dao" />
+    <property role="3GE5qa" value="db.model" />
     <ref role="1XX52x" to="h5of:6jza8L8c$X2" resolve="IntType" />
     <node concept="3F0ifn" id="6jza8L8dIHB" role="2wV5jI">
       <property role="3F0ifm" value="int" />
     </node>
   </node>
-  <node concept="24kQdi" id="6jza8L8dz6r">
-    <property role="3GE5qa" value="db.dao" />
-    <ref role="1XX52x" to="h5of:6jza8L8cpI6" resolve="Module" />
-    <node concept="3EZMnI" id="6jza8L8dz6t" role="2wV5jI">
-      <node concept="3F0ifn" id="6jza8L8dz6$" role="3EZMnx">
-        <property role="3F0ifm" value="module" />
-      </node>
-      <node concept="3F0A7n" id="6jza8L8dz6E" role="3EZMnx">
-        <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
-      </node>
-      <node concept="3F0ifn" id="6jza8L8dz6M" role="3EZMnx">
-        <property role="3F0ifm" value=":" />
-        <node concept="ljvvj" id="6jza8L8dz6R" role="3F10Kt">
-          <property role="VOm3f" value="true" />
-        </node>
-      </node>
-      <node concept="3F1sOY" id="6jza8L8dz7E" role="3EZMnx">
-        <ref role="1NtTu8" to="h5of:6jza8L8dz70" />
-      </node>
-      <node concept="l2Vlx" id="6jza8L8dz6w" role="2iSdaV" />
-    </node>
-  </node>
   <node concept="24kQdi" id="6jza8L8dIIq">
-    <property role="3GE5qa" value="db.dao" />
+    <property role="3GE5qa" value="db.model" />
     <ref role="1XX52x" to="h5of:6jza8L8c$Y5" resolve="StringType" />
     <node concept="3F0ifn" id="6jza8L8dIIs" role="2wV5jI">
       <property role="3F0ifm" value="string" />
@@ -291,8 +258,14 @@
     <property role="3GE5qa" value="db.settings" />
     <ref role="1XX52x" to="h5of:4tZNoJzvN9f" resolve="DatabaseSettings" />
     <node concept="3EZMnI" id="4tZNoJzwbiK" role="2wV5jI">
+      <node concept="3F0ifn" id="6hc$cxc0tk6" role="3EZMnx">
+        <property role="3F0ifm" value="" />
+        <node concept="ljvvj" id="6hc$cxc0tkW" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
       <node concept="3F0ifn" id="4tZNoJzwbiR" role="3EZMnx">
-        <property role="3F0ifm" value="Database:{" />
+        <property role="3F0ifm" value="Database:" />
         <node concept="ljvvj" id="4tZNoJzwbiX" role="3F10Kt">
           <property role="VOm3f" value="true" />
         </node>
@@ -374,26 +347,8 @@
     <ref role="1XX52x" to="h5of:4tZNoJzBczb" resolve="SchemaCreator" />
     <node concept="3EZMnI" id="4tZNoJzBqiQ" role="2wV5jI">
       <node concept="3F0ifn" id="4tZNoJzBqiX" role="3EZMnx">
-        <property role="3F0ifm" value="Database export:" />
+        <property role="3F0ifm" value="Database configuration:" />
         <node concept="ljvvj" id="4tZNoJzBqj0" role="3F10Kt">
-          <property role="VOm3f" value="true" />
-        </node>
-      </node>
-      <node concept="3F0ifn" id="4tZNoJzBqoR" role="3EZMnx">
-        <property role="3F0ifm" value="Reference: " />
-        <node concept="lj46D" id="4tZNoJzBqps" role="3F10Kt">
-          <property role="VOm3f" value="true" />
-        </node>
-      </node>
-      <node concept="1iCGBv" id="4tZNoJzBqp1" role="3EZMnx">
-        <ref role="1NtTu8" to="h5of:4tZNoJzBc$_" />
-        <node concept="1sVBvm" id="4tZNoJzBqp3" role="1sWHZn">
-          <node concept="3F0A7n" id="4tZNoJzBqpd" role="2wV5jI">
-            <property role="1Intyy" value="true" />
-            <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
-          </node>
-        </node>
-        <node concept="ljvvj" id="4tZNoJzBqpg" role="3F10Kt">
           <property role="VOm3f" value="true" />
         </node>
       </node>
@@ -417,12 +372,33 @@
       </node>
       <node concept="3F0A7n" id="4tZNoJzBqs4" role="3EZMnx">
         <ref role="1NtTu8" to="h5of:4tZNoJzBc$D" resolve="dropTables" />
+        <node concept="ljvvj" id="6hc$cxc0f6w" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="3F1sOY" id="6hc$cxbZDdB" role="3EZMnx">
+        <ref role="1NtTu8" to="h5of:6hc$cxbZD8E" />
+        <node concept="ljvvj" id="6hc$cxbZDe1" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+        <node concept="lj46D" id="6hc$cxbZDe4" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="3F1sOY" id="6hc$cxbZDi3" role="3EZMnx">
+        <ref role="1NtTu8" to="h5of:6hc$cxbZD9u" />
+        <node concept="lj46D" id="6hc$cxbZDiz" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+        <node concept="ljvvj" id="6hc$cxbZDka" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
       </node>
       <node concept="l2Vlx" id="4tZNoJzBqiT" role="2iSdaV" />
     </node>
   </node>
   <node concept="24kQdi" id="OoQmTHqBUo">
-    <property role="3GE5qa" value="db.mapping" />
+    <property role="3GE5qa" value="db.dao" />
     <ref role="1XX52x" to="h5of:2mKHxZcc_W3" resolve="DAOAttributeMapper" />
     <node concept="3EZMnI" id="OoQmTHqDVw" role="2wV5jI">
       <node concept="3F0ifn" id="OoQmTHqDVB" role="3EZMnx">
@@ -452,6 +428,12 @@
       <node concept="3F0A7n" id="6hc$cxbMqBY" role="3EZMnx">
         <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
       </node>
+      <node concept="3F0ifn" id="6hc$cxbZjAR" role="3EZMnx">
+        <property role="3F0ifm" value="is primary key" />
+      </node>
+      <node concept="3F0A7n" id="6hc$cxbZjBA" role="3EZMnx">
+        <ref role="1NtTu8" to="h5of:4tZNoJzBQuz" resolve="isKey" />
+      </node>
       <node concept="l2Vlx" id="OoQmTHqDVz" role="2iSdaV" />
       <node concept="pVoyu" id="6hc$cxbOk_A" role="3F10Kt">
         <property role="VOm3f" value="true" />
@@ -459,7 +441,7 @@
     </node>
   </node>
   <node concept="24kQdi" id="OoQmTHqDYc">
-    <property role="3GE5qa" value="db.mapping" />
+    <property role="3GE5qa" value="db.dao" />
     <ref role="1XX52x" to="h5of:OoQmTHqDWs" resolve="DAOEntity" />
     <node concept="3EZMnI" id="OoQmTHqDZ4" role="2wV5jI">
       <node concept="3F0ifn" id="OoQmTHujXR" role="3EZMnx">
@@ -500,7 +482,7 @@
     </node>
   </node>
   <node concept="24kQdi" id="2mKHxZccA7I">
-    <property role="3GE5qa" value="db.mapping" />
+    <property role="3GE5qa" value="db.dao" />
     <ref role="1XX52x" to="h5of:2mKHxZccA4y" resolve="DAOEntityMapper" />
     <node concept="3EZMnI" id="2mKHxZccBXI" role="2wV5jI">
       <node concept="3F0ifn" id="2mKHxZccBXS" role="3EZMnx">
@@ -534,15 +516,18 @@
     </node>
   </node>
   <node concept="24kQdi" id="6hc$cxbO1tv">
-    <property role="3GE5qa" value="db.mapping" />
+    <property role="3GE5qa" value="db.dao" />
     <ref role="1XX52x" to="h5of:6hc$cxbO1se" resolve="DAOMapping" />
     <node concept="3EZMnI" id="6hc$cxbO1u0" role="2wV5jI">
+      <node concept="3F0ifn" id="6hc$cxc0xTM" role="3EZMnx">
+        <property role="3F0ifm" value="" />
+        <node concept="ljvvj" id="6hc$cxc0xU2" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
       <node concept="3F0ifn" id="6hc$cxbO1u2" role="3EZMnx">
         <property role="3F0ifm" value="Concept configuration" />
-      </node>
-      <node concept="3F0A7n" id="6hc$cxbO1uf" role="3EZMnx">
-        <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
-        <node concept="ljvvj" id="6hc$cxbO9Ub" role="3F10Kt">
+        <node concept="ljvvj" id="6hc$cxbZJ7$" role="3F10Kt">
           <property role="VOm3f" value="true" />
         </node>
       </node>

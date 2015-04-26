@@ -21,6 +21,7 @@
     <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />
     <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
     <classNode dependClassName="ro.barata.mps.databaseLanguage.behavior.Attribute_Behavior" />
+    <classNode dependClassName="ro.barata.mps.databaseLanguage.behavior.DAOAttributeMapper_Behavior" />
   </dependency>
 </dependenciesRoot>
 

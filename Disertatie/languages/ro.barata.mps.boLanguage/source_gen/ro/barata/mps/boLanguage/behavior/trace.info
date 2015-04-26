@@ -5,13 +5,13 @@
       <unit at="9,0,26,0" name="ro.barata.mps.boLanguage.behavior.BehaviorAspectDescriptor" />
     </file>
     <file name="Book_BehaviorDescriptor.java">
-      <unit at="7,0,15,0" name="ro.barata.mps.boLanguage.behavior.Book_BehaviorDescriptor" />
+      <unit at="8,0,16,0" name="ro.barata.mps.boLanguage.behavior.Book_BehaviorDescriptor" />
     </file>
     <file name="PersonHasBook_BehaviorDescriptor.java">
       <unit at="7,0,15,0" name="ro.barata.mps.boLanguage.behavior.PersonHasBook_BehaviorDescriptor" />
     </file>
     <file name="Person_BehaviorDescriptor.java">
-      <unit at="7,0,15,0" name="ro.barata.mps.boLanguage.behavior.Person_BehaviorDescriptor" />
+      <unit at="8,0,16,0" name="ro.barata.mps.boLanguage.behavior.Person_BehaviorDescriptor" />
     </file>
   </root>
 </debug-info>

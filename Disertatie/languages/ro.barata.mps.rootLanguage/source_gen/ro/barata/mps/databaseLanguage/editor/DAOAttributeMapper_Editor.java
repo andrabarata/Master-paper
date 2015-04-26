@@ -35,6 +35,8 @@ public class DAOAttributeMapper_Editor extends DefaultNodeEditor {
     editorCell.addEditorCell(this.createRefNode_cz1bf4_d0(editorContext, node));
     editorCell.addEditorCell(this.createConstant_cz1bf4_e0(editorContext, node));
     editorCell.addEditorCell(this.createProperty_cz1bf4_f0(editorContext, node));
+    editorCell.addEditorCell(this.createConstant_cz1bf4_g0(editorContext, node));
+    editorCell.addEditorCell(this.createProperty_cz1bf4_h0(editorContext, node));
     return editorCell;
   }
   private EditorCell createConstant_cz1bf4_a0(EditorContext editorContext, SNode node) {
@@ -131,6 +133,28 @@ public class DAOAttributeMapper_Editor extends DefaultNodeEditor {
     EditorCell editorCell;
     editorCell = provider.createEditorCell(editorContext);
     editorCell.setCellId("property_name_1");
+    editorCell.setSubstituteInfo(provider.createDefaultSubstituteInfo());
+    SNode attributeConcept = provider.getRoleAttribute();
+    Class attributeKind = provider.getRoleAttributeClass();
+    if (attributeConcept != null) {
+      EditorManager manager = EditorManager.getInstanceFromContext(editorContext);
+      return manager.createNodeRoleAttributeCell(editorContext, attributeConcept, attributeKind, editorCell);
+    } else
+    return editorCell;
+  }
+  private EditorCell createConstant_cz1bf4_g0(EditorContext editorContext, SNode node) {
+    EditorCell_Constant editorCell = new EditorCell_Constant(editorContext, node, "is primary key");
+    editorCell.setCellId("Constant_cz1bf4_g0");
+    editorCell.setDefaultText("");
+    return editorCell;
+  }
+  private EditorCell createProperty_cz1bf4_h0(EditorContext editorContext, SNode node) {
+    CellProviderWithRole provider = new PropertyCellProvider(node, editorContext);
+    provider.setRole("isKey");
+    provider.setNoTargetText("<no isKey>");
+    EditorCell editorCell;
+    editorCell = provider.createEditorCell(editorContext);
+    editorCell.setCellId("property_isKey");
     editorCell.setSubstituteInfo(provider.createDefaultSubstituteInfo());
     SNode attributeConcept = provider.getRoleAttribute();
     Class attributeKind = provider.getRoleAttributeClass();

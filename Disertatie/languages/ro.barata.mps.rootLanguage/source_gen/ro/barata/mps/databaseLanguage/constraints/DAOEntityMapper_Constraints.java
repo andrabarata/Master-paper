@@ -49,7 +49,7 @@ public class DAOEntityMapper_Constraints extends BaseConstraintsDescriptor {
           @Override
           public Scope createScope(final IOperationContext operationContext, final ReferenceConstraintsContext _context) {
             {
-              Iterable<SNode> nodes = ListSequence.fromList(SConceptOperations.getAllSubConcepts(MetaAdapterFactory.getConcept(0x5cba771a86ff496bL, 0xa1216ae83a039560L, 0x25b0b61fcc32602cL, "ro.barata.mps.databaseLanguage.structure.DAOObject").getDeclarationNode(), _context.getModel())).where(new IWhereFilter<SNode>() {
+              Iterable<SNode> nodes = ListSequence.fromList(SConceptOperations.getAllSubConcepts(MetaAdapterFactory.getInterfaceConcept(0x5cba771a86ff496bL, 0xa1216ae83a039560L, 0x644c90c84bf97943L, "ro.barata.mps.databaseLanguage.structure.DAOObject").getDeclarationNode(), _context.getModel())).where(new IWhereFilter<SNode>() {
                 public boolean accept(SNode it) {
                   return !(SPropertyOperations.hasValue(it, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "DAOObject"));
                 }

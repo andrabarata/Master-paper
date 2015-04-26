@@ -31,16 +31,12 @@ public class EditorAspectDescriptorImpl implements EditorAspectDescriptor {
       case 7:
         return Collections.<ConceptEditor>singletonList(new Entity_Editor());
       case 8:
-        return Collections.<ConceptEditor>singletonList(new EntityResource_Editor());
-      case 9:
         return Collections.<ConceptEditor>singletonList(new EntityType_Editor());
-      case 10:
+      case 9:
         return Collections.<ConceptEditor>singletonList(new IntType_Editor());
-      case 11:
-        return Collections.<ConceptEditor>singletonList(new Module_Editor());
-      case 12:
+      case 10:
         return Collections.<ConceptEditor>singletonList(new SchemaCreator_Editor());
-      case 13:
+      case 11:
         return Collections.<ConceptEditor>singletonList(new StringType_Editor());
       default:
     }
@@ -51,5 +47,5 @@ public class EditorAspectDescriptorImpl implements EditorAspectDescriptor {
   }
 
 
-  private static String[] stringSwitchCases_xbvbvu_a0a0b = new String[]{"ro.barata.mps.databaseLanguage.structure.Attribute", "ro.barata.mps.databaseLanguage.structure.BooleanType", "ro.barata.mps.databaseLanguage.structure.DAOAttributeMapper", "ro.barata.mps.databaseLanguage.structure.DAOEntity", "ro.barata.mps.databaseLanguage.structure.DAOEntityMapper", "ro.barata.mps.databaseLanguage.structure.DAOMapping", "ro.barata.mps.databaseLanguage.structure.DatabaseSettings", "ro.barata.mps.databaseLanguage.structure.Entity", "ro.barata.mps.databaseLanguage.structure.EntityResource", "ro.barata.mps.databaseLanguage.structure.EntityType", "ro.barata.mps.databaseLanguage.structure.IntType", "ro.barata.mps.databaseLanguage.structure.Module", "ro.barata.mps.databaseLanguage.structure.SchemaCreator", "ro.barata.mps.databaseLanguage.structure.StringType"};
+  private static String[] stringSwitchCases_xbvbvu_a0a0b = new String[]{"ro.barata.mps.databaseLanguage.structure.Attribute", "ro.barata.mps.databaseLanguage.structure.BooleanType", "ro.barata.mps.databaseLanguage.structure.DAOAttributeMapper", "ro.barata.mps.databaseLanguage.structure.DAOEntity", "ro.barata.mps.databaseLanguage.structure.DAOEntityMapper", "ro.barata.mps.databaseLanguage.structure.DAOMapping", "ro.barata.mps.databaseLanguage.structure.DatabaseSettings", "ro.barata.mps.databaseLanguage.structure.Entity", "ro.barata.mps.databaseLanguage.structure.EntityType", "ro.barata.mps.databaseLanguage.structure.IntType", "ro.barata.mps.databaseLanguage.structure.SchemaCreator", "ro.barata.mps.databaseLanguage.structure.StringType"};
 }

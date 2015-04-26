@@ -18,18 +18,14 @@ public class BehaviorAspectDescriptor implements jetbrains.mps.smodel.runtime.Be
       case 7:
         return new Entity_BehaviorDescriptor();
       case 8:
-        return new EntityResource_BehaviorDescriptor();
-      case 9:
         return new EntityType_BehaviorDescriptor();
-      case 10:
+      case 9:
         return new IntType_BehaviorDescriptor();
       case 11:
-        return new Module_BehaviorDescriptor();
-      case 13:
         return new StringType_BehaviorDescriptor();
       case 6:
         return new DatabaseSettings_BehaviorDescriptor();
-      case 12:
+      case 10:
         return new SchemaCreator_BehaviorDescriptor();
       case 4:
         return new DAOEntityMapper_BehaviorDescriptor();
@@ -43,5 +39,5 @@ public class BehaviorAspectDescriptor implements jetbrains.mps.smodel.runtime.Be
         return BehaviorAspectInterpreted.getInstance().getDescriptor(fqName);
     }
   }
-  private static String[] stringSwitchCases_846f5o_a0a0b = new String[]{"ro.barata.mps.databaseLanguage.structure.Attribute", "ro.barata.mps.databaseLanguage.structure.BooleanType", "ro.barata.mps.databaseLanguage.structure.DAOAttributeMapper", "ro.barata.mps.databaseLanguage.structure.DAOEntity", "ro.barata.mps.databaseLanguage.structure.DAOEntityMapper", "ro.barata.mps.databaseLanguage.structure.DAOMapping", "ro.barata.mps.databaseLanguage.structure.DatabaseSettings", "ro.barata.mps.databaseLanguage.structure.Entity", "ro.barata.mps.databaseLanguage.structure.EntityResource", "ro.barata.mps.databaseLanguage.structure.EntityType", "ro.barata.mps.databaseLanguage.structure.IntType", "ro.barata.mps.databaseLanguage.structure.Module", "ro.barata.mps.databaseLanguage.structure.SchemaCreator", "ro.barata.mps.databaseLanguage.structure.StringType"};
+  private static String[] stringSwitchCases_846f5o_a0a0b = new String[]{"ro.barata.mps.databaseLanguage.structure.Attribute", "ro.barata.mps.databaseLanguage.structure.BooleanType", "ro.barata.mps.databaseLanguage.structure.DAOAttributeMapper", "ro.barata.mps.databaseLanguage.structure.DAOEntity", "ro.barata.mps.databaseLanguage.structure.DAOEntityMapper", "ro.barata.mps.databaseLanguage.structure.DAOMapping", "ro.barata.mps.databaseLanguage.structure.DatabaseSettings", "ro.barata.mps.databaseLanguage.structure.Entity", "ro.barata.mps.databaseLanguage.structure.EntityType", "ro.barata.mps.databaseLanguage.structure.IntType", "ro.barata.mps.databaseLanguage.structure.SchemaCreator", "ro.barata.mps.databaseLanguage.structure.StringType"};
 }

@@ -13,7 +13,9 @@
   <dependency className="ro.barata.mps.boLanguage.behavior.Book_BehaviorDescriptor" file="Book_BehaviorDescriptor.java">
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />
     <classNode dependClassName="ro.barata.mps.databaseLanguage.behavior.DAOObject_BehaviorDescriptor" />
+    <classNode extendsClassName="java.lang.Cloneable" />
     <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
   </dependency>
   <dependency className="ro.barata.mps.boLanguage.behavior.PersonHasBook_BehaviorDescriptor" file="PersonHasBook_BehaviorDescriptor.java">
@@ -25,7 +27,9 @@
   <dependency className="ro.barata.mps.boLanguage.behavior.Person_BehaviorDescriptor" file="Person_BehaviorDescriptor.java">
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />
     <classNode dependClassName="ro.barata.mps.databaseLanguage.behavior.DAOObject_BehaviorDescriptor" />
+    <classNode extendsClassName="java.lang.Cloneable" />
     <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
   </dependency>
 </dependenciesRoot>
