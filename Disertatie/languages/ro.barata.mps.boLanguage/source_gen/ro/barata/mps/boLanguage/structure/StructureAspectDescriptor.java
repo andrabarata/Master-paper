@@ -12,13 +12,13 @@ import org.jetbrains.annotations.Nullable;
 
 public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
-  /*package*/ final ConceptDescriptor myConceptBook = new ConceptDescriptorBuilder("ro.barata.mps.boLanguage.structure.Book", MetaIdFactory.conceptId(0xd9d0a2564d6440cfL, 0xb5a370c8c237890bL, 0x644c90c84bcd16d0L)).super_("jetbrains.mps.lang.core.structure.BaseConcept").super_(MetaIdFactory.conceptId(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x10802efe25aL)).parents("jetbrains.mps.lang.core.structure.BaseConcept", "ro.barata.mps.databaseLanguage.structure.DAOObject").parentIds(MetaIdFactory.conceptId(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x10802efe25aL), MetaIdFactory.conceptId(0x5cba771a86ff496bL, 0xa1216ae83a039560L, 0x644c90c84bf97943L)).propertyDescriptors(new ConceptDescriptorBuilder.Prop(7227310691962394322L, "id"), new ConceptDescriptorBuilder.Prop(7227310691962394324L, "name")).properties("id", "name").create();
-  /*package*/ final ConceptDescriptor myConceptPerson = new ConceptDescriptorBuilder("ro.barata.mps.boLanguage.structure.Person", MetaIdFactory.conceptId(0xd9d0a2564d6440cfL, 0xb5a370c8c237890bL, 0x644c90c84bcd15a2L)).super_("jetbrains.mps.lang.core.structure.BaseConcept").super_(MetaIdFactory.conceptId(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x10802efe25aL)).parents("jetbrains.mps.lang.core.structure.BaseConcept", "ro.barata.mps.databaseLanguage.structure.DAOObject").parentIds(MetaIdFactory.conceptId(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x10802efe25aL), MetaIdFactory.conceptId(0x5cba771a86ff496bL, 0xa1216ae83a039560L, 0x644c90c84bf97943L)).propertyDescriptors(new ConceptDescriptorBuilder.Prop(7227310691962394072L, "id"), new ConceptDescriptorBuilder.Prop(7227310691962394063L, "firstName"), new ConceptDescriptorBuilder.Prop(7227310691962394065L, "lastName"), new ConceptDescriptorBuilder.Prop(7227310691962394068L, "age")).properties("id", "firstName", "lastName", "age").create();
-  /*package*/ final ConceptDescriptor myConceptPersonHasBook = new ConceptDescriptorBuilder("ro.barata.mps.boLanguage.structure.PersonHasBook", MetaIdFactory.conceptId(0xd9d0a2564d6440cfL, 0xb5a370c8c237890bL, 0x644c90c84bcd17cdL)).super_("jetbrains.mps.lang.core.structure.BaseConcept").super_(MetaIdFactory.conceptId(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x10802efe25aL)).parents("jetbrains.mps.lang.core.structure.BaseConcept").parentIds(MetaIdFactory.conceptId(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x10802efe25aL)).childDescriptors(new ConceptDescriptorBuilder.Link(7227310691962394583L, "person", MetaIdFactory.conceptId(0xd9d0a2564d6440cfL, 0xb5a370c8c237890bL, 0x644c90c84bcd15a2L), false, false, false), new ConceptDescriptorBuilder.Link(7227310691962394585L, "book", MetaIdFactory.conceptId(0xd9d0a2564d6440cfL, 0xb5a370c8c237890bL, 0x644c90c84bcd16d0L), false, false, false)).children(new String[]{"person", "book"}, new boolean[]{false, false}).create();
+  /*package*/ final ConceptDescriptor myConceptCustomer = new ConceptDescriptorBuilder("ro.barata.mps.boLanguage.structure.Customer", MetaIdFactory.conceptId(0xd9d0a2564d6440cfL, 0xb5a370c8c237890bL, 0x17ad7b245702ba33L)).super_("jetbrains.mps.lang.core.structure.BaseConcept").super_(MetaIdFactory.conceptId(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x10802efe25aL)).parents("jetbrains.mps.lang.core.structure.BaseConcept", "ro.barata.mps.databaseLanguage.structure.DAOObject").parentIds(MetaIdFactory.conceptId(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x10802efe25aL), MetaIdFactory.conceptId(0x5cba771a86ff496bL, 0xa1216ae83a039560L, 0x644c90c84bf97943L)).propertyDescriptors(new ConceptDescriptorBuilder.Prop(1706155229852123477L, "customerId")).properties("customerId").referenceDescriptors(new ConceptDescriptorBuilder.Ref(1706155229852121654L, "person", MetaIdFactory.conceptId(0xd9d0a2564d6440cfL, 0xb5a370c8c237890bL, 0x17ad7b245702ba25L), false)).references("person").create();
+  /*package*/ final ConceptDescriptor myConceptPerson = new ConceptDescriptorBuilder("ro.barata.mps.boLanguage.structure.Person", MetaIdFactory.conceptId(0xd9d0a2564d6440cfL, 0xb5a370c8c237890bL, 0x17ad7b245702ba25L)).super_("jetbrains.mps.lang.core.structure.BaseConcept").super_(MetaIdFactory.conceptId(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x10802efe25aL)).parents("jetbrains.mps.lang.core.structure.BaseConcept", "ro.barata.mps.databaseLanguage.structure.DAOObject").parentIds(MetaIdFactory.conceptId(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x10802efe25aL), MetaIdFactory.conceptId(0x5cba771a86ff496bL, 0xa1216ae83a039560L, 0x644c90c84bf97943L)).propertyDescriptors(new ConceptDescriptorBuilder.Prop(1706155229852123473L, "id"), new ConceptDescriptorBuilder.Prop(1706155229852121640L, "firstName"), new ConceptDescriptorBuilder.Prop(1706155229852121642L, "lastName")).properties("id", "firstName", "lastName").create();
+  /*package*/ final ConceptDescriptor myConceptShop = new ConceptDescriptorBuilder("ro.barata.mps.boLanguage.structure.Shop", MetaIdFactory.conceptId(0xd9d0a2564d6440cfL, 0xb5a370c8c237890bL, 0x17ad7b245702ba46L)).super_("jetbrains.mps.lang.core.structure.BaseConcept").super_(MetaIdFactory.conceptId(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x10802efe25aL)).parents("jetbrains.mps.lang.core.structure.BaseConcept", "ro.barata.mps.databaseLanguage.structure.DAOObject").parentIds(MetaIdFactory.conceptId(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x10802efe25aL), MetaIdFactory.conceptId(0x5cba771a86ff496bL, 0xa1216ae83a039560L, 0x644c90c84bf97943L)).propertyDescriptors(new ConceptDescriptorBuilder.Prop(1706155229853057848L, "id"), new ConceptDescriptorBuilder.Prop(1706155229853057938L, "name")).properties("id", "name").childDescriptors(new ConceptDescriptorBuilder.Link(1706155229852121671L, "customers", MetaIdFactory.conceptId(0xd9d0a2564d6440cfL, 0xb5a370c8c237890bL, 0x17ad7b245702ba33L), false, true, false)).children(new String[]{"customers"}, new boolean[]{true}).create();
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptBook, myConceptPerson, myConceptPersonHasBook);
+    return Arrays.asList(myConceptCustomer, myConceptPerson, myConceptShop);
   }
 
   @Override
@@ -26,14 +26,14 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   public ConceptDescriptor getDescriptor(String conceptFqName) {
     switch (Arrays.binarySearch(stringSwitchCases_1htk8d_a0a0h, conceptFqName)) {
       case 0:
-        return myConceptBook;
+        return myConceptCustomer;
       case 1:
         return myConceptPerson;
       case 2:
-        return myConceptPersonHasBook;
+        return myConceptShop;
       default:
         return null;
     }
   }
-  private static String[] stringSwitchCases_1htk8d_a0a0h = new String[]{"ro.barata.mps.boLanguage.structure.Book", "ro.barata.mps.boLanguage.structure.Person", "ro.barata.mps.boLanguage.structure.PersonHasBook"};
+  private static String[] stringSwitchCases_1htk8d_a0a0h = new String[]{"ro.barata.mps.boLanguage.structure.Customer", "ro.barata.mps.boLanguage.structure.Person", "ro.barata.mps.boLanguage.structure.Shop"};
 }

@@ -5,11 +5,11 @@ package ro.barata.mps.boLanguage.behavior;
 import jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor;
 import ro.barata.mps.databaseLanguage.behavior.DAOObject_BehaviorDescriptor;
 
-public class Book_BehaviorDescriptor extends BaseConcept_BehaviorDescriptor implements DAOObject_BehaviorDescriptor {
-  public Book_BehaviorDescriptor() {
+public class Customer_BehaviorDescriptor extends BaseConcept_BehaviorDescriptor implements DAOObject_BehaviorDescriptor {
+  public Customer_BehaviorDescriptor() {
   }
   @Override
   public String getConceptFqName() {
-    return "ro.barata.mps.boLanguage.structure.Book";
+    return "ro.barata.mps.boLanguage.structure.Customer";
   }
 }

@@ -8,13 +8,13 @@
       <unit at="10,0,21,0" name="ro.barata.mps.databaseLanguage.behavior.Attribute_BehaviorDescriptor" />
     </file>
     <file name="BehaviorAspectDescriptor.java">
-      <unit at="9,0,44,0" name="ro.barata.mps.databaseLanguage.behavior.BehaviorAspectDescriptor" />
+      <unit at="9,0,48,0" name="ro.barata.mps.databaseLanguage.behavior.BehaviorAspectDescriptor" />
     </file>
     <file name="BooleanType_BehaviorDescriptor.java">
       <unit at="6,0,14,0" name="ro.barata.mps.databaseLanguage.behavior.BooleanType_BehaviorDescriptor" />
     </file>
-    <file name="DAOAttributeMapper_BehaviorDescriptor.java">
-      <unit at="6,0,14,0" name="ro.barata.mps.databaseLanguage.behavior.DAOAttributeMapper_BehaviorDescriptor" />
+    <file name="DAOChildMapper_BehaviorDescriptor.java">
+      <unit at="6,0,14,0" name="ro.barata.mps.databaseLanguage.behavior.DAOChildMapper_BehaviorDescriptor" />
     </file>
     <file name="DAOEntityMapper_BehaviorDescriptor.java">
       <unit at="7,0,15,0" name="ro.barata.mps.databaseLanguage.behavior.DAOEntityMapper_BehaviorDescriptor" />
@@ -27,6 +27,12 @@
     </file>
     <file name="DAOObject_BehaviorDescriptor.java">
       <unit at="6,0,8,0" name="ro.barata.mps.databaseLanguage.behavior.DAOObject_BehaviorDescriptor" />
+    </file>
+    <file name="DAOPropertyMapper_BehaviorDescriptor.java">
+      <unit at="6,0,14,0" name="ro.barata.mps.databaseLanguage.behavior.DAOPropertyMapper_BehaviorDescriptor" />
+    </file>
+    <file name="DAOReferenceMapper_BehaviorDescriptor.java">
+      <unit at="6,0,14,0" name="ro.barata.mps.databaseLanguage.behavior.DAOReferenceMapper_BehaviorDescriptor" />
     </file>
     <file name="DatabaseSettings_BehaviorDescriptor.java">
       <unit at="7,0,15,0" name="ro.barata.mps.databaseLanguage.behavior.DatabaseSettings_BehaviorDescriptor" />
@@ -54,7 +60,7 @@
     </file>
   </root>
   <root nodeRef="r:330110a4-0a87-4cc0-a72b-63c9198f45d4(ro.barata.mps.databaseLanguage.behavior)/2715870822990233208">
-    <file name="DAOAttributeMapper_Behavior.java">
+    <file name="DAOPropertyMapper_Behavior.java">
       <node id="2715870822990032981" at="13,85,14,335" concept="0" />
       <node id="2715870822990039756" at="14,335,15,64" concept="0" />
       <node id="2715870822990068021" at="15,64,16,65" concept="0" />
@@ -73,7 +79,7 @@
       <scope id="2715870822990233208" at="13,0,19,0">
         <var name="thisNode" id="2715870822990233208" />
       </scope>
-      <unit id="2715870822990233208" at="10,0,20,0" name="ro.barata.mps.databaseLanguage.behavior.DAOAttributeMapper_Behavior" />
+      <unit id="2715870822990233208" at="10,0,20,0" name="ro.barata.mps.databaseLanguage.behavior.DAOPropertyMapper_Behavior" />
     </file>
   </root>
   <root nodeRef="r:330110a4-0a87-4cc0-a72b-63c9198f45d4(ro.barata.mps.databaseLanguage.behavior)/7227310691964504579">

@@ -15,9 +15,9 @@ import java.util.List;
 import jetbrains.mps.internal.collections.runtime.ListSequence;
 import java.util.ArrayList;
 import jetbrains.mps.lang.structure.behavior.AbstractConceptDeclaration_Behavior;
-import jetbrains.mps.internal.collections.runtime.IWhereFilter;
-import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
 import jetbrains.mps.internal.collections.runtime.IVisitor;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
+import jetbrains.mps.internal.collections.runtime.IWhereFilter;
 import jetbrains.mps.internal.collections.runtime.ISelector;
 import jetbrains.mps.baseLanguage.closures.runtime.Wrappers;
 import jetbrains.mps.errors.messageTargets.MessageTarget;
@@ -32,11 +32,6 @@ public class CheckForProperties_NonTypesystemRule extends AbstractNonTypesystemR
   public void applyRule(final SNode daoAttributeMapper, final TypeCheckingContext typeCheckingContext, IsApplicableStatus status) {
     SNode conceptDeclaration = SNodeOperations.cast(SLinkOperations.getTargetNode(Sequence.fromIterable(SNodeOperations.getReferences(SNodeOperations.getParent(SNodeOperations.getParent(daoAttributeMapper)))).first()), MetaAdapterFactory.getConcept(0xc72da2b97cce4447L, 0x8389f407dc1158b7L, 0xf979ba0450L, "jetbrains.mps.lang.structure.structure.ConceptDeclaration"));
     final List<String> names = ListSequence.fromList(new ArrayList<String>());
-    Iterable<SNode> properties = ListSequence.fromList(AbstractConceptDeclaration_Behavior.call_getPropertyDeclarations_1213877394546(conceptDeclaration)).where(new IWhereFilter<SNode>() {
-      public boolean accept(SNode it) {
-        return !(SPropertyOperations.hasValue(it, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "alias")) & !(SPropertyOperations.hasValue(it, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "shortDescription")) & !(SPropertyOperations.hasValue(it, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "virtualPackage"));
-      }
-    });
     ListSequence.fromList(AbstractConceptDeclaration_Behavior.call_getPropertyDeclarations_1213877394546(conceptDeclaration)).visitAll(new IVisitor<SNode>() {
       public void visit(SNode it) {
         if (!(SPropertyOperations.hasValue(it, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "alias")) & !(SPropertyOperations.hasValue(it, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "shortDescription")) & !(SPropertyOperations.hasValue(it, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "virtualPackage"))) {
@@ -44,9 +39,14 @@ public class CheckForProperties_NonTypesystemRule extends AbstractNonTypesystemR
         }
       }
     });
-    final Iterable<String> definedNodes = ListSequence.fromList(SNodeOperations.getChildren(SNodeOperations.getParent(daoAttributeMapper))).select(new ISelector<SNode, String>() {
+    Iterable<SNode> nodes = ListSequence.fromList(SNodeOperations.getChildren(SNodeOperations.getParent(daoAttributeMapper))).where(new IWhereFilter<SNode>() {
+      public boolean accept(SNode it) {
+        return SNodeOperations.isInstanceOf(it, MetaAdapterFactory.getConcept(0x5cba771a86ff496bL, 0xa1216ae83a039560L, 0x25b0b61fcc325f03L, "ro.barata.mps.databaseLanguage.structure.DAOPropertyMapper"));
+      }
+    });
+    final Iterable<String> definedNodes = Sequence.fromIterable(nodes).select(new ISelector<SNode, String>() {
       public String select(SNode it) {
-        return SPropertyOperations.getString(SLinkOperations.getTarget(SNodeOperations.cast(it, MetaAdapterFactory.getConcept(0x5cba771a86ff496bL, 0xa1216ae83a039560L, 0x25b0b61fcc325f03L, "ro.barata.mps.databaseLanguage.structure.DAOAttributeMapper")), MetaAdapterFactory.getReferenceLink(0x5cba771a86ff496bL, 0xa1216ae83a039560L, 0x25b0b61fcc325f03L, 0xd18d96e6d6a7e54L, "property")), MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"));
+        return SPropertyOperations.getString(SLinkOperations.getTarget(SNodeOperations.cast(it, MetaAdapterFactory.getConcept(0x5cba771a86ff496bL, 0xa1216ae83a039560L, 0x25b0b61fcc325f03L, "ro.barata.mps.databaseLanguage.structure.DAOPropertyMapper")), MetaAdapterFactory.getReferenceLink(0x5cba771a86ff496bL, 0xa1216ae83a039560L, 0x25b0b61fcc325f03L, 0xd18d96e6d6a7e54L, "property")), MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"));
       }
     });
     if (!(Sequence.fromIterable(definedNodes).containsSequence(ListSequence.fromList(names)))) {
@@ -65,9 +65,9 @@ public class CheckForProperties_NonTypesystemRule extends AbstractNonTypesystemR
       }
     }
     final Wrappers._int dupplicate = new Wrappers._int(0);
-    ListSequence.fromList(SNodeOperations.getChildren(SNodeOperations.getParent(daoAttributeMapper))).visitAll(new IVisitor<SNode>() {
+    Sequence.fromIterable(nodes).visitAll(new IVisitor<SNode>() {
       public void visit(SNode it) {
-        if (SPropertyOperations.hasValue(SLinkOperations.getTarget(SNodeOperations.cast(it, MetaAdapterFactory.getConcept(0x5cba771a86ff496bL, 0xa1216ae83a039560L, 0x25b0b61fcc325f03L, "ro.barata.mps.databaseLanguage.structure.DAOAttributeMapper")), MetaAdapterFactory.getReferenceLink(0x5cba771a86ff496bL, 0xa1216ae83a039560L, 0x25b0b61fcc325f03L, 0xd18d96e6d6a7e54L, "property")), MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), SPropertyOperations.getString(SLinkOperations.getTarget(daoAttributeMapper, MetaAdapterFactory.getReferenceLink(0x5cba771a86ff496bL, 0xa1216ae83a039560L, 0x25b0b61fcc325f03L, 0xd18d96e6d6a7e54L, "property")), MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name")))) {
+        if (SPropertyOperations.hasValue(SLinkOperations.getTarget(SNodeOperations.cast(it, MetaAdapterFactory.getConcept(0x5cba771a86ff496bL, 0xa1216ae83a039560L, 0x25b0b61fcc325f03L, "ro.barata.mps.databaseLanguage.structure.DAOPropertyMapper")), MetaAdapterFactory.getReferenceLink(0x5cba771a86ff496bL, 0xa1216ae83a039560L, 0x25b0b61fcc325f03L, 0xd18d96e6d6a7e54L, "property")), MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), SPropertyOperations.getString(SLinkOperations.getTarget(daoAttributeMapper, MetaAdapterFactory.getReferenceLink(0x5cba771a86ff496bL, 0xa1216ae83a039560L, 0x25b0b61fcc325f03L, 0xd18d96e6d6a7e54L, "property")), MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name")))) {
           dupplicate.value++;
         }
       }
@@ -84,7 +84,7 @@ public class CheckForProperties_NonTypesystemRule extends AbstractNonTypesystemR
     }
   }
   public String getApplicableConceptFQName() {
-    return "ro.barata.mps.databaseLanguage.structure.DAOAttributeMapper";
+    return "ro.barata.mps.databaseLanguage.structure.DAOPropertyMapper";
   }
   public IsApplicableStatus isApplicableAndPattern(SNode argument) {
     {

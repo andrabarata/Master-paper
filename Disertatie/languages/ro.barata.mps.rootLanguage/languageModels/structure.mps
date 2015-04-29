@@ -203,11 +203,23 @@
       <property role="20lmBu" value="aggregation" />
       <property role="20kJfa" value="propertyMappings" />
       <property role="20lbJX" value="1..n" />
-      <ref role="20lvS9" node="2mKHxZcc_W3" resolve="DAOAttributeMapper" />
+      <ref role="20lvS9" node="2mKHxZcc_W3" resolve="DAOPropertyMapper" />
+    </node>
+    <node concept="1TJgyj" id="1uHuMhmQdaz" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="referenceMappings" />
+      <property role="20lbJX" value="0..n" />
+      <ref role="20lvS9" node="1uHuMhmOFqB" resolve="DAOReferenceMapper" />
+    </node>
+    <node concept="1TJgyj" id="1uHuMhn4rbv" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="childMappings" />
+      <property role="20lbJX" value="0..n" />
+      <ref role="20lvS9" node="1uHuMhn4rb1" resolve="DAOChildMapper" />
     </node>
   </node>
   <node concept="1TIwiD" id="2mKHxZcc_W3">
-    <property role="TrG5h" value="DAOAttributeMapper" />
+    <property role="TrG5h" value="DAOPropertyMapper" />
     <property role="R5$K7" value="false" />
     <property role="R5$K2" value="false" />
     <property role="3GE5qa" value="db.dao" />
@@ -240,6 +252,28 @@
   <node concept="PlHQZ" id="6hc$cxbYn_3">
     <property role="3GE5qa" value="db.dao" />
     <property role="TrG5h" value="DAOObject" />
+  </node>
+  <node concept="1TIwiD" id="1uHuMhmOFqB">
+    <property role="TrG5h" value="DAOReferenceMapper" />
+    <property role="3GE5qa" value="db.dao" />
+    <ref role="1TJDcQ" node="6jza8L8c$UW" resolve="Attribute" />
+    <node concept="1TJgyj" id="1uHuMhmQdax" role="1TKVEi">
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="rerefence" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" to="tpce:f_TJgxE" resolve="LinkDeclaration" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="1uHuMhn4rb1">
+    <property role="3GE5qa" value="db.dao" />
+    <property role="TrG5h" value="DAOChildMapper" />
+    <ref role="1TJDcQ" node="6jza8L8c$UW" resolve="Attribute" />
+    <node concept="1TJgyj" id="1uHuMhn4rbt" role="1TKVEi">
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="child" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" to="tpce:f_TJgxE" resolve="LinkDeclaration" />
+    </node>
   </node>
 </model>
 

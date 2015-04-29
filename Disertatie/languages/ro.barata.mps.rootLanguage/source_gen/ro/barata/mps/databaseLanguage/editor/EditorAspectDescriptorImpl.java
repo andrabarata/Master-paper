@@ -19,7 +19,7 @@ public class EditorAspectDescriptorImpl implements EditorAspectDescriptor {
       case 1:
         return Collections.<ConceptEditor>singletonList(new BooleanType_Editor());
       case 2:
-        return Collections.<ConceptEditor>singletonList(new DAOAttributeMapper_Editor());
+        return Collections.<ConceptEditor>singletonList(new DAOChildMapper_Editor());
       case 3:
         return Collections.<ConceptEditor>singletonList(new DAOEntity_Editor());
       case 4:
@@ -27,16 +27,20 @@ public class EditorAspectDescriptorImpl implements EditorAspectDescriptor {
       case 5:
         return Collections.<ConceptEditor>singletonList(new DAOMapping_Editor());
       case 6:
-        return Collections.<ConceptEditor>singletonList(new DatabaseSettings_Editor());
+        return Collections.<ConceptEditor>singletonList(new DAOPropertyMapper_Editor());
       case 7:
-        return Collections.<ConceptEditor>singletonList(new Entity_Editor());
+        return Collections.<ConceptEditor>singletonList(new DAOReferenceMapper_Editor());
       case 8:
-        return Collections.<ConceptEditor>singletonList(new EntityType_Editor());
+        return Collections.<ConceptEditor>singletonList(new DatabaseSettings_Editor());
       case 9:
-        return Collections.<ConceptEditor>singletonList(new IntType_Editor());
+        return Collections.<ConceptEditor>singletonList(new Entity_Editor());
       case 10:
-        return Collections.<ConceptEditor>singletonList(new SchemaCreator_Editor());
+        return Collections.<ConceptEditor>singletonList(new EntityType_Editor());
       case 11:
+        return Collections.<ConceptEditor>singletonList(new IntType_Editor());
+      case 12:
+        return Collections.<ConceptEditor>singletonList(new SchemaCreator_Editor());
+      case 13:
         return Collections.<ConceptEditor>singletonList(new StringType_Editor());
       default:
     }
@@ -47,5 +51,5 @@ public class EditorAspectDescriptorImpl implements EditorAspectDescriptor {
   }
 
 
-  private static String[] stringSwitchCases_xbvbvu_a0a0b = new String[]{"ro.barata.mps.databaseLanguage.structure.Attribute", "ro.barata.mps.databaseLanguage.structure.BooleanType", "ro.barata.mps.databaseLanguage.structure.DAOAttributeMapper", "ro.barata.mps.databaseLanguage.structure.DAOEntity", "ro.barata.mps.databaseLanguage.structure.DAOEntityMapper", "ro.barata.mps.databaseLanguage.structure.DAOMapping", "ro.barata.mps.databaseLanguage.structure.DatabaseSettings", "ro.barata.mps.databaseLanguage.structure.Entity", "ro.barata.mps.databaseLanguage.structure.EntityType", "ro.barata.mps.databaseLanguage.structure.IntType", "ro.barata.mps.databaseLanguage.structure.SchemaCreator", "ro.barata.mps.databaseLanguage.structure.StringType"};
+  private static String[] stringSwitchCases_xbvbvu_a0a0b = new String[]{"ro.barata.mps.databaseLanguage.structure.Attribute", "ro.barata.mps.databaseLanguage.structure.BooleanType", "ro.barata.mps.databaseLanguage.structure.DAOChildMapper", "ro.barata.mps.databaseLanguage.structure.DAOEntity", "ro.barata.mps.databaseLanguage.structure.DAOEntityMapper", "ro.barata.mps.databaseLanguage.structure.DAOMapping", "ro.barata.mps.databaseLanguage.structure.DAOPropertyMapper", "ro.barata.mps.databaseLanguage.structure.DAOReferenceMapper", "ro.barata.mps.databaseLanguage.structure.DatabaseSettings", "ro.barata.mps.databaseLanguage.structure.Entity", "ro.barata.mps.databaseLanguage.structure.EntityType", "ro.barata.mps.databaseLanguage.structure.IntType", "ro.barata.mps.databaseLanguage.structure.SchemaCreator", "ro.barata.mps.databaseLanguage.structure.StringType"};
 }

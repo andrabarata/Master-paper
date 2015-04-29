@@ -7,7 +7,7 @@ import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 
-public class DAOAttributeMapper_Behavior {
+public class DAOPropertyMapper_Behavior {
   public static void init(SNode thisNode) {
   }
   public static String call_getMappingCamelName_2715870822990233265(SNode thisNode) {

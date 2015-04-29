@@ -7,7 +7,6 @@ public class Person {
   private int id;
   private String firstName;
   private String lastName;
-  private int age;
 
   public void setId(int attribute) {
     this.id = attribute;
@@ -18,9 +17,6 @@ public class Person {
   public void setLastName(String attribute) {
     this.lastName = attribute;
   }
-  public void setAge(int attribute) {
-    this.age = attribute;
-  }
 
   public int getId() {
     return id;
@@ -30,9 +26,6 @@ public class Person {
   }
   public String getLastName() {
     return lastName;
-  }
-  public int getAge() {
-    return age;
   }
 
   public Person() {

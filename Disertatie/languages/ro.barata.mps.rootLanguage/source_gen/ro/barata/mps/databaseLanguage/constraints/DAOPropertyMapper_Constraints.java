@@ -4,20 +4,19 @@ package ro.barata.mps.databaseLanguage.constraints;
 
 import jetbrains.mps.smodel.runtime.base.BaseConstraintsDescriptor;
 import jetbrains.mps.smodel.adapter.ids.MetaIdFactory;
-import org.jetbrains.mps.openapi.model.SNode;
-import org.jetbrains.annotations.Nullable;
-import jetbrains.mps.smodel.IOperationContext;
-import jetbrains.mps.smodel.runtime.CheckingNodeContext;
 import java.util.Map;
 import jetbrains.mps.smodel.adapter.ids.SReferenceLinkId;
 import jetbrains.mps.smodel.runtime.ReferenceConstraintsDescriptor;
 import java.util.HashMap;
 import jetbrains.mps.smodel.runtime.base.BaseReferenceConstraintsDescriptor;
+import org.jetbrains.annotations.Nullable;
 import jetbrains.mps.smodel.runtime.ReferenceScopeProvider;
 import jetbrains.mps.smodel.runtime.base.BaseScopeProvider;
 import org.jetbrains.mps.openapi.model.SNodeReference;
 import jetbrains.mps.scope.Scope;
+import jetbrains.mps.smodel.IOperationContext;
 import jetbrains.mps.smodel.runtime.ReferenceConstraintsContext;
+import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.internal.collections.runtime.Sequence;
@@ -29,23 +28,9 @@ import jetbrains.mps.internal.collections.runtime.IWhereFilter;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
 import jetbrains.mps.smodel.SNodePointer;
 
-public class DAOAttributeMapper_Constraints extends BaseConstraintsDescriptor {
-  public DAOAttributeMapper_Constraints() {
+public class DAOPropertyMapper_Constraints extends BaseConstraintsDescriptor {
+  public DAOPropertyMapper_Constraints() {
     super(MetaIdFactory.conceptId(0x5cba771a86ff496bL, 0xa1216ae83a039560L, 0x25b0b61fcc325f03L));
-  }
-  @Override
-  public boolean hasOwnCanBeParentMethod() {
-    return true;
-  }
-  @Override
-  public boolean canBeParent(SNode node, @Nullable SNode childNode, SNode childConcept, SNode link, IOperationContext operationContext, @Nullable CheckingNodeContext checkingNodeContext) {
-    boolean result = static_canBeAParent(node, childNode, childConcept, link, operationContext);
-
-    if (!(result) && checkingNodeContext != null) {
-      checkingNodeContext.setBreakingNode(canBeParentBreakingPoint);
-    }
-
-    return result;
   }
   @Override
   protected Map<SReferenceLinkId, ReferenceConstraintsDescriptor> getNotDefaultSReferenceLinks() {
@@ -61,7 +46,7 @@ public class DAOAttributeMapper_Constraints extends BaseConstraintsDescriptor {
         return new BaseScopeProvider() {
           @Override
           public SNodeReference getSearchScopeValidatorNode() {
-            return breakingNode_5nl24h_a0a0a0a0a1a0b0a1a3;
+            return breakingNode_p5kwvj_a0a0a0a0a1a0b0a1a1;
           }
           @Override
           public Scope createScope(final IOperationContext operationContext, final ReferenceConstraintsContext _context) {
@@ -83,9 +68,5 @@ public class DAOAttributeMapper_Constraints extends BaseConstraintsDescriptor {
     });
     return references;
   }
-  public static boolean static_canBeAParent(SNode node, SNode childNode, SNode childConcept, SNode link, final IOperationContext operationContext) {
-    return !(SNodeOperations.isInstanceOf(childNode, MetaAdapterFactory.getConcept(0x5cba771a86ff496bL, 0xa1216ae83a039560L, 0x64e3288c48324fa3L, "ro.barata.mps.databaseLanguage.structure.EntityType")));
-  }
-  private static SNodePointer canBeParentBreakingPoint = new SNodePointer("r:9beee426-529c-4206-80b5-2762f9e84083(ro.barata.mps.databaseLanguage.constraints)", "7227310691962185508");
-  private static SNodePointer breakingNode_5nl24h_a0a0a0a0a1a0b0a1a3 = new SNodePointer("r:9beee426-529c-4206-80b5-2762f9e84083(ro.barata.mps.databaseLanguage.constraints)", "943743190239896041");
+  private static SNodePointer breakingNode_p5kwvj_a0a0a0a0a1a0b0a1a1 = new SNodePointer("r:9beee426-529c-4206-80b5-2762f9e84083(ro.barata.mps.databaseLanguage.constraints)", "943743190239896041");
 }

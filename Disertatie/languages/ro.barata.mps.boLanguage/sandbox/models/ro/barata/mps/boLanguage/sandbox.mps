@@ -21,6 +21,7 @@
         <property id="5152062499436157628" name="serviceId" index="2$ZLsR" />
       </concept>
       <concept id="5152062499437988043" name="ro.barata.mps.databaseLanguage.structure.SchemaCreator" flags="ng" index="2$SKl0">
+        <property id="5152062499437988137" name="dropTables" index="2$SKiy" />
         <property id="5152062499437988135" name="createTables" index="2$SKiG" />
         <child id="7227310691965637214" name="mapping" index="JGwam" />
         <child id="7227310691965637162" name="databaseSettings" index="JGwby" />
@@ -34,14 +35,22 @@
       <concept id="7227310691962590990" name="ro.barata.mps.databaseLanguage.structure.DAOMapping" flags="ng" index="JB8v6">
         <child id="7227310691962591063" name="entityMappers" index="JB8uv" />
       </concept>
+      <concept id="1706155229853102785" name="ro.barata.mps.databaseLanguage.structure.DAOChildMapper" flags="ng" index="10JcB_">
+        <reference id="1706155229853102813" name="child" index="10JcBT" />
+      </concept>
+      <concept id="1706155229848975015" name="ro.barata.mps.databaseLanguage.structure.DAOReferenceMapper" flags="ng" index="11vWQ3">
+        <reference id="1706155229849375393" name="rerefence" index="11tqA5" />
+      </concept>
       <concept id="943743190239452956" name="ro.barata.mps.databaseLanguage.structure.DAOEntity" flags="ng" index="1ws$pM">
+        <child id="1706155229853102815" name="childMappings" index="10JcBV" />
+        <child id="1706155229849375395" name="referenceMappings" index="11tqA7" />
         <child id="943743190239453011" name="propertyMappings" index="1ws$oX" />
       </concept>
       <concept id="2715870822990504226" name="ro.barata.mps.databaseLanguage.structure.DAOEntityMapper" flags="ng" index="3DwHsX">
         <reference id="2715870822991528892" name="conceptReference" index="3DWFmz" />
         <child id="2715870822990504420" name="entity" index="3DwHvV" />
       </concept>
-      <concept id="2715870822990503683" name="ro.barata.mps.databaseLanguage.structure.DAOAttributeMapper" flags="ng" index="3DwI$s">
+      <concept id="2715870822990503683" name="ro.barata.mps.databaseLanguage.structure.DAOPropertyMapper" flags="ng" index="3DwI$s">
         <reference id="943743190239444564" name="property" index="1wsEsU" />
       </concept>
     </language>
@@ -51,55 +60,73 @@
       </concept>
     </language>
   </registry>
-  <node concept="2$SKl0" id="6hc$cxc0f4k">
+  <node concept="2$SKl0" id="1uHuMhn0FJC">
     <property role="2$SKiG" value="true" />
-    <node concept="JB8v6" id="6hc$cxc0f4l" role="JGwam">
-      <node concept="3DwHsX" id="6hc$cxc0f4m" role="JB8uv">
-        <ref role="3DWFmz" to="ikgz:6hc$cxbNhrg" resolve="Book" />
-        <node concept="1ws$pM" id="6hc$cxc0f4n" role="3DwHvV">
-          <property role="TrG5h" value="Book" />
-          <node concept="3DwI$s" id="6hc$cxc0f4o" role="1ws$oX">
+    <property role="2$SKiy" value="true" />
+    <node concept="JB8v6" id="1uHuMhn0FJD" role="JGwam">
+      <node concept="3DwHsX" id="1uHuMhn5cap" role="JB8uv">
+        <ref role="3DWFmz" to="ikgz:1uHuMhn0FCN" resolve="Customer" />
+        <node concept="1ws$pM" id="1uHuMhn5caq" role="3DwHvV">
+          <property role="TrG5h" value="CustomerTable" />
+          <node concept="11vWQ3" id="1uHuMhn5ca$" role="11tqA7">
+            <property role="TrG5h" value="personId" />
+            <ref role="11tqA5" to="ikgz:1uHuMhn0FCQ" />
+            <node concept="GOmve" id="1uHuMhn5cbx" role="GPI$P" />
+          </node>
+          <node concept="3DwI$s" id="1uHuMhn5car" role="1ws$oX">
             <property role="TrG5h" value="id" />
             <property role="2$SaCC" value="true" />
-            <ref role="1wsEsU" to="ikgz:6hc$cxbNhri" resolve="id" />
-            <node concept="GOmve" id="6hc$cxc0F2M" role="GPI$P" />
-          </node>
-          <node concept="3DwI$s" id="6hc$cxc0F3i" role="1ws$oX">
-            <property role="TrG5h" value="name" />
-            <ref role="1wsEsU" to="ikgz:6hc$cxbNhrk" resolve="name" />
-            <node concept="GOms9" id="6hc$cxc0F3s" role="GPI$P" />
+            <ref role="1wsEsU" to="ikgz:1uHuMhn0G5l" resolve="customerId" />
+            <node concept="GOmve" id="1uHuMhn5cax" role="GPI$P" />
           </node>
         </node>
       </node>
-      <node concept="3DwHsX" id="6hc$cxc0F3w" role="JB8uv">
-        <ref role="3DWFmz" to="ikgz:6hc$cxbNhmy" resolve="Person" />
-        <node concept="1ws$pM" id="6hc$cxc0F3x" role="3DwHvV">
-          <property role="TrG5h" value="Person" />
-          <node concept="3DwI$s" id="6hc$cxc0F3y" role="1ws$oX">
-            <property role="TrG5h" value="od" />
+      <node concept="3DwHsX" id="1uHuMhn5caC" role="JB8uv">
+        <ref role="3DWFmz" to="ikgz:1uHuMhn0FC_" resolve="Person" />
+        <node concept="1ws$pM" id="1uHuMhn5caD" role="3DwHvV">
+          <property role="TrG5h" value="PersonTable" />
+          <node concept="3DwI$s" id="1uHuMhn5caE" role="1ws$oX">
+            <property role="TrG5h" value="id" />
             <property role="2$SaCC" value="true" />
-            <ref role="1wsEsU" to="ikgz:6hc$cxbNhno" resolve="id" />
-            <node concept="GOmve" id="6hc$cxc0F3S" role="GPI$P" />
+            <ref role="1wsEsU" to="ikgz:1uHuMhn0G5h" resolve="id" />
+            <node concept="GOmve" id="1uHuMhn5cb6" role="GPI$P" />
           </node>
-          <node concept="3DwI$s" id="6hc$cxc0F4K" role="1ws$oX">
+          <node concept="3DwI$s" id="1uHuMhn5cb9" role="1ws$oX">
             <property role="TrG5h" value="firstName" />
-            <ref role="1wsEsU" to="ikgz:6hc$cxbNhnf" resolve="firstName" />
-            <node concept="GOms9" id="6hc$cxc0F4U" role="GPI$P" />
+            <ref role="1wsEsU" to="ikgz:1uHuMhn0FCC" resolve="firstName" />
+            <node concept="GOms9" id="1uHuMhn5cbf" role="GPI$P" />
           </node>
-          <node concept="3DwI$s" id="6hc$cxc0F56" role="1ws$oX">
+          <node concept="3DwI$s" id="1uHuMhn5cbi" role="1ws$oX">
             <property role="TrG5h" value="lastName" />
-            <ref role="1wsEsU" to="ikgz:6hc$cxbNhnh" resolve="lastName" />
-            <node concept="GOms9" id="6hc$cxc0F5k" role="GPI$P" />
+            <ref role="1wsEsU" to="ikgz:1uHuMhn0FCE" resolve="lastName" />
+            <node concept="GOms9" id="1uHuMhn5cbq" role="GPI$P" />
           </node>
-          <node concept="3DwI$s" id="6hc$cxc0F5o" role="1ws$oX">
-            <property role="TrG5h" value="age" />
-            <ref role="1wsEsU" to="ikgz:6hc$cxbNhnk" resolve="age" />
-            <node concept="GOmve" id="6hc$cxc0F5E" role="GPI$P" />
+        </node>
+      </node>
+      <node concept="3DwHsX" id="1uHuMhn5cbz" role="JB8uv">
+        <ref role="3DWFmz" to="ikgz:1uHuMhn0FD6" resolve="Shop" />
+        <node concept="1ws$pM" id="1uHuMhn5cb$" role="3DwHvV">
+          <property role="TrG5h" value="ShopTable" />
+          <node concept="10JcB_" id="1uHuMhn5ccT" role="10JcBV">
+            <property role="TrG5h" value="shopId" />
+            <ref role="10JcBT" to="ikgz:1uHuMhn0FD7" />
+            <node concept="GOmve" id="1uHuMhn5ccX" role="GPI$P" />
+          </node>
+          <node concept="3DwI$s" id="1uHuMhn5cb_" role="1ws$oX">
+            <property role="TrG5h" value="id" />
+            <property role="2$SaCC" value="true" />
+            <ref role="1wsEsU" to="ikgz:1uHuMhn4gcS" resolve="id" />
+            <node concept="GOmve" id="1uHuMhn5cbT" role="GPI$P" />
+          </node>
+          <node concept="3DwI$s" id="1uHuMhn5cbW" role="1ws$oX">
+            <property role="TrG5h" value="name" />
+            <ref role="1wsEsU" to="ikgz:1uHuMhn4gei" resolve="name" />
+            <node concept="GOms9" id="1uHuMhn5cc2" role="GPI$P" />
           </node>
         </node>
       </node>
     </node>
-    <node concept="2$0fZ4" id="6hc$cxc0f4q" role="JGwby">
+    <node concept="2$0fZ4" id="1uHuMhn0FJI" role="JGwby">
       <property role="2$YJQQ" value="oracle.jdbc.driver.OracleDriver" />
       <property role="2$0fIN" value="localhost" />
       <property role="2$0fIL" value="1521" />

@@ -12,12 +12,16 @@ public class ConstraintsAspectDescriptor implements jetbrains.mps.smodel.runtime
   }
   public ConstraintsDescriptor getDescriptor(String fqName) {
     switch (Arrays.binarySearch(stringSwitchCases_2qnle6_a0a0b, fqName)) {
-      case 0:
-        return new DAOAttributeMapper_Constraints();
+      case 2:
+        return new DAOPropertyMapper_Constraints();
       case 1:
         return new DAOEntityMapper_Constraints();
-      case 2:
+      case 4:
         return new EntityType_Constraints();
+      case 3:
+        return new DAOReferenceMapper_Constraints();
+      case 0:
+        return new DAOChildMapper_Constraints();
       default:
         return new BaseConstraintsDescriptor(fqName);
     }
@@ -25,7 +29,7 @@ public class ConstraintsAspectDescriptor implements jetbrains.mps.smodel.runtime
   public ConstraintsDescriptor getDescriptor(SConceptId conceptId) {
     long id = conceptId.getIdValue();
     if (id == 0x25b0b61fcc325f03L) {
-      return new DAOAttributeMapper_Constraints();
+      return new DAOPropertyMapper_Constraints();
     }
     if (id == 0x25b0b61fcc326122L) {
       return new DAOEntityMapper_Constraints();
@@ -33,7 +37,13 @@ public class ConstraintsAspectDescriptor implements jetbrains.mps.smodel.runtime
     if (id == 0x64e3288c48324fa3L) {
       return new EntityType_Constraints();
     }
+    if (id == 0x17ad7b2456d2b6a7L) {
+      return new DAOReferenceMapper_Constraints();
+    }
+    if (id == 0x17ad7b245711b2c1L) {
+      return new DAOChildMapper_Constraints();
+    }
     return new BaseConstraintsDescriptor(conceptId);
   }
-  private static String[] stringSwitchCases_2qnle6_a0a0b = new String[]{"ro.barata.mps.databaseLanguage.structure.DAOAttributeMapper", "ro.barata.mps.databaseLanguage.structure.DAOEntityMapper", "ro.barata.mps.databaseLanguage.structure.EntityType"};
+  private static String[] stringSwitchCases_2qnle6_a0a0b = new String[]{"ro.barata.mps.databaseLanguage.structure.DAOChildMapper", "ro.barata.mps.databaseLanguage.structure.DAOEntityMapper", "ro.barata.mps.databaseLanguage.structure.DAOPropertyMapper", "ro.barata.mps.databaseLanguage.structure.DAOReferenceMapper", "ro.barata.mps.databaseLanguage.structure.EntityType"};
 }

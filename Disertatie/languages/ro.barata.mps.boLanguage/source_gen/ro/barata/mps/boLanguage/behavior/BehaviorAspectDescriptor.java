@@ -14,12 +14,12 @@ public class BehaviorAspectDescriptor implements jetbrains.mps.smodel.runtime.Be
       case 1:
         return new Person_BehaviorDescriptor();
       case 0:
-        return new Book_BehaviorDescriptor();
+        return new Customer_BehaviorDescriptor();
       case 2:
-        return new PersonHasBook_BehaviorDescriptor();
+        return new Shop_BehaviorDescriptor();
       default:
         return BehaviorAspectInterpreted.getInstance().getDescriptor(fqName);
     }
   }
-  private static String[] stringSwitchCases_846f5o_a0a0b = new String[]{"ro.barata.mps.boLanguage.structure.Book", "ro.barata.mps.boLanguage.structure.Person", "ro.barata.mps.boLanguage.structure.PersonHasBook"};
+  private static String[] stringSwitchCases_846f5o_a0a0b = new String[]{"ro.barata.mps.boLanguage.structure.Customer", "ro.barata.mps.boLanguage.structure.Person", "ro.barata.mps.boLanguage.structure.Shop"};
 }

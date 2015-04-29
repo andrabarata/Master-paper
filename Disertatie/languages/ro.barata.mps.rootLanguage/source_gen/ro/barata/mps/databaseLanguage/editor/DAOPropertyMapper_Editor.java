@@ -18,42 +18,42 @@ import jetbrains.mps.nodeEditor.InlineCellProvider;
 import jetbrains.mps.lang.editor.cellProviders.PropertyCellProvider;
 import jetbrains.mps.lang.editor.cellProviders.RefNodeCellProvider;
 
-public class DAOAttributeMapper_Editor extends DefaultNodeEditor {
+public class DAOPropertyMapper_Editor extends DefaultNodeEditor {
   public EditorCell createEditorCell(EditorContext editorContext, SNode node) {
-    return this.createCollection_cz1bf4_a(editorContext, node);
+    return this.createCollection_tpfo2a_a(editorContext, node);
   }
-  private EditorCell createCollection_cz1bf4_a(EditorContext editorContext, SNode node) {
+  private EditorCell createCollection_tpfo2a_a(EditorContext editorContext, SNode node) {
     EditorCell_Collection editorCell = EditorCell_Collection.createIndent2(editorContext, node);
-    editorCell.setCellId("Collection_cz1bf4_a");
+    editorCell.setCellId("Collection_tpfo2a_a");
     editorCell.setBig(true);
     Style style = new StyleImpl();
     style.set(StyleAttributes.INDENT_LAYOUT_ON_NEW_LINE, 0, true);
     editorCell.getStyle().putAll(style);
-    editorCell.addEditorCell(this.createConstant_cz1bf4_a0(editorContext, node));
-    editorCell.addEditorCell(this.createRefCell_cz1bf4_b0(editorContext, node));
-    editorCell.addEditorCell(this.createConstant_cz1bf4_c0(editorContext, node));
-    editorCell.addEditorCell(this.createRefNode_cz1bf4_d0(editorContext, node));
-    editorCell.addEditorCell(this.createConstant_cz1bf4_e0(editorContext, node));
-    editorCell.addEditorCell(this.createProperty_cz1bf4_f0(editorContext, node));
-    editorCell.addEditorCell(this.createConstant_cz1bf4_g0(editorContext, node));
-    editorCell.addEditorCell(this.createProperty_cz1bf4_h0(editorContext, node));
+    editorCell.addEditorCell(this.createConstant_tpfo2a_a0(editorContext, node));
+    editorCell.addEditorCell(this.createRefCell_tpfo2a_b0(editorContext, node));
+    editorCell.addEditorCell(this.createConstant_tpfo2a_c0(editorContext, node));
+    editorCell.addEditorCell(this.createRefNode_tpfo2a_d0(editorContext, node));
+    editorCell.addEditorCell(this.createConstant_tpfo2a_e0(editorContext, node));
+    editorCell.addEditorCell(this.createProperty_tpfo2a_f0(editorContext, node));
+    editorCell.addEditorCell(this.createConstant_tpfo2a_g0(editorContext, node));
+    editorCell.addEditorCell(this.createProperty_tpfo2a_h0(editorContext, node));
     return editorCell;
   }
-  private EditorCell createConstant_cz1bf4_a0(EditorContext editorContext, SNode node) {
+  private EditorCell createConstant_tpfo2a_a0(EditorContext editorContext, SNode node) {
     EditorCell_Constant editorCell = new EditorCell_Constant(editorContext, node, "Property");
-    editorCell.setCellId("Constant_cz1bf4_a0");
+    editorCell.setCellId("Constant_tpfo2a_a0");
     Style style = new StyleImpl();
     style.set(StyleAttributes.INDENT_LAYOUT_INDENT, 0, true);
     editorCell.getStyle().putAll(style);
     editorCell.setDefaultText("");
     return editorCell;
   }
-  private EditorCell createRefCell_cz1bf4_b0(EditorContext editorContext, SNode node) {
+  private EditorCell createRefCell_tpfo2a_b0(EditorContext editorContext, SNode node) {
     CellProviderWithRole provider = new RefCellCellProvider(node, editorContext);
     provider.setRole("property");
     provider.setNoTargetText("<no property>");
     EditorCell editorCell;
-    provider.setAuxiliaryCellProvider(new DAOAttributeMapper_Editor._Inline_cz1bf4_a1a());
+    provider.setAuxiliaryCellProvider(new DAOPropertyMapper_Editor._Inline_tpfo2a_a1a());
     editorCell = provider.createEditorCell(editorContext);
     if (editorCell.getRole() == null) {
       editorCell.setReferenceCell(true);
@@ -68,17 +68,17 @@ public class DAOAttributeMapper_Editor extends DefaultNodeEditor {
     } else
     return editorCell;
   }
-  public static class _Inline_cz1bf4_a1a extends InlineCellProvider {
-    public _Inline_cz1bf4_a1a() {
+  public static class _Inline_tpfo2a_a1a extends InlineCellProvider {
+    public _Inline_tpfo2a_a1a() {
       super();
     }
     public EditorCell createEditorCell(EditorContext editorContext) {
       return this.createEditorCell(editorContext, this.getSNode());
     }
     public EditorCell createEditorCell(EditorContext editorContext, SNode node) {
-      return this.createProperty_cz1bf4_a0b0(editorContext, node);
+      return this.createProperty_tpfo2a_a0b0(editorContext, node);
     }
-    private EditorCell createProperty_cz1bf4_a0b0(EditorContext editorContext, SNode node) {
+    private EditorCell createProperty_tpfo2a_a0b0(EditorContext editorContext, SNode node) {
       CellProviderWithRole provider = new PropertyCellProvider(node, editorContext);
       provider.setRole("name");
       provider.setNoTargetText("<no name>");
@@ -96,13 +96,13 @@ public class DAOAttributeMapper_Editor extends DefaultNodeEditor {
       return editorCell;
     }
   }
-  private EditorCell createConstant_cz1bf4_c0(EditorContext editorContext, SNode node) {
+  private EditorCell createConstant_tpfo2a_c0(EditorContext editorContext, SNode node) {
     EditorCell_Constant editorCell = new EditorCell_Constant(editorContext, node, "as");
-    editorCell.setCellId("Constant_cz1bf4_c0");
+    editorCell.setCellId("Constant_tpfo2a_c0");
     editorCell.setDefaultText("");
     return editorCell;
   }
-  private EditorCell createRefNode_cz1bf4_d0(EditorContext editorContext, SNode node) {
+  private EditorCell createRefNode_tpfo2a_d0(EditorContext editorContext, SNode node) {
     CellProviderWithRole provider = new RefNodeCellProvider(node, editorContext);
     provider.setRole("type");
     provider.setNoTargetText("<no type>");
@@ -120,13 +120,13 @@ public class DAOAttributeMapper_Editor extends DefaultNodeEditor {
     } else
     return editorCell;
   }
-  private EditorCell createConstant_cz1bf4_e0(EditorContext editorContext, SNode node) {
+  private EditorCell createConstant_tpfo2a_e0(EditorContext editorContext, SNode node) {
     EditorCell_Constant editorCell = new EditorCell_Constant(editorContext, node, "-> column");
-    editorCell.setCellId("Constant_cz1bf4_e0");
+    editorCell.setCellId("Constant_tpfo2a_e0");
     editorCell.setDefaultText("");
     return editorCell;
   }
-  private EditorCell createProperty_cz1bf4_f0(EditorContext editorContext, SNode node) {
+  private EditorCell createProperty_tpfo2a_f0(EditorContext editorContext, SNode node) {
     CellProviderWithRole provider = new PropertyCellProvider(node, editorContext);
     provider.setRole("name");
     provider.setNoTargetText("<no name>");
@@ -142,13 +142,13 @@ public class DAOAttributeMapper_Editor extends DefaultNodeEditor {
     } else
     return editorCell;
   }
-  private EditorCell createConstant_cz1bf4_g0(EditorContext editorContext, SNode node) {
+  private EditorCell createConstant_tpfo2a_g0(EditorContext editorContext, SNode node) {
     EditorCell_Constant editorCell = new EditorCell_Constant(editorContext, node, "is primary key");
-    editorCell.setCellId("Constant_cz1bf4_g0");
+    editorCell.setCellId("Constant_tpfo2a_g0");
     editorCell.setDefaultText("");
     return editorCell;
   }
-  private EditorCell createProperty_cz1bf4_h0(EditorContext editorContext, SNode node) {
+  private EditorCell createProperty_tpfo2a_h0(EditorContext editorContext, SNode node) {
     CellProviderWithRole provider = new PropertyCellProvider(node, editorContext);
     provider.setRole("isKey");
     provider.setNoTargetText("<no isKey>");

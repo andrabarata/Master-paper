@@ -39,59 +39,62 @@
       </concept>
     </language>
   </registry>
-  <node concept="1TIwiD" id="6hc$cxbNhmy">
+  <node concept="1TIwiD" id="1uHuMhn0FC_">
     <property role="TrG5h" value="Person" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
-    <node concept="1TJgyi" id="6hc$cxbNhno" role="1TKVEl">
+    <node concept="1TJgyi" id="1uHuMhn0G5h" role="1TKVEl">
       <property role="TrG5h" value="id" />
       <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
     </node>
-    <node concept="1TJgyi" id="6hc$cxbNhnf" role="1TKVEl">
+    <node concept="1TJgyi" id="1uHuMhn0FCC" role="1TKVEl">
       <property role="TrG5h" value="firstName" />
       <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
     </node>
-    <node concept="1TJgyi" id="6hc$cxbNhnh" role="1TKVEl">
+    <node concept="1TJgyi" id="1uHuMhn0FCE" role="1TKVEl">
       <property role="TrG5h" value="lastName" />
       <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
     </node>
-    <node concept="1TJgyi" id="6hc$cxbNhnk" role="1TKVEl">
-      <property role="TrG5h" value="age" />
-      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
-    </node>
-    <node concept="PrWs8" id="6hc$cxbYnJi" role="PzmwI">
+    <node concept="PrWs8" id="1uHuMhn0FCA" role="PzmwI">
       <ref role="PrY4T" to="h5of:6hc$cxbYn_3" resolve="DAOObject" />
     </node>
   </node>
-  <node concept="1TIwiD" id="6hc$cxbNhrg">
-    <property role="TrG5h" value="Book" />
+  <node concept="1TIwiD" id="1uHuMhn0FCN">
+    <property role="TrG5h" value="Customer" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
-    <node concept="1TJgyi" id="6hc$cxbNhri" role="1TKVEl">
+    <node concept="1TJgyi" id="1uHuMhn0G5l" role="1TKVEl">
+      <property role="TrG5h" value="customerId" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="PrWs8" id="1uHuMhn0FCO" role="PzmwI">
+      <ref role="PrY4T" to="h5of:6hc$cxbYn_3" resolve="DAOObject" />
+    </node>
+    <node concept="1TJgyj" id="1uHuMhn0FCQ" role="1TKVEi">
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="person" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="1uHuMhn0FC_" resolve="Person" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="1uHuMhn0FD6">
+    <property role="TrG5h" value="Shop" />
+    <property role="19KtqR" value="true" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="1uHuMhn0FD7" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="customers" />
+      <property role="20lbJX" value="1..n" />
+      <ref role="20lvS9" node="1uHuMhn0FCN" resolve="Customer" />
+    </node>
+    <node concept="PrWs8" id="1uHuMhn4fbT" role="PzmwI">
+      <ref role="PrY4T" to="h5of:6hc$cxbYn_3" resolve="DAOObject" />
+    </node>
+    <node concept="1TJgyi" id="1uHuMhn4gcS" role="1TKVEl">
       <property role="TrG5h" value="id" />
       <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
     </node>
-    <node concept="1TJgyi" id="6hc$cxbNhrk" role="1TKVEl">
+    <node concept="1TJgyi" id="1uHuMhn4gei" role="1TKVEl">
       <property role="TrG5h" value="name" />
       <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
-    </node>
-    <node concept="PrWs8" id="6hc$cxbYnJf" role="PzmwI">
-      <ref role="PrY4T" to="h5of:6hc$cxbYn_3" resolve="DAOObject" />
-    </node>
-  </node>
-  <node concept="1TIwiD" id="6hc$cxbNhvd">
-    <property role="TrG5h" value="PersonHasBook" />
-    <property role="19KtqR" value="true" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
-    <node concept="1TJgyj" id="6hc$cxbNhvn" role="1TKVEi">
-      <property role="20lmBu" value="aggregation" />
-      <property role="20kJfa" value="person" />
-      <property role="20lbJX" value="1" />
-      <ref role="20lvS9" node="6hc$cxbNhmy" resolve="Person" />
-    </node>
-    <node concept="1TJgyj" id="6hc$cxbNhvp" role="1TKVEi">
-      <property role="20lmBu" value="aggregation" />
-      <property role="20kJfa" value="book" />
-      <property role="20lbJX" value="1" />
-      <ref role="20lvS9" node="6hc$cxbNhrg" resolve="Book" />
     </node>
   </node>
 </model>
