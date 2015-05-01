@@ -9,13 +9,11 @@ public class DBCommands {
   public static void executeCommands() throws ClassNotFoundException, SQLException {
     PersonDAO personDAO = new PersonDAO();
     Person person = new Person();
-    {
-      person = new Person();
-      person.setId(1);
-      Person newPerson = new Person();
-      newPerson.setFirstName("Ralandra");
-      personDAO.updatePerson(person, newPerson);
-    }
+    person = new Person();
+    person.setFirstName("Gill");
+    person.setLastName("Chill");
+    person.setId(2);
+    personDAO.addPerson(person);
   }
 
   public static void main(String[] args) {

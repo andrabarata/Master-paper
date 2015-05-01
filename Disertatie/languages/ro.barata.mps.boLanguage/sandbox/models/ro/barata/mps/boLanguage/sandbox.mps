@@ -65,13 +65,12 @@
       <concept id="6352133620896880667" name="ro.barata.mps.databaseOperationsLanguage.structure.DBCommands" flags="ng" index="3vu9v4">
         <child id="6352133620896880695" name="operations" index="3vu9vC" />
       </concept>
-      <concept id="6352133620896880397" name="ro.barata.mps.databaseOperationsLanguage.structure.UpdateOperation" flags="ng" index="3vu9zi">
-        <child id="6352133620898006340" name="searchReference" index="3vl$Er" />
-        <child id="6352133620896880458" name="propertyReferences" index="3vu9yl" />
-      </concept>
       <concept id="6352133620896880014" name="ro.barata.mps.databaseOperationsLanguage.structure.PropertyReference" flags="ng" index="3vu9Dh">
         <reference id="6352133620896880069" name="property" index="3vu9Cq" />
         <child id="6352133620896880079" name="value" index="3vu9Cg" />
+      </concept>
+      <concept id="6352133620896879904" name="ro.barata.mps.databaseOperationsLanguage.structure.InsertOperation" flags="ng" index="3vu9FZ">
+        <child id="6352133620896880086" name="propertyReferences" index="3vu9C9" />
       </concept>
       <concept id="6352133620896551585" name="ro.barata.mps.databaseOperationsLanguage.structure.Operation" flags="ng" index="3vvpPY">
         <reference id="6352133620896574284" name="object" index="3vv6ij" />
@@ -88,62 +87,62 @@
     <property role="2$SKiy" value="true" />
     <node concept="JB8v6" id="1uHuMhn0FJD" role="JGwam">
       <node concept="3DwHsX" id="1uHuMhn5cap" role="JB8uv">
-        <ref role="3DWFmz" to="ikgz:1uHuMhn0FCN" resolve="Customer" />
+        <ref role="3DWFmz" to="ikgz:2cLDx6bEw_r" resolve="Customer" />
         <node concept="1ws$pM" id="1uHuMhn5caq" role="3DwHvV">
           <property role="TrG5h" value="CustomerTable" />
           <node concept="11vWQ3" id="1uHuMhn5ca$" role="11tqA7">
             <property role="TrG5h" value="personId" />
-            <ref role="11tqA5" to="ikgz:1uHuMhn0FCQ" />
+            <ref role="11tqA5" to="ikgz:2cLDx6bEwA4" />
             <node concept="GOmve" id="1uHuMhn5cbx" role="GPI$P" />
           </node>
           <node concept="3DwI$s" id="1uHuMhn5car" role="1ws$oX">
             <property role="TrG5h" value="id" />
             <property role="2$SaCC" value="true" />
-            <ref role="1wsEsU" to="ikgz:1uHuMhn0G5l" resolve="customerId" />
+            <ref role="1wsEsU" to="ikgz:2cLDx6bEw_U" resolve="customerId" />
             <node concept="GOmve" id="1uHuMhn5cax" role="GPI$P" />
           </node>
         </node>
       </node>
       <node concept="3DwHsX" id="1uHuMhn5caC" role="JB8uv">
-        <ref role="3DWFmz" to="ikgz:1uHuMhn0FC_" resolve="Person" />
+        <ref role="3DWFmz" to="ikgz:2cLDx6bEt$e" resolve="Person" />
         <node concept="1ws$pM" id="1uHuMhn5caD" role="3DwHvV">
           <property role="TrG5h" value="PersonTable" />
           <node concept="3DwI$s" id="1uHuMhn5caE" role="1ws$oX">
             <property role="TrG5h" value="id" />
             <property role="2$SaCC" value="true" />
-            <ref role="1wsEsU" to="ikgz:1uHuMhn0G5h" resolve="id" />
+            <ref role="1wsEsU" to="ikgz:2cLDx6bEw$G" resolve="id" />
             <node concept="GOmve" id="1uHuMhn5cb6" role="GPI$P" />
           </node>
           <node concept="3DwI$s" id="1uHuMhn5cb9" role="1ws$oX">
             <property role="TrG5h" value="firstName" />
-            <ref role="1wsEsU" to="ikgz:1uHuMhn0FCC" resolve="firstName" />
+            <ref role="1wsEsU" to="ikgz:2cLDx6bEw$I" resolve="firstName" />
             <node concept="GOms9" id="1uHuMhn5cbf" role="GPI$P" />
           </node>
           <node concept="3DwI$s" id="1uHuMhn5cbi" role="1ws$oX">
             <property role="TrG5h" value="lastName" />
-            <ref role="1wsEsU" to="ikgz:1uHuMhn0FCE" resolve="lastName" />
+            <ref role="1wsEsU" to="ikgz:2cLDx6bEw$L" resolve="lastName" />
             <node concept="GOms9" id="1uHuMhn5cbq" role="GPI$P" />
           </node>
         </node>
       </node>
       <node concept="3DwHsX" id="1uHuMhn5cbz" role="JB8uv">
-        <ref role="3DWFmz" to="ikgz:1uHuMhn0FD6" resolve="Shop" />
+        <ref role="3DWFmz" to="ikgz:2cLDx6bEwAG" resolve="Shop" />
         <node concept="1ws$pM" id="1uHuMhn5cb$" role="3DwHvV">
           <property role="TrG5h" value="ShopTable" />
           <node concept="10JcB_" id="1uHuMhn5ccT" role="10JcBV">
             <property role="TrG5h" value="shopId" />
-            <ref role="10JcBT" to="ikgz:1uHuMhn0FD7" />
+            <ref role="10JcBT" to="ikgz:2cLDx6bEwAH" />
             <node concept="GOmve" id="1uHuMhn5ccX" role="GPI$P" />
           </node>
           <node concept="3DwI$s" id="1uHuMhn5cb_" role="1ws$oX">
             <property role="TrG5h" value="id" />
             <property role="2$SaCC" value="true" />
-            <ref role="1wsEsU" to="ikgz:1uHuMhn4gcS" resolve="id" />
+            <ref role="1wsEsU" to="ikgz:2cLDx6bEwAU" resolve="id" />
             <node concept="GOmve" id="1uHuMhn5cbT" role="GPI$P" />
           </node>
           <node concept="3DwI$s" id="1uHuMhn5cbW" role="1ws$oX">
             <property role="TrG5h" value="name" />
-            <ref role="1wsEsU" to="ikgz:1uHuMhn4gei" resolve="name" />
+            <ref role="1wsEsU" to="ikgz:2cLDx6bEwAW" resolve="name" />
             <node concept="GOms9" id="1uHuMhn5cc2" role="GPI$P" />
           </node>
         </node>
@@ -159,18 +158,24 @@
     </node>
   </node>
   <node concept="3vu9v4" id="5wBjXY7qOfm">
-    <node concept="3vu9zi" id="5wBjXY7T48Z" role="3vu9vC">
-      <ref role="3vv6ij" to="ikgz:1uHuMhn0FC_" resolve="Person" />
-      <node concept="3vu9Dh" id="5wBjXY7T490" role="3vu9yl">
-        <ref role="3vu9Cq" to="ikgz:1uHuMhn0FCC" resolve="firstName" />
-        <node concept="3vjcHs" id="5wBjXY7T49c" role="3vu9Cg">
-          <property role="3vjcHG" value="Ralandra" />
+    <node concept="3vu9FZ" id="2cLDx6bFkdL" role="3vu9vC">
+      <ref role="3vv6ij" to="ikgz:2cLDx6bEt$e" resolve="Person" />
+      <node concept="3vu9Dh" id="2cLDx6bFkdM" role="3vu9C9">
+        <ref role="3vu9Cq" to="ikgz:2cLDx6bEw$I" resolve="firstName" />
+        <node concept="3vjcHs" id="2cLDx6bFkdR" role="3vu9Cg">
+          <property role="3vjcHG" value="Gill" />
         </node>
       </node>
-      <node concept="3vu9Dh" id="5wBjXY7T492" role="3vl$Er">
-        <ref role="3vu9Cq" to="ikgz:1uHuMhn0G5h" resolve="id" />
-        <node concept="3vjcH_" id="5wBjXY7T499" role="3vu9Cg">
-          <property role="3vjcG9" value="1" />
+      <node concept="3vu9Dh" id="2cLDx6bFke2" role="3vu9C9">
+        <ref role="3vu9Cq" to="ikgz:2cLDx6bEw$L" resolve="lastName" />
+        <node concept="3vjcHs" id="2cLDx6bFkeg" role="3vu9Cg">
+          <property role="3vjcHG" value="Chill" />
+        </node>
+      </node>
+      <node concept="3vu9Dh" id="2cLDx6bFke8" role="3vu9C9">
+        <ref role="3vu9Cq" to="ikgz:2cLDx6bEw$G" resolve="id" />
+        <node concept="3vjcH_" id="2cLDx6bFkej" role="3vu9Cg">
+          <property role="3vjcG9" value="2" />
         </node>
       </node>
     </node>
