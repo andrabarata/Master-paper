@@ -37,7 +37,7 @@ public class CustomerDAO {
     }
     Customer customer = new Customer();
     i = 0;
-    customer.setCustomerId((int) result.get(i));
+    customer.setCustomerId((Integer) result.get(i));
     i++;
     return customer;
   }
@@ -47,33 +47,43 @@ public class CustomerDAO {
     String sql = "insert into " + "CustomerTable" + "(";
     String columns = "";
     String values = "";
-    columns += "id";
-    values += customer.getCustomerId();
-    sql += columns + values;
+    if (customer.getCustomerId() != null) {
+      columns += "id" + ",";
+      values += "'" + customer.getCustomerId() + "',";
+    }
+    sql += columns.substring(0, columns.length() - 1) + ") values (" + values.substring(0, values.length() - 1) + ")";
+    System.out.println(sql);
     stmt.execute(sql);
   }
 
-  public void updateCustomer(Customer customer) throws SQLException {
+  public void updateCustomer(Customer oldcustomer, Customer newcustomer) throws SQLException {
     String sql = "update " + "CustomerTable" + " set ";
     String values = "";
-    if (values.length() > 0) {
-      values = values.substring(0, values.length() - 1);
-    }
-    String condition = " where";
-    condition += "id" + "=" + customer.getCustomerId() + "and ";
-    if (condition.length() > 0) {
-      condition = condition.substring(0, condition.length() - 4);
+    if (newcustomer.getCustomerId() != null) {
+      values += "id" + "='" + newcustomer.getCustomerId() + "',";
     }
 
-    sql += values + condition;
+    String condition = " where ";
+    if (oldcustomer.getCustomerId() != null) {
+      condition += "id" + "='" + oldcustomer.getCustomerId() + "' and ";
+    }
+    sql += values.substring(0, values.length() - 1) + condition.substring(0, condition.length() - 4);
+    System.out.println(sql);
     stmt.execute(sql);
 
   }
 
-  public void deleteCustomer(Customer customer) {
-    String sql = "delete from " + "tableName" + "where";
+  public void deleteCustomer(Customer customer) throws SQLException {
+    String sql = "delete from " + "CustomerTable" + " where";
     String condition = " ";
-    condition += "id" + "=" + customer.getCustomerId();
+    if (customer.getCustomerId() != null) {
+      condition += "id" + "='" + customer.getCustomerId() + "'";
+      condition += " and ";
+    }
+    sql += condition.substring(0, condition.length() - 5);
+    System.out.println(sql);
+    stmt.execute(sql);
+
   }
 
 }

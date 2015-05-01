@@ -41,7 +41,7 @@ public class PersonDAO {
     }
     Person person = new Person();
     i = 0;
-    person.setId((int) result.get(i));
+    person.setId((Integer) result.get(i));
     i++;
     person.setFirstName((String) result.get(i));
     i++;
@@ -55,47 +55,71 @@ public class PersonDAO {
     String sql = "insert into " + "PersonTable" + "(";
     String columns = "";
     String values = "";
-    columns += "id";
-    columns += ",";
-    values += person.getId();
-    values += ",";
-    columns += "firstName";
-    columns += ",";
-    values += person.getFirstName();
-    values += ",";
-    columns += "lastName";
-    values += person.getLastName();
-    sql += columns + values;
+    if (person.getId() != null) {
+      columns += "id" + ",";
+      values += "'" + person.getId() + "',";
+    }
+    if (person.getFirstName() != null) {
+      columns += "firstName" + ",";
+      values += "'" + person.getFirstName() + "',";
+    }
+    if (person.getLastName() != null) {
+      columns += "lastName" + ",";
+      values += "'" + person.getLastName() + "',";
+    }
+    sql += columns.substring(0, columns.length() - 1) + ") values (" + values.substring(0, values.length() - 1) + ")";
+    System.out.println(sql);
     stmt.execute(sql);
   }
 
-  public void updatePerson(Person person) throws SQLException {
+  public void updatePerson(Person oldperson, Person newperson) throws SQLException {
     String sql = "update " + "PersonTable" + " set ";
     String values = "";
-    values += "firstName" + "=" + person.getFirstName() + ",";
-    values += "lastName" + "=" + person.getLastName() + ",";
-    if (values.length() > 0) {
-      values = values.substring(0, values.length() - 1);
+    if (newperson.getId() != null) {
+      values += "id" + "='" + newperson.getId() + "',";
     }
-    String condition = " where";
-    condition += "id" + "=" + person.getId() + "and ";
-    if (condition.length() > 0) {
-      condition = condition.substring(0, condition.length() - 4);
+    if (newperson.getFirstName() != null) {
+      values += "firstName" + "='" + newperson.getFirstName() + "',";
+    }
+    if (newperson.getLastName() != null) {
+      values += "lastName" + "='" + newperson.getLastName() + "',";
     }
 
-    sql += values + condition;
+    String condition = " where ";
+    if (oldperson.getId() != null) {
+      condition += "id" + "='" + oldperson.getId() + "' and ";
+    }
+    if (oldperson.getFirstName() != null) {
+      condition += "firstName" + "='" + oldperson.getFirstName() + "' and ";
+    }
+    if (oldperson.getLastName() != null) {
+      condition += "lastName" + "='" + oldperson.getLastName() + "' and ";
+    }
+    sql += values.substring(0, values.length() - 1) + condition.substring(0, condition.length() - 4);
+    System.out.println(sql);
     stmt.execute(sql);
 
   }
 
-  public void deletePerson(Person person) {
-    String sql = "delete from " + "tableName" + "where";
+  public void deletePerson(Person person) throws SQLException {
+    String sql = "delete from " + "PersonTable" + " where";
     String condition = " ";
-    condition += "id" + "=" + person.getId();
-    condition += " and ";
-    condition += "firstName" + "=" + person.getFirstName();
-    condition += " and ";
-    condition += "lastName" + "=" + person.getLastName();
+    if (person.getId() != null) {
+      condition += "id" + "='" + person.getId() + "'";
+      condition += " and ";
+    }
+    if (person.getFirstName() != null) {
+      condition += "firstName" + "='" + person.getFirstName() + "'";
+      condition += " and ";
+    }
+    if (person.getLastName() != null) {
+      condition += "lastName" + "='" + person.getLastName() + "'";
+      condition += " and ";
+    }
+    sql += condition.substring(0, condition.length() - 5);
+    System.out.println(sql);
+    stmt.execute(sql);
+
   }
 
 }

@@ -11,9 +11,25 @@ public class BehaviorAspectDescriptor implements jetbrains.mps.smodel.runtime.Be
   }
   public BehaviorDescriptor getDescriptor(String fqName) {
     switch (Arrays.binarySearch(stringSwitchCases_846f5o_a0a0b, fqName)) {
+      case 2:
+        return new DeleteOperation_BehaviorDescriptor();
+      case 3:
+        return new InsertOperation_BehaviorDescriptor();
+      case 5:
+        return new PropertyReference_BehaviorDescriptor();
+      case 7:
+        return new UpdateOperation_BehaviorDescriptor();
+      case 1:
+        return new DBCommands_BehaviorDescriptor();
+      case 6:
+        return new StringValue_BehaviorDescriptor();
+      case 4:
+        return new IntValue_BehaviorDescriptor();
+      case 0:
+        return new BooleanValue_BehaviorDescriptor();
       default:
         return BehaviorAspectInterpreted.getInstance().getDescriptor(fqName);
     }
   }
-  private static String[] stringSwitchCases_846f5o_a0a0b = new String[]{};
+  private static String[] stringSwitchCases_846f5o_a0a0b = new String[]{"ro.barata.mps.databaseOperationsLanguage.structure.BooleanValue", "ro.barata.mps.databaseOperationsLanguage.structure.DBCommands", "ro.barata.mps.databaseOperationsLanguage.structure.DeleteOperation", "ro.barata.mps.databaseOperationsLanguage.structure.InsertOperation", "ro.barata.mps.databaseOperationsLanguage.structure.IntValue", "ro.barata.mps.databaseOperationsLanguage.structure.PropertyReference", "ro.barata.mps.databaseOperationsLanguage.structure.StringValue", "ro.barata.mps.databaseOperationsLanguage.structure.UpdateOperation"};
 }

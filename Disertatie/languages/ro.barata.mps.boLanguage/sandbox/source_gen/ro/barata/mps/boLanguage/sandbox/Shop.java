@@ -4,17 +4,17 @@ package ro.barata.mps.boLanguage.sandbox;
 
 
 public class Shop {
-  private int id;
+  private Integer id;
   private String name;
 
-  public void setId(int attribute) {
+  public void setId(Integer attribute) {
     this.id = attribute;
   }
   public void setName(String attribute) {
     this.name = attribute;
   }
 
-  public int getId() {
+  public Integer getId() {
     return id;
   }
   public String getName() {

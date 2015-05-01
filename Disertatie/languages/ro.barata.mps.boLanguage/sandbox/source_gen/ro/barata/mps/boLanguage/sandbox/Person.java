@@ -4,11 +4,11 @@ package ro.barata.mps.boLanguage.sandbox;
 
 
 public class Person {
-  private int id;
+  private Integer id;
   private String firstName;
   private String lastName;
 
-  public void setId(int attribute) {
+  public void setId(Integer attribute) {
     this.id = attribute;
   }
   public void setFirstName(String attribute) {
@@ -18,7 +18,7 @@ public class Person {
     this.lastName = attribute;
   }
 
-  public int getId() {
+  public Integer getId() {
     return id;
   }
   public String getFirstName() {

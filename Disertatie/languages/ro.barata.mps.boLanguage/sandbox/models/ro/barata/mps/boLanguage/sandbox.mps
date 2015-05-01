@@ -5,6 +5,7 @@
     <use id="d9d0a256-4d64-40cf-b5a3-70c8c237890b" name="ro.barata.mps.boLanguage" version="-1" />
     <use id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core" version="-1" />
     <use id="5cba771a-86ff-496b-a121-6ae83a039560" name="ro.barata.mps.databaseLanguage" version="-1" />
+    <use id="58b9e0aa-6663-4086-8f84-dfaa697f9989" name="ro.barata.mps.databaseOperationsLanguage" version="-1" />
   </languages>
   <imports>
     <import index="ikgz" ref="r:b83b433b-ea5a-4d7b-972b-0c047197eb67(ro.barata.mps.boLanguage.structure)" />
@@ -52,6 +53,28 @@
       </concept>
       <concept id="2715870822990503683" name="ro.barata.mps.databaseLanguage.structure.DAOPropertyMapper" flags="ng" index="3DwI$s">
         <reference id="943743190239444564" name="property" index="1wsEsU" />
+      </concept>
+    </language>
+    <language id="58b9e0aa-6663-4086-8f84-dfaa697f9989" name="ro.barata.mps.databaseOperationsLanguage">
+      <concept id="6352133620897645699" name="ro.barata.mps.databaseOperationsLanguage.structure.StringValue" flags="ng" index="3vjcHs">
+        <property id="6352133620897645747" name="value" index="3vjcHG" />
+      </concept>
+      <concept id="6352133620897645754" name="ro.barata.mps.databaseOperationsLanguage.structure.IntValue" flags="ng" index="3vjcH_">
+        <property id="6352133620897645782" name="value" index="3vjcG9" />
+      </concept>
+      <concept id="6352133620896880667" name="ro.barata.mps.databaseOperationsLanguage.structure.DBCommands" flags="ng" index="3vu9v4">
+        <child id="6352133620896880695" name="operations" index="3vu9vC" />
+      </concept>
+      <concept id="6352133620896880397" name="ro.barata.mps.databaseOperationsLanguage.structure.UpdateOperation" flags="ng" index="3vu9zi">
+        <child id="6352133620898006340" name="searchReference" index="3vl$Er" />
+        <child id="6352133620896880458" name="propertyReferences" index="3vu9yl" />
+      </concept>
+      <concept id="6352133620896880014" name="ro.barata.mps.databaseOperationsLanguage.structure.PropertyReference" flags="ng" index="3vu9Dh">
+        <reference id="6352133620896880069" name="property" index="3vu9Cq" />
+        <child id="6352133620896880079" name="value" index="3vu9Cg" />
+      </concept>
+      <concept id="6352133620896551585" name="ro.barata.mps.databaseOperationsLanguage.structure.Operation" flags="ng" index="3vvpPY">
+        <reference id="6352133620896574284" name="object" index="3vv6ij" />
       </concept>
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
@@ -133,6 +156,23 @@
       <property role="2$ZLsR" value="xe" />
       <property role="2$0fF1" value="disertatie" />
       <property role="2$0fF5" value="disertatie" />
+    </node>
+  </node>
+  <node concept="3vu9v4" id="5wBjXY7qOfm">
+    <node concept="3vu9zi" id="5wBjXY7T48Z" role="3vu9vC">
+      <ref role="3vv6ij" to="ikgz:1uHuMhn0FC_" resolve="Person" />
+      <node concept="3vu9Dh" id="5wBjXY7T490" role="3vu9yl">
+        <ref role="3vu9Cq" to="ikgz:1uHuMhn0FCC" resolve="firstName" />
+        <node concept="3vjcHs" id="5wBjXY7T49c" role="3vu9Cg">
+          <property role="3vjcHG" value="Ralandra" />
+        </node>
+      </node>
+      <node concept="3vu9Dh" id="5wBjXY7T492" role="3vl$Er">
+        <ref role="3vu9Cq" to="ikgz:1uHuMhn0G5h" resolve="id" />
+        <node concept="3vjcH_" id="5wBjXY7T499" role="3vu9Cg">
+          <property role="3vjcG9" value="1" />
+        </node>
+      </node>
     </node>
   </node>
 </model>

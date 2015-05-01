@@ -4,13 +4,13 @@ package ro.barata.mps.boLanguage.sandbox;
 
 
 public class Customer {
-  private int customerId;
+  private Integer customerId;
 
-  public void setCustomerId(int attribute) {
+  public void setCustomerId(Integer attribute) {
     this.customerId = attribute;
   }
 
-  public int getCustomerId() {
+  public Integer getCustomerId() {
     return customerId;
   }
 

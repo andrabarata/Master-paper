@@ -9,6 +9,11 @@ import java.util.Collection;
 import jetbrains.mps.generator.runtime.TemplateModule;
 import jetbrains.mps.generator.runtime.TemplateUtil;
 import jetbrains.mps.smodel.runtime.LanguageAspectDescriptor;
+import jetbrains.mps.smodel.runtime.BehaviorAspectDescriptor;
+import jetbrains.mps.smodel.runtime.ConstraintsAspectDescriptor;
+import jetbrains.mps.openapi.editor.descriptor.EditorAspectDescriptor;
+import ro.barata.mps.databaseOperationsLanguage.editor.EditorAspectDescriptorImpl;
+import jetbrains.mps.smodel.runtime.StructureAspectDescriptor;
 
 public class Language extends LanguageRuntime {
   public static String MODULE_REF = "58b9e0aa-6663-4086-8f84-dfaa697f9989(ro.barata.mps.databaseOperationsLanguage)";
@@ -29,7 +34,7 @@ public class Language extends LanguageRuntime {
   }
   @Override
   protected String[] getExtendedLanguageIDs() {
-    return new String[]{};
+    return new String[]{"ro.barata.mps.databaseLanguage"};
   }
   @Override
   public Collection<TemplateModule> getGenerators() {
@@ -37,6 +42,18 @@ public class Language extends LanguageRuntime {
   }
   @Override
   protected <T extends LanguageAspectDescriptor> T createAspectDescriptor(Class<T> descriptorClass) {
+    if (descriptorClass == BehaviorAspectDescriptor.class) {
+      return (T) new ro.barata.mps.databaseOperationsLanguage.behavior.BehaviorAspectDescriptor();
+    }
+    if (descriptorClass == ConstraintsAspectDescriptor.class) {
+      return (T) new ro.barata.mps.databaseOperationsLanguage.constraints.ConstraintsAspectDescriptor();
+    }
+    if (descriptorClass == EditorAspectDescriptor.class) {
+      return (T) new EditorAspectDescriptorImpl();
+    }
+    if (descriptorClass == StructureAspectDescriptor.class) {
+      return (T) new ro.barata.mps.databaseOperationsLanguage.structure.StructureAspectDescriptor();
+    }
     return super.createAspectDescriptor(descriptorClass);
   }
 }
