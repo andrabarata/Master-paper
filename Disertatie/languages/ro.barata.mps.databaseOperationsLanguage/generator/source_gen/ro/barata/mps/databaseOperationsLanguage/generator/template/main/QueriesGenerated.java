@@ -5,8 +5,8 @@ package ro.barata.mps.databaseOperationsLanguage.generator.template.main;
 import jetbrains.mps.generator.runtime.Generated;
 import jetbrains.mps.generator.template.PropertyMacroContext;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
-import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.generator.template.ReferenceMacroContext;
 import ro.barata.mps.databaseOperationsLanguage.behavior.PropertyReference_Behavior;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
@@ -18,6 +18,12 @@ import ro.barata.mps.databaseOperationsLanguage.behavior.DBCommands_Behavior;
 @Generated
 public class QueriesGenerated {
   public final boolean NEEDS_OPCONTEXT = false;
+  public static Object propertyMacro_GetPropertyValue_8274062575490655497(final PropertyMacroContext _context) {
+    return SPropertyOperations.getInteger(_context.getNode(), MetaAdapterFactory.getProperty(0x58b9e0aa66634086L, 0x8f84dfaa697f9989L, 0x58274fdf876b84baL, 0x58274fdf876b84d6L, "value"));
+  }
+  public static Object propertyMacro_GetPropertyValue_8274062575490656408(final PropertyMacroContext _context) {
+    return SPropertyOperations.getString(_context.getNode(), MetaAdapterFactory.getProperty(0x58b9e0aa66634086L, 0x8f84dfaa697f9989L, 0x58274fdf876b8483L, 0x58274fdf876b84b3L, "value"));
+  }
   public static Object propertyMacro_GetPropertyValue_6352133620898950334(final PropertyMacroContext _context) {
     return SPropertyOperations.getString(SLinkOperations.getTarget(_context.getNode(), MetaAdapterFactory.getReferenceLink(0x58b9e0aa66634086L, 0x8f84dfaa697f9989L, 0x58274fdf875ad2a1L, 0x58274fdf875b2b4cL, "object")), MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name")).toLowerCase() + "DAO";
   }

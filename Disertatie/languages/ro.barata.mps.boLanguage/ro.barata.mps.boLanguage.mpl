@@ -38,14 +38,14 @@
         <language id="7866978e-a0f0-4cc7-81bc-4d213d9375e1" fqName="jetbrains.mps.lang.smodel" version="0" />
         <language id="9ded098b-ad6a-4657-bfd9-48636cfe8bc3" fqName="jetbrains.mps.lang.traceable" version="0" />
         <language id="d9d0a256-4d64-40cf-b5a3-70c8c237890b" fqName="ro.barata.mps.boLanguage" version="-1" />
-        <language id="5cba771a-86ff-496b-a121-6ae83a039560" fqName="ro.barata.mps.databaseLanguage" version="0" />
+        <language id="5cba771a-86ff-496b-a121-6ae83a039560" fqName="ro.barata.mps.rootLanguage" version="0" />
       </languageVersions>
       <mapping-priorities />
     </generator>
   </generators>
   <sourcePath />
   <usedLanguages>
-    <usedLanguage>5cba771a-86ff-496b-a121-6ae83a039560(ro.barata.mps.databaseLanguage)</usedLanguage>
+    <usedLanguage>5cba771a-86ff-496b-a121-6ae83a039560(ro.barata.mps.rootLanguage)</usedLanguage>
   </usedLanguages>
   <usedDevKits>
     <usedDevKit>2677cb18-f558-4e33-bc38-a5139cee06dc(jetbrains.mps.devkit.language-design)</usedDevKit>
@@ -82,10 +82,10 @@
     <language id="b83431fe-5c8f-40bc-8a36-65e25f4dd253" fqName="jetbrains.mps.lang.textGen" version="0" />
     <language id="9ded098b-ad6a-4657-bfd9-48636cfe8bc3" fqName="jetbrains.mps.lang.traceable" version="0" />
     <language id="7a5dda62-9140-4668-ab76-d5ed1746f2b2" fqName="jetbrains.mps.lang.typesystem" version="0" />
-    <language id="5cba771a-86ff-496b-a121-6ae83a039560" fqName="ro.barata.mps.databaseLanguage" version="0" />
+    <language id="5cba771a-86ff-496b-a121-6ae83a039560" fqName="ro.barata.mps.rootLanguage" version="0" />
   </languageVersions>
   <extendedLanguages>
-    <extendedLanguage>5cba771a-86ff-496b-a121-6ae83a039560(ro.barata.mps.databaseLanguage)</extendedLanguage>
+    <extendedLanguage>5cba771a-86ff-496b-a121-6ae83a039560(ro.barata.mps.rootLanguage)</extendedLanguage>
   </extendedLanguages>
 </language>
 

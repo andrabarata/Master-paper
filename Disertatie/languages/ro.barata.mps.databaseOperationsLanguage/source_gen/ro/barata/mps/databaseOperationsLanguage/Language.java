@@ -34,7 +34,7 @@ public class Language extends LanguageRuntime {
   }
   @Override
   protected String[] getExtendedLanguageIDs() {
-    return new String[]{"ro.barata.mps.databaseLanguage"};
+    return new String[]{"ro.barata.mps.rootLanguage"};
   }
   @Override
   public Collection<TemplateModule> getGenerators() {

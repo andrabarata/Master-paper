@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<model ref="r:330110a4-0a87-4cc0-a72b-63c9198f45d4(ro.barata.mps.databaseLanguage.behavior)">
+<model ref="r:330110a4-0a87-4cc0-a72b-63c9198f45d4(ro.barata.mps.rootLanguage.behavior)">
   <persistence version="9" />
   <languages>
     <use id="af65afd8-f0dd-4942-87d9-63a55f2a9db1" name="jetbrains.mps.lang.behavior" version="-1" />
     <devkit ref="fbc25dd2-5da4-483a-8b19-70928e1b62d7(jetbrains.mps.devkit.general-purpose)" />
   </languages>
   <imports>
-    <import index="h5of" ref="r:2126a8cd-3e3b-4dd2-b6b0-7943b1bebaa3(ro.barata.mps.databaseLanguage.structure)" implicit="true" />
+    <import index="h5of" ref="r:2126a8cd-3e3b-4dd2-b6b0-7943b1bebaa3(ro.barata.mps.rootLanguage.structure)" implicit="true" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
     <import index="e2lb" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/f:java_stub#6354ebe7-c22a-4a0f-ac54-50b52ab9b065#java.lang(JDK/java.lang@java_stub)" implicit="true" />
   </imports>
@@ -90,7 +90,7 @@
   </registry>
   <node concept="13h7C7" id="2mKHxZcbzTS">
     <property role="3GE5qa" value="db.model" />
-    <ref role="13h7C2" to="h5of:2mKHxZcc_W3" resolve="DAOAttributeMapper" />
+    <ref role="13h7C2" to="h5of:2mKHxZcc_W3" resolve="DAOPropertyMapper" />
     <node concept="13i0hz" id="2mKHxZcbzUL" role="13h7CS">
       <property role="TrG5h" value="getMappingCamelName" />
       <node concept="3Tm1VV" id="2mKHxZcbzUM" role="1B3o_S" />

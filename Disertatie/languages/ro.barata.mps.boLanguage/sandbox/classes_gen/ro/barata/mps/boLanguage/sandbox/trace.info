@@ -778,38 +778,5 @@
       <unit id="1706155229852122088" at="11,0,108,0" name="ro.barata.mps.boLanguage.sandbox.ShopDAO" />
     </file>
   </root>
-  <root nodeRef="r:ca2f6163-f731-4984-b28c-c8e4f51179c6(ro.barata.mps.boLanguage.sandbox)/6352133620897629142">
-    <file name="DBCommands.java">
-      <node id="6352133620897629142" at="9,84,10,42" concept="7" />
-      <node id="6352133620897629142" at="10,42,11,33" concept="7" />
-      <node id="2535990659474342769" at="11,33,12,26" concept="2" />
-      <node id="2535990659474342769" at="12,26,13,32" concept="2" />
-      <node id="2535990659474342769" at="13,32,14,32" concept="2" />
-      <node id="2535990659474342769" at="14,32,15,20" concept="2" />
-      <node id="2535990659474342769" at="15,20,16,32" concept="2" />
-      <node id="6352133620897629142" at="20,9,21,24" concept="2" />
-      <node id="6352133620897629142" at="22,27,23,26" concept="2" />
-      <node id="2535990659474342769" at="11,33,16,32" concept="0" />
-      <node id="6352133620897629142" at="19,42,24,5" concept="11" />
-      <node id="6352133620897629142" at="19,0,26,0" concept="10" trace="main#([Ljava/lang/String;)V" />
-      <node id="6352133620897629142" at="9,0,18,0" concept="10" trace="executeCommands#()V" />
-      <scope id="6352133620897629142" at="20,9,21,24" />
-      <scope id="6352133620897629142" at="22,0,23,26">
-        <var name="e" id="6352133620897629142" />
-      </scope>
-      <scope id="6352133620897629142" at="22,27,23,26" />
-      <scope id="2535990659474342769" at="11,33,16,32" />
-      <scope id="6352133620897629142" at="19,42,24,5" />
-      <scope id="6352133620897629142" at="9,84,16,32">
-        <var name="person" id="6352133620897629142" />
-        <var name="personDAO" id="6352133620897629142" />
-      </scope>
-      <scope id="6352133620897629142" at="19,0,26,0">
-        <var name="args" id="6352133620897629142" />
-      </scope>
-      <scope id="6352133620897629142" at="9,0,18,0" />
-      <unit id="6352133620897629142" at="7,0,27,0" name="ro.barata.mps.boLanguage.sandbox.DBCommands" />
-    </file>
-  </root>
 </debug-info>
 

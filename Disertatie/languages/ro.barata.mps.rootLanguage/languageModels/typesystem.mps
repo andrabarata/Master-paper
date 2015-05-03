@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<model ref="r:0db4d701-1b2d-4340-b14c-21c2e2c33afd(ro.barata.mps.databaseLanguage.typesystem)">
+<model ref="r:0db4d701-1b2d-4340-b14c-21c2e2c33afd(ro.barata.mps.rootLanguage.typesystem)">
   <persistence version="9" />
   <languages>
     <use id="7a5dda62-9140-4668-ab76-d5ed1746f2b2" name="jetbrains.mps.lang.typesystem" version="-1" />
     <devkit ref="fbc25dd2-5da4-483a-8b19-70928e1b62d7(jetbrains.mps.devkit.general-purpose)" />
   </languages>
   <imports>
-    <import index="h5of" ref="r:2126a8cd-3e3b-4dd2-b6b0-7943b1bebaa3(ro.barata.mps.databaseLanguage.structure)" implicit="true" />
+    <import index="h5of" ref="r:2126a8cd-3e3b-4dd2-b6b0-7943b1bebaa3(ro.barata.mps.rootLanguage.structure)" implicit="true" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
     <import index="tpcn" ref="r:00000000-0000-4000-0000-011c8959028b(jetbrains.mps.lang.structure.behavior)" implicit="true" />
     <import index="e2lb" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/f:java_stub#6354ebe7-c22a-4a0f-ac54-50b52ab9b065#java.lang(JDK/java.lang@java_stub)" implicit="true" />
@@ -499,7 +499,7 @@
                       </node>
                       <node concept="1mIQ4w" id="1uHuMhmU9rE" role="2OqNvi">
                         <node concept="chp4Y" id="1uHuMhmU9rF" role="cj9EA">
-                          <ref role="cht4Q" to="h5of:2mKHxZcc_W3" resolve="DAOProppertyMapper" />
+                          <ref role="cht4Q" to="h5of:2mKHxZcc_W3" resolve="DAOPropertyMapper" />
                         </node>
                       </node>
                     </node>
@@ -531,7 +531,7 @@
                     <node concept="2OqwBi" id="6hc$cxbT0sI" role="3clFbG">
                       <node concept="2OqwBi" id="6hc$cxbSZka" role="2Oq$k0">
                         <node concept="1PxgMI" id="6hc$cxbSZ6Y" role="2Oq$k0">
-                          <ref role="1PxNhF" to="h5of:2mKHxZcc_W3" resolve="DAOProppertyMapper" />
+                          <ref role="1PxNhF" to="h5of:2mKHxZcc_W3" resolve="DAOPropertyMapper" />
                           <node concept="37vLTw" id="6hc$cxbSZ3p" role="1PxMeX">
                             <ref role="3cqZAo" node="6hc$cxbSZ0p" resolve="it" />
                           </node>
@@ -703,7 +703,7 @@
                     <node concept="2OqwBi" id="6hc$cxbTM3K" role="2Oq$k0">
                       <node concept="2OqwBi" id="6hc$cxbTM3L" role="2Oq$k0">
                         <node concept="1PxgMI" id="6hc$cxbTM3M" role="2Oq$k0">
-                          <ref role="1PxNhF" to="h5of:2mKHxZcc_W3" resolve="DAOProppertyMapper" />
+                          <ref role="1PxNhF" to="h5of:2mKHxZcc_W3" resolve="DAOPropertyMapper" />
                           <node concept="37vLTw" id="6hc$cxbTM3N" role="1PxMeX">
                             <ref role="3cqZAo" node="6hc$cxbTLT_" resolve="it" />
                           </node>
@@ -768,7 +768,7 @@
     </node>
     <node concept="1YaCAy" id="6hc$cxbSvAu" role="1YuTPh">
       <property role="TrG5h" value="daoAttributeMapper" />
-      <ref role="1YaFvo" to="h5of:2mKHxZcc_W3" resolve="DAOProppertyMapper" />
+      <ref role="1YaFvo" to="h5of:2mKHxZcc_W3" resolve="DAOPropertyMapper" />
     </node>
   </node>
 </model>
