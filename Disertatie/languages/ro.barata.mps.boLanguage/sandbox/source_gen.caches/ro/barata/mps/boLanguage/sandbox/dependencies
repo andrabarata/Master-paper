@@ -86,5 +86,6 @@
     <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.DatabaseConnector" />
     <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.Shop" />
   </dependency>
+  <dependency className="ro.barata.mps.boLanguage.sandbox.index" file="index.html" />
 </dependenciesRoot>
 

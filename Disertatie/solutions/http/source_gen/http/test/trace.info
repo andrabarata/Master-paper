@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<debug-info>
+  <concept fqn="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+  <concept fqn="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" />
+  <concept fqn="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+  <concept fqn="jetbrains.mps.baseLanguage.structure.Statement" />
+  <concept fqn="jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" />
+  <root nodeRef="r:9fbfc56d-1743-4c79-b5a7-885dfbeee97b(http.test)/9023793313880370971">
+    <file name="Test.java">
+      <node id="9023793313880406930" at="8,59,9,37" concept="2" />
+      <node id="9023793313880408365" at="9,37,10,41" concept="0" />
+      <node id="9023793313880410347" at="10,41,11,0" concept="3" />
+      <node id="9023793313880410535" at="11,0,12,19" concept="0" />
+      <node id="9023793313880411725" at="12,19,13,18" concept="0" />
+      <node id="9023793313880406768" at="8,0,15,0" concept="4" trace="main#([Ljava/lang/String;)V" />
+      <scope id="9023793313880406774" at="8,59,13,18">
+        <var name="server" id="9023793313880406931" />
+      </scope>
+      <scope id="9023793313880406768" at="8,0,15,0">
+        <var name="args" id="9023793313880406769" />
+      </scope>
+      <unit id="9023793313880370971" at="7,0,16,0" name="http.test.Test" />
+    </file>
+  </root>
+  <root nodeRef="r:9fbfc56d-1743-4c79-b5a7-885dfbeee97b(http.test)/9023793313880370999">
+    <file name="TestHandler.java">
+      <node id="9023793313880400808" at="13,150,14,55" concept="0" />
+      <node id="9023793313880401723" at="14,55,15,50" concept="0" />
+      <node id="9023793313880402840" at="15,50,16,29" concept="0" />
+      <node id="9023793313880403847" at="16,29,17,0" concept="3" />
+      <node id="9023793313880404023" at="17,0,18,58" concept="0" />
+      <node id="9023793313880396584" at="13,0,20,0" concept="1" trace="handle#(Ljava/lang/String;Lorg/eclipse/jetty/server/Request;Ljavax/servlet/http/HttpServletRequest;Ljavax/servlet/http/HttpServletResponse;)V" />
+      <scope id="9023793313880396603" at="13,150,18,58" />
+      <scope id="9023793313880396584" at="13,0,20,0">
+        <var name="request" id="9023793313880396590" />
+        <var name="request1" id="9023793313880396592" />
+        <var name="response" id="9023793313880396594" />
+        <var name="string" id="9023793313880396588" />
+      </scope>
+      <unit id="9023793313880370999" at="12,0,21,0" name="http.test.TestHandler" />
+    </file>
+  </root>
+</debug-info>
+

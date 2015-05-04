@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="http.test.Test" file="Test.java">
+    <classNode dependClassName="http.test.TestHandler" />
+    <classNode dependClassName="java.lang.Exception" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="org.eclipse.jetty.server.Server" />
+  </dependency>
+  <dependency className="http.test.TestHandler" file="TestHandler.java">
+    <classNode dependClassName="java.io.IOException" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="javax.servlet.ServletException" />
+    <classNode dependClassName="javax.servlet.http.HttpServletRequest" />
+    <classNode dependClassName="javax.servlet.http.HttpServletResponse" />
+    <classNode dependClassName="org.eclipse.jetty.server.Request" />
+    <classNode extendsClassName="org.eclipse.jetty.server.handler.AbstractHandler" />
+  </dependency>
+</dependenciesRoot>
+

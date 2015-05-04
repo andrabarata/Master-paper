@@ -94,6 +94,9 @@
       </concept>
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
+      <concept id="1133920641626" name="jetbrains.mps.lang.core.structure.BaseConcept" flags="ng" index="2VYdi">
+        <property id="1193676396447" name="virtualPackage" index="3GE5qa" />
+      </concept>
       <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ng" index="TrEIO">
         <property id="1169194664001" name="name" index="TrG5h" />
       </concept>
@@ -108,6 +111,7 @@
   <node concept="2$SKl0" id="1uHuMhn0FJC">
     <property role="2$SKiG" value="true" />
     <property role="2$SKiy" value="true" />
+    <property role="3GE5qa" value="configuration" />
     <node concept="JB8v6" id="1uHuMhn0FJD" role="JGwam">
       <node concept="3DwHsX" id="1uHuMhn5cap" role="JB8uv">
         <ref role="3DWFmz" to="ikgz:1uHuMhn0FCN" resolve="Customer" />
@@ -181,6 +185,7 @@
     </node>
   </node>
   <node concept="3vu9v4" id="5a6Q6gb4rBF">
+    <property role="3GE5qa" value="configuration" />
     <node concept="3vu9FZ" id="5a6Q6gb4rC9" role="3vu9vC">
       <ref role="3vv6ij" to="ikgz:1uHuMhn0FC_" resolve="Person" />
       <node concept="3vu9Dh" id="5a6Q6gb4rCb" role="3vu9C9">
@@ -206,9 +211,11 @@
   <node concept="1pO2t4" id="5a6Q6gbqoEe">
     <property role="1pO2t5" value="localhost" />
     <property role="1pO2t7" value="7777" />
+    <property role="3GE5qa" value="configuration" />
   </node>
   <node concept="3MX$bU" id="5a6Q6gbr2yA">
     <property role="TrG5h" value="index" />
+    <property role="3GE5qa" value="html" />
     <node concept="3MXhzq" id="5a6Q6gbr2yB" role="3MXhzh">
       <node concept="1pOVkB" id="5a6Q6gbr2zU" role="3MXhzj">
         <property role="1pOfy6" value="This is my first attempt" />

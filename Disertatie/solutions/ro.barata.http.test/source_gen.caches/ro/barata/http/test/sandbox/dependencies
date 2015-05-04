@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="ro.barata.http.test.sandbox.MyHandler" file="MyHandler.java">
+    <classNode dependClassName="java.io.IOException" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="javax.servlet.ServletException" />
+    <classNode dependClassName="javax.servlet.http.HttpServletRequest" />
+    <classNode dependClassName="javax.servlet.http.HttpServletResponse" />
+    <classNode dependClassName="org.eclipse.jetty.server.Request" />
+    <classNode extendsClassName="org.eclipse.jetty.server.handler.AbstractHandler" />
+  </dependency>
+  <dependency className="ro.barata.http.test.sandbox.TestServer" file="TestServer.java" />
+</dependenciesRoot>
+
