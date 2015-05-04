@@ -5,11 +5,30 @@
     <use id="5cba771a-86ff-496b-a121-6ae83a039560" name="ro.barata.mps.rootLanguage" version="-1" />
     <use id="d9d0a256-4d64-40cf-b5a3-70c8c237890b" name="ro.barata.mps.boLanguage" version="-1" />
     <use id="58b9e0aa-6663-4086-8f84-dfaa697f9989" name="ro.barata.mps.databaseOperationsLanguage" version="-1" />
+    <use id="b9cb18bd-a29f-47d8-9dd0-544a91c4eef2" name="ro.barata.mps.htmlLanguage" version="-1" />
+    <use id="1e587956-71eb-4eb6-88e6-f0971873bb3d" name="ro.barata.mps.httpLanguage" version="-1" />
   </languages>
   <imports>
     <import index="ikgz" ref="r:b83b433b-ea5a-4d7b-972b-0c047197eb67(ro.barata.mps.boLanguage.structure)" />
   </imports>
   <registry>
+    <language id="b9cb18bd-a29f-47d8-9dd0-544a91c4eef2" name="ro.barata.mps.htmlLanguage">
+      <concept id="5946678282187841638" name="ro.barata.mps.htmlLanguage.structure.H1Element" flags="ng" index="1pOfw2" />
+      <concept id="5946678282187795779" name="ro.barata.mps.htmlLanguage.structure.TitleElement" flags="ng" index="1pOVkB" />
+      <concept id="2539806008948696138" name="ro.barata.mps.htmlLanguage.structure.HTMLTag" flags="ng" index="3MXh1h">
+        <property id="5946678282187841762" name="value" index="1pOfy6" />
+      </concept>
+      <concept id="2539806008948698295" name="ro.barata.mps.htmlLanguage.structure.HTMLBody" flags="ng" index="3MXhyG">
+        <child id="2539806008948698296" name="tags" index="3MXhyz" />
+      </concept>
+      <concept id="2539806008948698305" name="ro.barata.mps.htmlLanguage.structure.HTMLHead" flags="ng" index="3MXhzq">
+        <child id="2539806008948698312" name="tags" index="3MXhzj" />
+      </concept>
+      <concept id="2539806008948651745" name="ro.barata.mps.htmlLanguage.structure.HTMLPage" flags="ng" index="3MX$bU">
+        <child id="2539806008948698314" name="head" index="3MXhzh" />
+        <child id="2539806008948698316" name="body" index="3MXhzn" />
+      </concept>
+    </language>
     <language id="5cba771a-86ff-496b-a121-6ae83a039560" name="ro.barata.mps.rootLanguage">
       <concept id="5152062499436048975" name="ro.barata.mps.rootLanguage.structure.DatabaseSettings" flags="ng" index="2$0fZ4">
         <property id="5152062499436050250" name="username" index="2$0fF1" />
@@ -77,6 +96,12 @@
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
       <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ng" index="TrEIO">
         <property id="1169194664001" name="name" index="TrG5h" />
+      </concept>
+    </language>
+    <language id="1e587956-71eb-4eb6-88e6-f0971873bb3d" name="ro.barata.mps.httpLanguage">
+      <concept id="5946678282187898656" name="ro.barata.mps.httpLanguage.structure.HTTPConfiguration" flags="ng" index="1pO2t4">
+        <property id="5946678282187898657" name="ip" index="1pO2t5" />
+        <property id="5946678282187898659" name="port" index="1pO2t7" />
       </concept>
     </language>
   </registry>
@@ -175,6 +200,23 @@
         <node concept="3vjcHs" id="5a6Q6gb4rCU" role="3vu9Cg">
           <property role="3vjcHG" value="test2" />
         </node>
+      </node>
+    </node>
+  </node>
+  <node concept="1pO2t4" id="5a6Q6gbqoEe">
+    <property role="1pO2t5" value="localhost" />
+    <property role="1pO2t7" value="7777" />
+  </node>
+  <node concept="3MX$bU" id="5a6Q6gbr2yA">
+    <property role="TrG5h" value="index" />
+    <node concept="3MXhzq" id="5a6Q6gbr2yB" role="3MXhzh">
+      <node concept="1pOVkB" id="5a6Q6gbr2zU" role="3MXhzj">
+        <property role="1pOfy6" value="This is my first attempt" />
+      </node>
+    </node>
+    <node concept="3MXhyG" id="5a6Q6gbr2yC" role="3MXhzn">
+      <node concept="1pOfw2" id="5a6Q6gbr2zX" role="3MXhyz">
+        <property role="1pOfy6" value="Hello world" />
       </node>
     </node>
   </node>

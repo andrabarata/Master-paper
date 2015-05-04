@@ -29,151 +29,64 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="35cc1043-4782-4674-af80-d5a54dba8c61" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/source_gen/ro/barata/mps/rootLanguage/structure/StructureAspectDescriptor.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../.mps/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/source_gen.caches/ro/barata/mps/rootLanguage/generated" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/source_gen.caches/ro/barata/mps/rootLanguage/behavior/generated" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/source_gen.caches/ro/barata/mps/rootLanguage/constraints/generated" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/source_gen.caches/ro/barata/mps/rootLanguage/editor/generated" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/source_gen.caches/ro/barata/mps/rootLanguage/structure/generated" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/source_gen.caches/ro/barata/mps/rootLanguage/textGen/generated" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/source_gen.caches/ro/barata/mps/rootLanguage/typesystem/generated" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../.mps/migration.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../.mps/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../.mps/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../.mps/version.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../.mps/workspace.xml" />
-      <change type="DELETED" beforePath="C:\Users\Andra\Documents\GitHub\Master-paper\Disertatie\languages\ro.barata.mps.boLanguage\sandbox\source_gen\ro\barata\mps\boLanguage\sandbox\DBCommands.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Andra\Documents\GitHub\Master-paper\Disertatie\languages\ro.barata.mps.databaseOperationsLanguage\source_gen\ro\barata\mps\databaseOperationsLanguage\textGen\IntValue_TextGen.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Andra\Documents\GitHub\Master-paper\Disertatie\languages\ro.barata.mps.databaseOperationsLanguage\source_gen\ro\barata\mps\databaseOperationsLanguage\textGen\StringValue_TextGen.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Andra\Documents\GitHub\Master-paper\Disertatie\languages\ro.barata.mps.rootLanguage\source_gen.caches\ro\barata\mps\databaseLanguage\behavior\generated" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Andra\Documents\GitHub\Master-paper\Disertatie\languages\ro.barata.mps.rootLanguage\source_gen.caches\ro\barata\mps\databaseLanguage\constraints\generated" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Andra\Documents\GitHub\Master-paper\Disertatie\languages\ro.barata.mps.rootLanguage\source_gen.caches\ro\barata\mps\databaseLanguage\editor\generated" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Andra\Documents\GitHub\Master-paper\Disertatie\languages\ro.barata.mps.rootLanguage\source_gen.caches\ro\barata\mps\databaseLanguage\generated" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Andra\Documents\GitHub\Master-paper\Disertatie\languages\ro.barata.mps.rootLanguage\source_gen.caches\ro\barata\mps\databaseLanguage\structure\generated" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Andra\Documents\GitHub\Master-paper\Disertatie\languages\ro.barata.mps.rootLanguage\source_gen.caches\ro\barata\mps\databaseLanguage\textGen\generated" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Andra\Documents\GitHub\Master-paper\Disertatie\languages\ro.barata.mps.rootLanguage\source_gen.caches\ro\barata\mps\databaseLanguage\typesystem\generated" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Andra\Documents\GitHub\Master-paper\Disertatie\languages\ro.barata.mps.rootLanguage\source_gen\ro\barata\mps\databaseLanguage\structure\StructureAspectDescriptor.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Andra\Documents\GitHub\Master-paper\Disertatie\solutions\ro.barata.mps.datatabaseLanguage.solution\models\ro\barata\mps\datatabaseLanguage\solution\sandbox.mps" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Andra\Documents\GitHub\Master-paper\Disertatie\solutions\ro.barata.mps.datatabaseLanguage.solution\ro.barata.mps.datatabaseLanguage.solution.msd" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Andra\Documents\GitHub\Master-paper\Disertatie\solutions\ro.barata.mps.datatabaseLanguage.solution\source_gen.caches\ro\barata\mps\datatabaseLanguage\solution\sandbox\dependencies" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Andra\Documents\GitHub\Master-paper\Disertatie\solutions\ro.barata.mps.datatabaseLanguage.solution\source_gen.caches\ro\barata\mps\datatabaseLanguage\solution\sandbox\generated" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Andra\Documents\GitHub\Master-paper\Disertatie\solutions\ro.barata.mps.datatabaseLanguage.solution\source_gen\ro\barata\mps\datatabaseLanguage\solution\sandbox\trace.info" afterPath="" />
-      <change type="MOVED" beforePath="C:\Users\Andra\Documents\GitHub\Master-paper\Disertatie\languages\ro.barata.mps.rootLanguage\source_gen.caches\ro\barata\mps\databaseLanguage\behavior\dependencies" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/source_gen.caches/ro/barata/mps/rootLanguage/behavior/dependencies" />
-      <change type="MOVED" beforePath="C:\Users\Andra\Documents\GitHub\Master-paper\Disertatie\languages\ro.barata.mps.rootLanguage\source_gen.caches\ro\barata\mps\databaseLanguage\constraints\dependencies" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/source_gen.caches/ro/barata/mps/rootLanguage/constraints/dependencies" />
-      <change type="MOVED" beforePath="C:\Users\Andra\Documents\GitHub\Master-paper\Disertatie\languages\ro.barata.mps.rootLanguage\source_gen.caches\ro\barata\mps\databaseLanguage\dependencies" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/source_gen.caches/ro/barata/mps/rootLanguage/dependencies" />
-      <change type="MOVED" beforePath="C:\Users\Andra\Documents\GitHub\Master-paper\Disertatie\languages\ro.barata.mps.rootLanguage\source_gen.caches\ro\barata\mps\databaseLanguage\editor\dependencies" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/source_gen.caches/ro/barata/mps/rootLanguage/editor/dependencies" />
-      <change type="MOVED" beforePath="C:\Users\Andra\Documents\GitHub\Master-paper\Disertatie\languages\ro.barata.mps.rootLanguage\source_gen.caches\ro\barata\mps\databaseLanguage\structure\dependencies" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/source_gen.caches/ro/barata/mps/rootLanguage/structure/dependencies" />
-      <change type="MOVED" beforePath="C:\Users\Andra\Documents\GitHub\Master-paper\Disertatie\languages\ro.barata.mps.rootLanguage\source_gen.caches\ro\barata\mps\databaseLanguage\textGen\dependencies" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/source_gen.caches/ro/barata/mps/rootLanguage/textGen/dependencies" />
-      <change type="MOVED" beforePath="C:\Users\Andra\Documents\GitHub\Master-paper\Disertatie\languages\ro.barata.mps.rootLanguage\source_gen.caches\ro\barata\mps\databaseLanguage\typesystem\dependencies" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/source_gen.caches/ro/barata/mps/rootLanguage/typesystem/dependencies" />
-      <change type="MOVED" beforePath="C:\Users\Andra\Documents\GitHub\Master-paper\Disertatie\languages\ro.barata.mps.rootLanguage\source_gen\ro\barata\mps\databaseLanguage\Language.java" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/source_gen/ro/barata/mps/rootLanguage/Language.java" />
-      <change type="MOVED" beforePath="C:\Users\Andra\Documents\GitHub\Master-paper\Disertatie\languages\ro.barata.mps.rootLanguage\source_gen\ro\barata\mps\databaseLanguage\behavior\Attribute_Behavior.java" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/source_gen/ro/barata/mps/rootLanguage/behavior/Attribute_Behavior.java" />
-      <change type="MOVED" beforePath="C:\Users\Andra\Documents\GitHub\Master-paper\Disertatie\languages\ro.barata.mps.rootLanguage\source_gen\ro\barata\mps\databaseLanguage\behavior\Attribute_BehaviorDescriptor.java" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/source_gen/ro/barata/mps/rootLanguage/behavior/Attribute_BehaviorDescriptor.java" />
-      <change type="MOVED" beforePath="C:\Users\Andra\Documents\GitHub\Master-paper\Disertatie\languages\ro.barata.mps.rootLanguage\source_gen\ro\barata\mps\databaseLanguage\behavior\BehaviorAspectDescriptor.java" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/source_gen/ro/barata/mps/rootLanguage/behavior/BehaviorAspectDescriptor.java" />
-      <change type="MOVED" beforePath="C:\Users\Andra\Documents\GitHub\Master-paper\Disertatie\languages\ro.barata.mps.rootLanguage\source_gen\ro\barata\mps\databaseLanguage\behavior\BooleanType_BehaviorDescriptor.java" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/source_gen/ro/barata/mps/rootLanguage/behavior/BooleanType_BehaviorDescriptor.java" />
-      <change type="MOVED" beforePath="C:\Users\Andra\Documents\GitHub\Master-paper\Disertatie\languages\ro.barata.mps.rootLanguage\source_gen\ro\barata\mps\databaseLanguage\behavior\DAOChildMapper_BehaviorDescriptor.java" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/source_gen/ro/barata/mps/rootLanguage/behavior/DAOChildMapper_BehaviorDescriptor.java" />
-      <change type="MOVED" beforePath="C:\Users\Andra\Documents\GitHub\Master-paper\Disertatie\languages\ro.barata.mps.rootLanguage\source_gen\ro\barata\mps\databaseLanguage\behavior\DAOEntityMapper_BehaviorDescriptor.java" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/source_gen/ro/barata/mps/rootLanguage/behavior/DAOEntityMapper_BehaviorDescriptor.java" />
-      <change type="MOVED" beforePath="C:\Users\Andra\Documents\GitHub\Master-paper\Disertatie\languages\ro.barata.mps.rootLanguage\source_gen\ro\barata\mps\databaseLanguage\behavior\DAOEntity_BehaviorDescriptor.java" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/source_gen/ro/barata/mps/rootLanguage/behavior/DAOEntity_BehaviorDescriptor.java" />
-      <change type="MOVED" beforePath="C:\Users\Andra\Documents\GitHub\Master-paper\Disertatie\languages\ro.barata.mps.rootLanguage\source_gen\ro\barata\mps\databaseLanguage\behavior\DAOMapping_BehaviorDescriptor.java" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/source_gen/ro/barata/mps/rootLanguage/behavior/DAOMapping_BehaviorDescriptor.java" />
-      <change type="MOVED" beforePath="C:\Users\Andra\Documents\GitHub\Master-paper\Disertatie\languages\ro.barata.mps.rootLanguage\source_gen\ro\barata\mps\databaseLanguage\behavior\DAOObject_BehaviorDescriptor.java" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/source_gen/ro/barata/mps/rootLanguage/behavior/DAOObject_BehaviorDescriptor.java" />
-      <change type="MOVED" beforePath="C:\Users\Andra\Documents\GitHub\Master-paper\Disertatie\languages\ro.barata.mps.rootLanguage\source_gen\ro\barata\mps\databaseLanguage\behavior\DAOPropertyMapper_Behavior.java" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/source_gen/ro/barata/mps/rootLanguage/behavior/DAOPropertyMapper_Behavior.java" />
-      <change type="MOVED" beforePath="C:\Users\Andra\Documents\GitHub\Master-paper\Disertatie\languages\ro.barata.mps.rootLanguage\source_gen\ro\barata\mps\databaseLanguage\behavior\DAOPropertyMapper_BehaviorDescriptor.java" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/source_gen/ro/barata/mps/rootLanguage/behavior/DAOPropertyMapper_BehaviorDescriptor.java" />
-      <change type="MOVED" beforePath="C:\Users\Andra\Documents\GitHub\Master-paper\Disertatie\languages\ro.barata.mps.rootLanguage\source_gen\ro\barata\mps\databaseLanguage\behavior\DAOReferenceMapper_BehaviorDescriptor.java" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/source_gen/ro/barata/mps/rootLanguage/behavior/DAOReferenceMapper_BehaviorDescriptor.java" />
-      <change type="MOVED" beforePath="C:\Users\Andra\Documents\GitHub\Master-paper\Disertatie\languages\ro.barata.mps.rootLanguage\source_gen\ro\barata\mps\databaseLanguage\behavior\DatabaseSettings_BehaviorDescriptor.java" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/source_gen/ro/barata/mps/rootLanguage/behavior/DatabaseSettings_BehaviorDescriptor.java" />
-      <change type="MOVED" beforePath="C:\Users\Andra\Documents\GitHub\Master-paper\Disertatie\languages\ro.barata.mps.rootLanguage\source_gen\ro\barata\mps\databaseLanguage\behavior\EntityType_BehaviorDescriptor.java" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/source_gen/ro/barata/mps/rootLanguage/behavior/EntityType_BehaviorDescriptor.java" />
-      <change type="MOVED" beforePath="C:\Users\Andra\Documents\GitHub\Master-paper\Disertatie\languages\ro.barata.mps.rootLanguage\source_gen\ro\barata\mps\databaseLanguage\behavior\Entity_BehaviorDescriptor.java" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/source_gen/ro/barata/mps/rootLanguage/behavior/Entity_BehaviorDescriptor.java" />
-      <change type="MOVED" beforePath="C:\Users\Andra\Documents\GitHub\Master-paper\Disertatie\languages\ro.barata.mps.rootLanguage\source_gen\ro\barata\mps\databaseLanguage\behavior\IntType_BehaviorDescriptor.java" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/source_gen/ro/barata/mps/rootLanguage/behavior/IntType_BehaviorDescriptor.java" />
-      <change type="MOVED" beforePath="C:\Users\Andra\Documents\GitHub\Master-paper\Disertatie\languages\ro.barata.mps.rootLanguage\source_gen\ro\barata\mps\databaseLanguage\behavior\PrimaryType_BehaviorDescriptor.java" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/source_gen/ro/barata/mps/rootLanguage/behavior/PrimaryType_BehaviorDescriptor.java" />
-      <change type="MOVED" beforePath="C:\Users\Andra\Documents\GitHub\Master-paper\Disertatie\languages\ro.barata.mps.rootLanguage\source_gen\ro\barata\mps\databaseLanguage\behavior\SchemaCreator_BehaviorDescriptor.java" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/source_gen/ro/barata/mps/rootLanguage/behavior/SchemaCreator_BehaviorDescriptor.java" />
-      <change type="MOVED" beforePath="C:\Users\Andra\Documents\GitHub\Master-paper\Disertatie\languages\ro.barata.mps.rootLanguage\source_gen\ro\barata\mps\databaseLanguage\behavior\StringType_BehaviorDescriptor.java" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/source_gen/ro/barata/mps/rootLanguage/behavior/StringType_BehaviorDescriptor.java" />
-      <change type="MOVED" beforePath="C:\Users\Andra\Documents\GitHub\Master-paper\Disertatie\languages\ro.barata.mps.rootLanguage\source_gen\ro\barata\mps\databaseLanguage\behavior\Type_BehaviorDescriptor.java" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/source_gen/ro/barata/mps/rootLanguage/behavior/Type_BehaviorDescriptor.java" />
-      <change type="MOVED" beforePath="C:\Users\Andra\Documents\GitHub\Master-paper\Disertatie\languages\ro.barata.mps.rootLanguage\source_gen\ro\barata\mps\databaseLanguage\behavior\trace.info" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/source_gen/ro/barata/mps/rootLanguage/behavior/trace.info" />
-      <change type="MOVED" beforePath="C:\Users\Andra\Documents\GitHub\Master-paper\Disertatie\languages\ro.barata.mps.rootLanguage\source_gen\ro\barata\mps\databaseLanguage\constraints\ConstraintsAspectDescriptor.java" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/source_gen/ro/barata/mps/rootLanguage/constraints/ConstraintsAspectDescriptor.java" />
-      <change type="MOVED" beforePath="C:\Users\Andra\Documents\GitHub\Master-paper\Disertatie\languages\ro.barata.mps.rootLanguage\source_gen\ro\barata\mps\databaseLanguage\constraints\DAOChildMapper_Constraints.java" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/source_gen/ro/barata/mps/rootLanguage/constraints/DAOChildMapper_Constraints.java" />
-      <change type="MOVED" beforePath="C:\Users\Andra\Documents\GitHub\Master-paper\Disertatie\languages\ro.barata.mps.rootLanguage\source_gen\ro\barata\mps\databaseLanguage\constraints\DAOEntityMapper_Constraints.java" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/source_gen/ro/barata/mps/rootLanguage/constraints/DAOEntityMapper_Constraints.java" />
-      <change type="MOVED" beforePath="C:\Users\Andra\Documents\GitHub\Master-paper\Disertatie\languages\ro.barata.mps.rootLanguage\source_gen\ro\barata\mps\databaseLanguage\constraints\DAOPropertyMapper_Constraints.java" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/source_gen/ro/barata/mps/rootLanguage/constraints/DAOPropertyMapper_Constraints.java" />
-      <change type="MOVED" beforePath="C:\Users\Andra\Documents\GitHub\Master-paper\Disertatie\languages\ro.barata.mps.rootLanguage\source_gen\ro\barata\mps\databaseLanguage\constraints\DAOReferenceMapper_Constraints.java" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/source_gen/ro/barata/mps/rootLanguage/constraints/DAOReferenceMapper_Constraints.java" />
-      <change type="MOVED" beforePath="C:\Users\Andra\Documents\GitHub\Master-paper\Disertatie\languages\ro.barata.mps.rootLanguage\source_gen\ro\barata\mps\databaseLanguage\constraints\EntityType_Constraints.java" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/source_gen/ro/barata/mps/rootLanguage/constraints/EntityType_Constraints.java" />
-      <change type="MOVED" beforePath="C:\Users\Andra\Documents\GitHub\Master-paper\Disertatie\languages\ro.barata.mps.rootLanguage\source_gen\ro\barata\mps\databaseLanguage\constraints\trace.info" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/source_gen/ro/barata/mps/rootLanguage/constraints/trace.info" />
-      <change type="MOVED" beforePath="C:\Users\Andra\Documents\GitHub\Master-paper\Disertatie\languages\ro.barata.mps.rootLanguage\source_gen\ro\barata\mps\databaseLanguage\editor\Attribute_Editor.java" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/source_gen/ro/barata/mps/rootLanguage/editor/Attribute_Editor.java" />
-      <change type="MOVED" beforePath="C:\Users\Andra\Documents\GitHub\Master-paper\Disertatie\languages\ro.barata.mps.rootLanguage\source_gen\ro\barata\mps\databaseLanguage\editor\BooleanType_Editor.java" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/source_gen/ro/barata/mps/rootLanguage/editor/BooleanType_Editor.java" />
-      <change type="MOVED" beforePath="C:\Users\Andra\Documents\GitHub\Master-paper\Disertatie\languages\ro.barata.mps.rootLanguage\source_gen\ro\barata\mps\databaseLanguage\editor\DAOChildMapper_Editor.java" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/source_gen/ro/barata/mps/rootLanguage/editor/DAOChildMapper_Editor.java" />
-      <change type="MOVED" beforePath="C:\Users\Andra\Documents\GitHub\Master-paper\Disertatie\languages\ro.barata.mps.rootLanguage\source_gen\ro\barata\mps\databaseLanguage\editor\DAOEntityMapper_Editor.java" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/source_gen/ro/barata/mps/rootLanguage/editor/DAOEntityMapper_Editor.java" />
-      <change type="MOVED" beforePath="C:\Users\Andra\Documents\GitHub\Master-paper\Disertatie\languages\ro.barata.mps.rootLanguage\source_gen\ro\barata\mps\databaseLanguage\editor\DAOEntity_Editor.java" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/source_gen/ro/barata/mps/rootLanguage/editor/DAOEntity_Editor.java" />
-      <change type="MOVED" beforePath="C:\Users\Andra\Documents\GitHub\Master-paper\Disertatie\languages\ro.barata.mps.rootLanguage\source_gen\ro\barata\mps\databaseLanguage\editor\DAOMapping_Editor.java" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/source_gen/ro/barata/mps/rootLanguage/editor/DAOMapping_Editor.java" />
-      <change type="MOVED" beforePath="C:\Users\Andra\Documents\GitHub\Master-paper\Disertatie\languages\ro.barata.mps.rootLanguage\source_gen\ro\barata\mps\databaseLanguage\editor\DAOPropertyMapper_Editor.java" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/source_gen/ro/barata/mps/rootLanguage/editor/DAOPropertyMapper_Editor.java" />
-      <change type="MOVED" beforePath="C:\Users\Andra\Documents\GitHub\Master-paper\Disertatie\languages\ro.barata.mps.rootLanguage\source_gen\ro\barata\mps\databaseLanguage\editor\DAOReferenceMapper_Editor.java" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/source_gen/ro/barata/mps/rootLanguage/editor/DAOReferenceMapper_Editor.java" />
-      <change type="MOVED" beforePath="C:\Users\Andra\Documents\GitHub\Master-paper\Disertatie\languages\ro.barata.mps.rootLanguage\source_gen\ro\barata\mps\databaseLanguage\editor\DatabaseSettings_Editor.java" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/source_gen/ro/barata/mps/rootLanguage/editor/DatabaseSettings_Editor.java" />
-      <change type="MOVED" beforePath="C:\Users\Andra\Documents\GitHub\Master-paper\Disertatie\languages\ro.barata.mps.rootLanguage\source_gen\ro\barata\mps\databaseLanguage\editor\EditorAspectDescriptorImpl.java" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/source_gen/ro/barata/mps/rootLanguage/editor/EditorAspectDescriptorImpl.java" />
-      <change type="MOVED" beforePath="C:\Users\Andra\Documents\GitHub\Master-paper\Disertatie\languages\ro.barata.mps.rootLanguage\source_gen\ro\barata\mps\databaseLanguage\editor\EntityType_Editor.java" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/source_gen/ro/barata/mps/rootLanguage/editor/EntityType_Editor.java" />
-      <change type="MOVED" beforePath="C:\Users\Andra\Documents\GitHub\Master-paper\Disertatie\languages\ro.barata.mps.rootLanguage\source_gen\ro\barata\mps\databaseLanguage\editor\Entity_Editor.java" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/source_gen/ro/barata/mps/rootLanguage/editor/Entity_Editor.java" />
-      <change type="MOVED" beforePath="C:\Users\Andra\Documents\GitHub\Master-paper\Disertatie\languages\ro.barata.mps.rootLanguage\source_gen\ro\barata\mps\databaseLanguage\editor\IntType_Editor.java" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/source_gen/ro/barata/mps/rootLanguage/editor/IntType_Editor.java" />
-      <change type="MOVED" beforePath="C:\Users\Andra\Documents\GitHub\Master-paper\Disertatie\languages\ro.barata.mps.rootLanguage\source_gen\ro\barata\mps\databaseLanguage\editor\SchemaCreator_Editor.java" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/source_gen/ro/barata/mps/rootLanguage/editor/SchemaCreator_Editor.java" />
-      <change type="MOVED" beforePath="C:\Users\Andra\Documents\GitHub\Master-paper\Disertatie\languages\ro.barata.mps.rootLanguage\source_gen\ro\barata\mps\databaseLanguage\editor\SetChildAttributeType.java" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/source_gen/ro/barata/mps/rootLanguage/editor/SetChildAttributeType.java" />
-      <change type="MOVED" beforePath="C:\Users\Andra\Documents\GitHub\Master-paper\Disertatie\languages\ro.barata.mps.rootLanguage\source_gen\ro\barata\mps\databaseLanguage\editor\SetReferenceAttributeType.java" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/source_gen/ro/barata/mps/rootLanguage/editor/SetReferenceAttributeType.java" />
-      <change type="MOVED" beforePath="C:\Users\Andra\Documents\GitHub\Master-paper\Disertatie\languages\ro.barata.mps.rootLanguage\source_gen\ro\barata\mps\databaseLanguage\editor\StringType_Editor.java" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/source_gen/ro/barata/mps/rootLanguage/editor/StringType_Editor.java" />
-      <change type="MOVED" beforePath="C:\Users\Andra\Documents\GitHub\Master-paper\Disertatie\languages\ro.barata.mps.rootLanguage\source_gen\ro\barata\mps\databaseLanguage\editor\trace.info" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/source_gen/ro/barata/mps/rootLanguage/editor/trace.info" />
-      <change type="MOVED" beforePath="C:\Users\Andra\Documents\GitHub\Master-paper\Disertatie\languages\ro.barata.mps.rootLanguage\source_gen\ro\barata\mps\databaseLanguage\structure\trace.info" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/source_gen/ro/barata/mps/rootLanguage/structure/trace.info" />
-      <change type="MOVED" beforePath="C:\Users\Andra\Documents\GitHub\Master-paper\Disertatie\languages\ro.barata.mps.rootLanguage\source_gen\ro\barata\mps\databaseLanguage\textGen\trace.info" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/source_gen/ro/barata/mps/rootLanguage/textGen/trace.info" />
-      <change type="MOVED" beforePath="C:\Users\Andra\Documents\GitHub\Master-paper\Disertatie\languages\ro.barata.mps.rootLanguage\source_gen\ro\barata\mps\databaseLanguage\trace.info" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/source_gen/ro/barata/mps/rootLanguage/trace.info" />
-      <change type="MOVED" beforePath="C:\Users\Andra\Documents\GitHub\Master-paper\Disertatie\languages\ro.barata.mps.rootLanguage\source_gen\ro\barata\mps\databaseLanguage\typesystem\CheckForProperties_NonTypesystemRule.java" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/source_gen/ro/barata/mps/rootLanguage/typesystem/CheckForProperties_NonTypesystemRule.java" />
-      <change type="MOVED" beforePath="C:\Users\Andra\Documents\GitHub\Master-paper\Disertatie\languages\ro.barata.mps.rootLanguage\source_gen\ro\barata\mps\databaseLanguage\typesystem\RemoveDupplicates_QuickFix.java" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/source_gen/ro/barata/mps/rootLanguage/typesystem/RemoveDupplicates_QuickFix.java" />
-      <change type="MOVED" beforePath="C:\Users\Andra\Documents\GitHub\Master-paper\Disertatie\languages\ro.barata.mps.rootLanguage\source_gen\ro\barata\mps\databaseLanguage\typesystem\TypesystemDescriptor.java" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/source_gen/ro/barata/mps/rootLanguage/typesystem/TypesystemDescriptor.java" />
-      <change type="MOVED" beforePath="C:\Users\Andra\Documents\GitHub\Master-paper\Disertatie\languages\ro.barata.mps.rootLanguage\source_gen\ro\barata\mps\databaseLanguage\typesystem\check_DAOEntityMapper_NonTypesystemRule.java" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/source_gen/ro/barata/mps/rootLanguage/typesystem/check_DAOEntityMapper_NonTypesystemRule.java" />
-      <change type="MOVED" beforePath="C:\Users\Andra\Documents\GitHub\Master-paper\Disertatie\languages\ro.barata.mps.rootLanguage\source_gen\ro\barata\mps\databaseLanguage\typesystem\trace.info" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/source_gen/ro/barata/mps/rootLanguage/typesystem/trace.info" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/ro.barata.mps.boLanguage/classes_gen/ro/barata/mps/boLanguage/Language.class" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.boLanguage/classes_gen/ro/barata/mps/boLanguage/Language.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/generator/classes_gen/ro/barata/mps/rootLanguage/generator/template/main/QueriesGenerated$1.class" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/generator/classes_gen/ro/barata/mps/rootLanguage/generator/template/main/QueriesGenerated$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/generator/classes_gen/ro/barata/mps/rootLanguage/generator/template/main/QueriesGenerated$2.class" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/generator/classes_gen/ro/barata/mps/rootLanguage/generator/template/main/QueriesGenerated$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/generator/classes_gen/ro/barata/mps/rootLanguage/generator/template/main/QueriesGenerated$3.class" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/generator/classes_gen/ro/barata/mps/rootLanguage/generator/template/main/QueriesGenerated$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/generator/classes_gen/ro/barata/mps/rootLanguage/generator/template/main/QueriesGenerated$4.class" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/generator/classes_gen/ro/barata/mps/rootLanguage/generator/template/main/QueriesGenerated$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/generator/classes_gen/ro/barata/mps/rootLanguage/generator/template/main/QueriesGenerated$5.class" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/generator/classes_gen/ro/barata/mps/rootLanguage/generator/template/main/QueriesGenerated$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/generator/classes_gen/ro/barata/mps/rootLanguage/generator/template/main/QueriesGenerated$6.class" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/generator/classes_gen/ro/barata/mps/rootLanguage/generator/template/main/QueriesGenerated$6.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/generator/classes_gen/ro/barata/mps/rootLanguage/generator/template/main/QueriesGenerated$7.class" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/generator/classes_gen/ro/barata/mps/rootLanguage/generator/template/main/QueriesGenerated$7.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/ro.barata.mps.boLanguage/source_gen/ro/barata/mps/boLanguage/behavior/Customer_BehaviorDescriptor.java" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.boLanguage/source_gen/ro/barata/mps/boLanguage/behavior/Customer_BehaviorDescriptor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/ro.barata.mps.boLanguage/source_gen/ro/barata/mps/boLanguage/Language.java" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.boLanguage/source_gen/ro/barata/mps/boLanguage/Language.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/ro.barata.mps.databaseOperationsLanguage/source_gen/ro/barata/mps/databaseOperationsLanguage/Language.java" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.databaseOperationsLanguage/source_gen/ro/barata/mps/databaseOperationsLanguage/Language.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/ro.barata.mps.databaseOperationsLanguage/source_gen/ro/barata/mps/databaseOperationsLanguage/constraints/Operation_Constraints.java" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.databaseOperationsLanguage/source_gen/ro/barata/mps/databaseOperationsLanguage/constraints/Operation_Constraints.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/ro.barata.mps.boLanguage/source_gen/ro/barata/mps/boLanguage/behavior/Person_BehaviorDescriptor.java" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.boLanguage/source_gen/ro/barata/mps/boLanguage/behavior/Person_BehaviorDescriptor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/ro.barata.mps.databaseOperationsLanguage/generator/source_gen/ro/barata/mps/databaseOperationsLanguage/generator/template/main/QueriesGenerated.java" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.databaseOperationsLanguage/generator/source_gen/ro/barata/mps/databaseOperationsLanguage/generator/template/main/QueriesGenerated.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/generator/source_gen/ro/barata/mps/rootLanguage/generator/template/main/QueriesGenerated.java" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/generator/source_gen/ro/barata/mps/rootLanguage/generator/template/main/QueriesGenerated.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/ro.barata.mps.boLanguage/source_gen/ro/barata/mps/boLanguage/behavior/Shop_BehaviorDescriptor.java" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.boLanguage/source_gen/ro/barata/mps/boLanguage/behavior/Shop_BehaviorDescriptor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/ro.barata.mps.boLanguage/source_gen/ro/barata/mps/boLanguage/structure/StructureAspectDescriptor.java" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.boLanguage/source_gen/ro/barata/mps/boLanguage/structure/StructureAspectDescriptor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/languageModels/behavior.mps" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/languageModels/behavior.mps" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/ro.barata.mps.databaseOperationsLanguage/languageModels/constraints.mps" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.databaseOperationsLanguage/languageModels/constraints.mps" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/languageModels/constraints.mps" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/languageModels/constraints.mps" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.httpLanguage/source_gen/ro/barata/mps/httpLanguage/behavior/BehaviorAspectDescriptor.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.boLanguage/sandbox/source_gen/ro/barata/mps/boLanguage/sandbox/DBCommands.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.httpLanguage/source_gen/ro/barata/mps/httpLanguage/editor/EditorAspectDescriptorImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.httpLanguage/source_gen/ro/barata/mps/httpLanguage/behavior/HTTPConfiguration_BehaviorDescriptor.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.httpLanguage/source_gen/ro/barata/mps/httpLanguage/editor/HTTPConfiguration_Editor.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.boLanguage/sandbox/source_gen/ro/barata/mps/boLanguage/sandbox/HTTPServer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.httpLanguage/source_gen/ro/barata/mps/httpLanguage/Language.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.httpLanguage/generator/source_gen/ro/barata/mps/httpLanguage/generator/template/main/QueriesGenerated.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.httpLanguage/source_gen/ro/barata/mps/httpLanguage/structure/StructureAspectDescriptor.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.httpLanguage/languageModels/behavior.mps" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.httpLanguage/languageModels/constraints.mps" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.htmlLanguage/source_gen.caches/ro/barata/mps/htmlLanguage/constraints/dependencies" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.htmlLanguage/source_gen.caches/ro/barata/mps/htmlLanguage/structure/dependencies" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.htmlLanguage/source_gen.caches/ro/barata/mps/htmlLanguage/typesystem/dependencies" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.httpLanguage/generator/source_gen.caches/ro/barata/mps/httpLanguage/generator/template/main/dependencies" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.httpLanguage/source_gen.caches/ro/barata/mps/httpLanguage/dependencies" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.httpLanguage/source_gen.caches/ro/barata/mps/httpLanguage/behavior/dependencies" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.httpLanguage/source_gen.caches/ro/barata/mps/httpLanguage/constraints/dependencies" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.httpLanguage/source_gen.caches/ro/barata/mps/httpLanguage/editor/dependencies" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.httpLanguage/source_gen.caches/ro/barata/mps/httpLanguage/structure/dependencies" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.httpLanguage/source_gen.caches/ro/barata/mps/httpLanguage/typesystem/dependencies" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.httpLanguage/languageModels/editor.mps" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.htmlLanguage/source_gen.caches/ro/barata/mps/htmlLanguage/generated" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.htmlLanguage/source_gen.caches/ro/barata/mps/htmlLanguage/behavior/generated" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.htmlLanguage/source_gen.caches/ro/barata/mps/htmlLanguage/constraints/generated" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.htmlLanguage/source_gen.caches/ro/barata/mps/htmlLanguage/editor/generated" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.htmlLanguage/source_gen.caches/ro/barata/mps/htmlLanguage/structure/generated" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.htmlLanguage/source_gen.caches/ro/barata/mps/htmlLanguage/textGen/generated" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.htmlLanguage/source_gen.caches/ro/barata/mps/htmlLanguage/typesystem/generated" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.httpLanguage/generator/source_gen.caches/ro/barata/mps/httpLanguage/generator/template/main/generated" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.httpLanguage/source_gen.caches/ro/barata/mps/httpLanguage/generated" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.httpLanguage/source_gen.caches/ro/barata/mps/httpLanguage/behavior/generated" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.httpLanguage/source_gen.caches/ro/barata/mps/httpLanguage/constraints/generated" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.httpLanguage/source_gen.caches/ro/barata/mps/httpLanguage/editor/generated" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.httpLanguage/source_gen.caches/ro/barata/mps/httpLanguage/structure/generated" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.httpLanguage/source_gen.caches/ro/barata/mps/httpLanguage/typesystem/generated" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.httpLanguage/generator/template/main@generator.mps" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.httpLanguage/ro.barata.mps.httpLanguage.mpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.httpLanguage/languageModels/structure.mps" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.htmlLanguage/source_gen/ro/barata/mps/htmlLanguage/trace.info" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.htmlLanguage/source_gen/ro/barata/mps/htmlLanguage/constraints/trace.info" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.htmlLanguage/source_gen/ro/barata/mps/htmlLanguage/structure/trace.info" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.htmlLanguage/source_gen/ro/barata/mps/htmlLanguage/typesystem/trace.info" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.httpLanguage/generator/source_gen/ro/barata/mps/httpLanguage/generator/template/main/trace.info" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.httpLanguage/source_gen/ro/barata/mps/httpLanguage/trace.info" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.httpLanguage/source_gen/ro/barata/mps/httpLanguage/behavior/trace.info" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.httpLanguage/source_gen/ro/barata/mps/httpLanguage/constraints/trace.info" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.httpLanguage/source_gen/ro/barata/mps/httpLanguage/editor/trace.info" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.httpLanguage/source_gen/ro/barata/mps/httpLanguage/structure/trace.info" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.httpLanguage/source_gen/ro/barata/mps/httpLanguage/typesystem/trace.info" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.httpLanguage/languageModels/typesystem.mps" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/ro.barata.mps.boLanguage/sandbox/source_gen.caches/ro/barata/mps/boLanguage/sandbox/dependencies" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.boLanguage/sandbox/source_gen.caches/ro/barata/mps/boLanguage/sandbox/dependencies" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/ro.barata.mps.boLanguage/source_gen.caches/ro/barata/mps/boLanguage/behavior/dependencies" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.boLanguage/source_gen.caches/ro/barata/mps/boLanguage/behavior/dependencies" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/ro.barata.mps.databaseOperationsLanguage/source_gen.caches/ro/barata/mps/databaseOperationsLanguage/textGen/dependencies" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.databaseOperationsLanguage/source_gen.caches/ro/barata/mps/databaseOperationsLanguage/textGen/dependencies" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/generator/source_gen.caches/ro/barata/mps/rootLanguage/generator/template/main/dependencies" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/generator/source_gen.caches/ro/barata/mps/rootLanguage/generator/template/main/dependencies" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/languageModels/editor.mps" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/languageModels/editor.mps" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/ro.barata.mps.boLanguage/sandbox/source_gen.caches/ro/barata/mps/boLanguage/sandbox/generated" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.boLanguage/sandbox/source_gen.caches/ro/barata/mps/boLanguage/sandbox/generated" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/ro.barata.mps.boLanguage/source_gen.caches/ro/barata/mps/boLanguage/generated" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.boLanguage/source_gen.caches/ro/barata/mps/boLanguage/generated" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/ro.barata.mps.boLanguage/source_gen.caches/ro/barata/mps/boLanguage/structure/generated" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.boLanguage/source_gen.caches/ro/barata/mps/boLanguage/structure/generated" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/ro.barata.mps.databaseOperationsLanguage/generator/source_gen.caches/ro/barata/mps/databaseOperationsLanguage/generator/template/main/generated" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.databaseOperationsLanguage/generator/source_gen.caches/ro/barata/mps/databaseOperationsLanguage/generator/template/main/generated" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/ro.barata.mps.databaseOperationsLanguage/source_gen.caches/ro/barata/mps/databaseOperationsLanguage/generated" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.databaseOperationsLanguage/source_gen.caches/ro/barata/mps/databaseOperationsLanguage/generated" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/ro.barata.mps.databaseOperationsLanguage/source_gen.caches/ro/barata/mps/databaseOperationsLanguage/constraints/generated" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.databaseOperationsLanguage/source_gen.caches/ro/barata/mps/databaseOperationsLanguage/constraints/generated" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/ro.barata.mps.databaseOperationsLanguage/source_gen.caches/ro/barata/mps/databaseOperationsLanguage/textGen/generated" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.databaseOperationsLanguage/source_gen.caches/ro/barata/mps/databaseOperationsLanguage/textGen/generated" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/generator/source_gen.caches/ro/barata/mps/rootLanguage/generator/template/main/generated" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/generator/source_gen.caches/ro/barata/mps/rootLanguage/generator/template/main/generated" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/ro.barata.mps.databaseOperationsLanguage/generator/template/main@generator.mps" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.databaseOperationsLanguage/generator/template/main@generator.mps" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/generator/template/main@generator.mps" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/generator/template/main@generator.mps" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.mps/modules.xml" afterPath="$PROJECT_DIR$/.mps/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/ro.barata.mps.boLanguage/ro.barata.mps.boLanguage.mpl" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.boLanguage/ro.barata.mps.boLanguage.mpl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/ro.barata.mps.boLanguage/sandbox/ro.barata.mps.boLanguage.sandbox.msd" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.boLanguage/sandbox/ro.barata.mps.boLanguage.sandbox.msd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/ro.barata.mps.databaseOperationsLanguage/ro.barata.mps.databaseOperationsLanguage.mpl" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.databaseOperationsLanguage/ro.barata.mps.databaseOperationsLanguage.mpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/ro.barata.mps.rootLanguage.mpl" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/ro.barata.mps.rootLanguage.mpl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/ro.barata.mps.boLanguage/sandbox/models/ro/barata/mps/boLanguage/sandbox.mps" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.boLanguage/sandbox/models/ro/barata/mps/boLanguage/sandbox.mps" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/ro.barata.mps.boLanguage/languageModels/structure.mps" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.boLanguage/languageModels/structure.mps" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/languageModels/structure.mps" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/languageModels/structure.mps" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/ro.barata.mps.databaseOperationsLanguage/languageModels/textGen.mps" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.databaseOperationsLanguage/languageModels/textGen.mps" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/languageModels/textGen.mps" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/languageModels/textGen.mps" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/ro.barata.mps.boLanguage/sandbox/classes_gen/ro/barata/mps/boLanguage/sandbox/trace.info" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.boLanguage/sandbox/classes_gen/ro/barata/mps/boLanguage/sandbox/trace.info" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/ro.barata.mps.boLanguage/sandbox/source_gen/ro/barata/mps/boLanguage/sandbox/trace.info" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.boLanguage/sandbox/source_gen/ro/barata/mps/boLanguage/sandbox/trace.info" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/ro.barata.mps.databaseOperationsLanguage/generator/source_gen/ro/barata/mps/databaseOperationsLanguage/generator/template/main/trace.info" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.databaseOperationsLanguage/generator/source_gen/ro/barata/mps/databaseOperationsLanguage/generator/template/main/trace.info" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/ro.barata.mps.databaseOperationsLanguage/source_gen/ro/barata/mps/databaseOperationsLanguage/constraints/trace.info" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.databaseOperationsLanguage/source_gen/ro/barata/mps/databaseOperationsLanguage/constraints/trace.info" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/ro.barata.mps.databaseOperationsLanguage/source_gen/ro/barata/mps/databaseOperationsLanguage/textGen/trace.info" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.databaseOperationsLanguage/source_gen/ro/barata/mps/databaseOperationsLanguage/textGen/trace.info" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/generator/classes_gen/ro/barata/mps/rootLanguage/generator/template/main/trace.info" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/generator/classes_gen/ro/barata/mps/rootLanguage/generator/template/main/trace.info" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/generator/source_gen/ro/barata/mps/rootLanguage/generator/template/main/trace.info" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/generator/source_gen/ro/barata/mps/rootLanguage/generator/template/main/trace.info" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/languageModels/typesystem.mps" afterPath="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/languageModels/typesystem.mps" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.mps/workspace.xml" afterPath="$PROJECT_DIR$/.mps/workspace.xml" />
     </list>
     <ignored path="Disertatie.iws" />
@@ -235,22 +148,79 @@
                 <selectionStack>
                   <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
                     <property name="hasNonTrivialSelection" value="false" />
-                    <property name="caretX" value="95" />
+                    <property name="caretX" value="63" />
                     <property name="caretXRelative" value="0" />
                     <property name="sideSelectDirection" value="NONE" />
-                    <cellInfo cellId="Constant_1bu1jk_a0" cellNumber="0" isInList="false">
-                      <node node_reference="r:ca2f6163-f731-4984-b28c-c8e4f51179c6(ro.barata.mps.boLanguage.sandbox)/1706155229853303609" />
+                    <cellInfo cellId="Constant_2zymiz_h0" cellNumber="0" isInList="false">
+                      <node node_reference="r:ca2f6163-f731-4984-b28c-c8e4f51179c6(ro.barata.mps.boLanguage.sandbox)/1706155229853303465" />
                     </cellInfo>
                   </stackElement>
                 </selectionStack>
                 <errorLabels />
                 <folded />
               </memento>
-              <inspectorMemento currentlyEditedNode="r:ca2f6163-f731-4984-b28c-c8e4f51179c6(ro.barata.mps.boLanguage.sandbox)/5946678282183359034" viewPositionX="0" viewPositionY="0">
+              <inspectorMemento currentlyEditedNode="r:ca2f6163-f731-4984-b28c-c8e4f51179c6(ro.barata.mps.boLanguage.sandbox)/5946678282189113998" viewPositionX="0" viewPositionY="0">
                 <selectionStack />
                 <errorLabels />
                 <folded />
               </inspectorMemento>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main" pinned="false" current-in-tab="false">
+        <entry file="mps://node://ro.barata.mps.rootLanguage#5152062499435996722/ro.barata.mps.rootLanguage.generator.template.main@generator/main">
+          <provider selected="true" editor-type-id="MPSFileEditor">
+            <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
+              <memento viewPositionX="0" viewPositionY="242">
+                <selectionStack>
+                  <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
+                    <property name="hasNonTrivialSelection" value="false" />
+                    <property name="caretX" value="222" />
+                    <property name="caretXRelative" value="60" />
+                    <property name="sideSelectDirection" value="NONE" />
+                    <cellInfo cellId="property_keepSourceRoot" cellNumber="0" isInList="false">
+                      <node node_reference="r:eb64c341-60e7-41ca-a9a9-8f25ac73d833(ro.barata.mps.rootLanguage.generator.template.main@generator)/7227310691966617999" />
+                    </cellInfo>
+                  </stackElement>
+                </selectionStack>
+                <errorLabels />
+                <folded />
+              </memento>
+              <inspectorMemento currentlyEditedNode="r:ca2f6163-f731-4984-b28c-c8e4f51179c6(ro.barata.mps.boLanguage.sandbox)/5946678282189113998" viewPositionX="0" viewPositionY="0">
+                <selectionStack />
+                <errorLabels />
+                <folded />
+              </inspectorMemento>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HTTPConfiguration" pinned="false" current-in-tab="false">
+        <entry file="mps://node://ro.barata.mps.httpLanguage/ro.barata.mps.httpLanguage.structure/HTTPConfiguration">
+          <provider selected="true" editor-type-id="MPSFileEditor">
+            <state class="jetbrains.mps.ide.editorTabs.TabbedEditor$TabbedEditorState">
+              <memento viewPositionX="0" viewPositionY="0">
+                <selectionStack>
+                  <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
+                    <property name="hasNonTrivialSelection" value="false" />
+                    <property name="caretX" value="23" />
+                    <property name="caretXRelative" value="8" />
+                    <property name="sideSelectDirection" value="NONE" />
+                    <cellInfo cellId="Constant_uj0cpq_d31a" cellNumber="0" isInList="false">
+                      <node node_reference="r:0260b449-4103-4943-8e0c-cfdd55e36f3e(ro.barata.mps.httpLanguage.generator.template.main@generator)/5946678282187898863" />
+                    </cellInfo>
+                  </stackElement>
+                </selectionStack>
+                <errorLabels />
+                <folded />
+              </memento>
+              <inspectorMemento currentlyEditedNode="r:ca2f6163-f731-4984-b28c-c8e4f51179c6(ro.barata.mps.boLanguage.sandbox)/5946678282189113998" viewPositionX="0" viewPositionY="0">
+                <selectionStack />
+                <errorLabels />
+                <folded />
+              </inspectorMemento>
+              <node node_ref="r:0260b449-4103-4943-8e0c-cfdd55e36f3e(ro.barata.mps.httpLanguage.generator.template.main@generator)/5946678282187898863" />
             </state>
           </provider>
         </entry>
@@ -274,7 +244,7 @@
                 <errorLabels />
                 <folded />
               </memento>
-              <inspectorMemento currentlyEditedNode="r:ca2f6163-f731-4984-b28c-c8e4f51179c6(ro.barata.mps.boLanguage.sandbox)/5946678282183359034" viewPositionX="0" viewPositionY="0">
+              <inspectorMemento currentlyEditedNode="r:ca2f6163-f731-4984-b28c-c8e4f51179c6(ro.barata.mps.boLanguage.sandbox)/5946678282189113998" viewPositionX="0" viewPositionY="0">
                 <selectionStack />
                 <errorLabels />
                 <folded />
@@ -283,173 +253,114 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DBCommands.java" pinned="false" current-in-tab="true">
-        <entry file="previewr.b.m.boLanguage.sandbox/DBCommands.java">
+      <file leaf-file-name="index" pinned="false" current-in-tab="false">
+        <entry file="mps://node://ro.barata.mps.boLanguage.sandbox/ro.barata.mps.boLanguage.sandbox/index">
+          <provider selected="true" editor-type-id="MPSFileEditor">
+            <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
+              <memento viewPositionX="0" viewPositionY="0">
+                <selectionStack>
+                  <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
+                    <property name="hasNonTrivialSelection" value="false" />
+                    <property name="caretX" value="175" />
+                    <property name="caretXRelative" value="92" />
+                    <property name="sideSelectDirection" value="NONE" />
+                    <cellInfo cellId="property_value" cellNumber="0" isInList="false">
+                      <node node_reference="r:ca2f6163-f731-4984-b28c-c8e4f51179c6(ro.barata.mps.boLanguage.sandbox)/5946678282189285629" />
+                    </cellInfo>
+                  </stackElement>
+                </selectionStack>
+                <errorLabels />
+                <folded />
+              </memento>
+              <inspectorMemento currentlyEditedNode="r:ca2f6163-f731-4984-b28c-c8e4f51179c6(ro.barata.mps.boLanguage.sandbox)/5946678282189113998" viewPositionX="0" viewPositionY="0">
+                <selectionStack />
+                <errorLabels />
+                <folded />
+              </inspectorMemento>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HTTPConfiguration" pinned="false" current-in-tab="false">
+        <entry file="mps://node://ro.barata.mps.boLanguage.sandbox/ro.barata.mps.boLanguage.sandbox/HTTPConfiguration">
+          <provider selected="true" editor-type-id="MPSFileEditor">
+            <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
+              <memento viewPositionX="0" viewPositionY="0">
+                <selectionStack>
+                  <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
+                    <property name="hasNonTrivialSelection" value="false" />
+                    <property name="caretX" value="111" />
+                    <property name="caretXRelative" value="36" />
+                    <property name="sideSelectDirection" value="NONE" />
+                    <cellInfo cellId="property_port" cellNumber="0" isInList="false">
+                      <node node_reference="r:ca2f6163-f731-4984-b28c-c8e4f51179c6(ro.barata.mps.boLanguage.sandbox)/5946678282189113998" />
+                    </cellInfo>
+                  </stackElement>
+                </selectionStack>
+                <errorLabels />
+                <folded />
+              </memento>
+              <inspectorMemento currentlyEditedNode="r:ca2f6163-f731-4984-b28c-c8e4f51179c6(ro.barata.mps.boLanguage.sandbox)/5946678282189113998" viewPositionX="0" viewPositionY="0">
+                <selectionStack />
+                <errorLabels />
+                <folded />
+              </inspectorMemento>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HTTPServer.java" pinned="false" current-in-tab="false">
+        <entry file="previewr.b.m.boLanguage.sandbox/HTTPServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="544">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DBCommands" pinned="false" current-in-tab="false">
-        <entry file="mps://node://ro.barata.mps.databaseOperationsLanguage/ro.barata.mps.databaseOperationsLanguage.structure/DBCommands">
-          <provider selected="true" editor-type-id="MPSFileEditor">
-            <state class="jetbrains.mps.ide.editorTabs.TabbedEditor$TabbedEditorState">
-              <memento viewPositionX="0" viewPositionY="0">
-                <selectionStack />
-                <errorLabels />
-                <folded />
-              </memento>
-              <inspectorMemento currentlyEditedNode="r:ca2f6163-f731-4984-b28c-c8e4f51179c6(ro.barata.mps.boLanguage.sandbox)/5946678282183359034" viewPositionX="0" viewPositionY="0">
-                <selectionStack />
-                <errorLabels />
-                <folded />
-              </inspectorMemento>
-              <node node_ref="r:41833483-e86e-41f4-a0f0-fbceb349d688(ro.barata.mps.databaseOperationsLanguage.generator.template.main@generator)/6352133620898030111" />
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="previewr.b.m.boLanguage.sandbox/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="398">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DeleteOperation" pinned="false" current-in-tab="false">
-        <entry file="mps://node://ro.barata.mps.databaseOperationsLanguage/ro.barata.mps.databaseOperationsLanguage.structure/DeleteOperation">
-          <provider selected="true" editor-type-id="MPSFileEditor">
-            <state class="jetbrains.mps.ide.editorTabs.TabbedEditor$TabbedEditorState">
-              <memento viewPositionX="0" viewPositionY="0">
-                <selectionStack />
-                <errorLabels />
-                <folded />
-              </memento>
-              <inspectorMemento currentlyEditedNode="r:ca2f6163-f731-4984-b28c-c8e4f51179c6(ro.barata.mps.boLanguage.sandbox)/5946678282183359034" viewPositionX="0" viewPositionY="0">
-                <selectionStack />
-                <errorLabels />
-                <folded />
-              </inspectorMemento>
-              <node node_ref="r:41833483-e86e-41f4-a0f0-fbceb349d688(ro.barata.mps.databaseOperationsLanguage.generator.template.main@generator)/6352133620899183766" />
+      <file leaf-file-name="HTTPServer.java" pinned="false" current-in-tab="false">
+        <entry file="previewr.b.m.boLanguage.sandbox/HTTPServer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="323">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InsertOperation" pinned="false" current-in-tab="false">
-        <entry file="mps://node://ro.barata.mps.databaseOperationsLanguage/ro.barata.mps.databaseOperationsLanguage.structure/InsertOperation">
-          <provider selected="true" editor-type-id="MPSFileEditor">
-            <state class="jetbrains.mps.ide.editorTabs.TabbedEditor$TabbedEditorState">
-              <memento viewPositionX="0" viewPositionY="0">
-                <selectionStack />
-                <errorLabels />
-                <folded />
-              </memento>
-              <inspectorMemento currentlyEditedNode="r:ca2f6163-f731-4984-b28c-c8e4f51179c6(ro.barata.mps.boLanguage.sandbox)/5946678282183359034" viewPositionX="0" viewPositionY="0">
-                <selectionStack />
-                <errorLabels />
-                <folded />
-              </inspectorMemento>
-              <node node_ref="r:41833483-e86e-41f4-a0f0-fbceb349d688(ro.barata.mps.databaseOperationsLanguage.generator.template.main@generator)/6352133620905359237" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IntValue" pinned="false" current-in-tab="false">
-        <entry file="mps://node://ro.barata.mps.databaseOperationsLanguage/ro.barata.mps.databaseOperationsLanguage.structure/IntValue">
+      <file leaf-file-name="SchemaCreator" pinned="false" current-in-tab="false">
+        <entry file="mps://node://ro.barata.mps.rootLanguage/ro.barata.mps.rootLanguage.structure/SchemaCreator">
           <provider selected="true" editor-type-id="MPSFileEditor">
             <state class="jetbrains.mps.ide.editorTabs.TabbedEditor$TabbedEditorState">
               <memento viewPositionX="0" viewPositionY="0">
                 <selectionStack>
                   <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
                     <property name="hasNonTrivialSelection" value="false" />
-                    <property name="caretX" value="247" />
-                    <property name="caretXRelative" value="4" />
+                    <property name="caretX" value="15" />
+                    <property name="caretXRelative" value="0" />
                     <property name="sideSelectDirection" value="NONE" />
-                    <cellInfo cellId="property_name" cellNumber="0" isInList="false">
-                      <node node_reference="r:1187c4f6-f428-448e-965a-7a67c289651d(ro.barata.mps.databaseOperationsLanguage.editor)/6352133620897657003" />
+                    <cellInfo cellId="Constant_ueqr71_c0a" cellNumber="0" isInList="false">
+                      <node node_reference="r:2126a8cd-3e3b-4dd2-b6b0-7943b1bebaa3(ro.barata.mps.rootLanguage.structure)/5152062499437988043" />
                     </cellInfo>
                   </stackElement>
                 </selectionStack>
                 <errorLabels />
                 <folded />
               </memento>
-              <inspectorMemento currentlyEditedNode="r:ca2f6163-f731-4984-b28c-c8e4f51179c6(ro.barata.mps.boLanguage.sandbox)/5946678282183359034" viewPositionX="0" viewPositionY="0">
+              <inspectorMemento currentlyEditedNode="r:ca2f6163-f731-4984-b28c-c8e4f51179c6(ro.barata.mps.boLanguage.sandbox)/5946678282189113998" viewPositionX="0" viewPositionY="0">
                 <selectionStack />
                 <errorLabels />
                 <folded />
               </inspectorMemento>
-              <node node_ref="r:1187c4f6-f428-448e-965a-7a67c289651d(ro.barata.mps.databaseOperationsLanguage.editor)/6352133620897657003" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PropertyReference" pinned="false" current-in-tab="false">
-        <entry file="mps://node://ro.barata.mps.databaseOperationsLanguage/ro.barata.mps.databaseOperationsLanguage.structure/PropertyReference">
-          <provider selected="true" editor-type-id="MPSFileEditor">
-            <state class="jetbrains.mps.ide.editorTabs.TabbedEditor$TabbedEditorState">
-              <memento viewPositionX="0" viewPositionY="0">
-                <selectionStack>
-                  <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
-                    <property name="hasNonTrivialSelection" value="false" />
-                    <property name="caretX" value="151" />
-                    <property name="caretXRelative" value="4" />
-                    <property name="sideSelectDirection" value="NONE" />
-                    <cellInfo cellId="property_name" cellNumber="0" isInList="false">
-                      <node node_reference="r:6c72f60b-c4e8-4881-ae9b-6da67386d5ad(ro.barata.mps.databaseOperationsLanguage.behavior)/6352133620899896204" />
-                    </cellInfo>
-                  </stackElement>
-                </selectionStack>
-                <errorLabels />
-                <folded />
-              </memento>
-              <inspectorMemento currentlyEditedNode="r:ca2f6163-f731-4984-b28c-c8e4f51179c6(ro.barata.mps.boLanguage.sandbox)/5946678282183359034" viewPositionX="0" viewPositionY="0">
-                <selectionStack />
-                <errorLabels />
-                <folded />
-              </inspectorMemento>
-              <node node_ref="r:6c72f60b-c4e8-4881-ae9b-6da67386d5ad(ro.barata.mps.databaseOperationsLanguage.behavior)/6352133620899896204" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UpdateOperation" pinned="false" current-in-tab="false">
-        <entry file="mps://node://ro.barata.mps.databaseOperationsLanguage/ro.barata.mps.databaseOperationsLanguage.structure/UpdateOperation">
-          <provider selected="true" editor-type-id="MPSFileEditor">
-            <state class="jetbrains.mps.ide.editorTabs.TabbedEditor$TabbedEditorState">
-              <memento viewPositionX="0" viewPositionY="0">
-                <selectionStack />
-                <errorLabels />
-                <folded />
-              </memento>
-              <inspectorMemento currentlyEditedNode="r:ca2f6163-f731-4984-b28c-c8e4f51179c6(ro.barata.mps.boLanguage.sandbox)/5946678282183359034" viewPositionX="0" viewPositionY="0">
-                <selectionStack />
-                <errorLabels />
-                <folded />
-              </inspectorMemento>
-              <node node_ref="r:41833483-e86e-41f4-a0f0-fbceb349d688(ro.barata.mps.databaseOperationsLanguage.generator.template.main@generator)/6352133620899881879" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TypeSwitch" pinned="false" current-in-tab="false">
-        <entry file="mps://node://ro.barata.mps.rootLanguage#5152062499435996722/ro.barata.mps.rootLanguage.generator.template.main@generator/TypeSwitch">
-          <provider selected="true" editor-type-id="MPSFileEditor">
-            <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
-              <memento viewPositionX="0" viewPositionY="277">
-                <selectionStack>
-                  <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
-                    <property name="hasNonTrivialSelection" value="false" />
-                    <property name="caretX" value="624" />
-                    <property name="caretXRelative" value="12" />
-                    <property name="sideSelectDirection" value="NONE" />
-                    <cellInfo cellId="Constant_9o3sb9_a0" cellNumber="0" isInList="false">
-                      <node node_reference="r:eb64c341-60e7-41ca-a9a9-8f25ac73d833(ro.barata.mps.rootLanguage.generator.template.main@generator)/2715870822989666623" />
-                    </cellInfo>
-                  </stackElement>
-                </selectionStack>
-                <errorLabels />
-                <folded />
-              </memento>
-              <inspectorMemento currentlyEditedNode="r:ca2f6163-f731-4984-b28c-c8e4f51179c6(ro.barata.mps.boLanguage.sandbox)/5946678282183359034" viewPositionX="0" viewPositionY="0">
-                <selectionStack />
-                <errorLabels />
-                <folded />
-              </inspectorMemento>
+              <node node_ref="r:2126a8cd-3e3b-4dd2-b6b0-7943b1bebaa3(ro.barata.mps.rootLanguage.structure)/5152062499437988043" />
             </state>
           </provider>
         </entry>
@@ -586,7 +497,7 @@
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="ro.barata.mps.databaseOperationsLanguage">
+            <PATH_ELEMENT USER_OBJECT="ro.barata.mps.httpLanguage">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
@@ -600,11 +511,29 @@
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="ro.barata.mps.databaseOperationsLanguage">
+            <PATH_ELEMENT USER_OBJECT="ro.barata.mps.httpLanguage">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="ro.barata.mps.databaseOperationsLanguage#7227310691964192368">
+            <PATH_ELEMENT USER_OBJECT="ro.barata.mps.httpLanguage#5946678282187898336">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Empty">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="Project">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="ro.barata.mps.httpLanguage">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="ro.barata.mps.httpLanguage#5946678282187898336">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
@@ -612,7 +541,7 @@
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="ro.barata.mps.databaseOperationsLanguage.generator.template.main">
+            <PATH_ELEMENT USER_OBJECT="ro.barata.mps.httpLanguage.generator.template.main">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
@@ -626,11 +555,29 @@
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="ro.barata.mps.databaseOperationsLanguage">
+            <PATH_ELEMENT USER_OBJECT="ro.barata.mps.httpLanguage">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="ro.barata.mps.databaseOperationsLanguage.behavior">
+            <PATH_ELEMENT USER_OBJECT="ro.barata.mps.httpLanguage.editor">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Empty">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="Project">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="ro.barata.mps.httpLanguage">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="ro.barata.mps.httpLanguage.structure">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
@@ -700,8 +647,97 @@
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="restartRequiresConfirmation" value="true" />
   </component>
-  <component name="RunManager">
-    <list size="0" />
+  <component name="RunManager" selected="Java Application.Node ro.barata.mps.boLanguage.sandbox.HTTPServer">
+    <configuration default="false" name="Node ro.barata.mps.boLanguage.sandbox.HTTPServer" type="Java Application" factoryName="Java" temporary="true">
+      <MyState />
+      <myNode>
+        <MyState>
+          <option name="myNodeId" value="5946678282189113998" />
+          <option name="myModelId" value="r:ca2f6163-f731-4984-b28c-c8e4f51179c6(ro.barata.mps.boLanguage.sandbox)" />
+        </MyState>
+      </myNode>
+      <myRunParameters>
+        <MyState>
+          <option name="myJavaRunParameters">
+            <JavaRunParameters>
+              <option name="jrePath" />
+              <option name="programParameters" />
+              <option name="useAlternativeJre" value="false" />
+              <option name="vmOptions" />
+              <option name="workingDirectory" />
+            </JavaRunParameters>
+          </option>
+        </MyState>
+      </myRunParameters>
+      <RunnerSettings RunnerId="Default Runner" />
+      <ConfigurationWrapper RunnerId="Default Runner" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Java Application" factoryName="Java">
+      <MyState />
+      <myNode>
+        <MyState>
+          <option name="myNodeId" />
+          <option name="myModelId" />
+        </MyState>
+      </myNode>
+      <myRunParameters>
+        <MyState>
+          <option name="myJavaRunParameters">
+            <JavaRunParameters>
+              <option name="jrePath" />
+              <option name="programParameters" />
+              <option name="useAlternativeJre" value="false" />
+              <option name="vmOptions" />
+              <option name="workingDirectory" />
+            </JavaRunParameters>
+          </option>
+        </MyState>
+      </myRunParameters>
+      <method />
+    </configuration>
+    <configuration default="true" type="JUnit Tests" factoryName="JUnit Tests">
+      <MyState />
+      <myJUnitSettings>
+        <MyState>
+          <option name="myModel" />
+          <option name="myModule" />
+          <option name="myLightExec" value="true" />
+          <option name="myReuseCaches" value="true" />
+          <option name="myDebug" value="false" />
+          <option name="myCachesPath" value="C:\Users\Andra\AppData\Local\Temp\mps_test_dir0" />
+          <option name="myTestCases">
+            <list />
+          </option>
+          <option name="myTestMethods">
+            <list />
+          </option>
+          <option name="myRunType" value="0" />
+        </MyState>
+      </myJUnitSettings>
+      <myJavaRunParameters>
+        <MyState>
+          <option name="myJavaRunParameters">
+            <JavaRunParameters>
+              <option name="jrePath" />
+              <option name="programParameters" />
+              <option name="useAlternativeJre" value="false" />
+              <option name="vmOptions" />
+              <option name="workingDirectory" />
+            </JavaRunParameters>
+          </option>
+        </MyState>
+      </myJavaRunParameters>
+      <method />
+    </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="Java Application.Node ro.barata.mps.boLanguage.sandbox.HTTPServer" />
+    </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="Java Application.Node ro.barata.mps.boLanguage.sandbox.HTTPServer" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
   <component name="SvnConfiguration">
@@ -714,7 +750,7 @@
       <window_info id="Bookmarks" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="25" side_tool="false" content_ui="tabs" />
       <window_info id="Model Checker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33438486" sideWeight="0.5186012" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Migration" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329653" sideWeight="0.4389881" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33280757" sideWeight="0.46369138" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Generation Tracer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25113463" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Class Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -726,15 +762,15 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39905363" sideWeight="0.6041667" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3280757" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33280757" sideWeight="0.5364583" order="16" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33280757" sideWeight="0.53630865" order="16" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3280757" sideWeight="0.5" order="17" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329653" sideWeight="0.5610119" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329653" sideWeight="0.5605144" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="RefactoringView" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329653" sideWeight="0.5" order="18" side_tool="false" content_ui="tabs" />
       <window_info id="Node Explorer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329653" sideWeight="0.38839287" order="19" side_tool="false" content_ui="tabs" />
       <window_info id="Typechecker State" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="20" side_tool="false" content_ui="tabs" />
       <window_info id="Supertypes" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Typesystem Trace" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.38764882" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39183056" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Classpath Explorer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="21" side_tool="false" content_ui="tabs" />
       <window_info id="Cell Explorer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="22" side_tool="false" content_ui="tabs" />
       <window_info id="Dependencies Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329653" sideWeight="0.5" order="24" side_tool="false" content_ui="tabs" />
@@ -774,180 +810,10 @@
     <MESSAGE value="Refactoring&#10;" />
     <MESSAGE value="Defined DAOs" />
     <MESSAGE value="Added support for references and children" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added support for references and children" />
+    <MESSAGE value="Fixed generation priorities" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed generation priorities" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="mps://node://ro.barata.mps.databaseOperationsLanguage/ro.barata.mps.databaseOperationsLanguage.structure/DBCommands">
-      <provider selected="true" editor-type-id="MPSFileEditor">
-        <state class="jetbrains.mps.ide.editorTabs.TabbedEditor$TabbedEditorState">
-          <memento viewPositionX="0" viewPositionY="0">
-            <selectionStack />
-            <errorLabels />
-            <folded />
-          </memento>
-          <inspectorMemento viewPositionX="0" viewPositionY="0">
-            <selectionStack />
-            <errorLabels />
-            <folded />
-          </inspectorMemento>
-          <node node_ref="r:6c72f60b-c4e8-4881-ae9b-6da67386d5ad(ro.barata.mps.databaseOperationsLanguage.behavior)/6352133620898804132" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="mps://node://ro.barata.mps.boLanguage.sandbox/ro.barata.mps.boLanguage.sandbox/SchemaCreator">
-      <provider selected="true" editor-type-id="MPSFileEditor">
-        <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
-          <memento viewPositionX="0" viewPositionY="400">
-            <selectionStack />
-            <errorLabels />
-            <folded />
-          </memento>
-          <inspectorMemento viewPositionX="0" viewPositionY="0">
-            <selectionStack />
-            <errorLabels />
-            <folded />
-          </inspectorMemento>
-        </state>
-      </provider>
-    </entry>
-    <entry file="mps://node://ro.barata.mps.boLanguage/ro.barata.mps.boLanguage.structure/Shop">
-      <provider selected="true" editor-type-id="MPSFileEditor">
-        <state class="jetbrains.mps.ide.editorTabs.TabbedEditor$TabbedEditorState">
-          <memento viewPositionX="0" viewPositionY="0">
-            <selectionStack />
-            <errorLabels />
-            <folded />
-          </memento>
-          <inspectorMemento viewPositionX="0" viewPositionY="0">
-            <selectionStack />
-            <errorLabels />
-            <folded />
-          </inspectorMemento>
-          <node node_ref="r:b83b433b-ea5a-4d7b-972b-0c047197eb67(ro.barata.mps.boLanguage.structure)/1706155229852121670" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="mps://node://ro.barata.mps.boLanguage/ro.barata.mps.boLanguage.structure/Person">
-      <provider selected="true" editor-type-id="MPSFileEditor">
-        <state class="jetbrains.mps.ide.editorTabs.TabbedEditor$TabbedEditorState">
-          <memento viewPositionX="0" viewPositionY="0">
-            <selectionStack />
-            <errorLabels />
-            <folded />
-          </memento>
-          <inspectorMemento viewPositionX="0" viewPositionY="0">
-            <selectionStack />
-            <errorLabels />
-            <folded />
-          </inspectorMemento>
-          <node node_ref="r:b83b433b-ea5a-4d7b-972b-0c047197eb67(ro.barata.mps.boLanguage.structure)/1706155229852121637" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="mps://node://ro.barata.mps.boLanguage/ro.barata.mps.boLanguage.structure/Customer">
-      <provider selected="true" editor-type-id="MPSFileEditor">
-        <state class="jetbrains.mps.ide.editorTabs.TabbedEditor$TabbedEditorState">
-          <memento viewPositionX="0" viewPositionY="0">
-            <selectionStack />
-            <errorLabels />
-            <folded />
-          </memento>
-          <inspectorMemento viewPositionX="0" viewPositionY="0">
-            <selectionStack />
-            <errorLabels />
-            <folded />
-          </inspectorMemento>
-          <node node_ref="r:b83b433b-ea5a-4d7b-972b-0c047197eb67(ro.barata.mps.boLanguage.structure)/1706155229852121651" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="mps://node://jetbrains.mps.lang.structure/jetbrains.mps.lang.structure.structure/InterfaceConceptReference">
-      <provider selected="true" editor-type-id="MPSFileEditor">
-        <state class="jetbrains.mps.ide.editorTabs.TabbedEditor$TabbedEditorState">
-          <memento viewPositionX="0" viewPositionY="0">
-            <selectionStack>
-              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
-                <property name="hasNonTrivialSelection" value="false" />
-                <property name="caretX" value="255" />
-                <property name="caretXRelative" value="12" />
-                <property name="sideSelectDirection" value="NONE" />
-                <cellInfo cellId="property_name" cellNumber="0" isInList="false">
-                  <node node_reference="r:00000000-0000-4000-0000-011c8959028d(jetbrains.mps.lang.structure.editor)/1169127648030" />
-                </cellInfo>
-              </stackElement>
-            </selectionStack>
-            <errorLabels />
-            <folded />
-          </memento>
-          <inspectorMemento currentlyEditedNode="r:eb64c341-60e7-41ca-a9a9-8f25ac73d833(ro.barata.mps.databaseLanguage.generator.template.main@generator)/7227310691965599843" viewPositionX="0" viewPositionY="0">
-            <selectionStack />
-            <errorLabels />
-            <folded />
-          </inspectorMemento>
-          <node node_ref="r:00000000-0000-4000-0000-011c8959028d(jetbrains.mps.lang.structure.editor)/1169127648030" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/languages/ro.barata.mps.boLanguage/source_gen/ro/barata/mps/boLanguage/behavior/Person_BehaviorDescriptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="357">
-          <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="mps://node://MPS.OpenAPI/org.jetbrains.mps.openapi.language@java_stub/SConcept">
-      <provider selected="true" editor-type-id="MPSFileEditor">
-        <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
-          <memento viewPositionX="0" viewPositionY="0">
-            <selectionStack>
-              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
-                <property name="hasNonTrivialSelection" value="false" />
-                <property name="caretX" value="15" />
-                <property name="caretXRelative" value="0" />
-                <property name="sideSelectDirection" value="NONE" />
-                <cellInfo cellId="ALIAS_EDITOR_COMPONENT" cellNumber="0" isInList="false">
-                  <node node_reference="8865b7a8-5271-43d3-884c-6fd1d9cfdd34/f:java_stub#8865b7a8-5271-43d3-884c-6fd1d9cfdd34#org.jetbrains.mps.openapi.language(MPS.OpenAPI/org.jetbrains.mps.openapi.language@java_stub)/7227310691959848622" />
-                </cellInfo>
-              </stackElement>
-            </selectionStack>
-            <errorLabels />
-            <folded />
-          </memento>
-          <inspectorMemento currentlyEditedNode="8865b7a8-5271-43d3-884c-6fd1d9cfdd34/f:java_stub#8865b7a8-5271-43d3-884c-6fd1d9cfdd34#org.jetbrains.mps.openapi.language(MPS.OpenAPI/org.jetbrains.mps.openapi.language@java_stub)/7227310691959848622" viewPositionX="0" viewPositionY="0">
-            <selectionStack />
-            <errorLabels />
-            <folded />
-          </inspectorMemento>
-        </state>
-      </provider>
-    </entry>
-    <entry file="mps://node://jetbrains.mps.lang.smodel/jetbrains.mps.lang.smodel.structure/SConceptType">
-      <provider selected="true" editor-type-id="MPSFileEditor">
-        <state class="jetbrains.mps.ide.editorTabs.TabbedEditor$TabbedEditorState">
-          <memento viewPositionX="0" viewPositionY="0">
-            <selectionStack>
-              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
-                <property name="hasNonTrivialSelection" value="false" />
-                <property name="caretX" value="247" />
-                <property name="caretXRelative" value="4" />
-                <property name="sideSelectDirection" value="NONE" />
-                <cellInfo cellId="property_name" cellNumber="0" isInList="false">
-                  <node node_reference="r:00000000-0000-4000-0000-011c895902fd(jetbrains.mps.lang.smodel.editor)/1172420591442" />
-                </cellInfo>
-              </stackElement>
-            </selectionStack>
-            <errorLabels />
-            <folded />
-          </memento>
-          <inspectorMemento currentlyEditedNode="r:00000000-0000-4000-0000-011c895902fd(jetbrains.mps.lang.smodel.editor)/1172420591442" viewPositionX="0" viewPositionY="0">
-            <selectionStack />
-            <errorLabels />
-            <folded />
-          </inspectorMemento>
-          <node node_ref="r:00000000-0000-4000-0000-011c895902fd(jetbrains.mps.lang.smodel.editor)/1172420591442" />
-        </state>
-      </provider>
-    </entry>
     <entry file="mps://node://jetbrains.mps.lang.core/jetbrains.mps.lang.core.structure/INamedConcept">
       <provider selected="true" editor-type-id="MPSFileEditor">
         <state class="jetbrains.mps.ide.editorTabs.TabbedEditor$TabbedEditorState">
@@ -1365,32 +1231,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="mps://node://ro.barata.mps.rootLanguage#5152062499435996722/ro.barata.mps.rootLanguage.generator.template.main@generator/main">
-      <provider selected="true" editor-type-id="MPSFileEditor">
-        <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
-          <memento viewPositionX="0" viewPositionY="496">
-            <selectionStack>
-              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
-                <property name="hasNonTrivialSelection" value="false" />
-                <property name="caretX" value="222" />
-                <property name="caretXRelative" value="60" />
-                <property name="sideSelectDirection" value="NONE" />
-                <cellInfo cellId="property_keepSourceRoot" cellNumber="0" isInList="false">
-                  <node node_reference="r:eb64c341-60e7-41ca-a9a9-8f25ac73d833(ro.barata.mps.rootLanguage.generator.template.main@generator)/7227310691966617999" />
-                </cellInfo>
-              </stackElement>
-            </selectionStack>
-            <errorLabels />
-            <folded />
-          </memento>
-          <inspectorMemento currentlyEditedNode="r:eb64c341-60e7-41ca-a9a9-8f25ac73d833(ro.barata.mps.rootLanguage.generator.template.main@generator)/7227310691966617999" viewPositionX="0" viewPositionY="0">
-            <selectionStack />
-            <errorLabels />
-            <folded />
-          </inspectorMemento>
-        </state>
-      </provider>
-    </entry>
     <entry file="mps://node://ro.barata.mps.rootLanguage/ro.barata.mps.rootLanguage.structure/DAOChildMapper">
       <provider selected="true" editor-type-id="MPSFileEditor">
         <state class="jetbrains.mps.ide.editorTabs.TabbedEditor$TabbedEditorState">
@@ -1632,33 +1472,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="mps://node://ro.barata.mps.rootLanguage/ro.barata.mps.rootLanguage.structure/SchemaCreator">
-      <provider selected="true" editor-type-id="MPSFileEditor">
-        <state class="jetbrains.mps.ide.editorTabs.TabbedEditor$TabbedEditorState">
-          <memento viewPositionX="0" viewPositionY="221">
-            <selectionStack>
-              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
-                <property name="hasNonTrivialSelection" value="false" />
-                <property name="caretX" value="149" />
-                <property name="caretXRelative" value="44" />
-                <property name="sideSelectDirection" value="NONE" />
-                <cellInfo cellId="Constant_8okfes_a0" cellNumber="0" isInList="false">
-                  <node node_reference="r:eb64c341-60e7-41ca-a9a9-8f25ac73d833(ro.barata.mps.rootLanguage.generator.template.main@generator)/7227310691965231662" />
-                </cellInfo>
-              </stackElement>
-            </selectionStack>
-            <errorLabels />
-            <folded />
-          </memento>
-          <inspectorMemento currentlyEditedNode="r:1187c4f6-f428-448e-965a-7a67c289651d(ro.barata.mps.databaseOperationsLanguage.editor)/6352133620896880097" viewPositionX="0" viewPositionY="0">
-            <selectionStack />
-            <errorLabels />
-            <folded />
-          </inspectorMemento>
-          <node node_ref="r:eb64c341-60e7-41ca-a9a9-8f25ac73d833(ro.barata.mps.rootLanguage.generator.template.main@generator)/5152062499438006599" />
-        </state>
-      </provider>
-    </entry>
     <entry file="mps://node://ro.barata.mps.rootLanguage#5152062499435996722/ro.barata.mps.rootLanguage.generator.template.main@generator/EntityDao">
       <provider selected="true" editor-type-id="MPSFileEditor">
         <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
@@ -1711,58 +1524,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="mps://node://ro.barata.mps.boLanguage.sandbox/ro.barata.mps.boLanguage.sandbox/SchemaCreator">
-      <provider selected="true" editor-type-id="MPSFileEditor">
-        <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
-          <memento viewPositionX="0" viewPositionY="397">
-            <selectionStack>
-              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
-                <property name="hasNonTrivialSelection" value="false" />
-                <property name="caretX" value="95" />
-                <property name="caretXRelative" value="0" />
-                <property name="sideSelectDirection" value="NONE" />
-                <cellInfo cellId="Constant_1bu1jk_a0" cellNumber="0" isInList="false">
-                  <node node_reference="r:ca2f6163-f731-4984-b28c-c8e4f51179c6(ro.barata.mps.boLanguage.sandbox)/1706155229853303609" />
-                </cellInfo>
-              </stackElement>
-            </selectionStack>
-            <errorLabels />
-            <folded />
-          </memento>
-          <inspectorMemento currentlyEditedNode="r:ca2f6163-f731-4984-b28c-c8e4f51179c6(ro.barata.mps.boLanguage.sandbox)/5946678282183359034" viewPositionX="0" viewPositionY="0">
-            <selectionStack />
-            <errorLabels />
-            <folded />
-          </inspectorMemento>
-        </state>
-      </provider>
-    </entry>
-    <entry file="mps://node://ro.barata.mps.boLanguage.sandbox/ro.barata.mps.boLanguage.sandbox/DBCommands">
-      <provider selected="true" editor-type-id="MPSFileEditor">
-        <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
-          <memento viewPositionX="0" viewPositionY="0">
-            <selectionStack>
-              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
-                <property name="hasNonTrivialSelection" value="false" />
-                <property name="caretX" value="563" />
-                <property name="caretXRelative" value="44" />
-                <property name="sideSelectDirection" value="NONE" />
-                <cellInfo cellId="property_value" cellNumber="0" isInList="false">
-                  <node node_reference="r:ca2f6163-f731-4984-b28c-c8e4f51179c6(ro.barata.mps.boLanguage.sandbox)/5946678282183359034" />
-                </cellInfo>
-              </stackElement>
-            </selectionStack>
-            <errorLabels />
-            <folded />
-          </memento>
-          <inspectorMemento currentlyEditedNode="r:ca2f6163-f731-4984-b28c-c8e4f51179c6(ro.barata.mps.boLanguage.sandbox)/5946678282183359034" viewPositionX="0" viewPositionY="0">
-            <selectionStack />
-            <errorLabels />
-            <folded />
-          </inspectorMemento>
-        </state>
-      </provider>
-    </entry>
     <entry file="mps://node://ro.barata.mps.databaseOperationsLanguage/ro.barata.mps.databaseOperationsLanguage.structure/DBCommands">
       <provider selected="true" editor-type-id="MPSFileEditor">
         <state class="jetbrains.mps.ide.editorTabs.TabbedEditor$TabbedEditorState">
@@ -1771,7 +1532,7 @@
             <errorLabels />
             <folded />
           </memento>
-          <inspectorMemento currentlyEditedNode="r:ca2f6163-f731-4984-b28c-c8e4f51179c6(ro.barata.mps.boLanguage.sandbox)/5946678282183359034" viewPositionX="0" viewPositionY="0">
+          <inspectorMemento currentlyEditedNode="r:48cdf645-21a6-4678-bd29-e449bcd0cd36(ro.barata.mps.htmlLanguage.structure)/5946678282187795779" viewPositionX="0" viewPositionY="0">
             <selectionStack />
             <errorLabels />
             <folded />
@@ -1788,7 +1549,7 @@
             <errorLabels />
             <folded />
           </memento>
-          <inspectorMemento currentlyEditedNode="r:ca2f6163-f731-4984-b28c-c8e4f51179c6(ro.barata.mps.boLanguage.sandbox)/5946678282183359034" viewPositionX="0" viewPositionY="0">
+          <inspectorMemento currentlyEditedNode="r:37a00da7-30d6-4678-b513-803ea4bc8f75(ro.barata.mps.htmlLanguage.editor)/5946678282187841684" viewPositionX="0" viewPositionY="0">
             <selectionStack />
             <errorLabels />
             <folded />
@@ -1805,7 +1566,7 @@
             <errorLabels />
             <folded />
           </memento>
-          <inspectorMemento currentlyEditedNode="r:ca2f6163-f731-4984-b28c-c8e4f51179c6(ro.barata.mps.boLanguage.sandbox)/5946678282183359034" viewPositionX="0" viewPositionY="0">
+          <inspectorMemento currentlyEditedNode="r:48cdf645-21a6-4678-bd29-e449bcd0cd36(ro.barata.mps.htmlLanguage.structure)/2539806008948696138" viewPositionX="0" viewPositionY="0">
             <selectionStack />
             <errorLabels />
             <folded />
@@ -1832,7 +1593,7 @@
             <errorLabels />
             <folded />
           </memento>
-          <inspectorMemento currentlyEditedNode="r:ca2f6163-f731-4984-b28c-c8e4f51179c6(ro.barata.mps.boLanguage.sandbox)/5946678282183359034" viewPositionX="0" viewPositionY="0">
+          <inspectorMemento currentlyEditedNode="r:48cdf645-21a6-4678-bd29-e449bcd0cd36(ro.barata.mps.htmlLanguage.structure)/5946678282187841685" viewPositionX="0" viewPositionY="0">
             <selectionStack />
             <errorLabels />
             <folded />
@@ -1859,7 +1620,7 @@
             <errorLabels />
             <folded />
           </memento>
-          <inspectorMemento currentlyEditedNode="r:ca2f6163-f731-4984-b28c-c8e4f51179c6(ro.barata.mps.boLanguage.sandbox)/5946678282183359034" viewPositionX="0" viewPositionY="0">
+          <inspectorMemento currentlyEditedNode="r:ef1656b0-13cb-48d7-8b19-67cc784b362e(GeneralSolution.sandbox)/5946678282187889816" viewPositionX="0" viewPositionY="0">
             <selectionStack />
             <errorLabels />
             <folded />
@@ -1876,12 +1637,394 @@
             <errorLabels />
             <folded />
           </memento>
-          <inspectorMemento currentlyEditedNode="r:ca2f6163-f731-4984-b28c-c8e4f51179c6(ro.barata.mps.boLanguage.sandbox)/5946678282183359034" viewPositionX="0" viewPositionY="0">
+          <inspectorMemento currentlyEditedNode="r:ef1656b0-13cb-48d7-8b19-67cc784b362e(GeneralSolution.sandbox)/5946678282187889816" viewPositionX="0" viewPositionY="0">
             <selectionStack />
             <errorLabels />
             <folded />
           </inspectorMemento>
           <node node_ref="r:41833483-e86e-41f4-a0f0-fbceb349d688(ro.barata.mps.databaseOperationsLanguage.generator.template.main@generator)/6352133620899881879" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="mps://node://ro.barata.mps.htmlLanguage/ro.barata.mps.htmlLanguage.structure/TitleElement">
+      <provider selected="true" editor-type-id="MPSFileEditor">
+        <state class="jetbrains.mps.ide.editorTabs.TabbedEditor$TabbedEditorState">
+          <memento viewPositionX="0" viewPositionY="0">
+            <selectionStack>
+              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
+                <property name="selectionStart" value="0" />
+                <property name="hasNonTrivialSelection" value="true" />
+                <property name="caretX" value="399" />
+                <property name="selectionEnd" value="1" />
+                <property name="caretXRelative" value="-4" />
+                <property name="sideSelectDirection" value="NONE" />
+                <cellInfo cellId="Constant_yuehr3_c0" cellNumber="0" isInList="false">
+                  <node node_reference="r:6b841c79-c7d2-458d-a313-ecfacc71a61e(ro.barata.mps.htmlLanguage.textGen)/5946678282187799719" />
+                </cellInfo>
+              </stackElement>
+              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellSelection">
+                <property name="caretX" value="0" />
+                <property name="caretXRelative" value="-47" />
+                <property name="sideSelectDirection" value="LEFT" />
+                <cellInfo cellId="Collection_yuehr3_a" cellNumber="0" isInList="false">
+                  <node node_reference="r:6b841c79-c7d2-458d-a313-ecfacc71a61e(ro.barata.mps.htmlLanguage.textGen)/5946678282187799719" />
+                </cellInfo>
+              </stackElement>
+            </selectionStack>
+            <errorLabels />
+            <folded />
+          </memento>
+          <inspectorMemento currentlyEditedNode="r:b99e43f2-c072-44d3-9f44-51ef18f0fd73(ro.barata.mps.httpLanguage.editor)/5946678282187898796" viewPositionX="0" viewPositionY="0">
+            <selectionStack />
+            <errorLabels />
+            <folded />
+          </inspectorMemento>
+          <node node_ref="r:6b841c79-c7d2-458d-a313-ecfacc71a61e(ro.barata.mps.htmlLanguage.textGen)/5946678282187797026" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="mps://node://ro.barata.mps.htmlLanguage/ro.barata.mps.htmlLanguage.structure/HTMLHead">
+      <provider selected="true" editor-type-id="MPSFileEditor">
+        <state class="jetbrains.mps.ide.editorTabs.TabbedEditor$TabbedEditorState">
+          <memento viewPositionX="0" viewPositionY="0">
+            <selectionStack>
+              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
+                <property name="hasNonTrivialSelection" value="false" />
+                <property name="caretX" value="223" />
+                <property name="caretXRelative" value="32" />
+                <property name="sideSelectDirection" value="NONE" />
+                <cellInfo cellId="property_role" cellNumber="0" isInList="false">
+                  <node node_reference="r:6b841c79-c7d2-458d-a313-ecfacc71a61e(ro.barata.mps.htmlLanguage.textGen)/5946678282187892500" />
+                </cellInfo>
+              </stackElement>
+            </selectionStack>
+            <errorLabels />
+            <folded />
+          </memento>
+          <inspectorMemento currentlyEditedNode="r:67d94a63-3b8d-41cc-9370-d8e624ac8a31(ro.barata.mps.httpLanguage.structure)/5946678282187898656" viewPositionX="0" viewPositionY="0">
+            <selectionStack />
+            <errorLabels />
+            <folded />
+          </inspectorMemento>
+          <node node_ref="r:6b841c79-c7d2-458d-a313-ecfacc71a61e(ro.barata.mps.htmlLanguage.textGen)/2539806008948777525" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="mps://node://ro.barata.mps.htmlLanguage/ro.barata.mps.htmlLanguage.structure/H1Element">
+      <provider selected="true" editor-type-id="MPSFileEditor">
+        <state class="jetbrains.mps.ide.editorTabs.TabbedEditor$TabbedEditorState">
+          <memento viewPositionX="0" viewPositionY="0">
+            <selectionStack>
+              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
+                <property name="hasNonTrivialSelection" value="false" />
+                <property name="caretX" value="311" />
+                <property name="caretXRelative" value="32" />
+                <property name="sideSelectDirection" value="NONE" />
+                <cellInfo cellId="property_value" cellNumber="0" isInList="false">
+                  <node node_reference="r:6b841c79-c7d2-458d-a313-ecfacc71a61e(ro.barata.mps.htmlLanguage.textGen)/5946678282187843201" />
+                </cellInfo>
+              </stackElement>
+            </selectionStack>
+            <errorLabels />
+            <folded />
+          </memento>
+          <inspectorMemento currentlyEditedNode="r:0260b449-4103-4943-8e0c-cfdd55e36f3e(ro.barata.mps.httpLanguage.generator.template.main@generator)/5946678282188648930" viewPositionX="0" viewPositionY="0">
+            <selectionStack />
+            <errorLabels />
+            <folded />
+          </inspectorMemento>
+          <node node_ref="r:6b841c79-c7d2-458d-a313-ecfacc71a61e(ro.barata.mps.htmlLanguage.textGen)/5946678282187842537" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="mps://node://ro.barata.mps.htmlLanguage/ro.barata.mps.htmlLanguage.structure/HTMLTag">
+      <provider selected="true" editor-type-id="MPSFileEditor">
+        <state class="jetbrains.mps.ide.editorTabs.TabbedEditor$TabbedEditorState">
+          <memento viewPositionX="0" viewPositionY="0">
+            <selectionStack>
+              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
+                <property name="hasNonTrivialSelection" value="false" />
+                <property name="caretX" value="143" />
+                <property name="caretXRelative" value="52" />
+                <property name="sideSelectDirection" value="NONE" />
+                <cellInfo cellId="property_name" cellNumber="0" isInList="false">
+                  <node node_reference="r:48cdf645-21a6-4678-bd29-e449bcd0cd36(ro.barata.mps.htmlLanguage.structure)/5946678282187841762" />
+                </cellInfo>
+              </stackElement>
+            </selectionStack>
+            <errorLabels />
+            <folded />
+          </memento>
+          <inspectorMemento currentlyEditedNode="r:ca2f6163-f731-4984-b28c-c8e4f51179c6(ro.barata.mps.boLanguage.sandbox)/5946678282183359034" viewPositionX="0" viewPositionY="0">
+            <selectionStack />
+            <errorLabels />
+            <folded />
+          </inspectorMemento>
+          <node node_ref="r:48cdf645-21a6-4678-bd29-e449bcd0cd36(ro.barata.mps.htmlLanguage.structure)/2539806008948696138" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="mps://node://ro.barata.mps.htmlLanguage/ro.barata.mps.htmlLanguage.structure/HTMLContainer">
+      <provider selected="true" editor-type-id="MPSFileEditor">
+        <state class="jetbrains.mps.ide.editorTabs.TabbedEditor$TabbedEditorState">
+          <memento viewPositionX="0" viewPositionY="0">
+            <selectionStack>
+              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
+                <property name="hasNonTrivialSelection" value="false" />
+                <property name="caretX" value="95" />
+                <property name="caretXRelative" value="20" />
+                <property name="sideSelectDirection" value="NONE" />
+                <cellInfo cellId="TransactionalProperty_ueqr71_d0a" cellNumber="0" isInList="false">
+                  <node node_reference="r:48cdf645-21a6-4678-bd29-e449bcd0cd36(ro.barata.mps.htmlLanguage.structure)/5946678282187841685" />
+                </cellInfo>
+              </stackElement>
+            </selectionStack>
+            <errorLabels />
+            <folded />
+          </memento>
+          <inspectorMemento currentlyEditedNode="r:ca2f6163-f731-4984-b28c-c8e4f51179c6(ro.barata.mps.boLanguage.sandbox)/5946678282183359034" viewPositionX="0" viewPositionY="0">
+            <selectionStack />
+            <errorLabels />
+            <folded />
+          </inspectorMemento>
+          <node node_ref="r:48cdf645-21a6-4678-bd29-e449bcd0cd36(ro.barata.mps.htmlLanguage.structure)/5946678282187841685" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="mps://node://ro.barata.mps.htmlLanguage/ro.barata.mps.htmlLanguage.structure/HTMLBody">
+      <provider selected="true" editor-type-id="MPSFileEditor">
+        <state class="jetbrains.mps.ide.editorTabs.TabbedEditor$TabbedEditorState">
+          <memento viewPositionX="0" viewPositionY="0">
+            <selectionStack>
+              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
+                <property name="hasNonTrivialSelection" value="false" />
+                <property name="caretX" value="223" />
+                <property name="caretXRelative" value="32" />
+                <property name="sideSelectDirection" value="NONE" />
+                <cellInfo cellId="property_role" cellNumber="0" isInList="false">
+                  <node node_reference="r:6b841c79-c7d2-458d-a313-ecfacc71a61e(ro.barata.mps.htmlLanguage.textGen)/5946678282187893200" />
+                </cellInfo>
+              </stackElement>
+            </selectionStack>
+            <errorLabels />
+            <folded />
+          </memento>
+          <inspectorMemento currentlyEditedNode="r:ca2f6163-f731-4984-b28c-c8e4f51179c6(ro.barata.mps.boLanguage.sandbox)/1706155229853303465" viewPositionX="4" viewPositionY="0">
+            <selectionStack />
+            <errorLabels />
+            <folded />
+          </inspectorMemento>
+          <node node_ref="r:6b841c79-c7d2-458d-a313-ecfacc71a61e(ro.barata.mps.htmlLanguage.textGen)/2539806008948778273" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="mps://node://ro.barata.mps.htmlLanguage#2539806008948651149/ro.barata.mps.htmlLanguage.generator.template.main@generator/main">
+      <provider selected="true" editor-type-id="MPSFileEditor">
+        <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
+          <memento viewPositionX="0" viewPositionY="119">
+            <selectionStack>
+              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
+                <property name="hasNonTrivialSelection" value="false" />
+                <property name="caretX" value="31" />
+                <property name="caretXRelative" value="0" />
+                <property name="sideSelectDirection" value="NONE" />
+                <cellInfo cellId="empty_createRootRule" cellNumber="0" isInList="false">
+                  <node node_reference="r:6bacf918-76fc-479c-bfaa-9fedc72852ab(ro.barata.mps.htmlLanguage.generator.template.main@generator)/2539806008948651150" />
+                </cellInfo>
+              </stackElement>
+            </selectionStack>
+            <errorLabels />
+            <folded />
+          </memento>
+          <inspectorMemento currentlyEditedNode="r:ca2f6163-f731-4984-b28c-c8e4f51179c6(ro.barata.mps.boLanguage.sandbox)/5946678282188793066" viewPositionX="0" viewPositionY="0">
+            <selectionStack />
+            <errorLabels />
+            <folded />
+          </inspectorMemento>
+        </state>
+      </provider>
+    </entry>
+    <entry file="mps://node://ro.barata.mps.rootLanguage#5152062499435996722/ro.barata.mps.rootLanguage.generator.template.main@generator/main">
+      <provider selected="true" editor-type-id="MPSFileEditor">
+        <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
+          <memento viewPositionX="0" viewPositionY="242">
+            <selectionStack>
+              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
+                <property name="hasNonTrivialSelection" value="false" />
+                <property name="caretX" value="222" />
+                <property name="caretXRelative" value="60" />
+                <property name="sideSelectDirection" value="NONE" />
+                <cellInfo cellId="property_keepSourceRoot" cellNumber="0" isInList="false">
+                  <node node_reference="r:eb64c341-60e7-41ca-a9a9-8f25ac73d833(ro.barata.mps.rootLanguage.generator.template.main@generator)/7227310691966617999" />
+                </cellInfo>
+              </stackElement>
+            </selectionStack>
+            <errorLabels />
+            <folded />
+          </memento>
+          <inspectorMemento currentlyEditedNode="r:ca2f6163-f731-4984-b28c-c8e4f51179c6(ro.barata.mps.boLanguage.sandbox)/5946678282189113998" viewPositionX="0" viewPositionY="0">
+            <selectionStack />
+            <errorLabels />
+            <folded />
+          </inspectorMemento>
+        </state>
+      </provider>
+    </entry>
+    <entry file="mps://node://ro.barata.mps.httpLanguage/ro.barata.mps.httpLanguage.structure/HTTPConfiguration">
+      <provider selected="true" editor-type-id="MPSFileEditor">
+        <state class="jetbrains.mps.ide.editorTabs.TabbedEditor$TabbedEditorState">
+          <memento viewPositionX="0" viewPositionY="0">
+            <selectionStack>
+              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
+                <property name="hasNonTrivialSelection" value="false" />
+                <property name="caretX" value="23" />
+                <property name="caretXRelative" value="8" />
+                <property name="sideSelectDirection" value="NONE" />
+                <cellInfo cellId="Constant_uj0cpq_d31a" cellNumber="0" isInList="false">
+                  <node node_reference="r:0260b449-4103-4943-8e0c-cfdd55e36f3e(ro.barata.mps.httpLanguage.generator.template.main@generator)/5946678282187898863" />
+                </cellInfo>
+              </stackElement>
+            </selectionStack>
+            <errorLabels />
+            <folded />
+          </memento>
+          <inspectorMemento currentlyEditedNode="r:ca2f6163-f731-4984-b28c-c8e4f51179c6(ro.barata.mps.boLanguage.sandbox)/5946678282189113998" viewPositionX="0" viewPositionY="0">
+            <selectionStack />
+            <errorLabels />
+            <folded />
+          </inspectorMemento>
+          <node node_ref="r:0260b449-4103-4943-8e0c-cfdd55e36f3e(ro.barata.mps.httpLanguage.generator.template.main@generator)/5946678282187898863" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="mps://node://ro.barata.mps.rootLanguage/ro.barata.mps.rootLanguage.structure/SchemaCreator">
+      <provider selected="true" editor-type-id="MPSFileEditor">
+        <state class="jetbrains.mps.ide.editorTabs.TabbedEditor$TabbedEditorState">
+          <memento viewPositionX="0" viewPositionY="0">
+            <selectionStack>
+              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
+                <property name="hasNonTrivialSelection" value="false" />
+                <property name="caretX" value="15" />
+                <property name="caretXRelative" value="0" />
+                <property name="sideSelectDirection" value="NONE" />
+                <cellInfo cellId="Constant_ueqr71_c0a" cellNumber="0" isInList="false">
+                  <node node_reference="r:2126a8cd-3e3b-4dd2-b6b0-7943b1bebaa3(ro.barata.mps.rootLanguage.structure)/5152062499437988043" />
+                </cellInfo>
+              </stackElement>
+            </selectionStack>
+            <errorLabels />
+            <folded />
+          </memento>
+          <inspectorMemento currentlyEditedNode="r:ca2f6163-f731-4984-b28c-c8e4f51179c6(ro.barata.mps.boLanguage.sandbox)/5946678282189113998" viewPositionX="0" viewPositionY="0">
+            <selectionStack />
+            <errorLabels />
+            <folded />
+          </inspectorMemento>
+          <node node_ref="r:2126a8cd-3e3b-4dd2-b6b0-7943b1bebaa3(ro.barata.mps.rootLanguage.structure)/5152062499437988043" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="mps://node://ro.barata.mps.boLanguage.sandbox/ro.barata.mps.boLanguage.sandbox/DBCommands">
+      <provider selected="true" editor-type-id="MPSFileEditor">
+        <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
+          <memento viewPositionX="0" viewPositionY="0">
+            <selectionStack>
+              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
+                <property name="hasNonTrivialSelection" value="false" />
+                <property name="caretX" value="563" />
+                <property name="caretXRelative" value="44" />
+                <property name="sideSelectDirection" value="NONE" />
+                <cellInfo cellId="property_value" cellNumber="0" isInList="false">
+                  <node node_reference="r:ca2f6163-f731-4984-b28c-c8e4f51179c6(ro.barata.mps.boLanguage.sandbox)/5946678282183359034" />
+                </cellInfo>
+              </stackElement>
+            </selectionStack>
+            <errorLabels />
+            <folded />
+          </memento>
+          <inspectorMemento currentlyEditedNode="r:ca2f6163-f731-4984-b28c-c8e4f51179c6(ro.barata.mps.boLanguage.sandbox)/5946678282189113998" viewPositionX="0" viewPositionY="0">
+            <selectionStack />
+            <errorLabels />
+            <folded />
+          </inspectorMemento>
+        </state>
+      </provider>
+    </entry>
+    <entry file="mps://node://ro.barata.mps.boLanguage.sandbox/ro.barata.mps.boLanguage.sandbox/SchemaCreator">
+      <provider selected="true" editor-type-id="MPSFileEditor">
+        <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
+          <memento viewPositionX="0" viewPositionY="397">
+            <selectionStack>
+              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
+                <property name="hasNonTrivialSelection" value="false" />
+                <property name="caretX" value="63" />
+                <property name="caretXRelative" value="0" />
+                <property name="sideSelectDirection" value="NONE" />
+                <cellInfo cellId="Constant_2zymiz_h0" cellNumber="0" isInList="false">
+                  <node node_reference="r:ca2f6163-f731-4984-b28c-c8e4f51179c6(ro.barata.mps.boLanguage.sandbox)/1706155229853303465" />
+                </cellInfo>
+              </stackElement>
+            </selectionStack>
+            <errorLabels />
+            <folded />
+          </memento>
+          <inspectorMemento currentlyEditedNode="r:ca2f6163-f731-4984-b28c-c8e4f51179c6(ro.barata.mps.boLanguage.sandbox)/5946678282189113998" viewPositionX="0" viewPositionY="0">
+            <selectionStack />
+            <errorLabels />
+            <folded />
+          </inspectorMemento>
+        </state>
+      </provider>
+    </entry>
+    <entry file="mps://node://ro.barata.mps.boLanguage.sandbox/ro.barata.mps.boLanguage.sandbox/HTTPConfiguration">
+      <provider selected="true" editor-type-id="MPSFileEditor">
+        <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
+          <memento viewPositionX="0" viewPositionY="0">
+            <selectionStack>
+              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
+                <property name="hasNonTrivialSelection" value="false" />
+                <property name="caretX" value="111" />
+                <property name="caretXRelative" value="36" />
+                <property name="sideSelectDirection" value="NONE" />
+                <cellInfo cellId="property_port" cellNumber="0" isInList="false">
+                  <node node_reference="r:ca2f6163-f731-4984-b28c-c8e4f51179c6(ro.barata.mps.boLanguage.sandbox)/5946678282189113998" />
+                </cellInfo>
+              </stackElement>
+            </selectionStack>
+            <errorLabels />
+            <folded />
+          </memento>
+          <inspectorMemento currentlyEditedNode="r:ca2f6163-f731-4984-b28c-c8e4f51179c6(ro.barata.mps.boLanguage.sandbox)/5946678282189113998" viewPositionX="0" viewPositionY="0">
+            <selectionStack />
+            <errorLabels />
+            <folded />
+          </inspectorMemento>
+        </state>
+      </provider>
+    </entry>
+    <entry file="mps://node://ro.barata.mps.boLanguage.sandbox/ro.barata.mps.boLanguage.sandbox/index">
+      <provider selected="true" editor-type-id="MPSFileEditor">
+        <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
+          <memento viewPositionX="0" viewPositionY="0">
+            <selectionStack>
+              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
+                <property name="hasNonTrivialSelection" value="false" />
+                <property name="caretX" value="175" />
+                <property name="caretXRelative" value="92" />
+                <property name="sideSelectDirection" value="NONE" />
+                <cellInfo cellId="property_value" cellNumber="0" isInList="false">
+                  <node node_reference="r:ca2f6163-f731-4984-b28c-c8e4f51179c6(ro.barata.mps.boLanguage.sandbox)/5946678282189285629" />
+                </cellInfo>
+              </stackElement>
+            </selectionStack>
+            <errorLabels />
+            <folded />
+          </memento>
+          <inspectorMemento currentlyEditedNode="r:ca2f6163-f731-4984-b28c-c8e4f51179c6(ro.barata.mps.boLanguage.sandbox)/5946678282189113998" viewPositionX="0" viewPositionY="0">
+            <selectionStack />
+            <errorLabels />
+            <folded />
+          </inspectorMemento>
         </state>
       </provider>
     </entry>

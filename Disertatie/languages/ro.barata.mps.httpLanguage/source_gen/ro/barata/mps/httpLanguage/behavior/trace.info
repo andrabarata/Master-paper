@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<debug-info>
+  <root>
+    <file name="BehaviorAspectDescriptor.java">
+      <unit at="9,0,22,0" name="ro.barata.mps.httpLanguage.behavior.BehaviorAspectDescriptor" />
+    </file>
+    <file name="HTTPConfiguration_BehaviorDescriptor.java">
+      <unit at="10,0,24,0" name="ro.barata.mps.httpLanguage.behavior.HTTPConfiguration_BehaviorDescriptor" />
+    </file>
+  </root>
+</debug-info>
+

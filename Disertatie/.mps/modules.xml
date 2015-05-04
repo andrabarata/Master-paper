@@ -5,6 +5,8 @@
       <modulePath path="$PROJECT_DIR$/languages/ro.barata.mps.boLanguage/ro.barata.mps.boLanguage.mpl" folder="" />
       <modulePath path="$PROJECT_DIR$/languages/ro.barata.mps.boLanguage/sandbox/ro.barata.mps.boLanguage.sandbox.msd" folder="" />
       <modulePath path="$PROJECT_DIR$/languages/ro.barata.mps.databaseOperationsLanguage/ro.barata.mps.databaseOperationsLanguage.mpl" folder="" />
+      <modulePath path="$PROJECT_DIR$/languages/ro.barata.mps.htmlLanguage/ro.barata.mps.htmlLanguage.mpl" folder="" />
+      <modulePath path="$PROJECT_DIR$/languages/ro.barata.mps.httpLanguage/ro.barata.mps.httpLanguage.mpl" folder="" />
       <modulePath path="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/ro.barata.mps.rootLanguage.mpl" folder="" />
     </projectModules>
   </component>

@@ -778,5 +778,59 @@
       <unit id="1706155229852122088" at="11,0,108,0" name="ro.barata.mps.boLanguage.sandbox.ShopDAO" />
     </file>
   </root>
+  <root nodeRef="r:ca2f6163-f731-4984-b28c-c8e4f51179c6(ro.barata.mps.boLanguage.sandbox)/5946678282183358955">
+    <file name="DBCommands.java">
+      <node id="5946678282183358955" at="9,84,10,42" concept="7" />
+      <node id="5946678282183358955" at="10,42,11,33" concept="7" />
+      <node id="5946678282183358985" at="11,33,12,26" concept="2" />
+      <node id="5946678282183358985" at="12,26,13,20" concept="2" />
+      <node id="5946678282183358985" at="13,20,14,33" concept="2" />
+      <node id="5946678282183358985" at="14,33,15,32" concept="2" />
+      <node id="5946678282183358985" at="15,32,16,32" concept="2" />
+      <node id="5946678282183358955" at="20,9,21,24" concept="2" />
+      <node id="5946678282183358955" at="22,27,23,26" concept="2" />
+      <node id="5946678282183358985" at="11,33,16,32" concept="0" />
+      <node id="5946678282183358955" at="19,42,24,5" concept="11" />
+      <node id="5946678282183358955" at="19,0,26,0" concept="10" trace="main#([Ljava/lang/String;)V" />
+      <node id="5946678282183358955" at="9,0,18,0" concept="10" trace="executeCommands#()V" />
+      <scope id="5946678282183358955" at="20,9,21,24" />
+      <scope id="5946678282183358955" at="22,0,23,26">
+        <var name="e" id="5946678282183358955" />
+      </scope>
+      <scope id="5946678282183358955" at="22,27,23,26" />
+      <scope id="5946678282183358985" at="11,33,16,32" />
+      <scope id="5946678282183358955" at="19,42,24,5" />
+      <scope id="5946678282183358955" at="9,84,16,32">
+        <var name="person" id="5946678282183358955" />
+        <var name="personDAO" id="5946678282183358955" />
+      </scope>
+      <scope id="5946678282183358955" at="19,0,26,0">
+        <var name="args" id="5946678282183358955" />
+      </scope>
+      <scope id="5946678282183358955" at="9,0,18,0" />
+      <unit id="5946678282183358955" at="7,0,27,0" name="ro.barata.mps.boLanguage.sandbox.DBCommands" />
+    </file>
+  </root>
+  <root nodeRef="r:ca2f6163-f731-4984-b28c-c8e4f51179c6(ro.barata.mps.boLanguage.sandbox)/5946678282189113998">
+    <file name="HTTPServer.java">
+      <node id="5946678282189113998" at="9,59,10,33" concept="7" />
+      <node id="5946678282189113998" at="10,33,11,68" concept="7" />
+      <node id="5946678282189113998" at="11,68,12,35" concept="2" />
+      <node id="5946678282189113998" at="12,35,13,28" concept="2" />
+      <node id="5946678282189113998" at="13,28,14,35" concept="2" />
+      <node id="5946678282189113998" at="14,35,15,0" concept="9" />
+      <node id="5946678282189113998" at="15,0,16,19" concept="2" />
+      <node id="5946678282189113998" at="16,19,17,18" concept="2" />
+      <node id="5946678282189113998" at="9,0,19,0" concept="10" trace="main#([Ljava/lang/String;)V" />
+      <scope id="5946678282189113998" at="9,59,17,18">
+        <var name="connector" id="5946678282189113998" />
+        <var name="server" id="5946678282189113998" />
+      </scope>
+      <scope id="5946678282189113998" at="9,0,19,0">
+        <var name="args" id="5946678282189113998" />
+      </scope>
+      <unit id="5946678282189113998" at="8,0,20,0" name="ro.barata.mps.boLanguage.sandbox.HTTPServer" />
+    </file>
+  </root>
 </debug-info>
 
