@@ -4,16 +4,29 @@ package ro.barata.mps.boLanguage.sandbox;
 
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.server.nio.SelectChannelConnector;
+import org.eclipse.jetty.servlet.ServletContextHandler;
+import org.eclipse.jetty.servlet.ServletHolder;
 
 public class HTTPServer {
   public static void main(String[] args) throws Exception {
     Server server = new Server();
     SelectChannelConnector connector = new SelectChannelConnector();
     connector.setHost("localhost");
-    connector.setPort(7777);
+    connector.setPort(8888);
     server.addConnector(connector);
+
+    String path = HTTPServer.class.getClassLoader().getResource(HTTPServer.class.getName().replace(".", "/") + ".class").toString();
+    path = path.substring(0, path.lastIndexOf("/"));
+
+    ServletContextHandler context = new ServletContextHandler(ServletContextHandler.SESSIONS);
+    context.setContextPath("/");
+    context.setResourceBase(path);
+    server.setHandler(context);
+
+    context.addServlet(new ServletHolder(new IndexServlet()), "/*");
 
     server.start();
     server.join();
+
   }
 }

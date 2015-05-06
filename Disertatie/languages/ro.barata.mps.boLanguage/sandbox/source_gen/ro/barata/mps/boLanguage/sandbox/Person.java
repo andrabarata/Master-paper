@@ -19,13 +19,13 @@ public class Person {
   }
 
   public Integer getId() {
-    return id;
+    return this.id;
   }
   public String getFirstName() {
-    return firstName;
+    return this.firstName;
   }
   public String getLastName() {
-    return lastName;
+    return this.lastName;
   }
 
   public Person() {

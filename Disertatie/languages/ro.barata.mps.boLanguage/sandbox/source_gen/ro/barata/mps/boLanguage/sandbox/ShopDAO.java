@@ -4,15 +4,29 @@ package ro.barata.mps.boLanguage.sandbox;
 
 import java.sql.Statement;
 import java.sql.SQLException;
-import java.sql.ResultSet;
 import java.util.List;
 import java.util.ArrayList;
+import java.sql.ResultSet;
 
 public class ShopDAO {
   private Statement stmt;
 
   public ShopDAO() throws SQLException, ClassNotFoundException {
     stmt = DatabaseConnector.getConnection().createStatement();
+  }
+
+  public List<Shop> getAllShops() throws SQLException {
+    List<Shop> shops = new ArrayList<Shop>();
+    String sql = "select * from " + "ShopTable";
+    ResultSet set = stmt.executeQuery(sql);
+    Shop foundShop = new Shop();
+    while (set.next()) {
+      foundShop = new Shop();
+      foundShop.setId(Integer.valueOf(set.getBigDecimal("id").intValue()));
+      foundShop.setName(set.getString("name"));
+      shops.add(foundShop);
+    }
+    return shops;
   }
 
   public Shop findById(String[] keys, String[] keyValues) throws SQLException {
@@ -34,7 +48,7 @@ public class ShopDAO {
     List<Object> result = new ArrayList<Object>();
     int i = 0;
     while (set.next()) {
-      result.add(set.getObject(i));
+      result.add(set.getObject(i + 1));
       i++;
     }
     Shop shop = new Shop();

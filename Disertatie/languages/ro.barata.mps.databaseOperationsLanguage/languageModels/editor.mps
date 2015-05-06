@@ -51,8 +51,14 @@
         <reference id="1166049300910" name="conceptDeclaration" index="1XX52x" />
       </concept>
     </language>
+    <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
+      <concept id="1133920641626" name="jetbrains.mps.lang.core.structure.BaseConcept" flags="ng" index="2VYdi">
+        <property id="1193676396447" name="virtualPackage" index="3GE5qa" />
+      </concept>
+    </language>
   </registry>
   <node concept="24kQdi" id="5wBjXY7nSP8">
+    <property role="3GE5qa" value="db.operations" />
     <ref role="1XX52x" to="jkzc:5wBjXY7mMHe" resolve="DeleteOperation" />
     <node concept="3EZMnI" id="5wBjXY7nVeD" role="2wV5jI">
       <node concept="3F0ifn" id="5wBjXY7nVeN" role="3EZMnx">
@@ -98,6 +104,7 @@
     </node>
   </node>
   <node concept="24kQdi" id="5wBjXY7nXpH">
+    <property role="3GE5qa" value="db.operations" />
     <ref role="1XX52x" to="jkzc:5wBjXY7nXkw" resolve="InsertOperation" />
     <node concept="3EZMnI" id="5wBjXY7nXq_" role="2wV5jI">
       <node concept="3F0ifn" id="5wBjXY7nXqJ" role="3EZMnx">
@@ -127,6 +134,7 @@
     </node>
   </node>
   <node concept="24kQdi" id="5wBjXY7nXtk">
+    <property role="3GE5qa" value="db.operations" />
     <ref role="1XX52x" to="jkzc:5wBjXY7nXsd" resolve="UpdateOperation" />
     <node concept="3EZMnI" id="5wBjXY7nXtL" role="2wV5jI">
       <node concept="3F0ifn" id="5wBjXY7nXtV" role="3EZMnx">
@@ -175,6 +183,7 @@
     </node>
   </node>
   <node concept="24kQdi" id="5wBjXY7qV1R">
+    <property role="3GE5qa" value="db.values" />
     <ref role="1XX52x" to="jkzc:5wBjXY7qSjt" resolve="BooleanValue" />
     <node concept="3EZMnI" id="5wBjXY7qV2k" role="2wV5jI">
       <node concept="3F0A7n" id="5wBjXY7qV2y" role="3EZMnx">
@@ -184,6 +193,7 @@
     </node>
   </node>
   <node concept="24kQdi" id="5wBjXY7qV2F">
+    <property role="3GE5qa" value="db.values" />
     <ref role="1XX52x" to="jkzc:5wBjXY7qSiU" resolve="IntValue" />
     <node concept="3EZMnI" id="5wBjXY7qV38" role="2wV5jI">
       <node concept="3F0A7n" id="5wBjXY7s0o0" role="3EZMnx">
@@ -193,6 +203,7 @@
     </node>
   </node>
   <node concept="24kQdi" id="5wBjXY7qV3r">
+    <property role="3GE5qa" value="db.values" />
     <ref role="1XX52x" to="jkzc:5wBjXY7qSi3" resolve="StringValue" />
     <node concept="3EZMnI" id="5wBjXY7qV3S" role="2wV5jI">
       <node concept="3F0A7n" id="5wBjXY7qV42" role="3EZMnx">

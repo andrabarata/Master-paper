@@ -183,6 +183,7 @@
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
       <concept id="1133920641626" name="jetbrains.mps.lang.core.structure.BaseConcept" flags="ng" index="2VYdi">
+        <property id="1193676396447" name="virtualPackage" index="3GE5qa" />
         <child id="5169995583184591170" name="smodelAttribute" index="lGtFl" />
       </concept>
       <concept id="3364660638048049750" name="jetbrains.mps.lang.core.structure.PropertyAttribute" flags="ng" index="A9Btg">
@@ -200,6 +201,7 @@
   </registry>
   <node concept="bUwia" id="6hc$cxbU8pL">
     <property role="TrG5h" value="main" />
+    <property role="3GE5qa" value="db.values" />
     <node concept="3aamgX" id="5wBjXY7wz8Q" role="3acgRq">
       <ref role="30HIoZ" to="jkzc:5wBjXY7mMHe" resolve="DeleteOperation" />
       <node concept="j$656" id="5wBjXY7wKEf" role="1lVwrX">
@@ -598,6 +600,7 @@
   </node>
   <node concept="13MO4I" id="5wBjXY7wJMm">
     <property role="TrG5h" value="DeleteTemplate" />
+    <property role="3GE5qa" value="db.operations" />
     <ref role="3gUMe" to="jkzc:5wBjXY7mMHe" resolve="DeleteOperation" />
     <node concept="9aQIb" id="5wBjXY7wJMn" role="13RCb5">
       <node concept="3clFbS" id="5wBjXY7wJMo" role="9aQI4">
@@ -927,6 +930,7 @@
   </node>
   <node concept="13MO4I" id="5wBjXY7zqen">
     <property role="TrG5h" value="UpdateTemplate" />
+    <property role="3GE5qa" value="db.operations" />
     <ref role="3gUMe" to="jkzc:5wBjXY7nXsd" resolve="UpdateOperation" />
     <node concept="9aQIb" id="5wBjXY7zqeo" role="13RCb5">
       <node concept="3clFbS" id="5wBjXY7zqep" role="9aQI4">
@@ -1455,6 +1459,7 @@
   </node>
   <node concept="13MO4I" id="5wBjXY7Sju5">
     <property role="TrG5h" value="InsertTemplate" />
+    <property role="3GE5qa" value="db.operations" />
     <ref role="3gUMe" to="jkzc:5wBjXY7nXkw" resolve="InsertOperation" />
     <node concept="9aQIb" id="5wBjXY7Sju6" role="13RCb5">
       <node concept="3clFbS" id="5wBjXY7Sju7" role="9aQI4">

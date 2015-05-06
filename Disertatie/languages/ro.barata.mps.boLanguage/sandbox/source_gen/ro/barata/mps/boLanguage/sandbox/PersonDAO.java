@@ -4,15 +4,30 @@ package ro.barata.mps.boLanguage.sandbox;
 
 import java.sql.Statement;
 import java.sql.SQLException;
-import java.sql.ResultSet;
 import java.util.List;
 import java.util.ArrayList;
+import java.sql.ResultSet;
 
 public class PersonDAO {
   private Statement stmt;
 
   public PersonDAO() throws SQLException, ClassNotFoundException {
     stmt = DatabaseConnector.getConnection().createStatement();
+  }
+
+  public List<Person> getAllPersons() throws SQLException {
+    List<Person> persons = new ArrayList<Person>();
+    String sql = "select * from " + "PersonTable";
+    ResultSet set = stmt.executeQuery(sql);
+    Person foundPerson = new Person();
+    while (set.next()) {
+      foundPerson = new Person();
+      foundPerson.setId(Integer.valueOf(set.getBigDecimal("id").intValue()));
+      foundPerson.setFirstName(set.getString("firstName"));
+      foundPerson.setLastName(set.getString("lastName"));
+      persons.add(foundPerson);
+    }
+    return persons;
   }
 
   public Person findById(String[] keys, String[] keyValues) throws SQLException {
@@ -36,7 +51,7 @@ public class PersonDAO {
     List<Object> result = new ArrayList<Object>();
     int i = 0;
     while (set.next()) {
-      result.add(set.getObject(i));
+      result.add(set.getObject(i + 1));
       i++;
     }
     Person person = new Person();

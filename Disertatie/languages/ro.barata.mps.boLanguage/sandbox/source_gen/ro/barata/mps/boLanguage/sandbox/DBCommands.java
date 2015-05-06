@@ -10,7 +10,7 @@ public class DBCommands {
     PersonDAO personDAO = new PersonDAO();
     Person person = new Person();
     person = new Person();
-    person.setId(4);
+    person.setId(5);
     person.setFirstName("test1");
     person.setLastName("test2");
     personDAO.addPerson(person);
