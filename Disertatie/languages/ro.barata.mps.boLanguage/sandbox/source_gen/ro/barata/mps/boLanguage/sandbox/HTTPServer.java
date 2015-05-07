@@ -5,6 +5,7 @@ package ro.barata.mps.boLanguage.sandbox;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.server.nio.SelectChannelConnector;
 import org.eclipse.jetty.servlet.ServletContextHandler;
+import org.eclipse.jetty.servlet.DefaultServlet;
 import org.eclipse.jetty.servlet.ServletHolder;
 
 public class HTTPServer {
@@ -20,11 +21,16 @@ public class HTTPServer {
 
     ServletContextHandler context = new ServletContextHandler(ServletContextHandler.SESSIONS);
     context.setContextPath("/");
-    context.setResourceBase(path);
+
+    DefaultServlet defaultServlet = new DefaultServlet();
+    ServletHolder holder = new ServletHolder("default", defaultServlet);
+    holder.setInitParameter("resourceBase", path);
+    context.addServlet(holder, "/*");
+
+    context.addServlet(new ServletHolder(new IndexServlet()), "/" + "index");
+    context.addServlet(new ServletHolder(new NextPageServlet()), "/" + "nextPage");
+
     server.setHandler(context);
-
-    context.addServlet(new ServletHolder(new IndexServlet()), "/*");
-
     server.start();
     server.join();
 

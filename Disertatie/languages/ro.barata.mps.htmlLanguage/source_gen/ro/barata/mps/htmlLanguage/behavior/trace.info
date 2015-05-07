@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <debug-info>
+  <concept fqn="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+  <concept fqn="jetbrains.mps.baseLanguage.structure.ForeachStatement" />
+  <concept fqn="jetbrains.mps.baseLanguage.structure.IfStatement" />
   <concept fqn="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
   <concept fqn="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
   <concept fqn="jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" />
@@ -98,18 +101,68 @@
       <unit at="6,0,14,0" name="ro.barata.mps.htmlLanguage.behavior.TitleElement_BehaviorDescriptor" />
     </file>
     <file name="VarCommand_BehaviorDescriptor.java">
-      <unit at="10,0,21,0" name="ro.barata.mps.htmlLanguage.behavior.VarCommand_BehaviorDescriptor" />
+      <unit at="9,0,20,0" name="ro.barata.mps.htmlLanguage.behavior.VarCommand_BehaviorDescriptor" />
+    </file>
+  </root>
+  <root nodeRef="r:b6817e23-bfbb-4169-a954-fad21c7ce321(ro.barata.mps.htmlLanguage.behavior)/5512171426406093306">
+    <file name="JavascriptFile_Behavior.java">
+      <node id="5512171426406104232" at="15,171,16,24" concept="4" />
+      <node id="5512171426406112154" at="18,5,19,16" concept="4" />
+      <node id="5512171426406093306" at="11,0,13,0" concept="5" trace="init#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <node id="5512171426406098746" at="14,202,17,7" concept="2" />
+      <node id="5512171426406093441" at="13,96,18,5" concept="1" />
+      <node id="5512171426406093306" at="13,0,21,0" concept="5" trace="call_findFunctionByName_5512171426406093414#(Lorg/jetbrains/mps/openapi/model/SNode;Ljava/lang/String;)Lorg/jetbrains/mps/openapi/model/SNode;" />
+      <scope id="5512171426406093308" at="11,43,11,43" />
+      <scope id="5512171426406098747" at="15,171,16,24" />
+      <scope id="5512171426406093306" at="11,0,13,0">
+        <var name="thisNode" id="5512171426406093306" />
+      </scope>
+      <scope id="5512171426406093443" at="14,202,17,7" />
+      <scope id="5512171426406093441" at="13,96,18,5">
+        <var name="function" id="5512171426406093442" />
+      </scope>
+      <scope id="5512171426406093416" at="13,96,19,16" />
+      <scope id="5512171426406093306" at="13,0,21,0">
+        <var name="name" id="5512171426406093431" />
+        <var name="thisNode" id="5512171426406093306" />
+      </scope>
+      <unit id="5512171426406093306" at="10,0,22,0" name="ro.barata.mps.htmlLanguage.behavior.JavascriptFile_Behavior" />
+    </file>
+  </root>
+  <root nodeRef="r:b6817e23-bfbb-4169-a954-fad21c7ce321(ro.barata.mps.htmlLanguage.behavior)/5512171426408196244">
+    <file name="JavascriptFunction_Behavior.java">
+      <node id="5512171426408213328" at="16,547,17,20" concept="4" />
+      <node id="5512171426408219954" at="19,5,20,17" concept="4" />
+      <node id="5512171426408196244" at="12,0,14,0" concept="5" trace="init#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <node id="5512171426408202057" at="15,200,18,7" concept="2" />
+      <node id="5512171426408196274" at="14,96,19,5" concept="1" />
+      <node id="5512171426408196244" at="14,0,22,0" concept="5" trace="call_hasPageReference_5512171426408196247#(Lorg/jetbrains/mps/openapi/model/SNode;Ljava/lang/String;)Z" />
+      <scope id="5512171426408196246" at="12,43,12,43" />
+      <scope id="5512171426408202058" at="16,547,17,20" />
+      <scope id="5512171426408196244" at="12,0,14,0">
+        <var name="thisNode" id="5512171426408196244" />
+      </scope>
+      <scope id="5512171426408196276" at="15,200,18,7" />
+      <scope id="5512171426408196274" at="14,96,19,5">
+        <var name="command" id="5512171426408196275" />
+      </scope>
+      <scope id="5512171426408196249" at="14,96,20,17" />
+      <scope id="5512171426408196244" at="14,0,22,0">
+        <var name="page" id="5512171426408196264" />
+        <var name="thisNode" id="5512171426408196244" />
+      </scope>
+      <unit id="5512171426408196244" at="11,0,23,0" name="ro.barata.mps.htmlLanguage.behavior.JavascriptFunction_Behavior" />
     </file>
   </root>
   <root nodeRef="r:b6817e23-bfbb-4169-a954-fad21c7ce321(ro.barata.mps.htmlLanguage.behavior)/637934364190285667">
     <file name="AbstractCommand_Behavior.java">
-      <node id="925758345853923091" at="12,78,13,93" concept="1" />
-      <node id="5512171426400428505" at="15,86,16,87" concept="1" />
-      <node id="925758345853929780" at="18,78,19,94" concept="1" />
-      <node id="637934364190285667" at="10,0,12,0" concept="2" trace="init#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
-      <node id="637934364190285667" at="12,0,15,0" concept="2" trace="call_getOpeningTag_925758345853923080#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljava/lang/String;" />
-      <node id="637934364190285667" at="15,0,18,0" concept="2" trace="call_getPartialOpeningTag_5512171426400428502#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljava/lang/String;" />
-      <node id="637934364190285667" at="18,0,21,0" concept="2" trace="call_getClosingTag_925758345853929777#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljava/lang/String;" />
+      <node id="925758345853923091" at="12,78,13,93" concept="4" />
+      <node id="5512171426400428505" at="15,86,16,87" concept="4" />
+      <node id="925758345853929780" at="18,78,19,94" concept="4" />
+      <node id="637934364190285667" at="10,0,12,0" concept="5" trace="init#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <node id="637934364190285667" at="12,0,15,0" concept="5" trace="call_getOpeningTag_925758345853923080#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljava/lang/String;" />
+      <node id="637934364190285667" at="15,0,18,0" concept="5" trace="call_getPartialOpeningTag_5512171426400428502#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljava/lang/String;" />
+      <node id="637934364190285667" at="18,0,21,0" concept="5" trace="call_getClosingTag_925758345853929777#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljava/lang/String;" />
       <scope id="637934364190285669" at="10,43,10,43" />
       <scope id="925758345853923082" at="12,78,13,93" />
       <scope id="5512171426400428504" at="15,86,16,87" />
@@ -131,10 +184,10 @@
   </root>
   <root nodeRef="r:b6817e23-bfbb-4169-a954-fad21c7ce321(ro.barata.mps.htmlLanguage.behavior)/637934364190921362">
     <file name="ReferenceTagValue_Behavior.java">
-      <node id="637934364190921377" at="13,74,14,329" concept="0" />
-      <node id="637934364190924026" at="14,329,15,89" concept="1" />
-      <node id="637934364190921362" at="11,0,13,0" concept="2" trace="init#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
-      <node id="637934364190921362" at="13,0,17,0" concept="2" trace="call_getGetter_637934364190921365#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljava/lang/String;" />
+      <node id="637934364190921377" at="13,74,14,329" concept="3" />
+      <node id="637934364190924026" at="14,329,15,89" concept="4" />
+      <node id="637934364190921362" at="11,0,13,0" concept="5" trace="init#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <node id="637934364190921362" at="13,0,17,0" concept="5" trace="call_getGetter_637934364190921365#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljava/lang/String;" />
       <scope id="637934364190921364" at="11,43,11,43" />
       <scope id="637934364190921362" at="11,0,13,0">
         <var name="thisNode" id="637934364190921362" />
@@ -150,18 +203,41 @@
   </root>
   <root nodeRef="r:b6817e23-bfbb-4169-a954-fad21c7ce321(ro.barata.mps.htmlLanguage.behavior)/925758345853409278">
     <file name="HTMLPage_Behavior.java">
-      <node id="925758345853411392" at="12,77,13,528" concept="1" />
-      <node id="925758345853409278" at="10,0,12,0" concept="2" trace="init#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
-      <node id="925758345853409278" at="12,0,15,0" concept="2" trace="call_getCamelName_925758345853409308#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljava/lang/String;" />
-      <scope id="925758345853409280" at="10,43,10,43" />
-      <scope id="925758345853409310" at="12,77,13,528" />
-      <scope id="925758345853409278" at="10,0,12,0">
+      <node id="925758345853411392" at="16,77,17,528" concept="4" />
+      <node id="5512171426408703221" at="19,79,20,190" concept="3" />
+      <node id="5512171426408704649" at="20,190,21,205" concept="0" />
+      <node id="5512171426408740745" at="22,198,23,244" concept="3" />
+      <node id="5512171426408741213" at="23,244,24,307" concept="0" />
+      <node id="5512171426408749714" at="24,307,25,242" concept="3" />
+      <node id="5512171426408750424" at="25,242,26,479" concept="0" />
+      <node id="5512171426408754889" at="26,479,27,222" concept="0" />
+      <node id="5512171426408770518" at="27,222,28,220" concept="0" />
+      <node id="925758345853409278" at="14,0,16,0" concept="5" trace="init#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <node id="925758345853409278" at="16,0,19,0" concept="5" trace="call_getCamelName_925758345853409308#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljava/lang/String;" />
+      <node id="5512171426408729846" at="21,205,29,5" concept="1" />
+      <node id="925758345853409278" at="19,0,31,0" concept="5" trace="call_reloadFunctions_5512171426408702843#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <scope id="925758345853409280" at="14,43,14,43" />
+      <scope id="925758345853409310" at="16,77,17,528" />
+      <scope id="925758345853409278" at="14,0,16,0">
         <var name="thisNode" id="925758345853409278" />
       </scope>
-      <scope id="925758345853409278" at="12,0,15,0">
+      <scope id="925758345853409278" at="16,0,19,0">
         <var name="thisNode" id="925758345853409278" />
       </scope>
-      <unit id="925758345853409278" at="9,0,16,0" name="ro.barata.mps.htmlLanguage.behavior.HTMLPage_Behavior" />
+      <scope id="5512171426408729848" at="22,198,28,220">
+        <var name="command" id="5512171426408749717" />
+        <var name="function" id="5512171426408740748" />
+      </scope>
+      <scope id="5512171426408729846" at="21,205,29,5">
+        <var name="action" id="5512171426408729849" />
+      </scope>
+      <scope id="5512171426408702845" at="19,79,29,5">
+        <var name="file" id="5512171426408703224" />
+      </scope>
+      <scope id="925758345853409278" at="19,0,31,0">
+        <var name="thisNode" id="925758345853409278" />
+      </scope>
+      <unit id="925758345853409278" at="13,0,32,0" name="ro.barata.mps.htmlLanguage.behavior.HTMLPage_Behavior" />
     </file>
   </root>
 </debug-info>

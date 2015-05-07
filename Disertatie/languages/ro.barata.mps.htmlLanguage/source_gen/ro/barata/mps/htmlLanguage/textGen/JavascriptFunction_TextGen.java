@@ -22,5 +22,6 @@ public class JavascriptFunction_TextGen extends SNodeTextGen {
     }
     this.appendNewLine();
     this.append("}");
+    this.appendNewLine();
   }
 }

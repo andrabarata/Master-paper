@@ -22,7 +22,7 @@ public class ShopDAO {
     Shop foundShop = new Shop();
     while (set.next()) {
       foundShop = new Shop();
-      foundShop.setId(Integer.valueOf(set.getBigDecimal("id").intValue()));
+      foundShop.setId(set.getString("id"));
       foundShop.setName(set.getString("name"));
       shops.add(foundShop);
     }
@@ -53,7 +53,7 @@ public class ShopDAO {
     }
     Shop shop = new Shop();
     i = 0;
-    shop.setId((Integer) result.get(i));
+    shop.setId((String) result.get(i));
     i++;
     shop.setName((String) result.get(i));
     i++;

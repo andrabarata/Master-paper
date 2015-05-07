@@ -37,6 +37,7 @@ public class HTMLBody_Editor extends DefaultNodeEditor {
     EditorCell_Constant editorCell = new EditorCell_Constant(editorContext, node, "<body>");
     editorCell.setCellId("Constant_u16f4f_a0");
     Style style = new StyleImpl();
+    HTMLStyleSheet_StyleSheet.apply_tag(style, editorCell);
     style.set(StyleAttributes.INDENT_LAYOUT_NEW_LINE, 0, true);
     editorCell.getStyle().putAll(style);
     editorCell.setDefaultText("");
@@ -89,6 +90,9 @@ public class HTMLBody_Editor extends DefaultNodeEditor {
   private EditorCell createConstant_u16f4f_c0(EditorContext editorContext, SNode node) {
     EditorCell_Constant editorCell = new EditorCell_Constant(editorContext, node, "</body>");
     editorCell.setCellId("Constant_u16f4f_c0");
+    Style style = new StyleImpl();
+    HTMLStyleSheet_StyleSheet.apply_tag(style, editorCell);
+    editorCell.getStyle().putAll(style);
     editorCell.setDefaultText("");
     return editorCell;
   }

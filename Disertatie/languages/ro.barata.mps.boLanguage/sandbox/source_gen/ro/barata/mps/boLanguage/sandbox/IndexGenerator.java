@@ -9,6 +9,7 @@ public class IndexGenerator {
   public static String getContent() throws ClassNotFoundException, SQLException {
     String html = "<html>";
     html += "<head>";
+    html += "<script src=\"" + "index.js" + "\"></script>";
     html += "<title";
     html += ">";
     html += "hi there";
@@ -47,8 +48,10 @@ public class IndexGenerator {
     html += "</title>";
     html += "<input";
     html += " value=\"";
-    html += "abc";
-    html += "\" type=\"" + "button" + "\"" + "/>";
+    html += "Go to next page";
+    html += "\" ";
+    html += "onclick" + "=\"" + "goToNextTestPage" + "()\" ";
+    html += "type=\"" + "button" + "\"" + "/>";
     html += "</input>";
     html += "</body>";
     html += "</html>";

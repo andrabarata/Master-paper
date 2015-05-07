@@ -82,6 +82,11 @@
       <property role="20lbJX" value="0..n" />
       <ref role="20lvS9" node="4LZaFkzSZF$" resolve="Action" />
     </node>
+    <node concept="1TJgyj" id="4LZaFkzVJ07" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="scriptFile" />
+      <ref role="20lvS9" node="4LZaFkzUfS8" resolve="JavascriptFile" />
+    </node>
     <node concept="1TJgyi" id="5a6Q6gbramT" role="1TKVEl">
       <property role="TrG5h" value="isWelcomePage" />
       <ref role="AX2Wp" to="tpck:fKAQMTB" resolve="boolean" />
@@ -236,7 +241,7 @@
     </node>
     <node concept="1TJgyj" id="4LZaFkzTo1A" role="1TKVEi">
       <property role="20lmBu" value="aggregation" />
-      <property role="20kJfa" value="actionTypes" />
+      <property role="20kJfa" value="action" />
       <ref role="20lvS9" node="4LZaFkzTnZs" resolve="ActionType" />
     </node>
   </node>
@@ -272,7 +277,7 @@
   <node concept="1TIwiD" id="5a6Q6gblJWw">
     <property role="TrG5h" value="Server" />
     <property role="19KtqR" value="true" />
-    <property role="3GE5qa" value="javascript" />
+    <property role="3GE5qa" value="" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyi" id="5a6Q6gblJWx" role="1TKVEl">
       <property role="TrG5h" value="ip" />
@@ -359,12 +364,13 @@
     <property role="TrG5h" value="DatabaseAction" />
     <property role="34LRSv" value="create action" />
     <property role="3GE5qa" value="html.actions" />
+    <property role="R5$K7" value="false" />
     <ref role="1TJDcQ" node="4LZaFkzSZF$" resolve="Action" />
-    <node concept="1TJgyj" id="4LZaFkzT3yP" role="1TKVEi">
+    <node concept="1TJgyj" id="4LZaFk$hEbc" role="1TKVEi">
       <property role="20lmBu" value="aggregation" />
-      <property role="20kJfa" value="operations" />
-      <property role="20lbJX" value="0..n" />
-      <ref role="20lvS9" to="jkzc:5wBjXY7mHax" resolve="Operation" />
+      <property role="20kJfa" value="dbCommands" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" to="jkzc:5wBjXY7nXwr" resolve="DBCommands" />
     </node>
   </node>
   <node concept="1TIwiD" id="4LZaFkzTnZs">
@@ -387,12 +393,12 @@
     <property role="3GE5qa" value="html.actions" />
     <ref role="M4eZT" to="tpck:fKAOsGN" resolve="string" />
     <node concept="M4N5e" id="4LZaFkzTo1r" role="M5hS2">
-      <property role="1uS6qv" value="onClick" />
-      <property role="1uS6qo" value="onClick" />
+      <property role="1uS6qv" value="onclick" />
+      <property role="1uS6qo" value="onclick" />
     </node>
     <node concept="M4N5e" id="4LZaFkzTo1u" role="M5hS2">
-      <property role="1uS6qv" value="onChange" />
-      <property role="1uS6qo" value="onChange" />
+      <property role="1uS6qv" value="onchange" />
+      <property role="1uS6qo" value="onchange" />
     </node>
   </node>
   <node concept="1TIwiD" id="4LZaFkzUfS8">

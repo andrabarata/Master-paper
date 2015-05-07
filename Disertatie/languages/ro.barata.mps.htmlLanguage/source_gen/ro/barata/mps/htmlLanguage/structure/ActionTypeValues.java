@@ -7,8 +7,8 @@ import jetbrains.mps.internal.collections.runtime.ListSequence;
 import jetbrains.mps.internal.collections.runtime.backports.LinkedList;
 
 public enum ActionTypeValues {
-  onClick("onClick", "onClick"),
-  onChange("onChange", "onChange");
+  onclick("onclick", "onclick"),
+  onchange("onchange", "onchange");
 
   private String myName;
   public String getName() {
@@ -19,22 +19,22 @@ public enum ActionTypeValues {
   }
   public static List<ActionTypeValues> getConstants() {
     List<ActionTypeValues> list = ListSequence.fromList(new LinkedList<ActionTypeValues>());
-    ListSequence.fromList(list).addElement(ActionTypeValues.onClick);
-    ListSequence.fromList(list).addElement(ActionTypeValues.onChange);
+    ListSequence.fromList(list).addElement(ActionTypeValues.onclick);
+    ListSequence.fromList(list).addElement(ActionTypeValues.onchange);
     return list;
   }
   public static ActionTypeValues getDefault() {
-    return ActionTypeValues.onClick;
+    return ActionTypeValues.onclick;
   }
   public static ActionTypeValues parseValue(String value) {
     if (value == null) {
       return ActionTypeValues.getDefault();
     }
-    if (value.equals(ActionTypeValues.onClick.getValueAsString())) {
-      return ActionTypeValues.onClick;
+    if (value.equals(ActionTypeValues.onclick.getValueAsString())) {
+      return ActionTypeValues.onclick;
     }
-    if (value.equals(ActionTypeValues.onChange.getValueAsString())) {
-      return ActionTypeValues.onChange;
+    if (value.equals(ActionTypeValues.onchange.getValueAsString())) {
+      return ActionTypeValues.onchange;
     }
     return ActionTypeValues.getDefault();
   }

@@ -52,7 +52,7 @@ public class SchemaCreator {
     primaryKey += "id";
     primaryKey += ")";
     sql = "create table " + "ShopTable" + "(";
-    sql += "id" + " " + "integer";
+    sql += "id" + " " + "varchar(256)";
     sql += ",";
     sql += "name" + " " + "varchar(256)";
     if (primaryKey.length() > 0) {

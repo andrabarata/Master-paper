@@ -6,11 +6,11 @@ import java.util.List;
 import java.util.ArrayList;
 
 public class Shop {
-  private Integer id;
+  private String id;
   private String name;
   private List<Customer> customers;
 
-  public void setId(Integer attribute) {
+  public void setId(String attribute) {
     this.id = attribute;
   }
   public void setName(String attribute) {
@@ -20,7 +20,7 @@ public class Shop {
     this.customers = entities;
   }
 
-  public Integer getId() {
+  public String getId() {
     return this.id;
   }
   public String getName() {

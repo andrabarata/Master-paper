@@ -8,21 +8,23 @@ import jetbrains.mps.openapi.editor.EditorContext;
 import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.nodeEditor.cells.EditorCell_Collection;
 import jetbrains.mps.nodeEditor.cells.EditorCell_Constant;
+import jetbrains.mps.openapi.editor.style.Style;
+import jetbrains.mps.editor.runtime.style.StyleImpl;
+import jetbrains.mps.editor.runtime.style.StyleAttributes;
 import jetbrains.mps.nodeEditor.cellProviders.CellProviderWithRole;
 import jetbrains.mps.lang.editor.cellProviders.PropertyCellProvider;
 import jetbrains.mps.nodeEditor.EditorManager;
 import jetbrains.mps.lang.editor.cellProviders.RefNodeCellProvider;
 import jetbrains.mps.nodeEditor.cellProviders.AbstractCellListHandler;
 import jetbrains.mps.nodeEditor.cellLayout.CellLayout_Horizontal;
-import jetbrains.mps.openapi.editor.style.Style;
-import jetbrains.mps.editor.runtime.style.StyleImpl;
-import jetbrains.mps.editor.runtime.style.StyleAttributes;
 import jetbrains.mps.lang.editor.cellProviders.RefNodeListHandler;
 import jetbrains.mps.smodel.action.NodeFactoryManager;
 import jetbrains.mps.openapi.editor.cells.CellActionType;
 import jetbrains.mps.nodeEditor.cellActions.CellAction_DeleteNode;
+import jetbrains.mps.lang.editor.cellProviders.RefNodeListHandlerElementKeyMap;
 import jetbrains.mps.nodeEditor.cellMenu.DefaultReferenceSubstituteInfo;
 import jetbrains.mps.nodeEditor.cellMenu.DefaultChildSubstituteInfo;
+import jetbrains.mps.baseLanguage.editor.BaseLanguageStyle_StyleSheet;
 
 public class InputElement_Editor extends DefaultNodeEditor {
   public EditorCell createEditorCell(EditorContext editorContext, SNode node) {
@@ -33,29 +35,58 @@ public class InputElement_Editor extends DefaultNodeEditor {
     editorCell.setCellId("Collection_emto3h_a");
     editorCell.setBig(true);
     editorCell.addEditorCell(this.createConstant_emto3h_a0(editorContext, node));
-    editorCell.addEditorCell(this.createProperty_emto3h_b0(editorContext, node));
+    editorCell.addEditorCell(this.createConstant_emto3h_b0(editorContext, node));
     editorCell.addEditorCell(this.createConstant_emto3h_c0(editorContext, node));
-    editorCell.addEditorCell(this.createConstant_emto3h_d0(editorContext, node));
-    editorCell.addEditorCell(this.createRefNode_emto3h_e0(editorContext, node));
+    editorCell.addEditorCell(this.createProperty_emto3h_d0(editorContext, node));
+    editorCell.addEditorCell(this.createConstant_emto3h_e0(editorContext, node));
     editorCell.addEditorCell(this.createConstant_emto3h_f0(editorContext, node));
-    editorCell.addEditorCell(this.createRefNodeList_emto3h_g0(editorContext, node));
+    editorCell.addEditorCell(this.createConstant_emto3h_g0(editorContext, node));
     editorCell.addEditorCell(this.createRefNode_emto3h_h0(editorContext, node));
     editorCell.addEditorCell(this.createConstant_emto3h_i0(editorContext, node));
+    editorCell.addEditorCell(this.createRefNodeList_emto3h_j0(editorContext, node));
+    editorCell.addEditorCell(this.createRefNode_emto3h_k0(editorContext, node));
+    editorCell.addEditorCell(this.createConstant_emto3h_l0(editorContext, node));
     return editorCell;
   }
   private EditorCell createConstant_emto3h_a0(EditorContext editorContext, SNode node) {
-    EditorCell_Constant editorCell = new EditorCell_Constant(editorContext, node, "<input type=\"");
+    EditorCell_Constant editorCell = new EditorCell_Constant(editorContext, node, "<input");
     editorCell.setCellId("Constant_emto3h_a0");
+    Style style = new StyleImpl();
+    HTMLStyleSheet_StyleSheet.apply_tag(style, editorCell);
+    editorCell.getStyle().putAll(style);
     editorCell.setDefaultText("");
     return editorCell;
   }
-  private EditorCell createProperty_emto3h_b0(EditorContext editorContext, SNode node) {
+  private EditorCell createConstant_emto3h_b0(EditorContext editorContext, SNode node) {
+    EditorCell_Constant editorCell = new EditorCell_Constant(editorContext, node, "type=");
+    editorCell.setCellId("Constant_emto3h_b0");
+    Style style = new StyleImpl();
+    HTMLStyleSheet_StyleSheet.apply_attribute(style, editorCell);
+    editorCell.getStyle().putAll(style);
+    editorCell.setDefaultText("");
+    return editorCell;
+  }
+  private EditorCell createConstant_emto3h_c0(EditorContext editorContext, SNode node) {
+    EditorCell_Constant editorCell = new EditorCell_Constant(editorContext, node, "\"");
+    editorCell.setCellId("Constant_emto3h_c0");
+    Style style = new StyleImpl();
+    HTMLStyleSheet_StyleSheet.apply_value(style, editorCell);
+    style.set(StyleAttributes.PUNCTUATION_LEFT, 0, true);
+    style.set(StyleAttributes.PUNCTUATION_RIGHT, 0, true);
+    editorCell.getStyle().putAll(style);
+    editorCell.setDefaultText("");
+    return editorCell;
+  }
+  private EditorCell createProperty_emto3h_d0(EditorContext editorContext, SNode node) {
     CellProviderWithRole provider = new PropertyCellProvider(node, editorContext);
     provider.setRole("type");
     provider.setNoTargetText("<no type>");
     EditorCell editorCell;
     editorCell = provider.createEditorCell(editorContext);
     editorCell.setCellId("property_type");
+    Style style = new StyleImpl();
+    HTMLStyleSheet_StyleSheet.apply_value(style, editorCell);
+    editorCell.getStyle().putAll(style);
     editorCell.setSubstituteInfo(provider.createDefaultSubstituteInfo());
     SNode attributeConcept = provider.getRoleAttribute();
     Class attributeKind = provider.getRoleAttributeClass();
@@ -65,19 +96,38 @@ public class InputElement_Editor extends DefaultNodeEditor {
     } else
     return editorCell;
   }
-  private EditorCell createConstant_emto3h_c0(EditorContext editorContext, SNode node) {
+  private EditorCell createConstant_emto3h_e0(EditorContext editorContext, SNode node) {
     EditorCell_Constant editorCell = new EditorCell_Constant(editorContext, node, "\"");
-    editorCell.setCellId("Constant_emto3h_c0");
+    editorCell.setCellId("Constant_emto3h_e0");
+    Style style = new StyleImpl();
+    HTMLStyleSheet_StyleSheet.apply_value(style, editorCell);
+    style.set(StyleAttributes.PUNCTUATION_LEFT, 0, true);
+    style.set(StyleAttributes.PUNCTUATION_RIGHT, 0, true);
+    editorCell.getStyle().putAll(style);
     editorCell.setDefaultText("");
     return editorCell;
   }
-  private EditorCell createConstant_emto3h_d0(EditorContext editorContext, SNode node) {
-    EditorCell_Constant editorCell = new EditorCell_Constant(editorContext, node, "value=\"");
-    editorCell.setCellId("Constant_emto3h_d0");
+  private EditorCell createConstant_emto3h_f0(EditorContext editorContext, SNode node) {
+    EditorCell_Constant editorCell = new EditorCell_Constant(editorContext, node, " value=");
+    editorCell.setCellId("Constant_emto3h_f0");
+    Style style = new StyleImpl();
+    HTMLStyleSheet_StyleSheet.apply_attribute(style, editorCell);
+    editorCell.getStyle().putAll(style);
     editorCell.setDefaultText("");
     return editorCell;
   }
-  private EditorCell createRefNode_emto3h_e0(EditorContext editorContext, SNode node) {
+  private EditorCell createConstant_emto3h_g0(EditorContext editorContext, SNode node) {
+    EditorCell_Constant editorCell = new EditorCell_Constant(editorContext, node, "\"");
+    editorCell.setCellId("Constant_emto3h_g0");
+    Style style = new StyleImpl();
+    HTMLStyleSheet_StyleSheet.apply_value(style, editorCell);
+    style.set(StyleAttributes.PUNCTUATION_LEFT, 0, true);
+    style.set(StyleAttributes.PUNCTUATION_RIGHT, 0, true);
+    editorCell.getStyle().putAll(style);
+    editorCell.setDefaultText("");
+    return editorCell;
+  }
+  private EditorCell createRefNode_emto3h_h0(EditorContext editorContext, SNode node) {
     CellProviderWithRole provider = new RefNodeCellProvider(node, editorContext);
     provider.setRole("value");
     provider.setNoTargetText("<no value>");
@@ -86,6 +136,9 @@ public class InputElement_Editor extends DefaultNodeEditor {
     if (editorCell.getRole() == null) {
       editorCell.setRole("value");
     }
+    Style style = new StyleImpl();
+    HTMLStyleSheet_StyleSheet.apply_value(style, editorCell);
+    editorCell.getStyle().putAll(style);
     editorCell.setSubstituteInfo(provider.createDefaultSubstituteInfo());
     SNode attributeConcept = provider.getRoleAttribute();
     Class attributeKind = provider.getRoleAttributeClass();
@@ -95,14 +148,19 @@ public class InputElement_Editor extends DefaultNodeEditor {
     } else
     return editorCell;
   }
-  private EditorCell createConstant_emto3h_f0(EditorContext editorContext, SNode node) {
+  private EditorCell createConstant_emto3h_i0(EditorContext editorContext, SNode node) {
     EditorCell_Constant editorCell = new EditorCell_Constant(editorContext, node, "\"");
-    editorCell.setCellId("Constant_emto3h_f0");
+    editorCell.setCellId("Constant_emto3h_i0");
+    Style style = new StyleImpl();
+    HTMLStyleSheet_StyleSheet.apply_value(style, editorCell);
+    style.set(StyleAttributes.PUNCTUATION_LEFT, 0, true);
+    style.set(StyleAttributes.PUNCTUATION_RIGHT, 0, true);
+    editorCell.getStyle().putAll(style);
     editorCell.setDefaultText("");
     return editorCell;
   }
-  private EditorCell createRefNodeList_emto3h_g0(EditorContext editorContext, SNode node) {
-    AbstractCellListHandler handler = new InputElement_Editor.attributesListHandler_emto3h_g0(node, "attributes", editorContext);
+  private EditorCell createRefNodeList_emto3h_j0(EditorContext editorContext, SNode node) {
+    AbstractCellListHandler handler = new InputElement_Editor.attributesListHandler_emto3h_j0(node, "attributes", editorContext);
     EditorCell_Collection editorCell = handler.createCells(editorContext, new CellLayout_Horizontal(), false);
     editorCell.setCellId("refNodeList_attributes");
     Style style = new StyleImpl();
@@ -111,8 +169,8 @@ public class InputElement_Editor extends DefaultNodeEditor {
     editorCell.setRole(handler.getElementRole());
     return editorCell;
   }
-  private static class attributesListHandler_emto3h_g0 extends RefNodeListHandler {
-    public attributesListHandler_emto3h_g0(SNode ownerNode, String childRole, EditorContext context) {
+  private static class attributesListHandler_emto3h_j0 extends RefNodeListHandler {
+    public attributesListHandler_emto3h_j0(SNode ownerNode, String childRole, EditorContext context) {
       super(ownerNode, childRole, context, false);
     }
     public SNode createNodeToInsert(EditorContext editorContext) {
@@ -131,7 +189,7 @@ public class InputElement_Editor extends DefaultNodeEditor {
       return emptyCell;
     }
     public EditorCell createEmptyCell_internal(EditorContext editorContext, SNode node) {
-      return this.createConstant_emto3h_a6a(editorContext, node);
+      return this.createConstant_emto3h_a9a(editorContext, node);
     }
     public void installElementCellActions(SNode listOwner, SNode elementNode, EditorCell elementCell, EditorContext editorContext) {
       if (elementCell.getUserObject(AbstractCellListHandler.ELEMENT_CELL_ACTIONS_SET) == null) {
@@ -139,27 +197,45 @@ public class InputElement_Editor extends DefaultNodeEditor {
         if (elementNode != null) {
           elementCell.setAction(CellActionType.DELETE, new CellAction_DeleteNode(elementNode));
           elementCell.setAction(CellActionType.BACKSPACE, new CellAction_DeleteNode(elementNode));
+          elementCell.addKeyMap(new RefNodeListHandlerElementKeyMap(this, " "));
         }
         if (elementCell.getSubstituteInfo() == null || elementCell.getSubstituteInfo() instanceof DefaultReferenceSubstituteInfo) {
           elementCell.setSubstituteInfo(new DefaultChildSubstituteInfo(listOwner, elementNode, super.getLinkDeclaration(), editorContext));
         }
       }
     }
-    private EditorCell createConstant_emto3h_a6a(EditorContext editorContext, SNode node) {
-      EditorCell_Constant editorCell = new EditorCell_Constant(editorContext, node, " ");
-      editorCell.setCellId("Constant_emto3h_a6a");
+    @Override
+    public EditorCell createSeparatorCell(EditorContext editorContext, SNode prevNode, SNode nextNode) {
+      EditorCell_Constant editorCell = new EditorCell_Constant(editorContext, this.getOwner(), " ");
+      editorCell.setSelectable(false);
+      Style style = new StyleImpl();
+      style.set(StyleAttributes.LAYOUT_CONSTRAINT, "");
+      style.set(StyleAttributes.PUNCTUATION_LEFT, true);
+      editorCell.getStyle().putAll(style);
+      editorCell.setAction(CellActionType.BACKSPACE, new CellAction_DeleteNode(prevNode));
+      editorCell.setAction(CellActionType.DELETE, new CellAction_DeleteNode(prevNode));
+      return editorCell;
+    }
+    private EditorCell createConstant_emto3h_a9a(EditorContext editorContext, SNode node) {
+      EditorCell_Constant editorCell = new EditorCell_Constant(editorContext, node, " Attributes ");
+      editorCell.setCellId("Constant_emto3h_a9a");
+      Style style = new StyleImpl();
+      BaseLanguageStyle_StyleSheet.apply_Comment(style, editorCell);
+      style.set(StyleAttributes.PUNCTUATION_LEFT, 0, true);
+      style.set(StyleAttributes.PUNCTUATION_RIGHT, 0, true);
+      editorCell.getStyle().putAll(style);
       editorCell.setDefaultText("");
       return editorCell;
     }
   }
-  private EditorCell createRefNode_emto3h_h0(EditorContext editorContext, SNode node) {
+  private EditorCell createRefNode_emto3h_k0(EditorContext editorContext, SNode node) {
     CellProviderWithRole provider = new RefNodeCellProvider(node, editorContext);
-    provider.setRole("actionTypes");
-    provider.setNoTargetText("<no actionTypes>");
+    provider.setRole("action");
+    provider.setNoTargetText("<no action>");
     EditorCell editorCell;
     editorCell = provider.createEditorCell(editorContext);
     if (editorCell.getRole() == null) {
-      editorCell.setRole("actionTypes");
+      editorCell.setRole("action");
     }
     editorCell.setSubstituteInfo(provider.createDefaultSubstituteInfo());
     SNode attributeConcept = provider.getRoleAttribute();
@@ -170,9 +246,9 @@ public class InputElement_Editor extends DefaultNodeEditor {
     } else
     return editorCell;
   }
-  private EditorCell createConstant_emto3h_i0(EditorContext editorContext, SNode node) {
+  private EditorCell createConstant_emto3h_l0(EditorContext editorContext, SNode node) {
     EditorCell_Constant editorCell = new EditorCell_Constant(editorContext, node, "/>");
-    editorCell.setCellId("Constant_emto3h_i0");
+    editorCell.setCellId("Constant_emto3h_l0");
     editorCell.setDefaultText("");
     return editorCell;
   }

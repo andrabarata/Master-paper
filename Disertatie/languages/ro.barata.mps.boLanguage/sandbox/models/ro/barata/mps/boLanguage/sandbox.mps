@@ -33,29 +33,19 @@
       </concept>
       <concept id="5946678282190681547" name="ro.barata.mps.htmlLanguage.structure.AllCondition" flags="ng" index="1p1UQJ" />
       <concept id="5946678282190681555" name="ro.barata.mps.htmlLanguage.structure.HTMLCommand" flags="ng" index="1p1UQR">
-        <child id="5512171426404466790" name="actionTypes" index="1JAEFj" />
+        <child id="5512171426404466790" name="action" index="1JAEFj" />
         <child id="5515250482367874269" name="value" index="3OndZa" />
       </concept>
       <concept id="5946678282187898656" name="ro.barata.mps.htmlLanguage.structure.Server" flags="ng" index="1pO2t4">
         <property id="5946678282187898657" name="ip" index="1pO2t5" />
         <property id="5946678282187898659" name="port" index="1pO2t7" />
       </concept>
+      <concept id="5946678282187841638" name="ro.barata.mps.htmlLanguage.structure.H1Element" flags="ng" index="1pOfw2" />
       <concept id="5946678282187795779" name="ro.barata.mps.htmlLanguage.structure.TitleElement" flags="ng" index="1pOVkB" />
       <concept id="5946678282190410977" name="ro.barata.mps.htmlLanguage.structure.TableContainer" flags="ng" index="1pYSM5" />
       <concept id="5946678282190415581" name="ro.barata.mps.htmlLanguage.structure.TRElement" flags="ng" index="1pYVUT" />
       <concept id="5946678282190415582" name="ro.barata.mps.htmlLanguage.structure.TDElement" flags="ng" index="1pYVUU" />
-      <concept id="5512171426404695712" name="ro.barata.mps.htmlLanguage.structure.ChangePageCommand" flags="ng" index="1J_Xgl">
-        <property id="5512171426404695740" name="page" index="1J_Xg9" />
-      </concept>
-      <concept id="5512171426404695560" name="ro.barata.mps.htmlLanguage.structure.JavascriptFile" flags="ng" index="1J_XiX">
-        <child id="5512171426404699410" name="functions" index="1J_yuB" />
-      </concept>
-      <concept id="5512171426404695563" name="ro.barata.mps.htmlLanguage.structure.JavascriptFunction" flags="ng" index="1J_XiY">
-        <child id="5512171426404700529" name="commands" index="1J_zJ4" />
-      </concept>
-      <concept id="5512171426404695636" name="ro.barata.mps.htmlLanguage.structure.VarCommand" flags="ng" index="1J_Xjx">
-        <property id="5512171426404695639" name="id" index="1J_Xjy" />
-      </concept>
+      <concept id="5512171426404695560" name="ro.barata.mps.htmlLanguage.structure.JavascriptFile" flags="ng" index="1J_XiX" />
       <concept id="5512171426404466652" name="ro.barata.mps.htmlLanguage.structure.ActionType" flags="ng" index="1JA_lD">
         <reference id="5512171426404466794" name="actionValue" index="1JAEFv" />
       </concept>
@@ -63,7 +53,7 @@
         <reference id="5512171426404382982" name="landingPage" index="1JALeN" />
       </concept>
       <concept id="5512171426404367220" name="ro.barata.mps.htmlLanguage.structure.DatabaseAction" flags="ng" index="1JBd71">
-        <child id="5512171426404382901" name="operations" index="1JAL80" />
+        <child id="5512171426410832588" name="dbCommands" index="1CeoxT" />
       </concept>
       <concept id="5512171426401164857" name="ro.barata.mps.htmlLanguage.structure.LabelElement" flags="ng" index="1JN3ic" />
       <concept id="5512171426400093357" name="ro.barata.mps.htmlLanguage.structure.InputElement" flags="ng" index="1JRuSo">
@@ -81,6 +71,7 @@
       </concept>
       <concept id="2539806008948651745" name="ro.barata.mps.htmlLanguage.structure.HTMLPage" flags="ng" index="3MX$bU">
         <property id="5946678282189317561" name="isWelcomePage" index="1pUBRt" />
+        <child id="5512171426405085191" name="scriptFile" index="1J$tEM" />
         <child id="5512171426404383064" name="actions" index="1JALfH" />
         <child id="2539806008948698314" name="head" index="3MXhzh" />
         <child id="2539806008948698316" name="body" index="3MXhzn" />
@@ -212,11 +203,11 @@
             <ref role="10JcBT" to="ikgz:1uHuMhn0FD7" />
             <node concept="GOmve" id="1uHuMhn5ccX" role="GPI$P" />
           </node>
-          <node concept="3DwI$s" id="1uHuMhn5cb_" role="1ws$oX">
+          <node concept="3DwI$s" id="4LZaFkzWr3d" role="1ws$oX">
             <property role="TrG5h" value="id" />
             <property role="2$SaCC" value="true" />
             <ref role="1wsEsU" to="ikgz:1uHuMhn4gcS" resolve="id" />
-            <node concept="GOmve" id="1uHuMhn5cbT" role="GPI$P" />
+            <node concept="GOms9" id="4LZaFkzWr3H" role="GPI$P" />
           </node>
           <node concept="3DwI$s" id="1uHuMhn5cbW" role="1ws$oX">
             <property role="TrG5h" value="name" />
@@ -254,7 +245,7 @@
       <node concept="3vu9Dh" id="5a6Q6gb4rCM" role="3vu9C9">
         <ref role="3vu9Cq" to="ikgz:1uHuMhn0FCE" resolve="lastName" />
         <node concept="3vjcHs" id="5a6Q6gb4rCU" role="3vu9Cg">
-          <property role="3vjcHG" value="test2" />
+          <property role="3vjcHG" value="test" />
         </node>
       </node>
     </node>
@@ -262,6 +253,7 @@
   <node concept="3MX$bU" id="4Ma6LuST7k$">
     <property role="TrG5h" value="index" />
     <property role="1pUBRt" value="true" />
+    <property role="3GE5qa" value="html" />
     <node concept="3MXhzq" id="4Ma6LuST7k_" role="3MXhzh">
       <node concept="1pOVkB" id="4Ma6LuST7kB" role="3MXhzj">
         <node concept="1p1U_1" id="4Ma6LuST7kF" role="3OndZa">
@@ -309,37 +301,20 @@
       <node concept="1JRuSo" id="4LZaFkzFaGG" role="1p1zRP">
         <property role="1JPax3" value="button" />
         <node concept="1p1U_1" id="4LZaFkzFaH2" role="3OndZa">
-          <property role="1p1NDu" value="abc" />
+          <property role="1p1NDu" value="Go to next page" />
         </node>
-        <node concept="1JA_lD" id="4LZaFkzTK2G" role="1JAEFj">
-          <ref role="1JAEFv" node="4LZaFkzTgft" resolve="addPerson" />
+        <node concept="1JA_lD" id="4LZaFk$b_ai" role="1JAEFj">
+          <ref role="1JAEFv" node="4HvQDVKjkwe" resolve="goToNextTestPage" />
         </node>
       </node>
     </node>
-    <node concept="1JBd71" id="4LZaFkzTgft" role="1JALfH">
-      <property role="TrG5h" value="addPerson" />
-      <ref role="1JALeN" node="4Ma6LuST7k$" resolve="index" />
-      <node concept="3vu9FZ" id="4LZaFkzTnVX" role="1JAL80">
-        <ref role="3vv6ij" to="ikgz:1uHuMhn0FC_" resolve="Person" />
-        <node concept="3vu9Dh" id="4LZaFkzTnVZ" role="3vu9C9">
-          <ref role="3vu9Cq" to="ikgz:1uHuMhn0G5h" resolve="id" />
-          <node concept="3vjcH_" id="4LZaFkzTnW6" role="3vu9Cg">
-            <property role="3vjcG9" value="6" />
-          </node>
-        </node>
-        <node concept="3vu9Dh" id="4LZaFkzTnW9" role="3vu9C9">
-          <ref role="3vu9Cq" to="ikgz:1uHuMhn0FCE" resolve="lastName" />
-          <node concept="3vjcHs" id="4LZaFkzTnWf" role="3vu9Cg">
-            <property role="3vjcHG" value="addTestName" />
-          </node>
-        </node>
-        <node concept="3vu9Dh" id="4LZaFkzTnWi" role="3vu9C9">
-          <ref role="3vu9Cq" to="ikgz:1uHuMhn0FCC" resolve="firstName" />
-          <node concept="3vjcHs" id="4LZaFkzTnWq" role="3vu9Cg">
-            <property role="3vjcHG" value="addTestFirstName" />
-          </node>
-        </node>
-      </node>
+    <node concept="1J_XiX" id="4LZaFk$b_9c" role="1J$tEM">
+      <property role="TrG5h" value="index" />
+    </node>
+    <node concept="1JBd71" id="4HvQDVKjkwe" role="1JALfH">
+      <property role="TrG5h" value="goToNextTestPage" />
+      <ref role="1JALeN" node="4LZaFk$b_9$" resolve="nextPage" />
+      <node concept="3vu9v4" id="4HvQDVKjkwg" role="1CeoxT" />
     </node>
   </node>
   <node concept="1pO2t4" id="4Ma6LuT0sP6">
@@ -347,17 +322,21 @@
     <property role="1pO2t5" value="localhost" />
     <property role="1pO2t7" value="8888" />
   </node>
-  <node concept="1J_XiX" id="4LZaFkzUMc3">
-    <property role="3GE5qa" value="configuration" />
-    <property role="TrG5h" value="index" />
-    <node concept="1J_XiY" id="4LZaFkzUUp5" role="1J_yuB">
-      <property role="TrG5h" value="text" />
-      <node concept="1J_Xjx" id="4LZaFkzVcvj" role="1J_zJ4">
-        <property role="TrG5h" value="a" />
-        <property role="1J_Xjy" value="b" />
+  <node concept="3MX$bU" id="4LZaFk$b_9$">
+    <property role="3GE5qa" value="html" />
+    <property role="TrG5h" value="nextPage" />
+    <node concept="3MXhzq" id="4LZaFk$b_9_" role="3MXhzh">
+      <node concept="1pOVkB" id="4LZaFk$b_9H" role="3MXhzj">
+        <node concept="1p1U_1" id="4LZaFk$b_9R" role="3OndZa">
+          <property role="1p1NDu" value="Hi there" />
+        </node>
       </node>
-      <node concept="1J_Xgl" id="4LZaFkzVcvo" role="1J_zJ4">
-        <property role="1J_Xg9" value="alpha" />
+    </node>
+    <node concept="3MXhyG" id="4LZaFk$b_9A" role="3MXhzn">
+      <node concept="1pOfw2" id="4LZaFk$b_9V" role="1p1zRP">
+        <node concept="1p1U_1" id="4LZaFk$b_a1" role="3OndZa">
+          <property role="1p1NDu" value="You did it!" />
+        </node>
       </node>
     </node>
   </node>
