@@ -10,6 +10,9 @@
     <file name="AbstractCommand_BehaviorDescriptor.java">
       <unit at="7,0,15,0" name="ro.barata.mps.htmlLanguage.behavior.AbstractCommand_BehaviorDescriptor" />
     </file>
+    <file name="AbstractVarCommand_BehaviorDescriptor.java">
+      <unit at="9,0,20,0" name="ro.barata.mps.htmlLanguage.behavior.AbstractVarCommand_BehaviorDescriptor" />
+    </file>
     <file name="ActionType_BehaviorDescriptor.java">
       <unit at="7,0,15,0" name="ro.barata.mps.htmlLanguage.behavior.ActionType_BehaviorDescriptor" />
     </file>
@@ -19,11 +22,17 @@
     <file name="AllCondition_BehaviorDescriptor.java">
       <unit at="6,0,14,0" name="ro.barata.mps.htmlLanguage.behavior.AllCondition_BehaviorDescriptor" />
     </file>
+    <file name="AssignmentCommand_BehaviorDescriptor.java">
+      <unit at="6,0,14,0" name="ro.barata.mps.htmlLanguage.behavior.AssignmentCommand_BehaviorDescriptor" />
+    </file>
+    <file name="AttributeReference_BehaviorDescriptor.java">
+      <unit at="7,0,15,0" name="ro.barata.mps.htmlLanguage.behavior.AttributeReference_BehaviorDescriptor" />
+    </file>
     <file name="Attribute_BehaviorDescriptor.java">
       <unit at="7,0,15,0" name="ro.barata.mps.htmlLanguage.behavior.Attribute_BehaviorDescriptor" />
     </file>
     <file name="BehaviorAspectDescriptor.java">
-      <unit at="9,0,66,0" name="ro.barata.mps.htmlLanguage.behavior.BehaviorAspectDescriptor" />
+      <unit at="9,0,92,0" name="ro.barata.mps.htmlLanguage.behavior.BehaviorAspectDescriptor" />
     </file>
     <file name="ChangePageCommand_BehaviorDescriptor.java">
       <unit at="6,0,14,0" name="ro.barata.mps.htmlLanguage.behavior.ChangePageCommand_BehaviorDescriptor" />
@@ -33,6 +42,18 @@
     </file>
     <file name="DatabaseAction_BehaviorDescriptor.java">
       <unit at="6,0,14,0" name="ro.barata.mps.htmlLanguage.behavior.DatabaseAction_BehaviorDescriptor" />
+    </file>
+    <file name="DotExpressionCommand_BehaviorDescriptor.java">
+      <unit at="7,0,15,0" name="ro.barata.mps.htmlLanguage.behavior.DotExpressionCommand_BehaviorDescriptor" />
+    </file>
+    <file name="ExpressionReference_BehaviorDescriptor.java">
+      <unit at="6,0,14,0" name="ro.barata.mps.htmlLanguage.behavior.ExpressionReference_BehaviorDescriptor" />
+    </file>
+    <file name="ForCommand_BehaviorDescriptor.java">
+      <unit at="6,0,14,0" name="ro.barata.mps.htmlLanguage.behavior.ForCommand_BehaviorDescriptor" />
+    </file>
+    <file name="GetArrayValueCommand_BehaviorDescriptor.java">
+      <unit at="6,0,14,0" name="ro.barata.mps.htmlLanguage.behavior.GetArrayValueCommand_BehaviorDescriptor" />
     </file>
     <file name="H1Element_BehaviorDescriptor.java">
       <unit at="6,0,14,0" name="ro.barata.mps.htmlLanguage.behavior.H1Element_BehaviorDescriptor" />
@@ -50,10 +71,13 @@
       <unit at="10,0,21,0" name="ro.barata.mps.htmlLanguage.behavior.HTMLPage_BehaviorDescriptor" />
     </file>
     <file name="HTMLTagValue_BehaviorDescriptor.java">
-      <unit at="6,0,14,0" name="ro.barata.mps.htmlLanguage.behavior.HTMLTagValue_BehaviorDescriptor" />
+      <unit at="7,0,15,0" name="ro.barata.mps.htmlLanguage.behavior.HTMLTagValue_BehaviorDescriptor" />
     </file>
     <file name="InputElement_BehaviorDescriptor.java">
       <unit at="6,0,14,0" name="ro.barata.mps.htmlLanguage.behavior.InputElement_BehaviorDescriptor" />
+    </file>
+    <file name="IntValue_BehaviorDescriptor.java">
+      <unit at="6,0,14,0" name="ro.barata.mps.htmlLanguage.behavior.IntValue_BehaviorDescriptor" />
     </file>
     <file name="JavascriptCommand_BehaviorDescriptor.java">
       <unit at="7,0,15,0" name="ro.barata.mps.htmlLanguage.behavior.JavascriptCommand_BehaviorDescriptor" />
@@ -64,14 +88,23 @@
     <file name="JavascriptFunction_BehaviorDescriptor.java">
       <unit at="10,0,21,0" name="ro.barata.mps.htmlLanguage.behavior.JavascriptFunction_BehaviorDescriptor" />
     </file>
+    <file name="JavascriptParameter_BehaviorDescriptor.java">
+      <unit at="6,0,14,0" name="ro.barata.mps.htmlLanguage.behavior.JavascriptParameter_BehaviorDescriptor" />
+    </file>
+    <file name="JavascriptValue_BehaviorDescriptor.java">
+      <unit at="7,0,15,0" name="ro.barata.mps.htmlLanguage.behavior.JavascriptValue_BehaviorDescriptor" />
+    </file>
     <file name="LabelElement_BehaviorDescriptor.java">
       <unit at="6,0,14,0" name="ro.barata.mps.htmlLanguage.behavior.LabelElement_BehaviorDescriptor" />
     </file>
     <file name="OperationCommand_BehaviorDescriptor.java">
       <unit at="6,0,14,0" name="ro.barata.mps.htmlLanguage.behavior.OperationCommand_BehaviorDescriptor" />
     </file>
+    <file name="PushHTMLCommand_BehaviorDescriptor.java">
+      <unit at="6,0,14,0" name="ro.barata.mps.htmlLanguage.behavior.PushHTMLCommand_BehaviorDescriptor" />
+    </file>
     <file name="ReferenceTagValue_BehaviorDescriptor.java">
-      <unit at="6,0,14,0" name="ro.barata.mps.htmlLanguage.behavior.ReferenceTagValue_BehaviorDescriptor" />
+      <unit at="7,0,15,0" name="ro.barata.mps.htmlLanguage.behavior.ReferenceTagValue_BehaviorDescriptor" />
     </file>
     <file name="SelectCommand_BehaviorDescriptor.java">
       <unit at="6,0,14,0" name="ro.barata.mps.htmlLanguage.behavior.SelectCommand_BehaviorDescriptor" />
@@ -81,6 +114,15 @@
     </file>
     <file name="Server_BehaviorDescriptor.java">
       <unit at="10,0,24,0" name="ro.barata.mps.htmlLanguage.behavior.Server_BehaviorDescriptor" />
+    </file>
+    <file name="StaticAttributeReference_BehaviorDescriptor.java">
+      <unit at="6,0,14,0" name="ro.barata.mps.htmlLanguage.behavior.StaticAttributeReference_BehaviorDescriptor" />
+    </file>
+    <file name="StringValue_BehaviorDescriptor.java">
+      <unit at="6,0,14,0" name="ro.barata.mps.htmlLanguage.behavior.StringValue_BehaviorDescriptor" />
+    </file>
+    <file name="SubmitCommand_BehaviorDescriptor.java">
+      <unit at="6,0,14,0" name="ro.barata.mps.htmlLanguage.behavior.SubmitCommand_BehaviorDescriptor" />
     </file>
     <file name="TDElement_BehaviorDescriptor.java">
       <unit at="6,0,14,0" name="ro.barata.mps.htmlLanguage.behavior.TDElement_BehaviorDescriptor" />
@@ -95,13 +137,30 @@
       <unit at="6,0,14,0" name="ro.barata.mps.htmlLanguage.behavior.TableContainer_BehaviorDescriptor" />
     </file>
     <file name="TagValue_BehaviorDescriptor.java">
-      <unit at="7,0,15,0" name="ro.barata.mps.htmlLanguage.behavior.TagValue_BehaviorDescriptor" />
+      <unit at="6,0,8,0" name="ro.barata.mps.htmlLanguage.behavior.TagValue_BehaviorDescriptor" />
     </file>
     <file name="TitleElement_BehaviorDescriptor.java">
       <unit at="6,0,14,0" name="ro.barata.mps.htmlLanguage.behavior.TitleElement_BehaviorDescriptor" />
     </file>
     <file name="VarCommand_BehaviorDescriptor.java">
-      <unit at="9,0,20,0" name="ro.barata.mps.htmlLanguage.behavior.VarCommand_BehaviorDescriptor" />
+      <unit at="6,0,14,0" name="ro.barata.mps.htmlLanguage.behavior.VarCommand_BehaviorDescriptor" />
+    </file>
+    <file name="VarIdCommand_BehaviorDescriptor.java">
+      <unit at="6,0,14,0" name="ro.barata.mps.htmlLanguage.behavior.VarIdCommand_BehaviorDescriptor" />
+    </file>
+    <file name="VarValue_BehaviorDescriptor.java">
+      <unit at="6,0,14,0" name="ro.barata.mps.htmlLanguage.behavior.VarValue_BehaviorDescriptor" />
+    </file>
+  </root>
+  <root nodeRef="r:b6817e23-bfbb-4169-a954-fad21c7ce321(ro.barata.mps.htmlLanguage.behavior)/4231438061153837741">
+    <file name="IntValue_Behavior.java">
+      <node id="4231438061153838133" at="10,43,11,173" concept="0" />
+      <node id="4231438061153837741" at="10,0,13,0" concept="5" trace="init#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <scope id="4231438061153837743" at="10,43,11,173" />
+      <scope id="4231438061153837741" at="10,0,13,0">
+        <var name="thisNode" id="4231438061153837741" />
+      </scope>
+      <unit id="4231438061153837741" at="9,0,14,0" name="ro.barata.mps.htmlLanguage.behavior.IntValue_Behavior" />
     </file>
   </root>
   <root nodeRef="r:b6817e23-bfbb-4169-a954-fad21c7ce321(ro.barata.mps.htmlLanguage.behavior)/5512171426406093306">

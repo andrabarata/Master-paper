@@ -7,12 +7,20 @@ import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
+import jetbrains.mps.internal.collections.runtime.ListSequence;
 
 public class JavascriptFunction_TextGen extends SNodeTextGen {
   public void doGenerateText(SNode node) {
     this.append("function ");
     this.append(SPropertyOperations.getString(node, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name")));
-    this.append("(){");
+    this.append("(");
+    int i = 0;
+    for (SNode parameter : SLinkOperations.getChildren(node, MetaAdapterFactory.getContainmentLink(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x4c7f2ab523e8fe0bL, 0x4b5fda9ef04f9ffeL, "parameters"))) {
+      String param = parameter + (((i < ListSequence.fromList(SLinkOperations.getChildren(node, MetaAdapterFactory.getContainmentLink(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x4c7f2ab523e8fe0bL, 0x4b5fda9ef04f9ffeL, "parameters"))).count() - 1) ? "," : ""));
+      this.append(param);
+      i++;
+    }
+    this.append("){");
     this.appendNewLine();
     {
       Iterable<SNode> collection = SLinkOperations.getChildren(node, MetaAdapterFactory.getContainmentLink(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x4c7f2ab523e8fe0bL, 0x4c7f2ab523e91171L, "commands"));
@@ -20,8 +28,6 @@ public class JavascriptFunction_TextGen extends SNodeTextGen {
         appendNode(item);
       }
     }
-    this.appendNewLine();
     this.append("}");
-    this.appendNewLine();
   }
 }

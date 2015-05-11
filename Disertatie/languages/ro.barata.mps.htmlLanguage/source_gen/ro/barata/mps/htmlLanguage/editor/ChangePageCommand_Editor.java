@@ -25,7 +25,7 @@ public class ChangePageCommand_Editor extends DefaultNodeEditor {
     return editorCell;
   }
   private EditorCell createConstant_6fx8kw_a0(EditorContext editorContext, SNode node) {
-    EditorCell_Constant editorCell = new EditorCell_Constant(editorContext, node, "new page:");
+    EditorCell_Constant editorCell = new EditorCell_Constant(editorContext, node, "window.location.href=");
     editorCell.setCellId("Constant_6fx8kw_a0");
     editorCell.setDefaultText("");
     return editorCell;

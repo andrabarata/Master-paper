@@ -2,7 +2,7 @@
 <debug-info>
   <root>
     <file name="BehaviorAspectDescriptor.java">
-      <unit at="9,0,26,0" name="ro.barata.mps.boLanguage.behavior.BehaviorAspectDescriptor" />
+      <unit at="9,0,28,0" name="ro.barata.mps.boLanguage.behavior.BehaviorAspectDescriptor" />
     </file>
     <file name="Customer_BehaviorDescriptor.java">
       <unit at="8,0,16,0" name="ro.barata.mps.boLanguage.behavior.Customer_BehaviorDescriptor" />
@@ -12,6 +12,9 @@
     </file>
     <file name="Shop_BehaviorDescriptor.java">
       <unit at="8,0,16,0" name="ro.barata.mps.boLanguage.behavior.Shop_BehaviorDescriptor" />
+    </file>
+    <file name="Test_BehaviorDescriptor.java">
+      <unit at="8,0,16,0" name="ro.barata.mps.boLanguage.behavior.Test_BehaviorDescriptor" />
     </file>
   </root>
 </debug-info>

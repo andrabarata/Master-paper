@@ -21,6 +21,7 @@ public class SchemaCreator {
     sql += "personId" + " " + "integer";
     sql += ",";
     sql += "shopId" + " " + "integer";
+    sql += "customerId" + " " + "integer";
     if (primaryKey.length() > 0) {
       sql += ",";
     }
@@ -63,6 +64,24 @@ public class SchemaCreator {
     System.out.println(sql);
     stmt.execute(sql);
 
+    primaryKey = "";
+    primaryKey = "primary key(";
+    primaryKey += "test1";
+    primaryKey += ")";
+    sql = "create table " + "testa" + "(";
+    sql += "test1" + " " + "integer";
+    sql += ",";
+    sql += "test2" + " " + "varchar(256)";
+    sql += ",";
+    sql += "personId" + " " + "integer";
+    if (primaryKey.length() > 0) {
+      sql += ",";
+    }
+    sql += primaryKey;
+    sql += ")";
+    System.out.println(sql);
+    stmt.execute(sql);
+
   }
   private static void constrainTables(Statement stmt) throws SQLException, ClassNotFoundException {
     String sql = "";
@@ -76,6 +95,15 @@ public class SchemaCreator {
     System.out.println(sql);
     stmt.execute(sql);
 
+    sql = "alter table " + "CustomerTable" + " add constraint fk_" + "CustomerTable" + "_" + "customerId";
+    sql += " foreign key (" + "customerId" + ") references " + "testa" + "(" + "id" + ")";
+    System.out.println(sql);
+    stmt.execute(sql);
+
+    sql = "alter table " + "testa" + " add constraint fk_" + "testa" + "_" + "personId";
+    sql += " foreign key (" + "personId" + ") references " + "PersonTable" + "(" + "id" + ")";
+    System.out.println(sql);
+    stmt.execute(sql);
   }
 
   private static void dropTables(Statement stmt) throws ClassNotFoundException, SQLException {
@@ -87,6 +115,9 @@ public class SchemaCreator {
     stmt.executeUpdate(sql);
 
     sql = "drop table " + "ShopTable" + " cascade constraints";
+    stmt.executeUpdate(sql);
+
+    sql = "drop table " + "testa" + " cascade constraints";
     stmt.executeUpdate(sql);
 
   }

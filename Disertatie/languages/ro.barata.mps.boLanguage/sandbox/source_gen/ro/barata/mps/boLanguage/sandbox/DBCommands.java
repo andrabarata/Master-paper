@@ -10,9 +10,9 @@ public class DBCommands {
     PersonDAO personDAO = new PersonDAO();
     Person person = new Person();
     person = new Person();
-    person.setId(5);
-    person.setFirstName("test1");
-    person.setLastName("test2");
+    person.setId(10);
+    person.setFirstName("abcd");
+    person.setLastName("efgh");
     personDAO.addPerson(person);
   }
 

@@ -1,4 +1,3 @@
-function goToNextTestPage(){
-document.location.href="nextPage";
-
+function nextPage(){
+document.location.href="TestPage";
 }

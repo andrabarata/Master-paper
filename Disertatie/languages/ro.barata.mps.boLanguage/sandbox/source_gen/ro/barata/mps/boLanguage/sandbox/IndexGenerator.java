@@ -50,7 +50,7 @@ public class IndexGenerator {
     html += " value=\"";
     html += "Go to next page";
     html += "\" ";
-    html += "onclick" + "=\"" + "goToNextTestPage" + "()\" ";
+    html += "onclick" + "=\"" + "nextPage" + "()\" ";
     html += "type=\"" + "button" + "\"" + "/>";
     html += "</input>";
     html += "</body>";

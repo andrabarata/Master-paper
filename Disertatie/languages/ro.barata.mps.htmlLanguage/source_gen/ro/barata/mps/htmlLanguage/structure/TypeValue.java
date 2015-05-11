@@ -8,7 +8,7 @@ import jetbrains.mps.internal.collections.runtime.backports.LinkedList;
 
 public enum TypeValue {
   button("button", "button"),
-  text_("text ", "text"),
+  text("text", "text"),
   radio("radio", "radio"),
   checkbox("checkbox", "checkbox");
 
@@ -22,13 +22,13 @@ public enum TypeValue {
   public static List<TypeValue> getConstants() {
     List<TypeValue> list = ListSequence.fromList(new LinkedList<TypeValue>());
     ListSequence.fromList(list).addElement(TypeValue.button);
-    ListSequence.fromList(list).addElement(TypeValue.text_);
+    ListSequence.fromList(list).addElement(TypeValue.text);
     ListSequence.fromList(list).addElement(TypeValue.radio);
     ListSequence.fromList(list).addElement(TypeValue.checkbox);
     return list;
   }
   public static TypeValue getDefault() {
-    return TypeValue.text_;
+    return TypeValue.text;
   }
   public static TypeValue parseValue(String value) {
     if (value == null) {
@@ -37,8 +37,8 @@ public enum TypeValue {
     if (value.equals(TypeValue.button.getValueAsString())) {
       return TypeValue.button;
     }
-    if (value.equals(TypeValue.text_.getValueAsString())) {
-      return TypeValue.text_;
+    if (value.equals(TypeValue.text.getValueAsString())) {
+      return TypeValue.text;
     }
     if (value.equals(TypeValue.radio.getValueAsString())) {
       return TypeValue.radio;

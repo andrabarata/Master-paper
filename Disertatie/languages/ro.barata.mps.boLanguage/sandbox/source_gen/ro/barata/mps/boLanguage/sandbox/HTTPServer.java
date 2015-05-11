@@ -29,6 +29,7 @@ public class HTTPServer {
 
     context.addServlet(new ServletHolder(new IndexServlet()), "/" + "index");
     context.addServlet(new ServletHolder(new NextPageServlet()), "/" + "nextPage");
+    context.addServlet(new ServletHolder(new TestPageServlet()), "/" + "TestPage");
 
     server.setHandler(context);
     server.start();

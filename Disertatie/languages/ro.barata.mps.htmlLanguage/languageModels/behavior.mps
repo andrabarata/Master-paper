@@ -538,7 +538,7 @@
     </node>
   </node>
   <node concept="13h7C7" id="4LZaFkzZ_7U">
-    <property role="3GE5qa" value="javascript" />
+    <property role="3GE5qa" value="javascript.root" />
     <ref role="13h7C2" to="jozm:4LZaFkzUfS8" resolve="JavascriptFile" />
     <node concept="13i0hz" id="4LZaFkzZ_9A" role="13h7CS">
       <property role="TrG5h" value="findFunctionByName" />
@@ -601,7 +601,7 @@
     </node>
   </node>
   <node concept="13h7C7" id="4LZaFk$7Ayk">
-    <property role="3GE5qa" value="javascript" />
+    <property role="3GE5qa" value="javascript.root" />
     <ref role="13h7C2" to="jozm:4LZaFkzUfSb" resolve="JavascriptFunction" />
     <node concept="13i0hz" id="4LZaFk$7Ayn" role="13h7CS">
       <property role="TrG5h" value="hasPageReference" />
@@ -676,6 +676,27 @@
     </node>
     <node concept="13hLZK" id="4LZaFk$7Ayl" role="13h7CW">
       <node concept="3clFbS" id="4LZaFk$7Aym" role="2VODD2" />
+    </node>
+  </node>
+  <node concept="13h7C7" id="3ET5BXs96aH">
+    <property role="3GE5qa" value="javascript" />
+    <ref role="13h7C2" to="jozm:3ET5BXs6_yT" resolve="IntValue" />
+    <node concept="13hLZK" id="3ET5BXs96aI" role="13h7CW">
+      <node concept="3clFbS" id="3ET5BXs96aJ" role="2VODD2">
+        <node concept="3clFbF" id="3ET5BXs96gP" role="3cqZAp">
+          <node concept="37vLTI" id="3ET5BXs96Nz" role="3clFbG">
+            <node concept="3cmrfG" id="3ET5BXs96T3" role="37vLTx">
+              <property role="3cmrfH" value="0" />
+            </node>
+            <node concept="2OqwBi" id="3ET5BXs96ii" role="37vLTJ">
+              <node concept="13iPFW" id="3ET5BXs96gN" role="2Oq$k0" />
+              <node concept="3TrcHB" id="3ET5BXs96$h" role="2OqNvi">
+                <ref role="3TsBF5" to="jozm:3ET5BXs6_yU" resolve="value" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
     </node>
   </node>
 </model>
