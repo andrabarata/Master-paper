@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.ServletException;
 import java.io.IOException;
+import java.sql.SQLException;
 
 public class IndexServlet extends HttpServlet {
   public IndexServlet() {
@@ -15,9 +16,100 @@ public class IndexServlet extends HttpServlet {
     response.setContentType("text/html");
     response.setStatus(HttpServletResponse.SC_OK);
     try {
-      response.getWriter().println(IndexGenerator.getContent());
+      handleRequest(request, response);
+      response.getWriter().println("<!DOCTYPE html>");
+
     } catch (Exception ex) {
       ex.printStackTrace();
     }
   }
+
+  protected void doPost(HttpServletRequest request, HttpServletResponse response) {
+    try {
+      handleRequest(request, response);
+    } catch (Exception e) {
+      e.printStackTrace();
+    }
+  }
+
+  private void handleRequest(HttpServletRequest request, HttpServletResponse response) throws IOException, ClassNotFoundException, SQLException {
+    String action = request.getParameter("actionName");
+    System.out.println(action);
+    if (action != null && !(action.equals(""))) {
+      if (action.equals("addPerson")) {
+        addPerson(request, response);
+      }
+      if (action.equals("changeData")) {
+        changeData(request, response);
+      }
+    } else {
+      response.getWriter().println(IndexGenerator.getContent());
+    }
+  }
+
+  private void addPerson(HttpServletRequest request, HttpServletResponse response) throws SQLException, ClassNotFoundException, IOException {
+    System.out.println("I'm in!");
+    String value;
+    {
+      PersonDAO personDAO = new PersonDAO();
+      Person person = new Person();
+      person = new Person();
+      value = request.getParameter("id");
+      if (value != null && !(value.equals(""))) {
+        person.setId(Integer.parseInt(value));
+
+      }
+      value = request.getParameter("firstName");
+      if (value != null && !(value.equals(""))) {
+        person.setFirstName(value);
+
+      }
+      value = request.getParameter("lastName");
+      if (value != null && !(value.equals(""))) {
+        person.setLastName(value);
+
+      }
+      personDAO.addPerson(person);
+    }
+    response.getWriter().println(IndexGenerator.getContent());
+
+  }
+  private void changeData(HttpServletRequest request, HttpServletResponse response) throws SQLException, ClassNotFoundException, IOException {
+    System.out.println("I'm in!");
+    String value;
+    {
+      PersonDAO personDAO = new PersonDAO();
+      Person person = new Person();
+      {
+        person = new Person();
+        value = request.getParameter("id");
+        if (value != null && !(value.equals(""))) {
+          person.setId(Integer.parseInt(value));
+
+        }
+
+        Person newPerson = new Person();
+        value = request.getParameter("firstName");
+        if (value != null && !(value.equals(""))) {
+          newPerson.setFirstName(value);
+
+        }
+        value = request.getParameter("lastName");
+        if (value != null && !(value.equals(""))) {
+          newPerson.setLastName(value);
+
+        }
+        value = request.getParameter("id");
+        if (value != null && !(value.equals(""))) {
+          newPerson.setId(Integer.parseInt(value));
+
+        }
+
+        personDAO.updatePerson(person, newPerson);
+      }
+    }
+    response.getWriter().println(IndexGenerator.getContent());
+
+  }
+
 }

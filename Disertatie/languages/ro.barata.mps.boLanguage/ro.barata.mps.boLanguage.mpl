@@ -7,13 +7,16 @@
   </models>
   <accessoryModels />
   <generators>
-    <generator generatorUID="ro.barata.mps.boLanguage#2715870822990300539" uuid="ddec794b-ca50-411f-9650-4c5e91f7bc90">
+    <generator name="" generatorUID="ro.barata.mps.boLanguage#2715870822990300539" uuid="ddec794b-ca50-411f-9650-4c5e91f7bc90">
       <models>
         <modelRoot contentPath="${module}" type="default">
           <sourceRoot path="${module}/generator/template" />
         </modelRoot>
       </models>
       <external-templates />
+      <dependencies>
+        <dependency reexport="false">6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)</dependency>
+      </dependencies>
       <usedLanguages>
         <usedLanguage>b401a680-8325-4110-8fd3-84331ff25bef(jetbrains.mps.lang.generator)</usedLanguage>
         <usedLanguage>d7706f63-9be2-479c-a3da-ae92af1e64d5(jetbrains.mps.lang.generator.generationContext)</usedLanguage>

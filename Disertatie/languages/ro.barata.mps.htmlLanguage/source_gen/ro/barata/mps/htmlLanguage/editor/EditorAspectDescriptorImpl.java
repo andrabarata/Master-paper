@@ -15,75 +15,51 @@ public class EditorAspectDescriptorImpl implements EditorAspectDescriptor {
   public Collection<ConceptEditor> getEditors(ConceptDescriptor descriptor) {
     switch (Arrays.binarySearch(stringSwitchCases_xbvbvu_a0a0b, descriptor.getConceptFqName())) {
       case 0:
-        return Collections.<ConceptEditor>singletonList(new ActionType_Editor());
+        return Collections.<ConceptEditor>singletonList(new Action_Editor());
       case 1:
-        return Collections.<ConceptEditor>singletonList(new AllCondition_Editor());
+        return Collections.<ConceptEditor>singletonList(new ActionType_Editor());
       case 2:
-        return Collections.<ConceptEditor>singletonList(new AssignmentCommand_Editor());
+        return Collections.<ConceptEditor>singletonList(new AllCondition_Editor());
       case 3:
         return Collections.<ConceptEditor>singletonList(new Attribute_Editor());
       case 4:
-        return Collections.<ConceptEditor>singletonList(new ChangePageCommand_Editor());
+        return Collections.<ConceptEditor>singletonList(new CounterId_Editor());
       case 5:
-        return Collections.<ConceptEditor>singletonList(new DatabaseAction_Editor());
+        return Collections.<ConceptEditor>singletonList(new CounterIdReference_Editor());
       case 6:
-        return Collections.<ConceptEditor>singletonList(new DotExpressionCommand_Editor());
+        return Collections.<ConceptEditor>singletonList(new DatabaseOperation_Editor());
       case 7:
         return Collections.<ConceptEditor>singletonList(new ExpressionReference_Editor());
       case 8:
-        return Collections.<ConceptEditor>singletonList(new ForCommand_Editor());
-      case 9:
-        return Collections.<ConceptEditor>singletonList(new GetArrayValueCommand_Editor());
-      case 10:
         return Collections.<ConceptEditor>singletonList(new H1Element_Editor());
-      case 11:
+      case 9:
         return Collections.<ConceptEditor>singletonList(new HTMLBody_Editor());
-      case 12:
+      case 10:
         return Collections.<ConceptEditor>singletonList(new HTMLHead_Editor());
-      case 13:
+      case 11:
         return Collections.<ConceptEditor>singletonList(new HTMLPage_Editor());
-      case 14:
+      case 12:
         return Collections.<ConceptEditor>singletonList(new HTMLTagValue_Editor());
-      case 15:
+      case 13:
         return Collections.<ConceptEditor>singletonList(new InputElement_Editor());
-      case 16:
-        return Collections.<ConceptEditor>singletonList(new IntValue_Editor());
-      case 17:
-        return Collections.<ConceptEditor>singletonList(new JavascriptFile_Editor());
-      case 18:
-        return Collections.<ConceptEditor>singletonList(new JavascriptFunction_Editor());
-      case 19:
-        return Collections.<ConceptEditor>singletonList(new JavascriptParameter_Editor());
-      case 20:
+      case 14:
         return Collections.<ConceptEditor>singletonList(new LabelElement_Editor());
-      case 21:
-        return Collections.<ConceptEditor>singletonList(new PushHTMLCommand_Editor());
-      case 22:
-        return Collections.<ConceptEditor>singletonList(new ReferenceTagValue_Editor());
-      case 23:
+      case 15:
         return Collections.<ConceptEditor>singletonList(new SelectCommand_Editor());
-      case 24:
+      case 16:
         return Collections.<ConceptEditor>singletonList(new StaticAttributeReference_Editor());
-      case 25:
-        return Collections.<ConceptEditor>singletonList(new StringValue_Editor());
-      case 26:
-        return Collections.<ConceptEditor>singletonList(new SubmitCommand_Editor());
-      case 27:
+      case 17:
         return Collections.<ConceptEditor>singletonList(new TDElement_Editor());
-      case 28:
+      case 18:
         return Collections.<ConceptEditor>singletonList(new THElement_Editor());
-      case 29:
+      case 19:
         return Collections.<ConceptEditor>singletonList(new TRElement_Editor());
-      case 30:
+      case 20:
         return Collections.<ConceptEditor>singletonList(new TableContainer_Editor());
-      case 31:
+      case 21:
+        return Collections.<ConceptEditor>singletonList(new TagValueReference_Editor());
+      case 22:
         return Collections.<ConceptEditor>singletonList(new TitleElement_Editor());
-      case 32:
-        return Collections.<ConceptEditor>singletonList(new VarCommand_Editor());
-      case 33:
-        return Collections.<ConceptEditor>singletonList(new VarIdCommand_Editor());
-      case 34:
-        return Collections.<ConceptEditor>singletonList(new VarValue_Editor());
       default:
     }
     return Collections.<ConceptEditor>emptyList();
@@ -106,6 +82,6 @@ public class EditorAspectDescriptorImpl implements EditorAspectDescriptor {
   }
 
 
-  private static String[] stringSwitchCases_xbvbvu_a0a0b = new String[]{"ro.barata.mps.htmlLanguage.structure.ActionType", "ro.barata.mps.htmlLanguage.structure.AllCondition", "ro.barata.mps.htmlLanguage.structure.AssignmentCommand", "ro.barata.mps.htmlLanguage.structure.Attribute", "ro.barata.mps.htmlLanguage.structure.ChangePageCommand", "ro.barata.mps.htmlLanguage.structure.DatabaseAction", "ro.barata.mps.htmlLanguage.structure.DotExpressionCommand", "ro.barata.mps.htmlLanguage.structure.ExpressionReference", "ro.barata.mps.htmlLanguage.structure.ForCommand", "ro.barata.mps.htmlLanguage.structure.GetArrayValueCommand", "ro.barata.mps.htmlLanguage.structure.H1Element", "ro.barata.mps.htmlLanguage.structure.HTMLBody", "ro.barata.mps.htmlLanguage.structure.HTMLHead", "ro.barata.mps.htmlLanguage.structure.HTMLPage", "ro.barata.mps.htmlLanguage.structure.HTMLTagValue", "ro.barata.mps.htmlLanguage.structure.InputElement", "ro.barata.mps.htmlLanguage.structure.IntValue", "ro.barata.mps.htmlLanguage.structure.JavascriptFile", "ro.barata.mps.htmlLanguage.structure.JavascriptFunction", "ro.barata.mps.htmlLanguage.structure.JavascriptParameter", "ro.barata.mps.htmlLanguage.structure.LabelElement", "ro.barata.mps.htmlLanguage.structure.PushHTMLCommand", "ro.barata.mps.htmlLanguage.structure.ReferenceTagValue", "ro.barata.mps.htmlLanguage.structure.SelectCommand", "ro.barata.mps.htmlLanguage.structure.StaticAttributeReference", "ro.barata.mps.htmlLanguage.structure.StringValue", "ro.barata.mps.htmlLanguage.structure.SubmitCommand", "ro.barata.mps.htmlLanguage.structure.TDElement", "ro.barata.mps.htmlLanguage.structure.THElement", "ro.barata.mps.htmlLanguage.structure.TRElement", "ro.barata.mps.htmlLanguage.structure.TableContainer", "ro.barata.mps.htmlLanguage.structure.TitleElement", "ro.barata.mps.htmlLanguage.structure.VarCommand", "ro.barata.mps.htmlLanguage.structure.VarIdCommand", "ro.barata.mps.htmlLanguage.structure.VarValue"};
+  private static String[] stringSwitchCases_xbvbvu_a0a0b = new String[]{"ro.barata.mps.htmlLanguage.structure.Action", "ro.barata.mps.htmlLanguage.structure.ActionType", "ro.barata.mps.htmlLanguage.structure.AllCondition", "ro.barata.mps.htmlLanguage.structure.Attribute", "ro.barata.mps.htmlLanguage.structure.CounterId", "ro.barata.mps.htmlLanguage.structure.CounterIdReference", "ro.barata.mps.htmlLanguage.structure.DatabaseOperation", "ro.barata.mps.htmlLanguage.structure.ExpressionReference", "ro.barata.mps.htmlLanguage.structure.H1Element", "ro.barata.mps.htmlLanguage.structure.HTMLBody", "ro.barata.mps.htmlLanguage.structure.HTMLHead", "ro.barata.mps.htmlLanguage.structure.HTMLPage", "ro.barata.mps.htmlLanguage.structure.HTMLTagValue", "ro.barata.mps.htmlLanguage.structure.InputElement", "ro.barata.mps.htmlLanguage.structure.LabelElement", "ro.barata.mps.htmlLanguage.structure.SelectCommand", "ro.barata.mps.htmlLanguage.structure.StaticAttributeReference", "ro.barata.mps.htmlLanguage.structure.TDElement", "ro.barata.mps.htmlLanguage.structure.THElement", "ro.barata.mps.htmlLanguage.structure.TRElement", "ro.barata.mps.htmlLanguage.structure.TableContainer", "ro.barata.mps.htmlLanguage.structure.TagValueReference", "ro.barata.mps.htmlLanguage.structure.TitleElement"};
   private static String[] stringSwitchCases_xbvbvu_a0a0c = new String[]{"ro.barata.mps.htmlLanguage.structure.ContainerCommand", "ro.barata.mps.htmlLanguage.structure.HTMLCommand"};
 }

@@ -4,9 +4,13 @@ package ro.barata.mps.boLanguage.sandbox;
 
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.server.nio.SelectChannelConnector;
+import org.eclipse.jetty.server.handler.ResourceHandler;
 import org.eclipse.jetty.servlet.ServletContextHandler;
-import org.eclipse.jetty.servlet.DefaultServlet;
+import org.eclipse.jetty.rewrite.handler.RewriteHandler;
 import org.eclipse.jetty.servlet.ServletHolder;
+import org.eclipse.jetty.rewrite.handler.RedirectRegexRule;
+import org.eclipse.jetty.server.Handler;
+import org.eclipse.jetty.server.handler.HandlerList;
 
 public class HTTPServer {
   public static void main(String[] args) throws Exception {
@@ -19,19 +23,32 @@ public class HTTPServer {
     String path = HTTPServer.class.getClassLoader().getResource(HTTPServer.class.getName().replace(".", "/") + ".class").toString();
     path = path.substring(0, path.lastIndexOf("/"));
 
+    ResourceHandler handler = new ResourceHandler();
+    handler.setResourceBase(path);
+    handler.setDirectoriesListed(false);
+
     ServletContextHandler context = new ServletContextHandler(ServletContextHandler.SESSIONS);
     context.setContextPath("/");
+    context.setHandler(handler);
 
-    DefaultServlet defaultServlet = new DefaultServlet();
-    ServletHolder holder = new ServletHolder("default", defaultServlet);
-    holder.setInitParameter("resourceBase", path);
-    context.addServlet(holder, "/*");
-
+    RewriteHandler rwHandler = new RewriteHandler();
     context.addServlet(new ServletHolder(new IndexServlet()), "/" + "index");
+    {
+      rwHandler.setRewriteRequestURI(true);
+      rwHandler.setRewritePathInfo(true);
+      rwHandler.setOriginalPathAttribute("/");
+      RedirectRegexRule rule = new RedirectRegexRule();
+      rule.setRegex("/");
+      rule.setReplacement("index");
+      rwHandler.addRule(rule);
+    }
     context.addServlet(new ServletHolder(new NextPageServlet()), "/" + "nextPage");
     context.addServlet(new ServletHolder(new TestPageServlet()), "/" + "TestPage");
 
-    server.setHandler(context);
+    Handler[] handlers = new Handler[]{rwHandler, context};
+    HandlerList list = new HandlerList();
+    list.setHandlers(handlers);
+    server.setHandler(list);
     server.start();
     server.join();
 

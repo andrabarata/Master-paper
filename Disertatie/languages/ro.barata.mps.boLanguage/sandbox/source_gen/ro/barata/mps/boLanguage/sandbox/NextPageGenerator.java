@@ -7,13 +7,17 @@ import java.sql.SQLException;
 public class NextPageGenerator {
   public static String getContent() throws ClassNotFoundException, SQLException {
     String html = "<html>";
+    String parameters = "";
     html += "<head>";
+    html += "<script src=\"general.js\"></script>";
+    parameters = "";
     html += "<title";
     html += ">";
     html += "Hi there";
     html += "</title>";
     html += "</head>";
     html += "<body>";
+    parameters = "";
     html += "<h1";
     html += ">";
     html += "You did it!";

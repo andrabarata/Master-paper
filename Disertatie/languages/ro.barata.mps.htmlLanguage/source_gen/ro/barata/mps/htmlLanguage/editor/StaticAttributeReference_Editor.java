@@ -8,9 +8,7 @@ import jetbrains.mps.openapi.editor.EditorContext;
 import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.nodeEditor.cells.EditorCell_Collection;
 import jetbrains.mps.nodeEditor.cellProviders.CellProviderWithRole;
-import jetbrains.mps.lang.editor.cellProviders.PropertyCellProvider;
-import jetbrains.mps.openapi.editor.style.Style;
-import jetbrains.mps.editor.runtime.style.StyleImpl;
+import jetbrains.mps.lang.editor.cellProviders.RefNodeCellProvider;
 import jetbrains.mps.nodeEditor.EditorManager;
 
 public class StaticAttributeReference_Editor extends DefaultNodeEditor {
@@ -21,19 +19,18 @@ public class StaticAttributeReference_Editor extends DefaultNodeEditor {
     EditorCell_Collection editorCell = EditorCell_Collection.createIndent2(editorContext, node);
     editorCell.setCellId("Collection_g8u06f_a");
     editorCell.setBig(true);
-    editorCell.addEditorCell(this.createProperty_g8u06f_a0(editorContext, node));
+    editorCell.addEditorCell(this.createRefNode_g8u06f_a0(editorContext, node));
     return editorCell;
   }
-  private EditorCell createProperty_g8u06f_a0(EditorContext editorContext, SNode node) {
-    CellProviderWithRole provider = new PropertyCellProvider(node, editorContext);
+  private EditorCell createRefNode_g8u06f_a0(EditorContext editorContext, SNode node) {
+    CellProviderWithRole provider = new RefNodeCellProvider(node, editorContext);
     provider.setRole("value");
     provider.setNoTargetText("<no value>");
     EditorCell editorCell;
     editorCell = provider.createEditorCell(editorContext);
-    editorCell.setCellId("property_value");
-    Style style = new StyleImpl();
-    HTMLStyleSheet_StyleSheet.apply_value(style, editorCell);
-    editorCell.getStyle().putAll(style);
+    if (editorCell.getRole() == null) {
+      editorCell.setRole("value");
+    }
     editorCell.setSubstituteInfo(provider.createDefaultSubstituteInfo());
     SNode attributeConcept = provider.getRoleAttribute();
     Class attributeKind = provider.getRoleAttributeClass();

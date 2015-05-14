@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<debug-info>
+  <root>
+    <file name="AbstractVarCommand_BehaviorDescriptor.java">
+      <unit at="9,0,20,0" name="ro.barata.mps.javascriptLanguage.behavior.AbstractVarCommand_BehaviorDescriptor" />
+    </file>
+    <file name="ActionVarValue_BehaviorDescriptor.java">
+      <unit at="7,0,15,0" name="ro.barata.mps.javascriptLanguage.behavior.ActionVarValue_BehaviorDescriptor" />
+    </file>
+    <file name="AddArrayElementCommand_BehaviorDescriptor.java">
+      <unit at="6,0,14,0" name="ro.barata.mps.javascriptLanguage.behavior.AddArrayElementCommand_BehaviorDescriptor" />
+    </file>
+    <file name="AjaxJavascriptFunction_BehaviorDescriptor.java">
+      <unit at="6,0,14,0" name="ro.barata.mps.javascriptLanguage.behavior.AjaxJavascriptFunction_BehaviorDescriptor" />
+    </file>
+    <file name="ArrayCommand_BehaviorDescriptor.java">
+      <unit at="6,0,14,0" name="ro.barata.mps.javascriptLanguage.behavior.ArrayCommand_BehaviorDescriptor" />
+    </file>
+    <file name="AssignmentCommand_BehaviorDescriptor.java">
+      <unit at="6,0,14,0" name="ro.barata.mps.javascriptLanguage.behavior.AssignmentCommand_BehaviorDescriptor" />
+    </file>
+    <file name="BehaviorAspectDescriptor.java">
+      <unit at="9,0,66,0" name="ro.barata.mps.javascriptLanguage.behavior.BehaviorAspectDescriptor" />
+    </file>
+    <file name="CallFunctionCommand_BehaviorDescriptor.java">
+      <unit at="6,0,14,0" name="ro.barata.mps.javascriptLanguage.behavior.CallFunctionCommand_BehaviorDescriptor" />
+    </file>
+    <file name="ChangePageCommand_BehaviorDescriptor.java">
+      <unit at="6,0,14,0" name="ro.barata.mps.javascriptLanguage.behavior.ChangePageCommand_BehaviorDescriptor" />
+    </file>
+    <file name="DotExpressionCommand_BehaviorDescriptor.java">
+      <unit at="9,0,20,0" name="ro.barata.mps.javascriptLanguage.behavior.DotExpressionCommand_BehaviorDescriptor" />
+    </file>
+    <file name="DummyCommand_BehaviorDescriptor.java">
+      <unit at="6,0,14,0" name="ro.barata.mps.javascriptLanguage.behavior.DummyCommand_BehaviorDescriptor" />
+    </file>
+    <file name="ForCommand_BehaviorDescriptor.java">
+      <unit at="6,0,14,0" name="ro.barata.mps.javascriptLanguage.behavior.ForCommand_BehaviorDescriptor" />
+    </file>
+    <file name="GetArrayValueCommand_BehaviorDescriptor.java">
+      <unit at="6,0,14,0" name="ro.barata.mps.javascriptLanguage.behavior.GetArrayValueCommand_BehaviorDescriptor" />
+    </file>
+    <file name="InitializeVarCommand_BehaviorDescriptor.java">
+      <unit at="6,0,14,0" name="ro.barata.mps.javascriptLanguage.behavior.InitializeVarCommand_BehaviorDescriptor" />
+    </file>
+    <file name="IntValue_BehaviorDescriptor.java">
+      <unit at="6,0,14,0" name="ro.barata.mps.javascriptLanguage.behavior.IntValue_BehaviorDescriptor" />
+    </file>
+    <file name="JavascriptCommand_BehaviorDescriptor.java">
+      <unit at="7,0,15,0" name="ro.barata.mps.javascriptLanguage.behavior.JavascriptCommand_BehaviorDescriptor" />
+    </file>
+    <file name="JavascriptFile_BehaviorDescriptor.java">
+      <unit at="10,0,21,0" name="ro.barata.mps.javascriptLanguage.behavior.JavascriptFile_BehaviorDescriptor" />
+    </file>
+    <file name="JavascriptFunction_BehaviorDescriptor.java">
+      <unit at="10,0,21,0" name="ro.barata.mps.javascriptLanguage.behavior.JavascriptFunction_BehaviorDescriptor" />
+    </file>
+    <file name="JavascriptOperation_BehaviorDescriptor.java">
+      <unit at="7,0,15,0" name="ro.barata.mps.javascriptLanguage.behavior.JavascriptOperation_BehaviorDescriptor" />
+    </file>
+    <file name="JavascriptParameter_BehaviorDescriptor.java">
+      <unit at="6,0,14,0" name="ro.barata.mps.javascriptLanguage.behavior.JavascriptParameter_BehaviorDescriptor" />
+    </file>
+    <file name="JavascriptValue_BehaviorDescriptor.java">
+      <unit at="7,0,15,0" name="ro.barata.mps.javascriptLanguage.behavior.JavascriptValue_BehaviorDescriptor" />
+    </file>
+    <file name="PushHTMLCommand_BehaviorDescriptor.java">
+      <unit at="6,0,14,0" name="ro.barata.mps.javascriptLanguage.behavior.PushHTMLCommand_BehaviorDescriptor" />
+    </file>
+    <file name="StringValue_BehaviorDescriptor.java">
+      <unit at="6,0,14,0" name="ro.barata.mps.javascriptLanguage.behavior.StringValue_BehaviorDescriptor" />
+    </file>
+    <file name="SubmitCommand_BehaviorDescriptor.java">
+      <unit at="6,0,14,0" name="ro.barata.mps.javascriptLanguage.behavior.SubmitCommand_BehaviorDescriptor" />
+    </file>
+    <file name="VarCommandValue_BehaviorDescriptor.java">
+      <unit at="7,0,15,0" name="ro.barata.mps.javascriptLanguage.behavior.VarCommandValue_BehaviorDescriptor" />
+    </file>
+    <file name="VarCommand_BehaviorDescriptor.java">
+      <unit at="6,0,14,0" name="ro.barata.mps.javascriptLanguage.behavior.VarCommand_BehaviorDescriptor" />
+    </file>
+    <file name="VarIdCommand_BehaviorDescriptor.java">
+      <unit at="6,0,14,0" name="ro.barata.mps.javascriptLanguage.behavior.VarIdCommand_BehaviorDescriptor" />
+    </file>
+    <file name="VarValue_BehaviorDescriptor.java">
+      <unit at="6,0,14,0" name="ro.barata.mps.javascriptLanguage.behavior.VarValue_BehaviorDescriptor" />
+    </file>
+  </root>
+</debug-info>
+

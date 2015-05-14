@@ -15,8 +15,10 @@
       </models>
       <external-templates />
       <dependencies>
+        <dependency reexport="false">d3ddb860-292b-4451-8638-cec4e3c81b18(ro.barata.mps.javascriptLanguage)</dependency>
         <dependency reexport="false">6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)</dependency>
         <dependency reexport="false" scope="design">fd895b5e-d882-4eb2-9e29-37eb52ae5682(ro.barata.mps.rootLanguage#5152062499435996722)</dependency>
+        <dependency reexport="false">6e5f652e-4e8c-44e2-a605-d58b38894c56(ro.barata.mps.htmlLanguage#2539806008948651149)</dependency>
       </dependencies>
       <usedLanguages>
         <usedLanguage>b401a680-8325-4110-8fd3-84331ff25bef(jetbrains.mps.lang.generator)</usedLanguage>

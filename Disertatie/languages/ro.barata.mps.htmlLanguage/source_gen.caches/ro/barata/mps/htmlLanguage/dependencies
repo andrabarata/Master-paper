@@ -16,8 +16,6 @@
     <classNode dependClassName="jetbrains.mps.smodel.runtime.ConstraintsAspectDescriptor" />
     <classNode dependClassName="jetbrains.mps.smodel.runtime.LanguageAspectDescriptor" />
     <classNode dependClassName="jetbrains.mps.smodel.runtime.StructureAspectDescriptor" />
-    <classNode dependClassName="jetbrains.mps.smodel.runtime.TextGenAspectDescriptor" />
-    <classNode dependClassName="jetbrains.mps.smodel.runtime.interpreted.TextGenAspectInterpreted" />
     <classNode dependClassName="ro.barata.mps.htmlLanguage.behavior.BehaviorAspectDescriptor" />
     <classNode dependClassName="ro.barata.mps.htmlLanguage.constraints.ConstraintsAspectDescriptor" />
     <classNode dependClassName="ro.barata.mps.htmlLanguage.editor.EditorAspectDescriptorImpl" />

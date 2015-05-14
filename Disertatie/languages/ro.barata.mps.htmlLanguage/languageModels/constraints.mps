@@ -264,7 +264,7 @@
   </node>
   <node concept="1M2fIO" id="4Ma6LuSSdU2">
     <property role="3GE5qa" value="html.commands.operations" />
-    <ref role="1M2myG" to="jozm:5a6Q6gbwnj_" resolve="ReferenceTagValue" />
+    <ref role="1M2myG" to="jozm:5a6Q6gbwnj_" resolve="TagValueReference" />
     <node concept="1N5Pfh" id="4Ma6LuSSq9t" role="1Mr941">
       <ref role="1N5Vy1" to="jozm:5a6Q6gbwnmB" />
       <node concept="13QW63" id="4Ma6LuSSqfs" role="1N6uqs">

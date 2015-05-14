@@ -16,8 +16,6 @@ import jetbrains.mps.smodel.runtime.ConstraintsAspectDescriptor;
 import jetbrains.mps.openapi.editor.descriptor.EditorAspectDescriptor;
 import ro.barata.mps.htmlLanguage.editor.EditorAspectDescriptorImpl;
 import jetbrains.mps.smodel.runtime.StructureAspectDescriptor;
-import jetbrains.mps.smodel.runtime.TextGenAspectDescriptor;
-import jetbrains.mps.smodel.runtime.interpreted.TextGenAspectInterpreted;
 
 public class Language extends LanguageRuntime {
   public static String MODULE_REF = "b9cb18bd-a29f-47d8-9dd0-544a91c4eef2(ro.barata.mps.htmlLanguage)";
@@ -38,7 +36,7 @@ public class Language extends LanguageRuntime {
   }
   @Override
   protected String[] getExtendedLanguageIDs() {
-    return new String[]{"jetbrains.mps.execution.util"};
+    return new String[]{"jetbrains.mps.execution.util", "ro.barata.mps.databaseOperationsLanguage"};
   }
   @Override
   public Collection<TemplateModule> getGenerators() {
@@ -60,9 +58,6 @@ public class Language extends LanguageRuntime {
     }
     if (descriptorClass == StructureAspectDescriptor.class) {
       return (T) new ro.barata.mps.htmlLanguage.structure.StructureAspectDescriptor();
-    }
-    if (descriptorClass == TextGenAspectDescriptor.class) {
-      return (T) new TextGenAspectInterpreted();
     }
     return super.createAspectDescriptor(descriptorClass);
   }

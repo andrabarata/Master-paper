@@ -184,7 +184,6 @@ public class HTMLPage_Editor extends DefaultNodeEditor {
     Style style = new StyleImpl();
     style.set(StyleAttributes.SELECTABLE, 0, false);
     editorCell.getStyle().putAll(style);
-    GenerateJavascriptFile.setCellActions(editorCell, node, editorContext);
     editorCell.setRole(handler.getElementRole());
     return editorCell;
   }

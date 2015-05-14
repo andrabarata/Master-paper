@@ -62,6 +62,7 @@ public class HTMLAttributesComponent implements ConceptEditorComponent {
     editorCell.setCellId("Constant_a7yi8t_b0");
     Style style = new StyleImpl();
     HTMLStyleSheet_StyleSheet.apply_attribute(style, editorCell);
+    style.set(StyleAttributes.PUNCTUATION_LEFT, 0, true);
     editorCell.getStyle().putAll(style);
     editorCell.setDefaultText("");
     return editorCell;
@@ -120,6 +121,7 @@ public class HTMLAttributesComponent implements ConceptEditorComponent {
     editorCell.setCellId("Constant_a7yi8t_g0");
     Style style = new StyleImpl();
     HTMLStyleSheet_StyleSheet.apply_attribute(style, editorCell);
+    style.set(StyleAttributes.PUNCTUATION_LEFT, 0, true);
     editorCell.getStyle().putAll(style);
     editorCell.setDefaultText("");
     return editorCell;

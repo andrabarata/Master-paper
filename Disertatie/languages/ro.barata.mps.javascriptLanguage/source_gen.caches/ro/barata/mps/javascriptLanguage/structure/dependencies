@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="ro.barata.mps.javascriptLanguage.structure.DOMElement" file="DOMElement.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.backports.LinkedList" />
+  </dependency>
+  <dependency className="ro.barata.mps.javascriptLanguage.structure.DOMElement_PropertySupport" file="DOMElement_PropertySupport.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.Iterator" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode dependClassName="ro.barata.mps.javascriptLanguage.structure.DOMElement" />
+    <classNode extendsClassName="jetbrains.mps.smodel.PropertySupport" />
+  </dependency>
+  <dependency className="ro.barata.mps.javascriptLanguage.structure.JavascriptBinaryCondition" file="JavascriptBinaryCondition.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.backports.LinkedList" />
+  </dependency>
+  <dependency className="ro.barata.mps.javascriptLanguage.structure.JavascriptBinaryCondition_PropertySupport" file="JavascriptBinaryCondition_PropertySupport.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.Iterator" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode dependClassName="ro.barata.mps.javascriptLanguage.structure.JavascriptBinaryCondition" />
+    <classNode extendsClassName="jetbrains.mps.smodel.PropertySupport" />
+  </dependency>
+  <dependency className="ro.barata.mps.javascriptLanguage.structure.JavascriptUnaryOperation" file="JavascriptUnaryOperation.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.backports.LinkedList" />
+  </dependency>
+  <dependency className="ro.barata.mps.javascriptLanguage.structure.JavascriptUnaryOperation_PropertySupport" file="JavascriptUnaryOperation_PropertySupport.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.Iterator" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode dependClassName="ro.barata.mps.javascriptLanguage.structure.JavascriptUnaryOperation" />
+    <classNode extendsClassName="jetbrains.mps.smodel.PropertySupport" />
+  </dependency>
+  <dependency className="ro.barata.mps.javascriptLanguage.structure.PushHTMLType" file="PushHTMLType.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.backports.LinkedList" />
+  </dependency>
+  <dependency className="ro.barata.mps.javascriptLanguage.structure.PushHTMLType_PropertySupport" file="PushHTMLType_PropertySupport.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.Iterator" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode dependClassName="ro.barata.mps.javascriptLanguage.structure.PushHTMLType" />
+    <classNode extendsClassName="jetbrains.mps.smodel.PropertySupport" />
+  </dependency>
+  <dependency className="ro.barata.mps.javascriptLanguage.structure.StructureAspectDescriptor" file="StructureAspectDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.Arrays" />
+    <classNode dependClassName="java.util.Collection" />
+    <classNode dependClassName="jetbrains.mps.smodel.adapter.ids.MetaIdFactory" />
+    <classNode dependClassName="jetbrains.mps.smodel.runtime.ConceptDescriptor" />
+    <classNode dependClassName="jetbrains.mps.smodel.runtime.impl.ConceptDescriptorBuilder" />
+    <classNode dependClassName="org.jetbrains.annotations.Nullable" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.BaseStructureAspectDescriptor" />
+  </dependency>
+</dependenciesRoot>
+

@@ -72,7 +72,7 @@
     </file>
   </root>
   <root nodeRef="r:a7a05230-a54d-4826-a2ac-95f54cf43ac3(ro.barata.mps.htmlLanguage.constraints)/5515250482368536194">
-    <file name="ReferenceTagValue_Constraints.java">
+    <file name="TagValueReference_Constraints.java">
       <node id="5515250482368536194" at="31,42,32,98" concept="7" />
       <node id="5515250482368536194" at="35,98,36,135" concept="4" />
       <node id="5515250482368536194" at="39,44,40,20" concept="5" />
@@ -81,8 +81,8 @@
       <node id="7227310691962055527" at="55,49,56,526" concept="5" />
       <node id="943743190239902694" at="59,52,60,348" concept="5" />
       <node id="5515250482368536194" at="67,7,68,22" concept="5" />
-      <node id="5515250482368536194" at="70,0,71,0" concept="6" trace="breakingNode_nng3po_a0a0a0a0a1a0b0a1a1" />
-      <node id="5515250482368536194" at="31,0,34,0" concept="1" trace="ReferenceTagValue_Constraints#()V" />
+      <node id="5515250482368536194" at="70,0,71,0" concept="6" trace="breakingNode_md6s2t_a0a0a0a0a1a0b0a1a1" />
+      <node id="5515250482368536194" at="31,0,34,0" concept="1" trace="TagValueReference_Constraints#()V" />
       <node id="7227310691961904223" at="55,0,58,0" concept="3" trace="accept#(Lorg/jetbrains/mps/openapi/model/SNode;)Z" />
       <node id="943743190239897032" at="59,0,62,0" concept="3" trace="getName#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljava/lang/String;" />
       <node id="5515250482368536194" at="38,0,42,0" concept="3" trace="hasOwnScopeProvider#()Z" />
@@ -122,11 +122,11 @@
         <var name="references" id="5515250482368536194" />
       </scope>
       <scope id="5515250482368536194" at="34,0,70,0" />
-      <unit id="7227310691961904223" at="54,167,58,15" name="ro.barata.mps.htmlLanguage.constraints.ReferenceTagValue_Constraints$4" />
-      <unit id="943743190239897030" at="54,25,62,15" name="ro.barata.mps.htmlLanguage.constraints.ReferenceTagValue_Constraints$3" />
-      <unit id="5515250482368536194" at="45,19,65,9" name="ro.barata.mps.htmlLanguage.constraints.ReferenceTagValue_Constraints$2" />
-      <unit id="5515250482368536194" at="37,128,67,5" name="ro.barata.mps.htmlLanguage.constraints.ReferenceTagValue_Constraints$1" />
-      <unit id="5515250482368536194" at="30,0,72,0" name="ro.barata.mps.htmlLanguage.constraints.ReferenceTagValue_Constraints" />
+      <unit id="7227310691961904223" at="54,167,58,15" name="ro.barata.mps.htmlLanguage.constraints.TagValueReference_Constraints$4" />
+      <unit id="943743190239897030" at="54,25,62,15" name="ro.barata.mps.htmlLanguage.constraints.TagValueReference_Constraints$3" />
+      <unit id="5515250482368536194" at="45,19,65,9" name="ro.barata.mps.htmlLanguage.constraints.TagValueReference_Constraints$2" />
+      <unit id="5515250482368536194" at="37,128,67,5" name="ro.barata.mps.htmlLanguage.constraints.TagValueReference_Constraints$1" />
+      <unit id="5515250482368536194" at="30,0,72,0" name="ro.barata.mps.htmlLanguage.constraints.TagValueReference_Constraints" />
     </file>
   </root>
 </debug-info>

@@ -8,9 +8,12 @@ import java.util.List;
 public class TestPageGenerator {
   public static String getContent() throws ClassNotFoundException, SQLException {
     String html = "<html>";
+    String parameters = "";
     html += "<head>";
+    html += "<script src=\"general.js\"></script>";
     html += "</head>";
     html += "<body>";
+    parameters = "";
     html += "<h1";
     html += ">";
     html += "Hello there!";
@@ -19,13 +22,15 @@ public class TestPageGenerator {
       PersonDAO personDAO = new PersonDAO();
       List<Person> persons = personDAO.getAllPersons();
       for (Person person : persons) {
+        parameters = "";
         html += "<label";
         html += ">";
-        html += person.getFirstName() + "";
+        html += person.getFirstName();
         html += "</label>";
+        parameters = "";
         html += "<h1";
         html += ">";
-        html += person.getLastName() + "";
+        html += person.getLastName();
         html += "</h1>";
       }
     }

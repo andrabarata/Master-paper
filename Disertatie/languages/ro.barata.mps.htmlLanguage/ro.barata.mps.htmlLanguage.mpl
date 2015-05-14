@@ -17,10 +17,12 @@
           <sourceRoot location="lib/jetty-all-8.1.14.v20131031.jar" />
         </modelRoot>
       </models>
-      <external-templates />
+      <external-templates>
+        <generator generatorUID="fd895b5e-d882-4eb2-9e29-37eb52ae5682(ro.barata.mps.rootLanguage#5152062499435996722)" />
+      </external-templates>
       <dependencies>
         <dependency reexport="false">6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)</dependency>
-        <dependency reexport="false">fd895b5e-d882-4eb2-9e29-37eb52ae5682(ro.barata.mps.rootLanguage#5152062499435996722)</dependency>
+        <dependency reexport="false">c02f1daf-1160-4f41-beef-10918af4e126(ro.barata.mps.databaseOperationsLanguage#7227310691964192368)</dependency>
       </dependencies>
       <usedLanguages>
         <usedLanguage>b401a680-8325-4110-8fd3-84331ff25bef(jetbrains.mps.lang.generator)</usedLanguage>
@@ -47,7 +49,9 @@
         <language id="13744753-c81f-424a-9c1b-cf8943bf4e86" fqName="jetbrains.mps.lang.sharedConcepts" version="0" />
         <language id="7866978e-a0f0-4cc7-81bc-4d213d9375e1" fqName="jetbrains.mps.lang.smodel" version="0" />
         <language id="9ded098b-ad6a-4657-bfd9-48636cfe8bc3" fqName="jetbrains.mps.lang.traceable" version="0" />
+        <language id="58b9e0aa-6663-4086-8f84-dfaa697f9989" fqName="ro.barata.mps.databaseOperationsLanguage" version="0" />
         <language id="b9cb18bd-a29f-47d8-9dd0-544a91c4eef2" fqName="ro.barata.mps.htmlLanguage" version="-1" />
+        <language id="5cba771a-86ff-496b-a121-6ae83a039560" fqName="ro.barata.mps.rootLanguage" version="0" />
       </languageVersions>
       <mapping-priorities>
         <mapping-priority-rule kind="strictly_after">
@@ -58,7 +62,7 @@
             </external-mapping>
           </greater-priority-mapping>
           <lesser-priority-mapping>
-            <generator generatorUID="fd895b5e-d882-4eb2-9e29-37eb52ae5682(ro.barata.mps.rootLanguage#5152062499435996722)" />
+            <generator generatorUID="c02f1daf-1160-4f41-beef-10918af4e126(ro.barata.mps.databaseOperationsLanguage#7227310691964192368)" />
             <external-mapping>
               <all-local-mappings />
             </external-mapping>
@@ -69,10 +73,10 @@
   </generators>
   <sourcePath />
   <dependencies>
+    <dependency reexport="false">d3ddb860-292b-4451-8638-cec4e3c81b18(ro.barata.mps.javascriptLanguage)</dependency>
+    <dependency reexport="false">1ed103c3-3aa6-49b7-9c21-6765ee11f224(MPS.Editor)</dependency>
     <dependency reexport="false">2d3c70e9-aab2-4870-8d8d-6036800e4103(jetbrains.mps.kernel)</dependency>
     <dependency reexport="false">5cba771a-86ff-496b-a121-6ae83a039560(ro.barata.mps.rootLanguage)</dependency>
-    <dependency reexport="false">58b9e0aa-6663-4086-8f84-dfaa697f9989(ro.barata.mps.databaseOperationsLanguage)</dependency>
-    <dependency reexport="false">1ed103c3-3aa6-49b7-9c21-6765ee11f224(MPS.Editor)</dependency>
   </dependencies>
   <usedLanguages>
     <usedLanguage>13744753-c81f-424a-9c1b-cf8943bf4e86(jetbrains.mps.lang.sharedConcepts)</usedLanguage>
@@ -115,6 +119,7 @@
   </languageVersions>
   <extendedLanguages>
     <extendedLanguage>4caf0310-491e-41f5-8a9b-2006b3a94898(jetbrains.mps.execution.util)</extendedLanguage>
+    <extendedLanguage>58b9e0aa-6663-4086-8f84-dfaa697f9989(ro.barata.mps.databaseOperationsLanguage)</extendedLanguage>
   </extendedLanguages>
 </language>
 

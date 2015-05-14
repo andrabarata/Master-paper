@@ -10,10 +10,11 @@ public class DBCommands {
     PersonDAO personDAO = new PersonDAO();
     Person person = new Person();
     person = new Person();
-    person.setId(10);
-    person.setFirstName("abcd");
-    person.setLastName("efgh");
+    person.setId(2);
     personDAO.addPerson(person);
+    person = new Person();
+    person.setId(1);
+    personDAO.deletePerson(person);
   }
 
   public static void main(String[] args) {

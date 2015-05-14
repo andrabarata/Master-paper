@@ -1,18 +1,30 @@
-function sendData(names,values,pageName){
-var i=0;
-var html="<form id='send_data_form' style='display:none' method='post' action='";
-html+=pageName;
-for (i=0;i<;i+=1){
-var name=names[i];
-var value=values[i];
-html+="<input type='text' name='";
-html+=name;
-html+="' value='";
-html+=value;
-html+="'/>";
+function doAjaxRequest(pageName,actionName,names,values,refreshFunction){
+var ajaxRequest;
+try{
+ajaxRequest = new XMLHttpRequest();
+} catch (e){
+try{
+ajaxRequest = new ActiveXObject("Msxml2.XMLHTTP");
+} catch (e) {
+try{
+ajaxRequest = new ActiveXObject("Microsoft.XMLHTTP");
+} catch (e){
+alert("error");
+return false;
 }
-html+="</form>";
-document.body.insertAdjacentHTML('afterbegin', html);
-var form=document.getElementById("send_data_form").val;
-form.submit();
+}
+}ajaxRequest.onreadystatechange = function(){
+if(ajaxRequest.readyState == 4){
+if (typeof refreshFunction!="undefined")
+refreshFunction();
+else
+document.documentElement.innerHTML = ajaxRequest.responseText;
+}
+};
+var queryString="?actionName="+actionName;
+var params = "";
+for (var i=0;i<names.length;i++)
+queryString+="&"+names[i]+"="+values[i];
+ajaxRequest.open("POST", pageName + queryString, true);
+ajaxRequest.send(null);
 }

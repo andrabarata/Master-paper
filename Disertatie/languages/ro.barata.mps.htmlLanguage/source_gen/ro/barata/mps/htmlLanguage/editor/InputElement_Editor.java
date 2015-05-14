@@ -34,8 +34,9 @@ public class InputElement_Editor extends DefaultNodeEditor {
     editorCell.addEditorCell(this.createRefNode_emto3h_h0(editorContext, node));
     editorCell.addEditorCell(this.createConstant_emto3h_i0(editorContext, node));
     editorCell.addEditorCell(this.createComponent_emto3h_j0(editorContext, node));
-    editorCell.addEditorCell(this.createRefNode_emto3h_k0(editorContext, node));
-    editorCell.addEditorCell(this.createConstant_emto3h_l0(editorContext, node));
+    editorCell.addEditorCell(this.createConstant_emto3h_k0(editorContext, node));
+    editorCell.addEditorCell(this.createRefNode_emto3h_l0(editorContext, node));
+    editorCell.addEditorCell(this.createConstant_emto3h_m0(editorContext, node));
     return editorCell;
   }
   private EditorCell createConstant_emto3h_a0(EditorContext editorContext, SNode node) {
@@ -153,10 +154,16 @@ public class InputElement_Editor extends DefaultNodeEditor {
     EditorCell editorCell = editorContext.getCellFactory().createEditorComponentCell(node, "ro.barata.mps.htmlLanguage.editor.HTMLAttributesComponent");
     return editorCell;
   }
-  private EditorCell createRefNode_emto3h_k0(EditorContext editorContext, SNode node) {
+  private EditorCell createConstant_emto3h_k0(EditorContext editorContext, SNode node) {
+    EditorCell_Constant editorCell = new EditorCell_Constant(editorContext, node, " ");
+    editorCell.setCellId("Constant_emto3h_k0");
+    editorCell.setDefaultText("");
+    return editorCell;
+  }
+  private EditorCell createRefNode_emto3h_l0(EditorContext editorContext, SNode node) {
     CellProviderWithRole provider = new RefNodeCellProvider(node, editorContext);
     provider.setRole("action");
-    provider.setNoTargetText("");
+    provider.setNoTargetText("<no action>");
     EditorCell editorCell;
     editorCell = provider.createEditorCell(editorContext);
     if (editorCell.getRole() == null) {
@@ -171,9 +178,12 @@ public class InputElement_Editor extends DefaultNodeEditor {
     } else
     return editorCell;
   }
-  private EditorCell createConstant_emto3h_l0(EditorContext editorContext, SNode node) {
+  private EditorCell createConstant_emto3h_m0(EditorContext editorContext, SNode node) {
     EditorCell_Constant editorCell = new EditorCell_Constant(editorContext, node, "/>");
-    editorCell.setCellId("Constant_emto3h_l0");
+    editorCell.setCellId("Constant_emto3h_m0");
+    Style style = new StyleImpl();
+    HTMLStyleSheet_StyleSheet.apply_tag(style, editorCell);
+    editorCell.getStyle().putAll(style);
     editorCell.setDefaultText("");
     return editorCell;
   }
