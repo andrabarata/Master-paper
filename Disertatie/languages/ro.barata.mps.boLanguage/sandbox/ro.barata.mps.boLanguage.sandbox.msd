@@ -27,6 +27,7 @@
     <usedLanguage>5cba771a-86ff-496b-a121-6ae83a039560(ro.barata.mps.rootLanguage)</usedLanguage>
     <usedLanguage>b9cb18bd-a29f-47d8-9dd0-544a91c4eef2(ro.barata.mps.htmlLanguage)</usedLanguage>
     <usedLanguage>d3ddb860-292b-4451-8638-cec4e3c81b18(ro.barata.mps.javascriptLanguage)</usedLanguage>
+    <usedLanguage>edb2b9cf-991f-4100-ab3c-9444c4d6e26b(ro.barata.mps.styleLanguage)</usedLanguage>
   </usedLanguages>
   <languageVersions>
     <language id="4caf0310-491e-41f5-8a9b-2006b3a94898" fqName="jetbrains.mps.execution.util" version="0" />
@@ -36,6 +37,7 @@
     <language id="b9cb18bd-a29f-47d8-9dd0-544a91c4eef2" fqName="ro.barata.mps.htmlLanguage" version="0" />
     <language id="d3ddb860-292b-4451-8638-cec4e3c81b18" fqName="ro.barata.mps.javascriptLanguage" version="0" />
     <language id="5cba771a-86ff-496b-a121-6ae83a039560" fqName="ro.barata.mps.rootLanguage" version="0" />
+    <language id="edb2b9cf-991f-4100-ab3c-9444c4d6e26b" fqName="ro.barata.mps.styleLanguage" version="0" />
   </languageVersions>
 </solution>
 

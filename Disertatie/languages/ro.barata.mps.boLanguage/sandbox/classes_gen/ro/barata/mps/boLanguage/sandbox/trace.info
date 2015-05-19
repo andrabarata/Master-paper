@@ -12,6 +12,7 @@
   <concept fqn="jetbrains.mps.baseLanguage.structure.Statement" />
   <concept fqn="jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" />
   <concept fqn="jetbrains.mps.baseLanguage.structure.TryCatchStatement" />
+  <concept fqn="jetbrains.mps.baseLanguage.structure.TryStatement" />
   <concept fqn="jetbrains.mps.baseLanguage.structure.WhileStatement" />
   <root>
     <file name="IndexGenerator.java">
@@ -174,7 +175,7 @@
       <node id="1706155229852122088" at="106,5,109,5" concept="5" />
       <node id="1706155229852122088" at="109,5,112,5" concept="0" />
       <node id="1706155229852122088" at="109,5,112,5" concept="5" />
-      <node id="1706155229852122088" at="52,14,56,5" concept="12" />
+      <node id="1706155229852122088" at="52,14,56,5" concept="13" />
       <node id="1706155229852122088" at="72,23,76,5" concept="0" />
       <node id="1706155229852122088" at="72,23,76,5" concept="5" />
       <node id="1706155229852122088" at="76,5,80,5" concept="0" />
@@ -187,7 +188,7 @@
       <node id="1706155229852122088" at="125,5,129,5" concept="5" />
       <node id="1706155229852122088" at="129,5,133,5" concept="0" />
       <node id="1706155229852122088" at="129,5,133,5" concept="5" />
-      <node id="1706155229852122088" at="22,47,29,5" concept="12" />
+      <node id="1706155229852122088" at="22,47,29,5" concept="13" />
       <node id="1706155229852122088" at="18,0,32,0" concept="6" trace="getAllAttributes#()Ljava/util/List;" />
       <node id="1706155229852122088" at="69,0,89,0" concept="6" trace="addAttribute#(Lro/barata/mps/boLanguage/sandbox/Attribute;)V" />
       <node id="1706155229852122088" at="119,0,139,0" concept="6" trace="deleteAttribute#(Lro/barata/mps/boLanguage/sandbox/Attribute;)V" />
@@ -404,7 +405,7 @@
       <node id="1706155229852122088" at="91,33,94,5" concept="5" />
       <node id="1706155229852122088" at="94,5,97,5" concept="0" />
       <node id="1706155229852122088" at="94,5,97,5" concept="5" />
-      <node id="1706155229852122088" at="49,14,53,5" concept="12" />
+      <node id="1706155229852122088" at="49,14,53,5" concept="13" />
       <node id="1706155229852122088" at="67,23,71,5" concept="0" />
       <node id="1706155229852122088" at="67,23,71,5" concept="5" />
       <node id="1706155229852122088" at="71,5,75,5" concept="0" />
@@ -413,7 +414,7 @@
       <node id="1706155229852122088" at="106,27,110,5" concept="5" />
       <node id="1706155229852122088" at="110,5,114,5" concept="0" />
       <node id="1706155229852122088" at="110,5,114,5" concept="5" />
-      <node id="1706155229852122088" at="22,44,28,5" concept="12" />
+      <node id="1706155229852122088" at="22,44,28,5" concept="13" />
       <node id="1706155229852122088" at="18,0,31,0" concept="6" trace="getAllCategorys#()Ljava/util/List;" />
       <node id="1706155229852122088" at="64,0,80,0" concept="6" trace="addCategory#(Lro/barata/mps/boLanguage/sandbox/Category;)V" />
       <node id="1706155229852122088" at="104,0,120,0" concept="6" trace="deleteCategory#(Lro/barata/mps/boLanguage/sandbox/Category;)V" />
@@ -589,12 +590,12 @@
       <node id="1706155229852122088" at="74,23,77,5" concept="5" />
       <node id="1706155229852122088" at="79,33,82,5" concept="0" />
       <node id="1706155229852122088" at="79,33,82,5" concept="5" />
-      <node id="1706155229852122088" at="46,14,50,5" concept="12" />
+      <node id="1706155229852122088" at="46,14,50,5" concept="13" />
       <node id="1706155229852122088" at="62,23,66,5" concept="0" />
       <node id="1706155229852122088" at="62,23,66,5" concept="5" />
       <node id="1706155229852122088" at="91,27,95,5" concept="0" />
       <node id="1706155229852122088" at="91,27,95,5" concept="5" />
-      <node id="1706155229852122088" at="22,44,27,5" concept="12" />
+      <node id="1706155229852122088" at="22,44,27,5" concept="13" />
       <node id="1706155229852122088" at="18,0,30,0" concept="6" trace="getAllCustomers#()Ljava/util/List;" />
       <node id="1706155229852122088" at="59,0,71,0" concept="6" trace="addCustomer#(Lro/barata/mps/boLanguage/sandbox/Customer;)V" />
       <node id="1706155229852122088" at="89,0,101,0" concept="6" trace="deleteCustomer#(Lro/barata/mps/boLanguage/sandbox/Customer;)V" />
@@ -862,7 +863,7 @@
       <node id="1706155229852122088" at="106,5,109,5" concept="5" />
       <node id="1706155229852122088" at="109,5,112,5" concept="0" />
       <node id="1706155229852122088" at="109,5,112,5" concept="5" />
-      <node id="1706155229852122088" at="52,14,56,5" concept="12" />
+      <node id="1706155229852122088" at="52,14,56,5" concept="13" />
       <node id="1706155229852122088" at="72,23,76,5" concept="0" />
       <node id="1706155229852122088" at="72,23,76,5" concept="5" />
       <node id="1706155229852122088" at="76,5,80,5" concept="0" />
@@ -875,7 +876,7 @@
       <node id="1706155229852122088" at="125,5,129,5" concept="5" />
       <node id="1706155229852122088" at="129,5,133,5" concept="0" />
       <node id="1706155229852122088" at="129,5,133,5" concept="5" />
-      <node id="1706155229852122088" at="22,38,29,5" concept="12" />
+      <node id="1706155229852122088" at="22,38,29,5" concept="13" />
       <node id="1706155229852122088" at="18,0,32,0" concept="6" trace="getAllPersons#()Ljava/util/List;" />
       <node id="1706155229852122088" at="69,0,89,0" concept="6" trace="addPerson#(Lro/barata/mps/boLanguage/sandbox/Person;)V" />
       <node id="1706155229852122088" at="119,0,139,0" concept="6" trace="deletePerson#(Lro/barata/mps/boLanguage/sandbox/Person;)V" />
@@ -1092,7 +1093,7 @@
       <node id="1706155229852122088" at="91,33,94,5" concept="5" />
       <node id="1706155229852122088" at="94,5,97,5" concept="0" />
       <node id="1706155229852122088" at="94,5,97,5" concept="5" />
-      <node id="1706155229852122088" at="49,14,53,5" concept="12" />
+      <node id="1706155229852122088" at="49,14,53,5" concept="13" />
       <node id="1706155229852122088" at="67,23,71,5" concept="0" />
       <node id="1706155229852122088" at="67,23,71,5" concept="5" />
       <node id="1706155229852122088" at="71,5,75,5" concept="0" />
@@ -1101,7 +1102,7 @@
       <node id="1706155229852122088" at="106,27,110,5" concept="5" />
       <node id="1706155229852122088" at="110,5,114,5" concept="0" />
       <node id="1706155229852122088" at="110,5,114,5" concept="5" />
-      <node id="1706155229852122088" at="22,41,28,5" concept="12" />
+      <node id="1706155229852122088" at="22,41,28,5" concept="13" />
       <node id="1706155229852122088" at="18,0,31,0" concept="6" trace="getAllProducts#()Ljava/util/List;" />
       <node id="1706155229852122088" at="64,0,80,0" concept="6" trace="addProduct#(Lro/barata/mps/boLanguage/sandbox/Product;)V" />
       <node id="1706155229852122088" at="104,0,120,0" concept="6" trace="deleteProduct#(Lro/barata/mps/boLanguage/sandbox/Product;)V" />
@@ -1579,7 +1580,7 @@
       <node id="1706155229852122088" at="91,33,94,5" concept="5" />
       <node id="1706155229852122088" at="94,5,97,5" concept="0" />
       <node id="1706155229852122088" at="94,5,97,5" concept="5" />
-      <node id="1706155229852122088" at="49,14,53,5" concept="12" />
+      <node id="1706155229852122088" at="49,14,53,5" concept="13" />
       <node id="1706155229852122088" at="67,23,71,5" concept="0" />
       <node id="1706155229852122088" at="67,23,71,5" concept="5" />
       <node id="1706155229852122088" at="71,5,75,5" concept="0" />
@@ -1588,7 +1589,7 @@
       <node id="1706155229852122088" at="106,27,110,5" concept="5" />
       <node id="1706155229852122088" at="110,5,114,5" concept="0" />
       <node id="1706155229852122088" at="110,5,114,5" concept="5" />
-      <node id="1706155229852122088" at="22,32,28,5" concept="12" />
+      <node id="1706155229852122088" at="22,32,28,5" concept="13" />
       <node id="1706155229852122088" at="18,0,31,0" concept="6" trace="getAllShops#()Ljava/util/List;" />
       <node id="1706155229852122088" at="64,0,80,0" concept="6" trace="addShop#(Lro/barata/mps/boLanguage/sandbox/Shop;)V" />
       <node id="1706155229852122088" at="104,0,120,0" concept="6" trace="deleteShop#(Lro/barata/mps/boLanguage/sandbox/Shop;)V" />
@@ -1670,6 +1671,80 @@
         <var name="keys" id="1706155229852122088" />
       </scope>
       <unit id="1706155229852122088" at="11,0,122,0" name="ro.barata.mps.boLanguage.sandbox.ShopDAO" />
+    </file>
+  </root>
+  <root nodeRef="r:ca2f6163-f731-4984-b28c-c8e4f51179c6(ro.barata.mps.boLanguage.sandbox)/4950668675312295267">
+    <file name="FileStructureClass.java">
+      <node id="4950668675312295267" at="14,42,15,152" concept="7" />
+      <node id="4950668675312295267" at="15,152,16,64" concept="2" />
+      <node id="4950668675312295295" at="17,5,18,59" concept="7" />
+      <node id="4950668675312295295" at="18,59,19,51" concept="7" />
+      <node id="4950668675312295295" at="19,51,20,31" concept="7" />
+      <node id="4950668675312295295" at="20,31,21,33" concept="7" />
+      <node id="4950668675312295295" at="21,33,22,0" concept="9" />
+      <node id="4950668675312295295" at="23,11,24,53" concept="7" />
+      <node id="4950668675312295295" at="24,53,25,57" concept="2" />
+      <node id="4950668675312295295" at="25,57,26,36" concept="2" />
+      <node id="4950668675312295295" at="26,36,27,70" concept="2" />
+      <node id="4950668675312295295" at="27,70,28,35" concept="7" />
+      <node id="4950668675312295295" at="29,28,30,28" concept="2" />
+      <node id="4950668675312295295" at="31,9,32,47" concept="2" />
+      <node id="4950668675312295295" at="32,47,33,21" concept="7" />
+      <node id="4950668675312295295" at="33,21,34,38" concept="7" />
+      <node id="4950668675312295295" at="35,50,36,39" concept="2" />
+      <node id="4950668675312295295" at="38,30,39,29" concept="2" />
+      <node id="4950668675312295295" at="42,15,43,26" concept="2" />
+      <node id="4950668675312295295" at="44,34,45,33" concept="2" />
+      <node id="4950668675312295295" at="49,15,50,27" concept="2" />
+      <node id="4950668675312295295" at="51,34,52,33" concept="2" />
+      <node id="4950668675312295295" at="54,9,55,0" concept="9" />
+      <node id="4950668675312295295" at="28,35,31,9" concept="5" />
+      <node id="4950668675312295295" at="34,38,37,9" concept="13" />
+      <node id="4950668675312295295" at="41,28,46,11" concept="11" />
+      <node id="4950668675312295295" at="48,29,53,11" concept="11" />
+      <node id="4950668675312295295" at="40,17,47,9" concept="5" />
+      <node id="4950668675312295295" at="47,9,54,9" concept="5" />
+      <node id="4950668675312295295" at="22,0,56,7" concept="12" />
+      <node id="4950668675312295295" at="16,64,57,5" concept="0" />
+      <node id="4950668675312295267" at="14,0,59,0" concept="10" trace="main#([Ljava/lang/String;)V" />
+      <scope id="4950668675312295295" at="29,28,30,28" />
+      <scope id="4950668675312295295" at="35,50,36,39" />
+      <scope id="4950668675312295295" at="38,0,39,29">
+        <var name="ex" id="4950668675312295295" />
+      </scope>
+      <scope id="4950668675312295295" at="38,30,39,29" />
+      <scope id="4950668675312295295" at="42,15,43,26" />
+      <scope id="4950668675312295295" at="44,0,45,33">
+        <var name="ex" id="4950668675312295295" />
+      </scope>
+      <scope id="4950668675312295295" at="44,34,45,33" />
+      <scope id="4950668675312295295" at="49,15,50,27" />
+      <scope id="4950668675312295295" at="51,0,52,33">
+        <var name="ex" id="4950668675312295295" />
+      </scope>
+      <scope id="4950668675312295295" at="51,34,52,33" />
+      <scope id="4950668675312295295" at="41,28,46,11" />
+      <scope id="4950668675312295295" at="48,29,53,11" />
+      <scope id="4950668675312295295" at="23,11,37,9">
+        <var name="absPath" id="4950668675312295295" />
+        <var name="bytes" id="4950668675312295295" />
+        <var name="f" id="4950668675312295295" />
+        <var name="read" id="4950668675312295295" />
+      </scope>
+      <scope id="4950668675312295295" at="40,17,55,0" />
+      <scope id="4950668675312295295" at="17,5,56,7">
+        <var name="fileName" id="4950668675312295295" />
+        <var name="input" id="4950668675312295295" />
+        <var name="output" id="4950668675312295295" />
+        <var name="p" id="4950668675312295295" />
+      </scope>
+      <scope id="4950668675312295267" at="14,42,57,5">
+        <var name="rootPath" id="4950668675312295267" />
+      </scope>
+      <scope id="4950668675312295267" at="14,0,59,0">
+        <var name="args" id="4950668675312295267" />
+      </scope>
+      <unit id="4950668675312295267" at="13,0,60,0" name="ro.barata.mps.boLanguage.sandbox.FileStructureClass" />
     </file>
   </root>
   <root nodeRef="r:ca2f6163-f731-4984-b28c-c8e4f51179c6(ro.barata.mps.boLanguage.sandbox)/5515250482370694470">

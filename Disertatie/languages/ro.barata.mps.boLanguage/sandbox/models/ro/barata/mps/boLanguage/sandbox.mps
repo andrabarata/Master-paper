@@ -7,6 +7,7 @@
     <use id="58b9e0aa-6663-4086-8f84-dfaa697f9989" name="ro.barata.mps.databaseOperationsLanguage" version="-1" />
     <use id="b9cb18bd-a29f-47d8-9dd0-544a91c4eef2" name="ro.barata.mps.htmlLanguage" version="-1" />
     <use id="d3ddb860-292b-4451-8638-cec4e3c81b18" name="ro.barata.mps.javascriptLanguage" version="-1" />
+    <use id="edb2b9cf-991f-4100-ab3c-9444c4d6e26b" name="ro.barata.mps.styleLanguage" version="-1" />
   </languages>
   <imports>
     <import index="ikgz" ref="r:b83b433b-ea5a-4d7b-972b-0c047197eb67(ro.barata.mps.boLanguage.structure)" />
@@ -87,6 +88,26 @@
         <child id="5512171426404383064" name="actions" index="1JALfH" />
         <child id="2539806008948698314" name="head" index="3MXhzh" />
         <child id="2539806008948698316" name="body" index="3MXhzn" />
+      </concept>
+    </language>
+    <language id="edb2b9cf-991f-4100-ab3c-9444c4d6e26b" name="ro.barata.mps.styleLanguage">
+      <concept id="4950668675313132668" name="ro.barata.mps.styleLanguage.structure.UserAttribute" flags="ng" index="1O1iEi">
+        <property id="4950668675313132698" name="value" index="1O1iDO" />
+        <property id="4950668675313132696" name="name" index="1O1iDQ" />
+      </concept>
+      <concept id="4950668675313132615" name="ro.barata.mps.styleLanguage.structure.DefinedAttribute" flags="ng" index="1O1iED" />
+      <concept id="4950668675313132244" name="ro.barata.mps.styleLanguage.structure.CssNode" flags="ng" index="1O1iKU">
+        <property id="4950668675313132272" name="identifier" index="1O1iKu" />
+        <child id="4950668675313132702" name="attributes" index="1O1iDK" />
+      </concept>
+      <concept id="4950668675313132189" name="ro.barata.mps.styleLanguage.structure.CssFile" flags="ng" index="1O1iLN">
+        <child id="4950668675313132704" name="nodes" index="1O1iDe" />
+      </concept>
+      <concept id="4950668675312158720" name="ro.barata.mps.styleLanguage.structure.FileStructure" flags="ng" index="1O5GrI">
+        <child id="4950668675312158724" name="files" index="1O5GrE" />
+      </concept>
+      <concept id="4950668675312158721" name="ro.barata.mps.styleLanguage.structure.File" flags="ng" index="1O5GrJ">
+        <property id="4950668675312158722" name="path" index="1O5GrG" />
       </concept>
     </language>
     <language id="d3ddb860-292b-4451-8638-cec4e3c81b18" name="ro.barata.mps.javascriptLanguage">
@@ -739,6 +760,32 @@
         </node>
       </node>
       <node concept="1pYSM5" id="7KwyEUhTzFx" role="1p1zRP" />
+    </node>
+  </node>
+  <node concept="1O5GrI" id="4iOjISKD9Pz">
+    <property role="3GE5qa" value="html" />
+    <node concept="1O5GrJ" id="4iOjISKD9PZ" role="1O5GrE">
+      <property role="1O5GrG" value="D:\stick\poze\090610115548.jpg" />
+    </node>
+  </node>
+  <node concept="1O1iLN" id="4iOjISKGA4k">
+    <property role="3GE5qa" value="html" />
+    <property role="TrG5h" value="main" />
+    <node concept="1O1iKU" id="4iOjISKGA4l" role="1O1iDe">
+      <property role="1O1iKu" value="#this" />
+      <node concept="1O1iEi" id="4iOjISKGA4F" role="1O1iDK">
+        <property role="1O1iDQ" value="position" />
+        <property role="1O1iDO" value="right" />
+      </node>
+      <node concept="1O1iED" id="4iOjISKGA4p" role="1O1iDK" />
+    </node>
+    <node concept="1O1iKU" id="4iOjISKGA4J" role="1O1iDe">
+      <property role="1O1iKu" value=".that" />
+      <node concept="1O1iED" id="4iOjISKGA4Q" role="1O1iDK" />
+      <node concept="1O1iEi" id="4iOjISKGA4W" role="1O1iDK">
+        <property role="1O1iDQ" value="width" />
+        <property role="1O1iDO" value="270px" />
+      </node>
     </node>
   </node>
 </model>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<debug-info>
+  <concept fqn="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+  <concept fqn="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+  <concept fqn="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+  <concept fqn="jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" />
+  <root>
+    <file name="BehaviorAspectDescriptor.java">
+      <unit at="9,0,24,0" name="ro.barata.mps.styleLanguage.behavior.BehaviorAspectDescriptor" />
+    </file>
+    <file name="FileStructure_BehaviorDescriptor.java">
+      <unit at="10,0,24,0" name="ro.barata.mps.styleLanguage.behavior.FileStructure_BehaviorDescriptor" />
+    </file>
+    <file name="File_BehaviorDescriptor.java">
+      <unit at="7,0,15,0" name="ro.barata.mps.styleLanguage.behavior.File_BehaviorDescriptor" />
+    </file>
+  </root>
+  <root nodeRef="r:8dd3e8de-1fbe-43c9-aa19-fbfc0f866a37(ro.barata.mps.styleLanguage.behavior)/4950668675312847098">
+    <file name="File_Behavior.java">
+      <node id="4950668675312847291" at="12,77,13,182" concept="1" />
+      <node id="4950668675312848439" at="13,182,14,35" concept="0" />
+      <node id="4950668675312852802" at="14,35,15,16" concept="2" />
+      <node id="4950668675312847098" at="10,0,12,0" concept="3" trace="init#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <node id="4950668675312847098" at="12,0,17,0" concept="3" trace="call_escapeSlash_4950668675312847128#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljava/lang/String;" />
+      <scope id="4950668675312847100" at="10,43,10,43" />
+      <scope id="4950668675312847098" at="10,0,12,0">
+        <var name="thisNode" id="4950668675312847098" />
+      </scope>
+      <scope id="4950668675312847130" at="12,77,15,16">
+        <var name="path" id="4950668675312847294" />
+      </scope>
+      <scope id="4950668675312847098" at="12,0,17,0">
+        <var name="thisNode" id="4950668675312847098" />
+      </scope>
+      <unit id="4950668675312847098" at="9,0,18,0" name="ro.barata.mps.styleLanguage.behavior.File_Behavior" />
+    </file>
+  </root>
+</debug-info>
+

@@ -8,6 +8,7 @@
       <modulePath path="$PROJECT_DIR$/languages/ro.barata.mps.htmlLanguage/ro.barata.mps.htmlLanguage.mpl" folder="" />
       <modulePath path="$PROJECT_DIR$/languages/ro.barata.mps.javascriptLanguage/ro.barata.mps.javascriptLanguage.mpl" folder="" />
       <modulePath path="$PROJECT_DIR$/languages/ro.barata.mps.rootLanguage/ro.barata.mps.rootLanguage.mpl" folder="" />
+      <modulePath path="$PROJECT_DIR$/languages/ro.barata.mps.styleLanguage/ro.barata.mps.styleLanguage.mpl" folder="" />
     </projectModules>
   </component>
 </project>
