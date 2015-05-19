@@ -5,14 +5,29 @@
   <concept fqn="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
   <concept fqn="jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" />
   <root>
+    <file name="Attribute_BehaviorDescriptor.java">
+      <unit at="7,0,15,0" name="ro.barata.mps.styleLanguage.behavior.Attribute_BehaviorDescriptor" />
+    </file>
     <file name="BehaviorAspectDescriptor.java">
-      <unit at="9,0,24,0" name="ro.barata.mps.styleLanguage.behavior.BehaviorAspectDescriptor" />
+      <unit at="9,0,32,0" name="ro.barata.mps.styleLanguage.behavior.BehaviorAspectDescriptor" />
+    </file>
+    <file name="CssFile_BehaviorDescriptor.java">
+      <unit at="10,0,21,0" name="ro.barata.mps.styleLanguage.behavior.CssFile_BehaviorDescriptor" />
+    </file>
+    <file name="CssNode_BehaviorDescriptor.java">
+      <unit at="7,0,15,0" name="ro.barata.mps.styleLanguage.behavior.CssNode_BehaviorDescriptor" />
+    </file>
+    <file name="DefinedAttribute_BehaviorDescriptor.java">
+      <unit at="6,0,14,0" name="ro.barata.mps.styleLanguage.behavior.DefinedAttribute_BehaviorDescriptor" />
     </file>
     <file name="FileStructure_BehaviorDescriptor.java">
       <unit at="10,0,24,0" name="ro.barata.mps.styleLanguage.behavior.FileStructure_BehaviorDescriptor" />
     </file>
     <file name="File_BehaviorDescriptor.java">
       <unit at="7,0,15,0" name="ro.barata.mps.styleLanguage.behavior.File_BehaviorDescriptor" />
+    </file>
+    <file name="UserAttribute_BehaviorDescriptor.java">
+      <unit at="6,0,14,0" name="ro.barata.mps.styleLanguage.behavior.UserAttribute_BehaviorDescriptor" />
     </file>
   </root>
   <root nodeRef="r:8dd3e8de-1fbe-43c9-aa19-fbfc0f866a37(ro.barata.mps.styleLanguage.behavior)/4950668675312847098">

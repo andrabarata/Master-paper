@@ -111,6 +111,7 @@ public class ContainerAttributesEditor implements ConceptEditorComponent {
     EditorCell_Constant editorCell = new EditorCell_Constant(editorContext, node, ">");
     editorCell.setCellId("Constant_31p5aq_b0");
     Style style = new StyleImpl();
+    HTMLStyleSheet_StyleSheet.apply_symbol(style, editorCell);
     style.set(StyleAttributes.INDENT_LAYOUT_NEW_LINE, 0, true);
     editorCell.getStyle().putAll(style);
     editorCell.setDefaultText("");

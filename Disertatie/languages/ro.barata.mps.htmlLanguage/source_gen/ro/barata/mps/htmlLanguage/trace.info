@@ -2,8 +2,8 @@
 <debug-info>
   <root>
     <file name="Language.java">
-      <unit at="48,21,48,56" name="ro.barata.mps.htmlLanguage.Language$1" />
-      <unit at="20,0,65,0" name="ro.barata.mps.htmlLanguage.Language" />
+      <unit at="50,21,50,56" name="ro.barata.mps.htmlLanguage.Language$1" />
+      <unit at="22,0,70,0" name="ro.barata.mps.htmlLanguage.Language" />
     </file>
   </root>
 </debug-info>

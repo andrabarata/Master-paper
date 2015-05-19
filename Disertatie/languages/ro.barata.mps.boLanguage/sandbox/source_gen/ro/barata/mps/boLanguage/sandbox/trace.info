@@ -16,19 +16,22 @@
   <concept fqn="jetbrains.mps.baseLanguage.structure.WhileStatement" />
   <root>
     <file name="IndexGenerator.java">
-      <unit at="8,0,54,0" name="ro.barata.mps.boLanguage.sandbox.IndexGenerator" />
+      <unit at="7,0,27,0" name="ro.barata.mps.boLanguage.sandbox.IndexGenerator" />
     </file>
     <file name="IndexServlet.java">
-      <unit at="12,0,136,0" name="ro.barata.mps.boLanguage.sandbox.IndexServlet" />
+      <unit at="12,0,46,0" name="ro.barata.mps.boLanguage.sandbox.IndexServlet" />
     </file>
     <file name="NextPageGenerator.java">
-      <unit at="7,0,30,0" name="ro.barata.mps.boLanguage.sandbox.NextPageGenerator" />
+      <unit at="7,0,31,0" name="ro.barata.mps.boLanguage.sandbox.NextPageGenerator" />
     </file>
     <file name="NextPageServlet.java">
       <unit at="12,0,46,0" name="ro.barata.mps.boLanguage.sandbox.NextPageServlet" />
     </file>
+    <file name="StructureGenerator.java">
+      <unit at="7,0,38,0" name="ro.barata.mps.boLanguage.sandbox.StructureGenerator" />
+    </file>
     <file name="TestPageGenerator.java">
-      <unit at="8,0,42,0" name="ro.barata.mps.boLanguage.sandbox.TestPageGenerator" />
+      <unit at="8,0,43,0" name="ro.barata.mps.boLanguage.sandbox.TestPageGenerator" />
     </file>
     <file name="TestPageServlet.java">
       <unit at="12,0,46,0" name="ro.barata.mps.boLanguage.sandbox.TestPageServlet" />

@@ -35,6 +35,7 @@ public class HTMLAttributesEditor implements ConceptEditorComponent {
     EditorCell_Collection editorCell = EditorCell_Collection.createIndent2(editorContext, node);
     editorCell.setCellId("Collection_ggyfnb_a");
     editorCell.addEditorCell(this.createRefNodeList_ggyfnb_a0(editorContext, node));
+    editorCell.addEditorCell(this.createConstant_ggyfnb_b0(editorContext, node));
     return editorCell;
   }
   private EditorCell createRefNodeList_ggyfnb_a0(EditorContext editorContext, SNode node) {
@@ -103,5 +104,14 @@ public class HTMLAttributesEditor implements ConceptEditorComponent {
       editorCell.setDefaultText("");
       return editorCell;
     }
+  }
+  private EditorCell createConstant_ggyfnb_b0(EditorContext editorContext, SNode node) {
+    EditorCell_Constant editorCell = new EditorCell_Constant(editorContext, node, ">");
+    editorCell.setCellId("Constant_ggyfnb_b0");
+    Style style = new StyleImpl();
+    HTMLStyleSheet_StyleSheet.apply_symbol(style, editorCell);
+    editorCell.getStyle().putAll(style);
+    editorCell.setDefaultText("");
+    return editorCell;
   }
 }

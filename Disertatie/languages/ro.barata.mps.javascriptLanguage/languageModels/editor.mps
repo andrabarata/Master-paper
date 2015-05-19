@@ -537,7 +537,7 @@
       </node>
       <node concept="3F0A7n" id="3ET5BXs6_z$" role="3EZMnx">
         <ref role="1NtTu8" to="jel9:3ET5BXs6_zh" resolve="value" />
-        <ref role="1k5W1q" node="7KwyEUhUZnK" resolve="TextSymbol" />
+        <ref role="1k5W1q" node="2FtF2DJX4yj" resolve="textValue" />
       </node>
       <node concept="3F0ifn" id="2FtF2DJNuS6" role="3EZMnx">
         <property role="3F0ifm" value="'" />
@@ -682,10 +682,10 @@
       </node>
     </node>
     <node concept="14StLt" id="2FtF2DJX4yj" role="V601i">
-      <property role="TrG5h" value="jsValue" />
+      <property role="TrG5h" value="textValue" />
       <node concept="VechU" id="2FtF2DJX4yy" role="3F10Kt">
         <node concept="1iSF2X" id="2FtF2DJX4y_" role="VblUZ">
-          <property role="1iTho6" value="800000" />
+          <property role="1iTho6" value="FF00FF" />
         </node>
       </node>
     </node>

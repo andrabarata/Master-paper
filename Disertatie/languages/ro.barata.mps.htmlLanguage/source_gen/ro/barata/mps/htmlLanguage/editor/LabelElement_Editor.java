@@ -24,9 +24,8 @@ public class LabelElement_Editor extends DefaultNodeEditor {
     editorCell.setBig(true);
     editorCell.addEditorCell(this.createConstant_ikaihe_a0(editorContext, node));
     editorCell.addEditorCell(this.createComponent_ikaihe_b0(editorContext, node));
-    editorCell.addEditorCell(this.createConstant_ikaihe_c0(editorContext, node));
-    editorCell.addEditorCell(this.createRefNode_ikaihe_d0(editorContext, node));
-    editorCell.addEditorCell(this.createConstant_ikaihe_e0(editorContext, node));
+    editorCell.addEditorCell(this.createRefNode_ikaihe_c0(editorContext, node));
+    editorCell.addEditorCell(this.createConstant_ikaihe_d0(editorContext, node));
     return editorCell;
   }
   private EditorCell createConstant_ikaihe_a0(EditorContext editorContext, SNode node) {
@@ -42,13 +41,7 @@ public class LabelElement_Editor extends DefaultNodeEditor {
     EditorCell editorCell = editorContext.getCellFactory().createEditorComponentCell(node, "ro.barata.mps.htmlLanguage.editor.HTMLAttributesEditor");
     return editorCell;
   }
-  private EditorCell createConstant_ikaihe_c0(EditorContext editorContext, SNode node) {
-    EditorCell_Constant editorCell = new EditorCell_Constant(editorContext, node, ">");
-    editorCell.setCellId("Constant_ikaihe_c0");
-    editorCell.setDefaultText("");
-    return editorCell;
-  }
-  private EditorCell createRefNode_ikaihe_d0(EditorContext editorContext, SNode node) {
+  private EditorCell createRefNode_ikaihe_c0(EditorContext editorContext, SNode node) {
     CellProviderWithRole provider = new RefNodeCellProvider(node, editorContext);
     provider.setRole("value");
     provider.setNoTargetText("<no value>");
@@ -66,9 +59,9 @@ public class LabelElement_Editor extends DefaultNodeEditor {
     } else
     return editorCell;
   }
-  private EditorCell createConstant_ikaihe_e0(EditorContext editorContext, SNode node) {
+  private EditorCell createConstant_ikaihe_d0(EditorContext editorContext, SNode node) {
     EditorCell_Constant editorCell = new EditorCell_Constant(editorContext, node, "</label>");
-    editorCell.setCellId("Constant_ikaihe_e0");
+    editorCell.setCellId("Constant_ikaihe_d0");
     Style style = new StyleImpl();
     HTMLStyleSheet_StyleSheet.apply_tag(style, editorCell);
     editorCell.getStyle().putAll(style);

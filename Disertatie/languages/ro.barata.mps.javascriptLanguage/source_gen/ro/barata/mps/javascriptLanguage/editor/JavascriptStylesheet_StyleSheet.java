@@ -18,8 +18,8 @@ public class JavascriptStylesheet_StyleSheet {
     style.set(StyleAttributes.PUNCTUATION_LEFT, 0, true);
     style.set(StyleAttributes.PUNCTUATION_RIGHT, 0, true);
   }
-  public static void apply_jsValue(Style style, EditorCell editorCell) {
-    style.set(StyleAttributes.TEXT_COLOR, 0, StyleRegistry.getInstance().getSimpleColor(new Color(8388608)));
+  public static void apply_textValue(Style style, EditorCell editorCell) {
+    style.set(StyleAttributes.TEXT_COLOR, 0, StyleRegistry.getInstance().getSimpleColor(new Color(16711935)));
   }
   public static void apply_symbol(Style style, EditorCell editorCell) {
     style.set(StyleAttributes.PUNCTUATION_LEFT, 0, true);

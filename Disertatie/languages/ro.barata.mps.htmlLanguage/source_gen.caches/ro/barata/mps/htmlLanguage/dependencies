@@ -9,6 +9,7 @@
     <classNode dependClassName="jetbrains.mps.actions.descriptor.AbstractActionAspectDescriptor" />
     <classNode dependClassName="jetbrains.mps.generator.runtime.TemplateModule" />
     <classNode dependClassName="jetbrains.mps.generator.runtime.TemplateUtil" />
+    <classNode dependClassName="jetbrains.mps.lang.typesystem.runtime.IHelginsDescriptor" />
     <classNode dependClassName="jetbrains.mps.openapi.actions.descriptor.ActionAspectDescriptor" />
     <classNode dependClassName="jetbrains.mps.openapi.editor.descriptor.EditorAspectDescriptor" />
     <classNode dependClassName="jetbrains.mps.smodel.adapter.ids.SLanguageId" />
@@ -20,6 +21,7 @@
     <classNode dependClassName="ro.barata.mps.htmlLanguage.constraints.ConstraintsAspectDescriptor" />
     <classNode dependClassName="ro.barata.mps.htmlLanguage.editor.EditorAspectDescriptorImpl" />
     <classNode dependClassName="ro.barata.mps.htmlLanguage.structure.StructureAspectDescriptor" />
+    <classNode dependClassName="ro.barata.mps.htmlLanguage.typesystem.TypesystemDescriptor" />
     <classNode extendsClassName="jetbrains.mps.smodel.language.LanguageRuntime" />
   </dependency>
 </dependenciesRoot>

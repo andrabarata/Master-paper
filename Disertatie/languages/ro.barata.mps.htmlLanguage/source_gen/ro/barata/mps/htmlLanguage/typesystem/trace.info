@@ -1,3 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<debug-info />
+<debug-info>
+  <concept fqn="jetbrains.mps.baseLanguage.structure.BlockStatement" />
+  <concept fqn="jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" />
+  <concept fqn="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+  <concept fqn="jetbrains.mps.baseLanguage.structure.ForeachStatement" />
+  <concept fqn="jetbrains.mps.baseLanguage.structure.IfStatement" />
+  <concept fqn="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" />
+  <concept fqn="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+  <concept fqn="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+  <root>
+    <file name="TypesystemDescriptor.java">
+      <unit at="8,0,16,0" name="ro.barata.mps.htmlLanguage.typesystem.TypesystemDescriptor" />
+    </file>
+  </root>
+  <root nodeRef="r:77c740ba-daf1-40c4-a88b-1d294d4e94b9(ro.barata.mps.htmlLanguage.typesystem)/4045572257642239623">
+    <file name="CheckTiles_NonTypesystemRule.java">
+      <node id="4045572257642249806" at="23,121,24,16" concept="6" />
+      <node id="4045572257642276722" at="27,318,28,16" concept="2" />
+      <node id="4045572257642284827" at="33,7,34,60" concept="6" />
+      <node id="4045572257642284827" at="34,60,35,428" concept="6" />
+      <node id="4045572257642239623" at="39,46,40,59" concept="7" />
+      <node id="4045572257642239623" at="43,5,44,130" concept="6" />
+      <node id="4045572257642239623" at="44,130,45,45" concept="7" />
+      <node id="4045572257642239623" at="48,30,49,17" concept="7" />
+      <node id="4045572257642239623" at="21,0,23,0" concept="1" trace="CheckTiles_NonTypesystemRule#()V" />
+      <node id="4045572257642257826" at="26,192,29,9" concept="4" />
+      <node id="4045572257642239623" at="39,0,42,0" concept="5" trace="getApplicableConceptFQName#()Ljava/lang/String;" />
+      <node id="4045572257642239623" at="48,0,51,0" concept="5" trace="overrides#()Z" />
+      <node id="4045572257642284827" at="32,18,36,7" concept="0" />
+      <node id="4045572257642239623" at="42,68,46,5" concept="0" />
+      <node id="4045572257642252382" at="25,226,30,7" concept="3" />
+      <node id="4045572257642280604" at="31,5,37,5" concept="4" />
+      <node id="4045572257642239623" at="42,0,48,0" concept="5" trace="isApplicableAndPattern#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;" />
+      <node id="4045572257642240524" at="24,16,31,5" concept="3" />
+      <node id="4045572257642239623" at="23,0,39,0" concept="5" trace="applyRule#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/typesystem/inference/TypeCheckingContext;Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;)V" />
+      <scope id="4045572257642239623" at="21,41,21,41" />
+      <scope id="4045572257642257827" at="27,318,28,16" />
+      <scope id="4045572257642239623" at="39,46,40,59" />
+      <scope id="4045572257642239623" at="48,30,49,17" />
+      <scope id="4045572257642239623" at="21,0,23,0" />
+      <scope id="4045572257642284827" at="33,7,35,428">
+        <var name="_reporter_2309309498" id="4045572257642284827" />
+        <var name="errorTarget" id="4045572257642284827" />
+      </scope>
+      <scope id="4045572257642239623" at="43,5,45,45">
+        <var name="b" id="4045572257642239623" />
+      </scope>
+      <scope id="4045572257642252384" at="26,192,29,9" />
+      <scope id="4045572257642239623" at="39,0,42,0" />
+      <scope id="4045572257642239623" at="48,0,51,0" />
+      <scope id="4045572257642280606" at="32,18,36,7" />
+      <scope id="4045572257642239623" at="42,68,46,5" />
+      <scope id="4045572257642240526" at="25,226,30,7" />
+      <scope id="4045572257642252382" at="25,226,30,7">
+        <var name="tile" id="4045572257642252383" />
+      </scope>
+      <scope id="4045572257642239623" at="42,0,48,0">
+        <var name="argument" id="4045572257642239623" />
+      </scope>
+      <scope id="4045572257642240524" at="24,16,31,5">
+        <var name="page" id="4045572257642240525" />
+      </scope>
+      <scope id="4045572257642239624" at="23,121,37,5">
+        <var name="app" id="4045572257642249809" />
+      </scope>
+      <scope id="4045572257642239623" at="23,0,39,0">
+        <var name="htmlTile" id="4045572257642239623" />
+        <var name="status" id="4045572257642239623" />
+        <var name="typeCheckingContext" id="4045572257642239623" />
+      </scope>
+      <unit id="4045572257642239623" at="20,0,52,0" name="ro.barata.mps.htmlLanguage.typesystem.CheckTiles_NonTypesystemRule" />
+    </file>
+  </root>
+</debug-info>
 

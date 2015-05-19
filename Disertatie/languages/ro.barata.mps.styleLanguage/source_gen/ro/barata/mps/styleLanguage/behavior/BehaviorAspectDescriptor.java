@@ -11,13 +11,21 @@ public class BehaviorAspectDescriptor implements jetbrains.mps.smodel.runtime.Be
   }
   public BehaviorDescriptor getDescriptor(String fqName) {
     switch (Arrays.binarySearch(stringSwitchCases_846f5o_a0a0b, fqName)) {
-      case 1:
+      case 4:
         return new FileStructure_BehaviorDescriptor();
-      case 0:
+      case 3:
         return new File_BehaviorDescriptor();
+      case 0:
+        return new CssFile_BehaviorDescriptor();
+      case 1:
+        return new CssNode_BehaviorDescriptor();
+      case 2:
+        return new DefinedAttribute_BehaviorDescriptor();
+      case 5:
+        return new UserAttribute_BehaviorDescriptor();
       default:
         return BehaviorAspectInterpreted.getInstance().getDescriptor(fqName);
     }
   }
-  private static String[] stringSwitchCases_846f5o_a0a0b = new String[]{"ro.barata.mps.styleLanguage.structure.File", "ro.barata.mps.styleLanguage.structure.FileStructure"};
+  private static String[] stringSwitchCases_846f5o_a0a0b = new String[]{"ro.barata.mps.styleLanguage.structure.CssFile", "ro.barata.mps.styleLanguage.structure.CssNode", "ro.barata.mps.styleLanguage.structure.DefinedAttribute", "ro.barata.mps.styleLanguage.structure.File", "ro.barata.mps.styleLanguage.structure.FileStructure", "ro.barata.mps.styleLanguage.structure.UserAttribute"};
 }

@@ -17,33 +17,33 @@ public class BehaviorAspectDescriptor implements jetbrains.mps.smodel.runtime.Be
         return new HTMLBody_BehaviorDescriptor();
       case 13:
         return new HTMLHead_BehaviorDescriptor();
-      case 26:
+      case 28:
         return new TitleElement_BehaviorDescriptor();
       case 11:
         return new H1Element_BehaviorDescriptor();
-      case 24:
+      case 26:
         return new TableContainer_BehaviorDescriptor();
-      case 22:
+      case 24:
         return new THElement_BehaviorDescriptor();
-      case 23:
+      case 25:
         return new TRElement_BehaviorDescriptor();
-      case 21:
+      case 23:
         return new TDElement_BehaviorDescriptor();
-      case 18:
+      case 20:
         return new SelectCommand_BehaviorDescriptor();
       case 2:
         return new AllCondition_BehaviorDescriptor();
-      case 25:
+      case 27:
         return new TagValueReference_BehaviorDescriptor();
       case 15:
         return new HTMLTagValue_BehaviorDescriptor();
-      case 19:
+      case 21:
         return new Server_BehaviorDescriptor();
-      case 16:
+      case 18:
         return new InputElement_BehaviorDescriptor();
       case 3:
         return new Attribute_BehaviorDescriptor();
-      case 17:
+      case 19:
         return new LabelElement_BehaviorDescriptor();
       case 0:
         return new Action_BehaviorDescriptor();
@@ -57,7 +57,7 @@ public class BehaviorAspectDescriptor implements jetbrains.mps.smodel.runtime.Be
         return new CounterIdReference_BehaviorDescriptor();
       case 8:
         return new DatabaseOperation_BehaviorDescriptor();
-      case 20:
+      case 22:
         return new StaticAttributeReference_BehaviorDescriptor();
       case 9:
         return new DivContainer_BehaviorDescriptor();
@@ -65,9 +65,13 @@ public class BehaviorAspectDescriptor implements jetbrains.mps.smodel.runtime.Be
         return new AttributeId_BehaviorDescriptor();
       case 5:
         return new AttributeName_BehaviorDescriptor();
+      case 16:
+        return new HTMLTile_BehaviorDescriptor();
+      case 17:
+        return new HTMLTileReference_BehaviorDescriptor();
       default:
         return BehaviorAspectInterpreted.getInstance().getDescriptor(fqName);
     }
   }
-  private static String[] stringSwitchCases_846f5o_a0a0b = new String[]{"ro.barata.mps.htmlLanguage.structure.Action", "ro.barata.mps.htmlLanguage.structure.ActionType", "ro.barata.mps.htmlLanguage.structure.AllCondition", "ro.barata.mps.htmlLanguage.structure.Attribute", "ro.barata.mps.htmlLanguage.structure.AttributeId", "ro.barata.mps.htmlLanguage.structure.AttributeName", "ro.barata.mps.htmlLanguage.structure.CounterId", "ro.barata.mps.htmlLanguage.structure.CounterIdReference", "ro.barata.mps.htmlLanguage.structure.DatabaseOperation", "ro.barata.mps.htmlLanguage.structure.DivContainer", "ro.barata.mps.htmlLanguage.structure.ExpressionReference", "ro.barata.mps.htmlLanguage.structure.H1Element", "ro.barata.mps.htmlLanguage.structure.HTMLBody", "ro.barata.mps.htmlLanguage.structure.HTMLHead", "ro.barata.mps.htmlLanguage.structure.HTMLPage", "ro.barata.mps.htmlLanguage.structure.HTMLTagValue", "ro.barata.mps.htmlLanguage.structure.InputElement", "ro.barata.mps.htmlLanguage.structure.LabelElement", "ro.barata.mps.htmlLanguage.structure.SelectCommand", "ro.barata.mps.htmlLanguage.structure.Server", "ro.barata.mps.htmlLanguage.structure.StaticAttributeReference", "ro.barata.mps.htmlLanguage.structure.TDElement", "ro.barata.mps.htmlLanguage.structure.THElement", "ro.barata.mps.htmlLanguage.structure.TRElement", "ro.barata.mps.htmlLanguage.structure.TableContainer", "ro.barata.mps.htmlLanguage.structure.TagValueReference", "ro.barata.mps.htmlLanguage.structure.TitleElement"};
+  private static String[] stringSwitchCases_846f5o_a0a0b = new String[]{"ro.barata.mps.htmlLanguage.structure.Action", "ro.barata.mps.htmlLanguage.structure.ActionType", "ro.barata.mps.htmlLanguage.structure.AllCondition", "ro.barata.mps.htmlLanguage.structure.Attribute", "ro.barata.mps.htmlLanguage.structure.AttributeId", "ro.barata.mps.htmlLanguage.structure.AttributeName", "ro.barata.mps.htmlLanguage.structure.CounterId", "ro.barata.mps.htmlLanguage.structure.CounterIdReference", "ro.barata.mps.htmlLanguage.structure.DatabaseOperation", "ro.barata.mps.htmlLanguage.structure.DivContainer", "ro.barata.mps.htmlLanguage.structure.ExpressionReference", "ro.barata.mps.htmlLanguage.structure.H1Element", "ro.barata.mps.htmlLanguage.structure.HTMLBody", "ro.barata.mps.htmlLanguage.structure.HTMLHead", "ro.barata.mps.htmlLanguage.structure.HTMLPage", "ro.barata.mps.htmlLanguage.structure.HTMLTagValue", "ro.barata.mps.htmlLanguage.structure.HTMLTile", "ro.barata.mps.htmlLanguage.structure.HTMLTileReference", "ro.barata.mps.htmlLanguage.structure.InputElement", "ro.barata.mps.htmlLanguage.structure.LabelElement", "ro.barata.mps.htmlLanguage.structure.SelectCommand", "ro.barata.mps.htmlLanguage.structure.Server", "ro.barata.mps.htmlLanguage.structure.StaticAttributeReference", "ro.barata.mps.htmlLanguage.structure.TDElement", "ro.barata.mps.htmlLanguage.structure.THElement", "ro.barata.mps.htmlLanguage.structure.TRElement", "ro.barata.mps.htmlLanguage.structure.TableContainer", "ro.barata.mps.htmlLanguage.structure.TagValueReference", "ro.barata.mps.htmlLanguage.structure.TitleElement"};
 }

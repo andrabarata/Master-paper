@@ -38,4 +38,5 @@ public class TestPageGenerator {
     html += "</html>";
     return html;
   }
+
 }

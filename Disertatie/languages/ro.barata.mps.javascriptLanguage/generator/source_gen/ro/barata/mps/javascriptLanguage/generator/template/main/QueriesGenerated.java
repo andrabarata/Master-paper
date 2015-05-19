@@ -14,7 +14,7 @@ import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SModelOperations;
 import java.util.List;
 import java.util.ArrayList;
-import jetbrains.mps.internal.collections.runtime.ISelector;
+import jetbrains.mps.internal.collections.runtime.IWhereFilter;
 
 @Generated
 public class QueriesGenerated {
@@ -74,16 +74,11 @@ public class QueriesGenerated {
               }
             }
           }
-          if (ListSequence.fromList(SLinkOperations.getChildren(action, MetaAdapterFactory.getContainmentLink(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x4c7f2ab523e3fae4L, 0x40798aa2d3833ccdL, "operations"))).select(new ISelector<SNode, Boolean>() {
-            public Boolean select(SNode it) {
+          if (ListSequence.fromList(SLinkOperations.getChildren(action, MetaAdapterFactory.getContainmentLink(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x4c7f2ab523e3fae4L, 0x40798aa2d3833ccdL, "operations"))).where(new IWhereFilter<SNode>() {
+            public boolean accept(SNode it) {
               return !(SNodeOperations.isInstanceOf(it, MetaAdapterFactory.getConcept(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x40798aa2d38349e0L, "ro.barata.mps.javascriptLanguage.structure.JavascriptOperation")));
             }
           }).isNotEmpty()) {
-            /*
-              SNode a = SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(MetaAdapterFactory.getConcept(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x2addac2a6ec36c0cL, "ro.barata.mps.javascriptLanguage.structure.DummyCommand")));
-              SPropertyOperations.set(a, MetaAdapterFactory.getProperty(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x2addac2a6ec36c0cL, 0x2addac2a6ec36c0dL, "value"), "a" + SPropertyOperations.getString(nameParam, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name")) + "a");
-              ListSequence.fromList(SLinkOperations.getChildren(function2, MetaAdapterFactory.getContainmentLink(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x4c7f2ab523e8fe0bL, 0x4c7f2ab523e91171L, "commands"))).addElement(a);
-            */
             SNode callSendData = SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(MetaAdapterFactory.getConcept(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x40798aa2d3b06627L, "ro.barata.mps.javascriptLanguage.structure.CallFunctionCommand")));
             SLinkOperations.setTarget(callSendData, MetaAdapterFactory.getReferenceLink(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x40798aa2d3b06627L, 0x40798aa2d3b0709aL, "function"), function);
             SNode namesParam = SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(MetaAdapterFactory.getConcept(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x3ab9167f5c29802aL, "ro.barata.mps.javascriptLanguage.structure.VarValue")));

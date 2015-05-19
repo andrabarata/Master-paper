@@ -3,6 +3,7 @@
   <dependency className="ro.barata.mps.htmlLanguage.generator.template.main.QueriesGenerated" file="QueriesGenerated.java">
     <classNode dependClassName="java.lang.Iterable" />
     <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="jetbrains.mps.generator.runtime.Generated" />
     <classNode dependClassName="jetbrains.mps.generator.template.IfMacroContext" />
     <classNode dependClassName="jetbrains.mps.generator.template.PropertyMacroContext" />
@@ -22,6 +23,7 @@
     <classNode dependClassName="ro.barata.mps.htmlLanguage.behavior.ContainerCommand_Behavior" />
     <classNode dependClassName="ro.barata.mps.htmlLanguage.behavior.HTMLCommand_Behavior" />
     <classNode dependClassName="ro.barata.mps.htmlLanguage.behavior.HTMLPage_Behavior" />
+    <classNode dependClassName="ro.barata.mps.htmlLanguage.behavior.HTMLTile_Behavior" />
     <classNode dependClassName="ro.barata.mps.htmlLanguage.behavior.TagValueReference_Behavior" />
   </dependency>
 </dependenciesRoot>

@@ -1,13 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dependenciesRoot>
+  <dependency className="ro.barata.mps.styleLanguage.behavior.Attribute_BehaviorDescriptor" file="Attribute_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
   <dependency className="ro.barata.mps.styleLanguage.behavior.BehaviorAspectDescriptor" file="BehaviorAspectDescriptor.java">
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.util.Arrays" />
     <classNode dependClassName="jetbrains.mps.smodel.runtime.BehaviorDescriptor" />
     <classNode dependClassName="jetbrains.mps.smodel.runtime.interpreted.BehaviorAspectInterpreted" />
+    <classNode dependClassName="ro.barata.mps.styleLanguage.behavior.CssFile_BehaviorDescriptor" />
+    <classNode dependClassName="ro.barata.mps.styleLanguage.behavior.CssNode_BehaviorDescriptor" />
+    <classNode dependClassName="ro.barata.mps.styleLanguage.behavior.DefinedAttribute_BehaviorDescriptor" />
     <classNode dependClassName="ro.barata.mps.styleLanguage.behavior.FileStructure_BehaviorDescriptor" />
     <classNode dependClassName="ro.barata.mps.styleLanguage.behavior.File_BehaviorDescriptor" />
+    <classNode dependClassName="ro.barata.mps.styleLanguage.behavior.UserAttribute_BehaviorDescriptor" />
     <classNode extendsClassName="jetbrains.mps.smodel.runtime.BehaviorAspectDescriptor" />
+  </dependency>
+  <dependency className="ro.barata.mps.styleLanguage.behavior.CssFile_BehaviorDescriptor" file="CssFile_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.INamedConcept_Behavior" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.INamedConcept_BehaviorDescriptor" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
+    <classNode extendsClassName="java.lang.Cloneable" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="ro.barata.mps.styleLanguage.behavior.CssNode_BehaviorDescriptor" file="CssNode_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="ro.barata.mps.styleLanguage.behavior.DefinedAttribute_BehaviorDescriptor" file="DefinedAttribute_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="ro.barata.mps.styleLanguage.behavior.Attribute_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
   </dependency>
   <dependency className="ro.barata.mps.styleLanguage.behavior.FileStructure_BehaviorDescriptor" file="FileStructure_BehaviorDescriptor.java">
     <classNode dependClassName="java.lang.Override" />
@@ -29,6 +61,12 @@
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="ro.barata.mps.styleLanguage.behavior.UserAttribute_BehaviorDescriptor" file="UserAttribute_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="ro.barata.mps.styleLanguage.behavior.Attribute_BehaviorDescriptor" />
     <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
   </dependency>
 </dependenciesRoot>

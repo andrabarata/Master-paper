@@ -69,13 +69,13 @@
     <node concept="1TJgyj" id="2cZd1JhMyNa" role="1TKVEi">
       <property role="20lmBu" value="aggregation" />
       <property role="20kJfa" value="head" />
-      <property role="20lbJX" value="1" />
+      <property role="20lbJX" value="0..1" />
       <ref role="20lvS9" node="2cZd1JhMyN1" resolve="HTMLHead" />
     </node>
     <node concept="1TJgyj" id="2cZd1JhMyNc" role="1TKVEi">
       <property role="20lmBu" value="aggregation" />
       <property role="20kJfa" value="body" />
-      <property role="20lbJX" value="1" />
+      <property role="20lbJX" value="0..1" />
       <ref role="20lvS9" node="2cZd1JhMyMR" resolve="HTMLBody" />
     </node>
     <node concept="1TJgyj" id="4LZaFkzT3_o" role="1TKVEi">
@@ -83,6 +83,12 @@
       <property role="20kJfa" value="actions" />
       <property role="20lbJX" value="0..n" />
       <ref role="20lvS9" node="4LZaFkzSZF$" resolve="Action" />
+    </node>
+    <node concept="1TJgyj" id="4iOjISKGI$t" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="tiles" />
+      <property role="20lbJX" value="0..n" />
+      <ref role="20lvS9" node="4iOjISKGIrm" resolve="HTMLTile" />
     </node>
     <node concept="1TJgyi" id="5a6Q6gbramT" role="1TKVEl">
       <property role="TrG5h" value="isWelcomePage" />
@@ -526,6 +532,39 @@
       <property role="20lmBu" value="aggregation" />
       <property role="20kJfa" value="value" />
       <ref role="20lvS9" node="41TyEbjfw9V" resolve="AttributeReference" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="4iOjISKGIrm">
+    <property role="3GE5qa" value="html.root" />
+    <property role="TrG5h" value="HTMLTile" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="4iOjISKGIzO" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="commands" />
+      <property role="20lbJX" value="0..n" />
+      <ref role="20lvS9" node="5a6Q6gbwelH" resolve="AbstractCommand" />
+    </node>
+    <node concept="PrWs8" id="4iOjISKGIyh" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="4iOjISKGItc">
+    <property role="3GE5qa" value="html.root" />
+    <property role="TrG5h" value="HTMLStructure" />
+    <property role="R5$K7" value="true" />
+    <property role="R5$K2" value="false" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+  </node>
+  <node concept="1TIwiD" id="4iOjISKGIzX">
+    <property role="3GE5qa" value="html.root" />
+    <property role="TrG5h" value="HTMLTileReference" />
+    <property role="34LRSv" value="add predefined HTML" />
+    <ref role="1TJDcQ" node="5a6Q6gbwelH" resolve="AbstractCommand" />
+    <node concept="1TJgyj" id="4iOjISKGI$r" role="1TKVEi">
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="html" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="4iOjISKGIrm" resolve="HTMLTile" />
     </node>
   </node>
 </model>

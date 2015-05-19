@@ -99,15 +99,12 @@
     <classNode dependClassName="java.lang.ClassNotFoundException" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.sql.SQLException" />
-    <classNode dependClassName="java.util.List" />
-    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.Person" />
-    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.PersonDAO" />
+    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.StructureGenerator" />
   </dependency>
   <dependency className="ro.barata.mps.boLanguage.sandbox.IndexServlet" file="IndexServlet.java">
     <classNode dependClassName="java.io.IOException" />
     <classNode dependClassName="java.lang.ClassNotFoundException" />
     <classNode dependClassName="java.lang.Exception" />
-    <classNode dependClassName="java.lang.Integer" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.lang.System" />
     <classNode dependClassName="java.sql.SQLException" />
@@ -115,8 +112,6 @@
     <classNode dependClassName="javax.servlet.http.HttpServletRequest" />
     <classNode dependClassName="javax.servlet.http.HttpServletResponse" />
     <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.IndexGenerator" />
-    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.Person" />
-    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.PersonDAO" />
     <classNode extendsClassName="javax.servlet.http.HttpServlet" />
   </dependency>
   <dependency className="ro.barata.mps.boLanguage.sandbox.NextPageGenerator" file="NextPageGenerator.java">
@@ -206,6 +201,12 @@
     <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.DatabaseConnector" />
     <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.Shop" />
   </dependency>
+  <dependency className="ro.barata.mps.boLanguage.sandbox.Structure" file="Structure.js" />
+  <dependency className="ro.barata.mps.boLanguage.sandbox.StructureGenerator" file="StructureGenerator.java">
+    <classNode dependClassName="java.lang.ClassNotFoundException" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.sql.SQLException" />
+  </dependency>
   <dependency className="ro.barata.mps.boLanguage.sandbox.TestPageGenerator" file="TestPageGenerator.java">
     <classNode dependClassName="java.lang.ClassNotFoundException" />
     <classNode dependClassName="java.lang.String" />
@@ -229,7 +230,6 @@
   </dependency>
   <dependency className="ro.barata.mps.boLanguage.sandbox.functions" file="functions.js" />
   <dependency className="ro.barata.mps.boLanguage.sandbox.general" file="general.js" />
-  <dependency className="ro.barata.mps.boLanguage.sandbox.index" file="index.js" />
   <dependency className="ro.barata.mps.boLanguage.sandbox.main" file="main.css" />
   <dependency className="ro.barata.mps.boLanguage.sandbox.test" file="test.js" />
 </dependenciesRoot>

@@ -34,14 +34,14 @@ public class HTTPServer {
     RewriteHandler rwHandler = new RewriteHandler();
     context.addServlet(new ServletHolder(new TestPageServlet()), "/" + "TestPage");
     context.addServlet(new ServletHolder(new NextPageServlet()), "/" + "nextPage");
-    context.addServlet(new ServletHolder(new IndexServlet()), "/" + "index");
+    context.addServlet(new ServletHolder(new IndexServlet()), "/" + "Index");
     {
       rwHandler.setRewriteRequestURI(true);
       rwHandler.setRewritePathInfo(true);
       rwHandler.setOriginalPathAttribute("/");
       RedirectRegexRule rule = new RedirectRegexRule();
       rule.setRegex("/");
-      rule.setReplacement("index");
+      rule.setReplacement("Index");
       rwHandler.addRule(rule);
     }
 

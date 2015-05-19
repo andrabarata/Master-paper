@@ -47,24 +47,28 @@ public class EditorAspectDescriptorImpl implements EditorAspectDescriptor {
       case 15:
         return Collections.<ConceptEditor>singletonList(new HTMLTagValue_Editor());
       case 16:
-        return Collections.<ConceptEditor>singletonList(new InputElement_Editor());
+        return Collections.<ConceptEditor>singletonList(new HTMLTile_Editor());
       case 17:
-        return Collections.<ConceptEditor>singletonList(new LabelElement_Editor());
+        return Collections.<ConceptEditor>singletonList(new HTMLTileReference_Editor());
       case 18:
-        return Collections.<ConceptEditor>singletonList(new SelectCommand_Editor());
+        return Collections.<ConceptEditor>singletonList(new InputElement_Editor());
       case 19:
-        return Collections.<ConceptEditor>singletonList(new StaticAttributeReference_Editor());
+        return Collections.<ConceptEditor>singletonList(new LabelElement_Editor());
       case 20:
-        return Collections.<ConceptEditor>singletonList(new TDElement_Editor());
+        return Collections.<ConceptEditor>singletonList(new SelectCommand_Editor());
       case 21:
-        return Collections.<ConceptEditor>singletonList(new THElement_Editor());
+        return Collections.<ConceptEditor>singletonList(new StaticAttributeReference_Editor());
       case 22:
-        return Collections.<ConceptEditor>singletonList(new TRElement_Editor());
+        return Collections.<ConceptEditor>singletonList(new TDElement_Editor());
       case 23:
-        return Collections.<ConceptEditor>singletonList(new TableContainer_Editor());
+        return Collections.<ConceptEditor>singletonList(new THElement_Editor());
       case 24:
-        return Collections.<ConceptEditor>singletonList(new TagValueReference_Editor());
+        return Collections.<ConceptEditor>singletonList(new TRElement_Editor());
       case 25:
+        return Collections.<ConceptEditor>singletonList(new TableContainer_Editor());
+      case 26:
+        return Collections.<ConceptEditor>singletonList(new TagValueReference_Editor());
+      case 27:
         return Collections.<ConceptEditor>singletonList(new TitleElement_Editor());
       default:
     }
@@ -88,6 +92,6 @@ public class EditorAspectDescriptorImpl implements EditorAspectDescriptor {
   }
 
 
-  private static String[] stringSwitchCases_xbvbvu_a0a0b = new String[]{"ro.barata.mps.htmlLanguage.structure.Action", "ro.barata.mps.htmlLanguage.structure.ActionType", "ro.barata.mps.htmlLanguage.structure.AllCondition", "ro.barata.mps.htmlLanguage.structure.Attribute", "ro.barata.mps.htmlLanguage.structure.AttributeId", "ro.barata.mps.htmlLanguage.structure.AttributeName", "ro.barata.mps.htmlLanguage.structure.CounterId", "ro.barata.mps.htmlLanguage.structure.CounterIdReference", "ro.barata.mps.htmlLanguage.structure.DatabaseOperation", "ro.barata.mps.htmlLanguage.structure.DivContainer", "ro.barata.mps.htmlLanguage.structure.ExpressionReference", "ro.barata.mps.htmlLanguage.structure.H1Element", "ro.barata.mps.htmlLanguage.structure.HTMLBody", "ro.barata.mps.htmlLanguage.structure.HTMLHead", "ro.barata.mps.htmlLanguage.structure.HTMLPage", "ro.barata.mps.htmlLanguage.structure.HTMLTagValue", "ro.barata.mps.htmlLanguage.structure.InputElement", "ro.barata.mps.htmlLanguage.structure.LabelElement", "ro.barata.mps.htmlLanguage.structure.SelectCommand", "ro.barata.mps.htmlLanguage.structure.StaticAttributeReference", "ro.barata.mps.htmlLanguage.structure.TDElement", "ro.barata.mps.htmlLanguage.structure.THElement", "ro.barata.mps.htmlLanguage.structure.TRElement", "ro.barata.mps.htmlLanguage.structure.TableContainer", "ro.barata.mps.htmlLanguage.structure.TagValueReference", "ro.barata.mps.htmlLanguage.structure.TitleElement"};
+  private static String[] stringSwitchCases_xbvbvu_a0a0b = new String[]{"ro.barata.mps.htmlLanguage.structure.Action", "ro.barata.mps.htmlLanguage.structure.ActionType", "ro.barata.mps.htmlLanguage.structure.AllCondition", "ro.barata.mps.htmlLanguage.structure.Attribute", "ro.barata.mps.htmlLanguage.structure.AttributeId", "ro.barata.mps.htmlLanguage.structure.AttributeName", "ro.barata.mps.htmlLanguage.structure.CounterId", "ro.barata.mps.htmlLanguage.structure.CounterIdReference", "ro.barata.mps.htmlLanguage.structure.DatabaseOperation", "ro.barata.mps.htmlLanguage.structure.DivContainer", "ro.barata.mps.htmlLanguage.structure.ExpressionReference", "ro.barata.mps.htmlLanguage.structure.H1Element", "ro.barata.mps.htmlLanguage.structure.HTMLBody", "ro.barata.mps.htmlLanguage.structure.HTMLHead", "ro.barata.mps.htmlLanguage.structure.HTMLPage", "ro.barata.mps.htmlLanguage.structure.HTMLTagValue", "ro.barata.mps.htmlLanguage.structure.HTMLTile", "ro.barata.mps.htmlLanguage.structure.HTMLTileReference", "ro.barata.mps.htmlLanguage.structure.InputElement", "ro.barata.mps.htmlLanguage.structure.LabelElement", "ro.barata.mps.htmlLanguage.structure.SelectCommand", "ro.barata.mps.htmlLanguage.structure.StaticAttributeReference", "ro.barata.mps.htmlLanguage.structure.TDElement", "ro.barata.mps.htmlLanguage.structure.THElement", "ro.barata.mps.htmlLanguage.structure.TRElement", "ro.barata.mps.htmlLanguage.structure.TableContainer", "ro.barata.mps.htmlLanguage.structure.TagValueReference", "ro.barata.mps.htmlLanguage.structure.TitleElement"};
   private static String[] stringSwitchCases_xbvbvu_a0a0c = new String[]{"ro.barata.mps.htmlLanguage.structure.ContainerCommand", "ro.barata.mps.htmlLanguage.structure.HTMLCommand"};
 }

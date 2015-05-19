@@ -36,7 +36,7 @@
       <unit at="7,0,15,0" name="ro.barata.mps.htmlLanguage.behavior.Attribute_BehaviorDescriptor" />
     </file>
     <file name="BehaviorAspectDescriptor.java">
-      <unit at="9,0,74,0" name="ro.barata.mps.htmlLanguage.behavior.BehaviorAspectDescriptor" />
+      <unit at="9,0,78,0" name="ro.barata.mps.htmlLanguage.behavior.BehaviorAspectDescriptor" />
     </file>
     <file name="ContainerCommand_BehaviorDescriptor.java">
       <unit at="6,0,14,0" name="ro.barata.mps.htmlLanguage.behavior.ContainerCommand_BehaviorDescriptor" />
@@ -71,8 +71,17 @@
     <file name="HTMLPage_BehaviorDescriptor.java">
       <unit at="10,0,21,0" name="ro.barata.mps.htmlLanguage.behavior.HTMLPage_BehaviorDescriptor" />
     </file>
+    <file name="HTMLStructure_BehaviorDescriptor.java">
+      <unit at="7,0,15,0" name="ro.barata.mps.htmlLanguage.behavior.HTMLStructure_BehaviorDescriptor" />
+    </file>
     <file name="HTMLTagValue_BehaviorDescriptor.java">
       <unit at="7,0,15,0" name="ro.barata.mps.htmlLanguage.behavior.HTMLTagValue_BehaviorDescriptor" />
+    </file>
+    <file name="HTMLTileReference_BehaviorDescriptor.java">
+      <unit at="6,0,14,0" name="ro.barata.mps.htmlLanguage.behavior.HTMLTileReference_BehaviorDescriptor" />
+    </file>
+    <file name="HTMLTile_BehaviorDescriptor.java">
+      <unit at="10,0,21,0" name="ro.barata.mps.htmlLanguage.behavior.HTMLTile_BehaviorDescriptor" />
     </file>
     <file name="IAttribute_BehaviorDescriptor.java">
       <unit at="6,0,8,0" name="ro.barata.mps.htmlLanguage.behavior.IAttribute_BehaviorDescriptor" />
@@ -184,6 +193,26 @@
       <unit id="6352133620898872855" at="38,55,44,9" name="ro.barata.mps.htmlLanguage.behavior.Action_Behavior$3" />
       <unit id="6352133620898819557" at="35,20,49,5" name="ro.barata.mps.htmlLanguage.behavior.Action_Behavior$2" />
       <unit id="3088814217696061503" at="17,0,53,0" name="ro.barata.mps.htmlLanguage.behavior.Action_Behavior" />
+    </file>
+  </root>
+  <root nodeRef="r:b6817e23-bfbb-4169-a954-fad21c7ce321(ro.barata.mps.htmlLanguage.behavior)/4045572257641604880">
+    <file name="HTMLTile_Behavior.java">
+      <node id="4045572257641605659" at="12,78,13,172" concept="4" />
+      <node id="4045572257641606508" at="13,172,14,81" concept="0" />
+      <node id="4045572257641625019" at="14,81,15,16" concept="5" />
+      <node id="4045572257641604880" at="10,0,12,0" concept="6" trace="init#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <node id="4045572257641604880" at="12,0,17,0" concept="6" trace="call_getCamelName_4045572257641605496#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljava/lang/String;" />
+      <scope id="4045572257641604882" at="10,43,10,43" />
+      <scope id="4045572257641604880" at="10,0,12,0">
+        <var name="thisNode" id="4045572257641604880" />
+      </scope>
+      <scope id="4045572257641605498" at="12,78,15,16">
+        <var name="name" id="4045572257641605662" />
+      </scope>
+      <scope id="4045572257641604880" at="12,0,17,0">
+        <var name="thisNode" id="4045572257641604880" />
+      </scope>
+      <unit id="4045572257641604880" at="9,0,18,0" name="ro.barata.mps.htmlLanguage.behavior.HTMLTile_Behavior" />
     </file>
   </root>
   <root nodeRef="r:b6817e23-bfbb-4169-a954-fad21c7ce321(ro.barata.mps.htmlLanguage.behavior)/637934364190285667">
@@ -387,18 +416,32 @@
   </root>
   <root nodeRef="r:b6817e23-bfbb-4169-a954-fad21c7ce321(ro.barata.mps.htmlLanguage.behavior)/925758345853409278">
     <file name="HTMLPage_Behavior.java">
-      <node id="925758345853411392" at="12,77,13,528" concept="5" />
-      <node id="925758345853409278" at="10,0,12,0" concept="6" trace="init#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
-      <node id="925758345853409278" at="12,0,15,0" concept="6" trace="call_getCamelName_925758345853409308#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljava/lang/String;" />
-      <scope id="925758345853409280" at="10,43,10,43" />
-      <scope id="925758345853409310" at="12,77,13,528" />
-      <scope id="925758345853409278" at="10,0,12,0">
+      <node id="925758345853411392" at="15,77,16,528" concept="5" />
+      <node id="4045572257642376573" at="20,39,21,176" concept="5" />
+      <node id="925758345853409278" at="13,0,15,0" concept="6" trace="init#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <node id="925758345853409278" at="15,0,18,0" concept="6" trace="call_getCamelName_925758345853409308#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljava/lang/String;" />
+      <node id="4045572257642376239" at="20,0,23,0" concept="3" trace="accept#(Lorg/jetbrains/mps/openapi/model/SNode;)Z" />
+      <node id="4045572257642361183" at="18,110,23,21" concept="5" />
+      <node id="925758345853409278" at="18,0,25,0" concept="6" trace="call_containsHTMLTile_4045572257642360798#(Lorg/jetbrains/mps/openapi/model/SNode;Ljava/lang/String;)Z" />
+      <scope id="925758345853409280" at="13,43,13,43" />
+      <scope id="925758345853409310" at="15,77,16,528" />
+      <scope id="4045572257642376240" at="20,39,21,176" />
+      <scope id="925758345853409278" at="13,0,15,0">
         <var name="thisNode" id="925758345853409278" />
       </scope>
-      <scope id="925758345853409278" at="12,0,15,0">
+      <scope id="925758345853409278" at="15,0,18,0">
         <var name="thisNode" id="925758345853409278" />
       </scope>
-      <unit id="925758345853409278" at="9,0,16,0" name="ro.barata.mps.htmlLanguage.behavior.HTMLPage_Behavior" />
+      <scope id="4045572257642376239" at="20,0,23,0">
+        <var name="it" id="4045572257642376239" />
+      </scope>
+      <scope id="4045572257642360800" at="18,110,23,21" />
+      <scope id="925758345853409278" at="18,0,25,0">
+        <var name="htmlTileName" id="4045572257642361165" />
+        <var name="thisNode" id="925758345853409278" />
+      </scope>
+      <unit id="4045572257642376239" at="19,215,23,5" name="ro.barata.mps.htmlLanguage.behavior.HTMLPage_Behavior$1" />
+      <unit id="925758345853409278" at="12,0,26,0" name="ro.barata.mps.htmlLanguage.behavior.HTMLPage_Behavior" />
     </file>
   </root>
 </debug-info>

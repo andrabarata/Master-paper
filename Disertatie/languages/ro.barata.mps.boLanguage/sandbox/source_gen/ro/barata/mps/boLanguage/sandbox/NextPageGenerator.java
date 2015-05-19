@@ -26,4 +26,5 @@ public class NextPageGenerator {
     html += "</html>";
     return html;
   }
+
 }

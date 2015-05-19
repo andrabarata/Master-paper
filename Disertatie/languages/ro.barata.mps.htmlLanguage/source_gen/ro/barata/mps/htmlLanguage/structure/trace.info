@@ -11,7 +11,7 @@
   <concept fqn="jetbrains.mps.baseLanguage.structure.WhileStatement" />
   <root>
     <file name="StructureAspectDescriptor.java">
-      <unit at="13,0,139,0" name="ro.barata.mps.htmlLanguage.structure.StructureAspectDescriptor" />
+      <unit at="13,0,148,0" name="ro.barata.mps.htmlLanguage.structure.StructureAspectDescriptor" />
     </file>
   </root>
   <root nodeRef="r:48cdf645-21a6-4678-bd29-e449bcd0cd36(ro.barata.mps.htmlLanguage.structure)/5512171426400093577">
