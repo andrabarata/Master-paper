@@ -17,7 +17,7 @@ public class CustomerDAO {
 
   public List<Customer> getAllCustomers() throws SQLException {
     List<Customer> customers = new ArrayList<Customer>();
-    String sql = "select * from " + "CustomerTable";
+    String sql = "select * from " + "Customer";
     ResultSet set = stmt.executeQuery(sql);
     Customer foundCustomer = new Customer();
     while (set.next()) {
@@ -40,7 +40,7 @@ public class CustomerDAO {
     if (values.length() > 0) {
       values = " where " + values;
     }
-    sql += columns + "from" + "CustomerTable" + values;
+    sql += columns + "from" + "Customer" + values;
     ResultSet set = stmt.executeQuery(sql);
     List<Object> result = new ArrayList<Object>();
     int i = 0;
@@ -57,7 +57,7 @@ public class CustomerDAO {
 
 
   public void addCustomer(Customer customer) throws SQLException {
-    String sql = "insert into " + "CustomerTable" + "(";
+    String sql = "insert into " + "Customer" + "(";
     String columns = "";
     String values = "";
     if (customer.getCustomerId() != null) {
@@ -70,7 +70,7 @@ public class CustomerDAO {
   }
 
   public void updateCustomer(Customer oldcustomer, Customer newcustomer) throws SQLException {
-    String sql = "update " + "CustomerTable" + " set ";
+    String sql = "update " + "Customer" + " set ";
     String values = "";
     if (newcustomer.getCustomerId() != null) {
       values += "id" + "='" + newcustomer.getCustomerId() + "',";
@@ -87,7 +87,7 @@ public class CustomerDAO {
   }
 
   public void deleteCustomer(Customer customer) throws SQLException {
-    String sql = "delete from " + "CustomerTable" + " where";
+    String sql = "delete from " + "Customer" + " where";
     String condition = " ";
     if (customer.getCustomerId() != null) {
       condition += "id" + "='" + customer.getCustomerId() + "'";

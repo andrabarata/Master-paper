@@ -11,7 +11,8 @@ public enum JavascriptUnaryOperation {
   _2("-=", "-="),
   _3("*=", "*="),
   _4("/=", "/="),
-  _5("=", "=");
+  _5("=", "="),
+  _6("==", "==");
 
   private String myName;
   public String getName() {
@@ -27,6 +28,7 @@ public enum JavascriptUnaryOperation {
     ListSequence.fromList(list).addElement(JavascriptUnaryOperation._3);
     ListSequence.fromList(list).addElement(JavascriptUnaryOperation._4);
     ListSequence.fromList(list).addElement(JavascriptUnaryOperation._5);
+    ListSequence.fromList(list).addElement(JavascriptUnaryOperation._6);
     return list;
   }
   public static JavascriptUnaryOperation getDefault() {
@@ -50,6 +52,9 @@ public enum JavascriptUnaryOperation {
     }
     if (value.equals(JavascriptUnaryOperation._5.getValueAsString())) {
       return JavascriptUnaryOperation._5;
+    }
+    if (value.equals(JavascriptUnaryOperation._6.getValueAsString())) {
+      return JavascriptUnaryOperation._6;
     }
     return JavascriptUnaryOperation.getDefault();
   }

@@ -16,6 +16,8 @@ import jetbrains.mps.lang.editor.cellProviders.RefCellCellProvider;
 import jetbrains.mps.nodeEditor.EditorManager;
 import jetbrains.mps.nodeEditor.InlineCellProvider;
 import jetbrains.mps.lang.editor.cellProviders.PropertyCellProvider;
+import jetbrains.mps.openapi.editor.style.StyleRegistry;
+import java.awt.Color;
 import jetbrains.mps.lang.editor.cellProviders.RefNodeCellProvider;
 
 public class DAOEntityMapper_Editor extends DefaultNodeEditor {
@@ -30,23 +32,36 @@ public class DAOEntityMapper_Editor extends DefaultNodeEditor {
     style.set(StyleAttributes.INDENT_LAYOUT_ON_NEW_LINE, 0, true);
     editorCell.getStyle().putAll(style);
     editorCell.addEditorCell(this.createConstant_dvj0yz_a0(editorContext, node));
-    editorCell.addEditorCell(this.createRefCell_dvj0yz_b0(editorContext, node));
-    editorCell.addEditorCell(this.createConstant_dvj0yz_c0(editorContext, node));
-    editorCell.addEditorCell(this.createRefNode_dvj0yz_d0(editorContext, node));
+    editorCell.addEditorCell(this.createConstant_dvj0yz_b0(editorContext, node));
+    editorCell.addEditorCell(this.createRefCell_dvj0yz_c0(editorContext, node));
+    editorCell.addEditorCell(this.createConstant_dvj0yz_d0(editorContext, node));
+    editorCell.addEditorCell(this.createRefNode_dvj0yz_e0(editorContext, node));
     return editorCell;
   }
   private EditorCell createConstant_dvj0yz_a0(EditorContext editorContext, SNode node) {
-    EditorCell_Constant editorCell = new EditorCell_Constant(editorContext, node, "Configuration for");
+    EditorCell_Constant editorCell = new EditorCell_Constant(editorContext, node, "");
     editorCell.setCellId("Constant_dvj0yz_a0");
+    Style style = new StyleImpl();
+    style.set(StyleAttributes.INDENT_LAYOUT_NEW_LINE, 0, true);
+    editorCell.getStyle().putAll(style);
     editorCell.setDefaultText("");
     return editorCell;
   }
-  private EditorCell createRefCell_dvj0yz_b0(EditorContext editorContext, SNode node) {
+  private EditorCell createConstant_dvj0yz_b0(EditorContext editorContext, SNode node) {
+    EditorCell_Constant editorCell = new EditorCell_Constant(editorContext, node, "Configuration for");
+    editorCell.setCellId("Constant_dvj0yz_b0");
+    Style style = new StyleImpl();
+    style.set(StyleAttributes.INDENT_LAYOUT_INDENT, 0, true);
+    editorCell.getStyle().putAll(style);
+    editorCell.setDefaultText("");
+    return editorCell;
+  }
+  private EditorCell createRefCell_dvj0yz_c0(EditorContext editorContext, SNode node) {
     CellProviderWithRole provider = new RefCellCellProvider(node, editorContext);
     provider.setRole("conceptReference");
     provider.setNoTargetText("<no conceptReference>");
     EditorCell editorCell;
-    provider.setAuxiliaryCellProvider(new DAOEntityMapper_Editor._Inline_dvj0yz_a1a());
+    provider.setAuxiliaryCellProvider(new DAOEntityMapper_Editor._Inline_dvj0yz_a2a());
     editorCell = provider.createEditorCell(editorContext);
     if (editorCell.getRole() == null) {
       editorCell.setReferenceCell(true);
@@ -61,17 +76,17 @@ public class DAOEntityMapper_Editor extends DefaultNodeEditor {
     } else
     return editorCell;
   }
-  public static class _Inline_dvj0yz_a1a extends InlineCellProvider {
-    public _Inline_dvj0yz_a1a() {
+  public static class _Inline_dvj0yz_a2a extends InlineCellProvider {
+    public _Inline_dvj0yz_a2a() {
       super();
     }
     public EditorCell createEditorCell(EditorContext editorContext) {
       return this.createEditorCell(editorContext, this.getSNode());
     }
     public EditorCell createEditorCell(EditorContext editorContext, SNode node) {
-      return this.createProperty_dvj0yz_a0b0(editorContext, node);
+      return this.createProperty_dvj0yz_a0c0(editorContext, node);
     }
-    private EditorCell createProperty_dvj0yz_a0b0(EditorContext editorContext, SNode node) {
+    private EditorCell createProperty_dvj0yz_a0c0(EditorContext editorContext, SNode node) {
       CellProviderWithRole provider = new PropertyCellProvider(node, editorContext);
       provider.setRole("name");
       provider.setNoTargetText("<no name>");
@@ -79,6 +94,10 @@ public class DAOEntityMapper_Editor extends DefaultNodeEditor {
       EditorCell editorCell;
       editorCell = provider.createEditorCell(editorContext);
       editorCell.setCellId("property_name");
+      Style style = new StyleImpl();
+      style.set(StyleAttributes.UNDERLINED, 0, true);
+      style.set(StyleAttributes.TEXT_COLOR, 0, StyleRegistry.getInstance().getSimpleColor(new Color(1808279)));
+      editorCell.getStyle().putAll(style);
       editorCell.setSubstituteInfo(provider.createDefaultSubstituteInfo());
       SNode attributeConcept = provider.getRoleAttribute();
       Class attributeKind = provider.getRoleAttributeClass();
@@ -89,16 +108,16 @@ public class DAOEntityMapper_Editor extends DefaultNodeEditor {
       return editorCell;
     }
   }
-  private EditorCell createConstant_dvj0yz_c0(EditorContext editorContext, SNode node) {
+  private EditorCell createConstant_dvj0yz_d0(EditorContext editorContext, SNode node) {
     EditorCell_Constant editorCell = new EditorCell_Constant(editorContext, node, ":");
-    editorCell.setCellId("Constant_dvj0yz_c0");
+    editorCell.setCellId("Constant_dvj0yz_d0");
     Style style = new StyleImpl();
     style.set(StyleAttributes.INDENT_LAYOUT_NEW_LINE, 0, true);
     editorCell.getStyle().putAll(style);
     editorCell.setDefaultText("");
     return editorCell;
   }
-  private EditorCell createRefNode_dvj0yz_d0(EditorContext editorContext, SNode node) {
+  private EditorCell createRefNode_dvj0yz_e0(EditorContext editorContext, SNode node) {
     CellProviderWithRole provider = new RefNodeCellProvider(node, editorContext);
     provider.setRole("entity");
     provider.setNoTargetText("<no entity>");

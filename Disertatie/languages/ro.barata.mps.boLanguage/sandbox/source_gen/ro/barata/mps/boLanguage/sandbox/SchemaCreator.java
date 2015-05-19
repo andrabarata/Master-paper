@@ -13,15 +13,12 @@ public class SchemaCreator {
 
     primaryKey = "";
     primaryKey = "primary key(";
-    primaryKey += "customerId";
+    primaryKey += "id";
     primaryKey += ")";
-    sql = "create table " + "CustomerTable" + "(";
-    sql += "customerId" + " " + "integer";
+    sql = "create table " + "Shop" + "(";
+    sql += "id" + " " + "integer";
     sql += ",";
-    sql += "personId" + " " + "integer";
-    sql += ",";
-    sql += "shopId" + " " + "integer";
-    sql += "customerId" + " " + "integer";
+    sql += "name" + " " + "varchar(256)";
     if (primaryKey.length() > 0) {
       sql += ",";
     }
@@ -34,7 +31,79 @@ public class SchemaCreator {
     primaryKey = "primary key(";
     primaryKey += "id";
     primaryKey += ")";
-    sql = "create table " + "PersonTable" + "(";
+    sql = "create table " + "Category" + "(";
+    sql += "id" + " " + "integer";
+    sql += ",";
+    sql += "name" + " " + "varchar(256)";
+    if (primaryKey.length() > 0) {
+      sql += ",";
+    }
+    sql += primaryKey;
+    sql += ")";
+    System.out.println(sql);
+    stmt.execute(sql);
+
+    primaryKey = "";
+    primaryKey = "primary key(";
+    primaryKey += "id";
+    primaryKey += ")";
+    sql = "create table " + "Product" + "(";
+    sql += "id" + " " + "integer";
+    sql += ",";
+    sql += "name" + " " + "varchar(256)";
+    sql += ",";
+    sql += "categoryId" + " " + "integer";
+    if (primaryKey.length() > 0) {
+      sql += ",";
+    }
+    sql += primaryKey;
+    sql += ")";
+    System.out.println(sql);
+    stmt.execute(sql);
+
+    primaryKey = "";
+    primaryKey = "primary key(";
+    primaryKey += "id";
+    primaryKey += ")";
+    sql = "create table " + "Attribute" + "(";
+    sql += "id" + " " + "integer";
+    sql += ",";
+    sql += "attributeName" + " " + "varchar(256)";
+    sql += ",";
+    sql += "attributeValue" + " " + "varchar(256)";
+    sql += ",";
+    sql += "productId" + " " + "integer";
+    if (primaryKey.length() > 0) {
+      sql += ",";
+    }
+    sql += primaryKey;
+    sql += ")";
+    System.out.println(sql);
+    stmt.execute(sql);
+
+    primaryKey = "";
+    primaryKey = "primary key(";
+    primaryKey += "customerId";
+    primaryKey += ")";
+    sql = "create table " + "Customer" + "(";
+    sql += "customerId" + " " + "integer";
+    sql += ",";
+    sql += "personId" + " " + "integer";
+    sql += ",";
+    sql += "shopId" + " " + "integer";
+    if (primaryKey.length() > 0) {
+      sql += ",";
+    }
+    sql += primaryKey;
+    sql += ")";
+    System.out.println(sql);
+    stmt.execute(sql);
+
+    primaryKey = "";
+    primaryKey = "primary key(";
+    primaryKey += "id";
+    primaryKey += ")";
+    sql = "create table " + "Person" + "(";
     sql += "id" + " " + "integer";
     sql += ",";
     sql += "firstName" + " " + "varchar(256)";
@@ -48,76 +117,49 @@ public class SchemaCreator {
     System.out.println(sql);
     stmt.execute(sql);
 
-    primaryKey = "";
-    primaryKey = "primary key(";
-    primaryKey += "id";
-    primaryKey += ")";
-    sql = "create table " + "ShopTable" + "(";
-    sql += "id" + " " + "varchar(256)";
-    sql += ",";
-    sql += "name" + " " + "varchar(256)";
-    if (primaryKey.length() > 0) {
-      sql += ",";
-    }
-    sql += primaryKey;
-    sql += ")";
-    System.out.println(sql);
-    stmt.execute(sql);
-
-    primaryKey = "";
-    primaryKey = "primary key(";
-    primaryKey += "test1";
-    primaryKey += ")";
-    sql = "create table " + "testa" + "(";
-    sql += "test1" + " " + "integer";
-    sql += ",";
-    sql += "test2" + " " + "varchar(256)";
-    sql += ",";
-    sql += "personId" + " " + "integer";
-    if (primaryKey.length() > 0) {
-      sql += ",";
-    }
-    sql += primaryKey;
-    sql += ")";
-    System.out.println(sql);
-    stmt.execute(sql);
-
   }
   private static void constrainTables(Statement stmt) throws SQLException, ClassNotFoundException {
     String sql = "";
 
-    sql = "alter table " + "CustomerTable" + " add constraint fk_" + "CustomerTable" + "_" + "personId";
-    sql += " foreign key (" + "personId" + ") references " + "PersonTable" + "(" + "id" + ")";
-    System.out.println(sql);
-    stmt.execute(sql);
-    sql = "alter table " + "CustomerTable" + " add constraint fk_" + "CustomerTable" + "_" + "shopId";
-    sql += " foreign key (" + "shopId" + ") references " + "ShopTable" + "(" + "id" + ")";
+    sql = "alter table " + "Product" + " add constraint fk_" + "Product" + "_" + "categoryId";
+    sql += " foreign key (" + "categoryId" + ") references " + "Category" + "(" + "id" + ")";
     System.out.println(sql);
     stmt.execute(sql);
 
-    sql = "alter table " + "CustomerTable" + " add constraint fk_" + "CustomerTable" + "_" + "customerId";
-    sql += " foreign key (" + "customerId" + ") references " + "testa" + "(" + "id" + ")";
+    sql = "alter table " + "Attribute" + " add constraint fk_" + "Attribute" + "_" + "productId";
+    sql += " foreign key (" + "productId" + ") references " + "Product" + "(" + "id" + ")";
     System.out.println(sql);
     stmt.execute(sql);
 
-    sql = "alter table " + "testa" + " add constraint fk_" + "testa" + "_" + "personId";
-    sql += " foreign key (" + "personId" + ") references " + "PersonTable" + "(" + "id" + ")";
+    sql = "alter table " + "Customer" + " add constraint fk_" + "Customer" + "_" + "personId";
+    sql += " foreign key (" + "personId" + ") references " + "Person" + "(" + "id" + ")";
     System.out.println(sql);
     stmt.execute(sql);
+    sql = "alter table " + "Customer" + " add constraint fk_" + "Customer" + "_" + "shopId";
+    sql += " foreign key (" + "shopId" + ") references " + "Shop" + "(" + "id" + ")";
+    System.out.println(sql);
+    stmt.execute(sql);
+
   }
 
   private static void dropTables(Statement stmt) throws ClassNotFoundException, SQLException {
     String sql = "";
-    sql = "drop table " + "CustomerTable" + " cascade constraints";
+    sql = "drop table " + "Shop" + " cascade constraints";
     stmt.executeUpdate(sql);
 
-    sql = "drop table " + "PersonTable" + " cascade constraints";
+    sql = "drop table " + "Category" + " cascade constraints";
     stmt.executeUpdate(sql);
 
-    sql = "drop table " + "ShopTable" + " cascade constraints";
+    sql = "drop table " + "Product" + " cascade constraints";
     stmt.executeUpdate(sql);
 
-    sql = "drop table " + "testa" + " cascade constraints";
+    sql = "drop table " + "Attribute" + " cascade constraints";
+    stmt.executeUpdate(sql);
+
+    sql = "drop table " + "Customer" + " cascade constraints";
+    stmt.executeUpdate(sql);
+
+    sql = "drop table " + "Person" + " cascade constraints";
     stmt.executeUpdate(sql);
 
   }
@@ -125,11 +167,6 @@ public class SchemaCreator {
   public static void main(String[] args) throws ClassNotFoundException, SQLException {
     Statement stmt = DatabaseConnector.getConnection().createStatement();
 
-    try {
-      dropTables(stmt);
-    } catch (Exception e) {
-      e.printStackTrace();
-    }
     try {
       generateTables(stmt);
       constrainTables(stmt);

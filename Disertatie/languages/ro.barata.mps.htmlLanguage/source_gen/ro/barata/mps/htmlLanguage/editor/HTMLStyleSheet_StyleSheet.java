@@ -19,5 +19,15 @@ public class HTMLStyleSheet_StyleSheet {
   public static void apply_value(Style style, EditorCell editorCell) {
     style.set(StyleAttributes.TEXT_COLOR, 0, StyleRegistry.getInstance().getSimpleColor(MPSColors.blue));
   }
+  public static void apply_ValueSymbol(Style style, EditorCell editorCell) {
+    style.set(StyleAttributes.TEXT_COLOR, 0, StyleRegistry.getInstance().getSimpleColor(MPSColors.blue));
+    style.set(StyleAttributes.PUNCTUATION_LEFT, 0, true);
+    style.set(StyleAttributes.PUNCTUATION_RIGHT, 0, true);
+  }
+  public static void apply_symbol(Style style, EditorCell editorCell) {
+    style.set(StyleAttributes.TEXT_COLOR, 0, StyleRegistry.getInstance().getSimpleColor(new Color(10572045)));
+    style.set(StyleAttributes.PUNCTUATION_LEFT, 0, true);
+    style.set(StyleAttributes.PUNCTUATION_RIGHT, 0, true);
+  }
 
 }

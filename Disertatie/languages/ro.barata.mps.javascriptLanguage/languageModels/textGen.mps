@@ -172,7 +172,7 @@
     </node>
   </node>
   <node concept="WtQ9Q" id="5b$G64tD46i">
-    <property role="3GE5qa" value="javascript.commands" />
+    <property role="3GE5qa" value="javascript.commands.var" />
     <ref role="WuzLi" to="jel9:5b$G64tCkse" resolve="ArrayCommand" />
     <node concept="11bSqf" id="5b$G64tD46j" role="11c4hB">
       <node concept="3clFbS" id="5b$G64tD46k" role="2VODD2">
@@ -463,7 +463,7 @@
     </node>
   </node>
   <node concept="WtQ9Q" id="3ET5BXsbinT">
-    <property role="3GE5qa" value="javascript.commands" />
+    <property role="3GE5qa" value="javascript.commands.var" />
     <ref role="WuzLi" to="jel9:3ET5BXsbiaA" resolve="DotExpressionCommand" />
     <node concept="11bSqf" id="3ET5BXsbinU" role="11c4hB">
       <node concept="3clFbS" id="3ET5BXsbinV" role="2VODD2">
@@ -654,7 +654,7 @@
     </node>
   </node>
   <node concept="WtQ9Q" id="7oklijIBFy0">
-    <property role="3GE5qa" value="javascript.commands" />
+    <property role="3GE5qa" value="javascript.commands.var" />
     <ref role="WuzLi" to="jel9:7oklijIBj25" resolve="GetArrayValueCommand" />
     <node concept="11bSqf" id="7oklijIBFy1" role="11c4hB">
       <node concept="3clFbS" id="7oklijIBFy2" role="2VODD2">
@@ -758,7 +758,7 @@
     </node>
   </node>
   <node concept="WtQ9Q" id="3ET5BXs41BX">
-    <property role="3GE5qa" value="javascript.commands" />
+    <property role="3GE5qa" value="javascript.commands.var" />
     <ref role="WuzLi" to="jel9:3ET5BXs414W" resolve="VarCommand" />
     <node concept="11bSqf" id="3ET5BXs41BY" role="11c4hB">
       <node concept="3clFbS" id="3ET5BXs41BZ" role="2VODD2">
@@ -780,7 +780,7 @@
     </node>
   </node>
   <node concept="WtQ9Q" id="4LZaFkzUieh">
-    <property role="3GE5qa" value="javascript.commands" />
+    <property role="3GE5qa" value="javascript.commands.var" />
     <ref role="WuzLi" to="jel9:4LZaFkzUfTk" resolve="VarIdCommand" />
     <node concept="11bSqf" id="4LZaFkzUiei" role="11c4hB">
       <node concept="3clFbS" id="4LZaFkzUiej" role="2VODD2">
@@ -1246,6 +1246,31 @@
               </node>
             </node>
           </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="WtQ9Q" id="2FtF2DJW_ch">
+    <property role="3GE5qa" value="javascript.commands.var" />
+    <ref role="WuzLi" to="jel9:2FtF2DJW$C8" resolve="VarNameCommand" />
+    <node concept="11bSqf" id="2FtF2DJW_ci" role="11c4hB">
+      <node concept="3clFbS" id="2FtF2DJW_cj" role="2VODD2">
+        <node concept="lc7rE" id="2FtF2DJW_cu" role="3cqZAp">
+          <node concept="la8eA" id="2FtF2DJW_cW" role="lcghm">
+            <property role="lacIc" value="document.getElementsByName(" />
+          </node>
+          <node concept="l9hG8" id="2FtF2DJW_Cs" role="lcghm">
+            <node concept="2OqwBi" id="2FtF2DJW_F7" role="lb14g">
+              <node concept="117lpO" id="2FtF2DJW_Dc" role="2Oq$k0" />
+              <node concept="3TrEf2" id="2FtF2DJW_OX" role="2OqNvi">
+                <ref role="3Tt5mk" to="jel9:2FtF2DJW$Cd" />
+              </node>
+            </node>
+          </node>
+          <node concept="la8eA" id="2FtF2DJW_Rx" role="lcghm">
+            <property role="lacIc" value=");" />
+          </node>
+          <node concept="l8MVK" id="2FtF2DJW_Uh" role="lcghm" />
         </node>
       </node>
     </node>

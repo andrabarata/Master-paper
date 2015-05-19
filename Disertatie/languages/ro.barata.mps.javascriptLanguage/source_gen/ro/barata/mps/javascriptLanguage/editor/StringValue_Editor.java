@@ -8,6 +8,8 @@ import jetbrains.mps.openapi.editor.EditorContext;
 import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.nodeEditor.cells.EditorCell_Collection;
 import jetbrains.mps.nodeEditor.cells.EditorCell_Constant;
+import jetbrains.mps.openapi.editor.style.Style;
+import jetbrains.mps.editor.runtime.style.StyleImpl;
 import jetbrains.mps.nodeEditor.cellProviders.CellProviderWithRole;
 import jetbrains.mps.lang.editor.cellProviders.PropertyCellProvider;
 import jetbrains.mps.nodeEditor.EditorManager;
@@ -26,8 +28,11 @@ public class StringValue_Editor extends DefaultNodeEditor {
     return editorCell;
   }
   private EditorCell createConstant_iizcdy_a0(EditorContext editorContext, SNode node) {
-    EditorCell_Constant editorCell = new EditorCell_Constant(editorContext, node, "\"");
+    EditorCell_Constant editorCell = new EditorCell_Constant(editorContext, node, "'");
     editorCell.setCellId("Constant_iizcdy_a0");
+    Style style = new StyleImpl();
+    JavascriptStylesheet_StyleSheet.apply_TextSymbol(style, editorCell);
+    editorCell.getStyle().putAll(style);
     editorCell.setDefaultText("");
     return editorCell;
   }
@@ -38,6 +43,9 @@ public class StringValue_Editor extends DefaultNodeEditor {
     EditorCell editorCell;
     editorCell = provider.createEditorCell(editorContext);
     editorCell.setCellId("property_value");
+    Style style = new StyleImpl();
+    JavascriptStylesheet_StyleSheet.apply_TextSymbol(style, editorCell);
+    editorCell.getStyle().putAll(style);
     editorCell.setSubstituteInfo(provider.createDefaultSubstituteInfo());
     SNode attributeConcept = provider.getRoleAttribute();
     Class attributeKind = provider.getRoleAttributeClass();
@@ -48,8 +56,11 @@ public class StringValue_Editor extends DefaultNodeEditor {
     return editorCell;
   }
   private EditorCell createConstant_iizcdy_c0(EditorContext editorContext, SNode node) {
-    EditorCell_Constant editorCell = new EditorCell_Constant(editorContext, node, "\"");
+    EditorCell_Constant editorCell = new EditorCell_Constant(editorContext, node, "'");
     editorCell.setCellId("Constant_iizcdy_c0");
+    Style style = new StyleImpl();
+    JavascriptStylesheet_StyleSheet.apply_TextSymbol(style, editorCell);
+    editorCell.getStyle().putAll(style);
     editorCell.setDefaultText("");
     return editorCell;
   }

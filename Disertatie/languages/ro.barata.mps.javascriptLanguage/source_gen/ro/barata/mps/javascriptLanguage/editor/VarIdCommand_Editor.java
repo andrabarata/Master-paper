@@ -11,6 +11,8 @@ import jetbrains.mps.nodeEditor.cells.EditorCell_Constant;
 import jetbrains.mps.nodeEditor.cellProviders.CellProviderWithRole;
 import jetbrains.mps.lang.editor.cellProviders.RefNodeCellProvider;
 import jetbrains.mps.nodeEditor.EditorManager;
+import jetbrains.mps.openapi.editor.style.Style;
+import jetbrains.mps.editor.runtime.style.StyleImpl;
 import jetbrains.mps.lang.editor.cellProviders.PropertyCellProvider;
 
 public class VarIdCommand_Editor extends DefaultNodeEditor {
@@ -61,6 +63,9 @@ public class VarIdCommand_Editor extends DefaultNodeEditor {
   private EditorCell createConstant_2twjyp_d0(EditorContext editorContext, SNode node) {
     EditorCell_Constant editorCell = new EditorCell_Constant(editorContext, node, ".");
     editorCell.setCellId("Constant_2twjyp_d0");
+    Style style = new StyleImpl();
+    JavascriptStylesheet_StyleSheet.apply_symbol(style, editorCell);
+    editorCell.getStyle().putAll(style);
     editorCell.setDefaultText("");
     return editorCell;
   }

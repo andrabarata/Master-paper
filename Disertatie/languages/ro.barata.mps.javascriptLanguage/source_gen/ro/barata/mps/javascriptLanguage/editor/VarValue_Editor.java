@@ -8,11 +8,14 @@ import jetbrains.mps.openapi.editor.EditorContext;
 import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.nodeEditor.cells.EditorCell_Collection;
 import jetbrains.mps.nodeEditor.cells.EditorCell_Constant;
+import jetbrains.mps.openapi.editor.style.Style;
+import jetbrains.mps.editor.runtime.style.StyleImpl;
 import jetbrains.mps.nodeEditor.cellProviders.CellProviderWithRole;
 import jetbrains.mps.lang.editor.cellProviders.RefCellCellProvider;
 import jetbrains.mps.nodeEditor.EditorManager;
 import jetbrains.mps.nodeEditor.InlineCellProvider;
 import jetbrains.mps.lang.editor.cellProviders.PropertyCellProvider;
+import jetbrains.mps.editor.runtime.style.StyleAttributes;
 
 public class VarValue_Editor extends DefaultNodeEditor {
   public EditorCell createEditorCell(EditorContext editorContext, SNode node) {
@@ -27,8 +30,11 @@ public class VarValue_Editor extends DefaultNodeEditor {
     return editorCell;
   }
   private EditorCell createConstant_vypz6p_a0(EditorContext editorContext, SNode node) {
-    EditorCell_Constant editorCell = new EditorCell_Constant(editorContext, node, " ");
+    EditorCell_Constant editorCell = new EditorCell_Constant(editorContext, node, "@");
     editorCell.setCellId("Constant_vypz6p_a0");
+    Style style = new StyleImpl();
+    JavascriptStylesheet_StyleSheet.apply_IndicatorSymbol(style, editorCell);
+    editorCell.getStyle().putAll(style);
     editorCell.setDefaultText("");
     return editorCell;
   }
@@ -43,6 +49,9 @@ public class VarValue_Editor extends DefaultNodeEditor {
       editorCell.setReferenceCell(true);
       editorCell.setRole("var");
     }
+    Style style = new StyleImpl();
+    JavascriptStylesheet_StyleSheet.apply_Indicator(style, editorCell);
+    editorCell.getStyle().putAll(style);
     editorCell.setSubstituteInfo(provider.createDefaultSubstituteInfo());
     SNode attributeConcept = provider.getRoleAttribute();
     Class attributeKind = provider.getRoleAttributeClass();
@@ -70,6 +79,10 @@ public class VarValue_Editor extends DefaultNodeEditor {
       EditorCell editorCell;
       editorCell = provider.createEditorCell(editorContext);
       editorCell.setCellId("property_name");
+      Style style = new StyleImpl();
+      JavascriptStylesheet_StyleSheet.apply_Indicator(style, editorCell);
+      style.set(StyleAttributes.UNDERLINED, 0, true);
+      editorCell.getStyle().putAll(style);
       editorCell.setSubstituteInfo(provider.createDefaultSubstituteInfo());
       SNode attributeConcept = provider.getRoleAttribute();
       Class attributeKind = provider.getRoleAttributeClass();

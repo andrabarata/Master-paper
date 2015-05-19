@@ -22,6 +22,8 @@
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />
+    <classNode dependClassName="ro.barata.mps.htmlLanguage.behavior.IAttribute_BehaviorDescriptor" />
+    <classNode extendsClassName="java.lang.Cloneable" />
     <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
   </dependency>
   <dependency className="ro.barata.mps.htmlLanguage.behavior.Action_Behavior" file="Action_Behavior.java">
@@ -53,6 +55,22 @@
     <classNode dependClassName="ro.barata.mps.htmlLanguage.behavior.SelectCondition_BehaviorDescriptor" />
     <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
   </dependency>
+  <dependency className="ro.barata.mps.htmlLanguage.behavior.AttributeId_BehaviorDescriptor" file="AttributeId_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />
+    <classNode dependClassName="ro.barata.mps.htmlLanguage.behavior.IAttribute_BehaviorDescriptor" />
+    <classNode extendsClassName="java.lang.Cloneable" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="ro.barata.mps.htmlLanguage.behavior.AttributeName_BehaviorDescriptor" file="AttributeName_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />
+    <classNode dependClassName="ro.barata.mps.htmlLanguage.behavior.IAttribute_BehaviorDescriptor" />
+    <classNode extendsClassName="java.lang.Cloneable" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
   <dependency className="ro.barata.mps.htmlLanguage.behavior.AttributeReference_BehaviorDescriptor" file="AttributeReference_BehaviorDescriptor.java">
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="java.lang.String" />
@@ -63,6 +81,8 @@
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />
+    <classNode dependClassName="ro.barata.mps.htmlLanguage.behavior.IAttribute_BehaviorDescriptor" />
+    <classNode extendsClassName="java.lang.Cloneable" />
     <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
   </dependency>
   <dependency className="ro.barata.mps.htmlLanguage.behavior.BehaviorAspectDescriptor" file="BehaviorAspectDescriptor.java">
@@ -73,10 +93,13 @@
     <classNode dependClassName="ro.barata.mps.htmlLanguage.behavior.ActionType_BehaviorDescriptor" />
     <classNode dependClassName="ro.barata.mps.htmlLanguage.behavior.Action_BehaviorDescriptor" />
     <classNode dependClassName="ro.barata.mps.htmlLanguage.behavior.AllCondition_BehaviorDescriptor" />
+    <classNode dependClassName="ro.barata.mps.htmlLanguage.behavior.AttributeId_BehaviorDescriptor" />
+    <classNode dependClassName="ro.barata.mps.htmlLanguage.behavior.AttributeName_BehaviorDescriptor" />
     <classNode dependClassName="ro.barata.mps.htmlLanguage.behavior.Attribute_BehaviorDescriptor" />
     <classNode dependClassName="ro.barata.mps.htmlLanguage.behavior.CounterIdReference_BehaviorDescriptor" />
     <classNode dependClassName="ro.barata.mps.htmlLanguage.behavior.CounterId_BehaviorDescriptor" />
     <classNode dependClassName="ro.barata.mps.htmlLanguage.behavior.DatabaseOperation_BehaviorDescriptor" />
+    <classNode dependClassName="ro.barata.mps.htmlLanguage.behavior.DivContainer_BehaviorDescriptor" />
     <classNode dependClassName="ro.barata.mps.htmlLanguage.behavior.ExpressionReference_BehaviorDescriptor" />
     <classNode dependClassName="ro.barata.mps.htmlLanguage.behavior.H1Element_BehaviorDescriptor" />
     <classNode dependClassName="ro.barata.mps.htmlLanguage.behavior.HTMLBody_BehaviorDescriptor" />
@@ -96,6 +119,17 @@
     <classNode dependClassName="ro.barata.mps.htmlLanguage.behavior.TitleElement_BehaviorDescriptor" />
     <classNode extendsClassName="jetbrains.mps.smodel.runtime.BehaviorAspectDescriptor" />
   </dependency>
+  <dependency className="ro.barata.mps.htmlLanguage.behavior.ContainerCommand_Behavior" file="ContainerCommand_Behavior.java">
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.IVisitor" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.IWhereFilter" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
+  </dependency>
   <dependency className="ro.barata.mps.htmlLanguage.behavior.ContainerCommand_BehaviorDescriptor" file="ContainerCommand_BehaviorDescriptor.java">
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="java.lang.String" />
@@ -114,12 +148,22 @@
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.INamedConcept_Behavior" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.INamedConcept_BehaviorDescriptor" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
+    <classNode extendsClassName="java.lang.Cloneable" />
     <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
   </dependency>
   <dependency className="ro.barata.mps.htmlLanguage.behavior.DatabaseOperation_BehaviorDescriptor" file="DatabaseOperation_BehaviorDescriptor.java">
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="ro.barata.mps.htmlLanguage.behavior.AbstractOperation_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="ro.barata.mps.htmlLanguage.behavior.DivContainer_BehaviorDescriptor" file="DivContainer_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="ro.barata.mps.htmlLanguage.behavior.ContainerCommand_BehaviorDescriptor" />
     <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
   </dependency>
   <dependency className="ro.barata.mps.htmlLanguage.behavior.ExpressionReference_BehaviorDescriptor" file="ExpressionReference_BehaviorDescriptor.java">
@@ -139,6 +183,17 @@
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />
     <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="ro.barata.mps.htmlLanguage.behavior.HTMLCommand_Behavior" file="HTMLCommand_Behavior.java">
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.IVisitor" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.IWhereFilter" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
   </dependency>
   <dependency className="ro.barata.mps.htmlLanguage.behavior.HTMLCommand_BehaviorDescriptor" file="HTMLCommand_BehaviorDescriptor.java">
     <classNode dependClassName="java.lang.Override" />
@@ -176,6 +231,7 @@
     <classNode extendsClassName="java.lang.Cloneable" />
     <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
   </dependency>
+  <dependency className="ro.barata.mps.htmlLanguage.behavior.IAttribute_BehaviorDescriptor" file="IAttribute_BehaviorDescriptor.java" />
   <dependency className="ro.barata.mps.htmlLanguage.behavior.InputElement_BehaviorDescriptor" file="InputElement_BehaviorDescriptor.java">
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="java.lang.String" />

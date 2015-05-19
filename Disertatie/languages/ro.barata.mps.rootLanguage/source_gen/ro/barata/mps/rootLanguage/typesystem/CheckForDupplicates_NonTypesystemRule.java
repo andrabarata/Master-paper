@@ -21,8 +21,8 @@ import jetbrains.mps.errors.IErrorReporter;
 import jetbrains.mps.errors.BaseQuickFixProvider;
 import jetbrains.mps.smodel.SModelUtil_new;
 
-public class check_DAOEntityMapper_NonTypesystemRule extends AbstractNonTypesystemRule_Runtime implements NonTypesystemRule_Runtime {
-  public check_DAOEntityMapper_NonTypesystemRule() {
+public class CheckForDupplicates_NonTypesystemRule extends AbstractNonTypesystemRule_Runtime implements NonTypesystemRule_Runtime {
+  public CheckForDupplicates_NonTypesystemRule() {
   }
   public void applyRule(final SNode daoEntityMapper, final TypeCheckingContext typeCheckingContext, IsApplicableStatus status) {
     List<SNode> children = SNodeOperations.getChildren(SNodeOperations.getParent(daoEntityMapper));

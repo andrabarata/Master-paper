@@ -28,6 +28,8 @@ import java.util.List;
 import java.util.ArrayList;
 import jetbrains.mps.generator.template.SourceSubstituteMacroNodeContext;
 import jetbrains.mps.generator.template.SourceSubstituteMacroNodesContext;
+import jetbrains.mps.generator.template.MappingScriptContext;
+import jetbrains.mps.lang.structure.behavior.DataTypeDeclaration_Behavior;
 
 @Generated
 public class QueriesGenerated {
@@ -43,6 +45,9 @@ public class QueriesGenerated {
   }
   public static boolean baseMappingRule_Condition_5152062499435542149(final BaseMappingRuleContext _context) {
     return SConceptOperations.isExactly(SNodeOperations.asSConcept(SNodeOperations.getConcept(SLinkOperations.getTarget(_context.getNode(), MetaAdapterFactory.getContainmentLink(0x5cba771a86ff496bL, 0xa1216ae83a039560L, 0x64e3288c48324ebcL, 0x64e3288c4835c1b9L, "type")))), MetaAdapterFactory.getConcept(0x5cba771a86ff496bL, 0xa1216ae83a039560L, 0x64e3288c48324f19L, "ro.barata.mps.rootLanguage.structure.BooleanType"));
+  }
+  public static boolean baseMappingRule_Condition_4950668675310274412(final BaseMappingRuleContext _context) {
+    return SConceptOperations.isExactly(SNodeOperations.asSConcept(SNodeOperations.getConcept(SLinkOperations.getTarget(_context.getNode(), MetaAdapterFactory.getContainmentLink(0x5cba771a86ff496bL, 0xa1216ae83a039560L, 0x64e3288c48324ebcL, 0x64e3288c4835c1b9L, "type")))), MetaAdapterFactory.getConcept(0x5cba771a86ff496bL, 0xa1216ae83a039560L, 0x64e3288c48324fa3L, "ro.barata.mps.rootLanguage.structure.EntityType"));
   }
   public static boolean baseMappingRule_Condition_1622271923989255695(final BaseMappingRuleContext _context) {
     return SConceptOperations.isExactly(SNodeOperations.asSConcept(SNodeOperations.getConcept(SLinkOperations.getTarget(_context.getNode(), MetaAdapterFactory.getContainmentLink(0x5cba771a86ff496bL, 0xa1216ae83a039560L, 0x64e3288c48324ebcL, 0x64e3288c4835c1b9L, "type")))), MetaAdapterFactory.getConcept(0x5cba771a86ff496bL, 0xa1216ae83a039560L, 0x64e3288c48324f42L, "ro.barata.mps.rootLanguage.structure.IntType"));
@@ -347,6 +352,7 @@ public class QueriesGenerated {
   }
   public static Object referenceMacro_GetReferent_7227310691964571545(final ReferenceMacroContext _context) {
     return SPropertyOperations.getString(_context.getOutputNodeByInputNodeAndMappingLabel(_context.getNode(), "propertyVar"), MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"));
+
   }
   public static Object referenceMacro_GetReferent_5512171426401968517(final ReferenceMacroContext _context) {
     return SPropertyOperations.getString(_context.getOutputNodeByInputNodeAndMappingLabel(_context.getNode(), "referenceVar"), MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"));
@@ -700,5 +706,78 @@ public class QueriesGenerated {
       }
     });
     return children;
+  }
+  public static void mappingScript_CodeBlock_4950668675308013072(final MappingScriptContext _context) {
+    ListSequence.fromList(SModelOperations.nodes(_context.getModel(), MetaAdapterFactory.getConcept(0x5cba771a86ff496bL, 0xa1216ae83a039560L, 0x25b0b61fcc325f03L, "ro.barata.mps.rootLanguage.structure.DAOPropertyMapper"))).visitAll(new IVisitor<SNode>() {
+      public void visit(SNode it) {
+        SNode type = SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(MetaAdapterFactory.getConcept(0x5cba771a86ff496bL, 0xa1216ae83a039560L, 0x644c90c84bce0008L, "ro.barata.mps.rootLanguage.structure.PrimaryType")));
+        if (DataTypeDeclaration_Behavior.call_isSimpleInteger_1220268868375(SLinkOperations.getTarget(SLinkOperations.getTarget(it, MetaAdapterFactory.getReferenceLink(0x5cba771a86ff496bL, 0xa1216ae83a039560L, 0x25b0b61fcc325f03L, 0xd18d96e6d6a7e54L, "property")), MetaAdapterFactory.getReferenceLink(0xc72da2b97cce4447L, 0x8389f407dc1158b7L, 0xf979bd086bL, 0xfc26f42fe5L, "dataType")))) {
+          type = SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(MetaAdapterFactory.getConcept(0x5cba771a86ff496bL, 0xa1216ae83a039560L, 0x64e3288c48324f42L, "ro.barata.mps.rootLanguage.structure.IntType")));
+        } else if (DataTypeDeclaration_Behavior.call_isSimpleString_1220268704138(SLinkOperations.getTarget(SLinkOperations.getTarget(it, MetaAdapterFactory.getReferenceLink(0x5cba771a86ff496bL, 0xa1216ae83a039560L, 0x25b0b61fcc325f03L, 0xd18d96e6d6a7e54L, "property")), MetaAdapterFactory.getReferenceLink(0xc72da2b97cce4447L, 0x8389f407dc1158b7L, 0xf979bd086bL, 0xfc26f42fe5L, "dataType")))) {
+          type = SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(MetaAdapterFactory.getConcept(0x5cba771a86ff496bL, 0xa1216ae83a039560L, 0x64e3288c48324f85L, "ro.barata.mps.rootLanguage.structure.StringType")));
+        } else if (DataTypeDeclaration_Behavior.call_isSimpleBoolean_1220268891062(SLinkOperations.getTarget(SLinkOperations.getTarget(it, MetaAdapterFactory.getReferenceLink(0x5cba771a86ff496bL, 0xa1216ae83a039560L, 0x25b0b61fcc325f03L, 0xd18d96e6d6a7e54L, "property")), MetaAdapterFactory.getReferenceLink(0xc72da2b97cce4447L, 0x8389f407dc1158b7L, 0xf979bd086bL, 0xfc26f42fe5L, "dataType")))) {
+          type = SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(MetaAdapterFactory.getConcept(0x5cba771a86ff496bL, 0xa1216ae83a039560L, 0x64e3288c48324f19L, "ro.barata.mps.rootLanguage.structure.BooleanType")));
+        }
+        SLinkOperations.setTarget(it, MetaAdapterFactory.getContainmentLink(0x5cba771a86ff496bL, 0xa1216ae83a039560L, 0x64e3288c48324ebcL, 0x64e3288c4835c1b9L, "type"), type);
+      }
+    });
+    ListSequence.fromList(SModelOperations.nodes(_context.getModel(), MetaAdapterFactory.getConcept(0x5cba771a86ff496bL, 0xa1216ae83a039560L, 0x17ad7b2456d2b6a7L, "ro.barata.mps.rootLanguage.structure.DAOReferenceMapper"))).visitAll(new IVisitor<SNode>() {
+      public void visit(final SNode nodeVal) {
+        final String referencedClass = SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(nodeVal, MetaAdapterFactory.getReferenceLink(0x5cba771a86ff496bL, 0xa1216ae83a039560L, 0x17ad7b2456d2b6a7L, 0x17ad7b2456d8d2a1L, "rerefence")), MetaAdapterFactory.getReferenceLink(0xc72da2b97cce4447L, 0x8389f407dc1158b7L, 0xf979bd086aL, 0xf98055fef0L, "target")), MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"));
+        Iterable<SNode> foundNodes = ListSequence.fromList(SModelOperations.nodes(_context.getModel(), MetaAdapterFactory.getConcept(0x5cba771a86ff496bL, 0xa1216ae83a039560L, 0x25b0b61fcc326122L, "ro.barata.mps.rootLanguage.structure.DAOEntityMapper"))).where(new IWhereFilter<SNode>() {
+          public boolean accept(SNode it) {
+            return SPropertyOperations.hasValue(SLinkOperations.getTarget(it, MetaAdapterFactory.getReferenceLink(0x5cba771a86ff496bL, 0xa1216ae83a039560L, 0x25b0b61fcc326122L, 0x25b0b61fcc4203bcL, "conceptReference")), MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), referencedClass);
+          }
+        }).where(new IWhereFilter<SNode>() {
+          public boolean accept(SNode it) {
+            return (SLinkOperations.getTarget(it, MetaAdapterFactory.getContainmentLink(0x5cba771a86ff496bL, 0xa1216ae83a039560L, 0x25b0b61fcc326122L, 0x25b0b61fcc3261e4L, "entity")) != null);
+          }
+        }).select(new ISelector<SNode, SNode>() {
+          public SNode select(SNode it) {
+            return SLinkOperations.getTarget(it, MetaAdapterFactory.getContainmentLink(0x5cba771a86ff496bL, 0xa1216ae83a039560L, 0x25b0b61fcc326122L, 0x25b0b61fcc3261e4L, "entity"));
+          }
+        }).translate(new ITranslator2<SNode, SNode>() {
+          public Iterable<SNode> translate(SNode it) {
+            return SLinkOperations.getChildren(it, MetaAdapterFactory.getContainmentLink(0x5cba771a86ff496bL, 0xa1216ae83a039560L, 0xd18d96e6d6a9f1cL, 0xd18d96e6d6a9f53L, "propertyMappings"));
+          }
+        });
+        Sequence.fromIterable(foundNodes).visitAll(new IVisitor<SNode>() {
+          public void visit(SNode it) {
+            if (SPropertyOperations.getBoolean(it, MetaAdapterFactory.getProperty(0x5cba771a86ff496bL, 0xa1216ae83a039560L, 0x64e3288c48324ebcL, 0x477fcd8be39f67a3L, "isKey"))) {
+              SLinkOperations.setTarget(nodeVal, MetaAdapterFactory.getContainmentLink(0x5cba771a86ff496bL, 0xa1216ae83a039560L, 0x64e3288c48324ebcL, 0x64e3288c4835c1b9L, "type"), SNodeOperations.copyNode(SLinkOperations.getTarget(it, MetaAdapterFactory.getContainmentLink(0x5cba771a86ff496bL, 0xa1216ae83a039560L, 0x64e3288c48324ebcL, 0x64e3288c4835c1b9L, "type"))));
+            }
+          }
+        });
+      }
+    });
+    ListSequence.fromList(SModelOperations.nodes(_context.getModel(), MetaAdapterFactory.getConcept(0x5cba771a86ff496bL, 0xa1216ae83a039560L, 0x17ad7b245711b2c1L, "ro.barata.mps.rootLanguage.structure.DAOChildMapper"))).visitAll(new IVisitor<SNode>() {
+      public void visit(final SNode nodeVal) {
+        final String referencedClass = SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(nodeVal, MetaAdapterFactory.getReferenceLink(0x5cba771a86ff496bL, 0xa1216ae83a039560L, 0x17ad7b245711b2c1L, 0x17ad7b245711b2ddL, "child")), MetaAdapterFactory.getReferenceLink(0xc72da2b97cce4447L, 0x8389f407dc1158b7L, 0xf979bd086aL, 0xf98055fef0L, "target")), MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"));
+        Iterable<SNode> foundNodes = ListSequence.fromList(SModelOperations.nodes(_context.getModel(), MetaAdapterFactory.getConcept(0x5cba771a86ff496bL, 0xa1216ae83a039560L, 0x25b0b61fcc326122L, "ro.barata.mps.rootLanguage.structure.DAOEntityMapper"))).where(new IWhereFilter<SNode>() {
+          public boolean accept(SNode it) {
+            return SPropertyOperations.hasValue(SLinkOperations.getTarget(it, MetaAdapterFactory.getReferenceLink(0x5cba771a86ff496bL, 0xa1216ae83a039560L, 0x25b0b61fcc326122L, 0x25b0b61fcc4203bcL, "conceptReference")), MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), referencedClass);
+          }
+        }).where(new IWhereFilter<SNode>() {
+          public boolean accept(SNode it) {
+            return (SLinkOperations.getTarget(it, MetaAdapterFactory.getContainmentLink(0x5cba771a86ff496bL, 0xa1216ae83a039560L, 0x25b0b61fcc326122L, 0x25b0b61fcc3261e4L, "entity")) != null);
+          }
+        }).select(new ISelector<SNode, SNode>() {
+          public SNode select(SNode it) {
+            return SLinkOperations.getTarget(it, MetaAdapterFactory.getContainmentLink(0x5cba771a86ff496bL, 0xa1216ae83a039560L, 0x25b0b61fcc326122L, 0x25b0b61fcc3261e4L, "entity"));
+          }
+        }).translate(new ITranslator2<SNode, SNode>() {
+          public Iterable<SNode> translate(SNode it) {
+            return SLinkOperations.getChildren(it, MetaAdapterFactory.getContainmentLink(0x5cba771a86ff496bL, 0xa1216ae83a039560L, 0xd18d96e6d6a9f1cL, 0xd18d96e6d6a9f53L, "propertyMappings"));
+          }
+        });
+        Sequence.fromIterable(foundNodes).visitAll(new IVisitor<SNode>() {
+          public void visit(SNode it) {
+            if (SPropertyOperations.getBoolean(it, MetaAdapterFactory.getProperty(0x5cba771a86ff496bL, 0xa1216ae83a039560L, 0x64e3288c48324ebcL, 0x477fcd8be39f67a3L, "isKey"))) {
+              SLinkOperations.setTarget(nodeVal, MetaAdapterFactory.getContainmentLink(0x5cba771a86ff496bL, 0xa1216ae83a039560L, 0x64e3288c48324ebcL, 0x64e3288c4835c1b9L, "type"), SNodeOperations.copyNode(SLinkOperations.getTarget(it, MetaAdapterFactory.getContainmentLink(0x5cba771a86ff496bL, 0xa1216ae83a039560L, 0x64e3288c48324ebcL, 0x64e3288c4835c1b9L, "type"))));
+            }
+          }
+        });
+      }
+    });
   }
 }

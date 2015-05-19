@@ -58,7 +58,7 @@
     </language>
   </registry>
   <node concept="1TIwiD" id="3ET5BXsao0B">
-    <property role="3GE5qa" value="javascript.commands" />
+    <property role="3GE5qa" value="javascript.commands.var" />
     <property role="TrG5h" value="AbstractVarCommand" />
     <property role="R5$K7" value="true" />
     <property role="R5$K2" value="false" />
@@ -86,7 +86,7 @@
     </node>
   </node>
   <node concept="1TIwiD" id="5b$G64tCkse">
-    <property role="3GE5qa" value="javascript.commands" />
+    <property role="3GE5qa" value="javascript.commands.var" />
     <property role="TrG5h" value="ArrayCommand" />
     <property role="34LRSv" value="array" />
     <ref role="1TJDcQ" node="2FtF2DJxYDO" resolve="VarCommandValue" />
@@ -148,13 +148,13 @@
     </node>
   </node>
   <node concept="1TIwiD" id="3ET5BXsbiaA">
-    <property role="3GE5qa" value="javascript.commands" />
+    <property role="3GE5qa" value="javascript.commands.var" />
     <property role="TrG5h" value="DotExpressionCommand" />
     <property role="34LRSv" value="Var as expression" />
     <ref role="1TJDcQ" node="2FtF2DJxYDO" resolve="VarCommandValue" />
     <node concept="1TJgyi" id="3ET5BXsbiaB" role="1TKVEl">
       <property role="TrG5h" value="expression" />
-      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+      <ref role="AX2Wp" node="2FtF2DJNatV" resolve="DotExpressionValues" />
     </node>
     <node concept="1TJgyj" id="3ET5BXsbidw" role="1TKVEi">
       <property role="20lmBu" value="reference" />
@@ -178,7 +178,7 @@
   <node concept="1TIwiD" id="3ET5BXs41Bm">
     <property role="3GE5qa" value="javascript.commands" />
     <property role="TrG5h" value="ForCommand" />
-    <property role="34LRSv" value="for iteration" />
+    <property role="34LRSv" value="for" />
     <ref role="1TJDcQ" node="4LZaFkzUfUz" resolve="JavascriptCommand" />
     <node concept="1TJgyj" id="3ET5BXs6_Gx" role="1TKVEi">
       <property role="20lmBu" value="aggregation" />
@@ -216,7 +216,7 @@
     </node>
   </node>
   <node concept="1TIwiD" id="7oklijIBj25">
-    <property role="3GE5qa" value="javascript.commands" />
+    <property role="3GE5qa" value="javascript.commands.var" />
     <property role="TrG5h" value="GetArrayValueCommand" />
     <property role="34LRSv" value="Var as array element" />
     <ref role="1TJDcQ" node="2FtF2DJxYDO" resolve="VarCommandValue" />
@@ -260,7 +260,7 @@
     </node>
   </node>
   <node concept="1TIwiD" id="3ET5BXs414W">
-    <property role="3GE5qa" value="javascript.commands" />
+    <property role="3GE5qa" value="javascript.commands.var" />
     <property role="TrG5h" value="VarCommand" />
     <property role="34LRSv" value="Var as value" />
     <ref role="1TJDcQ" node="2FtF2DJxYDO" resolve="VarCommandValue" />
@@ -273,12 +273,12 @@
   </node>
   <node concept="1TIwiD" id="4LZaFkzUfTk">
     <property role="TrG5h" value="VarIdCommand" />
-    <property role="3GE5qa" value="javascript.commands" />
-    <property role="34LRSv" value="Var as DOM id value" />
+    <property role="3GE5qa" value="javascript.commands.var" />
+    <property role="34LRSv" value="id" />
     <ref role="1TJDcQ" node="2FtF2DJxYDO" resolve="VarCommandValue" />
     <node concept="1TJgyi" id="2FtF2DJNatT" role="1TKVEl">
       <property role="TrG5h" value="expression" />
-      <ref role="AX2Wp" node="2FtF2DJNatV" resolve="DOMElement" />
+      <ref role="AX2Wp" node="2FtF2DJNatV" resolve="DotExpressionValues" />
     </node>
     <node concept="1TJgyj" id="2FtF2DJy0JI" role="1TKVEi">
       <property role="20lmBu" value="aggregation" />
@@ -420,6 +420,11 @@
       <property role="1uS6qv" value="=" />
       <property role="1uS6qo" value="=" />
     </node>
+    <node concept="M4N5e" id="7KwyEUhVhin" role="M5hS2">
+      <property role="2fHolG" value="6" />
+      <property role="1uS6qv" value="==" />
+      <property role="1uS6qo" value="==" />
+    </node>
   </node>
   <node concept="AxPO7" id="7oklijIFfmm">
     <property role="TrG5h" value="PushHTMLType" />
@@ -501,14 +506,14 @@
     </node>
   </node>
   <node concept="1TIwiD" id="2FtF2DJxYDO">
-    <property role="3GE5qa" value="javascript.commands" />
+    <property role="3GE5qa" value="javascript.commands.var" />
     <property role="R5$K7" value="true" />
     <property role="TrG5h" value="VarCommandValue" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
   </node>
   <node concept="AxPO7" id="2FtF2DJNatV">
-    <property role="3GE5qa" value="javascript.commands" />
-    <property role="TrG5h" value="DOMElement" />
+    <property role="3GE5qa" value="javascript.commands.var" />
+    <property role="TrG5h" value="DotExpressionValues" />
     <ref role="M4eZT" to="tpck:fKAOsGN" resolve="string" />
     <node concept="M4N5e" id="2FtF2DJNatW" role="M5hS2">
       <property role="1uS6qv" value="value" />
@@ -517,6 +522,40 @@
     <node concept="M4N5e" id="2FtF2DJNauo" role="M5hS2">
       <property role="1uS6qv" value="innerHTML" />
       <property role="1uS6qo" value="innerHTML" />
+    </node>
+    <node concept="M4N5e" id="2FtF2DJXB5T" role="M5hS2">
+      <property role="1uS6qv" value="lenght" />
+      <property role="1uS6qo" value="length" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="2FtF2DJW$C8">
+    <property role="3GE5qa" value="javascript.commands.var" />
+    <property role="TrG5h" value="VarNameCommand" />
+    <property role="34LRSv" value="name" />
+    <ref role="1TJDcQ" node="2FtF2DJxYDO" resolve="VarCommandValue" />
+    <node concept="1TJgyj" id="2FtF2DJW$Cd" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="name" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="3ET5BXs7p5n" resolve="JavascriptValue" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="2FtF2DJZtPZ">
+    <property role="3GE5qa" value="javascript.commands" />
+    <property role="TrG5h" value="IfCommand" />
+    <property role="34LRSv" value="if" />
+    <ref role="1TJDcQ" node="4LZaFkzUfUz" resolve="JavascriptCommand" />
+    <node concept="1TJgyj" id="oA6tRY9D2j" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="left" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="3ET5BXs7p5n" resolve="JavascriptValue" />
+    </node>
+    <node concept="1TJgyj" id="oA6tRY9D5c" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="right" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="3ET5BXs7p5n" resolve="JavascriptValue" />
     </node>
   </node>
 </model>

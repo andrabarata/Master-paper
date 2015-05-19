@@ -29,37 +29,41 @@ public class BehaviorAspectDescriptor implements jetbrains.mps.smodel.runtime.Be
         return new ForCommand_BehaviorDescriptor();
       case 10:
         return new GetArrayValueCommand_BehaviorDescriptor();
-      case 17:
+      case 18:
         return new PushHTMLCommand_BehaviorDescriptor();
-      case 19:
-        return new SubmitCommand_BehaviorDescriptor();
       case 20:
-        return new VarCommand_BehaviorDescriptor();
+        return new SubmitCommand_BehaviorDescriptor();
       case 21:
+        return new VarCommand_BehaviorDescriptor();
+      case 22:
         return new VarIdCommand_BehaviorDescriptor();
       case 2:
         return new AjaxJavascriptFunction_BehaviorDescriptor();
-      case 13:
-        return new JavascriptFile_BehaviorDescriptor();
       case 14:
+        return new JavascriptFile_BehaviorDescriptor();
+      case 15:
         return new JavascriptFunction_BehaviorDescriptor();
-      case 12:
+      case 13:
         return new IntValue_BehaviorDescriptor();
-      case 16:
+      case 17:
         return new JavascriptParameter_BehaviorDescriptor();
-      case 18:
+      case 19:
         return new StringValue_BehaviorDescriptor();
-      case 22:
+      case 24:
         return new VarValue_BehaviorDescriptor();
       case 0:
         return new ActionVarValue_BehaviorDescriptor();
-      case 15:
+      case 16:
         return new JavascriptOperation_BehaviorDescriptor();
-      case 11:
+      case 12:
         return new InitializeVarCommand_BehaviorDescriptor();
+      case 23:
+        return new VarNameCommand_BehaviorDescriptor();
+      case 11:
+        return new IfCommand_BehaviorDescriptor();
       default:
         return BehaviorAspectInterpreted.getInstance().getDescriptor(fqName);
     }
   }
-  private static String[] stringSwitchCases_846f5o_a0a0b = new String[]{"ro.barata.mps.javascriptLanguage.structure.ActionVarValue", "ro.barata.mps.javascriptLanguage.structure.AddArrayElementCommand", "ro.barata.mps.javascriptLanguage.structure.AjaxJavascriptFunction", "ro.barata.mps.javascriptLanguage.structure.ArrayCommand", "ro.barata.mps.javascriptLanguage.structure.AssignmentCommand", "ro.barata.mps.javascriptLanguage.structure.CallFunctionCommand", "ro.barata.mps.javascriptLanguage.structure.ChangePageCommand", "ro.barata.mps.javascriptLanguage.structure.DotExpressionCommand", "ro.barata.mps.javascriptLanguage.structure.DummyCommand", "ro.barata.mps.javascriptLanguage.structure.ForCommand", "ro.barata.mps.javascriptLanguage.structure.GetArrayValueCommand", "ro.barata.mps.javascriptLanguage.structure.InitializeVarCommand", "ro.barata.mps.javascriptLanguage.structure.IntValue", "ro.barata.mps.javascriptLanguage.structure.JavascriptFile", "ro.barata.mps.javascriptLanguage.structure.JavascriptFunction", "ro.barata.mps.javascriptLanguage.structure.JavascriptOperation", "ro.barata.mps.javascriptLanguage.structure.JavascriptParameter", "ro.barata.mps.javascriptLanguage.structure.PushHTMLCommand", "ro.barata.mps.javascriptLanguage.structure.StringValue", "ro.barata.mps.javascriptLanguage.structure.SubmitCommand", "ro.barata.mps.javascriptLanguage.structure.VarCommand", "ro.barata.mps.javascriptLanguage.structure.VarIdCommand", "ro.barata.mps.javascriptLanguage.structure.VarValue"};
+  private static String[] stringSwitchCases_846f5o_a0a0b = new String[]{"ro.barata.mps.javascriptLanguage.structure.ActionVarValue", "ro.barata.mps.javascriptLanguage.structure.AddArrayElementCommand", "ro.barata.mps.javascriptLanguage.structure.AjaxJavascriptFunction", "ro.barata.mps.javascriptLanguage.structure.ArrayCommand", "ro.barata.mps.javascriptLanguage.structure.AssignmentCommand", "ro.barata.mps.javascriptLanguage.structure.CallFunctionCommand", "ro.barata.mps.javascriptLanguage.structure.ChangePageCommand", "ro.barata.mps.javascriptLanguage.structure.DotExpressionCommand", "ro.barata.mps.javascriptLanguage.structure.DummyCommand", "ro.barata.mps.javascriptLanguage.structure.ForCommand", "ro.barata.mps.javascriptLanguage.structure.GetArrayValueCommand", "ro.barata.mps.javascriptLanguage.structure.IfCommand", "ro.barata.mps.javascriptLanguage.structure.InitializeVarCommand", "ro.barata.mps.javascriptLanguage.structure.IntValue", "ro.barata.mps.javascriptLanguage.structure.JavascriptFile", "ro.barata.mps.javascriptLanguage.structure.JavascriptFunction", "ro.barata.mps.javascriptLanguage.structure.JavascriptOperation", "ro.barata.mps.javascriptLanguage.structure.JavascriptParameter", "ro.barata.mps.javascriptLanguage.structure.PushHTMLCommand", "ro.barata.mps.javascriptLanguage.structure.StringValue", "ro.barata.mps.javascriptLanguage.structure.SubmitCommand", "ro.barata.mps.javascriptLanguage.structure.VarCommand", "ro.barata.mps.javascriptLanguage.structure.VarIdCommand", "ro.barata.mps.javascriptLanguage.structure.VarNameCommand", "ro.barata.mps.javascriptLanguage.structure.VarValue"};
 }

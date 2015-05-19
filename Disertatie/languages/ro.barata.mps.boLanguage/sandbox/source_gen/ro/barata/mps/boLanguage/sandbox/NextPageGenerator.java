@@ -20,7 +20,7 @@ public class NextPageGenerator {
     parameters = "";
     html += "<h1";
     html += ">";
-    html += "You did it!";
+    html += "This is my second play page";
     html += "</h1>";
     html += "</body>";
     html += "</html>";

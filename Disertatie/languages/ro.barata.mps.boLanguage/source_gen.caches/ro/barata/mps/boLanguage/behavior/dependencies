@@ -1,15 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dependenciesRoot>
+  <dependency className="ro.barata.mps.boLanguage.behavior.Attribute_BehaviorDescriptor" file="Attribute_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />
+    <classNode dependClassName="ro.barata.mps.rootLanguage.behavior.DAOObject_BehaviorDescriptor" />
+    <classNode extendsClassName="java.lang.Cloneable" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
   <dependency className="ro.barata.mps.boLanguage.behavior.BehaviorAspectDescriptor" file="BehaviorAspectDescriptor.java">
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.util.Arrays" />
     <classNode dependClassName="jetbrains.mps.smodel.runtime.BehaviorDescriptor" />
     <classNode dependClassName="jetbrains.mps.smodel.runtime.interpreted.BehaviorAspectInterpreted" />
+    <classNode dependClassName="ro.barata.mps.boLanguage.behavior.Attribute_BehaviorDescriptor" />
+    <classNode dependClassName="ro.barata.mps.boLanguage.behavior.Category_BehaviorDescriptor" />
     <classNode dependClassName="ro.barata.mps.boLanguage.behavior.Customer_BehaviorDescriptor" />
     <classNode dependClassName="ro.barata.mps.boLanguage.behavior.Person_BehaviorDescriptor" />
+    <classNode dependClassName="ro.barata.mps.boLanguage.behavior.Product_BehaviorDescriptor" />
     <classNode dependClassName="ro.barata.mps.boLanguage.behavior.Shop_BehaviorDescriptor" />
-    <classNode dependClassName="ro.barata.mps.boLanguage.behavior.Test_BehaviorDescriptor" />
     <classNode extendsClassName="jetbrains.mps.smodel.runtime.BehaviorAspectDescriptor" />
+  </dependency>
+  <dependency className="ro.barata.mps.boLanguage.behavior.Category_BehaviorDescriptor" file="Category_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />
+    <classNode dependClassName="ro.barata.mps.rootLanguage.behavior.DAOObject_BehaviorDescriptor" />
+    <classNode extendsClassName="java.lang.Cloneable" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
   </dependency>
   <dependency className="ro.barata.mps.boLanguage.behavior.Customer_BehaviorDescriptor" file="Customer_BehaviorDescriptor.java">
     <classNode dependClassName="java.lang.Override" />
@@ -27,7 +45,7 @@
     <classNode extendsClassName="java.lang.Cloneable" />
     <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
   </dependency>
-  <dependency className="ro.barata.mps.boLanguage.behavior.Shop_BehaviorDescriptor" file="Shop_BehaviorDescriptor.java">
+  <dependency className="ro.barata.mps.boLanguage.behavior.Product_BehaviorDescriptor" file="Product_BehaviorDescriptor.java">
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />
@@ -35,7 +53,7 @@
     <classNode extendsClassName="java.lang.Cloneable" />
     <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
   </dependency>
-  <dependency className="ro.barata.mps.boLanguage.behavior.Test_BehaviorDescriptor" file="Test_BehaviorDescriptor.java">
+  <dependency className="ro.barata.mps.boLanguage.behavior.Shop_BehaviorDescriptor" file="Shop_BehaviorDescriptor.java">
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />

@@ -6,14 +6,14 @@ import jetbrains.mps.smodel.PropertySupport;
 import java.util.Iterator;
 import jetbrains.mps.internal.collections.runtime.ListSequence;
 
-public class DOMElement_PropertySupport extends PropertySupport {
+public class DotExpressionValues_PropertySupport extends PropertySupport {
   public boolean canSetValue(String value) {
     if (value == null) {
       return true;
     }
-    Iterator<DOMElement> constants = ListSequence.fromList(DOMElement.getConstants()).iterator();
+    Iterator<DotExpressionValues> constants = ListSequence.fromList(DotExpressionValues.getConstants()).iterator();
     while (constants.hasNext()) {
-      DOMElement constant = constants.next();
+      DotExpressionValues constant = constants.next();
       if (value.equals(constant.getName())) {
         return true;
       }
@@ -24,9 +24,9 @@ public class DOMElement_PropertySupport extends PropertySupport {
     if (value == null) {
       return null;
     }
-    Iterator<DOMElement> constants = ListSequence.fromList(DOMElement.getConstants()).iterator();
+    Iterator<DotExpressionValues> constants = ListSequence.fromList(DotExpressionValues.getConstants()).iterator();
     while (constants.hasNext()) {
-      DOMElement constant = constants.next();
+      DotExpressionValues constant = constants.next();
       if (value.equals(constant.getName())) {
         return constant.getValueAsString();
       }
@@ -34,7 +34,7 @@ public class DOMElement_PropertySupport extends PropertySupport {
     return null;
   }
   public String fromInternalValue(String value) {
-    DOMElement constant = DOMElement.parseValue(value);
+    DotExpressionValues constant = DotExpressionValues.parseValue(value);
     if (constant != null) {
       return constant.getName();
     }

@@ -17,12 +17,12 @@ public class ShopDAO {
 
   public List<Shop> getAllShops() throws SQLException {
     List<Shop> shops = new ArrayList<Shop>();
-    String sql = "select * from " + "ShopTable";
+    String sql = "select * from " + "Shop";
     ResultSet set = stmt.executeQuery(sql);
     Shop foundShop = new Shop();
     while (set.next()) {
       foundShop = new Shop();
-      foundShop.setId(set.getString("id"));
+      foundShop.setId(Integer.valueOf(set.getBigDecimal("id").intValue()));
       foundShop.setName(set.getString("name"));
       shops.add(foundShop);
     }
@@ -43,7 +43,7 @@ public class ShopDAO {
     if (values.length() > 0) {
       values = " where " + values;
     }
-    sql += columns + "from" + "ShopTable" + values;
+    sql += columns + "from" + "Shop" + values;
     ResultSet set = stmt.executeQuery(sql);
     List<Object> result = new ArrayList<Object>();
     int i = 0;
@@ -53,7 +53,7 @@ public class ShopDAO {
     }
     Shop shop = new Shop();
     i = 0;
-    shop.setId((String) result.get(i));
+    shop.setId((Integer) result.get(i));
     i++;
     shop.setName((String) result.get(i));
     i++;
@@ -62,7 +62,7 @@ public class ShopDAO {
 
 
   public void addShop(Shop shop) throws SQLException {
-    String sql = "insert into " + "ShopTable" + "(";
+    String sql = "insert into " + "Shop" + "(";
     String columns = "";
     String values = "";
     if (shop.getId() != null) {
@@ -79,7 +79,7 @@ public class ShopDAO {
   }
 
   public void updateShop(Shop oldshop, Shop newshop) throws SQLException {
-    String sql = "update " + "ShopTable" + " set ";
+    String sql = "update " + "Shop" + " set ";
     String values = "";
     if (newshop.getId() != null) {
       values += "id" + "='" + newshop.getId() + "',";
@@ -102,7 +102,7 @@ public class ShopDAO {
   }
 
   public void deleteShop(Shop shop) throws SQLException {
-    String sql = "delete from " + "ShopTable" + " where";
+    String sql = "delete from " + "Shop" + " where";
     String condition = " ";
     if (shop.getId() != null) {
       condition += "id" + "='" + shop.getId() + "'";

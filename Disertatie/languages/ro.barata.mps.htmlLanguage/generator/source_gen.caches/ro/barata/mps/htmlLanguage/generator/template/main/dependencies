@@ -19,6 +19,8 @@
     <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
     <classNode dependClassName="ro.barata.mps.htmlLanguage.behavior.AbstractCommand_Behavior" />
     <classNode dependClassName="ro.barata.mps.htmlLanguage.behavior.Action_Behavior" />
+    <classNode dependClassName="ro.barata.mps.htmlLanguage.behavior.ContainerCommand_Behavior" />
+    <classNode dependClassName="ro.barata.mps.htmlLanguage.behavior.HTMLCommand_Behavior" />
     <classNode dependClassName="ro.barata.mps.htmlLanguage.behavior.HTMLPage_Behavior" />
     <classNode dependClassName="ro.barata.mps.htmlLanguage.behavior.TagValueReference_Behavior" />
   </dependency>

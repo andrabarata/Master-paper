@@ -42,6 +42,9 @@ public class IndexServlet extends HttpServlet {
       if (action.equals("changeData")) {
         changeData(request, response);
       }
+      if (action.equals("deleteData")) {
+        deleteData(request, response);
+      }
     } else {
       response.getWriter().println(IndexGenerator.getContent());
     }
@@ -107,6 +110,23 @@ public class IndexServlet extends HttpServlet {
 
         personDAO.updatePerson(person, newPerson);
       }
+    }
+    response.getWriter().println(IndexGenerator.getContent());
+
+  }
+  private void deleteData(HttpServletRequest request, HttpServletResponse response) throws SQLException, ClassNotFoundException, IOException {
+    System.out.println("I'm in!");
+    String value;
+    {
+      PersonDAO personDAO = new PersonDAO();
+      Person person = new Person();
+      person = new Person();
+      value = request.getParameter("id");
+      if (value != null && !(value.equals(""))) {
+        person.setId(Integer.parseInt(value));
+
+      }
+      personDAO.deletePerson(person);
     }
     response.getWriter().println(IndexGenerator.getContent());
 

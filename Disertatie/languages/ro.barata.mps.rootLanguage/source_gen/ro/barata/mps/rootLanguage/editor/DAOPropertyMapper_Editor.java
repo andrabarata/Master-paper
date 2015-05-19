@@ -11,12 +11,14 @@ import jetbrains.mps.openapi.editor.style.Style;
 import jetbrains.mps.editor.runtime.style.StyleImpl;
 import jetbrains.mps.editor.runtime.style.StyleAttributes;
 import jetbrains.mps.nodeEditor.cells.EditorCell_Constant;
+import jetbrains.mps.openapi.editor.style.StyleRegistry;
+import jetbrains.mps.nodeEditor.MPSColors;
 import jetbrains.mps.nodeEditor.cellProviders.CellProviderWithRole;
 import jetbrains.mps.lang.editor.cellProviders.RefCellCellProvider;
 import jetbrains.mps.nodeEditor.EditorManager;
 import jetbrains.mps.nodeEditor.InlineCellProvider;
 import jetbrains.mps.lang.editor.cellProviders.PropertyCellProvider;
-import jetbrains.mps.lang.editor.cellProviders.RefNodeCellProvider;
+import java.awt.Color;
 
 public class DAOPropertyMapper_Editor extends DefaultNodeEditor {
   public EditorCell createEditorCell(EditorContext editorContext, SNode node) {
@@ -32,11 +34,9 @@ public class DAOPropertyMapper_Editor extends DefaultNodeEditor {
     editorCell.addEditorCell(this.createConstant_tpfo2a_a0(editorContext, node));
     editorCell.addEditorCell(this.createRefCell_tpfo2a_b0(editorContext, node));
     editorCell.addEditorCell(this.createConstant_tpfo2a_c0(editorContext, node));
-    editorCell.addEditorCell(this.createRefNode_tpfo2a_d0(editorContext, node));
+    editorCell.addEditorCell(this.createProperty_tpfo2a_d0(editorContext, node));
     editorCell.addEditorCell(this.createConstant_tpfo2a_e0(editorContext, node));
     editorCell.addEditorCell(this.createProperty_tpfo2a_f0(editorContext, node));
-    editorCell.addEditorCell(this.createConstant_tpfo2a_g0(editorContext, node));
-    editorCell.addEditorCell(this.createProperty_tpfo2a_h0(editorContext, node));
     return editorCell;
   }
   private EditorCell createConstant_tpfo2a_a0(EditorContext editorContext, SNode node) {
@@ -44,6 +44,7 @@ public class DAOPropertyMapper_Editor extends DefaultNodeEditor {
     editorCell.setCellId("Constant_tpfo2a_a0");
     Style style = new StyleImpl();
     style.set(StyleAttributes.INDENT_LAYOUT_INDENT, 0, true);
+    style.set(StyleAttributes.TEXT_COLOR, 0, StyleRegistry.getInstance().getSimpleColor(MPSColors.red));
     editorCell.getStyle().putAll(style);
     editorCell.setDefaultText("");
     return editorCell;
@@ -86,6 +87,10 @@ public class DAOPropertyMapper_Editor extends DefaultNodeEditor {
       EditorCell editorCell;
       editorCell = provider.createEditorCell(editorContext);
       editorCell.setCellId("property_name");
+      Style style = new StyleImpl();
+      style.set(StyleAttributes.UNDERLINED, 0, true);
+      style.set(StyleAttributes.TEXT_COLOR, 0, StyleRegistry.getInstance().getSimpleColor(new Color(1808279)));
+      editorCell.getStyle().putAll(style);
       editorCell.setSubstituteInfo(provider.createDefaultSubstituteInfo());
       SNode attributeConcept = provider.getRoleAttribute();
       Class attributeKind = provider.getRoleAttributeClass();
@@ -97,20 +102,24 @@ public class DAOPropertyMapper_Editor extends DefaultNodeEditor {
     }
   }
   private EditorCell createConstant_tpfo2a_c0(EditorContext editorContext, SNode node) {
-    EditorCell_Constant editorCell = new EditorCell_Constant(editorContext, node, "as");
+    EditorCell_Constant editorCell = new EditorCell_Constant(editorContext, node, "-> column");
     editorCell.setCellId("Constant_tpfo2a_c0");
+    Style style = new StyleImpl();
+    style.set(StyleAttributes.TEXT_COLOR, 0, StyleRegistry.getInstance().getSimpleColor(MPSColors.red));
+    editorCell.getStyle().putAll(style);
     editorCell.setDefaultText("");
     return editorCell;
   }
-  private EditorCell createRefNode_tpfo2a_d0(EditorContext editorContext, SNode node) {
-    CellProviderWithRole provider = new RefNodeCellProvider(node, editorContext);
-    provider.setRole("type");
-    provider.setNoTargetText("<no type>");
+  private EditorCell createProperty_tpfo2a_d0(EditorContext editorContext, SNode node) {
+    CellProviderWithRole provider = new PropertyCellProvider(node, editorContext);
+    provider.setRole("name");
+    provider.setNoTargetText("<no name>");
     EditorCell editorCell;
     editorCell = provider.createEditorCell(editorContext);
-    if (editorCell.getRole() == null) {
-      editorCell.setRole("type");
-    }
+    editorCell.setCellId("property_name_1");
+    Style style = new StyleImpl();
+    style.set(StyleAttributes.TEXT_COLOR, 0, StyleRegistry.getInstance().getSimpleColor(MPSColors.blue));
+    editorCell.getStyle().putAll(style);
     editorCell.setSubstituteInfo(provider.createDefaultSubstituteInfo());
     SNode attributeConcept = provider.getRoleAttribute();
     Class attributeKind = provider.getRoleAttributeClass();
@@ -121,40 +130,24 @@ public class DAOPropertyMapper_Editor extends DefaultNodeEditor {
     return editorCell;
   }
   private EditorCell createConstant_tpfo2a_e0(EditorContext editorContext, SNode node) {
-    EditorCell_Constant editorCell = new EditorCell_Constant(editorContext, node, "-> column");
+    EditorCell_Constant editorCell = new EditorCell_Constant(editorContext, node, "is primary key");
     editorCell.setCellId("Constant_tpfo2a_e0");
+    Style style = new StyleImpl();
+    style.set(StyleAttributes.TEXT_COLOR, 0, StyleRegistry.getInstance().getSimpleColor(MPSColors.red));
+    editorCell.getStyle().putAll(style);
     editorCell.setDefaultText("");
     return editorCell;
   }
   private EditorCell createProperty_tpfo2a_f0(EditorContext editorContext, SNode node) {
-    CellProviderWithRole provider = new PropertyCellProvider(node, editorContext);
-    provider.setRole("name");
-    provider.setNoTargetText("<no name>");
-    EditorCell editorCell;
-    editorCell = provider.createEditorCell(editorContext);
-    editorCell.setCellId("property_name_1");
-    editorCell.setSubstituteInfo(provider.createDefaultSubstituteInfo());
-    SNode attributeConcept = provider.getRoleAttribute();
-    Class attributeKind = provider.getRoleAttributeClass();
-    if (attributeConcept != null) {
-      EditorManager manager = EditorManager.getInstanceFromContext(editorContext);
-      return manager.createNodeRoleAttributeCell(editorContext, attributeConcept, attributeKind, editorCell);
-    } else
-    return editorCell;
-  }
-  private EditorCell createConstant_tpfo2a_g0(EditorContext editorContext, SNode node) {
-    EditorCell_Constant editorCell = new EditorCell_Constant(editorContext, node, "is primary key");
-    editorCell.setCellId("Constant_tpfo2a_g0");
-    editorCell.setDefaultText("");
-    return editorCell;
-  }
-  private EditorCell createProperty_tpfo2a_h0(EditorContext editorContext, SNode node) {
     CellProviderWithRole provider = new PropertyCellProvider(node, editorContext);
     provider.setRole("isKey");
     provider.setNoTargetText("<no isKey>");
     EditorCell editorCell;
     editorCell = provider.createEditorCell(editorContext);
     editorCell.setCellId("property_isKey");
+    Style style = new StyleImpl();
+    style.set(StyleAttributes.TEXT_COLOR, 0, StyleRegistry.getInstance().getSimpleColor(MPSColors.blue));
+    editorCell.getStyle().putAll(style);
     editorCell.setSubstituteInfo(provider.createDefaultSubstituteInfo());
     SNode attributeConcept = provider.getRoleAttribute();
     Class attributeKind = provider.getRoleAttributeClass();

@@ -4,7 +4,7 @@ package ro.barata.mps.htmlLanguage.behavior;
 
 import jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor;
 
-public class Attribute_BehaviorDescriptor extends BaseConcept_BehaviorDescriptor {
+public class Attribute_BehaviorDescriptor extends BaseConcept_BehaviorDescriptor implements IAttribute_BehaviorDescriptor {
   public Attribute_BehaviorDescriptor() {
   }
   @Override

@@ -17,7 +17,7 @@ public class PersonDAO {
 
   public List<Person> getAllPersons() throws SQLException {
     List<Person> persons = new ArrayList<Person>();
-    String sql = "select * from " + "PersonTable";
+    String sql = "select * from " + "Person";
     ResultSet set = stmt.executeQuery(sql);
     Person foundPerson = new Person();
     while (set.next()) {
@@ -46,7 +46,7 @@ public class PersonDAO {
     if (values.length() > 0) {
       values = " where " + values;
     }
-    sql += columns + "from" + "PersonTable" + values;
+    sql += columns + "from" + "Person" + values;
     ResultSet set = stmt.executeQuery(sql);
     List<Object> result = new ArrayList<Object>();
     int i = 0;
@@ -67,7 +67,7 @@ public class PersonDAO {
 
 
   public void addPerson(Person person) throws SQLException {
-    String sql = "insert into " + "PersonTable" + "(";
+    String sql = "insert into " + "Person" + "(";
     String columns = "";
     String values = "";
     if (person.getId() != null) {
@@ -88,7 +88,7 @@ public class PersonDAO {
   }
 
   public void updatePerson(Person oldperson, Person newperson) throws SQLException {
-    String sql = "update " + "PersonTable" + " set ";
+    String sql = "update " + "Person" + " set ";
     String values = "";
     if (newperson.getId() != null) {
       values += "id" + "='" + newperson.getId() + "',";
@@ -117,7 +117,7 @@ public class PersonDAO {
   }
 
   public void deletePerson(Person person) throws SQLException {
-    String sql = "delete from " + "PersonTable" + " where";
+    String sql = "delete from " + "Person" + " where";
     String condition = " ";
     if (person.getId() != null) {
       condition += "id" + "='" + person.getId() + "'";

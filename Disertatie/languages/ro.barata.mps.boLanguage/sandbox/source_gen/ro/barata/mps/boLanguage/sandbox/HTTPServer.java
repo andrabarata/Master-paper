@@ -32,6 +32,8 @@ public class HTTPServer {
     context.setHandler(handler);
 
     RewriteHandler rwHandler = new RewriteHandler();
+    context.addServlet(new ServletHolder(new TestPageServlet()), "/" + "TestPage");
+    context.addServlet(new ServletHolder(new NextPageServlet()), "/" + "nextPage");
     context.addServlet(new ServletHolder(new IndexServlet()), "/" + "index");
     {
       rwHandler.setRewriteRequestURI(true);
@@ -42,8 +44,6 @@ public class HTTPServer {
       rule.setReplacement("index");
       rwHandler.addRule(rule);
     }
-    context.addServlet(new ServletHolder(new NextPageServlet()), "/" + "nextPage");
-    context.addServlet(new ServletHolder(new TestPageServlet()), "/" + "TestPage");
 
     Handler[] handlers = new Handler[]{rwHandler, context};
     HandlerList list = new HandlerList();

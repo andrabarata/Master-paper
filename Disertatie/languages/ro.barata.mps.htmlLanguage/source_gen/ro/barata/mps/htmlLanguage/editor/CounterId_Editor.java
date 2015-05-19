@@ -32,11 +32,11 @@ public class CounterId_Editor extends DefaultNodeEditor {
   }
   private EditorCell createProperty_onsevu_b0(EditorContext editorContext, SNode node) {
     CellProviderWithRole provider = new PropertyCellProvider(node, editorContext);
-    provider.setRole("counter");
-    provider.setNoTargetText("<no counter>");
+    provider.setRole("name");
+    provider.setNoTargetText("<no name>");
     EditorCell editorCell;
     editorCell = provider.createEditorCell(editorContext);
-    editorCell.setCellId("property_counter");
+    editorCell.setCellId("property_name");
     editorCell.setSubstituteInfo(provider.createDefaultSubstituteInfo());
     SNode attributeConcept = provider.getRoleAttribute();
     Class attributeKind = provider.getRoleAttributeClass();

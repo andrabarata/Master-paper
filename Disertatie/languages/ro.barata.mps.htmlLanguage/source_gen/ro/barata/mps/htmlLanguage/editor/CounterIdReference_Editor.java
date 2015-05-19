@@ -71,12 +71,16 @@ public class CounterIdReference_Editor extends DefaultNodeEditor {
     }
     private EditorCell createProperty_6n14f0_a0b0(EditorContext editorContext, SNode node) {
       CellProviderWithRole provider = new PropertyCellProvider(node, editorContext);
-      provider.setRole("counter");
-      provider.setNoTargetText("<no counter>");
+      provider.setRole("name");
+      provider.setNoTargetText("<no name>");
       provider.setReadOnly(true);
       EditorCell editorCell;
       editorCell = provider.createEditorCell(editorContext);
-      editorCell.setCellId("property_counter");
+      editorCell.setCellId("property_name");
+      Style style = new StyleImpl();
+      HTMLStyleSheet_StyleSheet.apply_value(style, editorCell);
+      style.set(StyleAttributes.UNDERLINED, 0, true);
+      editorCell.getStyle().putAll(style);
       editorCell.setSubstituteInfo(provider.createDefaultSubstituteInfo());
       SNode attributeConcept = provider.getRoleAttribute();
       Class attributeKind = provider.getRoleAttributeClass();
