@@ -44,6 +44,7 @@ public class SelectCommand_Editor extends DefaultNodeEditor {
     editorCell.addEditorCell(this.createRefNode_3qzlpa_e0(editorContext, node));
     editorCell.addEditorCell(this.createConstant_3qzlpa_f0(editorContext, node));
     editorCell.addEditorCell(this.createRefNodeList_3qzlpa_g0(editorContext, node));
+    editorCell.addEditorCell(this.createConstant_3qzlpa_h0(editorContext, node));
     return editorCell;
   }
   private EditorCell createConstant_3qzlpa_a0(EditorContext editorContext, SNode node) {
@@ -172,6 +173,7 @@ public class SelectCommand_Editor extends DefaultNodeEditor {
     Style style = new StyleImpl();
     style.set(StyleAttributes.SELECTABLE, 0, false);
     style.set(StyleAttributes.INDENT_LAYOUT_INDENT, 0, true);
+    style.set(StyleAttributes.INDENT_LAYOUT_NEW_LINE, 0, true);
     editorCell.getStyle().putAll(style);
     editorCell.setRole(handler.getElementRole());
     return editorCell;
@@ -219,5 +221,14 @@ public class SelectCommand_Editor extends DefaultNodeEditor {
       editorCell.setDefaultText("");
       return editorCell;
     }
+  }
+  private EditorCell createConstant_3qzlpa_h0(EditorContext editorContext, SNode node) {
+    EditorCell_Constant editorCell = new EditorCell_Constant(editorContext, node, "end");
+    editorCell.setCellId("Constant_3qzlpa_h0");
+    Style style = new StyleImpl();
+    HTMLStyleSheet_StyleSheet.apply_tag(style, editorCell);
+    editorCell.getStyle().putAll(style);
+    editorCell.setDefaultText("");
+    return editorCell;
   }
 }

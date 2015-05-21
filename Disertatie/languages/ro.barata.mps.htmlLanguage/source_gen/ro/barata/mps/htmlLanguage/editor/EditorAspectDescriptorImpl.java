@@ -15,61 +15,103 @@ public class EditorAspectDescriptorImpl implements EditorAspectDescriptor {
   public Collection<ConceptEditor> getEditors(ConceptDescriptor descriptor) {
     switch (Arrays.binarySearch(stringSwitchCases_xbvbvu_a0a0b, descriptor.getConceptFqName())) {
       case 0:
-        return Collections.<ConceptEditor>singletonList(new Action_Editor());
+        return Collections.<ConceptEditor>singletonList(new AElement_Editor());
       case 1:
-        return Collections.<ConceptEditor>singletonList(new ActionType_Editor());
+        return Collections.<ConceptEditor>singletonList(new Action_Editor());
       case 2:
-        return Collections.<ConceptEditor>singletonList(new AllCondition_Editor());
+        return Collections.<ConceptEditor>singletonList(new ActionType_Editor());
       case 3:
-        return Collections.<ConceptEditor>singletonList(new Attribute_Editor());
+        return Collections.<ConceptEditor>singletonList(new AllCondition_Editor());
       case 4:
-        return Collections.<ConceptEditor>singletonList(new AttributeId_Editor());
+        return Collections.<ConceptEditor>singletonList(new Attribute_Editor());
       case 5:
-        return Collections.<ConceptEditor>singletonList(new AttributeName_Editor());
-      case 6:
         return Collections.<ConceptEditor>singletonList(new CounterId_Editor());
-      case 7:
+      case 6:
         return Collections.<ConceptEditor>singletonList(new CounterIdReference_Editor());
-      case 8:
+      case 7:
         return Collections.<ConceptEditor>singletonList(new DatabaseOperation_Editor());
-      case 9:
+      case 8:
         return Collections.<ConceptEditor>singletonList(new DivContainer_Editor());
-      case 10:
+      case 9:
         return Collections.<ConceptEditor>singletonList(new ExpressionReference_Editor());
+      case 10:
+        return Collections.<ConceptEditor>singletonList(new FormContainer_Editor());
       case 11:
         return Collections.<ConceptEditor>singletonList(new H1Element_Editor());
       case 12:
-        return Collections.<ConceptEditor>singletonList(new HTMLBody_Editor());
+        return Collections.<ConceptEditor>singletonList(new H2Element_Editor());
       case 13:
-        return Collections.<ConceptEditor>singletonList(new HTMLHead_Editor());
+        return Collections.<ConceptEditor>singletonList(new H3Element_Editor());
       case 14:
-        return Collections.<ConceptEditor>singletonList(new HTMLPage_Editor());
+        return Collections.<ConceptEditor>singletonList(new H4Element_Editor());
       case 15:
-        return Collections.<ConceptEditor>singletonList(new HTMLTagValue_Editor());
+        return Collections.<ConceptEditor>singletonList(new H5Element_Editor());
       case 16:
-        return Collections.<ConceptEditor>singletonList(new HTMLTile_Editor());
+        return Collections.<ConceptEditor>singletonList(new H6Element_Editor());
       case 17:
-        return Collections.<ConceptEditor>singletonList(new HTMLTileReference_Editor());
+        return Collections.<ConceptEditor>singletonList(new HREFAttribute_Editor());
       case 18:
-        return Collections.<ConceptEditor>singletonList(new InputElement_Editor());
+        return Collections.<ConceptEditor>singletonList(new HTMLBody_Editor());
       case 19:
-        return Collections.<ConceptEditor>singletonList(new LabelElement_Editor());
+        return Collections.<ConceptEditor>singletonList(new HTMLHead_Editor());
       case 20:
-        return Collections.<ConceptEditor>singletonList(new SelectCommand_Editor());
+        return Collections.<ConceptEditor>singletonList(new HTMLPage_Editor());
       case 21:
-        return Collections.<ConceptEditor>singletonList(new StaticAttributeReference_Editor());
+        return Collections.<ConceptEditor>singletonList(new HTMLTagValue_Editor());
       case 22:
-        return Collections.<ConceptEditor>singletonList(new TDElement_Editor());
+        return Collections.<ConceptEditor>singletonList(new HTMLTile_Editor());
       case 23:
-        return Collections.<ConceptEditor>singletonList(new THElement_Editor());
+        return Collections.<ConceptEditor>singletonList(new HTMLTileReference_Editor());
       case 24:
-        return Collections.<ConceptEditor>singletonList(new TRElement_Editor());
+        return Collections.<ConceptEditor>singletonList(new IdAttribute_Editor());
       case 25:
-        return Collections.<ConceptEditor>singletonList(new TableContainer_Editor());
+        return Collections.<ConceptEditor>singletonList(new ImageElement_Editor());
       case 26:
-        return Collections.<ConceptEditor>singletonList(new TagValueReference_Editor());
+        return Collections.<ConceptEditor>singletonList(new ImageReference_Editor());
       case 27:
+        return Collections.<ConceptEditor>singletonList(new InputElement_Editor());
+      case 28:
+        return Collections.<ConceptEditor>singletonList(new LabelElement_Editor());
+      case 29:
+        return Collections.<ConceptEditor>singletonList(new LiElement_Editor());
+      case 30:
+        return Collections.<ConceptEditor>singletonList(new NameAttribute_Editor());
+      case 31:
+        return Collections.<ConceptEditor>singletonList(new OptionElement_Editor());
+      case 32:
+        return Collections.<ConceptEditor>singletonList(new PageHREF_Editor());
+      case 33:
+        return Collections.<ConceptEditor>singletonList(new Parameter_Editor());
+      case 34:
+        return Collections.<ConceptEditor>singletonList(new SelectCommand_Editor());
+      case 35:
+        return Collections.<ConceptEditor>singletonList(new SelectContainer_Editor());
+      case 36:
+        return Collections.<ConceptEditor>singletonList(new SpanContainer_Editor());
+      case 37:
+        return Collections.<ConceptEditor>singletonList(new StaticAttributeReference_Editor());
+      case 38:
+        return Collections.<ConceptEditor>singletonList(new TDElement_Editor());
+      case 39:
+        return Collections.<ConceptEditor>singletonList(new THElement_Editor());
+      case 40:
+        return Collections.<ConceptEditor>singletonList(new TRElement_Editor());
+      case 41:
+        return Collections.<ConceptEditor>singletonList(new TableContainer_Editor());
+      case 42:
+        return Collections.<ConceptEditor>singletonList(new TagValueReference_Editor());
+      case 43:
+        return Collections.<ConceptEditor>singletonList(new TextareaElement_Editor());
+      case 44:
         return Collections.<ConceptEditor>singletonList(new TitleElement_Editor());
+      case 45:
+        return Collections.<ConceptEditor>singletonList(new ULContainer_Editor());
+      case 46:
+        return Collections.<ConceptEditor>singletonList(new URLParameter_Editor());
+      case 47:
+        return Collections.<ConceptEditor>singletonList(new UserHREF_Editor());
+      case 48:
+        return Collections.<ConceptEditor>singletonList(new UserSrc_Editor());
       default:
     }
     return Collections.<ConceptEditor>emptyList();
@@ -82,8 +124,18 @@ public class EditorAspectDescriptorImpl implements EditorAspectDescriptor {
         }
         break;
       case 1:
+        if ("ro.barata.mps.htmlLanguage.editor.HTMLCommandEditor".equals(editorComponentId)) {
+          return Collections.<ConceptEditorComponent>singletonList(new HTMLCommandEditor());
+        }
+        break;
+      case 2:
         if ("ro.barata.mps.htmlLanguage.editor.HTMLAttributesEditor".equals(editorComponentId)) {
           return Collections.<ConceptEditorComponent>singletonList(new HTMLAttributesEditor());
+        }
+        break;
+      case 3:
+        if ("ro.barata.mps.htmlLanguage.editor.MixedContainerAttributesEditor".equals(editorComponentId)) {
+          return Collections.<ConceptEditorComponent>singletonList(new MixedContainerAttributesEditor());
         }
         break;
       default:
@@ -92,6 +144,6 @@ public class EditorAspectDescriptorImpl implements EditorAspectDescriptor {
   }
 
 
-  private static String[] stringSwitchCases_xbvbvu_a0a0b = new String[]{"ro.barata.mps.htmlLanguage.structure.Action", "ro.barata.mps.htmlLanguage.structure.ActionType", "ro.barata.mps.htmlLanguage.structure.AllCondition", "ro.barata.mps.htmlLanguage.structure.Attribute", "ro.barata.mps.htmlLanguage.structure.AttributeId", "ro.barata.mps.htmlLanguage.structure.AttributeName", "ro.barata.mps.htmlLanguage.structure.CounterId", "ro.barata.mps.htmlLanguage.structure.CounterIdReference", "ro.barata.mps.htmlLanguage.structure.DatabaseOperation", "ro.barata.mps.htmlLanguage.structure.DivContainer", "ro.barata.mps.htmlLanguage.structure.ExpressionReference", "ro.barata.mps.htmlLanguage.structure.H1Element", "ro.barata.mps.htmlLanguage.structure.HTMLBody", "ro.barata.mps.htmlLanguage.structure.HTMLHead", "ro.barata.mps.htmlLanguage.structure.HTMLPage", "ro.barata.mps.htmlLanguage.structure.HTMLTagValue", "ro.barata.mps.htmlLanguage.structure.HTMLTile", "ro.barata.mps.htmlLanguage.structure.HTMLTileReference", "ro.barata.mps.htmlLanguage.structure.InputElement", "ro.barata.mps.htmlLanguage.structure.LabelElement", "ro.barata.mps.htmlLanguage.structure.SelectCommand", "ro.barata.mps.htmlLanguage.structure.StaticAttributeReference", "ro.barata.mps.htmlLanguage.structure.TDElement", "ro.barata.mps.htmlLanguage.structure.THElement", "ro.barata.mps.htmlLanguage.structure.TRElement", "ro.barata.mps.htmlLanguage.structure.TableContainer", "ro.barata.mps.htmlLanguage.structure.TagValueReference", "ro.barata.mps.htmlLanguage.structure.TitleElement"};
-  private static String[] stringSwitchCases_xbvbvu_a0a0c = new String[]{"ro.barata.mps.htmlLanguage.structure.ContainerCommand", "ro.barata.mps.htmlLanguage.structure.HTMLCommand"};
+  private static String[] stringSwitchCases_xbvbvu_a0a0b = new String[]{"ro.barata.mps.htmlLanguage.structure.AElement", "ro.barata.mps.htmlLanguage.structure.Action", "ro.barata.mps.htmlLanguage.structure.ActionType", "ro.barata.mps.htmlLanguage.structure.AllCondition", "ro.barata.mps.htmlLanguage.structure.Attribute", "ro.barata.mps.htmlLanguage.structure.CounterId", "ro.barata.mps.htmlLanguage.structure.CounterIdReference", "ro.barata.mps.htmlLanguage.structure.DatabaseOperation", "ro.barata.mps.htmlLanguage.structure.DivContainer", "ro.barata.mps.htmlLanguage.structure.ExpressionReference", "ro.barata.mps.htmlLanguage.structure.FormContainer", "ro.barata.mps.htmlLanguage.structure.H1Element", "ro.barata.mps.htmlLanguage.structure.H2Element", "ro.barata.mps.htmlLanguage.structure.H3Element", "ro.barata.mps.htmlLanguage.structure.H4Element", "ro.barata.mps.htmlLanguage.structure.H5Element", "ro.barata.mps.htmlLanguage.structure.H6Element", "ro.barata.mps.htmlLanguage.structure.HREFAttribute", "ro.barata.mps.htmlLanguage.structure.HTMLBody", "ro.barata.mps.htmlLanguage.structure.HTMLHead", "ro.barata.mps.htmlLanguage.structure.HTMLPage", "ro.barata.mps.htmlLanguage.structure.HTMLTagValue", "ro.barata.mps.htmlLanguage.structure.HTMLTile", "ro.barata.mps.htmlLanguage.structure.HTMLTileReference", "ro.barata.mps.htmlLanguage.structure.IdAttribute", "ro.barata.mps.htmlLanguage.structure.ImageElement", "ro.barata.mps.htmlLanguage.structure.ImageReference", "ro.barata.mps.htmlLanguage.structure.InputElement", "ro.barata.mps.htmlLanguage.structure.LabelElement", "ro.barata.mps.htmlLanguage.structure.LiElement", "ro.barata.mps.htmlLanguage.structure.NameAttribute", "ro.barata.mps.htmlLanguage.structure.OptionElement", "ro.barata.mps.htmlLanguage.structure.PageHREF", "ro.barata.mps.htmlLanguage.structure.Parameter", "ro.barata.mps.htmlLanguage.structure.SelectCommand", "ro.barata.mps.htmlLanguage.structure.SelectContainer", "ro.barata.mps.htmlLanguage.structure.SpanContainer", "ro.barata.mps.htmlLanguage.structure.StaticAttributeReference", "ro.barata.mps.htmlLanguage.structure.TDElement", "ro.barata.mps.htmlLanguage.structure.THElement", "ro.barata.mps.htmlLanguage.structure.TRElement", "ro.barata.mps.htmlLanguage.structure.TableContainer", "ro.barata.mps.htmlLanguage.structure.TagValueReference", "ro.barata.mps.htmlLanguage.structure.TextareaElement", "ro.barata.mps.htmlLanguage.structure.TitleElement", "ro.barata.mps.htmlLanguage.structure.ULContainer", "ro.barata.mps.htmlLanguage.structure.URLParameter", "ro.barata.mps.htmlLanguage.structure.UserHREF", "ro.barata.mps.htmlLanguage.structure.UserSrc"};
+  private static String[] stringSwitchCases_xbvbvu_a0a0c = new String[]{"ro.barata.mps.htmlLanguage.structure.ContainerCommand", "ro.barata.mps.htmlLanguage.structure.HTMLCommand", "ro.barata.mps.htmlLanguage.structure.HTMLValueCommand", "ro.barata.mps.htmlLanguage.structure.MixedHTMLCommand"};
 }

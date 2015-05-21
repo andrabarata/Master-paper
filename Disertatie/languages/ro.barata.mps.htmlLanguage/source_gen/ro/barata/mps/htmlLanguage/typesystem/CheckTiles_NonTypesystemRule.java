@@ -15,6 +15,7 @@ import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
 import jetbrains.mps.errors.messageTargets.MessageTarget;
 import jetbrains.mps.errors.messageTargets.NodeMessageTarget;
 import jetbrains.mps.errors.IErrorReporter;
+import jetbrains.mps.errors.BaseQuickFixProvider;
 import jetbrains.mps.smodel.SModelUtil_new;
 
 public class CheckTiles_NonTypesystemRule extends AbstractNonTypesystemRule_Runtime implements NonTypesystemRule_Runtime {
@@ -32,7 +33,11 @@ public class CheckTiles_NonTypesystemRule extends AbstractNonTypesystemRule_Runt
     if (app > 1) {
       {
         MessageTarget errorTarget = new NodeMessageTarget();
-        IErrorReporter _reporter_2309309498 = typeCheckingContext.reportTypeError(SNodeOperations.getParent(htmlTile), "Dupplicate tile detected: " + SPropertyOperations.getString(htmlTile, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name")), "r:77c740ba-daf1-40c4-a88b-1d294d4e94b9(ro.barata.mps.htmlLanguage.typesystem)", "4045572257642284827", null, errorTarget);
+        IErrorReporter _reporter_2309309498 = typeCheckingContext.reportTypeError(htmlTile, "Dupplicate tile detected: " + SPropertyOperations.getString(htmlTile, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name")), "r:77c740ba-daf1-40c4-a88b-1d294d4e94b9(ro.barata.mps.htmlLanguage.typesystem)", "4045572257642284827", null, errorTarget);
+        {
+          BaseQuickFixProvider intentionProvider = new BaseQuickFixProvider("ro.barata.mps.htmlLanguage.typesystem.RenameTile_QuickFix", false);
+          _reporter_2309309498.addIntentionProvider(intentionProvider);
+        }
       }
     }
   }

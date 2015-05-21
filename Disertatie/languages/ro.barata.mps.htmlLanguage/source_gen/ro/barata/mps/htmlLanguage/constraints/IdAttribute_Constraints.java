@@ -14,9 +14,9 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.smodel.SNodePointer;
 
-public class AttributeName_Constraints extends BaseConstraintsDescriptor {
-  public AttributeName_Constraints() {
-    super(MetaIdFactory.conceptId(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x7c208aae91bba3e1L));
+public class IdAttribute_Constraints extends BaseConstraintsDescriptor {
+  public IdAttribute_Constraints() {
+    super(MetaIdFactory.conceptId(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x7c208aae91bb9e2fL));
   }
   @Override
   public boolean hasOwnCanBeChildMethod() {
@@ -35,17 +35,17 @@ public class AttributeName_Constraints extends BaseConstraintsDescriptor {
   public static boolean static_canBeAChild(SNode node, SNode parentNode, SNode link, SNode childConcept, final IOperationContext operationContext) {
     int nrApp = 0;
     List<SNode> attributes;
-    if (SNodeOperations.isInstanceOf(SNodeOperations.getParent(node), MetaAdapterFactory.getConcept(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x5286d8640b8175d3L, "ro.barata.mps.htmlLanguage.structure.HTMLCommand"))) {
-      attributes = SLinkOperations.getChildren(SNodeOperations.cast(SNodeOperations.getParent(node), MetaAdapterFactory.getConcept(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x5286d8640b8175d3L, "ro.barata.mps.htmlLanguage.structure.HTMLCommand")), MetaAdapterFactory.getContainmentLink(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x5286d8640b8175d3L, 0x4c7f2ab523a2c55dL, "attributes"));
+    if (SNodeOperations.isInstanceOf(SNodeOperations.getParent(node), MetaAdapterFactory.getConcept(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x5286d8640b8175d3L, "ro.barata.mps.htmlLanguage.structure.HTMLValueCommand"))) {
+      attributes = SLinkOperations.getChildren(SNodeOperations.cast(SNodeOperations.getParent(node), MetaAdapterFactory.getConcept(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x5286d8640b8175d3L, "ro.barata.mps.htmlLanguage.structure.HTMLValueCommand")), MetaAdapterFactory.getContainmentLink(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x5286d8640b8175d3L, 0x4c7f2ab523a2c55dL, "attributes"));
     } else {
       attributes = SLinkOperations.getChildren(SNodeOperations.cast(SNodeOperations.getParent(node), MetaAdapterFactory.getConcept(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x5286d8640b80e571L, "ro.barata.mps.htmlLanguage.structure.ContainerCommand")), MetaAdapterFactory.getContainmentLink(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x5286d8640b80e571L, 0x7c208aae91ba678cL, "attributes"));
     }
     for (SNode attribute : attributes) {
-      if (SNodeOperations.isInstanceOf(attribute, MetaAdapterFactory.getConcept(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x7c208aae91bba3e1L, "ro.barata.mps.htmlLanguage.structure.AttributeName"))) {
+      if (SNodeOperations.isInstanceOf(attribute, MetaAdapterFactory.getConcept(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x7c208aae91bb9e2fL, "ro.barata.mps.htmlLanguage.structure.IdAttribute"))) {
         nrApp++;
       }
     }
     return (nrApp <= 1);
   }
-  private static SNodePointer canBeChildBreakingPoint = new SNodePointer("r:a7a05230-a54d-4826-a2ac-95f54cf43ac3(ro.barata.mps.htmlLanguage.constraints)", "8944301342334511981");
+  private static SNodePointer canBeChildBreakingPoint = new SNodePointer("r:a7a05230-a54d-4826-a2ac-95f54cf43ac3(ro.barata.mps.htmlLanguage.constraints)", "8944301342334439300");
 }

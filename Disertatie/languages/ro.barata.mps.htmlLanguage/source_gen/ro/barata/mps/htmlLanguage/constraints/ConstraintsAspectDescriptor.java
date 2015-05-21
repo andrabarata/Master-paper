@@ -12,18 +12,40 @@ public class ConstraintsAspectDescriptor implements jetbrains.mps.smodel.runtime
   }
   public ConstraintsDescriptor getDescriptor(String fqName) {
     switch (Arrays.binarySearch(stringSwitchCases_2qnle6_a0a0b, fqName)) {
-      case 4:
+      case 9:
         return new OperationCommand_Constraints();
-      case 5:
+      case 14:
         return new TagValueReference_Constraints();
-      case 3:
-        return new ContainerCommand_Constraints();
-      case 1:
-        return new AttributeId_Constraints();
-      case 2:
-        return new AttributeName_Constraints();
+      case 5:
+        return new IdAttribute_Constraints();
+      case 8:
+        return new NameAttribute_Constraints();
       case 0:
         return new ActionType_Constraints();
+      case 11:
+        return new TDElement_Constraints();
+      case 12:
+        return new THElement_Constraints();
+      case 13:
+        return new TRElement_Constraints();
+      case 2:
+        return new CounterIdReference_Constraints();
+      case 15:
+        return new TitleElement_Constraints();
+      case 4:
+        return new HTMLValueCommand_Constraints();
+      case 16:
+        return new UserValue_Constraints();
+      case 3:
+        return new HTMLTileReference_Constraints();
+      case 1:
+        return new ContainerCommand_Constraints();
+      case 6:
+        return new LiElement_Constraints();
+      case 10:
+        return new OptionElement_Constraints();
+      case 7:
+        return new MixedHTMLCommand_Constraints();
       default:
         return new BaseConstraintsDescriptor(fqName);
     }
@@ -36,19 +58,52 @@ public class ConstraintsAspectDescriptor implements jetbrains.mps.smodel.runtime
     if (id == 0x5286d8640b8174e5L) {
       return new TagValueReference_Constraints();
     }
-    if (id == 0x5286d8640b80e571L) {
-      return new ContainerCommand_Constraints();
-    }
     if (id == 0x7c208aae91bb9e2fL) {
-      return new AttributeId_Constraints();
+      return new IdAttribute_Constraints();
     }
     if (id == 0x7c208aae91bba3e1L) {
-      return new AttributeName_Constraints();
+      return new NameAttribute_Constraints();
     }
     if (id == 0x4c7f2ab523e57fdcL) {
       return new ActionType_Constraints();
     }
+    if (id == 0x5286d8640b7d66deL) {
+      return new TDElement_Constraints();
+    }
+    if (id == 0x5286d8640b7d54fdL) {
+      return new THElement_Constraints();
+    }
+    if (id == 0x5286d8640b7d66ddL) {
+      return new TRElement_Constraints();
+    }
+    if (id == 0x40798aa2d3496e53L) {
+      return new CounterIdReference_Constraints();
+    }
+    if (id == 0x5286d8640b556d43L) {
+      return new TitleElement_Constraints();
+    }
+    if (id == 0x5286d8640b8175d3L) {
+      return new HTMLValueCommand_Constraints();
+    }
+    if (id == 0x5a8d28ce2a8261d9L) {
+      return new UserValue_Constraints();
+    }
+    if (id == 0x44b44eee30b2e8fdL) {
+      return new HTMLTileReference_Constraints();
+    }
+    if (id == 0x5286d8640b80e571L) {
+      return new ContainerCommand_Constraints();
+    }
+    if (id == 0x5a8d28ce2a9b175fL) {
+      return new LiElement_Constraints();
+    }
+    if (id == 0x5a8d28ce2a9bc02eL) {
+      return new OptionElement_Constraints();
+    }
+    if (id == 0x5a8d28ce2a8261f5L) {
+      return new MixedHTMLCommand_Constraints();
+    }
     return new BaseConstraintsDescriptor(conceptId);
   }
-  private static String[] stringSwitchCases_2qnle6_a0a0b = new String[]{"ro.barata.mps.htmlLanguage.structure.ActionType", "ro.barata.mps.htmlLanguage.structure.AttributeId", "ro.barata.mps.htmlLanguage.structure.AttributeName", "ro.barata.mps.htmlLanguage.structure.ContainerCommand", "ro.barata.mps.htmlLanguage.structure.OperationCommand", "ro.barata.mps.htmlLanguage.structure.TagValueReference"};
+  private static String[] stringSwitchCases_2qnle6_a0a0b = new String[]{"ro.barata.mps.htmlLanguage.structure.ActionType", "ro.barata.mps.htmlLanguage.structure.ContainerCommand", "ro.barata.mps.htmlLanguage.structure.CounterIdReference", "ro.barata.mps.htmlLanguage.structure.HTMLTileReference", "ro.barata.mps.htmlLanguage.structure.HTMLValueCommand", "ro.barata.mps.htmlLanguage.structure.IdAttribute", "ro.barata.mps.htmlLanguage.structure.LiElement", "ro.barata.mps.htmlLanguage.structure.MixedHTMLCommand", "ro.barata.mps.htmlLanguage.structure.NameAttribute", "ro.barata.mps.htmlLanguage.structure.OperationCommand", "ro.barata.mps.htmlLanguage.structure.OptionElement", "ro.barata.mps.htmlLanguage.structure.TDElement", "ro.barata.mps.htmlLanguage.structure.THElement", "ro.barata.mps.htmlLanguage.structure.TRElement", "ro.barata.mps.htmlLanguage.structure.TagValueReference", "ro.barata.mps.htmlLanguage.structure.TitleElement", "ro.barata.mps.htmlLanguage.structure.UserValue"};
 }

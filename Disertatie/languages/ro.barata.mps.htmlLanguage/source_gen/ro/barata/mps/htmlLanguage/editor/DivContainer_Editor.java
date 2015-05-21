@@ -35,7 +35,7 @@ public class DivContainer_Editor extends DefaultNodeEditor {
     return editorCell;
   }
   private EditorCell createComponent_dhfjda_b0(EditorContext editorContext, SNode node) {
-    EditorCell editorCell = editorContext.getCellFactory().createEditorComponentCell(node, "ro.barata.mps.htmlLanguage.editor.ContainerAttributesEditor");
+    EditorCell editorCell = editorContext.getCellFactory().createEditorComponentCell(node, "ro.barata.mps.htmlLanguage.editor.MixedContainerAttributesEditor");
     return editorCell;
   }
   private EditorCell createConstant_dhfjda_c0(EditorContext editorContext, SNode node) {

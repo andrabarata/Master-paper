@@ -94,8 +94,23 @@
   <node concept="24kQdi" id="4iOjISKCCwO">
     <ref role="1XX52x" to="45cg:4iOjISKCCw1" resolve="File" />
     <node concept="3EZMnI" id="4iOjISKCCwQ" role="2wV5jI">
+      <node concept="3F0ifn" id="5EdacSEAWzB" role="3EZMnx">
+        <property role="3F0ifm" value="File" />
+      </node>
+      <node concept="3F0A7n" id="5EdacSEAWzN" role="3EZMnx">
+        <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+        <node concept="VechU" id="5EdacSEAW_y" role="3F10Kt">
+          <property role="Vb096" value="blue" />
+        </node>
+        <node concept="ljvvj" id="5EdacSEAW_$" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
       <node concept="3F0ifn" id="4iOjISKCCwX" role="3EZMnx">
         <property role="3F0ifm" value="Path:" />
+        <node concept="lj46D" id="5EdacSEAW_B" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
       </node>
       <node concept="3F0A7n" id="4iOjISKCCx3" role="3EZMnx">
         <ref role="1NtTu8" to="45cg:4iOjISKCCw2" resolve="path" />

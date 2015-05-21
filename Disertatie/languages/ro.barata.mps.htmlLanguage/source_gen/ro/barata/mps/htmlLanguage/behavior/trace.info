@@ -8,8 +8,11 @@
   <concept fqn="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
   <concept fqn="jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" />
   <root>
+    <file name="AElement_BehaviorDescriptor.java">
+      <unit at="6,0,14,0" name="ro.barata.mps.htmlLanguage.behavior.AElement_BehaviorDescriptor" />
+    </file>
     <file name="AbstractCommand_BehaviorDescriptor.java">
-      <unit at="7,0,15,0" name="ro.barata.mps.htmlLanguage.behavior.AbstractCommand_BehaviorDescriptor" />
+      <unit at="6,0,8,0" name="ro.barata.mps.htmlLanguage.behavior.AbstractCommand_BehaviorDescriptor" />
     </file>
     <file name="AbstractOperation_BehaviorDescriptor.java">
       <unit at="7,0,15,0" name="ro.barata.mps.htmlLanguage.behavior.AbstractOperation_BehaviorDescriptor" />
@@ -23,12 +26,6 @@
     <file name="AllCondition_BehaviorDescriptor.java">
       <unit at="6,0,14,0" name="ro.barata.mps.htmlLanguage.behavior.AllCondition_BehaviorDescriptor" />
     </file>
-    <file name="AttributeId_BehaviorDescriptor.java">
-      <unit at="7,0,15,0" name="ro.barata.mps.htmlLanguage.behavior.AttributeId_BehaviorDescriptor" />
-    </file>
-    <file name="AttributeName_BehaviorDescriptor.java">
-      <unit at="7,0,15,0" name="ro.barata.mps.htmlLanguage.behavior.AttributeName_BehaviorDescriptor" />
-    </file>
     <file name="AttributeReference_BehaviorDescriptor.java">
       <unit at="7,0,15,0" name="ro.barata.mps.htmlLanguage.behavior.AttributeReference_BehaviorDescriptor" />
     </file>
@@ -36,13 +33,13 @@
       <unit at="7,0,15,0" name="ro.barata.mps.htmlLanguage.behavior.Attribute_BehaviorDescriptor" />
     </file>
     <file name="BehaviorAspectDescriptor.java">
-      <unit at="9,0,78,0" name="ro.barata.mps.htmlLanguage.behavior.BehaviorAspectDescriptor" />
+      <unit at="9,0,120,0" name="ro.barata.mps.htmlLanguage.behavior.BehaviorAspectDescriptor" />
     </file>
     <file name="ContainerCommand_BehaviorDescriptor.java">
       <unit at="6,0,14,0" name="ro.barata.mps.htmlLanguage.behavior.ContainerCommand_BehaviorDescriptor" />
     </file>
     <file name="CounterIdReference_BehaviorDescriptor.java">
-      <unit at="7,0,15,0" name="ro.barata.mps.htmlLanguage.behavior.CounterIdReference_BehaviorDescriptor" />
+      <unit at="6,0,14,0" name="ro.barata.mps.htmlLanguage.behavior.CounterIdReference_BehaviorDescriptor" />
     </file>
     <file name="CounterId_BehaviorDescriptor.java">
       <unit at="10,0,21,0" name="ro.barata.mps.htmlLanguage.behavior.CounterId_BehaviorDescriptor" />
@@ -56,8 +53,29 @@
     <file name="ExpressionReference_BehaviorDescriptor.java">
       <unit at="6,0,14,0" name="ro.barata.mps.htmlLanguage.behavior.ExpressionReference_BehaviorDescriptor" />
     </file>
+    <file name="FormContainer_BehaviorDescriptor.java">
+      <unit at="6,0,14,0" name="ro.barata.mps.htmlLanguage.behavior.FormContainer_BehaviorDescriptor" />
+    </file>
     <file name="H1Element_BehaviorDescriptor.java">
       <unit at="6,0,14,0" name="ro.barata.mps.htmlLanguage.behavior.H1Element_BehaviorDescriptor" />
+    </file>
+    <file name="H2Element_BehaviorDescriptor.java">
+      <unit at="6,0,14,0" name="ro.barata.mps.htmlLanguage.behavior.H2Element_BehaviorDescriptor" />
+    </file>
+    <file name="H3Element_BehaviorDescriptor.java">
+      <unit at="6,0,14,0" name="ro.barata.mps.htmlLanguage.behavior.H3Element_BehaviorDescriptor" />
+    </file>
+    <file name="H4Element_BehaviorDescriptor.java">
+      <unit at="6,0,14,0" name="ro.barata.mps.htmlLanguage.behavior.H4Element_BehaviorDescriptor" />
+    </file>
+    <file name="H5Element_BehaviorDescriptor.java">
+      <unit at="6,0,14,0" name="ro.barata.mps.htmlLanguage.behavior.H5Element_BehaviorDescriptor" />
+    </file>
+    <file name="H6Element_BehaviorDescriptor.java">
+      <unit at="6,0,14,0" name="ro.barata.mps.htmlLanguage.behavior.H6Element_BehaviorDescriptor" />
+    </file>
+    <file name="HREFAttribute_BehaviorDescriptor.java">
+      <unit at="7,0,15,0" name="ro.barata.mps.htmlLanguage.behavior.HREFAttribute_BehaviorDescriptor" />
     </file>
     <file name="HTMLBody_BehaviorDescriptor.java">
       <unit at="7,0,15,0" name="ro.barata.mps.htmlLanguage.behavior.HTMLBody_BehaviorDescriptor" />
@@ -75,7 +93,7 @@
       <unit at="7,0,15,0" name="ro.barata.mps.htmlLanguage.behavior.HTMLStructure_BehaviorDescriptor" />
     </file>
     <file name="HTMLTagValue_BehaviorDescriptor.java">
-      <unit at="7,0,15,0" name="ro.barata.mps.htmlLanguage.behavior.HTMLTagValue_BehaviorDescriptor" />
+      <unit at="6,0,14,0" name="ro.barata.mps.htmlLanguage.behavior.HTMLTagValue_BehaviorDescriptor" />
     </file>
     <file name="HTMLTileReference_BehaviorDescriptor.java">
       <unit at="6,0,14,0" name="ro.barata.mps.htmlLanguage.behavior.HTMLTileReference_BehaviorDescriptor" />
@@ -83,8 +101,26 @@
     <file name="HTMLTile_BehaviorDescriptor.java">
       <unit at="10,0,21,0" name="ro.barata.mps.htmlLanguage.behavior.HTMLTile_BehaviorDescriptor" />
     </file>
+    <file name="HTMLValueCommand_BehaviorDescriptor.java">
+      <unit at="6,0,14,0" name="ro.barata.mps.htmlLanguage.behavior.HTMLValueCommand_BehaviorDescriptor" />
+    </file>
+    <file name="HTMLValue_BehaviorDescriptor.java">
+      <unit at="7,0,15,0" name="ro.barata.mps.htmlLanguage.behavior.HTMLValue_BehaviorDescriptor" />
+    </file>
     <file name="IAttribute_BehaviorDescriptor.java">
       <unit at="6,0,8,0" name="ro.barata.mps.htmlLanguage.behavior.IAttribute_BehaviorDescriptor" />
+    </file>
+    <file name="IdAttribute_BehaviorDescriptor.java">
+      <unit at="7,0,15,0" name="ro.barata.mps.htmlLanguage.behavior.IdAttribute_BehaviorDescriptor" />
+    </file>
+    <file name="ImageElement_BehaviorDescriptor.java">
+      <unit at="6,0,14,0" name="ro.barata.mps.htmlLanguage.behavior.ImageElement_BehaviorDescriptor" />
+    </file>
+    <file name="ImageReference_BehaviorDescriptor.java">
+      <unit at="6,0,14,0" name="ro.barata.mps.htmlLanguage.behavior.ImageReference_BehaviorDescriptor" />
+    </file>
+    <file name="ImageSrc_BehaviorDescriptor.java">
+      <unit at="7,0,15,0" name="ro.barata.mps.htmlLanguage.behavior.ImageSrc_BehaviorDescriptor" />
     </file>
     <file name="InputElement_BehaviorDescriptor.java">
       <unit at="6,0,14,0" name="ro.barata.mps.htmlLanguage.behavior.InputElement_BehaviorDescriptor" />
@@ -92,8 +128,26 @@
     <file name="LabelElement_BehaviorDescriptor.java">
       <unit at="6,0,14,0" name="ro.barata.mps.htmlLanguage.behavior.LabelElement_BehaviorDescriptor" />
     </file>
+    <file name="LiElement_BehaviorDescriptor.java">
+      <unit at="6,0,14,0" name="ro.barata.mps.htmlLanguage.behavior.LiElement_BehaviorDescriptor" />
+    </file>
+    <file name="MixedHTMLCommand_BehaviorDescriptor.java">
+      <unit at="6,0,14,0" name="ro.barata.mps.htmlLanguage.behavior.MixedHTMLCommand_BehaviorDescriptor" />
+    </file>
+    <file name="NameAttribute_BehaviorDescriptor.java">
+      <unit at="7,0,15,0" name="ro.barata.mps.htmlLanguage.behavior.NameAttribute_BehaviorDescriptor" />
+    </file>
     <file name="OperationCommand_BehaviorDescriptor.java">
       <unit at="6,0,14,0" name="ro.barata.mps.htmlLanguage.behavior.OperationCommand_BehaviorDescriptor" />
+    </file>
+    <file name="OptionElement_BehaviorDescriptor.java">
+      <unit at="6,0,14,0" name="ro.barata.mps.htmlLanguage.behavior.OptionElement_BehaviorDescriptor" />
+    </file>
+    <file name="PageHREF_BehaviorDescriptor.java">
+      <unit at="6,0,14,0" name="ro.barata.mps.htmlLanguage.behavior.PageHREF_BehaviorDescriptor" />
+    </file>
+    <file name="Parameter_BehaviorDescriptor.java">
+      <unit at="7,0,15,0" name="ro.barata.mps.htmlLanguage.behavior.Parameter_BehaviorDescriptor" />
     </file>
     <file name="SelectCommand_BehaviorDescriptor.java">
       <unit at="6,0,14,0" name="ro.barata.mps.htmlLanguage.behavior.SelectCommand_BehaviorDescriptor" />
@@ -101,8 +155,20 @@
     <file name="SelectCondition_BehaviorDescriptor.java">
       <unit at="7,0,15,0" name="ro.barata.mps.htmlLanguage.behavior.SelectCondition_BehaviorDescriptor" />
     </file>
+    <file name="SelectContainer_BehaviorDescriptor.java">
+      <unit at="6,0,14,0" name="ro.barata.mps.htmlLanguage.behavior.SelectContainer_BehaviorDescriptor" />
+    </file>
     <file name="Server_BehaviorDescriptor.java">
       <unit at="10,0,24,0" name="ro.barata.mps.htmlLanguage.behavior.Server_BehaviorDescriptor" />
+    </file>
+    <file name="SpanContainer_BehaviorDescriptor.java">
+      <unit at="6,0,14,0" name="ro.barata.mps.htmlLanguage.behavior.SpanContainer_BehaviorDescriptor" />
+    </file>
+    <file name="SpecialCaseCommand_BehaviorDescriptor.java">
+      <unit at="6,0,8,0" name="ro.barata.mps.htmlLanguage.behavior.SpecialCaseCommand_BehaviorDescriptor" />
+    </file>
+    <file name="SpecialCaseRootCommand_BehaviorDescriptor.java">
+      <unit at="6,0,8,0" name="ro.barata.mps.htmlLanguage.behavior.SpecialCaseRootCommand_BehaviorDescriptor" />
     </file>
     <file name="StaticAttributeReference_BehaviorDescriptor.java">
       <unit at="6,0,14,0" name="ro.barata.mps.htmlLanguage.behavior.StaticAttributeReference_BehaviorDescriptor" />
@@ -120,13 +186,34 @@
       <unit at="6,0,14,0" name="ro.barata.mps.htmlLanguage.behavior.TableContainer_BehaviorDescriptor" />
     </file>
     <file name="TagValueReference_BehaviorDescriptor.java">
-      <unit at="7,0,15,0" name="ro.barata.mps.htmlLanguage.behavior.TagValueReference_BehaviorDescriptor" />
+      <unit at="6,0,14,0" name="ro.barata.mps.htmlLanguage.behavior.TagValueReference_BehaviorDescriptor" />
     </file>
     <file name="TagValue_BehaviorDescriptor.java">
       <unit at="6,0,8,0" name="ro.barata.mps.htmlLanguage.behavior.TagValue_BehaviorDescriptor" />
     </file>
+    <file name="TextareaElement_BehaviorDescriptor.java">
+      <unit at="6,0,14,0" name="ro.barata.mps.htmlLanguage.behavior.TextareaElement_BehaviorDescriptor" />
+    </file>
     <file name="TitleElement_BehaviorDescriptor.java">
       <unit at="6,0,14,0" name="ro.barata.mps.htmlLanguage.behavior.TitleElement_BehaviorDescriptor" />
+    </file>
+    <file name="ULContainer_BehaviorDescriptor.java">
+      <unit at="6,0,14,0" name="ro.barata.mps.htmlLanguage.behavior.ULContainer_BehaviorDescriptor" />
+    </file>
+    <file name="URLParameter_BehaviorDescriptor.java">
+      <unit at="7,0,15,0" name="ro.barata.mps.htmlLanguage.behavior.URLParameter_BehaviorDescriptor" />
+    </file>
+    <file name="URLValue_BehaviorDescriptor.java">
+      <unit at="7,0,15,0" name="ro.barata.mps.htmlLanguage.behavior.URLValue_BehaviorDescriptor" />
+    </file>
+    <file name="UserHREF_BehaviorDescriptor.java">
+      <unit at="6,0,14,0" name="ro.barata.mps.htmlLanguage.behavior.UserHREF_BehaviorDescriptor" />
+    </file>
+    <file name="UserSrc_BehaviorDescriptor.java">
+      <unit at="6,0,14,0" name="ro.barata.mps.htmlLanguage.behavior.UserSrc_BehaviorDescriptor" />
+    </file>
+    <file name="UserValue_BehaviorDescriptor.java">
+      <unit at="7,0,15,0" name="ro.barata.mps.htmlLanguage.behavior.UserValue_BehaviorDescriptor" />
     </file>
   </root>
   <root nodeRef="r:b6817e23-bfbb-4169-a954-fad21c7ce321(ro.barata.mps.htmlLanguage.behavior)/3088814217696061503">
@@ -213,34 +300,6 @@
         <var name="thisNode" id="4045572257641604880" />
       </scope>
       <unit id="4045572257641604880" at="9,0,18,0" name="ro.barata.mps.htmlLanguage.behavior.HTMLTile_Behavior" />
-    </file>
-  </root>
-  <root nodeRef="r:b6817e23-bfbb-4169-a954-fad21c7ce321(ro.barata.mps.htmlLanguage.behavior)/637934364190285667">
-    <file name="AbstractCommand_Behavior.java">
-      <node id="925758345853923091" at="12,78,13,93" concept="5" />
-      <node id="5512171426400428505" at="15,86,16,87" concept="5" />
-      <node id="925758345853929780" at="18,78,19,94" concept="5" />
-      <node id="637934364190285667" at="10,0,12,0" concept="6" trace="init#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
-      <node id="637934364190285667" at="12,0,15,0" concept="6" trace="call_getOpeningTag_925758345853923080#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljava/lang/String;" />
-      <node id="637934364190285667" at="15,0,18,0" concept="6" trace="call_getPartialOpeningTag_5512171426400428502#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljava/lang/String;" />
-      <node id="637934364190285667" at="18,0,21,0" concept="6" trace="call_getClosingTag_925758345853929777#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljava/lang/String;" />
-      <scope id="637934364190285669" at="10,43,10,43" />
-      <scope id="925758345853923082" at="12,78,13,93" />
-      <scope id="5512171426400428504" at="15,86,16,87" />
-      <scope id="925758345853929779" at="18,78,19,94" />
-      <scope id="637934364190285667" at="10,0,12,0">
-        <var name="thisNode" id="637934364190285667" />
-      </scope>
-      <scope id="637934364190285667" at="12,0,15,0">
-        <var name="thisNode" id="637934364190285667" />
-      </scope>
-      <scope id="637934364190285667" at="15,0,18,0">
-        <var name="thisNode" id="637934364190285667" />
-      </scope>
-      <scope id="637934364190285667" at="18,0,21,0">
-        <var name="thisNode" id="637934364190285667" />
-      </scope>
-      <unit id="637934364190285667" at="9,0,22,0" name="ro.barata.mps.htmlLanguage.behavior.AbstractCommand_Behavior" />
     </file>
   </root>
   <root nodeRef="r:b6817e23-bfbb-4169-a954-fad21c7ce321(ro.barata.mps.htmlLanguage.behavior)/637934364190921362">
@@ -339,7 +398,7 @@
     </file>
   </root>
   <root nodeRef="r:b6817e23-bfbb-4169-a954-fad21c7ce321(ro.barata.mps.htmlLanguage.behavior)/8944301342333514724">
-    <file name="HTMLCommand_Behavior.java">
+    <file name="HTMLValueCommand_Behavior.java">
       <node id="8944301342333514985" at="20,198,21,193" concept="5" />
       <node id="8944301342333514994" at="23,5,24,16" concept="5" />
       <node id="8944301342333515006" at="28,200,29,195" concept="5" />
@@ -350,18 +409,23 @@
       <node id="8944301342333515055" at="44,7,45,16" concept="5" />
       <node id="8944301342333604984" at="49,197,50,192" concept="5" />
       <node id="8944301342333604993" at="52,5,53,16" concept="5" />
+      <node id="4045572257643881669" at="57,200,58,195" concept="5" />
+      <node id="4045572257643881679" at="60,5,61,16" concept="5" />
       <node id="8944301342333514724" at="16,0,18,0" concept="6" trace="init#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
       <node id="8944301342333514983" at="19,204,22,7" concept="2" />
       <node id="8944301342333515004" at="27,204,30,7" concept="2" />
       <node id="8944301342333515035" at="37,0,40,0" concept="3" trace="accept#(Lorg/jetbrains/mps/openapi/model/SNode;)Z" />
       <node id="8944301342333515045" at="41,0,44,0" concept="3" trace="visit#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
       <node id="8944301342333604982" at="48,204,51,7" concept="2" />
+      <node id="4045572257643881667" at="56,204,59,7" concept="2" />
       <node id="8944301342333514979" at="18,83,23,5" concept="1" />
       <node id="8944301342333515000" at="26,85,31,5" concept="1" />
       <node id="8944301342333604978" at="47,87,52,5" concept="1" />
+      <node id="4045572257643881663" at="55,85,60,5" concept="1" />
       <node id="8944301342333514724" at="18,0,26,0" concept="6" trace="call_getAttributeIdNode_8944301342333514976#(Lorg/jetbrains/mps/openapi/model/SNode;)Lorg/jetbrains/mps/openapi/model/SNode;" />
       <node id="8944301342333514724" at="26,0,34,0" concept="6" trace="call_getAttributeNameNode_8944301342333514997#(Lorg/jetbrains/mps/openapi/model/SNode;)Lorg/jetbrains/mps/openapi/model/SNode;" />
       <node id="8944301342333514724" at="47,0,55,0" concept="6" trace="call_getAttributeActionNode_8944301342333604975#(Lorg/jetbrains/mps/openapi/model/SNode;)Lorg/jetbrains/mps/openapi/model/SNode;" />
+      <node id="8944301342333514724" at="55,0,63,0" concept="6" trace="call_getAttributeHREFNode_4045572257643881660#(Lorg/jetbrains/mps/openapi/model/SNode;)Lorg/jetbrains/mps/openapi/model/SNode;" />
       <node id="8944301342333515028" at="35,75,44,7" concept="0" />
       <node id="8944301342333514724" at="34,0,47,0" concept="6" trace="call_getOtherAttributes_8944301342333515018#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljava/util/List;" />
       <scope id="8944301342333514726" at="16,43,16,43" />
@@ -370,6 +434,7 @@
       <scope id="8944301342333515036" at="37,39,38,192" />
       <scope id="8944301342333515046" at="41,35,42,217" />
       <scope id="8944301342333604983" at="49,197,50,192" />
+      <scope id="4045572257643881668" at="57,200,58,195" />
       <scope id="8944301342333514724" at="16,0,18,0">
         <var name="thisNode" id="8944301342333514724" />
       </scope>
@@ -382,6 +447,7 @@
         <var name="it" id="8944301342333515045" />
       </scope>
       <scope id="8944301342333604981" at="48,204,51,7" />
+      <scope id="4045572257643881666" at="56,204,59,7" />
       <scope id="8944301342333514979" at="18,83,23,5">
         <var name="attribute" id="8944301342333514980" />
       </scope>
@@ -391,9 +457,13 @@
       <scope id="8944301342333604978" at="47,87,52,5">
         <var name="attribute" id="8944301342333604979" />
       </scope>
+      <scope id="4045572257643881663" at="55,85,60,5">
+        <var name="attribute" id="4045572257643881664" />
+      </scope>
       <scope id="8944301342333514978" at="18,83,24,16" />
       <scope id="8944301342333514999" at="26,85,32,16" />
       <scope id="8944301342333604977" at="47,87,53,16" />
+      <scope id="4045572257643881662" at="55,85,61,16" />
       <scope id="8944301342333514724" at="18,0,26,0">
         <var name="thisNode" id="8944301342333514724" />
       </scope>
@@ -403,15 +473,18 @@
       <scope id="8944301342333514724" at="47,0,55,0">
         <var name="thisNode" id="8944301342333514724" />
       </scope>
+      <scope id="8944301342333514724" at="55,0,63,0">
+        <var name="thisNode" id="8944301342333514724" />
+      </scope>
       <scope id="8944301342333515020" at="34,89,45,16">
         <var name="list" id="8944301342333515022" />
       </scope>
       <scope id="8944301342333514724" at="34,0,47,0">
         <var name="thisNode" id="8944301342333514724" />
       </scope>
-      <unit id="8944301342333515035" at="36,212,40,5" name="ro.barata.mps.htmlLanguage.behavior.HTMLCommand_Behavior$1" />
-      <unit id="8944301342333515045" at="40,20,44,5" name="ro.barata.mps.htmlLanguage.behavior.HTMLCommand_Behavior$2" />
-      <unit id="8944301342333514724" at="15,0,56,0" name="ro.barata.mps.htmlLanguage.behavior.HTMLCommand_Behavior" />
+      <unit id="8944301342333515035" at="36,212,40,5" name="ro.barata.mps.htmlLanguage.behavior.HTMLValueCommand_Behavior$1" />
+      <unit id="8944301342333515045" at="40,20,44,5" name="ro.barata.mps.htmlLanguage.behavior.HTMLValueCommand_Behavior$2" />
+      <unit id="8944301342333514724" at="15,0,64,0" name="ro.barata.mps.htmlLanguage.behavior.HTMLValueCommand_Behavior" />
     </file>
   </root>
   <root nodeRef="r:b6817e23-bfbb-4169-a954-fad21c7ce321(ro.barata.mps.htmlLanguage.behavior)/925758345853409278">

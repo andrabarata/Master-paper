@@ -23,6 +23,9 @@ import jetbrains.mps.nodeEditor.cellMenu.DefaultReferenceSubstituteInfo;
 import jetbrains.mps.nodeEditor.cellMenu.DefaultChildSubstituteInfo;
 import jetbrains.mps.nodeEditor.cells.EditorCell_Constant;
 import jetbrains.mps.baseLanguage.editor.BaseLanguageStyle_StyleSheet;
+import jetbrains.mps.nodeEditor.cellProviders.CellProviderWithRole;
+import jetbrains.mps.lang.editor.cellProviders.RefNodeCellProvider;
+import jetbrains.mps.nodeEditor.EditorManager;
 
 public class HTMLAttributesEditor implements ConceptEditorComponent {
   public Collection<String> getContextHints() {
@@ -36,6 +39,7 @@ public class HTMLAttributesEditor implements ConceptEditorComponent {
     editorCell.setCellId("Collection_ggyfnb_a");
     editorCell.addEditorCell(this.createRefNodeList_ggyfnb_a0(editorContext, node));
     editorCell.addEditorCell(this.createConstant_ggyfnb_b0(editorContext, node));
+    editorCell.addEditorCell(this.createRefNode_ggyfnb_c0(editorContext, node));
     return editorCell;
   }
   private EditorCell createRefNodeList_ggyfnb_a0(EditorContext editorContext, SNode node) {
@@ -112,6 +116,24 @@ public class HTMLAttributesEditor implements ConceptEditorComponent {
     HTMLStyleSheet_StyleSheet.apply_symbol(style, editorCell);
     editorCell.getStyle().putAll(style);
     editorCell.setDefaultText("");
+    return editorCell;
+  }
+  private EditorCell createRefNode_ggyfnb_c0(EditorContext editorContext, SNode node) {
+    CellProviderWithRole provider = new RefNodeCellProvider(node, editorContext);
+    provider.setRole("value");
+    provider.setNoTargetText("<no value>");
+    EditorCell editorCell;
+    editorCell = provider.createEditorCell(editorContext);
+    if (editorCell.getRole() == null) {
+      editorCell.setRole("value");
+    }
+    editorCell.setSubstituteInfo(provider.createDefaultSubstituteInfo());
+    SNode attributeConcept = provider.getRoleAttribute();
+    Class attributeKind = provider.getRoleAttributeClass();
+    if (attributeConcept != null) {
+      EditorManager manager = EditorManager.getInstanceFromContext(editorContext);
+      return manager.createNodeRoleAttributeCell(editorContext, attributeConcept, attributeKind, editorCell);
+    } else
     return editorCell;
   }
 }

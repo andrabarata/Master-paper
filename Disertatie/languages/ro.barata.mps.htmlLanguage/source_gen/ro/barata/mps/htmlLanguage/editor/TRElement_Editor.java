@@ -35,7 +35,7 @@ public class TRElement_Editor extends DefaultNodeEditor {
     return editorCell;
   }
   private EditorCell createComponent_zibl0n_b0(EditorContext editorContext, SNode node) {
-    EditorCell editorCell = editorContext.getCellFactory().createEditorComponentCell(node, "ro.barata.mps.htmlLanguage.editor.ContainerAttributesEditor");
+    EditorCell editorCell = editorContext.getCellFactory().createEditorComponentCell(node, "ro.barata.mps.htmlLanguage.editor.HTMLCommandEditor");
     return editorCell;
   }
   private EditorCell createConstant_zibl0n_c0(EditorContext editorContext, SNode node) {

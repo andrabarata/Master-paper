@@ -10,9 +10,6 @@ import jetbrains.mps.nodeEditor.cells.EditorCell_Collection;
 import jetbrains.mps.nodeEditor.cells.EditorCell_Constant;
 import jetbrains.mps.openapi.editor.style.Style;
 import jetbrains.mps.editor.runtime.style.StyleImpl;
-import jetbrains.mps.nodeEditor.cellProviders.CellProviderWithRole;
-import jetbrains.mps.lang.editor.cellProviders.RefNodeCellProvider;
-import jetbrains.mps.nodeEditor.EditorManager;
 import jetbrains.mps.nodeEditor.cellProviders.AbstractCellListHandler;
 import jetbrains.mps.nodeEditor.cellLayout.CellLayout_Horizontal;
 import jetbrains.mps.editor.runtime.style.StyleAttributes;
@@ -25,79 +22,30 @@ import jetbrains.mps.nodeEditor.cellMenu.DefaultReferenceSubstituteInfo;
 import jetbrains.mps.nodeEditor.cellMenu.DefaultChildSubstituteInfo;
 import jetbrains.mps.baseLanguage.editor.BaseLanguageStyle_StyleSheet;
 
-public class InputElement_Editor extends DefaultNodeEditor {
+public class AElement_Editor extends DefaultNodeEditor {
   public EditorCell createEditorCell(EditorContext editorContext, SNode node) {
-    return this.createCollection_emto3h_a(editorContext, node);
+    return this.createCollection_mkoko_a(editorContext, node);
   }
-  private EditorCell createCollection_emto3h_a(EditorContext editorContext, SNode node) {
+  private EditorCell createCollection_mkoko_a(EditorContext editorContext, SNode node) {
     EditorCell_Collection editorCell = EditorCell_Collection.createIndent2(editorContext, node);
-    editorCell.setCellId("Collection_emto3h_a");
+    editorCell.setCellId("Collection_mkoko_a");
     editorCell.setBig(true);
-    editorCell.addEditorCell(this.createConstant_emto3h_a0(editorContext, node));
-    editorCell.addEditorCell(this.createConstant_emto3h_b0(editorContext, node));
-    editorCell.addEditorCell(this.createConstant_emto3h_c0(editorContext, node));
-    editorCell.addEditorCell(this.createRefNode_emto3h_d0(editorContext, node));
-    editorCell.addEditorCell(this.createConstant_emto3h_e0(editorContext, node));
-    editorCell.addEditorCell(this.createRefNodeList_emto3h_f0(editorContext, node));
-    editorCell.addEditorCell(this.createConstant_emto3h_g0(editorContext, node));
+    editorCell.addEditorCell(this.createConstant_mkoko_a0(editorContext, node));
+    editorCell.addEditorCell(this.createRefNodeList_mkoko_b0(editorContext, node));
+    editorCell.addEditorCell(this.createConstant_mkoko_c0(editorContext, node));
     return editorCell;
   }
-  private EditorCell createConstant_emto3h_a0(EditorContext editorContext, SNode node) {
-    EditorCell_Constant editorCell = new EditorCell_Constant(editorContext, node, "<input");
-    editorCell.setCellId("Constant_emto3h_a0");
+  private EditorCell createConstant_mkoko_a0(EditorContext editorContext, SNode node) {
+    EditorCell_Constant editorCell = new EditorCell_Constant(editorContext, node, "<a ");
+    editorCell.setCellId("Constant_mkoko_a0");
     Style style = new StyleImpl();
-    HTMLStyleSheet_StyleSheet.apply_tag(style, editorCell);
+    HTMLStyleSheet_StyleSheet.apply_symbol(style, editorCell);
     editorCell.getStyle().putAll(style);
     editorCell.setDefaultText("");
     return editorCell;
   }
-  private EditorCell createConstant_emto3h_b0(EditorContext editorContext, SNode node) {
-    EditorCell_Constant editorCell = new EditorCell_Constant(editorContext, node, "value=");
-    editorCell.setCellId("Constant_emto3h_b0");
-    Style style = new StyleImpl();
-    HTMLStyleSheet_StyleSheet.apply_attribute(style, editorCell);
-    editorCell.getStyle().putAll(style);
-    editorCell.setDefaultText("");
-    return editorCell;
-  }
-  private EditorCell createConstant_emto3h_c0(EditorContext editorContext, SNode node) {
-    EditorCell_Constant editorCell = new EditorCell_Constant(editorContext, node, "\"");
-    editorCell.setCellId("Constant_emto3h_c0");
-    Style style = new StyleImpl();
-    HTMLStyleSheet_StyleSheet.apply_ValueSymbol(style, editorCell);
-    editorCell.getStyle().putAll(style);
-    editorCell.setDefaultText("");
-    return editorCell;
-  }
-  private EditorCell createRefNode_emto3h_d0(EditorContext editorContext, SNode node) {
-    CellProviderWithRole provider = new RefNodeCellProvider(node, editorContext);
-    provider.setRole("value");
-    provider.setNoTargetText("<no value>");
-    EditorCell editorCell;
-    editorCell = provider.createEditorCell(editorContext);
-    if (editorCell.getRole() == null) {
-      editorCell.setRole("value");
-    }
-    editorCell.setSubstituteInfo(provider.createDefaultSubstituteInfo());
-    SNode attributeConcept = provider.getRoleAttribute();
-    Class attributeKind = provider.getRoleAttributeClass();
-    if (attributeConcept != null) {
-      EditorManager manager = EditorManager.getInstanceFromContext(editorContext);
-      return manager.createNodeRoleAttributeCell(editorContext, attributeConcept, attributeKind, editorCell);
-    } else
-    return editorCell;
-  }
-  private EditorCell createConstant_emto3h_e0(EditorContext editorContext, SNode node) {
-    EditorCell_Constant editorCell = new EditorCell_Constant(editorContext, node, "\" ");
-    editorCell.setCellId("Constant_emto3h_e0");
-    Style style = new StyleImpl();
-    HTMLStyleSheet_StyleSheet.apply_ValueSymbol(style, editorCell);
-    editorCell.getStyle().putAll(style);
-    editorCell.setDefaultText("");
-    return editorCell;
-  }
-  private EditorCell createRefNodeList_emto3h_f0(EditorContext editorContext, SNode node) {
-    AbstractCellListHandler handler = new InputElement_Editor.attributesListHandler_emto3h_f0(node, "attributes", editorContext);
+  private EditorCell createRefNodeList_mkoko_b0(EditorContext editorContext, SNode node) {
+    AbstractCellListHandler handler = new AElement_Editor.attributesListHandler_mkoko_b0(node, "attributes", editorContext);
     EditorCell_Collection editorCell = handler.createCells(editorContext, new CellLayout_Horizontal(), false);
     editorCell.setCellId("refNodeList_attributes");
     Style style = new StyleImpl();
@@ -106,8 +54,8 @@ public class InputElement_Editor extends DefaultNodeEditor {
     editorCell.setRole(handler.getElementRole());
     return editorCell;
   }
-  private static class attributesListHandler_emto3h_f0 extends RefNodeListHandler {
-    public attributesListHandler_emto3h_f0(SNode ownerNode, String childRole, EditorContext context) {
+  private static class attributesListHandler_mkoko_b0 extends RefNodeListHandler {
+    public attributesListHandler_mkoko_b0(SNode ownerNode, String childRole, EditorContext context) {
       super(ownerNode, childRole, context, false);
     }
     public SNode createNodeToInsert(EditorContext editorContext) {
@@ -126,7 +74,7 @@ public class InputElement_Editor extends DefaultNodeEditor {
       return emptyCell;
     }
     public EditorCell createEmptyCell_internal(EditorContext editorContext, SNode node) {
-      return this.createConstant_emto3h_a5a(editorContext, node);
+      return this.createConstant_mkoko_a1a(editorContext, node);
     }
     public void installElementCellActions(SNode listOwner, SNode elementNode, EditorCell elementCell, EditorContext editorContext) {
       if (elementCell.getUserObject(AbstractCellListHandler.ELEMENT_CELL_ACTIONS_SET) == null) {
@@ -153,9 +101,9 @@ public class InputElement_Editor extends DefaultNodeEditor {
       editorCell.setAction(CellActionType.DELETE, new CellAction_DeleteNode(prevNode));
       return editorCell;
     }
-    private EditorCell createConstant_emto3h_a5a(EditorContext editorContext, SNode node) {
+    private EditorCell createConstant_mkoko_a1a(EditorContext editorContext, SNode node) {
       EditorCell_Constant editorCell = new EditorCell_Constant(editorContext, node, "Attributes");
-      editorCell.setCellId("Constant_emto3h_a5a");
+      editorCell.setCellId("Constant_mkoko_a1a");
       Style style = new StyleImpl();
       BaseLanguageStyle_StyleSheet.apply_Comment(style, editorCell);
       editorCell.getStyle().putAll(style);
@@ -163,9 +111,9 @@ public class InputElement_Editor extends DefaultNodeEditor {
       return editorCell;
     }
   }
-  private EditorCell createConstant_emto3h_g0(EditorContext editorContext, SNode node) {
+  private EditorCell createConstant_mkoko_c0(EditorContext editorContext, SNode node) {
     EditorCell_Constant editorCell = new EditorCell_Constant(editorContext, node, "/>");
-    editorCell.setCellId("Constant_emto3h_g0");
+    editorCell.setCellId("Constant_mkoko_c0");
     Style style = new StyleImpl();
     HTMLStyleSheet_StyleSheet.apply_tag(style, editorCell);
     editorCell.getStyle().putAll(style);

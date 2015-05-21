@@ -7,6 +7,7 @@
   </languages>
   <imports>
     <import index="4fqr" ref="r:fa713d69-08ea-4732-b1f2-cb07f9e103ef(jetbrains.mps.execution.util.structure)" implicit="true" />
+    <import index="45cg" ref="r:ef60de0b-c7a4-4f7a-969b-4d00b1b22f61(ro.barata.mps.styleLanguage.structure)" implicit="true" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
     <import index="jel9" ref="r:39fd6708-9f84-4f8f-a4ad-184b06960a51(ro.barata.mps.javascriptLanguage.structure)" implicit="true" />
     <import index="jkzc" ref="r:2afe4180-43af-42aa-9e4e-1329f0c3eefb(ro.barata.mps.databaseOperationsLanguage.structure)" implicit="true" />
@@ -63,6 +64,11 @@
     <property role="19KtqR" value="true" />
     <property role="3GE5qa" value="html.root" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="3w$KCyM3HTh" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="parameter" />
+      <ref role="20lvS9" node="3w$KCyM3HSJ" resolve="Parameter" />
+    </node>
     <node concept="PrWs8" id="2cZd1JhMy1g" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
@@ -103,7 +109,7 @@
       <property role="20lmBu" value="aggregation" />
       <property role="20kJfa" value="commands" />
       <property role="20lbJX" value="0..n" />
-      <ref role="20lvS9" node="5a6Q6gbwelH" resolve="AbstractCommand" />
+      <ref role="20lvS9" node="5EdacSEwA7o" resolve="AbstractCommand" />
     </node>
   </node>
   <node concept="1TIwiD" id="2cZd1JhMyN1">
@@ -114,63 +120,68 @@
       <property role="20lmBu" value="aggregation" />
       <property role="20kJfa" value="tags" />
       <property role="20lbJX" value="0..n" />
-      <ref role="20lvS9" node="5a6Q6gbwnnj" resolve="HTMLCommand" />
+      <ref role="20lvS9" node="5a6Q6gbwnnj" resolve="HTMLValueCommand" />
     </node>
   </node>
   <node concept="1TIwiD" id="5a6Q6gblmP3">
     <property role="TrG5h" value="TitleElement" />
     <property role="34LRSv" value="title" />
     <property role="3GE5qa" value="html.miscelanous" />
-    <ref role="1TJDcQ" node="5a6Q6gbwnnj" resolve="HTMLCommand" />
+    <ref role="1TJDcQ" node="5a6Q6gbwnnj" resolve="HTMLValueCommand" />
   </node>
   <node concept="1TIwiD" id="5a6Q6gbly1A">
     <property role="TrG5h" value="H1Element" />
     <property role="34LRSv" value="h1" />
-    <property role="3GE5qa" value="html.miscelanous" />
-    <ref role="1TJDcQ" node="5a6Q6gbwnnj" resolve="HTMLCommand" />
+    <property role="3GE5qa" value="html.h's" />
+    <ref role="1TJDcQ" node="5a6Q6gbwnnj" resolve="HTMLValueCommand" />
   </node>
   <node concept="1TIwiD" id="5a6Q6gbvljx">
     <property role="TrG5h" value="TableContainer" />
     <property role="34LRSv" value="table" />
-    <property role="3GE5qa" value="html.table" />
+    <property role="3GE5qa" value="html.container.table" />
     <ref role="1TJDcQ" node="5a6Q6gbwelL" resolve="ContainerCommand" />
+    <node concept="PrWs8" id="5EdacSEE15J" role="PzmwI">
+      <ref role="PrY4T" node="5EdacSEE15G" resolve="SpecialCaseRootCommand" />
+    </node>
   </node>
   <node concept="1TIwiD" id="5a6Q6gbvljX">
     <property role="TrG5h" value="THElement" />
     <property role="34LRSv" value="th" />
-    <property role="3GE5qa" value="html.table" />
-    <ref role="1TJDcQ" node="5a6Q6gbwnnj" resolve="HTMLCommand" />
+    <property role="3GE5qa" value="html.container.table" />
+    <ref role="1TJDcQ" node="5EdacSEwA7P" resolve="MixedHTMLCommand" />
+    <node concept="PrWs8" id="5EdacSEDr7s" role="PzmwI">
+      <ref role="PrY4T" node="5EdacSEDr7j" resolve="SpecialCaseCommand" />
+    </node>
   </node>
   <node concept="1TIwiD" id="5a6Q6gbvmrt">
-    <property role="3GE5qa" value="html.table" />
+    <property role="3GE5qa" value="html.container.table" />
     <property role="TrG5h" value="TRElement" />
     <property role="34LRSv" value="tr" />
-    <ref role="1TJDcQ" node="5a6Q6gbwelL" resolve="ContainerCommand" />
+    <ref role="1TJDcQ" node="5EdacSEwA7$" resolve="HTMLCommand" />
+    <node concept="PrWs8" id="5EdacSEEjLh" role="PzmwI">
+      <ref role="PrY4T" node="5EdacSEE15G" resolve="SpecialCaseRootCommand" />
+    </node>
   </node>
   <node concept="1TIwiD" id="5a6Q6gbvmru">
-    <property role="3GE5qa" value="html.table" />
+    <property role="3GE5qa" value="html.container.table" />
     <property role="TrG5h" value="TDElement" />
     <property role="34LRSv" value="td" />
-    <ref role="1TJDcQ" node="5a6Q6gbwnnj" resolve="HTMLCommand" />
-  </node>
-  <node concept="1TIwiD" id="5a6Q6gbwelH">
-    <property role="3GE5qa" value="html.commands.model" />
-    <property role="TrG5h" value="AbstractCommand" />
-    <property role="R5$K7" value="true" />
-    <property role="R5$K2" value="false" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <ref role="1TJDcQ" node="5EdacSEwA7P" resolve="MixedHTMLCommand" />
+    <node concept="PrWs8" id="5EdacSEDr7o" role="PzmwI">
+      <ref role="PrY4T" node="5EdacSEDr7j" resolve="SpecialCaseCommand" />
+    </node>
   </node>
   <node concept="1TIwiD" id="5a6Q6gbwelL">
     <property role="TrG5h" value="ContainerCommand" />
     <property role="3GE5qa" value="html.commands.model" />
     <property role="R5$K7" value="true" />
     <property role="R5$K2" value="false" />
-    <ref role="1TJDcQ" node="5a6Q6gbwelH" resolve="AbstractCommand" />
+    <ref role="1TJDcQ" node="5EdacSEwA7s" resolve="HTMLValue" />
     <node concept="1TJgyj" id="5a6Q6gbwelM" role="1TKVEi">
       <property role="20lmBu" value="aggregation" />
       <property role="20kJfa" value="containers" />
       <property role="20lbJX" value="0..n" />
-      <ref role="20lvS9" node="5a6Q6gbwelH" resolve="AbstractCommand" />
+      <ref role="20lvS9" node="5EdacSEwA7o" resolve="AbstractCommand" />
     </node>
     <node concept="1TJgyj" id="7KwyEUhIAuc" role="1TKVEi">
       <property role="20lmBu" value="aggregation" />
@@ -178,23 +189,29 @@
       <property role="20lbJX" value="0..n" />
       <ref role="20lvS9" node="7KwyEUhFHXY" resolve="IAttribute" />
     </node>
+    <node concept="PrWs8" id="5EdacSEwA7v" role="PzmwI">
+      <ref role="PrY4T" node="5EdacSEwA7o" resolve="AbstractCommand" />
+    </node>
   </node>
   <node concept="1TIwiD" id="5a6Q6gbweme">
     <property role="TrG5h" value="OperationCommand" />
     <property role="3GE5qa" value="html.commands.model" />
     <property role="R5$K7" value="true" />
     <property role="R5$K2" value="false" />
-    <ref role="1TJDcQ" node="5a6Q6gbwelH" resolve="AbstractCommand" />
+    <ref role="1TJDcQ" node="5EdacSEwA7s" resolve="HTMLValue" />
     <node concept="1TJgyj" id="5a6Q6gbwn3T" role="1TKVEi">
       <property role="20lmBu" value="reference" />
       <property role="20kJfa" value="classReference" />
       <property role="20lbJX" value="1" />
       <ref role="20lvS9" to="tpce:f_TIwhg" resolve="ConceptDeclaration" />
     </node>
+    <node concept="PrWs8" id="5EdacSEx1wn" role="PzmwI">
+      <ref role="PrY4T" node="5EdacSEwA7o" resolve="AbstractCommand" />
+    </node>
   </node>
   <node concept="1TIwiD" id="5a6Q6gbwn3r">
     <property role="TrG5h" value="SelectCommand" />
-    <property role="34LRSv" value="select" />
+    <property role="34LRSv" value="iteration" />
     <property role="3GE5qa" value="html.commands.operations" />
     <ref role="1TJDcQ" node="5a6Q6gbweme" resolve="OperationCommand" />
     <node concept="1TJgyj" id="41TyEbjimBO" role="1TKVEi">
@@ -212,7 +229,7 @@
       <property role="20lmBu" value="aggregation" />
       <property role="20kJfa" value="commands" />
       <property role="20lbJX" value="1..n" />
-      <ref role="20lvS9" node="5a6Q6gbwelH" resolve="AbstractCommand" />
+      <ref role="20lvS9" node="5EdacSEwA7o" resolve="AbstractCommand" />
     </node>
   </node>
   <node concept="1TIwiD" id="5a6Q6gbwnmD">
@@ -230,15 +247,15 @@
   </node>
   <node concept="1TIwiD" id="5a6Q6gbwnnj">
     <property role="3GE5qa" value="html.commands.model" />
-    <property role="TrG5h" value="HTMLCommand" />
+    <property role="TrG5h" value="HTMLValueCommand" />
     <property role="R5$K7" value="true" />
     <property role="R5$K2" value="false" />
-    <ref role="1TJDcQ" node="5a6Q6gbwelH" resolve="AbstractCommand" />
+    <ref role="1TJDcQ" node="5EdacSEwA7s" resolve="HTMLValue" />
     <node concept="1TJgyj" id="4Ma6LuSPGjt" role="1TKVEi">
       <property role="20lmBu" value="aggregation" />
       <property role="20kJfa" value="value" />
       <property role="20lbJX" value="0..1" />
-      <ref role="20lvS9" node="41TyEbjfrVL" resolve="TagValue" />
+      <ref role="20lvS9" node="5EdacSEwA7p" resolve="UserValue" />
     </node>
     <node concept="1TJgyj" id="4LZaFkzCGlt" role="1TKVEi">
       <property role="20lmBu" value="aggregation" />
@@ -246,33 +263,30 @@
       <property role="20lbJX" value="0..n" />
       <ref role="20lvS9" node="7KwyEUhFHXY" resolve="IAttribute" />
     </node>
+    <node concept="PrWs8" id="5EdacSEwA7x" role="PzmwI">
+      <ref role="PrY4T" node="5EdacSEwA7o" resolve="AbstractCommand" />
+    </node>
   </node>
   <node concept="1TIwiD" id="5a6Q6gbwnj_">
     <property role="3GE5qa" value="html.commands.operations" />
     <property role="TrG5h" value="TagValueReference" />
     <property role="34LRSv" value="Data value" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <ref role="1TJDcQ" node="5EdacSEwA7p" resolve="UserValue" />
     <node concept="1TJgyj" id="5a6Q6gbwnmB" role="1TKVEi">
       <property role="20lmBu" value="reference" />
       <property role="20kJfa" value="value" />
       <property role="20lbJX" value="1" />
       <ref role="20lvS9" to="tpce:f_TJgxF" resolve="PropertyDeclaration" />
     </node>
-    <node concept="PrWs8" id="41TyEbjfs0v" role="PzmwI">
-      <ref role="PrY4T" node="41TyEbjfrVL" resolve="TagValue" />
-    </node>
   </node>
   <node concept="1TIwiD" id="5a6Q6gbwn4_">
     <property role="3GE5qa" value="html.root" />
     <property role="TrG5h" value="HTMLTagValue" />
     <property role="34LRSv" value="Static value" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <ref role="1TJDcQ" node="5EdacSEwA7p" resolve="UserValue" />
     <node concept="1TJgyi" id="5a6Q6gbwu8U" role="1TKVEl">
       <property role="TrG5h" value="value" />
       <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
-    </node>
-    <node concept="PrWs8" id="41TyEbjfs0s" role="PzmwI">
-      <ref role="PrY4T" node="41TyEbjfrVL" resolve="TagValue" />
     </node>
   </node>
   <node concept="1TIwiD" id="5a6Q6gblJWw">
@@ -296,16 +310,13 @@
     <property role="TrG5h" value="InputElement" />
     <property role="34LRSv" value="input" />
     <property role="3GE5qa" value="html.input" />
-    <ref role="1TJDcQ" node="5a6Q6gbwnnj" resolve="HTMLCommand" />
-    <node concept="PrWs8" id="41TyEbjfs0y" role="PzmwI">
-      <ref role="PrY4T" node="41TyEbjfrVL" resolve="TagValue" />
-    </node>
+    <ref role="1TJDcQ" node="5a6Q6gbwnnj" resolve="HTMLValueCommand" />
   </node>
   <node concept="1TIwiD" id="4LZaFkzCGl1">
     <property role="TrG5h" value="Attribute" />
     <property role="R5$K7" value="false" />
     <property role="R5$K2" value="false" />
-    <property role="3GE5qa" value="html.commands.model" />
+    <property role="3GE5qa" value="html.commands.model.attributes" />
     <property role="34LRSv" value="other" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyi" id="4LZaFkzG0TT" role="1TKVEl">
@@ -346,7 +357,7 @@
     <property role="3GE5qa" value="html.miscelanous" />
     <property role="TrG5h" value="LabelElement" />
     <property role="34LRSv" value="label" />
-    <ref role="1TJDcQ" node="5a6Q6gbwnnj" resolve="HTMLCommand" />
+    <ref role="1TJDcQ" node="5a6Q6gbwnnj" resolve="HTMLValueCommand" />
   </node>
   <node concept="1TIwiD" id="4LZaFkzSZF$">
     <property role="TrG5h" value="Action" />
@@ -419,7 +430,7 @@
     <property role="TrG5h" value="TagValue" />
   </node>
   <node concept="1TIwiD" id="41TyEbjfw9V">
-    <property role="3GE5qa" value="html.commands.model" />
+    <property role="3GE5qa" value="html.commands.model.attributes" />
     <property role="TrG5h" value="AttributeReference" />
     <property role="R5$K7" value="true" />
     <property role="R5$K2" value="false" />
@@ -433,13 +444,13 @@
       <property role="20lmBu" value="aggregation" />
       <property role="20kJfa" value="field1" />
       <property role="20lbJX" value="1" />
-      <ref role="20lvS9" node="41TyEbjfrVL" resolve="TagValue" />
+      <ref role="20lvS9" node="5EdacSEwA7p" resolve="UserValue" />
     </node>
     <node concept="1TJgyj" id="41TyEbjin8o" role="1TKVEi">
       <property role="20lmBu" value="aggregation" />
       <property role="20kJfa" value="field2" />
       <property role="20lbJX" value="1" />
-      <ref role="20lvS9" node="41TyEbjfrVL" resolve="TagValue" />
+      <ref role="20lvS9" node="5EdacSEwA7p" resolve="UserValue" />
     </node>
   </node>
   <node concept="1TIwiD" id="41TyEbjimBi">
@@ -454,10 +465,7 @@
     <property role="3GE5qa" value="html.commands.operations" />
     <property role="TrG5h" value="CounterIdReference" />
     <property role="34LRSv" value="counter" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
-    <node concept="PrWs8" id="41TyEbjimTJ" role="PzmwI">
-      <ref role="PrY4T" node="41TyEbjfrVL" resolve="TagValue" />
-    </node>
+    <ref role="1TJDcQ" node="5EdacSEwA7p" resolve="UserValue" />
     <node concept="1TJgyj" id="41TyEbjimTM" role="1TKVEi">
       <property role="20lmBu" value="reference" />
       <property role="20kJfa" value="counter" />
@@ -490,23 +498,24 @@
       <property role="20lmBu" value="aggregation" />
       <property role="20kJfa" value="value" />
       <property role="20lbJX" value="1" />
-      <ref role="20lvS9" node="41TyEbjfrVL" resolve="TagValue" />
+      <ref role="20lvS9" node="5EdacSEwA7p" resolve="UserValue" />
     </node>
   </node>
   <node concept="1TIwiD" id="oA6tRYbQSq">
     <property role="TrG5h" value="DivContainer" />
     <property role="34LRSv" value="div" />
-    <ref role="1TJDcQ" node="5a6Q6gbwelL" resolve="ContainerCommand" />
+    <property role="3GE5qa" value="html.container" />
+    <ref role="1TJDcQ" node="5EdacSEwA7P" resolve="MixedHTMLCommand" />
   </node>
   <node concept="PlHQZ" id="7KwyEUhFHXY">
     <property role="3GE5qa" value="html.commands.model" />
     <property role="TrG5h" value="IAttribute" />
   </node>
   <node concept="1TIwiD" id="7KwyEUhITSJ">
-    <property role="TrG5h" value="AttributeId" />
+    <property role="TrG5h" value="IdAttribute" />
     <property role="R5$K7" value="false" />
     <property role="R5$K2" value="false" />
-    <property role="3GE5qa" value="html.commands.model" />
+    <property role="3GE5qa" value="html.commands.model.attributes" />
     <property role="34LRSv" value="id" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="PrWs8" id="7KwyEUhITSM" role="PzmwI">
@@ -519,10 +528,10 @@
     </node>
   </node>
   <node concept="1TIwiD" id="7KwyEUhIUfx">
-    <property role="TrG5h" value="AttributeName" />
+    <property role="TrG5h" value="NameAttribute" />
     <property role="R5$K7" value="false" />
     <property role="R5$K2" value="false" />
-    <property role="3GE5qa" value="html.commands.model" />
+    <property role="3GE5qa" value="html.commands.model.attributes" />
     <property role="34LRSv" value="name" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="PrWs8" id="7KwyEUhIUfy" role="PzmwI">
@@ -542,7 +551,7 @@
       <property role="20lmBu" value="aggregation" />
       <property role="20kJfa" value="commands" />
       <property role="20lbJX" value="0..n" />
-      <ref role="20lvS9" node="5a6Q6gbwelH" resolve="AbstractCommand" />
+      <ref role="20lvS9" node="5EdacSEwA7o" resolve="AbstractCommand" />
     </node>
     <node concept="PrWs8" id="4iOjISKGIyh" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
@@ -558,13 +567,313 @@
   <node concept="1TIwiD" id="4iOjISKGIzX">
     <property role="3GE5qa" value="html.root" />
     <property role="TrG5h" value="HTMLTileReference" />
-    <property role="34LRSv" value="add predefined HTML" />
-    <ref role="1TJDcQ" node="5a6Q6gbwelH" resolve="AbstractCommand" />
+    <property role="34LRSv" value="insert html" />
+    <ref role="1TJDcQ" node="5EdacSEwA7s" resolve="HTMLValue" />
     <node concept="1TJgyj" id="4iOjISKGI$r" role="1TKVEi">
       <property role="20lmBu" value="reference" />
       <property role="20kJfa" value="html" />
       <property role="20lbJX" value="1" />
       <ref role="20lvS9" node="4iOjISKGIrm" resolve="HTMLTile" />
+    </node>
+    <node concept="PrWs8" id="5EdacSEwYm4" role="PzmwI">
+      <ref role="PrY4T" node="5EdacSEwA7o" resolve="AbstractCommand" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="3w$KCyM1aTp">
+    <property role="3GE5qa" value="html.miscelanous" />
+    <property role="TrG5h" value="AElement" />
+    <property role="34LRSv" value="a" />
+    <ref role="1TJDcQ" node="5a6Q6gbwnnj" resolve="HTMLValueCommand" />
+  </node>
+  <node concept="1TIwiD" id="3w$KCyM1eVy">
+    <property role="3GE5qa" value="html.commands.model.attributes" />
+    <property role="TrG5h" value="HREFAttribute" />
+    <property role="34LRSv" value="href" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="PrWs8" id="3w$KCyM1f3n" role="PzmwI">
+      <ref role="PrY4T" node="7KwyEUhFHXY" resolve="IAttribute" />
+    </node>
+    <node concept="1TJgyj" id="3w$KCyM1_Sa" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="value" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="3w$KCyM1_zY" resolve="URLValue" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="3w$KCyM1_zY">
+    <property role="3GE5qa" value="html.commands.model.attributes" />
+    <property role="TrG5h" value="URLValue" />
+    <property role="R5$K7" value="true" />
+    <property role="R5$K2" value="false" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+  </node>
+  <node concept="1TIwiD" id="3w$KCyM1_$7">
+    <property role="3GE5qa" value="html.commands.model.attributes" />
+    <property role="TrG5h" value="PageHREF" />
+    <property role="34LRSv" value="inner page" />
+    <ref role="1TJDcQ" node="3w$KCyM1_zY" resolve="URLValue" />
+    <node concept="1TJgyj" id="3w$KCyM1__U" role="1TKVEi">
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="page" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="2cZd1JhMnrx" resolve="HTMLPage" />
+    </node>
+    <node concept="1TJgyj" id="5EdacSEvcXs" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="parameter" />
+      <ref role="20lvS9" node="5EdacSEvd3J" resolve="URLParameter" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="3w$KCyM1_$g">
+    <property role="3GE5qa" value="html.commands.model.attributes" />
+    <property role="TrG5h" value="UserHREF" />
+    <property role="34LRSv" value="outer page" />
+    <ref role="1TJDcQ" node="3w$KCyM1_zY" resolve="URLValue" />
+    <node concept="1TJgyi" id="3w$KCyM1__S" role="1TKVEl">
+      <property role="TrG5h" value="value" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="3w$KCyM3HSJ">
+    <property role="3GE5qa" value="html.root" />
+    <property role="TrG5h" value="Parameter" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyi" id="3w$KCyM3HSY" role="1TKVEl">
+      <property role="TrG5h" value="parameter" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="5EdacSEvd3J">
+    <property role="3GE5qa" value="html.commands.model.attributes" />
+    <property role="TrG5h" value="URLParameter" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="5EdacSEvd3K" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="parameter" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="5EdacSEwA7p" resolve="UserValue" />
+    </node>
+  </node>
+  <node concept="PlHQZ" id="5EdacSEwA7o">
+    <property role="3GE5qa" value="html.commands.model" />
+    <property role="TrG5h" value="AbstractCommand" />
+  </node>
+  <node concept="1TIwiD" id="5EdacSEwA7p">
+    <property role="3GE5qa" value="html.root" />
+    <property role="R5$K7" value="true" />
+    <property role="R5$K2" value="false" />
+    <property role="TrG5h" value="UserValue" />
+    <property role="34LRSv" value="value" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="PrWs8" id="5EdacSEwA7q" role="PzmwI">
+      <ref role="PrY4T" node="41TyEbjfrVL" resolve="TagValue" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="5EdacSEwA7s">
+    <property role="3GE5qa" value="html.root" />
+    <property role="TrG5h" value="HTMLValue" />
+    <property role="R5$K7" value="true" />
+    <property role="R5$K2" value="false" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="PrWs8" id="5EdacSEwA7t" role="PzmwI">
+      <ref role="PrY4T" node="41TyEbjfrVL" resolve="TagValue" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="5EdacSEwA7$">
+    <property role="3GE5qa" value="html.commands.model" />
+    <property role="TrG5h" value="HTMLCommand" />
+    <property role="R5$K7" value="true" />
+    <property role="R5$K2" value="false" />
+    <ref role="1TJDcQ" node="5EdacSEwA7s" resolve="HTMLValue" />
+    <node concept="1TJgyj" id="5EdacSEwA7L" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="value" />
+      <property role="20lbJX" value="0..1" />
+      <ref role="20lvS9" node="5EdacSEwA7P" resolve="MixedHTMLCommand" />
+    </node>
+    <node concept="1TJgyj" id="5EdacSEwA7M" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="attributes" />
+      <property role="20lbJX" value="0..n" />
+      <ref role="20lvS9" node="7KwyEUhFHXY" resolve="IAttribute" />
+    </node>
+    <node concept="PrWs8" id="5EdacSEwA7B" role="PzmwI">
+      <ref role="PrY4T" node="5EdacSEwA7o" resolve="AbstractCommand" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="5EdacSEwA7P">
+    <property role="3GE5qa" value="html.commands.model" />
+    <property role="TrG5h" value="MixedHTMLCommand" />
+    <property role="R5$K7" value="true" />
+    <property role="R5$K2" value="false" />
+    <ref role="1TJDcQ" node="5EdacSEwA7s" resolve="HTMLValue" />
+    <node concept="1TJgyj" id="5EdacSEwA80" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="values" />
+      <property role="20lbJX" value="0..n" />
+      <ref role="20lvS9" node="41TyEbjfrVL" resolve="TagValue" />
+    </node>
+    <node concept="1TJgyj" id="5EdacSEwA81" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="attributes" />
+      <property role="20lbJX" value="0..n" />
+      <ref role="20lvS9" node="7KwyEUhFHXY" resolve="IAttribute" />
+    </node>
+    <node concept="PrWs8" id="5EdacSExoQ3" role="PzmwI">
+      <ref role="PrY4T" node="5EdacSEwA7o" resolve="AbstractCommand" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="5EdacSEALs1">
+    <property role="TrG5h" value="SpanContainer" />
+    <property role="34LRSv" value="span" />
+    <property role="3GE5qa" value="html.container" />
+    <ref role="1TJDcQ" node="5EdacSEwA7P" resolve="MixedHTMLCommand" />
+  </node>
+  <node concept="1TIwiD" id="5EdacSEALsx">
+    <property role="TrG5h" value="ULContainer" />
+    <property role="34LRSv" value="ul" />
+    <property role="3GE5qa" value="html.container.ul" />
+    <ref role="1TJDcQ" node="5a6Q6gbwelL" resolve="ContainerCommand" />
+    <node concept="PrWs8" id="5EdacSEE15L" role="PzmwI">
+      <ref role="PrY4T" node="5EdacSEE15G" resolve="SpecialCaseRootCommand" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="5EdacSEALtv">
+    <property role="3GE5qa" value="html.container.ul" />
+    <property role="TrG5h" value="LiElement" />
+    <property role="34LRSv" value="li" />
+    <ref role="1TJDcQ" node="5EdacSEwA7P" resolve="MixedHTMLCommand" />
+    <node concept="PrWs8" id="5EdacSEDr7m" role="PzmwI">
+      <ref role="PrY4T" node="5EdacSEDr7j" resolve="SpecialCaseCommand" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="5EdacSEAVh2">
+    <property role="3GE5qa" value="html.image" />
+    <property role="TrG5h" value="ImageElement" />
+    <property role="34LRSv" value="img" />
+    <ref role="1TJDcQ" node="5a6Q6gbwnnj" resolve="HTMLValueCommand" />
+    <node concept="1TJgyj" id="5EdacSEG0SH" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="src" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="5EdacSEG0RF" resolve="ImageSrc" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="5EdacSEAVjx">
+    <property role="TrG5h" value="FormContainer" />
+    <property role="34LRSv" value="form" />
+    <property role="3GE5qa" value="html.container.form" />
+    <ref role="1TJDcQ" node="5EdacSEwA7P" resolve="MixedHTMLCommand" />
+    <node concept="1TJgyj" id="5EdacSEAWrW" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="action" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="3w$KCyM1_zY" resolve="URLValue" />
+    </node>
+    <node concept="1TJgyi" id="5EdacSEAWrQ" role="1TKVEl">
+      <property role="TrG5h" value="method" />
+      <ref role="AX2Wp" node="5EdacSEAWrL" resolve="MethodParameter" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="5EdacSEAVm6">
+    <property role="TrG5h" value="H2Element" />
+    <property role="34LRSv" value="h2" />
+    <property role="3GE5qa" value="html.h's" />
+    <ref role="1TJDcQ" node="5a6Q6gbwnnj" resolve="HTMLValueCommand" />
+  </node>
+  <node concept="1TIwiD" id="5EdacSEAVmd">
+    <property role="TrG5h" value="H4Element" />
+    <property role="34LRSv" value="h4" />
+    <property role="3GE5qa" value="html.h's" />
+    <ref role="1TJDcQ" node="5a6Q6gbwnnj" resolve="HTMLValueCommand" />
+  </node>
+  <node concept="1TIwiD" id="5EdacSEAVmi">
+    <property role="TrG5h" value="H3Element" />
+    <property role="34LRSv" value="h3" />
+    <property role="3GE5qa" value="html.h's" />
+    <ref role="1TJDcQ" node="5a6Q6gbwnnj" resolve="HTMLValueCommand" />
+  </node>
+  <node concept="1TIwiD" id="5EdacSEAVmn">
+    <property role="TrG5h" value="H5Element" />
+    <property role="34LRSv" value="h5" />
+    <property role="3GE5qa" value="html.h's" />
+    <ref role="1TJDcQ" node="5a6Q6gbwnnj" resolve="HTMLValueCommand" />
+  </node>
+  <node concept="1TIwiD" id="5EdacSEAVmr">
+    <property role="TrG5h" value="H6Element" />
+    <property role="34LRSv" value="h6" />
+    <property role="3GE5qa" value="html.h's" />
+    <ref role="1TJDcQ" node="5a6Q6gbwnnj" resolve="HTMLValueCommand" />
+  </node>
+  <node concept="1TIwiD" id="5EdacSEAVYz">
+    <property role="TrG5h" value="SelectContainer" />
+    <property role="34LRSv" value="select" />
+    <property role="3GE5qa" value="html.container.select" />
+    <ref role="1TJDcQ" node="5a6Q6gbwelL" resolve="ContainerCommand" />
+    <node concept="PrWs8" id="5EdacSEE15H" role="PzmwI">
+      <ref role="PrY4T" node="5EdacSEE15G" resolve="SpecialCaseRootCommand" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="5EdacSEAW0I">
+    <property role="3GE5qa" value="html.container.select" />
+    <property role="TrG5h" value="OptionElement" />
+    <property role="34LRSv" value="option" />
+    <ref role="1TJDcQ" node="5a6Q6gbwnnj" resolve="HTMLValueCommand" />
+  </node>
+  <node concept="1TIwiD" id="5EdacSEAW2U">
+    <property role="3GE5qa" value="html.miscelanous" />
+    <property role="TrG5h" value="TextareaElement" />
+    <property role="34LRSv" value="textarea" />
+    <ref role="1TJDcQ" node="5a6Q6gbwnnj" resolve="HTMLValueCommand" />
+  </node>
+  <node concept="AxPO7" id="5EdacSEAWrL">
+    <property role="3GE5qa" value="html.container.form" />
+    <property role="TrG5h" value="MethodParameter" />
+    <ref role="M4eZT" to="tpck:fKAOsGN" resolve="string" />
+    <node concept="M4N5e" id="5EdacSEAWrM" role="M5hS2">
+      <property role="1uS6qv" value="get" />
+      <property role="1uS6qo" value="get" />
+    </node>
+    <node concept="M4N5e" id="5EdacSEAWrN" role="M5hS2">
+      <property role="1uS6qv" value="post" />
+      <property role="1uS6qo" value="post" />
+    </node>
+  </node>
+  <node concept="PlHQZ" id="5EdacSEDr7j">
+    <property role="3GE5qa" value="html.commands.model" />
+    <property role="TrG5h" value="SpecialCaseCommand" />
+  </node>
+  <node concept="PlHQZ" id="5EdacSEE15G">
+    <property role="3GE5qa" value="html.commands.model.attributes" />
+    <property role="TrG5h" value="SpecialCaseRootCommand" />
+  </node>
+  <node concept="1TIwiD" id="5EdacSEG0RF">
+    <property role="3GE5qa" value="html.image" />
+    <property role="TrG5h" value="ImageSrc" />
+    <property role="R5$K7" value="true" />
+    <property role="R5$K2" value="false" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+  </node>
+  <node concept="1TIwiD" id="5EdacSEG0RG">
+    <property role="3GE5qa" value="html.image" />
+    <property role="TrG5h" value="UserSrc" />
+    <property role="34LRSv" value="outer location" />
+    <ref role="1TJDcQ" node="5EdacSEG0RF" resolve="ImageSrc" />
+    <node concept="1TJgyi" id="5EdacSEG0RH" role="1TKVEl">
+      <property role="TrG5h" value="src" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="5EdacSEG0RT">
+    <property role="3GE5qa" value="html.image" />
+    <property role="TrG5h" value="ImageReference" />
+    <property role="34LRSv" value="inner file" />
+    <ref role="1TJDcQ" node="5EdacSEG0RF" resolve="ImageSrc" />
+    <node concept="1TJgyj" id="5EdacSEB10a" role="1TKVEi">
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="src" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" to="45cg:4iOjISKCCw1" resolve="File" />
     </node>
   </node>
 </model>

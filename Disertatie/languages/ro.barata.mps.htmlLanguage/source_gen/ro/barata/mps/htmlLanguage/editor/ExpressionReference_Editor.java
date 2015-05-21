@@ -63,6 +63,9 @@ public class ExpressionReference_Editor extends DefaultNodeEditor {
     if (editorCell.getRole() == null) {
       editorCell.setRole("field2");
     }
+    Style style = new StyleImpl();
+    HTMLStyleSheet_StyleSheet.apply_value(style, editorCell);
+    editorCell.getStyle().putAll(style);
     editorCell.setSubstituteInfo(provider.createDefaultSubstituteInfo());
     SNode attributeConcept = provider.getRoleAttribute();
     Class attributeKind = provider.getRoleAttributeClass();
