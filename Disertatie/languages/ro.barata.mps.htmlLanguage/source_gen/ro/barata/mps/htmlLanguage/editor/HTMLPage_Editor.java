@@ -49,7 +49,8 @@ public class HTMLPage_Editor extends DefaultNodeEditor {
     editorCell.addEditorCell(this.createConstant_8wjgw9_l0(editorContext, node));
     editorCell.addEditorCell(this.createRefNodeList_8wjgw9_m0(editorContext, node));
     editorCell.addEditorCell(this.createConstant_8wjgw9_n0(editorContext, node));
-    editorCell.addEditorCell(this.createRefNodeList_8wjgw9_o0(editorContext, node));
+    editorCell.addEditorCell(this.createConstant_8wjgw9_o0(editorContext, node));
+    editorCell.addEditorCell(this.createRefNodeList_8wjgw9_p0(editorContext, node));
     return editorCell;
   }
   private EditorCell createConstant_8wjgw9_a0(EditorContext editorContext, SNode node) {
@@ -265,8 +266,17 @@ public class HTMLPage_Editor extends DefaultNodeEditor {
     }
   }
   private EditorCell createConstant_8wjgw9_n0(EditorContext editorContext, SNode node) {
-    EditorCell_Constant editorCell = new EditorCell_Constant(editorContext, node, "#actions:");
+    EditorCell_Constant editorCell = new EditorCell_Constant(editorContext, node, "");
     editorCell.setCellId("Constant_8wjgw9_n0");
+    Style style = new StyleImpl();
+    style.set(StyleAttributes.INDENT_LAYOUT_NEW_LINE, 0, true);
+    editorCell.getStyle().putAll(style);
+    editorCell.setDefaultText("");
+    return editorCell;
+  }
+  private EditorCell createConstant_8wjgw9_o0(EditorContext editorContext, SNode node) {
+    EditorCell_Constant editorCell = new EditorCell_Constant(editorContext, node, "#actions:");
+    editorCell.setCellId("Constant_8wjgw9_o0");
     Style style = new StyleImpl();
     style.set(StyleAttributes.INDENT_LAYOUT_NEW_LINE, 0, true);
     style.set(StyleAttributes.TEXT_COLOR, 0, StyleRegistry.getInstance().getSimpleColor(MPSColors.blue));
@@ -274,8 +284,8 @@ public class HTMLPage_Editor extends DefaultNodeEditor {
     editorCell.setDefaultText("");
     return editorCell;
   }
-  private EditorCell createRefNodeList_8wjgw9_o0(EditorContext editorContext, SNode node) {
-    AbstractCellListHandler handler = new HTMLPage_Editor.actionsListHandler_8wjgw9_o0(node, "actions", editorContext);
+  private EditorCell createRefNodeList_8wjgw9_p0(EditorContext editorContext, SNode node) {
+    AbstractCellListHandler handler = new HTMLPage_Editor.actionsListHandler_8wjgw9_p0(node, "actions", editorContext);
     EditorCell_Collection editorCell = handler.createCells(editorContext, new CellLayout_Vertical(), false);
     editorCell.setCellId("refNodeList_actions");
     Style style = new StyleImpl();
@@ -284,8 +294,8 @@ public class HTMLPage_Editor extends DefaultNodeEditor {
     editorCell.setRole(handler.getElementRole());
     return editorCell;
   }
-  private static class actionsListHandler_8wjgw9_o0 extends RefNodeListHandler {
-    public actionsListHandler_8wjgw9_o0(SNode ownerNode, String childRole, EditorContext context) {
+  private static class actionsListHandler_8wjgw9_p0 extends RefNodeListHandler {
+    public actionsListHandler_8wjgw9_p0(SNode ownerNode, String childRole, EditorContext context) {
       super(ownerNode, childRole, context, false);
     }
     public SNode createNodeToInsert(EditorContext editorContext) {
@@ -304,7 +314,7 @@ public class HTMLPage_Editor extends DefaultNodeEditor {
       return emptyCell;
     }
     public EditorCell createEmptyCell_internal(EditorContext editorContext, SNode node) {
-      return this.createConstant_8wjgw9_a41a(editorContext, node);
+      return this.createConstant_8wjgw9_a51a(editorContext, node);
     }
     public void installElementCellActions(SNode listOwner, SNode elementNode, EditorCell elementCell, EditorContext editorContext) {
       if (elementCell.getUserObject(AbstractCellListHandler.ELEMENT_CELL_ACTIONS_SET) == null) {
@@ -318,9 +328,9 @@ public class HTMLPage_Editor extends DefaultNodeEditor {
         }
       }
     }
-    private EditorCell createConstant_8wjgw9_a41a(EditorContext editorContext, SNode node) {
+    private EditorCell createConstant_8wjgw9_a51a(EditorContext editorContext, SNode node) {
       EditorCell_Constant editorCell = new EditorCell_Constant(editorContext, node, "Actions");
-      editorCell.setCellId("Constant_8wjgw9_a41a");
+      editorCell.setCellId("Constant_8wjgw9_a51a");
       Style style = new StyleImpl();
       BaseLanguageStyle_StyleSheet.apply_Comment(style, editorCell);
       editorCell.getStyle().putAll(style);

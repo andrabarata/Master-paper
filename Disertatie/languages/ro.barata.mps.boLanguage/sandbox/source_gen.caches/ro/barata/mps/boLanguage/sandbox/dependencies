@@ -82,7 +82,6 @@
   <dependency className="ro.barata.mps.boLanguage.sandbox.HTTPServer" file="HTTPServer.java">
     <classNode dependClassName="java.lang.Exception" />
     <classNode dependClassName="java.lang.String" />
-    <classNode dependClassName="org.eclipse.jetty.rewrite.handler.RedirectRegexRule" />
     <classNode dependClassName="org.eclipse.jetty.rewrite.handler.RewriteHandler" />
     <classNode dependClassName="org.eclipse.jetty.server.Handler" />
     <classNode dependClassName="org.eclipse.jetty.server.Server" />
@@ -91,28 +90,8 @@
     <classNode dependClassName="org.eclipse.jetty.server.nio.SelectChannelConnector" />
     <classNode dependClassName="org.eclipse.jetty.servlet.ServletContextHandler" />
     <classNode dependClassName="org.eclipse.jetty.servlet.ServletHolder" />
-    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.IndexServlet" />
     <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.NextPageServlet" />
     <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.TestPageServlet" />
-  </dependency>
-  <dependency className="ro.barata.mps.boLanguage.sandbox.IndexGenerator" file="IndexGenerator.java">
-    <classNode dependClassName="java.lang.ClassNotFoundException" />
-    <classNode dependClassName="java.lang.String" />
-    <classNode dependClassName="java.sql.SQLException" />
-    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.StructureGenerator" />
-  </dependency>
-  <dependency className="ro.barata.mps.boLanguage.sandbox.IndexServlet" file="IndexServlet.java">
-    <classNode dependClassName="java.io.IOException" />
-    <classNode dependClassName="java.lang.ClassNotFoundException" />
-    <classNode dependClassName="java.lang.Exception" />
-    <classNode dependClassName="java.lang.String" />
-    <classNode dependClassName="java.lang.System" />
-    <classNode dependClassName="java.sql.SQLException" />
-    <classNode dependClassName="javax.servlet.ServletException" />
-    <classNode dependClassName="javax.servlet.http.HttpServletRequest" />
-    <classNode dependClassName="javax.servlet.http.HttpServletResponse" />
-    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.IndexGenerator" />
-    <classNode extendsClassName="javax.servlet.http.HttpServlet" />
   </dependency>
   <dependency className="ro.barata.mps.boLanguage.sandbox.NextPageGenerator" file="NextPageGenerator.java">
     <classNode dependClassName="java.lang.ClassNotFoundException" />
@@ -206,14 +185,18 @@
     <classNode dependClassName="java.lang.ClassNotFoundException" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.sql.SQLException" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.Attribute" />
+    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.AttributeDAO" />
+    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.Customer" />
+    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.CustomerDAO" />
+    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.Person" />
+    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.PersonDAO" />
   </dependency>
   <dependency className="ro.barata.mps.boLanguage.sandbox.TestPageGenerator" file="TestPageGenerator.java">
     <classNode dependClassName="java.lang.ClassNotFoundException" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.sql.SQLException" />
-    <classNode dependClassName="java.util.List" />
-    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.Person" />
-    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.PersonDAO" />
   </dependency>
   <dependency className="ro.barata.mps.boLanguage.sandbox.TestPageServlet" file="TestPageServlet.java">
     <classNode dependClassName="java.io.IOException" />

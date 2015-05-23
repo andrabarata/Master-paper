@@ -12,16 +12,12 @@ public class NextPageGenerator {
     html += "<script src=\"general.js\"></script>";
     parameters = "";
     html += "<title";
-    html += ">";
-    html += "Hi there";
-    html += "</title>";
+    html += ">" + "Hi there" + "</title>";
     html += "</head>";
     html += "<body>";
     parameters = "";
     html += "<h1";
-    html += ">";
-    html += "This is my second play page";
-    html += "</h1>";
+    html += ">" + "This is my second play page" + "</h1>";
     html += "</body>";
     html += "</html>";
     return html;

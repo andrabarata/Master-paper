@@ -16,7 +16,7 @@ public class FileStructureClass {
     rootPath = rootPath.substring(0, rootPath.lastIndexOf("/"));
     {
       Path p = Paths.get("D:/stick/poze/090610115548.jpg");
-      String fileName = p.getFileName().toString();
+      String fileName = "poza vietii.jpg";
       InputStream input = null;
       OutputStream output = null;
 

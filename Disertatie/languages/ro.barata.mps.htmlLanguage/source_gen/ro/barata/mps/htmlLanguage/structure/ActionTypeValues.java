@@ -8,7 +8,8 @@ import jetbrains.mps.internal.collections.runtime.backports.LinkedList;
 
 public enum ActionTypeValues {
   onclick("onclick", "onclick"),
-  onchange("onchange", "onchange");
+  onchange("onchange", "onchange"),
+  onsubmit("onsubmit", "onsubmit");
 
   private String myName;
   public String getName() {
@@ -21,6 +22,7 @@ public enum ActionTypeValues {
     List<ActionTypeValues> list = ListSequence.fromList(new LinkedList<ActionTypeValues>());
     ListSequence.fromList(list).addElement(ActionTypeValues.onclick);
     ListSequence.fromList(list).addElement(ActionTypeValues.onchange);
+    ListSequence.fromList(list).addElement(ActionTypeValues.onsubmit);
     return list;
   }
   public static ActionTypeValues getDefault() {
@@ -35,6 +37,9 @@ public enum ActionTypeValues {
     }
     if (value.equals(ActionTypeValues.onchange.getValueAsString())) {
       return ActionTypeValues.onchange;
+    }
+    if (value.equals(ActionTypeValues.onsubmit.getValueAsString())) {
+      return ActionTypeValues.onsubmit;
     }
     return ActionTypeValues.getDefault();
   }

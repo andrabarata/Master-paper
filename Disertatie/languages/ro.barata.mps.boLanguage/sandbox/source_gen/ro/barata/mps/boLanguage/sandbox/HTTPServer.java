@@ -8,7 +8,6 @@ import org.eclipse.jetty.server.handler.ResourceHandler;
 import org.eclipse.jetty.servlet.ServletContextHandler;
 import org.eclipse.jetty.rewrite.handler.RewriteHandler;
 import org.eclipse.jetty.servlet.ServletHolder;
-import org.eclipse.jetty.rewrite.handler.RedirectRegexRule;
 import org.eclipse.jetty.server.Handler;
 import org.eclipse.jetty.server.handler.HandlerList;
 
@@ -34,16 +33,6 @@ public class HTTPServer {
     RewriteHandler rwHandler = new RewriteHandler();
     context.addServlet(new ServletHolder(new TestPageServlet()), "/" + "TestPage");
     context.addServlet(new ServletHolder(new NextPageServlet()), "/" + "nextPage");
-    context.addServlet(new ServletHolder(new IndexServlet()), "/" + "Index");
-    {
-      rwHandler.setRewriteRequestURI(true);
-      rwHandler.setRewritePathInfo(true);
-      rwHandler.setOriginalPathAttribute("/");
-      RedirectRegexRule rule = new RedirectRegexRule();
-      rule.setRegex("/");
-      rule.setReplacement("Index");
-      rwHandler.addRule(rule);
-    }
 
     Handler[] handlers = new Handler[]{rwHandler, context};
     HandlerList list = new HandlerList();

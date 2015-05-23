@@ -15,23 +15,17 @@
   <concept fqn="jetbrains.mps.baseLanguage.structure.TryStatement" />
   <concept fqn="jetbrains.mps.baseLanguage.structure.WhileStatement" />
   <root>
-    <file name="IndexGenerator.java">
-      <unit at="7,0,27,0" name="ro.barata.mps.boLanguage.sandbox.IndexGenerator" />
-    </file>
-    <file name="IndexServlet.java">
-      <unit at="12,0,46,0" name="ro.barata.mps.boLanguage.sandbox.IndexServlet" />
-    </file>
     <file name="NextPageGenerator.java">
-      <unit at="7,0,31,0" name="ro.barata.mps.boLanguage.sandbox.NextPageGenerator" />
+      <unit at="7,0,27,0" name="ro.barata.mps.boLanguage.sandbox.NextPageGenerator" />
     </file>
     <file name="NextPageServlet.java">
       <unit at="12,0,46,0" name="ro.barata.mps.boLanguage.sandbox.NextPageServlet" />
     </file>
     <file name="StructureGenerator.java">
-      <unit at="7,0,38,0" name="ro.barata.mps.boLanguage.sandbox.StructureGenerator" />
+      <unit at="8,0,183,0" name="ro.barata.mps.boLanguage.sandbox.StructureGenerator" />
     </file>
     <file name="TestPageGenerator.java">
-      <unit at="8,0,43,0" name="ro.barata.mps.boLanguage.sandbox.TestPageGenerator" />
+      <unit at="7,0,26,0" name="ro.barata.mps.boLanguage.sandbox.TestPageGenerator" />
     </file>
     <file name="TestPageServlet.java">
       <unit at="12,0,46,0" name="ro.barata.mps.boLanguage.sandbox.TestPageServlet" />
@@ -1681,8 +1675,8 @@
       <node id="4950668675312295267" at="14,42,15,152" concept="7" />
       <node id="4950668675312295267" at="15,152,16,64" concept="2" />
       <node id="4950668675312295295" at="17,5,18,59" concept="7" />
-      <node id="4950668675312295295" at="18,59,19,51" concept="7" />
-      <node id="4950668675312295295" at="19,51,20,31" concept="7" />
+      <node id="4950668675312295295" at="18,59,19,42" concept="7" />
+      <node id="4950668675312295295" at="19,42,20,31" concept="7" />
       <node id="4950668675312295295" at="20,31,21,33" concept="7" />
       <node id="4950668675312295295" at="21,33,22,0" concept="9" />
       <node id="4950668675312295295" at="23,11,24,53" concept="7" />
@@ -1752,54 +1746,40 @@
   </root>
   <root nodeRef="r:ca2f6163-f731-4984-b28c-c8e4f51179c6(ro.barata.mps.boLanguage.sandbox)/5515250482370694470">
     <file name="HTTPServer.java">
-      <node id="5515250482370694470" at="16,59,17,33" concept="7" />
-      <node id="5515250482370694470" at="17,33,18,68" concept="7" />
-      <node id="5515250482370694470" at="18,68,19,35" concept="2" />
-      <node id="5515250482370694470" at="19,35,20,28" concept="2" />
-      <node id="5515250482370694470" at="20,28,21,35" concept="2" />
-      <node id="5515250482370694470" at="21,35,22,0" concept="9" />
-      <node id="5515250482370694470" at="22,0,23,132" concept="7" />
-      <node id="5515250482370694470" at="23,132,24,52" concept="2" />
-      <node id="5515250482370694470" at="24,52,25,0" concept="9" />
-      <node id="5515250482370694470" at="25,0,26,52" concept="7" />
-      <node id="5515250482370694470" at="26,52,27,34" concept="2" />
-      <node id="5515250482370694470" at="27,34,28,40" concept="2" />
-      <node id="5515250482370694470" at="28,40,29,0" concept="9" />
-      <node id="5515250482370694470" at="29,0,30,94" concept="7" />
-      <node id="5515250482370694470" at="30,94,31,32" concept="2" />
-      <node id="5515250482370694470" at="31,32,32,32" concept="2" />
-      <node id="5515250482370694470" at="32,32,33,0" concept="9" />
-      <node id="5515250482370694470" at="33,0,34,52" concept="7" />
-      <node id="5515250482370694470" at="34,52,35,83" concept="0" />
-      <node id="5515250482370694470" at="34,52,35,83" concept="2" />
-      <node id="5515250482370694470" at="35,83,36,83" concept="0" />
-      <node id="5515250482370694470" at="35,83,36,83" concept="2" />
-      <node id="5515250482370694470" at="36,83,37,77" concept="2" />
-      <node id="5515250482370694470" at="38,5,39,43" concept="2" />
-      <node id="5515250482370694470" at="39,43,40,41" concept="2" />
-      <node id="5515250482370694470" at="40,41,41,46" concept="2" />
-      <node id="5515250482370694470" at="41,46,42,55" concept="7" />
-      <node id="5515250482370694470" at="42,55,43,25" concept="2" />
-      <node id="5515250482370694470" at="43,25,44,35" concept="2" />
-      <node id="5515250482370694470" at="44,35,45,30" concept="2" />
-      <node id="5515250482370694470" at="46,5,47,0" concept="9" />
-      <node id="5515250482370694470" at="47,0,48,59" concept="7" />
-      <node id="5515250482370694470" at="48,59,49,41" concept="7" />
-      <node id="5515250482370694470" at="49,41,50,31" concept="2" />
-      <node id="5515250482370694470" at="50,31,51,28" concept="2" />
-      <node id="5515250482370694470" at="51,28,52,19" concept="2" />
-      <node id="5515250482370694470" at="52,19,53,18" concept="2" />
-      <node id="5515250482370694470" at="53,18,54,0" concept="9" />
-      <node id="5515250482370694470" at="37,77,46,5" concept="0" />
-      <node id="5515250482370694470" at="36,83,46,5" concept="0" />
-      <node id="5515250482370694470" at="16,0,56,0" concept="10" trace="main#([Ljava/lang/String;)V" />
-      <scope id="5515250482370694470" at="34,52,35,83" />
-      <scope id="5515250482370694470" at="35,83,36,83" />
-      <scope id="5515250482370694470" at="38,5,45,30">
-        <var name="rule" id="5515250482370694470" />
-      </scope>
-      <scope id="5515250482370694470" at="36,83,46,5" />
-      <scope id="5515250482370694470" at="16,59,54,0">
+      <node id="5515250482370694470" at="15,59,16,33" concept="7" />
+      <node id="5515250482370694470" at="16,33,17,68" concept="7" />
+      <node id="5515250482370694470" at="17,68,18,35" concept="2" />
+      <node id="5515250482370694470" at="18,35,19,28" concept="2" />
+      <node id="5515250482370694470" at="19,28,20,35" concept="2" />
+      <node id="5515250482370694470" at="20,35,21,0" concept="9" />
+      <node id="5515250482370694470" at="21,0,22,132" concept="7" />
+      <node id="5515250482370694470" at="22,132,23,52" concept="2" />
+      <node id="5515250482370694470" at="23,52,24,0" concept="9" />
+      <node id="5515250482370694470" at="24,0,25,52" concept="7" />
+      <node id="5515250482370694470" at="25,52,26,34" concept="2" />
+      <node id="5515250482370694470" at="26,34,27,40" concept="2" />
+      <node id="5515250482370694470" at="27,40,28,0" concept="9" />
+      <node id="5515250482370694470" at="28,0,29,94" concept="7" />
+      <node id="5515250482370694470" at="29,94,30,32" concept="2" />
+      <node id="5515250482370694470" at="30,32,31,32" concept="2" />
+      <node id="5515250482370694470" at="31,32,32,0" concept="9" />
+      <node id="5515250482370694470" at="32,0,33,52" concept="7" />
+      <node id="5515250482370694470" at="33,52,34,83" concept="0" />
+      <node id="5515250482370694470" at="33,52,34,83" concept="2" />
+      <node id="5515250482370694470" at="34,83,35,83" concept="0" />
+      <node id="5515250482370694470" at="34,83,35,83" concept="2" />
+      <node id="5515250482370694470" at="35,83,36,0" concept="9" />
+      <node id="5515250482370694470" at="36,0,37,59" concept="7" />
+      <node id="5515250482370694470" at="37,59,38,41" concept="7" />
+      <node id="5515250482370694470" at="38,41,39,31" concept="2" />
+      <node id="5515250482370694470" at="39,31,40,28" concept="2" />
+      <node id="5515250482370694470" at="40,28,41,19" concept="2" />
+      <node id="5515250482370694470" at="41,19,42,18" concept="2" />
+      <node id="5515250482370694470" at="42,18,43,0" concept="9" />
+      <node id="5515250482370694470" at="15,0,45,0" concept="10" trace="main#([Ljava/lang/String;)V" />
+      <scope id="5515250482370694470" at="33,52,34,83" />
+      <scope id="5515250482370694470" at="34,83,35,83" />
+      <scope id="5515250482370694470" at="15,59,43,0">
         <var name="connector" id="5515250482370694470" />
         <var name="context" id="5515250482370694470" />
         <var name="handler" id="5515250482370694470" />
@@ -1809,10 +1789,10 @@
         <var name="rwHandler" id="5515250482370694470" />
         <var name="server" id="5515250482370694470" />
       </scope>
-      <scope id="5515250482370694470" at="16,0,56,0">
+      <scope id="5515250482370694470" at="15,0,45,0">
         <var name="args" id="5515250482370694470" />
       </scope>
-      <unit id="5515250482370694470" at="15,0,57,0" name="ro.barata.mps.boLanguage.sandbox.HTTPServer" />
+      <unit id="5515250482370694470" at="14,0,46,0" name="ro.barata.mps.boLanguage.sandbox.HTTPServer" />
     </file>
   </root>
 </debug-info>

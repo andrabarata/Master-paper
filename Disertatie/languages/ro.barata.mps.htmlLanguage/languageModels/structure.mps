@@ -311,6 +311,9 @@
     <property role="34LRSv" value="input" />
     <property role="3GE5qa" value="html.input" />
     <ref role="1TJDcQ" node="5a6Q6gbwnnj" resolve="HTMLValueCommand" />
+    <node concept="PrWs8" id="49ipr3dOh3S" role="PzmwI">
+      <ref role="PrY4T" node="49ipr3dOgJZ" resolve="ValueIncludedHTML" />
+    </node>
   </node>
   <node concept="1TIwiD" id="4LZaFkzCGl1">
     <property role="TrG5h" value="Attribute" />
@@ -390,7 +393,7 @@
   <node concept="1TIwiD" id="4LZaFkzTnZs">
     <property role="TrG5h" value="ActionType" />
     <property role="3GE5qa" value="html.actions" />
-    <property role="34LRSv" value="action" />
+    <property role="34LRSv" value="onAction" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyi" id="4LZaFkzTo1$" role="1TKVEl">
       <property role="TrG5h" value="actionType" />
@@ -423,6 +426,10 @@
     <node concept="M4N5e" id="4LZaFkzTo1u" role="M5hS2">
       <property role="1uS6qv" value="onchange" />
       <property role="1uS6qo" value="onchange" />
+    </node>
+    <node concept="M4N5e" id="5EdacSEI5Zr" role="M5hS2">
+      <property role="1uS6qv" value="onsubmit" />
+      <property role="1uS6qo" value="onsubmit" />
     </node>
   </node>
   <node concept="PlHQZ" id="41TyEbjfrVL">
@@ -584,6 +591,9 @@
     <property role="TrG5h" value="AElement" />
     <property role="34LRSv" value="a" />
     <ref role="1TJDcQ" node="5a6Q6gbwnnj" resolve="HTMLValueCommand" />
+    <node concept="PrWs8" id="49ipr3dOhJF" role="PzmwI">
+      <ref role="PrY4T" node="49ipr3dOgJZ" resolve="ValueIncludedHTML" />
+    </node>
   </node>
   <node concept="1TIwiD" id="3w$KCyM1eVy">
     <property role="3GE5qa" value="html.commands.model.attributes" />
@@ -752,11 +762,8 @@
     <property role="TrG5h" value="ImageElement" />
     <property role="34LRSv" value="img" />
     <ref role="1TJDcQ" node="5a6Q6gbwnnj" resolve="HTMLValueCommand" />
-    <node concept="1TJgyj" id="5EdacSEG0SH" role="1TKVEi">
-      <property role="20lmBu" value="aggregation" />
-      <property role="20kJfa" value="src" />
-      <property role="20lbJX" value="1" />
-      <ref role="20lvS9" node="5EdacSEG0RF" resolve="ImageSrc" />
+    <node concept="PrWs8" id="49ipr3dOkfW" role="PzmwI">
+      <ref role="PrY4T" node="49ipr3dOgJZ" resolve="ValueIncludedHTML" />
     </node>
   </node>
   <node concept="1TIwiD" id="5EdacSEAVjx">
@@ -764,16 +771,6 @@
     <property role="34LRSv" value="form" />
     <property role="3GE5qa" value="html.container.form" />
     <ref role="1TJDcQ" node="5EdacSEwA7P" resolve="MixedHTMLCommand" />
-    <node concept="1TJgyj" id="5EdacSEAWrW" role="1TKVEi">
-      <property role="20lmBu" value="aggregation" />
-      <property role="20kJfa" value="action" />
-      <property role="20lbJX" value="1" />
-      <ref role="20lvS9" node="3w$KCyM1_zY" resolve="URLValue" />
-    </node>
-    <node concept="1TJgyi" id="5EdacSEAWrQ" role="1TKVEl">
-      <property role="TrG5h" value="method" />
-      <ref role="AX2Wp" node="5EdacSEAWrL" resolve="MethodParameter" />
-    </node>
   </node>
   <node concept="1TIwiD" id="5EdacSEAVm6">
     <property role="TrG5h" value="H2Element" />
@@ -874,6 +871,53 @@
       <property role="20kJfa" value="src" />
       <property role="20lbJX" value="1" />
       <ref role="20lvS9" to="45cg:4iOjISKCCw1" resolve="File" />
+    </node>
+  </node>
+  <node concept="PlHQZ" id="49ipr3dOgJZ">
+    <property role="3GE5qa" value="html.commands.model" />
+    <property role="TrG5h" value="ValueIncludedHTML" />
+  </node>
+  <node concept="1TIwiD" id="49ipr3dQrnF">
+    <property role="3GE5qa" value="html.commands.model.attributes" />
+    <property role="TrG5h" value="SRCAttribute" />
+    <property role="34LRSv" value="src" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="49ipr3dQrAQ" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="src" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="5EdacSEG0RF" resolve="ImageSrc" />
+    </node>
+    <node concept="PrWs8" id="49ipr3dQrnG" role="PzmwI">
+      <ref role="PrY4T" node="7KwyEUhFHXY" resolve="IAttribute" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="49ipr3dQU52">
+    <property role="3GE5qa" value="html.commands.model.attributes" />
+    <property role="TrG5h" value="MethodAttribute" />
+    <property role="34LRSv" value="method" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyi" id="49ipr3dQU53" role="1TKVEl">
+      <property role="TrG5h" value="method" />
+      <ref role="AX2Wp" node="5EdacSEAWrL" resolve="MethodParameter" />
+    </node>
+    <node concept="PrWs8" id="49ipr3dQU7V" role="PzmwI">
+      <ref role="PrY4T" node="7KwyEUhFHXY" resolve="IAttribute" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="49ipr3dQUD3">
+    <property role="3GE5qa" value="html.commands.model.attributes" />
+    <property role="TrG5h" value="ActionAttribute" />
+    <property role="34LRSv" value="action" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="49ipr3dQUDb" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="action" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="3w$KCyM1_zY" resolve="URLValue" />
+    </node>
+    <node concept="PrWs8" id="49ipr3dQUD4" role="PzmwI">
+      <ref role="PrY4T" node="7KwyEUhFHXY" resolve="IAttribute" />
     </node>
   </node>
 </model>

@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dependenciesRoot>
+  <dependency className="ro.barata.mps.htmlLanguage.constraints.ActionAttribute_Constraints" file="ActionAttribute_Constraints.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.IOperationContext" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNodePointer" />
+    <classNode dependClassName="jetbrains.mps.smodel.adapter.ids.MetaIdFactory" />
+    <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />
+    <classNode dependClassName="jetbrains.mps.smodel.runtime.CheckingNodeContext" />
+    <classNode dependClassName="org.jetbrains.annotations.Nullable" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.base.BaseConstraintsDescriptor" />
+  </dependency>
   <dependency className="ro.barata.mps.htmlLanguage.constraints.ActionType_Constraints" file="ActionType_Constraints.java">
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="java.util.List" />
@@ -23,17 +35,21 @@
     <classNode dependClassName="jetbrains.mps.smodel.adapter.ids.SConceptId" />
     <classNode dependClassName="jetbrains.mps.smodel.runtime.ConstraintsDescriptor" />
     <classNode dependClassName="jetbrains.mps.smodel.runtime.base.BaseConstraintsDescriptor" />
+    <classNode dependClassName="ro.barata.mps.htmlLanguage.constraints.ActionAttribute_Constraints" />
     <classNode dependClassName="ro.barata.mps.htmlLanguage.constraints.ActionType_Constraints" />
     <classNode dependClassName="ro.barata.mps.htmlLanguage.constraints.ContainerCommand_Constraints" />
     <classNode dependClassName="ro.barata.mps.htmlLanguage.constraints.CounterIdReference_Constraints" />
+    <classNode dependClassName="ro.barata.mps.htmlLanguage.constraints.HREFAttribute_Constraints" />
     <classNode dependClassName="ro.barata.mps.htmlLanguage.constraints.HTMLTileReference_Constraints" />
     <classNode dependClassName="ro.barata.mps.htmlLanguage.constraints.HTMLValueCommand_Constraints" />
     <classNode dependClassName="ro.barata.mps.htmlLanguage.constraints.IdAttribute_Constraints" />
     <classNode dependClassName="ro.barata.mps.htmlLanguage.constraints.LiElement_Constraints" />
+    <classNode dependClassName="ro.barata.mps.htmlLanguage.constraints.MethodAttribute_Constraints" />
     <classNode dependClassName="ro.barata.mps.htmlLanguage.constraints.MixedHTMLCommand_Constraints" />
     <classNode dependClassName="ro.barata.mps.htmlLanguage.constraints.NameAttribute_Constraints" />
     <classNode dependClassName="ro.barata.mps.htmlLanguage.constraints.OperationCommand_Constraints" />
     <classNode dependClassName="ro.barata.mps.htmlLanguage.constraints.OptionElement_Constraints" />
+    <classNode dependClassName="ro.barata.mps.htmlLanguage.constraints.SRCAttribute_Constraints" />
     <classNode dependClassName="ro.barata.mps.htmlLanguage.constraints.TDElement_Constraints" />
     <classNode dependClassName="ro.barata.mps.htmlLanguage.constraints.THElement_Constraints" />
     <classNode dependClassName="ro.barata.mps.htmlLanguage.constraints.TRElement_Constraints" />
@@ -55,6 +71,18 @@
     <classNode extendsClassName="jetbrains.mps.smodel.runtime.base.BaseConstraintsDescriptor" />
   </dependency>
   <dependency className="ro.barata.mps.htmlLanguage.constraints.CounterIdReference_Constraints" file="CounterIdReference_Constraints.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.IOperationContext" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNodePointer" />
+    <classNode dependClassName="jetbrains.mps.smodel.adapter.ids.MetaIdFactory" />
+    <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />
+    <classNode dependClassName="jetbrains.mps.smodel.runtime.CheckingNodeContext" />
+    <classNode dependClassName="org.jetbrains.annotations.Nullable" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.base.BaseConstraintsDescriptor" />
+  </dependency>
+  <dependency className="ro.barata.mps.htmlLanguage.constraints.HREFAttribute_Constraints" file="HREFAttribute_Constraints.java">
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
     <classNode dependClassName="jetbrains.mps.smodel.IOperationContext" />
@@ -105,6 +133,18 @@
     <classNode extendsClassName="jetbrains.mps.smodel.runtime.base.BaseConstraintsDescriptor" />
   </dependency>
   <dependency className="ro.barata.mps.htmlLanguage.constraints.LiElement_Constraints" file="LiElement_Constraints.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.IOperationContext" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNodePointer" />
+    <classNode dependClassName="jetbrains.mps.smodel.adapter.ids.MetaIdFactory" />
+    <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />
+    <classNode dependClassName="jetbrains.mps.smodel.runtime.CheckingNodeContext" />
+    <classNode dependClassName="org.jetbrains.annotations.Nullable" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.base.BaseConstraintsDescriptor" />
+  </dependency>
+  <dependency className="ro.barata.mps.htmlLanguage.constraints.MethodAttribute_Constraints" file="MethodAttribute_Constraints.java">
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
     <classNode dependClassName="jetbrains.mps.smodel.IOperationContext" />
@@ -171,6 +211,18 @@
     <classNode extendsClassName="jetbrains.mps.smodel.runtime.base.BaseConstraintsDescriptor" />
   </dependency>
   <dependency className="ro.barata.mps.htmlLanguage.constraints.OptionElement_Constraints" file="OptionElement_Constraints.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.IOperationContext" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNodePointer" />
+    <classNode dependClassName="jetbrains.mps.smodel.adapter.ids.MetaIdFactory" />
+    <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />
+    <classNode dependClassName="jetbrains.mps.smodel.runtime.CheckingNodeContext" />
+    <classNode dependClassName="org.jetbrains.annotations.Nullable" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.base.BaseConstraintsDescriptor" />
+  </dependency>
+  <dependency className="ro.barata.mps.htmlLanguage.constraints.SRCAttribute_Constraints" file="SRCAttribute_Constraints.java">
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
     <classNode dependClassName="jetbrains.mps.smodel.IOperationContext" />

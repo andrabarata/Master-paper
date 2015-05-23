@@ -12,40 +12,48 @@ public class ConstraintsAspectDescriptor implements jetbrains.mps.smodel.runtime
   }
   public ConstraintsDescriptor getDescriptor(String fqName) {
     switch (Arrays.binarySearch(stringSwitchCases_2qnle6_a0a0b, fqName)) {
-      case 9:
-        return new OperationCommand_Constraints();
-      case 14:
-        return new TagValueReference_Constraints();
-      case 5:
-        return new IdAttribute_Constraints();
-      case 8:
-        return new NameAttribute_Constraints();
-      case 0:
-        return new ActionType_Constraints();
-      case 11:
-        return new TDElement_Constraints();
       case 12:
-        return new THElement_Constraints();
-      case 13:
-        return new TRElement_Constraints();
-      case 2:
-        return new CounterIdReference_Constraints();
-      case 15:
-        return new TitleElement_Constraints();
-      case 4:
-        return new HTMLValueCommand_Constraints();
-      case 16:
-        return new UserValue_Constraints();
-      case 3:
-        return new HTMLTileReference_Constraints();
-      case 1:
-        return new ContainerCommand_Constraints();
-      case 6:
-        return new LiElement_Constraints();
-      case 10:
-        return new OptionElement_Constraints();
+        return new OperationCommand_Constraints();
+      case 18:
+        return new TagValueReference_Constraints();
       case 7:
+        return new IdAttribute_Constraints();
+      case 11:
+        return new NameAttribute_Constraints();
+      case 1:
+        return new ActionType_Constraints();
+      case 15:
+        return new TDElement_Constraints();
+      case 16:
+        return new THElement_Constraints();
+      case 17:
+        return new TRElement_Constraints();
+      case 3:
+        return new CounterIdReference_Constraints();
+      case 19:
+        return new TitleElement_Constraints();
+      case 6:
+        return new HTMLValueCommand_Constraints();
+      case 20:
+        return new UserValue_Constraints();
+      case 5:
+        return new HTMLTileReference_Constraints();
+      case 2:
+        return new ContainerCommand_Constraints();
+      case 8:
+        return new LiElement_Constraints();
+      case 13:
+        return new OptionElement_Constraints();
+      case 10:
         return new MixedHTMLCommand_Constraints();
+      case 4:
+        return new HREFAttribute_Constraints();
+      case 14:
+        return new SRCAttribute_Constraints();
+      case 9:
+        return new MethodAttribute_Constraints();
+      case 0:
+        return new ActionAttribute_Constraints();
       default:
         return new BaseConstraintsDescriptor(fqName);
     }
@@ -103,7 +111,19 @@ public class ConstraintsAspectDescriptor implements jetbrains.mps.smodel.runtime
     if (id == 0x5a8d28ce2a8261f5L) {
       return new MixedHTMLCommand_Constraints();
     }
+    if (id == 0x3824c288b204eee2L) {
+      return new HREFAttribute_Constraints();
+    }
+    if (id == 0x425265b0cdd9b5ebL) {
+      return new SRCAttribute_Constraints();
+    }
+    if (id == 0x425265b0cddba142L) {
+      return new MethodAttribute_Constraints();
+    }
+    if (id == 0x425265b0cddbaa43L) {
+      return new ActionAttribute_Constraints();
+    }
     return new BaseConstraintsDescriptor(conceptId);
   }
-  private static String[] stringSwitchCases_2qnle6_a0a0b = new String[]{"ro.barata.mps.htmlLanguage.structure.ActionType", "ro.barata.mps.htmlLanguage.structure.ContainerCommand", "ro.barata.mps.htmlLanguage.structure.CounterIdReference", "ro.barata.mps.htmlLanguage.structure.HTMLTileReference", "ro.barata.mps.htmlLanguage.structure.HTMLValueCommand", "ro.barata.mps.htmlLanguage.structure.IdAttribute", "ro.barata.mps.htmlLanguage.structure.LiElement", "ro.barata.mps.htmlLanguage.structure.MixedHTMLCommand", "ro.barata.mps.htmlLanguage.structure.NameAttribute", "ro.barata.mps.htmlLanguage.structure.OperationCommand", "ro.barata.mps.htmlLanguage.structure.OptionElement", "ro.barata.mps.htmlLanguage.structure.TDElement", "ro.barata.mps.htmlLanguage.structure.THElement", "ro.barata.mps.htmlLanguage.structure.TRElement", "ro.barata.mps.htmlLanguage.structure.TagValueReference", "ro.barata.mps.htmlLanguage.structure.TitleElement", "ro.barata.mps.htmlLanguage.structure.UserValue"};
+  private static String[] stringSwitchCases_2qnle6_a0a0b = new String[]{"ro.barata.mps.htmlLanguage.structure.ActionAttribute", "ro.barata.mps.htmlLanguage.structure.ActionType", "ro.barata.mps.htmlLanguage.structure.ContainerCommand", "ro.barata.mps.htmlLanguage.structure.CounterIdReference", "ro.barata.mps.htmlLanguage.structure.HREFAttribute", "ro.barata.mps.htmlLanguage.structure.HTMLTileReference", "ro.barata.mps.htmlLanguage.structure.HTMLValueCommand", "ro.barata.mps.htmlLanguage.structure.IdAttribute", "ro.barata.mps.htmlLanguage.structure.LiElement", "ro.barata.mps.htmlLanguage.structure.MethodAttribute", "ro.barata.mps.htmlLanguage.structure.MixedHTMLCommand", "ro.barata.mps.htmlLanguage.structure.NameAttribute", "ro.barata.mps.htmlLanguage.structure.OperationCommand", "ro.barata.mps.htmlLanguage.structure.OptionElement", "ro.barata.mps.htmlLanguage.structure.SRCAttribute", "ro.barata.mps.htmlLanguage.structure.TDElement", "ro.barata.mps.htmlLanguage.structure.THElement", "ro.barata.mps.htmlLanguage.structure.TRElement", "ro.barata.mps.htmlLanguage.structure.TagValueReference", "ro.barata.mps.htmlLanguage.structure.TitleElement", "ro.barata.mps.htmlLanguage.structure.UserValue"};
 }

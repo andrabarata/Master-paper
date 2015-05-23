@@ -38,6 +38,7 @@ public class HTMLTile_Editor extends DefaultNodeEditor {
     editorCell.addEditorCell(this.createProperty_3srumh_b0(editorContext, node));
     editorCell.addEditorCell(this.createConstant_3srumh_c0(editorContext, node));
     editorCell.addEditorCell(this.createRefNodeList_3srumh_d0(editorContext, node));
+    editorCell.addEditorCell(this.createConstant_3srumh_e0(editorContext, node));
     return editorCell;
   }
   private EditorCell createConstant_3srumh_a0(EditorContext editorContext, SNode node) {
@@ -84,6 +85,7 @@ public class HTMLTile_Editor extends DefaultNodeEditor {
     Style style = new StyleImpl();
     style.set(StyleAttributes.SELECTABLE, 0, false);
     style.set(StyleAttributes.INDENT_LAYOUT_NEW_LINE, 0, true);
+    style.set(StyleAttributes.INDENT_LAYOUT_INDENT, 0, true);
     editorCell.getStyle().putAll(style);
     editorCell.setRole(handler.getElementRole());
     return editorCell;
@@ -131,5 +133,14 @@ public class HTMLTile_Editor extends DefaultNodeEditor {
       editorCell.setDefaultText("");
       return editorCell;
     }
+  }
+  private EditorCell createConstant_3srumh_e0(EditorContext editorContext, SNode node) {
+    EditorCell_Constant editorCell = new EditorCell_Constant(editorContext, node, "end");
+    editorCell.setCellId("Constant_3srumh_e0");
+    Style style = new StyleImpl();
+    style.set(StyleAttributes.TEXT_COLOR, 0, StyleRegistry.getInstance().getSimpleColor(MPSColors.DARK_GREEN));
+    editorCell.getStyle().putAll(style);
+    editorCell.setDefaultText("");
+    return editorCell;
   }
 }

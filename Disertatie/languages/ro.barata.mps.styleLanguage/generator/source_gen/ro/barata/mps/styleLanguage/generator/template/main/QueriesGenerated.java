@@ -16,6 +16,9 @@ public class QueriesGenerated {
   public static Object propertyMacro_GetPropertyValue_4950668675312938813(final PropertyMacroContext _context) {
     return File_Behavior.call_escapeSlash_4950668675312847128(_context.getNode());
   }
+  public static Object propertyMacro_GetPropertyValue_2781898508936426760(final PropertyMacroContext _context) {
+    return File_Behavior.call_getFileName_2781898508936378909(_context.getNode());
+  }
   public static Object propertyMacro_GetPropertyValue_4950668675312938845(final PropertyMacroContext _context) {
     return File_Behavior.call_escapeSlash_4950668675312847128(_context.getNode());
   }
