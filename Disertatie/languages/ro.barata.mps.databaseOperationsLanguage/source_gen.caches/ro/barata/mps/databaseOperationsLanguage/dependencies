@@ -8,6 +8,7 @@
     <classNode dependClassName="java.util.UUID" />
     <classNode dependClassName="jetbrains.mps.generator.runtime.TemplateModule" />
     <classNode dependClassName="jetbrains.mps.generator.runtime.TemplateUtil" />
+    <classNode dependClassName="jetbrains.mps.lang.typesystem.runtime.IHelginsDescriptor" />
     <classNode dependClassName="jetbrains.mps.openapi.editor.descriptor.EditorAspectDescriptor" />
     <classNode dependClassName="jetbrains.mps.smodel.adapter.ids.SLanguageId" />
     <classNode dependClassName="jetbrains.mps.smodel.runtime.BehaviorAspectDescriptor" />
@@ -18,6 +19,7 @@
     <classNode dependClassName="ro.barata.mps.databaseOperationsLanguage.constraints.ConstraintsAspectDescriptor" />
     <classNode dependClassName="ro.barata.mps.databaseOperationsLanguage.editor.EditorAspectDescriptorImpl" />
     <classNode dependClassName="ro.barata.mps.databaseOperationsLanguage.structure.StructureAspectDescriptor" />
+    <classNode dependClassName="ro.barata.mps.databaseOperationsLanguage.typesystem.TypesystemDescriptor" />
     <classNode extendsClassName="jetbrains.mps.smodel.language.LanguageRuntime" />
   </dependency>
 </dependenciesRoot>

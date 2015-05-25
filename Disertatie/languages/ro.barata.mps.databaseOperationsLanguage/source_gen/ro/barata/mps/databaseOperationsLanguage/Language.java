@@ -14,6 +14,8 @@ import jetbrains.mps.smodel.runtime.ConstraintsAspectDescriptor;
 import jetbrains.mps.openapi.editor.descriptor.EditorAspectDescriptor;
 import ro.barata.mps.databaseOperationsLanguage.editor.EditorAspectDescriptorImpl;
 import jetbrains.mps.smodel.runtime.StructureAspectDescriptor;
+import jetbrains.mps.lang.typesystem.runtime.IHelginsDescriptor;
+import ro.barata.mps.databaseOperationsLanguage.typesystem.TypesystemDescriptor;
 
 public class Language extends LanguageRuntime {
   public static String MODULE_REF = "58b9e0aa-6663-4086-8f84-dfaa697f9989(ro.barata.mps.databaseOperationsLanguage)";
@@ -53,6 +55,9 @@ public class Language extends LanguageRuntime {
     }
     if (descriptorClass == StructureAspectDescriptor.class) {
       return (T) new ro.barata.mps.databaseOperationsLanguage.structure.StructureAspectDescriptor();
+    }
+    if (descriptorClass == IHelginsDescriptor.class) {
+      return (T) new TypesystemDescriptor();
     }
     return super.createAspectDescriptor(descriptorClass);
   }

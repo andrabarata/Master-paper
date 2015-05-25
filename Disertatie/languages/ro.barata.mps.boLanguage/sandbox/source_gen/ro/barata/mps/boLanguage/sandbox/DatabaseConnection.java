@@ -6,7 +6,7 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.DriverManager;
 
-public class DatabaseConnector {
+public class DatabaseConnection {
   public static Connection getConnection() throws SQLException, ClassNotFoundException {
 
     try {
@@ -27,16 +27,4 @@ public class DatabaseConnector {
     return con;
   }
 
-  public static void main(String[] args) {
-    try {
-      Connection con = getConnection();
-      if (con != null) {
-        System.out.println("I made it");
-      } else {
-        System.out.println("Fuck");
-      }
-    } catch (Exception e) {
-      e.printStackTrace();
-    }
-  }
 }

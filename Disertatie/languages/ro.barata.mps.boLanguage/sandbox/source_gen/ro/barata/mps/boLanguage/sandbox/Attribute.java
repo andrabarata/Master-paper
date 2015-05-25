@@ -7,7 +7,7 @@ public class Attribute {
   private Integer id;
   private String attributeName;
   private String attributeValue;
-
+  private Product parentProduct;
   public void setId(Integer attribute) {
     this.id = attribute;
   }
@@ -17,7 +17,6 @@ public class Attribute {
   public void setAttributeValue(String attribute) {
     this.attributeValue = attribute;
   }
-
   public Integer getId() {
     return this.id;
   }
@@ -27,7 +26,12 @@ public class Attribute {
   public String getAttributeValue() {
     return this.attributeValue;
   }
-
+  public void setParentProduct(Product entity) {
+    this.parentProduct = entity;
+  }
+  public Product getParentProduct() {
+    return this.parentProduct;
+  }
   public Attribute() {
   }
 }

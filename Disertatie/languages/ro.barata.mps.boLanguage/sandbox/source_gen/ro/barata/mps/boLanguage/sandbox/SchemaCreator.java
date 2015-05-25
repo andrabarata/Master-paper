@@ -16,11 +16,10 @@ public class SchemaCreator {
     primaryKey += "id";
     primaryKey += ")";
     sql = "create table " + "Shop" + "(";
-    sql += "id" + " " + "integer";
-    sql += ",";
-    sql += "name" + " " + "varchar(256)";
-    if (primaryKey.length() > 0) {
-      sql += ",";
+    sql += "id" + " " + "integer" + ",";
+    sql += "name" + " " + "varchar(256)" + ",";
+    if (primaryKey.length() == 0) {
+      sql = sql.substring(0, sql.length() - 1);
     }
     sql += primaryKey;
     sql += ")";
@@ -32,11 +31,12 @@ public class SchemaCreator {
     primaryKey += "id";
     primaryKey += ")";
     sql = "create table " + "Category" + "(";
-    sql += "id" + " " + "integer";
-    sql += ",";
-    sql += "name" + " " + "varchar(256)";
-    if (primaryKey.length() > 0) {
-      sql += ",";
+    sql += "id" + " " + "integer" + ",";
+    sql += "name" + " " + "varchar(256)" + ",";
+    sql += "shopId" + " " + "integer" + ",";
+    sql += "subCategoryId" + " " + "integer" + ",";
+    if (primaryKey.length() == 0) {
+      sql = sql.substring(0, sql.length() - 1);
     }
     sql += primaryKey;
     sql += ")";
@@ -48,13 +48,11 @@ public class SchemaCreator {
     primaryKey += "id";
     primaryKey += ")";
     sql = "create table " + "Product" + "(";
-    sql += "id" + " " + "integer";
-    sql += ",";
-    sql += "name" + " " + "varchar(256)";
-    sql += ",";
-    sql += "categoryId" + " " + "integer";
-    if (primaryKey.length() > 0) {
-      sql += ",";
+    sql += "id" + " " + "integer" + ",";
+    sql += "name" + " " + "varchar(256)" + ",";
+    sql += "categoryId" + " " + "integer" + ",";
+    if (primaryKey.length() == 0) {
+      sql = sql.substring(0, sql.length() - 1);
     }
     sql += primaryKey;
     sql += ")";
@@ -66,15 +64,12 @@ public class SchemaCreator {
     primaryKey += "id";
     primaryKey += ")";
     sql = "create table " + "Attribute" + "(";
-    sql += "id" + " " + "integer";
-    sql += ",";
-    sql += "attributeName" + " " + "varchar(256)";
-    sql += ",";
-    sql += "attributeValue" + " " + "varchar(256)";
-    sql += ",";
-    sql += "productId" + " " + "integer";
-    if (primaryKey.length() > 0) {
-      sql += ",";
+    sql += "id" + " " + "integer" + ",";
+    sql += "name" + " " + "varchar(256)" + ",";
+    sql += "value" + " " + "varchar(256)" + ",";
+    sql += "productId" + " " + "integer" + ",";
+    if (primaryKey.length() == 0) {
+      sql = sql.substring(0, sql.length() - 1);
     }
     sql += primaryKey;
     sql += ")";
@@ -83,16 +78,14 @@ public class SchemaCreator {
 
     primaryKey = "";
     primaryKey = "primary key(";
-    primaryKey += "customerId";
+    primaryKey += "id";
     primaryKey += ")";
     sql = "create table " + "Customer" + "(";
-    sql += "customerId" + " " + "integer";
-    sql += ",";
-    sql += "personId" + " " + "integer";
-    sql += ",";
-    sql += "shopId" + " " + "integer";
-    if (primaryKey.length() > 0) {
-      sql += ",";
+    sql += "id" + " " + "integer" + ",";
+    sql += "personId" + " " + "integer" + ",";
+    sql += "shopId" + " " + "integer" + ",";
+    if (primaryKey.length() == 0) {
+      sql = sql.substring(0, sql.length() - 1);
     }
     sql += primaryKey;
     sql += ")";
@@ -104,13 +97,11 @@ public class SchemaCreator {
     primaryKey += "id";
     primaryKey += ")";
     sql = "create table " + "Person" + "(";
-    sql += "id" + " " + "integer";
-    sql += ",";
-    sql += "firstName" + " " + "varchar(256)";
-    sql += ",";
-    sql += "lastName" + " " + "varchar(256)";
-    if (primaryKey.length() > 0) {
-      sql += ",";
+    sql += "id" + " " + "integer" + ",";
+    sql += "firstName" + " " + "varchar(256)" + ",";
+    sql += "lastName" + " " + "varchar(256)" + ",";
+    if (primaryKey.length() == 0) {
+      sql = sql.substring(0, sql.length() - 1);
     }
     sql += primaryKey;
     sql += ")";
@@ -120,6 +111,16 @@ public class SchemaCreator {
   }
   private static void constrainTables(Statement stmt) throws SQLException, ClassNotFoundException {
     String sql = "";
+
+    sql = "alter table " + "Category" + " add constraint fk_" + "Category" + "_" + "shopId";
+    sql += " foreign key (" + "shopId" + ") references " + "Shop" + "(" + "id" + ")";
+    System.out.println(sql);
+    stmt.execute(sql);
+
+    sql = "alter table " + "Category" + " add constraint fk_" + "Category" + "_" + "subCategoryId";
+    sql += " foreign key (" + "subCategoryId" + ") references " + "Category" + "(" + "id" + ")";
+    System.out.println(sql);
+    stmt.execute(sql);
 
     sql = "alter table " + "Product" + " add constraint fk_" + "Product" + "_" + "categoryId";
     sql += " foreign key (" + "categoryId" + ") references " + "Category" + "(" + "id" + ")";
@@ -165,7 +166,7 @@ public class SchemaCreator {
   }
 
   public static void main(String[] args) throws ClassNotFoundException, SQLException {
-    Statement stmt = DatabaseConnector.getConnection().createStatement();
+    Statement stmt = DatabaseConnection.getConnection().createStatement();
 
     try {
       generateTables(stmt);

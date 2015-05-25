@@ -12,10 +12,18 @@ public class ConstraintsAspectDescriptor implements jetbrains.mps.smodel.runtime
   }
   public ConstraintsDescriptor getDescriptor(String fqName) {
     switch (Arrays.binarySearch(stringSwitchCases_2qnle6_a0a0b, fqName)) {
-      case 0:
+      case 3:
         return new Operation_Constraints();
-      case 1:
+      case 4:
         return new PropertyReference_Constraints();
+      case 2:
+        return new LinkDeclarationReference_Constraints();
+      case 0:
+        return new BooleanValue_Constraints();
+      case 5:
+        return new StringValue_Constraints();
+      case 1:
+        return new IntValue_Constraints();
       default:
         return new BaseConstraintsDescriptor(fqName);
     }
@@ -28,7 +36,19 @@ public class ConstraintsAspectDescriptor implements jetbrains.mps.smodel.runtime
     if (id == 0x58274fdf875fd58eL) {
       return new PropertyReference_Constraints();
     }
+    if (id == 0x269b49f46a5d57ccL) {
+      return new LinkDeclarationReference_Constraints();
+    }
+    if (id == 0x58274fdf876b84ddL) {
+      return new BooleanValue_Constraints();
+    }
+    if (id == 0x58274fdf876b8483L) {
+      return new StringValue_Constraints();
+    }
+    if (id == 0x58274fdf876b84baL) {
+      return new IntValue_Constraints();
+    }
     return new BaseConstraintsDescriptor(conceptId);
   }
-  private static String[] stringSwitchCases_2qnle6_a0a0b = new String[]{"ro.barata.mps.databaseOperationsLanguage.structure.Operation", "ro.barata.mps.databaseOperationsLanguage.structure.PropertyReference"};
+  private static String[] stringSwitchCases_2qnle6_a0a0b = new String[]{"ro.barata.mps.databaseOperationsLanguage.structure.BooleanValue", "ro.barata.mps.databaseOperationsLanguage.structure.IntValue", "ro.barata.mps.databaseOperationsLanguage.structure.LinkDeclarationReference", "ro.barata.mps.databaseOperationsLanguage.structure.Operation", "ro.barata.mps.databaseOperationsLanguage.structure.PropertyReference", "ro.barata.mps.databaseOperationsLanguage.structure.StringValue"};
 }

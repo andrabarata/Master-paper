@@ -23,12 +23,16 @@ public class EditorAspectDescriptorImpl implements EditorAspectDescriptor {
       case 3:
         return Collections.<ConceptEditor>singletonList(new InsertOperation_Editor());
       case 4:
-        return Collections.<ConceptEditor>singletonList(new IntValue_Editor());
+        return Collections.<ConceptEditor>singletonList(new Instance_Editor());
       case 5:
-        return Collections.<ConceptEditor>singletonList(new PropertyReference_Editor());
+        return Collections.<ConceptEditor>singletonList(new IntValue_Editor());
       case 6:
-        return Collections.<ConceptEditor>singletonList(new StringValue_Editor());
+        return Collections.<ConceptEditor>singletonList(new LinkDeclarationReference_Editor());
       case 7:
+        return Collections.<ConceptEditor>singletonList(new PropertyReference_Editor());
+      case 8:
+        return Collections.<ConceptEditor>singletonList(new StringValue_Editor());
+      case 9:
         return Collections.<ConceptEditor>singletonList(new UpdateOperation_Editor());
       default:
     }
@@ -39,5 +43,5 @@ public class EditorAspectDescriptorImpl implements EditorAspectDescriptor {
   }
 
 
-  private static String[] stringSwitchCases_xbvbvu_a0a0b = new String[]{"ro.barata.mps.databaseOperationsLanguage.structure.BooleanValue", "ro.barata.mps.databaseOperationsLanguage.structure.DBCommands", "ro.barata.mps.databaseOperationsLanguage.structure.DeleteOperation", "ro.barata.mps.databaseOperationsLanguage.structure.InsertOperation", "ro.barata.mps.databaseOperationsLanguage.structure.IntValue", "ro.barata.mps.databaseOperationsLanguage.structure.PropertyReference", "ro.barata.mps.databaseOperationsLanguage.structure.StringValue", "ro.barata.mps.databaseOperationsLanguage.structure.UpdateOperation"};
+  private static String[] stringSwitchCases_xbvbvu_a0a0b = new String[]{"ro.barata.mps.databaseOperationsLanguage.structure.BooleanValue", "ro.barata.mps.databaseOperationsLanguage.structure.DBCommands", "ro.barata.mps.databaseOperationsLanguage.structure.DeleteOperation", "ro.barata.mps.databaseOperationsLanguage.structure.InsertOperation", "ro.barata.mps.databaseOperationsLanguage.structure.Instance", "ro.barata.mps.databaseOperationsLanguage.structure.IntValue", "ro.barata.mps.databaseOperationsLanguage.structure.LinkDeclarationReference", "ro.barata.mps.databaseOperationsLanguage.structure.PropertyReference", "ro.barata.mps.databaseOperationsLanguage.structure.StringValue", "ro.barata.mps.databaseOperationsLanguage.structure.UpdateOperation"};
 }

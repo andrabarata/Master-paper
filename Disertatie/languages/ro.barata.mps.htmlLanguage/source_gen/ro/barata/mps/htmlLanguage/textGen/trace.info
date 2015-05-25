@@ -1,3 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<debug-info />
+<debug-info>
+  <concept fqn="jetbrains.mps.baseLanguage.structure.BlockStatement" />
+  <concept fqn="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+  <concept fqn="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" />
+  <root nodeRef="r:6b841c79-c7d2-458d-a313-ecfacc71a61e(ro.barata.mps.htmlLanguage.textGen)/3780046886492523700">
+    <file name="HTMLTagValue_TextGen.java">
+      <node id="3780046886492523721" at="11,42,12,178" concept="1" />
+      <node id="3780046886492523721" at="12,178,13,22" concept="1" />
+      <node id="3780046886492523721" at="11,42,13,22" concept="0" />
+      <node id="3780046886492523700" at="11,0,15,0" concept="2" trace="doGenerateText#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <scope id="3780046886492523700" at="11,42,13,22" />
+      <scope id="3780046886492523721" at="11,42,13,22" />
+      <scope id="3780046886492523700" at="11,0,15,0">
+        <var name="node" id="3780046886492523700" />
+      </scope>
+      <unit id="3780046886492523700" at="10,0,16,0" name="ro.barata.mps.htmlLanguage.textGen.HTMLTagValue_TextGen" />
+    </file>
+  </root>
+  <root nodeRef="r:6b841c79-c7d2-458d-a313-ecfacc71a61e(ro.barata.mps.htmlLanguage.textGen)/3780046886492645501">
+    <file name="URLParameter_TextGen.java">
+      <node id="3780046886492645514" at="11,42,12,184" concept="0" />
+      <node id="3780046886492645514" at="11,42,12,184" concept="0" />
+      <node id="3780046886492645514" at="11,42,12,184" concept="1" />
+      <node id="3780046886492645501" at="11,0,14,0" concept="2" trace="doGenerateText#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <scope id="3780046886492645501" at="11,42,12,184" />
+      <scope id="3780046886492645514" at="11,42,12,184" />
+      <scope id="3780046886492645501" at="11,0,14,0">
+        <var name="node" id="3780046886492645501" />
+      </scope>
+      <unit id="3780046886492645501" at="10,0,15,0" name="ro.barata.mps.htmlLanguage.textGen.URLParameter_TextGen" />
+    </file>
+  </root>
+</debug-info>
 

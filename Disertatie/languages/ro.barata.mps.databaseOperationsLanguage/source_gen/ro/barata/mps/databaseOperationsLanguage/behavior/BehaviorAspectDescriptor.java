@@ -15,21 +15,25 @@ public class BehaviorAspectDescriptor implements jetbrains.mps.smodel.runtime.Be
         return new DeleteOperation_BehaviorDescriptor();
       case 3:
         return new InsertOperation_BehaviorDescriptor();
-      case 5:
-        return new PropertyReference_BehaviorDescriptor();
       case 7:
+        return new PropertyReference_BehaviorDescriptor();
+      case 9:
         return new UpdateOperation_BehaviorDescriptor();
       case 1:
         return new DBCommands_BehaviorDescriptor();
-      case 6:
+      case 8:
         return new StringValue_BehaviorDescriptor();
-      case 4:
+      case 5:
         return new IntValue_BehaviorDescriptor();
       case 0:
         return new BooleanValue_BehaviorDescriptor();
+      case 6:
+        return new LinkDeclarationReference_BehaviorDescriptor();
+      case 4:
+        return new Instance_BehaviorDescriptor();
       default:
         return BehaviorAspectInterpreted.getInstance().getDescriptor(fqName);
     }
   }
-  private static String[] stringSwitchCases_846f5o_a0a0b = new String[]{"ro.barata.mps.databaseOperationsLanguage.structure.BooleanValue", "ro.barata.mps.databaseOperationsLanguage.structure.DBCommands", "ro.barata.mps.databaseOperationsLanguage.structure.DeleteOperation", "ro.barata.mps.databaseOperationsLanguage.structure.InsertOperation", "ro.barata.mps.databaseOperationsLanguage.structure.IntValue", "ro.barata.mps.databaseOperationsLanguage.structure.PropertyReference", "ro.barata.mps.databaseOperationsLanguage.structure.StringValue", "ro.barata.mps.databaseOperationsLanguage.structure.UpdateOperation"};
+  private static String[] stringSwitchCases_846f5o_a0a0b = new String[]{"ro.barata.mps.databaseOperationsLanguage.structure.BooleanValue", "ro.barata.mps.databaseOperationsLanguage.structure.DBCommands", "ro.barata.mps.databaseOperationsLanguage.structure.DeleteOperation", "ro.barata.mps.databaseOperationsLanguage.structure.InsertOperation", "ro.barata.mps.databaseOperationsLanguage.structure.Instance", "ro.barata.mps.databaseOperationsLanguage.structure.IntValue", "ro.barata.mps.databaseOperationsLanguage.structure.LinkDeclarationReference", "ro.barata.mps.databaseOperationsLanguage.structure.PropertyReference", "ro.barata.mps.databaseOperationsLanguage.structure.StringValue", "ro.barata.mps.databaseOperationsLanguage.structure.UpdateOperation"};
 }

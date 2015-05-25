@@ -32,6 +32,7 @@ public class DBCommands_Behavior {
         }
       }
     });
+
     return operations;
   }
 }

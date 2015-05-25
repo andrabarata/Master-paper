@@ -7,7 +7,8 @@ import jetbrains.mps.internal.collections.runtime.ListSequence;
 import jetbrains.mps.internal.collections.runtime.backports.LinkedList;
 
 public enum AttributeValue {
-  left("left", "left");
+  left("left", "left"),
+  none("none", "none");
 
   private String myName;
   public String getName() {
@@ -19,6 +20,7 @@ public enum AttributeValue {
   public static List<AttributeValue> getConstants() {
     List<AttributeValue> list = ListSequence.fromList(new LinkedList<AttributeValue>());
     ListSequence.fromList(list).addElement(AttributeValue.left);
+    ListSequence.fromList(list).addElement(AttributeValue.none);
     return list;
   }
   public static AttributeValue getDefault() {
@@ -30,6 +32,9 @@ public enum AttributeValue {
     }
     if (value.equals(AttributeValue.left.getValueAsString())) {
       return AttributeValue.left;
+    }
+    if (value.equals(AttributeValue.none.getValueAsString())) {
+      return AttributeValue.none;
     }
     return AttributeValue.getDefault();
   }

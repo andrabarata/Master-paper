@@ -33,6 +33,7 @@ public class HTTPServer {
     RewriteHandler rwHandler = new RewriteHandler();
     context.addServlet(new ServletHolder(new TestPageServlet()), "/" + "TestPage");
     context.addServlet(new ServletHolder(new NextPageServlet()), "/" + "nextPage");
+    context.addServlet(new ServletHolder(new LoginServlet()), "/" + "login");
 
     Handler[] handlers = new Handler[]{rwHandler, context};
     HandlerList list = new HandlerList();

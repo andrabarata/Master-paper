@@ -120,8 +120,14 @@
     <node concept="1TJgyj" id="4iOjISKrxez" role="1TKVEi">
       <property role="20lmBu" value="aggregation" />
       <property role="20kJfa" value="products" />
-      <property role="20lbJX" value="1..n" />
+      <property role="20lbJX" value="0..n" />
       <ref role="20lvS9" node="4iOjISKrwYK" resolve="Product" />
+    </node>
+    <node concept="1TJgyj" id="2qrivhEnjj7" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="subCategories" />
+      <property role="20lbJX" value="0..n" />
+      <ref role="20lvS9" node="4iOjISKrwYi" resolve="Category" />
     </node>
   </node>
   <node concept="1TIwiD" id="4iOjISKrwYK">
@@ -141,7 +147,7 @@
       <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
     </node>
     <node concept="1TJgyi" id="4iOjISKrxhV" role="1TKVEl">
-      <property role="TrG5h" value="name" />
+      <property role="TrG5h" value="productName" />
       <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
     </node>
   </node>

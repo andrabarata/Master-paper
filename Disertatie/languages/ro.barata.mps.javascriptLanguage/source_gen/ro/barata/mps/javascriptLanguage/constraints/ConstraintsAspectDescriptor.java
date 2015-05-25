@@ -16,10 +16,16 @@ public class ConstraintsAspectDescriptor implements jetbrains.mps.smodel.runtime
         return new ForCommand_Constraints();
       case 1:
         return new DotExpressionCommand_Constraints();
-      case 3:
+      case 5:
         return new VarValue_Constraints();
       case 0:
         return new ActionVarValue_Constraints();
+      case 4:
+        return new InstanceValue_Constraints();
+      case 3:
+        return new GetArrayValueCommand_Constraints();
+      case 6:
+        return new VarValueHREF_Constraints();
       default:
         return new BaseConstraintsDescriptor(fqName);
     }
@@ -38,7 +44,16 @@ public class ConstraintsAspectDescriptor implements jetbrains.mps.smodel.runtime
     if (id == 0x40798aa2d35534e2L) {
       return new ActionVarValue_Constraints();
     }
+    if (id == 0x34756c9d9ea8d352L) {
+      return new InstanceValue_Constraints();
+    }
+    if (id == 0x76145524ee9d3085L) {
+      return new GetArrayValueCommand_Constraints();
+    }
+    if (id == 0x34756c9d9fad5530L) {
+      return new VarValueHREF_Constraints();
+    }
     return new BaseConstraintsDescriptor(conceptId);
   }
-  private static String[] stringSwitchCases_2qnle6_a0a0b = new String[]{"ro.barata.mps.javascriptLanguage.structure.ActionVarValue", "ro.barata.mps.javascriptLanguage.structure.DotExpressionCommand", "ro.barata.mps.javascriptLanguage.structure.ForCommand", "ro.barata.mps.javascriptLanguage.structure.VarValue"};
+  private static String[] stringSwitchCases_2qnle6_a0a0b = new String[]{"ro.barata.mps.javascriptLanguage.structure.ActionVarValue", "ro.barata.mps.javascriptLanguage.structure.DotExpressionCommand", "ro.barata.mps.javascriptLanguage.structure.ForCommand", "ro.barata.mps.javascriptLanguage.structure.GetArrayValueCommand", "ro.barata.mps.javascriptLanguage.structure.InstanceValue", "ro.barata.mps.javascriptLanguage.structure.VarValue", "ro.barata.mps.javascriptLanguage.structure.VarValueHREF"};
 }

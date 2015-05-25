@@ -10,6 +10,7 @@ public class NextPageGenerator {
     String parameters = "";
     html += "<head>";
     html += "<script src=\"general.js\"></script>";
+    html += "<link rel=\"stylesheet\" type=\"text/css\" href=\"" + "main" + ".css\"/>";
     parameters = "";
     html += "<title";
     html += ">" + "Hi there" + "</title>";

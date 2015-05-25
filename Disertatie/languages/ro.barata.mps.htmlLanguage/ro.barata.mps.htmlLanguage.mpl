@@ -23,6 +23,7 @@
       <dependencies>
         <dependency reexport="false">6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)</dependency>
         <dependency reexport="false">c02f1daf-1160-4f41-beef-10918af4e126(ro.barata.mps.databaseOperationsLanguage#7227310691964192368)</dependency>
+        <dependency reexport="false">edb2b9cf-991f-4100-ab3c-9444c4d6e26b(ro.barata.mps.styleLanguage)</dependency>
       </dependencies>
       <usedLanguages>
         <usedLanguage>b401a680-8325-4110-8fd3-84331ff25bef(jetbrains.mps.lang.generator)</usedLanguage>

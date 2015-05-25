@@ -7,29 +7,36 @@ import java.util.ArrayList;
 
 public class Product {
   private Integer id;
-  private String name;
+  private String productName;
   private List<Attribute> attributes;
-
+  private Category parentCategory;
   public void setId(Integer attribute) {
     this.id = attribute;
   }
-  public void setName(String attribute) {
-    this.name = attribute;
+  public void setProductName(String attribute) {
+    this.productName = attribute;
   }
   public void setAttributes(List<Attribute> entities) {
     this.attributes = entities;
   }
-
   public Integer getId() {
     return this.id;
   }
-  public String getName() {
-    return this.name;
+  public String getProductName() {
+    return this.productName;
+  }
+  public void setParentCategory(Category entity) {
+    this.parentCategory = entity;
   }
   public List<Attribute> getAttributes() {
     return this.attributes;
   }
-
+  public Category getParentCategory() {
+    return this.parentCategory;
+  }
+  public void addAttribute(Attribute attribute) {
+    this.attributes.add(attribute);
+  }
   public Product() {
     this.attributes = new ArrayList<Attribute>();
   }

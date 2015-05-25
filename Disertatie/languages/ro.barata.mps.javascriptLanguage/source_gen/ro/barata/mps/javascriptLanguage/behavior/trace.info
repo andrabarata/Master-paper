@@ -20,7 +20,7 @@
       <unit at="6,0,14,0" name="ro.barata.mps.javascriptLanguage.behavior.AssignmentCommand_BehaviorDescriptor" />
     </file>
     <file name="BehaviorAspectDescriptor.java">
-      <unit at="9,0,70,0" name="ro.barata.mps.javascriptLanguage.behavior.BehaviorAspectDescriptor" />
+      <unit at="9,0,76,0" name="ro.barata.mps.javascriptLanguage.behavior.BehaviorAspectDescriptor" />
     </file>
     <file name="CallFunctionCommand_BehaviorDescriptor.java">
       <unit at="6,0,14,0" name="ro.barata.mps.javascriptLanguage.behavior.CallFunctionCommand_BehaviorDescriptor" />
@@ -37,6 +37,9 @@
     <file name="ForCommand_BehaviorDescriptor.java">
       <unit at="6,0,14,0" name="ro.barata.mps.javascriptLanguage.behavior.ForCommand_BehaviorDescriptor" />
     </file>
+    <file name="FunctionCommand_BehaviorDescriptor.java">
+      <unit at="6,0,14,0" name="ro.barata.mps.javascriptLanguage.behavior.FunctionCommand_BehaviorDescriptor" />
+    </file>
     <file name="GetArrayValueCommand_BehaviorDescriptor.java">
       <unit at="6,0,14,0" name="ro.barata.mps.javascriptLanguage.behavior.GetArrayValueCommand_BehaviorDescriptor" />
     </file>
@@ -45,6 +48,9 @@
     </file>
     <file name="InitializeVarCommand_BehaviorDescriptor.java">
       <unit at="6,0,14,0" name="ro.barata.mps.javascriptLanguage.behavior.InitializeVarCommand_BehaviorDescriptor" />
+    </file>
+    <file name="InstanceValue_BehaviorDescriptor.java">
+      <unit at="6,0,14,0" name="ro.barata.mps.javascriptLanguage.behavior.InstanceValue_BehaviorDescriptor" />
     </file>
     <file name="IntValue_BehaviorDescriptor.java">
       <unit at="6,0,14,0" name="ro.barata.mps.javascriptLanguage.behavior.IntValue_BehaviorDescriptor" />
@@ -87,6 +93,9 @@
     </file>
     <file name="VarNameCommand_BehaviorDescriptor.java">
       <unit at="6,0,14,0" name="ro.barata.mps.javascriptLanguage.behavior.VarNameCommand_BehaviorDescriptor" />
+    </file>
+    <file name="VarValueHREF_BehaviorDescriptor.java">
+      <unit at="7,0,15,0" name="ro.barata.mps.javascriptLanguage.behavior.VarValueHREF_BehaviorDescriptor" />
     </file>
     <file name="VarValue_BehaviorDescriptor.java">
       <unit at="6,0,14,0" name="ro.barata.mps.javascriptLanguage.behavior.VarValue_BehaviorDescriptor" />

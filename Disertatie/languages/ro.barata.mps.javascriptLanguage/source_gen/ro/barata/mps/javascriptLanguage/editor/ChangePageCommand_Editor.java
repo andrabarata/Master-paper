@@ -9,7 +9,7 @@ import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.nodeEditor.cells.EditorCell_Collection;
 import jetbrains.mps.nodeEditor.cells.EditorCell_Constant;
 import jetbrains.mps.nodeEditor.cellProviders.CellProviderWithRole;
-import jetbrains.mps.lang.editor.cellProviders.PropertyCellProvider;
+import jetbrains.mps.lang.editor.cellProviders.RefNodeCellProvider;
 import jetbrains.mps.nodeEditor.EditorManager;
 
 public class ChangePageCommand_Editor extends DefaultNodeEditor {
@@ -21,7 +21,7 @@ public class ChangePageCommand_Editor extends DefaultNodeEditor {
     editorCell.setCellId("Collection_6fx8kw_a");
     editorCell.setBig(true);
     editorCell.addEditorCell(this.createConstant_6fx8kw_a0(editorContext, node));
-    editorCell.addEditorCell(this.createProperty_6fx8kw_b0(editorContext, node));
+    editorCell.addEditorCell(this.createRefNode_6fx8kw_b0(editorContext, node));
     return editorCell;
   }
   private EditorCell createConstant_6fx8kw_a0(EditorContext editorContext, SNode node) {
@@ -30,13 +30,15 @@ public class ChangePageCommand_Editor extends DefaultNodeEditor {
     editorCell.setDefaultText("");
     return editorCell;
   }
-  private EditorCell createProperty_6fx8kw_b0(EditorContext editorContext, SNode node) {
-    CellProviderWithRole provider = new PropertyCellProvider(node, editorContext);
+  private EditorCell createRefNode_6fx8kw_b0(EditorContext editorContext, SNode node) {
+    CellProviderWithRole provider = new RefNodeCellProvider(node, editorContext);
     provider.setRole("page");
     provider.setNoTargetText("<no page>");
     EditorCell editorCell;
     editorCell = provider.createEditorCell(editorContext);
-    editorCell.setCellId("property_page");
+    if (editorCell.getRole() == null) {
+      editorCell.setRole("page");
+    }
     editorCell.setSubstituteInfo(provider.createDefaultSubstituteInfo());
     SNode attributeConcept = provider.getRoleAttribute();
     Class attributeKind = provider.getRoleAttributeClass();

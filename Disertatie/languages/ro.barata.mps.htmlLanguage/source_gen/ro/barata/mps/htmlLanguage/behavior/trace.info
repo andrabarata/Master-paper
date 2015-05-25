@@ -36,7 +36,7 @@
       <unit at="7,0,15,0" name="ro.barata.mps.htmlLanguage.behavior.Attribute_BehaviorDescriptor" />
     </file>
     <file name="BehaviorAspectDescriptor.java">
-      <unit at="9,0,126,0" name="ro.barata.mps.htmlLanguage.behavior.BehaviorAspectDescriptor" />
+      <unit at="9,0,134,0" name="ro.barata.mps.htmlLanguage.behavior.BehaviorAspectDescriptor" />
     </file>
     <file name="ContainerCommand_BehaviorDescriptor.java">
       <unit at="6,0,14,0" name="ro.barata.mps.htmlLanguage.behavior.ContainerCommand_BehaviorDescriptor" />
@@ -46,6 +46,9 @@
     </file>
     <file name="CounterId_BehaviorDescriptor.java">
       <unit at="10,0,21,0" name="ro.barata.mps.htmlLanguage.behavior.CounterId_BehaviorDescriptor" />
+    </file>
+    <file name="DatabaseLocation_BehaviorDescriptor.java">
+      <unit at="6,0,14,0" name="ro.barata.mps.htmlLanguage.behavior.DatabaseLocation_BehaviorDescriptor" />
     </file>
     <file name="DatabaseOperation_BehaviorDescriptor.java">
       <unit at="6,0,14,0" name="ro.barata.mps.htmlLanguage.behavior.DatabaseOperation_BehaviorDescriptor" />
@@ -155,6 +158,15 @@
     <file name="Parameter_BehaviorDescriptor.java">
       <unit at="7,0,15,0" name="ro.barata.mps.htmlLanguage.behavior.Parameter_BehaviorDescriptor" />
     </file>
+    <file name="QueryParameter_BehaviorDescriptor.java">
+      <unit at="7,0,15,0" name="ro.barata.mps.htmlLanguage.behavior.QueryParameter_BehaviorDescriptor" />
+    </file>
+    <file name="ReceiveLocation_BehaviorDescriptor.java">
+      <unit at="7,0,15,0" name="ro.barata.mps.htmlLanguage.behavior.ReceiveLocation_BehaviorDescriptor" />
+    </file>
+    <file name="ReceiveOperation_BehaviorDescriptor.java">
+      <unit at="9,0,20,0" name="ro.barata.mps.htmlLanguage.behavior.ReceiveOperation_BehaviorDescriptor" />
+    </file>
     <file name="SRCAttribute_BehaviorDescriptor.java">
       <unit at="7,0,15,0" name="ro.barata.mps.htmlLanguage.behavior.SRCAttribute_BehaviorDescriptor" />
     </file>
@@ -169,6 +181,9 @@
     </file>
     <file name="Server_BehaviorDescriptor.java">
       <unit at="10,0,24,0" name="ro.barata.mps.htmlLanguage.behavior.Server_BehaviorDescriptor" />
+    </file>
+    <file name="SessionLocation_BehaviorDescriptor.java">
+      <unit at="6,0,14,0" name="ro.barata.mps.htmlLanguage.behavior.SessionLocation_BehaviorDescriptor" />
     </file>
     <file name="SpanContainer_BehaviorDescriptor.java">
       <unit at="6,0,14,0" name="ro.barata.mps.htmlLanguage.behavior.SpanContainer_BehaviorDescriptor" />

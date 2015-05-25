@@ -16,7 +16,7 @@ public class ForCommand_TextGen extends SNodeTextGen {
     this.append(SPropertyOperations.getInteger(node, MetaAdapterFactory.getProperty(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x3ab9167f5c1019d6L, 0x3ab9167f5c1019f4L, "initializer")) + "");
     this.append(";");
     this.append(SPropertyOperations.getString(SLinkOperations.getTarget(node, MetaAdapterFactory.getReferenceLink(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x3ab9167f5c1019d6L, 0x3ab9167f5c33150fL, "parameter")), MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name")));
-    this.append(SPropertyOperations.getString_def(node, MetaAdapterFactory.getProperty(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x3ab9167f5c1019d6L, 0x3ab9167f5c10711cL, "condition"), "<"));
+    this.append(SPropertyOperations.getString_def(node, MetaAdapterFactory.getProperty(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x3ab9167f5c1019d6L, 0x3ab9167f5c10711cL, "condition"), "=="));
     appendNode(SLinkOperations.getTarget(node, MetaAdapterFactory.getContainmentLink(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x3ab9167f5c1019d6L, 0x3ab9167f5c1a5b21L, "limit")));
     this.append(";");
     this.append(SPropertyOperations.getString(SLinkOperations.getTarget(node, MetaAdapterFactory.getReferenceLink(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x3ab9167f5c1019d6L, 0x3ab9167f5c33150fL, "parameter")), MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name")));

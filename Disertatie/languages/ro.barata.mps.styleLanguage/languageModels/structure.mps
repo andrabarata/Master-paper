@@ -99,7 +99,7 @@
       <property role="20lmBu" value="aggregation" />
       <property role="20kJfa" value="attributes" />
       <property role="20lbJX" value="0..n" />
-      <ref role="20lvS9" node="4iOjISKGmgB" resolve="Attribute" />
+      <ref role="20lvS9" node="4iOjISKGmhW" resolve="UserAttribute" />
     </node>
   </node>
   <node concept="AxPO7" id="4iOjISKGmfx">
@@ -116,6 +116,10 @@
     <node concept="M4N5e" id="4iOjISKGmg7" role="M5hS2">
       <property role="1uS6qv" value="left" />
       <property role="1uS6qo" value="left" />
+    </node>
+    <node concept="M4N5e" id="3hPr9Qv5Hrs" role="M5hS2">
+      <property role="1uS6qv" value="none" />
+      <property role="1uS6qo" value="none" />
     </node>
   </node>
   <node concept="1TIwiD" id="4iOjISKGmgB">

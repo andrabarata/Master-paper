@@ -11,7 +11,8 @@ public enum JavascriptBinaryCondition {
   _2("<=", "<="),
   _3(">", ">"),
   _4(">=", ">="),
-  _5("==", "==");
+  _5("==", "=="),
+  _6("!=", "!=");
 
   private String myName;
   public String getName() {
@@ -27,10 +28,11 @@ public enum JavascriptBinaryCondition {
     ListSequence.fromList(list).addElement(JavascriptBinaryCondition._3);
     ListSequence.fromList(list).addElement(JavascriptBinaryCondition._4);
     ListSequence.fromList(list).addElement(JavascriptBinaryCondition._5);
+    ListSequence.fromList(list).addElement(JavascriptBinaryCondition._6);
     return list;
   }
   public static JavascriptBinaryCondition getDefault() {
-    return JavascriptBinaryCondition._1;
+    return JavascriptBinaryCondition._5;
   }
   public static JavascriptBinaryCondition parseValue(String value) {
     if (value == null) {
@@ -50,6 +52,9 @@ public enum JavascriptBinaryCondition {
     }
     if (value.equals(JavascriptBinaryCondition._5.getValueAsString())) {
       return JavascriptBinaryCondition._5;
+    }
+    if (value.equals(JavascriptBinaryCondition._6.getValueAsString())) {
+      return JavascriptBinaryCondition._6;
     }
     return JavascriptBinaryCondition.getDefault();
   }

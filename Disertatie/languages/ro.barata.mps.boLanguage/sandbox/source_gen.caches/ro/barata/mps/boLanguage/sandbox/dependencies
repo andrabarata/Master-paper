@@ -3,6 +3,7 @@
   <dependency className="ro.barata.mps.boLanguage.sandbox.Attribute" file="Attribute.java">
     <classNode dependClassName="java.lang.Integer" />
     <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.Product" />
   </dependency>
   <dependency className="ro.barata.mps.boLanguage.sandbox.AttributeDAO" file="AttributeDAO.java">
     <classNode dependClassName="java.lang.ClassNotFoundException" />
@@ -10,13 +11,15 @@
     <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.lang.System" />
+    <classNode dependClassName="java.sql.Connection" />
     <classNode dependClassName="java.sql.ResultSet" />
     <classNode dependClassName="java.sql.SQLException" />
     <classNode dependClassName="java.sql.Statement" />
     <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.LinkedList" />
     <classNode dependClassName="java.util.List" />
     <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.Attribute" />
-    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.DatabaseConnector" />
+    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.Product" />
   </dependency>
   <dependency className="ro.barata.mps.boLanguage.sandbox.Category" file="Category.java">
     <classNode dependClassName="java.lang.Integer" />
@@ -24,6 +27,7 @@
     <classNode dependClassName="java.util.ArrayList" />
     <classNode dependClassName="java.util.List" />
     <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.Product" />
+    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.Shop" />
   </dependency>
   <dependency className="ro.barata.mps.boLanguage.sandbox.CategoryDAO" file="CategoryDAO.java">
     <classNode dependClassName="java.lang.ClassNotFoundException" />
@@ -31,17 +35,22 @@
     <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.lang.System" />
+    <classNode dependClassName="java.sql.Connection" />
     <classNode dependClassName="java.sql.ResultSet" />
     <classNode dependClassName="java.sql.SQLException" />
     <classNode dependClassName="java.sql.Statement" />
     <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.LinkedList" />
     <classNode dependClassName="java.util.List" />
     <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.Category" />
-    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.DatabaseConnector" />
+    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.Product" />
+    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.ProductDAO" />
+    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.Shop" />
   </dependency>
   <dependency className="ro.barata.mps.boLanguage.sandbox.Customer" file="Customer.java">
     <classNode dependClassName="java.lang.Integer" />
     <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.Person" />
+    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.Shop" />
   </dependency>
   <dependency className="ro.barata.mps.boLanguage.sandbox.CustomerDAO" file="CustomerDAO.java">
     <classNode dependClassName="java.lang.ClassNotFoundException" />
@@ -49,18 +58,33 @@
     <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.lang.System" />
+    <classNode dependClassName="java.sql.Connection" />
     <classNode dependClassName="java.sql.ResultSet" />
     <classNode dependClassName="java.sql.SQLException" />
     <classNode dependClassName="java.sql.Statement" />
     <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.LinkedList" />
     <classNode dependClassName="java.util.List" />
     <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.Customer" />
-    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.DatabaseConnector" />
+    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.Person" />
+    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.PersonDAO" />
+    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.Shop" />
   </dependency>
-  <dependency className="ro.barata.mps.boLanguage.sandbox.DatabaseConnector" file="DatabaseConnector.java">
-    <classNode dependClassName="java.lang.Class" />
+  <dependency className="ro.barata.mps.boLanguage.sandbox.DBCommands" file="DBCommands.java">
     <classNode dependClassName="java.lang.ClassNotFoundException" />
     <classNode dependClassName="java.lang.Exception" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.sql.Connection" />
+    <classNode dependClassName="java.sql.SQLException" />
+    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.Attribute" />
+    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.Category" />
+    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.CategoryDAO" />
+    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.DatabaseConnection" />
+    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.Product" />
+  </dependency>
+  <dependency className="ro.barata.mps.boLanguage.sandbox.DatabaseConnection" file="DatabaseConnection.java">
+    <classNode dependClassName="java.lang.Class" />
+    <classNode dependClassName="java.lang.ClassNotFoundException" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.lang.System" />
     <classNode dependClassName="java.sql.Connection" />
@@ -90,8 +114,27 @@
     <classNode dependClassName="org.eclipse.jetty.server.nio.SelectChannelConnector" />
     <classNode dependClassName="org.eclipse.jetty.servlet.ServletContextHandler" />
     <classNode dependClassName="org.eclipse.jetty.servlet.ServletHolder" />
+    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.LoginServlet" />
     <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.NextPageServlet" />
     <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.TestPageServlet" />
+  </dependency>
+  <dependency className="ro.barata.mps.boLanguage.sandbox.LoginGenerator" file="LoginGenerator.java">
+    <classNode dependClassName="java.lang.ClassNotFoundException" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.sql.SQLException" />
+  </dependency>
+  <dependency className="ro.barata.mps.boLanguage.sandbox.LoginServlet" file="LoginServlet.java">
+    <classNode dependClassName="java.io.IOException" />
+    <classNode dependClassName="java.lang.ClassNotFoundException" />
+    <classNode dependClassName="java.lang.Exception" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.System" />
+    <classNode dependClassName="java.sql.SQLException" />
+    <classNode dependClassName="javax.servlet.ServletException" />
+    <classNode dependClassName="javax.servlet.http.HttpServletRequest" />
+    <classNode dependClassName="javax.servlet.http.HttpServletResponse" />
+    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.LoginGenerator" />
+    <classNode extendsClassName="javax.servlet.http.HttpServlet" />
   </dependency>
   <dependency className="ro.barata.mps.boLanguage.sandbox.NextPageGenerator" file="NextPageGenerator.java">
     <classNode dependClassName="java.lang.ClassNotFoundException" />
@@ -121,12 +164,12 @@
     <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.lang.System" />
+    <classNode dependClassName="java.sql.Connection" />
     <classNode dependClassName="java.sql.ResultSet" />
     <classNode dependClassName="java.sql.SQLException" />
     <classNode dependClassName="java.sql.Statement" />
     <classNode dependClassName="java.util.ArrayList" />
     <classNode dependClassName="java.util.List" />
-    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.DatabaseConnector" />
     <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.Person" />
   </dependency>
   <dependency className="ro.barata.mps.boLanguage.sandbox.Product" file="Product.java">
@@ -135,6 +178,7 @@
     <classNode dependClassName="java.util.ArrayList" />
     <classNode dependClassName="java.util.List" />
     <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.Attribute" />
+    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.Category" />
   </dependency>
   <dependency className="ro.barata.mps.boLanguage.sandbox.ProductDAO" file="ProductDAO.java">
     <classNode dependClassName="java.lang.ClassNotFoundException" />
@@ -142,12 +186,16 @@
     <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.lang.System" />
+    <classNode dependClassName="java.sql.Connection" />
     <classNode dependClassName="java.sql.ResultSet" />
     <classNode dependClassName="java.sql.SQLException" />
     <classNode dependClassName="java.sql.Statement" />
     <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.LinkedList" />
     <classNode dependClassName="java.util.List" />
-    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.DatabaseConnector" />
+    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.Attribute" />
+    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.AttributeDAO" />
+    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.Category" />
     <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.Product" />
   </dependency>
   <dependency className="ro.barata.mps.boLanguage.sandbox.SchemaCreator" file="SchemaCreator.java">
@@ -157,13 +205,14 @@
     <classNode dependClassName="java.lang.System" />
     <classNode dependClassName="java.sql.SQLException" />
     <classNode dependClassName="java.sql.Statement" />
-    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.DatabaseConnector" />
+    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.DatabaseConnection" />
   </dependency>
   <dependency className="ro.barata.mps.boLanguage.sandbox.Shop" file="Shop.java">
     <classNode dependClassName="java.lang.Integer" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.util.ArrayList" />
     <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.Category" />
     <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.Customer" />
   </dependency>
   <dependency className="ro.barata.mps.boLanguage.sandbox.ShopDAO" file="ShopDAO.java">
@@ -172,24 +221,30 @@
     <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.lang.System" />
+    <classNode dependClassName="java.sql.Connection" />
     <classNode dependClassName="java.sql.ResultSet" />
     <classNode dependClassName="java.sql.SQLException" />
     <classNode dependClassName="java.sql.Statement" />
     <classNode dependClassName="java.util.ArrayList" />
     <classNode dependClassName="java.util.List" />
-    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.DatabaseConnector" />
+    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.Category" />
+    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.CategoryDAO" />
+    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.Customer" />
+    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.CustomerDAO" />
     <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.Shop" />
   </dependency>
   <dependency className="ro.barata.mps.boLanguage.sandbox.Structure" file="Structure.js" />
   <dependency className="ro.barata.mps.boLanguage.sandbox.StructureGenerator" file="StructureGenerator.java">
     <classNode dependClassName="java.lang.ClassNotFoundException" />
     <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.sql.Connection" />
     <classNode dependClassName="java.sql.SQLException" />
     <classNode dependClassName="java.util.List" />
     <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.Attribute" />
     <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.AttributeDAO" />
     <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.Customer" />
     <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.CustomerDAO" />
+    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.DatabaseConnection" />
     <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.Person" />
     <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.PersonDAO" />
   </dependency>
@@ -213,6 +268,7 @@
   </dependency>
   <dependency className="ro.barata.mps.boLanguage.sandbox.functions" file="functions.js" />
   <dependency className="ro.barata.mps.boLanguage.sandbox.general" file="general.js" />
+  <dependency className="ro.barata.mps.boLanguage.sandbox.login" file="login.js" />
   <dependency className="ro.barata.mps.boLanguage.sandbox.main" file="main.css" />
   <dependency className="ro.barata.mps.boLanguage.sandbox.test" file="test.js" />
 </dependenciesRoot>

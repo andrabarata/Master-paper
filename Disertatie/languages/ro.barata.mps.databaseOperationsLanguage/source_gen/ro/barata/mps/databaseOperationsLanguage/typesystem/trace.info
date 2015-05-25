@@ -1,3 +1,97 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<debug-info />
+<debug-info>
+  <concept fqn="jetbrains.mps.baseLanguage.structure.BlockStatement" />
+  <concept fqn="jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" />
+  <concept fqn="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+  <concept fqn="jetbrains.mps.baseLanguage.structure.ForeachStatement" />
+  <concept fqn="jetbrains.mps.baseLanguage.structure.IfStatement" />
+  <concept fqn="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" />
+  <concept fqn="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+  <concept fqn="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+  <root>
+    <file name="TypesystemDescriptor.java">
+      <unit at="8,0,16,0" name="ro.barata.mps.databaseOperationsLanguage.typesystem.TypesystemDescriptor" />
+    </file>
+  </root>
+  <root nodeRef="r:b74f27df-9281-45c9-86e1-9b021205c5fe(ro.barata.mps.databaseOperationsLanguage.typesystem)/2781898508937147176">
+    <file name="PropertyDupplicate_NonTypesystemRule.java">
+      <node id="2781898508937164313" at="23,130,24,16" concept="6" />
+      <node id="2781898508937197065" at="26,838,27,14" concept="2" />
+      <node id="2781898508937201319" at="31,7,32,60" concept="6" />
+      <node id="2781898508937201319" at="32,60,33,597" concept="6" />
+      <node id="2781898508937201319" at="34,9,35,158" concept="6" />
+      <node id="2781898508937201319" at="35,158,36,71" concept="2" />
+      <node id="2781898508937147176" at="41,46,42,82" concept="7" />
+      <node id="2781898508937147176" at="45,5,46,130" concept="6" />
+      <node id="2781898508937147176" at="46,130,47,45" concept="7" />
+      <node id="2781898508937147176" at="50,30,51,17" concept="7" />
+      <node id="2781898508937147176" at="21,0,23,0" concept="1" trace="PropertyDupplicate_NonTypesystemRule#()V" />
+      <node id="2781898508937171192" at="25,86,28,7" concept="4" />
+      <node id="2781898508937147176" at="41,0,44,0" concept="5" trace="getApplicableConceptFQName#()Ljava/lang/String;" />
+      <node id="2781898508937147176" at="50,0,53,0" concept="5" trace="overrides#()Z" />
+      <node id="2781898508937201319" at="33,597,37,9" concept="0" />
+      <node id="2781898508937147176" at="44,68,48,5" concept="0" />
+      <node id="2781898508937164784" at="24,16,29,5" concept="3" />
+      <node id="2781898508937147176" at="44,0,50,0" concept="5" trace="isApplicableAndPattern#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;" />
+      <node id="2781898508937201319" at="30,18,38,7" concept="0" />
+      <node id="2781898508937199175" at="29,5,39,5" concept="4" />
+      <node id="2781898508937147176" at="23,0,41,0" concept="5" trace="applyRule#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/typesystem/inference/TypeCheckingContext;Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;)V" />
+      <scope id="2781898508937147176" at="21,49,21,49" />
+      <scope id="2781898508937171194" at="26,838,27,14" />
+      <scope id="2781898508937147176" at="41,46,42,82" />
+      <scope id="2781898508937147176" at="50,30,51,17" />
+      <scope id="2781898508937147176" at="21,0,23,0" />
+      <scope id="2781898508937201319" at="34,9,36,71">
+        <var name="intentionProvider" id="2781898508937201319" />
+      </scope>
+      <scope id="2781898508937147176" at="45,5,47,45">
+        <var name="b" id="2781898508937147176" />
+      </scope>
+      <scope id="2781898508937164786" at="25,86,28,7" />
+      <scope id="2781898508937147176" at="41,0,44,0" />
+      <scope id="2781898508937147176" at="50,0,53,0" />
+      <scope id="2781898508937147176" at="44,68,48,5" />
+      <scope id="2781898508937164784" at="24,16,29,5">
+        <var name="reference" id="2781898508937164787" />
+      </scope>
+      <scope id="2781898508937201319" at="31,7,37,9">
+        <var name="_reporter_2309309498" id="2781898508937201319" />
+        <var name="errorTarget" id="2781898508937201319" />
+      </scope>
+      <scope id="2781898508937147176" at="44,0,50,0">
+        <var name="argument" id="2781898508937147176" />
+      </scope>
+      <scope id="2781898508937199177" at="30,18,38,7" />
+      <scope id="2781898508937147177" at="23,130,39,5">
+        <var name="app" id="2781898508937164316" />
+      </scope>
+      <scope id="2781898508937147176" at="23,0,41,0">
+        <var name="propertyReference" id="2781898508937147176" />
+        <var name="status" id="2781898508937147176" />
+        <var name="typeCheckingContext" id="2781898508937147176" />
+      </scope>
+      <unit id="2781898508937147176" at="20,0,54,0" name="ro.barata.mps.databaseOperationsLanguage.typesystem.PropertyDupplicate_NonTypesystemRule" />
+    </file>
+  </root>
+  <root nodeRef="r:b74f27df-9281-45c9-86e1-9b021205c5fe(ro.barata.mps.databaseOperationsLanguage.typesystem)/2781898508937208955">
+    <file name="RemoveNode_QuickFix.java">
+      <node id="2781898508937210791" at="12,44,13,31" concept="7" />
+      <node id="2781898508937208968" at="15,35,16,37" concept="2" />
+      <node id="2781898508937208955" at="10,0,12,0" concept="1" trace="RemoveNode_QuickFix#()V" />
+      <node id="2781898508937208955" at="12,0,15,0" concept="5" trace="getDescription#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljava/lang/String;" />
+      <node id="2781898508937208955" at="15,0,18,0" concept="5" trace="execute#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <scope id="2781898508937208955" at="10,32,10,32" />
+      <scope id="2781898508937210473" at="12,44,13,31" />
+      <scope id="2781898508937208957" at="15,35,16,37" />
+      <scope id="2781898508937208955" at="10,0,12,0" />
+      <scope id="2781898508937208955" at="12,0,15,0">
+        <var name="node" id="2781898508937208955" />
+      </scope>
+      <scope id="2781898508937208955" at="15,0,18,0">
+        <var name="node" id="2781898508937208955" />
+      </scope>
+      <unit id="2781898508937208955" at="9,0,19,0" name="ro.barata.mps.databaseOperationsLanguage.typesystem.RemoveNode_QuickFix" />
+    </file>
+  </root>
+</debug-info>
 

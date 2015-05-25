@@ -9,7 +9,7 @@ public class Shop {
   private Integer id;
   private String name;
   private List<Customer> customers;
-
+  private List<Category> categorys;
   public void setId(Integer attribute) {
     this.id = attribute;
   }
@@ -19,7 +19,9 @@ public class Shop {
   public void setCustomers(List<Customer> entities) {
     this.customers = entities;
   }
-
+  public void setCategorys(List<Category> entities) {
+    this.categorys = entities;
+  }
   public Integer getId() {
     return this.id;
   }
@@ -29,8 +31,17 @@ public class Shop {
   public List<Customer> getCustomers() {
     return this.customers;
   }
-
+  public List<Category> getCategorys() {
+    return this.categorys;
+  }
+  public void addCustomer(Customer customer) {
+    this.customers.add(customer);
+  }
+  public void addCategory(Category category) {
+    this.categorys.add(category);
+  }
   public Shop() {
     this.customers = new ArrayList<Customer>();
+    this.categorys = new ArrayList<Category>();
   }
 }

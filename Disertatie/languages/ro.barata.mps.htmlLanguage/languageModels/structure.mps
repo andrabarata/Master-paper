@@ -311,6 +311,10 @@
     <property role="34LRSv" value="input" />
     <property role="3GE5qa" value="html.input" />
     <ref role="1TJDcQ" node="5a6Q6gbwnnj" resolve="HTMLValueCommand" />
+    <node concept="1TJgyi" id="3hPr9Qusg7q" role="1TKVEl">
+      <property role="TrG5h" value="type" />
+      <ref role="AX2Wp" node="4LZaFkzCGm9" resolve="TypeValue" />
+    </node>
     <node concept="PrWs8" id="49ipr3dOh3S" role="PzmwI">
       <ref role="PrY4T" node="49ipr3dOgJZ" resolve="ValueIncludedHTML" />
     </node>
@@ -354,6 +358,10 @@
     <node concept="M4N5e" id="4LZaFkzCGWb" role="M5hS2">
       <property role="1uS6qv" value="checkbox" />
       <property role="1uS6qo" value="checkbox" />
+    </node>
+    <node concept="M4N5e" id="3hPr9QuuKt7" role="M5hS2">
+      <property role="1uS6qv" value="password" />
+      <property role="1uS6qo" value="password" />
     </node>
   </node>
   <node concept="1TIwiD" id="4LZaFkzGLST">
@@ -639,6 +647,11 @@
     <property role="TrG5h" value="UserHREF" />
     <property role="34LRSv" value="outer page" />
     <ref role="1TJDcQ" node="3w$KCyM1_zY" resolve="URLValue" />
+    <node concept="1TJgyj" id="3hPr9QvRrYj" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="parameter" />
+      <ref role="20lvS9" node="5EdacSEvd3J" resolve="URLParameter" />
+    </node>
     <node concept="1TJgyi" id="3w$KCyM1__S" role="1TKVEl">
       <property role="TrG5h" value="value" />
       <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
@@ -918,6 +931,73 @@
     </node>
     <node concept="PrWs8" id="49ipr3dQUD4" role="PzmwI">
       <ref role="PrY4T" node="7KwyEUhFHXY" resolve="IAttribute" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="3hPr9Quv4kS">
+    <property role="3GE5qa" value="html.commands.operations" />
+    <property role="TrG5h" value="ReceiveOperation" />
+    <property role="34LRSv" value="Receive objects" />
+    <ref role="1TJDcQ" node="41TyEbjwOzs" resolve="AbstractOperation" />
+    <node concept="1TJgyj" id="3hPr9Quv4FH" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="operations" />
+      <property role="20lbJX" value="0..n" />
+      <ref role="20lvS9" to="jel9:41TyEbjwOBw" resolve="JavascriptOperation" />
+    </node>
+    <node concept="1TJgyj" id="3hPr9QuJrze" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="location" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="3hPr9Quv4Yf" resolve="ReceiveLocation" />
+    </node>
+    <node concept="1TJgyj" id="3hPr9Quy7z9" role="1TKVEi">
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="classReference" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" to="tpce:f_TIwhg" resolve="ConceptDeclaration" />
+    </node>
+    <node concept="PrWs8" id="3hPr9Qu$OsH" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="3hPr9Quv4Yf">
+    <property role="3GE5qa" value="html.commands.operations" />
+    <property role="R5$K7" value="true" />
+    <property role="R5$K2" value="false" />
+    <property role="TrG5h" value="ReceiveLocation" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+  </node>
+  <node concept="1TIwiD" id="3hPr9Quv4Ym">
+    <property role="3GE5qa" value="html.commands.operations" />
+    <property role="TrG5h" value="SessionLocation" />
+    <property role="34LRSv" value="session" />
+    <ref role="1TJDcQ" node="3hPr9Quv4Yf" resolve="ReceiveLocation" />
+  </node>
+  <node concept="1TIwiD" id="3hPr9Quv4YI">
+    <property role="3GE5qa" value="html.commands.operations" />
+    <property role="TrG5h" value="DatabaseLocation" />
+    <property role="34LRSv" value="database" />
+    <ref role="1TJDcQ" node="3hPr9Quv4Yf" resolve="ReceiveLocation" />
+    <node concept="1TJgyj" id="3hPr9Quv7aQ" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="queryParameter" />
+      <property role="20lbJX" value="1..n" />
+      <ref role="20lvS9" node="3hPr9Quv4Z4" resolve="QueryParameter" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="3hPr9Quv4Z4">
+    <property role="3GE5qa" value="html.commands.operations" />
+    <property role="TrG5h" value="QueryParameter" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="3hPr9Quv5cA" role="1TKVEi">
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="parameter" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" to="tpce:f_TJgxF" resolve="PropertyDeclaration" />
+    </node>
+    <node concept="1TJgyi" id="3hPr9Quv5c2" role="1TKVEl">
+      <property role="TrG5h" value="value" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
     </node>
   </node>
 </model>

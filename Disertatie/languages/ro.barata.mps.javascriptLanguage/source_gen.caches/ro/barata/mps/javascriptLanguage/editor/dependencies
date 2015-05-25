@@ -102,7 +102,7 @@
   </dependency>
   <dependency className="ro.barata.mps.javascriptLanguage.editor.ChangePageCommand_Editor" file="ChangePageCommand_Editor.java">
     <classNode dependClassName="java.lang.Class" />
-    <classNode dependClassName="jetbrains.mps.lang.editor.cellProviders.PropertyCellProvider" />
+    <classNode dependClassName="jetbrains.mps.lang.editor.cellProviders.RefNodeCellProvider" />
     <classNode dependClassName="jetbrains.mps.nodeEditor.EditorManager" />
     <classNode dependClassName="jetbrains.mps.nodeEditor.cellProviders.CellProviderWithRole" />
     <classNode dependClassName="jetbrains.mps.nodeEditor.cells.EditorCell_Collection" />
@@ -145,8 +145,11 @@
     <classNode dependClassName="ro.barata.mps.javascriptLanguage.editor.ChangePageCommand_Editor" />
     <classNode dependClassName="ro.barata.mps.javascriptLanguage.editor.DotExpressionCommand_Editor" />
     <classNode dependClassName="ro.barata.mps.javascriptLanguage.editor.ForCommand_Editor" />
+    <classNode dependClassName="ro.barata.mps.javascriptLanguage.editor.FunctionCommand_Editor" />
     <classNode dependClassName="ro.barata.mps.javascriptLanguage.editor.GetArrayValueCommand_Editor" />
+    <classNode dependClassName="ro.barata.mps.javascriptLanguage.editor.IfCommand_Editor" />
     <classNode dependClassName="ro.barata.mps.javascriptLanguage.editor.InitializeVarCommand_Editor" />
+    <classNode dependClassName="ro.barata.mps.javascriptLanguage.editor.InstanceValue_Editor" />
     <classNode dependClassName="ro.barata.mps.javascriptLanguage.editor.IntValue_Editor" />
     <classNode dependClassName="ro.barata.mps.javascriptLanguage.editor.JavascriptFile_Editor" />
     <classNode dependClassName="ro.barata.mps.javascriptLanguage.editor.JavascriptFunction_Editor" />
@@ -158,6 +161,7 @@
     <classNode dependClassName="ro.barata.mps.javascriptLanguage.editor.VarCommand_Editor" />
     <classNode dependClassName="ro.barata.mps.javascriptLanguage.editor.VarIdCommand_Editor" />
     <classNode dependClassName="ro.barata.mps.javascriptLanguage.editor.VarNameCommand_Editor" />
+    <classNode dependClassName="ro.barata.mps.javascriptLanguage.editor.VarValueHREF_Editor" />
     <classNode dependClassName="ro.barata.mps.javascriptLanguage.editor.VarValue_Editor" />
     <classNode extendsClassName="jetbrains.mps.openapi.editor.descriptor.EditorAspectDescriptor" />
   </dependency>
@@ -186,6 +190,32 @@
     <classNode dependClassName="jetbrains.mps.openapi.editor.style.Style" />
     <classNode dependClassName="jetbrains.mps.smodel.action.NodeFactoryManager" />
     <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
+    <classNode dependClassName="ro.barata.mps.javascriptLanguage.editor.JavascriptStylesheet_StyleSheet" />
+    <classNode extendsClassName="jetbrains.mps.nodeEditor.DefaultNodeEditor" />
+  </dependency>
+  <dependency className="ro.barata.mps.javascriptLanguage.editor.FunctionCommand_Editor" file="FunctionCommand_Editor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.editor.BaseLanguageStyle_StyleSheet" />
+    <classNode dependClassName="jetbrains.mps.editor.runtime.style.StyleAttributes" />
+    <classNode dependClassName="jetbrains.mps.editor.runtime.style.StyleImpl" />
+    <classNode dependClassName="jetbrains.mps.lang.editor.cellProviders.RefNodeListHandler" />
+    <classNode dependClassName="jetbrains.mps.lang.editor.cellProviders.RefNodeListHandlerElementKeyMap" />
+    <classNode dependClassName="jetbrains.mps.nodeEditor.cellActions.CellAction_DeleteNode" />
+    <classNode dependClassName="jetbrains.mps.nodeEditor.cellLayout.CellLayout_Horizontal" />
+    <classNode dependClassName="jetbrains.mps.nodeEditor.cellLayout.CellLayout_Vertical" />
+    <classNode dependClassName="jetbrains.mps.nodeEditor.cellMenu.DefaultChildSubstituteInfo" />
+    <classNode dependClassName="jetbrains.mps.nodeEditor.cellMenu.DefaultReferenceSubstituteInfo" />
+    <classNode dependClassName="jetbrains.mps.nodeEditor.cellProviders.AbstractCellListHandler" />
+    <classNode dependClassName="jetbrains.mps.nodeEditor.cells.EditorCell_Collection" />
+    <classNode dependClassName="jetbrains.mps.nodeEditor.cells.EditorCell_Constant" />
+    <classNode dependClassName="jetbrains.mps.openapi.editor.EditorContext" />
+    <classNode dependClassName="jetbrains.mps.openapi.editor.cells.CellActionType" />
+    <classNode dependClassName="jetbrains.mps.openapi.editor.cells.EditorCell" />
+    <classNode dependClassName="jetbrains.mps.openapi.editor.style.Style" />
+    <classNode dependClassName="jetbrains.mps.smodel.action.NodeFactoryManager" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
+    <classNode dependClassName="ro.barata.mps.javascriptLanguage.editor.JavascriptStylesheet_StyleSheet" />
     <classNode extendsClassName="jetbrains.mps.nodeEditor.DefaultNodeEditor" />
   </dependency>
   <dependency className="ro.barata.mps.javascriptLanguage.editor.GetArrayValueCommand_Editor" file="GetArrayValueCommand_Editor.java">
@@ -206,12 +236,56 @@
     <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
     <classNode extendsClassName="jetbrains.mps.nodeEditor.DefaultNodeEditor" />
   </dependency>
+  <dependency className="ro.barata.mps.javascriptLanguage.editor.IfCommand_Editor" file="IfCommand_Editor.java">
+    <classNode dependClassName="java.lang.Class" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.editor.BaseLanguageStyle_StyleSheet" />
+    <classNode dependClassName="jetbrains.mps.editor.runtime.style.StyleAttributes" />
+    <classNode dependClassName="jetbrains.mps.editor.runtime.style.StyleImpl" />
+    <classNode dependClassName="jetbrains.mps.lang.editor.cellProviders.PropertyCellProvider" />
+    <classNode dependClassName="jetbrains.mps.lang.editor.cellProviders.RefNodeCellProvider" />
+    <classNode dependClassName="jetbrains.mps.lang.editor.cellProviders.RefNodeListHandler" />
+    <classNode dependClassName="jetbrains.mps.nodeEditor.EditorManager" />
+    <classNode dependClassName="jetbrains.mps.nodeEditor.cellActions.CellAction_DeleteNode" />
+    <classNode dependClassName="jetbrains.mps.nodeEditor.cellLayout.CellLayout_Vertical" />
+    <classNode dependClassName="jetbrains.mps.nodeEditor.cellMenu.DefaultChildSubstituteInfo" />
+    <classNode dependClassName="jetbrains.mps.nodeEditor.cellMenu.DefaultReferenceSubstituteInfo" />
+    <classNode dependClassName="jetbrains.mps.nodeEditor.cellProviders.AbstractCellListHandler" />
+    <classNode dependClassName="jetbrains.mps.nodeEditor.cellProviders.CellProviderWithRole" />
+    <classNode dependClassName="jetbrains.mps.nodeEditor.cells.EditorCell_Collection" />
+    <classNode dependClassName="jetbrains.mps.nodeEditor.cells.EditorCell_Constant" />
+    <classNode dependClassName="jetbrains.mps.openapi.editor.EditorContext" />
+    <classNode dependClassName="jetbrains.mps.openapi.editor.cells.CellActionType" />
+    <classNode dependClassName="jetbrains.mps.openapi.editor.cells.EditorCell" />
+    <classNode dependClassName="jetbrains.mps.openapi.editor.style.Style" />
+    <classNode dependClassName="jetbrains.mps.smodel.action.NodeFactoryManager" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
+    <classNode dependClassName="ro.barata.mps.javascriptLanguage.editor.JavascriptStylesheet_StyleSheet" />
+    <classNode extendsClassName="jetbrains.mps.nodeEditor.DefaultNodeEditor" />
+  </dependency>
   <dependency className="ro.barata.mps.javascriptLanguage.editor.InitializeVarCommand_Editor" file="InitializeVarCommand_Editor.java">
     <classNode dependClassName="java.lang.Class" />
     <classNode dependClassName="jetbrains.mps.editor.runtime.style.StyleImpl" />
     <classNode dependClassName="jetbrains.mps.lang.editor.cellProviders.PropertyCellProvider" />
     <classNode dependClassName="jetbrains.mps.lang.editor.cellProviders.RefNodeCellProvider" />
     <classNode dependClassName="jetbrains.mps.nodeEditor.EditorManager" />
+    <classNode dependClassName="jetbrains.mps.nodeEditor.cellProviders.CellProviderWithRole" />
+    <classNode dependClassName="jetbrains.mps.nodeEditor.cells.EditorCell_Collection" />
+    <classNode dependClassName="jetbrains.mps.nodeEditor.cells.EditorCell_Constant" />
+    <classNode dependClassName="jetbrains.mps.openapi.editor.EditorContext" />
+    <classNode dependClassName="jetbrains.mps.openapi.editor.cells.EditorCell" />
+    <classNode dependClassName="jetbrains.mps.openapi.editor.style.Style" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
+    <classNode dependClassName="ro.barata.mps.javascriptLanguage.editor.JavascriptStylesheet_StyleSheet" />
+    <classNode extendsClassName="jetbrains.mps.nodeEditor.DefaultNodeEditor" />
+  </dependency>
+  <dependency className="ro.barata.mps.javascriptLanguage.editor.InstanceValue_Editor" file="InstanceValue_Editor.java">
+    <classNode dependClassName="java.lang.Class" />
+    <classNode dependClassName="jetbrains.mps.editor.runtime.style.StyleImpl" />
+    <classNode dependClassName="jetbrains.mps.lang.editor.cellProviders.PropertyCellProvider" />
+    <classNode dependClassName="jetbrains.mps.lang.editor.cellProviders.RefCellCellProvider" />
+    <classNode dependClassName="jetbrains.mps.nodeEditor.EditorManager" />
+    <classNode dependClassName="jetbrains.mps.nodeEditor.InlineCellProvider" />
     <classNode dependClassName="jetbrains.mps.nodeEditor.cellProviders.CellProviderWithRole" />
     <classNode dependClassName="jetbrains.mps.nodeEditor.cells.EditorCell_Collection" />
     <classNode dependClassName="jetbrains.mps.nodeEditor.cells.EditorCell_Constant" />
@@ -398,6 +472,24 @@
     <classNode dependClassName="jetbrains.mps.openapi.editor.cells.EditorCell" />
     <classNode dependClassName="jetbrains.mps.openapi.editor.style.Style" />
     <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
+    <classNode extendsClassName="jetbrains.mps.nodeEditor.DefaultNodeEditor" />
+  </dependency>
+  <dependency className="ro.barata.mps.javascriptLanguage.editor.VarValueHREF_Editor" file="VarValueHREF_Editor.java">
+    <classNode dependClassName="java.lang.Class" />
+    <classNode dependClassName="jetbrains.mps.editor.runtime.style.StyleAttributes" />
+    <classNode dependClassName="jetbrains.mps.editor.runtime.style.StyleImpl" />
+    <classNode dependClassName="jetbrains.mps.lang.editor.cellProviders.PropertyCellProvider" />
+    <classNode dependClassName="jetbrains.mps.lang.editor.cellProviders.RefCellCellProvider" />
+    <classNode dependClassName="jetbrains.mps.nodeEditor.EditorManager" />
+    <classNode dependClassName="jetbrains.mps.nodeEditor.InlineCellProvider" />
+    <classNode dependClassName="jetbrains.mps.nodeEditor.cellProviders.CellProviderWithRole" />
+    <classNode dependClassName="jetbrains.mps.nodeEditor.cells.EditorCell_Collection" />
+    <classNode dependClassName="jetbrains.mps.nodeEditor.cells.EditorCell_Constant" />
+    <classNode dependClassName="jetbrains.mps.openapi.editor.EditorContext" />
+    <classNode dependClassName="jetbrains.mps.openapi.editor.cells.EditorCell" />
+    <classNode dependClassName="jetbrains.mps.openapi.editor.style.Style" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
+    <classNode dependClassName="ro.barata.mps.javascriptLanguage.editor.JavascriptStylesheet_StyleSheet" />
     <classNode extendsClassName="jetbrains.mps.nodeEditor.DefaultNodeEditor" />
   </dependency>
   <dependency className="ro.barata.mps.javascriptLanguage.editor.VarValue_Editor" file="VarValue_Editor.java">

@@ -17,10 +17,11 @@ import jetbrains.mps.scope.Scope;
 import jetbrains.mps.smodel.IOperationContext;
 import jetbrains.mps.smodel.runtime.ReferenceConstraintsContext;
 import org.jetbrains.mps.openapi.model.SNode;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SConceptOperations;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
+import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.internal.collections.runtime.Sequence;
-import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import jetbrains.mps.scope.ListScope;
 import jetbrains.mps.internal.collections.runtime.ListSequence;
 import jetbrains.mps.lang.structure.behavior.AbstractConceptDeclaration_Behavior;
@@ -51,8 +52,13 @@ public class PropertyReference_Constraints extends BaseConstraintsDescriptor {
           @Override
           public Scope createScope(final IOperationContext operationContext, final ReferenceConstraintsContext _context) {
             {
-              SNode conceptDeclaration = SNodeOperations.cast(SLinkOperations.getTargetNode(Sequence.fromIterable(SNodeOperations.getReferences(SNodeOperations.getParent(_context.getReferenceNode()))).first()), MetaAdapterFactory.getConcept(0xc72da2b97cce4447L, 0x8389f407dc1158b7L, 0xf979ba0450L, "jetbrains.mps.lang.structure.structure.ConceptDeclaration"));
-              return new ListScope(ListSequence.fromList(AbstractConceptDeclaration_Behavior.call_getPropertyDeclarations_1213877394546(conceptDeclaration)).where(new IWhereFilter<SNode>() {
+              SNode conceptDeclaration = SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(MetaAdapterFactory.getConcept(0xc72da2b97cce4447L, 0x8389f407dc1158b7L, 0xf979ba0450L, "jetbrains.mps.lang.structure.structure.ConceptDeclaration")));
+              if (SNodeOperations.isInstanceOf(SNodeOperations.getParent(_context.getReferenceNode()), MetaAdapterFactory.getConcept(0x58b9e0aa66634086L, 0x8f84dfaa697f9989L, 0x269b49f46a624114L, "ro.barata.mps.databaseOperationsLanguage.structure.Instance"))) {
+                conceptDeclaration = SNodeOperations.cast(SLinkOperations.getTarget(SLinkOperations.getTarget(SNodeOperations.cast(SNodeOperations.getParent(SNodeOperations.getParent(_context.getReferenceNode())), MetaAdapterFactory.getConcept(0x58b9e0aa66634086L, 0x8f84dfaa697f9989L, 0x269b49f46a5d57ccL, "ro.barata.mps.databaseOperationsLanguage.structure.LinkDeclarationReference")), MetaAdapterFactory.getReferenceLink(0x58b9e0aa66634086L, 0x8f84dfaa697f9989L, 0x269b49f46a5d57ccL, 0x269b49f46a5d5dc7L, "reference")), MetaAdapterFactory.getReferenceLink(0xc72da2b97cce4447L, 0x8389f407dc1158b7L, 0xf979bd086aL, 0xf98055fef0L, "target")), MetaAdapterFactory.getConcept(0xc72da2b97cce4447L, 0x8389f407dc1158b7L, 0xf979ba0450L, "jetbrains.mps.lang.structure.structure.ConceptDeclaration"));
+              } else {
+                conceptDeclaration = SNodeOperations.cast(SLinkOperations.getTargetNode(Sequence.fromIterable(SNodeOperations.getReferences(SNodeOperations.getParent(_context.getReferenceNode()))).first()), MetaAdapterFactory.getConcept(0xc72da2b97cce4447L, 0x8389f407dc1158b7L, 0xf979ba0450L, "jetbrains.mps.lang.structure.structure.ConceptDeclaration"));
+              }
+              return new ListScope(ListSequence.fromList(AbstractConceptDeclaration_Behavior.call_getPropertyDeclarations_1213877394546(SNodeOperations.cast(conceptDeclaration, MetaAdapterFactory.getConcept(0xc72da2b97cce4447L, 0x8389f407dc1158b7L, 0xf979ba0450L, "jetbrains.mps.lang.structure.structure.ConceptDeclaration")))).where(new IWhereFilter<SNode>() {
                 public boolean accept(SNode it) {
                   return !(SPropertyOperations.hasValue(it, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "alias")) & !(SPropertyOperations.hasValue(it, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "shortDescription")) & !(SPropertyOperations.hasValue(it, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "virtualPackage"));
                 }

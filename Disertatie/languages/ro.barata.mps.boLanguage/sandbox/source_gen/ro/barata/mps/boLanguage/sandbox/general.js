@@ -15,9 +15,9 @@ return false;
 }
 }ajaxRequest.onreadystatechange = function(){
 if(ajaxRequest.readyState == 4){
-if (typeof refreshFunction!="undefined")
-refreshFunction();
-else
+if (typeof refreshFunction!="undefined"){
+var jsonObj = JSON.parse(ajaxRequest.responseText);
+refreshFunction(jsonObj);}else
 document.documentElement.innerHTML = ajaxRequest.responseText;
 }
 };

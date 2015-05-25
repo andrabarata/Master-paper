@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <debug-info>
   <concept fqn="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+  <concept fqn="jetbrains.mps.baseLanguage.structure.ForeachStatement" />
   <concept fqn="jetbrains.mps.baseLanguage.structure.IfStatement" />
   <concept fqn="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" />
   <concept fqn="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
@@ -12,7 +13,7 @@
       <unit at="7,0,15,0" name="ro.barata.mps.databaseOperationsLanguage.behavior.AbstractValue_BehaviorDescriptor" />
     </file>
     <file name="BehaviorAspectDescriptor.java">
-      <unit at="9,0,36,0" name="ro.barata.mps.databaseOperationsLanguage.behavior.BehaviorAspectDescriptor" />
+      <unit at="9,0,40,0" name="ro.barata.mps.databaseOperationsLanguage.behavior.BehaviorAspectDescriptor" />
     </file>
     <file name="BooleanValue_BehaviorDescriptor.java">
       <unit at="6,0,14,0" name="ro.barata.mps.databaseOperationsLanguage.behavior.BooleanValue_BehaviorDescriptor" />
@@ -26,8 +27,14 @@
     <file name="InsertOperation_BehaviorDescriptor.java">
       <unit at="6,0,14,0" name="ro.barata.mps.databaseOperationsLanguage.behavior.InsertOperation_BehaviorDescriptor" />
     </file>
+    <file name="Instance_BehaviorDescriptor.java">
+      <unit at="7,0,15,0" name="ro.barata.mps.databaseOperationsLanguage.behavior.Instance_BehaviorDescriptor" />
+    </file>
     <file name="IntValue_BehaviorDescriptor.java">
       <unit at="6,0,14,0" name="ro.barata.mps.databaseOperationsLanguage.behavior.IntValue_BehaviorDescriptor" />
+    </file>
+    <file name="LinkDeclarationReference_BehaviorDescriptor.java">
+      <unit at="7,0,15,0" name="ro.barata.mps.databaseOperationsLanguage.behavior.LinkDeclarationReference_BehaviorDescriptor" />
     </file>
     <file name="Operation_BehaviorDescriptor.java">
       <unit at="7,0,15,0" name="ro.barata.mps.databaseOperationsLanguage.behavior.Operation_BehaviorDescriptor" />
@@ -42,21 +49,93 @@
       <unit at="6,0,14,0" name="ro.barata.mps.databaseOperationsLanguage.behavior.UpdateOperation_BehaviorDescriptor" />
     </file>
   </root>
+  <root nodeRef="r:6c72f60b-c4e8-4881-ae9b-6da67386d5ad(ro.barata.mps.databaseOperationsLanguage.behavior)/3941553559192742764">
+    <file name="InsertOperation_Behavior.java">
+      <node id="3941553559192789175" at="13,198,14,87" concept="0" />
+      <node id="3941553559192742764" at="10,0,12,0" concept="7" trace="init#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <node id="3941553559192742805" at="12,73,15,5" concept="1" />
+      <node id="3941553559192742764" at="12,0,17,0" concept="7" trace="call_addDepths_3941553559192742794#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <scope id="3941553559192742766" at="10,43,10,43" />
+      <scope id="3941553559192742807" at="13,198,14,87" />
+      <scope id="3941553559192742764" at="10,0,12,0">
+        <var name="thisNode" id="3941553559192742764" />
+      </scope>
+      <scope id="3941553559192742796" at="12,73,15,5" />
+      <scope id="3941553559192742805" at="12,73,15,5">
+        <var name="ref" id="3941553559192742806" />
+      </scope>
+      <scope id="3941553559192742764" at="12,0,17,0">
+        <var name="thisNode" id="3941553559192742764" />
+      </scope>
+      <unit id="3941553559192742764" at="9,0,18,0" name="ro.barata.mps.databaseOperationsLanguage.behavior.InsertOperation_Behavior" />
+    </file>
+  </root>
+  <root nodeRef="r:6c72f60b-c4e8-4881-ae9b-6da67386d5ad(ro.barata.mps.databaseOperationsLanguage.behavior)/3941553559192771560">
+    <file name="LinkDeclarationReference_Behavior.java">
+      <node id="3941553559192753827" at="13,88,14,177" concept="0" />
+      <node id="3941553559192787541" at="15,202,16,14" concept="0" />
+      <node id="3941553559192786000" at="17,202,18,95" concept="0" />
+      <node id="3941553559192771560" at="11,0,13,0" concept="7" trace="init#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <node id="3941553559192780802" at="16,14,19,7" concept="1" />
+      <node id="3941553559192756505" at="14,177,20,5" concept="1" />
+      <node id="3941553559192771560" at="13,0,22,0" concept="7" trace="call_addLinkDepths_3941553559192751486#(Lorg/jetbrains/mps/openapi/model/SNode;I)V" />
+      <scope id="3941553559192771562" at="11,43,11,43" />
+      <scope id="3941553559192780804" at="17,202,18,95" />
+      <scope id="3941553559192771560" at="11,0,13,0">
+        <var name="thisNode" id="3941553559192771560" />
+      </scope>
+      <scope id="3941553559192780802" at="16,14,19,7">
+        <var name="child" id="3941553559192780805" />
+      </scope>
+      <scope id="3941553559192756507" at="15,202,19,7" />
+      <scope id="3941553559192756505" at="14,177,20,5">
+        <var name="instance" id="3941553559192756508" />
+      </scope>
+      <scope id="3941553559192751488" at="13,88,20,5" />
+      <scope id="3941553559192771560" at="13,0,22,0">
+        <var name="level" id="3941553559192753800" />
+        <var name="thisNode" id="3941553559192771560" />
+      </scope>
+      <unit id="3941553559192771560" at="10,0,23,0" name="ro.barata.mps.databaseOperationsLanguage.behavior.LinkDeclarationReference_Behavior" />
+    </file>
+  </root>
+  <root nodeRef="r:6c72f60b-c4e8-4881-ae9b-6da67386d5ad(ro.barata.mps.databaseOperationsLanguage.behavior)/3941553559213698796">
+    <file name="UpdateOperation_Behavior.java">
+      <node id="3941553559213698889" at="13,198,14,87" concept="0" />
+      <node id="3941553559213698796" at="10,0,12,0" concept="7" trace="init#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <node id="3941553559213698885" at="12,73,15,5" concept="1" />
+      <node id="3941553559213698796" at="12,0,17,0" concept="7" trace="call_addDepths_3941553559213698882#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <scope id="3941553559213698798" at="10,43,10,43" />
+      <scope id="3941553559213698888" at="13,198,14,87" />
+      <scope id="3941553559213698796" at="10,0,12,0">
+        <var name="thisNode" id="3941553559213698796" />
+      </scope>
+      <scope id="3941553559213698884" at="12,73,15,5" />
+      <scope id="3941553559213698885" at="12,73,15,5">
+        <var name="ref" id="3941553559213698886" />
+      </scope>
+      <scope id="3941553559213698796" at="12,0,17,0">
+        <var name="thisNode" id="3941553559213698796" />
+      </scope>
+      <unit id="3941553559213698796" at="9,0,18,0" name="ro.barata.mps.databaseOperationsLanguage.behavior.UpdateOperation_Behavior" />
+    </file>
+  </root>
   <root nodeRef="r:6c72f60b-c4e8-4881-ae9b-6da67386d5ad(ro.barata.mps.databaseOperationsLanguage.behavior)/6352133620898804132">
     <file name="DBCommands_Behavior.java">
-      <node id="6352133620898804937" at="18,88,19,81" concept="3" />
-      <node id="6352133620898873991" at="21,41,22,72" concept="3" />
+      <node id="6352133620898804937" at="18,88,19,81" concept="4" />
+      <node id="6352133620898873991" at="21,41,22,72" concept="4" />
       <node id="6352133620898894053" at="25,631,26,36" concept="0" />
       <node id="6352133620898899558" at="30,32,31,59" concept="0" />
-      <node id="6352133620898806622" at="34,7,35,22" concept="4" />
-      <node id="6352133620898804132" at="16,0,18,0" concept="6" trace="init#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
-      <node id="6352133620898875510" at="24,40,27,13" concept="1" />
-      <node id="6352133620898898484" at="29,11,32,9" concept="1" />
-      <node id="6352133620898872855" at="24,0,29,0" concept="2" trace="visit#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <node id="2781898508937471140" at="34,7,35,0" concept="6" />
+      <node id="6352133620898806622" at="35,0,36,22" concept="5" />
+      <node id="6352133620898804132" at="16,0,18,0" concept="7" trace="init#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <node id="6352133620898875510" at="24,40,27,13" concept="2" />
+      <node id="6352133620898898484" at="29,11,32,9" concept="2" />
+      <node id="6352133620898872855" at="24,0,29,0" concept="3" trace="visit#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
       <node id="6352133620898845206" at="22,72,29,11" concept="0" />
-      <node id="6352133620898819557" at="21,0,34,0" concept="2" trace="visit#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <node id="6352133620898819557" at="21,0,34,0" concept="3" trace="visit#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
       <node id="6352133620898806830" at="19,81,34,7" concept="0" />
-      <node id="6352133620898804132" at="18,0,37,0" concept="6" trace="call_getNonDupplicates_6352133620898804729#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljava/util/List;" />
+      <node id="6352133620898804132" at="18,0,38,0" concept="7" trace="call_getNonDupplicates_6352133620898804729#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljava/util/List;" />
       <scope id="6352133620898804134" at="16,43,16,43" />
       <scope id="6352133620898875512" at="25,631,26,36" />
       <scope id="6352133620898898486" at="30,32,31,59" />
@@ -73,26 +152,26 @@
       <scope id="6352133620898819557" at="21,0,34,0">
         <var name="it" id="6352133620898819557" />
       </scope>
-      <scope id="6352133620898804731" at="18,88,35,22">
+      <scope id="6352133620898804731" at="18,88,36,22">
         <var name="operations" id="6352133620898804940" />
       </scope>
-      <scope id="6352133620898804132" at="18,0,37,0">
+      <scope id="6352133620898804132" at="18,0,38,0">
         <var name="thisNode" id="6352133620898804132" />
       </scope>
       <unit id="6352133620898872855" at="23,55,29,9" name="ro.barata.mps.databaseOperationsLanguage.behavior.DBCommands_Behavior$2" />
       <unit id="6352133620898819557" at="20,215,34,5" name="ro.barata.mps.databaseOperationsLanguage.behavior.DBCommands_Behavior$1" />
-      <unit id="6352133620898804132" at="15,0,38,0" name="ro.barata.mps.databaseOperationsLanguage.behavior.DBCommands_Behavior" />
+      <unit id="6352133620898804132" at="15,0,39,0" name="ro.barata.mps.databaseOperationsLanguage.behavior.DBCommands_Behavior" />
     </file>
   </root>
   <root nodeRef="r:6c72f60b-c4e8-4881-ae9b-6da67386d5ad(ro.barata.mps.databaseOperationsLanguage.behavior)/6352133620899896204">
     <file name="PropertyReference_Behavior.java">
-      <node id="6352133620899896360" at="13,80,14,336" concept="3" />
-      <node id="6352133620899896370" at="14,336,15,64" concept="3" />
-      <node id="6352133620899896380" at="15,64,16,65" concept="3" />
-      <node id="6352133620899896390" at="16,65,17,44" concept="4" />
-      <node id="6352133620899896396" at="17,44,18,0" concept="5" />
-      <node id="6352133620899896204" at="11,0,13,0" concept="6" trace="init#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
-      <node id="6352133620899896204" at="13,0,20,0" concept="6" trace="call_generateSetter_6352133620899896357#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljava/lang/String;" />
+      <node id="6352133620899896360" at="13,80,14,336" concept="4" />
+      <node id="6352133620899896370" at="14,336,15,64" concept="4" />
+      <node id="6352133620899896380" at="15,64,16,65" concept="4" />
+      <node id="6352133620899896390" at="16,65,17,44" concept="5" />
+      <node id="6352133620899896396" at="17,44,18,0" concept="6" />
+      <node id="6352133620899896204" at="11,0,13,0" concept="7" trace="init#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <node id="6352133620899896204" at="13,0,20,0" concept="7" trace="call_generateSetter_6352133620899896357#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljava/lang/String;" />
       <scope id="6352133620899896206" at="11,43,11,43" />
       <scope id="6352133620899896204" at="11,0,13,0">
         <var name="thisNode" id="6352133620899896204" />

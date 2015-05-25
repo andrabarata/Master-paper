@@ -46,10 +46,11 @@ public class AjaxJavascriptFunction_TextGen extends SNodeTextGen {
     this.appendNewLine();
     this.append("if(ajaxRequest.readyState == 4){");
     this.appendNewLine();
-    this.append("if (typeof refreshFunction!=\"undefined\")");
+    this.append("if (typeof refreshFunction!=\"undefined\"){");
     this.appendNewLine();
-    this.append("refreshFunction();");
+    this.append("var jsonObj = JSON.parse(ajaxRequest.responseText);");
     this.appendNewLine();
+    this.append("refreshFunction(jsonObj);}");
     this.append("else");
     this.appendNewLine();
     this.append("document.documentElement.innerHTML = ajaxRequest.responseText;");

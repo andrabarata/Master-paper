@@ -10,7 +10,8 @@ public enum TypeValue {
   button("button", "button"),
   text("text", "text"),
   radio("radio", "radio"),
-  checkbox("checkbox", "checkbox");
+  checkbox("checkbox", "checkbox"),
+  password("password", "password");
 
   private String myName;
   public String getName() {
@@ -25,6 +26,7 @@ public enum TypeValue {
     ListSequence.fromList(list).addElement(TypeValue.text);
     ListSequence.fromList(list).addElement(TypeValue.radio);
     ListSequence.fromList(list).addElement(TypeValue.checkbox);
+    ListSequence.fromList(list).addElement(TypeValue.password);
     return list;
   }
   public static TypeValue getDefault() {
@@ -45,6 +47,9 @@ public enum TypeValue {
     }
     if (value.equals(TypeValue.checkbox.getValueAsString())) {
       return TypeValue.checkbox;
+    }
+    if (value.equals(TypeValue.password.getValueAsString())) {
+      return TypeValue.password;
     }
     return TypeValue.getDefault();
   }

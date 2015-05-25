@@ -10,6 +10,7 @@ public class TestPageGenerator {
     String parameters = "";
     html += "<head>";
     html += "<script src=\"general.js\"></script>";
+    html += "<link rel=\"stylesheet\" type=\"text/css\" href=\"" + "main" + ".css\"/>";
     html += "</head>";
     html += "<body>";
     parameters = "";

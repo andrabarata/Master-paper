@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <debug-info>
+  <concept fqn="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+  <concept fqn="jetbrains.mps.baseLanguage.structure.ForeachStatement" />
+  <concept fqn="jetbrains.mps.baseLanguage.structure.IfStatement" />
+  <concept fqn="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" />
   <concept fqn="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
   <concept fqn="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+  <concept fqn="jetbrains.mps.baseLanguage.structure.Statement" />
   <concept fqn="jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" />
   <root>
     <file name="Attribute_BehaviorDescriptor.java">
@@ -20,7 +25,7 @@
       <unit at="7,0,15,0" name="ro.barata.mps.rootLanguage.behavior.DAOEntityMapper_BehaviorDescriptor" />
     </file>
     <file name="DAOEntity_BehaviorDescriptor.java">
-      <unit at="6,0,14,0" name="ro.barata.mps.rootLanguage.behavior.DAOEntity_BehaviorDescriptor" />
+      <unit at="7,0,15,0" name="ro.barata.mps.rootLanguage.behavior.DAOEntity_BehaviorDescriptor" />
     </file>
     <file name="DAOMapping_BehaviorDescriptor.java">
       <unit at="7,0,15,0" name="ro.barata.mps.rootLanguage.behavior.DAOMapping_BehaviorDescriptor" />
@@ -61,12 +66,12 @@
   </root>
   <root nodeRef="r:330110a4-0a87-4cc0-a72b-63c9198f45d4(ro.barata.mps.rootLanguage.behavior)/2715870822990233208">
     <file name="DAOPropertyMapper_Behavior.java">
-      <node id="2715870822990032981" at="13,85,14,335" concept="0" />
-      <node id="2715870822990039756" at="14,335,15,64" concept="0" />
-      <node id="2715870822990068021" at="15,64,16,65" concept="0" />
-      <node id="2715870822990241917" at="16,65,17,36" concept="1" />
-      <node id="2715870822990233208" at="11,0,13,0" concept="2" trace="init#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
-      <node id="2715870822990233208" at="13,0,19,0" concept="2" trace="call_getMappingCamelName_2715870822990233265#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljava/lang/String;" />
+      <node id="2715870822990032981" at="13,85,14,335" concept="4" />
+      <node id="2715870822990039756" at="14,335,15,64" concept="4" />
+      <node id="2715870822990068021" at="15,64,16,65" concept="4" />
+      <node id="2715870822990241917" at="16,65,17,36" concept="5" />
+      <node id="2715870822990233208" at="11,0,13,0" concept="7" trace="init#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <node id="2715870822990233208" at="13,0,19,0" concept="7" trace="call_getMappingCamelName_2715870822990233265#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljava/lang/String;" />
       <scope id="2715870822990233210" at="11,43,11,43" />
       <scope id="2715870822990233208" at="11,0,13,0">
         <var name="thisNode" id="2715870822990233208" />
@@ -82,14 +87,166 @@
       <unit id="2715870822990233208" at="10,0,20,0" name="ro.barata.mps.rootLanguage.behavior.DAOPropertyMapper_Behavior" />
     </file>
   </root>
+  <root nodeRef="r:330110a4-0a87-4cc0-a72b-63c9198f45d4(ro.barata.mps.rootLanguage.behavior)/2781898508939471183">
+    <file name="DAOEntity_Behavior.java">
+      <node id="1706155229854085201" at="19,88,20,233" concept="4" />
+      <node id="1706155229854085210" at="20,233,21,79" concept="4" />
+      <node id="1706155229854085233" at="26,703,27,61" concept="0" />
+      <node id="2781898508939656547" at="32,7,33,20" concept="5" />
+      <node id="2781898508939471183" at="17,0,19,0" concept="7" trace="init#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <node id="1706155229854085231" at="25,39,28,13" concept="2" />
+      <node id="1706155229854085229" at="25,0,30,0" concept="3" trace="visit#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <node id="1706155229854085223" at="23,35,30,11" concept="0" />
+      <node id="1706155229854085221" at="23,0,32,0" concept="3" trace="visit#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <node id="1706155229854085217" at="21,79,32,7" concept="0" />
+      <node id="2781898508939471183" at="19,0,35,0" concept="7" trace="call_getChildren_2781898508939655052#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljava/util/List;" />
+      <scope id="2781898508939471185" at="17,43,17,43" />
+      <scope id="1706155229854085232" at="26,703,27,61" />
+      <scope id="2781898508939471183" at="17,0,19,0">
+        <var name="thisNode" id="2781898508939471183" />
+      </scope>
+      <scope id="1706155229854085230" at="25,39,28,13" />
+      <scope id="1706155229854085229" at="25,0,30,0">
+        <var name="it" id="1706155229854085229" />
+      </scope>
+      <scope id="1706155229854085222" at="23,35,30,11" />
+      <scope id="1706155229854085221" at="23,0,32,0">
+        <var name="it" id="1706155229854085221" />
+      </scope>
+      <scope id="2781898508939655054" at="19,88,33,20">
+        <var name="children" id="1706155229854085211" />
+        <var name="entities" id="1706155229854085202" />
+      </scope>
+      <scope id="2781898508939471183" at="19,0,35,0">
+        <var name="thisNode" id="2781898508939471183" />
+      </scope>
+      <unit id="1706155229854085229" at="24,215,30,9" name="ro.barata.mps.rootLanguage.behavior.DAOEntity_Behavior$2" />
+      <unit id="1706155229854085221" at="22,49,32,5" name="ro.barata.mps.rootLanguage.behavior.DAOEntity_Behavior$1" />
+      <unit id="2781898508939471183" at="16,0,36,0" name="ro.barata.mps.rootLanguage.behavior.DAOEntity_Behavior" />
+    </file>
+  </root>
+  <root nodeRef="r:330110a4-0a87-4cc0-a72b-63c9198f45d4(ro.barata.mps.rootLanguage.behavior)/3941553559190004637">
+    <file name="DAOReferenceMapper_Behavior.java">
+      <node id="3941553559190005114" at="20,89,21,78" concept="4" />
+      <node id="3941553559190005132" at="23,39,24,894" concept="5" />
+      <node id="3941553559190005156" at="27,36,28,51" concept="4" />
+      <node id="3941553559190005162" at="28,51,29,307" concept="0" />
+      <node id="3941553559190005170" at="29,307,30,56" concept="0" />
+      <node id="3941553559190005177" at="32,7,33,19" concept="5" />
+      <node id="3941553559190005179" at="33,19,34,0" concept="6" />
+      <node id="3941553559190004637" at="18,0,20,0" concept="7" trace="init#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <node id="3941553559190005130" at="23,0,26,0" concept="3" trace="accept#(Lorg/jetbrains/mps/openapi/model/SNode;)Z" />
+      <node id="3941553559190005154" at="27,0,32,0" concept="3" trace="visit#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <node id="3941553559190005121" at="21,78,32,7" concept="0" />
+      <node id="3941553559190004637" at="20,0,36,0" concept="7" trace="call_getPKMappers_3941553559190005111#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljava/util/List;" />
+      <scope id="3941553559190004639" at="18,43,18,43" />
+      <scope id="3941553559190005131" at="23,39,24,894" />
+      <scope id="3941553559190004637" at="18,0,20,0">
+        <var name="thisNode" id="3941553559190004637" />
+      </scope>
+      <scope id="3941553559190005130" at="23,0,26,0">
+        <var name="it" id="3941553559190005130" />
+      </scope>
+      <scope id="3941553559190005155" at="27,36,30,56">
+        <var name="copy" id="3941553559190005157" />
+      </scope>
+      <scope id="3941553559190005154" at="27,0,32,0">
+        <var name="it2" id="3941553559190005154" />
+      </scope>
+      <scope id="3941553559190005113" at="20,89,34,0">
+        <var name="mappers" id="3941553559190005115" />
+      </scope>
+      <scope id="3941553559190004637" at="20,0,36,0">
+        <var name="thisNode" id="3941553559190004637" />
+      </scope>
+      <unit id="3941553559190005130" at="22,248,26,5" name="ro.barata.mps.rootLanguage.behavior.DAOReferenceMapper_Behavior$1" />
+      <unit id="3941553559190005154" at="26,20,32,5" name="ro.barata.mps.rootLanguage.behavior.DAOReferenceMapper_Behavior$2" />
+      <unit id="3941553559190004637" at="17,0,37,0" name="ro.barata.mps.rootLanguage.behavior.DAOReferenceMapper_Behavior" />
+    </file>
+  </root>
+  <root nodeRef="r:330110a4-0a87-4cc0-a72b-63c9198f45d4(ro.barata.mps.rootLanguage.behavior)/3941553559194689520">
+    <file name="DAOEntityMapper_Behavior.java">
+      <node id="3941553559194689612" at="18,93,19,78" concept="4" />
+      <node id="3941553559194736425" at="24,505,25,60" concept="0" />
+      <node id="3941553559194754907" at="30,7,31,19" concept="5" />
+      <node id="3941553559198977744" at="33,107,34,78" concept="4" />
+      <node id="3941553559202079362" at="39,505,40,218" concept="4" />
+      <node id="3941553559202210205" at="40,218,41,197" concept="0" />
+      <node id="3941553559202152847" at="43,509,44,260" concept="0" />
+      <node id="3941553559198977774" at="46,15,47,64" concept="0" />
+      <node id="3941553559198977792" at="52,7,53,19" concept="5" />
+      <node id="3941553559194689520" at="16,0,18,0" concept="7" trace="init#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <node id="3941553559194725989" at="23,40,26,13" concept="2" />
+      <node id="3941553559202096555" at="42,366,45,17" concept="2" />
+      <node id="3941553559194725029" at="23,0,28,0" concept="3" trace="visit#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <node id="3941553559202086989" at="41,197,46,15" concept="1" />
+      <node id="3941553559194706775" at="21,41,28,11" concept="0" />
+      <node id="3941553559194706397" at="21,0,30,0" concept="3" trace="visit#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <node id="3941553559198977771" at="38,40,48,13" concept="2" />
+      <node id="3941553559194689733" at="19,78,30,7" concept="0" />
+      <node id="3941553559198977769" at="38,0,50,0" concept="3" trace="visit#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <node id="3941553559198977761" at="36,41,50,11" concept="0" />
+      <node id="3941553559194689520" at="18,0,33,0" concept="7" trace="call_getParentMappers_3941553559194689577#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljava/util/List;" />
+      <node id="3941553559198977759" at="36,0,52,0" concept="3" trace="visit#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <node id="3941553559198977751" at="34,78,52,7" concept="0" />
+      <node id="3941553559194689520" at="33,0,55,0" concept="7" trace="call_getParents_3941553559198977741#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;)Ljava/util/List;" />
+      <scope id="3941553559194689522" at="16,43,16,43" />
+      <scope id="3941553559194725991" at="24,505,25,60" />
+      <scope id="3941553559202096557" at="43,509,44,260" />
+      <scope id="3941553559194689520" at="16,0,18,0">
+        <var name="thisNode" id="3941553559194689520" />
+      </scope>
+      <scope id="3941553559194725030" at="23,40,26,13" />
+      <scope id="3941553559202086991" at="42,366,45,17" />
+      <scope id="3941553559194725029" at="23,0,28,0">
+        <var name="it2" id="3941553559194725029" />
+      </scope>
+      <scope id="3941553559202086989" at="41,197,46,15">
+        <var name="child" id="3941553559202086992" />
+      </scope>
+      <scope id="3941553559194706398" at="21,41,28,11" />
+      <scope id="3941553559198977772" at="39,505,47,64">
+        <var name="entity" id="3941553559202079365" />
+      </scope>
+      <scope id="3941553559194706397" at="21,0,30,0">
+        <var name="it" id="3941553559194706397" />
+      </scope>
+      <scope id="3941553559198977770" at="38,40,48,13" />
+      <scope id="3941553559198977769" at="38,0,50,0">
+        <var name="it2" id="3941553559198977769" />
+      </scope>
+      <scope id="3941553559194689579" at="18,93,31,19">
+        <var name="mappers" id="3941553559194689615" />
+      </scope>
+      <scope id="3941553559198977760" at="36,41,50,11" />
+      <scope id="3941553559194689520" at="18,0,33,0">
+        <var name="thisNode" id="3941553559194689520" />
+      </scope>
+      <scope id="3941553559198977759" at="36,0,52,0">
+        <var name="it" id="3941553559198977759" />
+      </scope>
+      <scope id="3941553559198977743" at="33,107,53,19">
+        <var name="mappers" id="3941553559198977745" />
+      </scope>
+      <scope id="3941553559194689520" at="33,0,55,0">
+        <var name="mapper" id="3941553559202070095" />
+        <var name="thisNode" id="3941553559194689520" />
+      </scope>
+      <unit id="3941553559194725029" at="22,375,28,9" name="ro.barata.mps.rootLanguage.behavior.DAOEntityMapper_Behavior$2" />
+      <unit id="3941553559194706397" at="20,249,30,5" name="ro.barata.mps.rootLanguage.behavior.DAOEntityMapper_Behavior$1" />
+      <unit id="3941553559198977769" at="37,375,50,9" name="ro.barata.mps.rootLanguage.behavior.DAOEntityMapper_Behavior$3" />
+      <unit id="3941553559198977759" at="35,249,52,5" name="ro.barata.mps.rootLanguage.behavior.DAOEntityMapper_Behavior$2" />
+      <unit id="3941553559194689520" at="15,0,56,0" name="ro.barata.mps.rootLanguage.behavior.DAOEntityMapper_Behavior" />
+    </file>
+  </root>
   <root nodeRef="r:330110a4-0a87-4cc0-a72b-63c9198f45d4(ro.barata.mps.rootLanguage.behavior)/7227310691964504579">
     <file name="Attribute_Behavior.java">
-      <node id="7227310691964504583" at="12,78,13,176" concept="0" />
-      <node id="7227310691964504591" at="13,176,14,64" concept="0" />
-      <node id="7227310691964504601" at="14,64,15,65" concept="0" />
-      <node id="7227310691964504613" at="15,65,16,36" concept="1" />
-      <node id="7227310691964504579" at="10,0,12,0" concept="2" trace="init#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
-      <node id="7227310691964504579" at="12,0,18,0" concept="2" trace="call_getCamelName_7227310691964504580#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljava/lang/String;" />
+      <node id="7227310691964504583" at="12,78,13,176" concept="4" />
+      <node id="7227310691964504591" at="13,176,14,64" concept="4" />
+      <node id="7227310691964504601" at="14,64,15,65" concept="4" />
+      <node id="7227310691964504613" at="15,65,16,36" concept="5" />
+      <node id="7227310691964504579" at="10,0,12,0" concept="7" trace="init#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <node id="7227310691964504579" at="12,0,18,0" concept="7" trace="call_getCamelName_7227310691964504580#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljava/lang/String;" />
       <scope id="7227310691964504619" at="10,43,10,43" />
       <scope id="7227310691964504579" at="10,0,12,0">
         <var name="thisNode" id="7227310691964504579" />

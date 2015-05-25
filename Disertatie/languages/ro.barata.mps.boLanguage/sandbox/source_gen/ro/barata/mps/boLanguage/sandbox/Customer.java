@@ -6,21 +6,25 @@ package ro.barata.mps.boLanguage.sandbox;
 public class Customer {
   private Integer customerId;
   private Person person;
-
+  private Shop parentShop;
   public void setCustomerId(Integer attribute) {
     this.customerId = attribute;
   }
   public void setPerson(Person entity) {
     this.person = entity;
   }
-
   public Integer getCustomerId() {
     return this.customerId;
+  }
+  public void setParentShop(Shop entity) {
+    this.parentShop = entity;
   }
   public Person getPerson() {
     return this.person;
   }
-
+  public Shop getParentShop() {
+    return this.parentShop;
+  }
   public Customer() {
   }
 }
