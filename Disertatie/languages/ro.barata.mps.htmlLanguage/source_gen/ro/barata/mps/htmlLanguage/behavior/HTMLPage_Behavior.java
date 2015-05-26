@@ -8,6 +8,11 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import jetbrains.mps.internal.collections.runtime.ListSequence;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.internal.collections.runtime.IWhereFilter;
+import java.util.List;
+import java.util.ArrayList;
+import jetbrains.mps.internal.collections.runtime.IVisitor;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
+import jetbrains.mps.baseLanguage.closures.runtime.Wrappers;
 
 public class HTMLPage_Behavior {
   public static void init(SNode thisNode) {
@@ -21,5 +26,61 @@ public class HTMLPage_Behavior {
         return SPropertyOperations.hasValue(it, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), htmlTileName);
       }
     }).isNotEmpty());
+  }
+  public static List<SNode> call_getReceiveNonDupplicates_3780046886500360159(SNode thisNode) {
+    final List<SNode> operations = ListSequence.fromList(new ArrayList<SNode>());
+    ListSequence.fromList(SLinkOperations.getChildren(thisNode, MetaAdapterFactory.getContainmentLink(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x233f341bd1c976e1L, 0x4c7f2ab523e43958L, "actions"))).visitAll(new IVisitor<SNode>() {
+      public void visit(SNode action) {
+
+        ListSequence.fromList(SLinkOperations.getChildren(action, MetaAdapterFactory.getContainmentLink(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x4c7f2ab523e3fae4L, 0x40798aa2d3833ccdL, "operations"))).where(new IWhereFilter<SNode>() {
+          public boolean accept(SNode it) {
+            return SNodeOperations.isInstanceOf(it, MetaAdapterFactory.getConcept(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x34756c9d9e7c4538L, "ro.barata.mps.htmlLanguage.structure.ReceiveOperation"));
+          }
+        }).visitAll(new IVisitor<SNode>() {
+          public void visit(final SNode it) {
+            final Wrappers._boolean contains = new Wrappers._boolean(false);
+            ListSequence.fromList(operations).visitAll(new IVisitor<SNode>() {
+              public void visit(SNode it2) {
+                if (SPropertyOperations.hasValue(SLinkOperations.getTarget(it2, MetaAdapterFactory.getReferenceLink(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x34756c9d9e7c4538L, 0x34756c9d9e8878c9L, "classReference")), MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), SPropertyOperations.getString(SLinkOperations.getTarget(SNodeOperations.cast(it, MetaAdapterFactory.getConcept(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x34756c9d9e7c4538L, "ro.barata.mps.htmlLanguage.structure.ReceiveOperation")), MetaAdapterFactory.getReferenceLink(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x34756c9d9e7c4538L, 0x34756c9d9e8878c9L, "classReference")), MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name")))) {
+                  contains.value = true;
+                }
+              }
+            });
+            if (!(contains.value)) {
+              ListSequence.fromList(operations).addElement(SNodeOperations.cast(it, MetaAdapterFactory.getConcept(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x34756c9d9e7c4538L, "ro.barata.mps.htmlLanguage.structure.ReceiveOperation")));
+            }
+          }
+        });
+      }
+    });
+    return operations;
+  }
+  public static List<SNode> call_getDBNonDupplicates_6355225720458970057(SNode thisNode) {
+    final List<SNode> operations = ListSequence.fromList(new ArrayList<SNode>());
+    ListSequence.fromList(SLinkOperations.getChildren(thisNode, MetaAdapterFactory.getContainmentLink(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x233f341bd1c976e1L, 0x4c7f2ab523e43958L, "actions"))).visitAll(new IVisitor<SNode>() {
+      public void visit(SNode action) {
+
+        ListSequence.fromList(SLinkOperations.getChildren(action, MetaAdapterFactory.getContainmentLink(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x4c7f2ab523e3fae4L, 0x40798aa2d3833ccdL, "operations"))).where(new IWhereFilter<SNode>() {
+          public boolean accept(SNode it) {
+            return SNodeOperations.isInstanceOf(it, MetaAdapterFactory.getConcept(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x40798aa2d38348a2L, "ro.barata.mps.htmlLanguage.structure.DatabaseOperation"));
+          }
+        }).visitAll(new IVisitor<SNode>() {
+          public void visit(final SNode it) {
+            final Wrappers._boolean contains = new Wrappers._boolean(false);
+            ListSequence.fromList(operations).visitAll(new IVisitor<SNode>() {
+              public void visit(SNode it2) {
+                if (SPropertyOperations.hasValue(SLinkOperations.getTarget(SLinkOperations.getTarget(it2, MetaAdapterFactory.getContainmentLink(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x40798aa2d38348a2L, 0x40798aa2d3834946L, "command")), MetaAdapterFactory.getReferenceLink(0x58b9e0aa66634086L, 0x8f84dfaa697f9989L, 0x58274fdf875ad2a1L, 0x58274fdf875b2b4cL, "object")), MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(SNodeOperations.cast(it, MetaAdapterFactory.getConcept(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x40798aa2d38348a2L, "ro.barata.mps.htmlLanguage.structure.DatabaseOperation")), MetaAdapterFactory.getContainmentLink(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x40798aa2d38348a2L, 0x40798aa2d3834946L, "command")), MetaAdapterFactory.getReferenceLink(0x58b9e0aa66634086L, 0x8f84dfaa697f9989L, 0x58274fdf875ad2a1L, 0x58274fdf875b2b4cL, "object")), MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name")))) {
+                  contains.value = true;
+                }
+              }
+            });
+            if (!(contains.value)) {
+              ListSequence.fromList(operations).addElement(SNodeOperations.cast(it, MetaAdapterFactory.getConcept(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x40798aa2d38348a2L, "ro.barata.mps.htmlLanguage.structure.DatabaseOperation")));
+            }
+          }
+        });
+      }
+    });
+    return operations;
   }
 }

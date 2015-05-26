@@ -33,7 +33,7 @@ public class PersonDAO {
     return persons;
   }
 
-  public Person findById(String[] keys, String[] keyValues) throws SQLException {
+  public Person findPerson(Person person) throws SQLException {
     String sql = "select ";
     String columns = "";
     columns += "id";
@@ -41,33 +41,31 @@ public class PersonDAO {
     columns += "firstName";
     columns += ",";
     columns += "lastName";
-    columns = ((columns.length() > 0) ? "(" + columns + ")" : columns);
     String values = "";
-    for (int i = 0; i < keys.length; i++) {
-      values += keys[i] + "=" + keyValues[i] + (((i < keys.length - 1) ? "," : ""));
+    if (person.getId() != null) {
+      values += "id" + "='" + person.getId() + "' and ";
     }
-    if (values.length() > 0) {
-      values = " where " + values;
+    if (person.getFirstName() != null) {
+      values += "firstName" + "='" + person.getFirstName() + "' and ";
     }
-    sql += columns + "from" + "Person" + values;
+    if (person.getLastName() != null) {
+      values += "lastName" + "='" + person.getLastName() + "' and ";
+    }
+    if (values.length() > 6) {
+      values = " where " + values.substring(0, values.length() - 5);
+    }
+    sql += columns + " from " + "Person" + values;
+    System.out.println(sql);
     ResultSet set = stmt.executeQuery(sql);
-    List<Object> result = new ArrayList<Object>();
-    int i = 0;
+    Person foundPerson = new Person();
     while (set.next()) {
-      result.add(set.getObject(i + 1));
-      i++;
+      foundPerson = new Person();
+      foundPerson.setId(Integer.valueOf(set.getBigDecimal("id").intValue()));
+      foundPerson.setFirstName(set.getString("firstName"));
+      foundPerson.setLastName(set.getString("lastName"));
     }
-    Person person = new Person();
-    i = 0;
-    person.setId((Integer) result.get(i));
-    i++;
-    person.setFirstName((String) result.get(i));
-    i++;
-    person.setLastName((String) result.get(i));
-    i++;
-    return person;
+    return foundPerson;
   }
-
 
   public void addPerson(Person person) throws SQLException, ClassNotFoundException {
     String sql = "insert into " + "Person" + "(";
@@ -139,7 +137,4 @@ public class PersonDAO {
 
   }
 
-  private void pula(Person entity) throws SQLException, SQLException {
-    String sql = "";
-  }
 }

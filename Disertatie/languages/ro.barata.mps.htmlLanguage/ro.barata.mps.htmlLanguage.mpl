@@ -15,15 +15,18 @@
         <modelRoot contentPath="${module}" type="java_classes">
           <sourceRoot location="lib/javax.servlet-3.0.0.v201112011016.jar" />
           <sourceRoot location="lib/jetty-all-8.1.14.v20131031.jar" />
+          <sourceRoot location="lib/flexjson.jar" />
         </modelRoot>
       </models>
       <external-templates>
         <generator generatorUID="fd895b5e-d882-4eb2-9e29-37eb52ae5682(ro.barata.mps.rootLanguage#5152062499435996722)" />
       </external-templates>
       <dependencies>
+        <dependency reexport="false">edb2b9cf-991f-4100-ab3c-9444c4d6e26b(ro.barata.mps.styleLanguage)</dependency>
         <dependency reexport="false">6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)</dependency>
         <dependency reexport="false">c02f1daf-1160-4f41-beef-10918af4e126(ro.barata.mps.databaseOperationsLanguage#7227310691964192368)</dependency>
-        <dependency reexport="false">edb2b9cf-991f-4100-ab3c-9444c4d6e26b(ro.barata.mps.styleLanguage)</dependency>
+        <dependency reexport="false">ceab5195-25ea-4f22-9b92-103b95ca8c0c(jetbrains.mps.lang.core)</dependency>
+        <dependency reexport="false">b9cb18bd-a29f-47d8-9dd0-544a91c4eef2(ro.barata.mps.htmlLanguage)</dependency>
       </dependencies>
       <usedLanguages>
         <usedLanguage>b401a680-8325-4110-8fd3-84331ff25bef(jetbrains.mps.lang.generator)</usedLanguage>

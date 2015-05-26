@@ -6,11 +6,14 @@ import jetbrains.mps.textGen.SNodeTextGen;
 import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 
 public class VarCommand_TextGen extends SNodeTextGen {
   public void doGenerateText(SNode node) {
     appendNode(SLinkOperations.getTarget(node, MetaAdapterFactory.getContainmentLink(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x3ab9167f5c10113cL, 0x3ab9167f5c1d9f79L, "value")));
-    this.append(";");
-    this.appendNewLine();
+    if (!(SNodeOperations.isInstanceOf(SNodeOperations.getParent(node), MetaAdapterFactory.getInterfaceConcept(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x58324c1f0fae9ba1L, "ro.barata.mps.javascriptLanguage.structure.ValueUser")))) {
+      this.append(";");
+      this.appendNewLine();
+    }
   }
 }

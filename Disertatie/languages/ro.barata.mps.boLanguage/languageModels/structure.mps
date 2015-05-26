@@ -59,11 +59,23 @@
     </node>
   </node>
   <node concept="1TIwiD" id="1uHuMhn0FCN">
-    <property role="TrG5h" value="Customer" />
+    <property role="TrG5h" value="User" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyi" id="1uHuMhn0G5l" role="1TKVEl">
-      <property role="TrG5h" value="customerId" />
+      <property role="TrG5h" value="userId" />
       <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyi" id="5wMj1WfvK7u" role="1TKVEl">
+      <property role="TrG5h" value="priviledge" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
+    <node concept="1TJgyi" id="5wMj1WfvQ7a" role="1TKVEl">
+      <property role="TrG5h" value="userName" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
+    <node concept="1TJgyi" id="5wMj1WfvQ7e" role="1TKVEl">
+      <property role="TrG5h" value="password" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
     </node>
     <node concept="PrWs8" id="1uHuMhn0FCO" role="PzmwI">
       <ref role="PrY4T" to="h5of:6hc$cxbYn_3" resolve="DAOObject" />
@@ -83,7 +95,7 @@
       <property role="20lmBu" value="aggregation" />
       <property role="20kJfa" value="customers" />
       <property role="20lbJX" value="1..n" />
-      <ref role="20lvS9" node="1uHuMhn0FCN" resolve="Customer" />
+      <ref role="20lvS9" node="1uHuMhn0FCN" resolve="User" />
     </node>
     <node concept="1TJgyj" id="4iOjISKtvx4" role="1TKVEi">
       <property role="20lmBu" value="aggregation" />

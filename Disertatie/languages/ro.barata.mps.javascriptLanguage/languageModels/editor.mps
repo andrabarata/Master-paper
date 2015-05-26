@@ -923,5 +923,61 @@
       <node concept="l2Vlx" id="3hPr9QvFls0" role="2iSdaV" />
     </node>
   </node>
+  <node concept="24kQdi" id="5wMj1WfAqVJ">
+    <property role="3GE5qa" value="javascript.commands" />
+    <ref role="1XX52x" to="jel9:5wMj1WfAqCN" resolve="DocumentIdCommand" />
+    <node concept="3EZMnI" id="5wMj1WfAroL" role="2wV5jI">
+      <node concept="3F0ifn" id="5wMj1WfAroS" role="3EZMnx">
+        <property role="3F0ifm" value="document.getElementById(" />
+        <ref role="1k5W1q" node="7KwyEUhVrMo" resolve="IndicatorSymbol" />
+      </node>
+      <node concept="3F1sOY" id="5wMj1WfEilk" role="3EZMnx">
+        <ref role="1NtTu8" to="jel9:5wMj1WfC$2V" />
+      </node>
+      <node concept="3F0ifn" id="5wMj1WfArC8" role="3EZMnx">
+        <property role="3F0ifm" value=")." />
+        <ref role="1k5W1q" node="7KwyEUhVrMo" resolve="IndicatorSymbol" />
+      </node>
+      <node concept="3F0A7n" id="5wMj1WfArCm" role="3EZMnx">
+        <ref role="1NtTu8" to="jel9:5wMj1WfAqVB" resolve="command" />
+      </node>
+      <node concept="l2Vlx" id="5wMj1WfAroO" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="5wMj1Wg3J$n">
+    <property role="3GE5qa" value="javascript" />
+    <ref role="1XX52x" to="jel9:5wMj1Wg3J$h" resolve="NullValue" />
+    <node concept="3EZMnI" id="5wMj1Wg3J$u" role="2wV5jI">
+      <node concept="3F0ifn" id="5wMj1Wg3J$_" role="3EZMnx">
+        <property role="3F0ifm" value="null" />
+        <ref role="1k5W1q" node="7KwyEUhVrQm" resolve="Indicator" />
+      </node>
+      <node concept="l2Vlx" id="5wMj1Wg3J$x" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="5wMj1Wg8TUp">
+    <property role="3GE5qa" value="javascript.root" />
+    <ref role="1XX52x" to="jel9:5wMj1Wg6hao" resolve="StoreCommand" />
+    <node concept="3EZMnI" id="5wMj1Wg8TUr" role="2wV5jI">
+      <node concept="3F0ifn" id="5wMj1Wg8TUy" role="3EZMnx">
+        <property role="3F0ifm" value="store" />
+        <ref role="1k5W1q" node="7KwyEUhVrQm" resolve="Indicator" />
+      </node>
+      <node concept="1iCGBv" id="5wMj1Wg8TUC" role="3EZMnx">
+        <ref role="1NtTu8" to="jel9:5wMj1Wg8TUj" />
+        <node concept="1sVBvm" id="5wMj1Wg8TUE" role="1sWHZn">
+          <node concept="3F0A7n" id="5wMj1Wg8TUM" role="2wV5jI">
+            <property role="1Intyy" value="true" />
+            <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+            <ref role="1k5W1q" node="7KwyEUhVrQm" resolve="Indicator" />
+            <node concept="VQ3r3" id="5wMj1Wg8TWA" role="3F10Kt">
+              <property role="2USNnj" value="2" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="l2Vlx" id="5wMj1Wg8TUu" role="2iSdaV" />
+    </node>
+  </node>
 </model>
 

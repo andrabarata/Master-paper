@@ -2128,5 +2128,28 @@
       </node>
     </node>
   </node>
+  <node concept="1M2fIO" id="5wMj1WgaRnf">
+    <property role="3GE5qa" value="javascript.root" />
+    <ref role="1M2myG" to="jel9:5wMj1Wg6hao" resolve="StoreCommand" />
+    <node concept="nKS2y" id="5wMj1WgaR$z" role="1MLUbF">
+      <node concept="3clFbS" id="5wMj1WgaR$$" role="2VODD2">
+        <node concept="3clFbF" id="5wMj1WgaRDu" role="3cqZAp">
+          <node concept="2OqwBi" id="5wMj1WgaS6T" role="3clFbG">
+            <node concept="2OqwBi" id="5wMj1WgaRJu" role="2Oq$k0">
+              <node concept="nLn13" id="5wMj1WgaRDt" role="2Oq$k0" />
+              <node concept="2Xjw5R" id="5wMj1WgaRU2" role="2OqNvi">
+                <node concept="1xMEDy" id="5wMj1WgaRU4" role="1xVPHs">
+                  <node concept="chp4Y" id="5wMj1WgaRZl" role="ri$Ld">
+                    <ref role="cht4Q" to="jozm:3hPr9Quv4kS" resolve="ReceiveOperation" />
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="3x8VRR" id="5wMj1WgaSyg" role="2OqNvi" />
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
 </model>
 

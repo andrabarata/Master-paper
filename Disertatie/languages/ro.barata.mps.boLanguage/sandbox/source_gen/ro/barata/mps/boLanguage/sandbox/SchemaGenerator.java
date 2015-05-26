@@ -5,7 +5,7 @@ package ro.barata.mps.boLanguage.sandbox;
 import java.sql.Statement;
 import java.sql.SQLException;
 
-public class SchemaCreator {
+public class SchemaGenerator {
 
   private static void generateTables(Statement stmt) throws SQLException, ClassNotFoundException {
     String sql = "";
@@ -80,8 +80,11 @@ public class SchemaCreator {
     primaryKey = "primary key(";
     primaryKey += "id";
     primaryKey += ")";
-    sql = "create table " + "Customer" + "(";
+    sql = "create table " + "UserTable" + "(";
     sql += "id" + " " + "integer" + ",";
+    sql += "priviledge" + " " + "varchar(256)" + ",";
+    sql += "userName" + " " + "varchar(256)" + ",";
+    sql += "password" + " " + "varchar(256)" + ",";
     sql += "personId" + " " + "integer" + ",";
     sql += "shopId" + " " + "integer" + ",";
     if (primaryKey.length() == 0) {
@@ -132,11 +135,11 @@ public class SchemaCreator {
     System.out.println(sql);
     stmt.execute(sql);
 
-    sql = "alter table " + "Customer" + " add constraint fk_" + "Customer" + "_" + "personId";
+    sql = "alter table " + "UserTable" + " add constraint fk_" + "UserTable" + "_" + "personId";
     sql += " foreign key (" + "personId" + ") references " + "Person" + "(" + "id" + ")";
     System.out.println(sql);
     stmt.execute(sql);
-    sql = "alter table " + "Customer" + " add constraint fk_" + "Customer" + "_" + "shopId";
+    sql = "alter table " + "UserTable" + " add constraint fk_" + "UserTable" + "_" + "shopId";
     sql += " foreign key (" + "shopId" + ") references " + "Shop" + "(" + "id" + ")";
     System.out.println(sql);
     stmt.execute(sql);
@@ -157,7 +160,7 @@ public class SchemaCreator {
     sql = "drop table " + "Attribute" + " cascade constraints";
     stmt.executeUpdate(sql);
 
-    sql = "drop table " + "Customer" + " cascade constraints";
+    sql = "drop table " + "UserTable" + " cascade constraints";
     stmt.executeUpdate(sql);
 
     sql = "drop table " + "Person" + " cascade constraints";

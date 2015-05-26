@@ -11,15 +11,15 @@ public class BehaviorAspectDescriptor implements jetbrains.mps.smodel.runtime.Be
   }
   public BehaviorDescriptor getDescriptor(String fqName) {
     switch (Arrays.binarySearch(stringSwitchCases_846f5o_a0a0b, fqName)) {
-      case 3:
-        return new Person_BehaviorDescriptor();
       case 2:
-        return new Customer_BehaviorDescriptor();
+        return new Person_BehaviorDescriptor();
       case 5:
+        return new User_BehaviorDescriptor();
+      case 4:
         return new Shop_BehaviorDescriptor();
       case 1:
         return new Category_BehaviorDescriptor();
-      case 4:
+      case 3:
         return new Product_BehaviorDescriptor();
       case 0:
         return new Attribute_BehaviorDescriptor();
@@ -27,5 +27,5 @@ public class BehaviorAspectDescriptor implements jetbrains.mps.smodel.runtime.Be
         return BehaviorAspectInterpreted.getInstance().getDescriptor(fqName);
     }
   }
-  private static String[] stringSwitchCases_846f5o_a0a0b = new String[]{"ro.barata.mps.boLanguage.structure.Attribute", "ro.barata.mps.boLanguage.structure.Category", "ro.barata.mps.boLanguage.structure.Customer", "ro.barata.mps.boLanguage.structure.Person", "ro.barata.mps.boLanguage.structure.Product", "ro.barata.mps.boLanguage.structure.Shop"};
+  private static String[] stringSwitchCases_846f5o_a0a0b = new String[]{"ro.barata.mps.boLanguage.structure.Attribute", "ro.barata.mps.boLanguage.structure.Category", "ro.barata.mps.boLanguage.structure.Person", "ro.barata.mps.boLanguage.structure.Product", "ro.barata.mps.boLanguage.structure.Shop", "ro.barata.mps.boLanguage.structure.User"};
 }

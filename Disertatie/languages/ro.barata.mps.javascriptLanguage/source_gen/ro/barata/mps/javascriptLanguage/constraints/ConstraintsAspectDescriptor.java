@@ -16,7 +16,7 @@ public class ConstraintsAspectDescriptor implements jetbrains.mps.smodel.runtime
         return new ForCommand_Constraints();
       case 1:
         return new DotExpressionCommand_Constraints();
-      case 5:
+      case 6:
         return new VarValue_Constraints();
       case 0:
         return new ActionVarValue_Constraints();
@@ -24,8 +24,10 @@ public class ConstraintsAspectDescriptor implements jetbrains.mps.smodel.runtime
         return new InstanceValue_Constraints();
       case 3:
         return new GetArrayValueCommand_Constraints();
-      case 6:
+      case 7:
         return new VarValueHREF_Constraints();
+      case 5:
+        return new StoreCommand_Constraints();
       default:
         return new BaseConstraintsDescriptor(fqName);
     }
@@ -53,7 +55,10 @@ public class ConstraintsAspectDescriptor implements jetbrains.mps.smodel.runtime
     if (id == 0x34756c9d9fad5530L) {
       return new VarValueHREF_Constraints();
     }
+    if (id == 0x58324c1f10191298L) {
+      return new StoreCommand_Constraints();
+    }
     return new BaseConstraintsDescriptor(conceptId);
   }
-  private static String[] stringSwitchCases_2qnle6_a0a0b = new String[]{"ro.barata.mps.javascriptLanguage.structure.ActionVarValue", "ro.barata.mps.javascriptLanguage.structure.DotExpressionCommand", "ro.barata.mps.javascriptLanguage.structure.ForCommand", "ro.barata.mps.javascriptLanguage.structure.GetArrayValueCommand", "ro.barata.mps.javascriptLanguage.structure.InstanceValue", "ro.barata.mps.javascriptLanguage.structure.VarValue", "ro.barata.mps.javascriptLanguage.structure.VarValueHREF"};
+  private static String[] stringSwitchCases_2qnle6_a0a0b = new String[]{"ro.barata.mps.javascriptLanguage.structure.ActionVarValue", "ro.barata.mps.javascriptLanguage.structure.DotExpressionCommand", "ro.barata.mps.javascriptLanguage.structure.ForCommand", "ro.barata.mps.javascriptLanguage.structure.GetArrayValueCommand", "ro.barata.mps.javascriptLanguage.structure.InstanceValue", "ro.barata.mps.javascriptLanguage.structure.StoreCommand", "ro.barata.mps.javascriptLanguage.structure.VarValue", "ro.barata.mps.javascriptLanguage.structure.VarValueHREF"};
 }

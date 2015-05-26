@@ -32,37 +32,33 @@ public class ShopDAO {
     return shops;
   }
 
-  public Shop findById(String[] keys, String[] keyValues) throws SQLException {
+  public Shop findShop(Shop shop) throws SQLException {
     String sql = "select ";
     String columns = "";
     columns += "id";
     columns += ",";
     columns += "name";
-    columns = ((columns.length() > 0) ? "(" + columns + ")" : columns);
     String values = "";
-    for (int i = 0; i < keys.length; i++) {
-      values += keys[i] + "=" + keyValues[i] + (((i < keys.length - 1) ? "," : ""));
+    if (shop.getId() != null) {
+      values += "id" + "='" + shop.getId() + "' and ";
     }
-    if (values.length() > 0) {
-      values = " where " + values;
+    if (shop.getName() != null) {
+      values += "name" + "='" + shop.getName() + "' and ";
     }
-    sql += columns + "from" + "Shop" + values;
+    if (values.length() > 6) {
+      values = " where " + values.substring(0, values.length() - 5);
+    }
+    sql += columns + " from " + "Shop" + values;
+    System.out.println(sql);
     ResultSet set = stmt.executeQuery(sql);
-    List<Object> result = new ArrayList<Object>();
-    int i = 0;
+    Shop foundShop = new Shop();
     while (set.next()) {
-      result.add(set.getObject(i + 1));
-      i++;
+      foundShop = new Shop();
+      foundShop.setId(Integer.valueOf(set.getBigDecimal("id").intValue()));
+      foundShop.setName(set.getString("name"));
     }
-    Shop shop = new Shop();
-    i = 0;
-    shop.setId((Integer) result.get(i));
-    i++;
-    shop.setName((String) result.get(i));
-    i++;
-    return shop;
+    return foundShop;
   }
-
 
   public void addShop(Shop shop) throws SQLException, ClassNotFoundException {
     String sql = "insert into " + "Shop" + "(";
@@ -79,10 +75,10 @@ public class ShopDAO {
     sql += columns.substring(0, columns.length() - 1) + ") values (" + values.substring(0, values.length() - 1) + ")";
     System.out.println(sql);
     stmt.execute(sql);
-    if (shop.getCustomers() != null) {
-      CustomerDAO childCustomerDAO = new CustomerDAO(connn);
-      for (Customer childCustomer : shop.getCustomers()) {
-        childCustomerDAO.addCustomer(childCustomer);
+    if (shop.getUsers() != null) {
+      UserDAO childUserDAO = new UserDAO(connn);
+      for (User childUser : shop.getUsers()) {
+        childUserDAO.addUser(childUser);
       }
     }
     if (shop.getCategorys() != null) {
@@ -112,10 +108,10 @@ public class ShopDAO {
     sql += values.substring(0, values.length() - 1) + condition.substring(0, condition.length() - 4);
     System.out.println(sql);
     stmt.execute(sql);
-    if (newshop.getCustomers() != null) {
-      CustomerDAO childCustomerDAO = new CustomerDAO(connn);
-      for (Customer childCustomer : newshop.getCustomers()) {
-        childCustomerDAO.addCustomer(childCustomer);
+    if (newshop.getUsers() != null) {
+      UserDAO childUserDAO = new UserDAO(connn);
+      for (User childUser : newshop.getUsers()) {
+        childUserDAO.addUser(childUser);
       }
     }
     if (newshop.getCategorys() != null) {
@@ -144,7 +140,4 @@ public class ShopDAO {
 
   }
 
-  private void pula(Shop entity) throws SQLException, SQLException {
-    String sql = "";
-  }
 }

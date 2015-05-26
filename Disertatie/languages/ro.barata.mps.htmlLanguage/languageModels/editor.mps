@@ -1462,10 +1462,18 @@
           <property role="VOm3f" value="true" />
         </node>
       </node>
-      <node concept="3F1sOY" id="5EdacSEyLC6" role="3EZMnx">
+      <node concept="3F2HdR" id="5wMj1WfLT7U" role="3EZMnx">
         <ref role="1NtTu8" to="jozm:5EdacSEwA7L" />
-        <node concept="lj46D" id="5EdacSEyLCf" role="3F10Kt">
+        <node concept="2iRkQZ" id="5wMj1WfLT7X" role="2czzBx" />
+        <node concept="VPM3Z" id="5wMj1WfLT7Y" role="3F10Kt">
+          <property role="VOm3f" value="false" />
+        </node>
+        <node concept="lj46D" id="5wMj1WfLTlm" role="3F10Kt">
           <property role="VOm3f" value="true" />
+        </node>
+        <node concept="3F0ifn" id="5wMj1WfLTlr" role="2czzBI">
+          <property role="3F0ifm" value="Body" />
+          <ref role="1k5W1q" to="tpen:hshO_Yc" resolve="Comment" />
         </node>
       </node>
     </node>
@@ -1831,7 +1839,7 @@
   </node>
   <node concept="24kQdi" id="3hPr9Quv4Iy">
     <property role="3GE5qa" value="html.commands.operations" />
-    <ref role="1XX52x" to="jozm:3hPr9Quv4kS" resolve="ReceiveCommand" />
+    <ref role="1XX52x" to="jozm:3hPr9Quv4kS" resolve="ReceiveOperation" />
     <node concept="3EZMnI" id="3hPr9Quv4I$" role="2wV5jI">
       <node concept="3F0ifn" id="3hPr9Quv4IF" role="3EZMnx">
         <property role="3F0ifm" value="receive" />
@@ -1928,9 +1936,8 @@
         <property role="3F0ifm" value="=" />
         <ref role="1k5W1q" node="4HNfSIoHqZP" resolve="ValueSymbol" />
       </node>
-      <node concept="3F0A7n" id="3hPr9Quv5cx" role="3EZMnx">
-        <ref role="1NtTu8" to="jozm:3hPr9Quv5c2" resolve="value" />
-        <ref role="1k5W1q" node="4LZaFk$dHR5" resolve="attribute" />
+      <node concept="3F1sOY" id="5wMj1WfHBRd" role="3EZMnx">
+        <ref role="1NtTu8" to="jozm:5wMj1WfC$2V" />
       </node>
       <node concept="l2Vlx" id="3hPr9Quv5cf" role="2iSdaV" />
     </node>
@@ -1959,6 +1966,16 @@
           <ref role="1k5W1q" to="tpen:hshO_Yc" resolve="Comment" />
         </node>
       </node>
+    </node>
+  </node>
+  <node concept="24kQdi" id="5wMj1WgetaI">
+    <property role="3GE5qa" value="html.commands.operations" />
+    <ref role="1XX52x" to="jozm:5wMj1WgetaC" resolve="SessionCondition" />
+    <node concept="3EZMnI" id="5wMj1WgetaK" role="2wV5jI">
+      <node concept="3F0ifn" id="5wMj1WgetaR" role="3EZMnx">
+        <property role="3F0ifm" value="session" />
+      </node>
+      <node concept="l2Vlx" id="5wMj1WgetaN" role="2iSdaV" />
     </node>
   </node>
 </model>

@@ -34,7 +34,7 @@ public class AttributeDAO {
     return attributes;
   }
 
-  public Attribute findById(String[] keys, String[] keyValues) throws SQLException {
+  public Attribute findAttribute(Attribute attribute) throws SQLException {
     String sql = "select ";
     String columns = "";
     columns += "id";
@@ -42,33 +42,31 @@ public class AttributeDAO {
     columns += "name";
     columns += ",";
     columns += "value";
-    columns = ((columns.length() > 0) ? "(" + columns + ")" : columns);
     String values = "";
-    for (int i = 0; i < keys.length; i++) {
-      values += keys[i] + "=" + keyValues[i] + (((i < keys.length - 1) ? "," : ""));
+    if (attribute.getId() != null) {
+      values += "id" + "='" + attribute.getId() + "' and ";
     }
-    if (values.length() > 0) {
-      values = " where " + values;
+    if (attribute.getAttributeName() != null) {
+      values += "name" + "='" + attribute.getAttributeName() + "' and ";
     }
-    sql += columns + "from" + "Attribute" + values;
+    if (attribute.getAttributeValue() != null) {
+      values += "value" + "='" + attribute.getAttributeValue() + "' and ";
+    }
+    if (values.length() > 6) {
+      values = " where " + values.substring(0, values.length() - 5);
+    }
+    sql += columns + " from " + "Attribute" + values;
+    System.out.println(sql);
     ResultSet set = stmt.executeQuery(sql);
-    List<Object> result = new ArrayList<Object>();
-    int i = 0;
+    Attribute foundAttribute = new Attribute();
     while (set.next()) {
-      result.add(set.getObject(i + 1));
-      i++;
+      foundAttribute = new Attribute();
+      foundAttribute.setId(Integer.valueOf(set.getBigDecimal("id").intValue()));
+      foundAttribute.setAttributeName(set.getString("name"));
+      foundAttribute.setAttributeValue(set.getString("value"));
     }
-    Attribute attribute = new Attribute();
-    i = 0;
-    attribute.setId((Integer) result.get(i));
-    i++;
-    attribute.setAttributeName((String) result.get(i));
-    i++;
-    attribute.setAttributeValue((String) result.get(i));
-    i++;
-    return attribute;
+    return foundAttribute;
   }
-
 
   public void addAttribute(Attribute attribute) throws SQLException, ClassNotFoundException {
     String sql = "insert into " + "Attribute" + "(";
@@ -161,28 +159,4 @@ public class AttributeDAO {
 
   }
 
-  private void pula(Attribute entity) throws SQLException, SQLException {
-    String sql = "";
-    {
-      List<String> columnVals = new LinkedList<String>();
-      List<String> valueVals = new LinkedList<String>();
-      {
-        Product parentProduct = entity.getParentProduct();
-        if (parentProduct != null) {
-          columnVals.add("productId");
-          valueVals.add(parentProduct.getId().toString());
-        }
-      }
-      sql = "update " + "Attribute" + " set";
-      for (int i = 0; i < columnVals.size(); i++) {
-        sql += columnVals.get(i) + "='" + valueVals.get(i) + "'" + (((i < columnVals.size() - 1) ? "," : ""));
-      }
-      sql += "where ";
-      sql += "id" + "=" + entity.getId() + "and";
-      sql = sql.substring(0, sql.length() - 3);
-      System.out.println(sql);
-      stmt.execute(sql);
-
-    }
-  }
 }

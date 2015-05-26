@@ -13,7 +13,7 @@
   <concept fqn="jetbrains.mps.baseLanguage.structure.SuperConstructorInvocation" />
   <root>
     <file name="ConstraintsAspectDescriptor.java">
-      <unit at="10,0,60,0" name="ro.barata.mps.javascriptLanguage.constraints.ConstraintsAspectDescriptor" />
+      <unit at="10,0,65,0" name="ro.barata.mps.javascriptLanguage.constraints.ConstraintsAspectDescriptor" />
     </file>
   </root>
   <root nodeRef="r:bd500181-ba2c-4cc3-b9c2-c902c4a7aea7(ro.barata.mps.javascriptLanguage.constraints)/3088814217712973636">
@@ -643,6 +643,49 @@
       <unit id="5436759043961106468" at="63,19,100,9" name="ro.barata.mps.javascriptLanguage.constraints.ActionVarValue_Constraints$2" />
       <unit id="5436759043961106468" at="55,128,102,5" name="ro.barata.mps.javascriptLanguage.constraints.ActionVarValue_Constraints$1" />
       <unit id="5436759043961106468" at="34,0,111,0" name="ro.barata.mps.javascriptLanguage.constraints.ActionVarValue_Constraints" />
+    </file>
+  </root>
+  <root nodeRef="r:bd500181-ba2c-4cc3-b9c2-c902c4a7aea7(ro.barata.mps.javascriptLanguage.constraints)/6355225720472171983">
+    <file name="StoreCommand_Constraints.java">
+      <node id="6355225720472171983" at="16,37,17,98" concept="10" />
+      <node id="6355225720472171983" at="20,43,21,16" concept="6" />
+      <node id="6355225720472171983" at="24,200,25,96" concept="5" />
+      <node id="6355225720472171983" at="25,96,26,0" concept="7" />
+      <node id="6355225720472171983" at="27,51,28,67" concept="2" />
+      <node id="6355225720472171983" at="29,5,30,0" concept="7" />
+      <node id="6355225720472171983" at="30,0,31,18" concept="6" />
+      <node id="6355225720472173150" at="33,148,34,230" concept="6" />
+      <node id="6355225720472171983" at="36,0,37,0" concept="8" trace="canBeChildBreakingPoint" />
+      <node id="6355225720472171983" at="16,0,19,0" concept="1" trace="StoreCommand_Constraints#()V" />
+      <node id="6355225720472171983" at="26,0,29,5" concept="3" />
+      <node id="6355225720472171983" at="33,0,36,0" concept="9" trace="static_canBeAChild#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/smodel/IOperationContext;)Z" />
+      <node id="6355225720472171983" at="19,0,23,0" concept="4" trace="hasOwnCanBeChildMethod#()Z" />
+      <node id="6355225720472171983" at="23,0,33,0" concept="4" trace="canBeChild#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/smodel/IOperationContext;Ljetbrains/mps/smodel/runtime/CheckingNodeContext;)Z" />
+      <scope id="6355225720472171983" at="16,37,17,98" />
+      <scope id="6355225720472171983" at="20,43,21,16" />
+      <scope id="6355225720472171983" at="27,51,28,67" />
+      <scope id="6355225720472172836" at="33,148,34,230" />
+      <scope id="6355225720472171983" at="16,0,19,0" />
+      <scope id="6355225720472171983" at="33,0,36,0">
+        <var name="childConcept" id="6355225720472171983" />
+        <var name="link" id="6355225720472171983" />
+        <var name="node" id="6355225720472171983" />
+        <var name="operationContext" id="6355225720472171983" />
+        <var name="parentNode" id="6355225720472171983" />
+      </scope>
+      <scope id="6355225720472171983" at="19,0,23,0" />
+      <scope id="6355225720472171983" at="24,200,31,18">
+        <var name="result" id="6355225720472171983" />
+      </scope>
+      <scope id="6355225720472171983" at="23,0,33,0">
+        <var name="checkingNodeContext" id="6355225720472171983" />
+        <var name="childConcept" id="6355225720472171983" />
+        <var name="link" id="6355225720472171983" />
+        <var name="node" id="6355225720472171983" />
+        <var name="operationContext" id="6355225720472171983" />
+        <var name="parentNode" id="6355225720472171983" />
+      </scope>
+      <unit id="6355225720472171983" at="15,0,38,0" name="ro.barata.mps.javascriptLanguage.constraints.StoreCommand_Constraints" />
     </file>
   </root>
 </debug-info>

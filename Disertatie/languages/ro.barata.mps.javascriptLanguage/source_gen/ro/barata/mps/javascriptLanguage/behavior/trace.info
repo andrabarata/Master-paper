@@ -20,13 +20,16 @@
       <unit at="6,0,14,0" name="ro.barata.mps.javascriptLanguage.behavior.AssignmentCommand_BehaviorDescriptor" />
     </file>
     <file name="BehaviorAspectDescriptor.java">
-      <unit at="9,0,76,0" name="ro.barata.mps.javascriptLanguage.behavior.BehaviorAspectDescriptor" />
+      <unit at="9,0,78,0" name="ro.barata.mps.javascriptLanguage.behavior.BehaviorAspectDescriptor" />
     </file>
     <file name="CallFunctionCommand_BehaviorDescriptor.java">
       <unit at="6,0,14,0" name="ro.barata.mps.javascriptLanguage.behavior.CallFunctionCommand_BehaviorDescriptor" />
     </file>
     <file name="ChangePageCommand_BehaviorDescriptor.java">
       <unit at="6,0,14,0" name="ro.barata.mps.javascriptLanguage.behavior.ChangePageCommand_BehaviorDescriptor" />
+    </file>
+    <file name="DocumentIdCommand_BehaviorDescriptor.java">
+      <unit at="6,0,14,0" name="ro.barata.mps.javascriptLanguage.behavior.DocumentIdCommand_BehaviorDescriptor" />
     </file>
     <file name="DotExpressionCommand_BehaviorDescriptor.java">
       <unit at="9,0,20,0" name="ro.barata.mps.javascriptLanguage.behavior.DotExpressionCommand_BehaviorDescriptor" />

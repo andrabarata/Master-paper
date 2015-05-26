@@ -1,15 +1,16 @@
-function c(){
-var a="s";
-var b=a;
-var names=["id"];
-var values=["1"];
+function checkUser(){
+var userName=document.getElementById("userName").value;
+var userPassword=document.getElementById("password").value;
+var b=userName;
+var names=["userName","password"];
+var values=[userName,userPassword];
 var callback=function(jsonObj){
-var name=jsonObj.lastName;
-if(name!=""){
-var c=name;
+var name=jsonObj.userName;
+if(name!=null){
+document.location.href="mainPage";
 } else {
-document.location.href="TestPage/abcs";
+document.getElementById("authentificate").style.visibility="visible";
 }
 }
-doAjaxRequest("login","c",names,values,callback);
+doAjaxRequest("login","jsonUser",names,values,callback);
 }

@@ -33,37 +33,33 @@ public class CategoryDAO {
     return categorys;
   }
 
-  public Category findById(String[] keys, String[] keyValues) throws SQLException {
+  public Category findCategory(Category category) throws SQLException {
     String sql = "select ";
     String columns = "";
     columns += "id";
     columns += ",";
     columns += "name";
-    columns = ((columns.length() > 0) ? "(" + columns + ")" : columns);
     String values = "";
-    for (int i = 0; i < keys.length; i++) {
-      values += keys[i] + "=" + keyValues[i] + (((i < keys.length - 1) ? "," : ""));
+    if (category.getId() != null) {
+      values += "id" + "='" + category.getId() + "' and ";
     }
-    if (values.length() > 0) {
-      values = " where " + values;
+    if (category.getName() != null) {
+      values += "name" + "='" + category.getName() + "' and ";
     }
-    sql += columns + "from" + "Category" + values;
+    if (values.length() > 6) {
+      values = " where " + values.substring(0, values.length() - 5);
+    }
+    sql += columns + " from " + "Category" + values;
+    System.out.println(sql);
     ResultSet set = stmt.executeQuery(sql);
-    List<Object> result = new ArrayList<Object>();
-    int i = 0;
+    Category foundCategory = new Category();
     while (set.next()) {
-      result.add(set.getObject(i + 1));
-      i++;
+      foundCategory = new Category();
+      foundCategory.setId(Integer.valueOf(set.getBigDecimal("id").intValue()));
+      foundCategory.setName(set.getString("name"));
     }
-    Category category = new Category();
-    i = 0;
-    category.setId((Integer) result.get(i));
-    i++;
-    category.setName((String) result.get(i));
-    i++;
-    return category;
+    return foundCategory;
   }
-
 
   public void addCategory(Category category) throws SQLException, ClassNotFoundException {
     String sql = "insert into " + "Category" + "(";
@@ -180,35 +176,4 @@ public class CategoryDAO {
 
   }
 
-  private void pula(Category entity) throws SQLException, SQLException {
-    String sql = "";
-    {
-      List<String> columnVals = new LinkedList<String>();
-      List<String> valueVals = new LinkedList<String>();
-      {
-        Shop parentShop = entity.getParentShop();
-        if (parentShop != null) {
-          columnVals.add("shopId");
-          valueVals.add(parentShop.getId().toString());
-        }
-      }
-      {
-        Category parentCategory = entity.getParentCategory();
-        if (parentCategory != null) {
-          columnVals.add("subCategoryId");
-          valueVals.add(parentCategory.getId().toString());
-        }
-      }
-      sql = "update " + "Category" + " set";
-      for (int i = 0; i < columnVals.size(); i++) {
-        sql += columnVals.get(i) + "='" + valueVals.get(i) + "'" + (((i < columnVals.size() - 1) ? "," : ""));
-      }
-      sql += "where ";
-      sql += "id" + "=" + entity.getId() + "and";
-      sql = sql.substring(0, sql.length() - 3);
-      System.out.println(sql);
-      stmt.execute(sql);
-
-    }
-  }
 }

@@ -31,6 +31,7 @@
         <child id="1071489727083" name="linkDeclaration" index="1TKVEi" />
         <child id="1071489727084" name="propertyDeclaration" index="1TKVEl" />
       </concept>
+      <concept id="1169125989551" name="jetbrains.mps.lang.structure.structure.InterfaceConceptDeclaration" flags="ig" index="PlHQZ" />
       <concept id="1169127622168" name="jetbrains.mps.lang.structure.structure.InterfaceConceptReference" flags="ig" index="PrWs8">
         <reference id="1169127628841" name="intfc" index="PrY4T" />
       </concept>
@@ -623,6 +624,47 @@
       <property role="20kJfa" value="value" />
       <property role="20lbJX" value="1" />
       <ref role="20lvS9" node="3ET5BXsao0B" resolve="AbstractVarCommand" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="5wMj1WfAqCN">
+    <property role="3GE5qa" value="javascript.commands" />
+    <property role="34LRSv" value="manage html by id" />
+    <property role="TrG5h" value="DocumentIdCommand" />
+    <ref role="1TJDcQ" node="4LZaFkzUfUz" resolve="JavascriptCommand" />
+    <node concept="1TJgyj" id="5wMj1WfC$2V" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="id" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="2FtF2DJxYDO" resolve="VarCommandValue" />
+    </node>
+    <node concept="1TJgyi" id="5wMj1WfAqVB" role="1TKVEl">
+      <property role="TrG5h" value="command" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
+    <node concept="PrWs8" id="5wMj1WfFDIy" role="PzmwI">
+      <ref role="PrY4T" node="5wMj1WfFDIx" resolve="ValueUser" />
+    </node>
+  </node>
+  <node concept="PlHQZ" id="5wMj1WfFDIx">
+    <property role="3GE5qa" value="javascript.commands" />
+    <property role="TrG5h" value="ValueUser" />
+  </node>
+  <node concept="1TIwiD" id="5wMj1Wg3J$h">
+    <property role="3GE5qa" value="javascript" />
+    <property role="TrG5h" value="NullValue" />
+    <property role="34LRSv" value="null" />
+    <ref role="1TJDcQ" node="3ET5BXs7p5n" resolve="JavascriptValue" />
+  </node>
+  <node concept="1TIwiD" id="5wMj1Wg6hao">
+    <property role="3GE5qa" value="javascript.root" />
+    <property role="TrG5h" value="StoreCommand" />
+    <property role="34LRSv" value="store" />
+    <ref role="1TJDcQ" node="4LZaFkzUfUz" resolve="JavascriptCommand" />
+    <node concept="1TJgyj" id="5wMj1Wg8TUj" role="1TKVEi">
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="receiveCommand" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" to="jozm:3hPr9Quv4kS" resolve="ReceiveOperation" />
     </node>
   </node>
 </model>

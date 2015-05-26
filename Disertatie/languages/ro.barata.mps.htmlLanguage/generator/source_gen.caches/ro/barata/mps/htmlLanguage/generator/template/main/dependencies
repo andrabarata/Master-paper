@@ -18,7 +18,6 @@
     <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations" />
     <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />
     <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
-    <classNode dependClassName="ro.barata.mps.htmlLanguage.behavior.Action_Behavior" />
     <classNode dependClassName="ro.barata.mps.htmlLanguage.behavior.ContainerCommand_Behavior" />
     <classNode dependClassName="ro.barata.mps.htmlLanguage.behavior.HTMLCommand_Behavior" />
     <classNode dependClassName="ro.barata.mps.htmlLanguage.behavior.HTMLPage_Behavior" />
@@ -26,7 +25,9 @@
     <classNode dependClassName="ro.barata.mps.htmlLanguage.behavior.HTMLValueCommand_Behavior" />
     <classNode dependClassName="ro.barata.mps.htmlLanguage.behavior.HTMLValue_Behavior" />
     <classNode dependClassName="ro.barata.mps.htmlLanguage.behavior.MixedHTMLCommand_Behavior" />
+    <classNode dependClassName="ro.barata.mps.htmlLanguage.behavior.ReceiveOperation_Behavior" />
     <classNode dependClassName="ro.barata.mps.htmlLanguage.behavior.TagValueReference_Behavior" />
+    <classNode dependClassName="ro.barata.mps.rootLanguage.behavior.DAOPropertyMapper_Behavior" />
   </dependency>
 </dependenciesRoot>
 

@@ -12,9 +12,11 @@ import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SConceptOperations;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
 import jetbrains.mps.internal.collections.runtime.ListSequence;
+import jetbrains.mps.baseLanguage.closures.runtime.Wrappers;
 import java.util.List;
 import java.util.ArrayList;
 import jetbrains.mps.internal.collections.runtime.IWhereFilter;
+import jetbrains.mps.internal.collections.runtime.IVisitor;
 
 @Generated
 public class QueriesGenerated {
@@ -32,27 +34,29 @@ public class QueriesGenerated {
     }
     SNode sendDataFile = SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(MetaAdapterFactory.getConcept(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x4c7f2ab523e8fe08L, "ro.barata.mps.javascriptLanguage.structure.JavascriptFile")));
     SPropertyOperations.set(sendDataFile, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "general");
-    SNode function = SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(MetaAdapterFactory.getConcept(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x2addac2a6e9a9f66L, "ro.barata.mps.javascriptLanguage.structure.AjaxJavascriptFunction")));
+    final SNode function = SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(MetaAdapterFactory.getConcept(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x2addac2a6e9a9f66L, "ro.barata.mps.javascriptLanguage.structure.AjaxJavascriptFunction")));
     SPropertyOperations.set(function, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "doAjaxRequest");
     ListSequence.fromList(SLinkOperations.getChildren(sendDataFile, MetaAdapterFactory.getContainmentLink(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x4c7f2ab523e8fe08L, 0x4c7f2ab523e90d12L, "functions"))).addElement(function);
     SModelOperations.addRootNode(_context.getModel(), sendDataFile);
 
-    for (SNode page : SModelOperations.roots(_context.getModel(), MetaAdapterFactory.getConcept(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x233f341bd1c976e1L, "ro.barata.mps.htmlLanguage.structure.HTMLPage"))) {
+    for (final SNode page : SModelOperations.roots(_context.getModel(), MetaAdapterFactory.getConcept(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x233f341bd1c976e1L, "ro.barata.mps.htmlLanguage.structure.HTMLPage"))) {
       if (ListSequence.fromList(SLinkOperations.getChildren(page, MetaAdapterFactory.getContainmentLink(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x233f341bd1c976e1L, 0x4c7f2ab523e43958L, "actions"))).isNotEmpty()) {
         SNode file = SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(MetaAdapterFactory.getConcept(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x4c7f2ab523e8fe08L, "ro.barata.mps.javascriptLanguage.structure.JavascriptFile")));
         SPropertyOperations.set(file, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), SPropertyOperations.getString(page, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name")));
         for (SNode action : SLinkOperations.getChildren(page, MetaAdapterFactory.getContainmentLink(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x233f341bd1c976e1L, 0x4c7f2ab523e43958L, "actions"))) {
-          SNode function2 = SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(MetaAdapterFactory.getConcept(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x4c7f2ab523e8fe0bL, "ro.barata.mps.javascriptLanguage.structure.JavascriptFunction")));
+          final SNode function2 = SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(MetaAdapterFactory.getConcept(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x4c7f2ab523e8fe0bL, "ro.barata.mps.javascriptLanguage.structure.JavascriptFunction")));
           SPropertyOperations.set(function2, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), SPropertyOperations.getString(action, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name")));
           ListSequence.fromList(SLinkOperations.getChildren(function2, MetaAdapterFactory.getContainmentLink(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x4c7f2ab523e8fe0bL, 0x4b5fda9ef04f9ffeL, "parameters"))).addSequence(ListSequence.fromList(SLinkOperations.getChildren(action, MetaAdapterFactory.getContainmentLink(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x4c7f2ab523e3fae4L, 0x2addac2a6f7c2877L, "parameters"))));
-          SNode nameParam = SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(MetaAdapterFactory.getConcept(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x2addac2a6f87e883L, "ro.barata.mps.javascriptLanguage.structure.InitializeVarCommand")));
-          SNode valueParam = SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(MetaAdapterFactory.getConcept(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x2addac2a6f87e883L, "ro.barata.mps.javascriptLanguage.structure.InitializeVarCommand")));
-          SNode call = null;
+          final SNode nameParam = SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(MetaAdapterFactory.getConcept(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x2addac2a6f87e883L, "ro.barata.mps.javascriptLanguage.structure.InitializeVarCommand")));
+          final SNode valueParam = SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(MetaAdapterFactory.getConcept(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x2addac2a6f87e883L, "ro.barata.mps.javascriptLanguage.structure.InitializeVarCommand")));
+          final Wrappers._T<SNode> call = new Wrappers._T<SNode>(null);
           if (ListSequence.fromList(SLinkOperations.getChildren(action, MetaAdapterFactory.getContainmentLink(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x4c7f2ab523e3fae4L, 0x40798aa2d3833ccdL, "operations"))).isNotEmpty()) {
             for (SNode operation : SLinkOperations.getChildren(action, MetaAdapterFactory.getContainmentLink(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x4c7f2ab523e3fae4L, 0x40798aa2d3833ccdL, "operations"))) {
               if (SNodeOperations.isInstanceOf(operation, MetaAdapterFactory.getConcept(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x40798aa2d38349e0L, "ro.barata.mps.javascriptLanguage.structure.JavascriptOperation"))) {
-                SNode command2 = SNodeOperations.copyNode(SLinkOperations.getTarget(SNodeOperations.cast(operation, MetaAdapterFactory.getConcept(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x40798aa2d38349e0L, "ro.barata.mps.javascriptLanguage.structure.JavascriptOperation")), MetaAdapterFactory.getContainmentLink(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x40798aa2d38349e0L, 0x40798aa2d3834a16L, "operation")));
-                ListSequence.fromList(SLinkOperations.getChildren(function2, MetaAdapterFactory.getContainmentLink(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x4c7f2ab523e8fe0bL, 0x4c7f2ab523e91171L, "commands"))).addElement(command2);
+                if (!(SNodeOperations.isInstanceOf(SLinkOperations.getTarget(SNodeOperations.cast(operation, MetaAdapterFactory.getConcept(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x40798aa2d38349e0L, "ro.barata.mps.javascriptLanguage.structure.JavascriptOperation")), MetaAdapterFactory.getContainmentLink(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x40798aa2d38349e0L, 0x40798aa2d3834a16L, "operation")), MetaAdapterFactory.getConcept(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x58324c1f10191298L, "ro.barata.mps.javascriptLanguage.structure.StoreCommand")))) {
+                  SNode command2 = SNodeOperations.copyNode(SLinkOperations.getTarget(SNodeOperations.cast(operation, MetaAdapterFactory.getConcept(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x40798aa2d38349e0L, "ro.barata.mps.javascriptLanguage.structure.JavascriptOperation")), MetaAdapterFactory.getContainmentLink(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x40798aa2d38349e0L, 0x40798aa2d3834a16L, "operation")));
+                  ListSequence.fromList(SLinkOperations.getChildren(function2, MetaAdapterFactory.getContainmentLink(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x4c7f2ab523e8fe0bL, 0x4c7f2ab523e91171L, "commands"))).addElement(command2);
+                }
               } else if (SNodeOperations.isInstanceOf(operation, MetaAdapterFactory.getConcept(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x40798aa2d38348a2L, "ro.barata.mps.htmlLanguage.structure.DatabaseOperation"))) {
                 List<SNode> references = ListSequence.fromList(new ArrayList<SNode>());
                 if (SNodeOperations.isInstanceOf(SLinkOperations.getTarget(SNodeOperations.cast(operation, MetaAdapterFactory.getConcept(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x40798aa2d38348a2L, "ro.barata.mps.htmlLanguage.structure.DatabaseOperation")), MetaAdapterFactory.getContainmentLink(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x40798aa2d38348a2L, 0x40798aa2d3834946L, "command")), MetaAdapterFactory.getConcept(0x58b9e0aa66634086L, 0x8f84dfaa697f9989L, 0x58274fdf875fd520L, "ro.barata.mps.databaseOperationsLanguage.structure.InsertOperation"))) {
@@ -100,9 +104,7 @@ public class QueriesGenerated {
                     SNode name = SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(MetaAdapterFactory.getConcept(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x3ab9167f5c1a58d0L, "ro.barata.mps.javascriptLanguage.structure.StringValue")));
                     SPropertyOperations.set(name, MetaAdapterFactory.getProperty(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x3ab9167f5c1a58d0L, 0x3ab9167f5c1a58d1L, "value"), SPropertyOperations.getString(SLinkOperations.getTarget(param, MetaAdapterFactory.getReferenceLink(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x34756c9d9e7c4fc4L, 0x34756c9d9e7c5326L, "parameter")), MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name")));
                     ListSequence.fromList(SLinkOperations.getChildren(namesArray, MetaAdapterFactory.getContainmentLink(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x52e4b0611da1470eL, 0x52e4b0611da14b6eL, "values"))).addElement(name);
-                    SNode value = SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(MetaAdapterFactory.getConcept(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x3ab9167f5c1a58d0L, "ro.barata.mps.javascriptLanguage.structure.StringValue")));
-                    SPropertyOperations.set(value, MetaAdapterFactory.getProperty(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x3ab9167f5c1a58d0L, 0x3ab9167f5c1a58d1L, "value"), SPropertyOperations.getString(param, MetaAdapterFactory.getProperty(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x34756c9d9e7c4fc4L, 0x34756c9d9e7c5302L, "value")));
-                    ListSequence.fromList(SLinkOperations.getChildren(valuesArray, MetaAdapterFactory.getContainmentLink(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x52e4b0611da1470eL, 0x52e4b0611da14b6eL, "values"))).addElement(value);
+                    ListSequence.fromList(SLinkOperations.getChildren(valuesArray, MetaAdapterFactory.getContainmentLink(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x52e4b0611da1470eL, 0x52e4b0611da14b6eL, "values"))).addElement(SLinkOperations.getTarget(param, MetaAdapterFactory.getContainmentLink(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x34756c9d9e7c4fc4L, 0x58324c1f0fa240bbL, "value")));
                   }
                 }
                 SLinkOperations.setTarget(nameParam, MetaAdapterFactory.getContainmentLink(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x2addac2a6f87e883L, 0x2addac2a6f87ea8bL, "value"), namesArray);
@@ -112,17 +114,19 @@ public class QueriesGenerated {
                     return SNodeOperations.isInstanceOf(it, MetaAdapterFactory.getConcept(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x40798aa2d38349e0L, "ro.barata.mps.javascriptLanguage.structure.JavascriptOperation"));
                   }
                 }).isNotEmpty()) {
-                  call = SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(MetaAdapterFactory.getConcept(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x34756c9d9f722ad2L, "ro.barata.mps.javascriptLanguage.structure.FunctionCommand")));
+                  call.value = SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(MetaAdapterFactory.getConcept(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x34756c9d9f722ad2L, "ro.barata.mps.javascriptLanguage.structure.FunctionCommand")));
                   for (SNode op : ListSequence.fromList(SLinkOperations.getChildren(SNodeOperations.cast(operation, MetaAdapterFactory.getConcept(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x34756c9d9e7c4538L, "ro.barata.mps.htmlLanguage.structure.ReceiveOperation")), MetaAdapterFactory.getContainmentLink(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x34756c9d9e7c4538L, 0x34756c9d9e7c4aedL, "operations"))).where(new IWhereFilter<SNode>() {
                     public boolean accept(SNode it) {
                       return SNodeOperations.isInstanceOf(it, MetaAdapterFactory.getConcept(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x40798aa2d38349e0L, "ro.barata.mps.javascriptLanguage.structure.JavascriptOperation"));
                     }
                   })) {
-                    ListSequence.fromList(SLinkOperations.getChildren(call, MetaAdapterFactory.getContainmentLink(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x34756c9d9f722ad2L, 0x34756c9d9f722fb1L, "commands"))).addElement(SLinkOperations.getTarget(op, MetaAdapterFactory.getContainmentLink(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x40798aa2d38349e0L, 0x40798aa2d3834a16L, "operation")));
+                    if (!(SNodeOperations.isInstanceOf(SLinkOperations.getTarget(op, MetaAdapterFactory.getContainmentLink(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x40798aa2d38349e0L, 0x40798aa2d3834a16L, "operation")), MetaAdapterFactory.getConcept(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x58324c1f10191298L, "ro.barata.mps.javascriptLanguage.structure.StoreCommand")))) {
+                      ListSequence.fromList(SLinkOperations.getChildren(call.value, MetaAdapterFactory.getContainmentLink(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x34756c9d9f722ad2L, 0x34756c9d9f722fb1L, "commands"))).addElement(SLinkOperations.getTarget(op, MetaAdapterFactory.getContainmentLink(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x40798aa2d38349e0L, 0x40798aa2d3834a16L, "operation")));
+                    }
                   }
                   SNode param = SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(MetaAdapterFactory.getConcept(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x4b5fda9ef04fdab4L, "ro.barata.mps.javascriptLanguage.structure.JavascriptParameter")));
                   SPropertyOperations.set(param, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "jsonObj");
-                  ListSequence.fromList(SLinkOperations.getChildren(call, MetaAdapterFactory.getContainmentLink(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x34756c9d9f722ad2L, 0x34756c9d9f74fc8fL, "parameters"))).addElement(param);
+                  ListSequence.fromList(SLinkOperations.getChildren(call.value, MetaAdapterFactory.getContainmentLink(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x34756c9d9f722ad2L, 0x34756c9d9f74fc8fL, "parameters"))).addElement(param);
                 }
                 ListSequence.fromList(SLinkOperations.getChildren(function2, MetaAdapterFactory.getContainmentLink(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x4c7f2ab523e8fe0bL, 0x4c7f2ab523e91171L, "commands"))).addElement(nameParam);
                 ListSequence.fromList(SLinkOperations.getChildren(function2, MetaAdapterFactory.getContainmentLink(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x4c7f2ab523e8fe0bL, 0x4c7f2ab523e91171L, "commands"))).addElement(valueParam);
@@ -134,31 +138,42 @@ public class QueriesGenerated {
               return !(SNodeOperations.isInstanceOf(it, MetaAdapterFactory.getConcept(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x40798aa2d38349e0L, "ro.barata.mps.javascriptLanguage.structure.JavascriptOperation")));
             }
           }).isNotEmpty()) {
-            SNode callSendData = SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(MetaAdapterFactory.getConcept(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x40798aa2d3b06627L, "ro.barata.mps.javascriptLanguage.structure.CallFunctionCommand")));
-            SLinkOperations.setTarget(callSendData, MetaAdapterFactory.getReferenceLink(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x40798aa2d3b06627L, 0x40798aa2d3b0709aL, "function"), function);
-            SNode namesParam = SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(MetaAdapterFactory.getConcept(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x3ab9167f5c29802aL, "ro.barata.mps.javascriptLanguage.structure.VarValue")));
-            SLinkOperations.setTarget(namesParam, MetaAdapterFactory.getReferenceLink(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x3ab9167f5c29802aL, 0x3ab9167f5c29809aL, "var"), nameParam);
-            SNode valuesParam = SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(MetaAdapterFactory.getConcept(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x3ab9167f5c29802aL, "ro.barata.mps.javascriptLanguage.structure.VarValue")));
-            SLinkOperations.setTarget(valuesParam, MetaAdapterFactory.getReferenceLink(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x3ab9167f5c29802aL, 0x3ab9167f5c29809aL, "var"), valueParam);
-            SNode actionName = SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(MetaAdapterFactory.getConcept(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x3ab9167f5c1a58d0L, "ro.barata.mps.javascriptLanguage.structure.StringValue")));
-            SPropertyOperations.set(actionName, MetaAdapterFactory.getProperty(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x3ab9167f5c1a58d0L, 0x3ab9167f5c1a58d1L, "value"), SPropertyOperations.getString(action, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name")));
-            SNode pageName = SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(MetaAdapterFactory.getConcept(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x3ab9167f5c1a58d0L, "ro.barata.mps.javascriptLanguage.structure.StringValue")));
-            SPropertyOperations.set(pageName, MetaAdapterFactory.getProperty(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x3ab9167f5c1a58d0L, 0x3ab9167f5c1a58d1L, "value"), SPropertyOperations.getString(page, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name")));
-            ListSequence.fromList(SLinkOperations.getChildren(callSendData, MetaAdapterFactory.getContainmentLink(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x40798aa2d3b06627L, 0x40798aa2d3b070a0L, "parameters"))).addElement(pageName);
-            ListSequence.fromList(SLinkOperations.getChildren(callSendData, MetaAdapterFactory.getContainmentLink(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x40798aa2d3b06627L, 0x40798aa2d3b070a0L, "parameters"))).addElement(actionName);
-            ListSequence.fromList(SLinkOperations.getChildren(callSendData, MetaAdapterFactory.getContainmentLink(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x40798aa2d3b06627L, 0x40798aa2d3b070a0L, "parameters"))).addElement(namesParam);
-            ListSequence.fromList(SLinkOperations.getChildren(callSendData, MetaAdapterFactory.getContainmentLink(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x40798aa2d3b06627L, 0x40798aa2d3b070a0L, "parameters"))).addElement(valuesParam);
-            if ((call != null)) {
-              SNode functionParam = SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(MetaAdapterFactory.getConcept(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x2addac2a6f87e883L, "ro.barata.mps.javascriptLanguage.structure.InitializeVarCommand")));
-              SPropertyOperations.set(functionParam, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "callback");
-              SLinkOperations.setTarget(functionParam, MetaAdapterFactory.getContainmentLink(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x2addac2a6f87e883L, 0x2addac2a6f87ea8bL, "value"), call);
-              SNode callVar = SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(MetaAdapterFactory.getConcept(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x3ab9167f5c29802aL, "ro.barata.mps.javascriptLanguage.structure.VarValue")));
-              ListSequence.fromList(SLinkOperations.getChildren(function2, MetaAdapterFactory.getContainmentLink(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x4c7f2ab523e8fe0bL, 0x4c7f2ab523e91171L, "commands"))).addElement(functionParam);
-              SLinkOperations.setTarget(callVar, MetaAdapterFactory.getReferenceLink(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x3ab9167f5c29802aL, 0x3ab9167f5c29809aL, "var"), functionParam);
-              ListSequence.fromList(SLinkOperations.getChildren(callSendData, MetaAdapterFactory.getContainmentLink(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x40798aa2d3b06627L, 0x40798aa2d3b070a0L, "parameters"))).addElement(callVar);
-            }
-            ListSequence.fromList(SLinkOperations.getChildren(function2, MetaAdapterFactory.getContainmentLink(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x4c7f2ab523e8fe0bL, 0x4c7f2ab523e91171L, "commands"))).addElement(callSendData);
-
+            ListSequence.fromList(SLinkOperations.getChildren(action, MetaAdapterFactory.getContainmentLink(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x4c7f2ab523e3fae4L, 0x40798aa2d3833ccdL, "operations"))).where(new IWhereFilter<SNode>() {
+              public boolean accept(SNode it) {
+                return !(SNodeOperations.isInstanceOf(it, MetaAdapterFactory.getConcept(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x40798aa2d38349e0L, "ro.barata.mps.javascriptLanguage.structure.JavascriptOperation")));
+              }
+            }).visitAll(new IVisitor<SNode>() {
+              public void visit(SNode it2) {
+                SNode callSendData = SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(MetaAdapterFactory.getConcept(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x40798aa2d3b06627L, "ro.barata.mps.javascriptLanguage.structure.CallFunctionCommand")));
+                SLinkOperations.setTarget(callSendData, MetaAdapterFactory.getReferenceLink(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x40798aa2d3b06627L, 0x40798aa2d3b0709aL, "function"), function);
+                SNode namesParam = SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(MetaAdapterFactory.getConcept(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x3ab9167f5c29802aL, "ro.barata.mps.javascriptLanguage.structure.VarValue")));
+                SLinkOperations.setTarget(namesParam, MetaAdapterFactory.getReferenceLink(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x3ab9167f5c29802aL, 0x3ab9167f5c29809aL, "var"), nameParam);
+                SNode valuesParam = SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(MetaAdapterFactory.getConcept(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x3ab9167f5c29802aL, "ro.barata.mps.javascriptLanguage.structure.VarValue")));
+                SLinkOperations.setTarget(valuesParam, MetaAdapterFactory.getReferenceLink(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x3ab9167f5c29802aL, 0x3ab9167f5c29809aL, "var"), valueParam);
+                SNode actionName = SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(MetaAdapterFactory.getConcept(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x3ab9167f5c1a58d0L, "ro.barata.mps.javascriptLanguage.structure.StringValue")));
+                if (SNodeOperations.isInstanceOf(it2, MetaAdapterFactory.getConcept(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x34756c9d9e7c4538L, "ro.barata.mps.htmlLanguage.structure.ReceiveOperation"))) {
+                  SPropertyOperations.set(actionName, MetaAdapterFactory.getProperty(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x3ab9167f5c1a58d0L, 0x3ab9167f5c1a58d1L, "value"), "json" + SPropertyOperations.getString(SLinkOperations.getTarget(SNodeOperations.cast(it2, MetaAdapterFactory.getConcept(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x34756c9d9e7c4538L, "ro.barata.mps.htmlLanguage.structure.ReceiveOperation")), MetaAdapterFactory.getReferenceLink(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x34756c9d9e7c4538L, 0x34756c9d9e8878c9L, "classReference")), MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name")));
+                } else {
+                  SPropertyOperations.set(actionName, MetaAdapterFactory.getProperty(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x3ab9167f5c1a58d0L, 0x3ab9167f5c1a58d1L, "value"), "db" + SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(SNodeOperations.cast(it2, MetaAdapterFactory.getConcept(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x40798aa2d38348a2L, "ro.barata.mps.htmlLanguage.structure.DatabaseOperation")), MetaAdapterFactory.getContainmentLink(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x40798aa2d38348a2L, 0x40798aa2d3834946L, "command")), MetaAdapterFactory.getReferenceLink(0x58b9e0aa66634086L, 0x8f84dfaa697f9989L, 0x58274fdf875ad2a1L, 0x58274fdf875b2b4cL, "object")), MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name")));
+                }
+                SNode pageName = SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(MetaAdapterFactory.getConcept(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x3ab9167f5c1a58d0L, "ro.barata.mps.javascriptLanguage.structure.StringValue")));
+                SPropertyOperations.set(pageName, MetaAdapterFactory.getProperty(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x3ab9167f5c1a58d0L, 0x3ab9167f5c1a58d1L, "value"), SPropertyOperations.getString(page, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name")));
+                ListSequence.fromList(SLinkOperations.getChildren(callSendData, MetaAdapterFactory.getContainmentLink(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x40798aa2d3b06627L, 0x40798aa2d3b070a0L, "parameters"))).addElement(pageName);
+                ListSequence.fromList(SLinkOperations.getChildren(callSendData, MetaAdapterFactory.getContainmentLink(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x40798aa2d3b06627L, 0x40798aa2d3b070a0L, "parameters"))).addElement(actionName);
+                ListSequence.fromList(SLinkOperations.getChildren(callSendData, MetaAdapterFactory.getContainmentLink(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x40798aa2d3b06627L, 0x40798aa2d3b070a0L, "parameters"))).addElement(namesParam);
+                ListSequence.fromList(SLinkOperations.getChildren(callSendData, MetaAdapterFactory.getContainmentLink(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x40798aa2d3b06627L, 0x40798aa2d3b070a0L, "parameters"))).addElement(valuesParam);
+                if ((call.value != null)) {
+                  SNode functionParam = SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(MetaAdapterFactory.getConcept(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x2addac2a6f87e883L, "ro.barata.mps.javascriptLanguage.structure.InitializeVarCommand")));
+                  SPropertyOperations.set(functionParam, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "callback");
+                  SLinkOperations.setTarget(functionParam, MetaAdapterFactory.getContainmentLink(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x2addac2a6f87e883L, 0x2addac2a6f87ea8bL, "value"), call.value);
+                  SNode callVar = SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(MetaAdapterFactory.getConcept(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x3ab9167f5c29802aL, "ro.barata.mps.javascriptLanguage.structure.VarValue")));
+                  ListSequence.fromList(SLinkOperations.getChildren(function2, MetaAdapterFactory.getContainmentLink(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x4c7f2ab523e8fe0bL, 0x4c7f2ab523e91171L, "commands"))).addElement(functionParam);
+                  SLinkOperations.setTarget(callVar, MetaAdapterFactory.getReferenceLink(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x3ab9167f5c29802aL, 0x3ab9167f5c29809aL, "var"), functionParam);
+                  ListSequence.fromList(SLinkOperations.getChildren(callSendData, MetaAdapterFactory.getContainmentLink(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x40798aa2d3b06627L, 0x40798aa2d3b070a0L, "parameters"))).addElement(callVar);
+                }
+                ListSequence.fromList(SLinkOperations.getChildren(function2, MetaAdapterFactory.getContainmentLink(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x4c7f2ab523e8fe0bL, 0x4c7f2ab523e91171L, "commands"))).addElement(callSendData);
+              }
+            });
           }
           if ((SLinkOperations.getTarget(action, MetaAdapterFactory.getReferenceLink(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x4c7f2ab523e3fae4L, 0x4c7f2ab523e43906L, "landingPage")) != null)) {
             SNode location = SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(MetaAdapterFactory.getConcept(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x4c7f2ab523e8fea0L, "ro.barata.mps.javascriptLanguage.structure.ChangePageCommand")));

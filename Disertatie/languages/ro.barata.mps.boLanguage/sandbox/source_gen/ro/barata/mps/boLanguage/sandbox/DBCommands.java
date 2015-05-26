@@ -9,35 +9,23 @@ public class DBCommands {
 
   public static void executeCommands() throws ClassNotFoundException, SQLException {
     Connection connection = DatabaseConnection.getConnection();
-    CategoryDAO categoryDAO = new CategoryDAO(connection);
-    Category category = new Category();
+    UserDAO userDAO = new UserDAO(connection);
+    User user = new User();
+    user = new User();
+    user.setUserId(1);
+    user.setUserName("Andra");
+    user.setPriviledge("admin");
+    user.setPassword("andra");
+
     {
-      Category newCategory = new Category();
-      category = new Category();
-      category.setId(1);
-      newCategory.setId(1);
-
-
-      newCategory.setName("rootCategoryChanged1");
-      {
-        Product product_1 = null;
-        product_1 = new Product();
-        product_1.setId(6);
-        product_1.setProductName("rootProduct2");
-        newCategory.addProduct(product_1);
-        product_1.setParentCategory(newCategory);
-        {
-          Attribute attribute_2 = null;
-          attribute_2 = new Attribute();
-          attribute_2.setId(7);
-          attribute_2.setAttributeName("weight");
-          attribute_2.setAttributeValue("15 kg");
-          product_1.addAttribute(attribute_2);
-          attribute_2.setParentProduct(product_1);
-        }
-      }
-      categoryDAO.updateCategory(category, newCategory);
+      Person person_1 = null;
+      person_1 = new Person();
+      person_1.setId(2);
+      person_1.setFirstName("Andra");
+      person_1.setLastName("Barata");
+      user.setPerson(person_1);
     }
+    userDAO.addUser(user);
   }
 
   public static void main(String[] args) {

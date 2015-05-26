@@ -33,37 +33,33 @@ public class ProductDAO {
     return products;
   }
 
-  public Product findById(String[] keys, String[] keyValues) throws SQLException {
+  public Product findProduct(Product product) throws SQLException {
     String sql = "select ";
     String columns = "";
     columns += "id";
     columns += ",";
     columns += "name";
-    columns = ((columns.length() > 0) ? "(" + columns + ")" : columns);
     String values = "";
-    for (int i = 0; i < keys.length; i++) {
-      values += keys[i] + "=" + keyValues[i] + (((i < keys.length - 1) ? "," : ""));
+    if (product.getId() != null) {
+      values += "id" + "='" + product.getId() + "' and ";
     }
-    if (values.length() > 0) {
-      values = " where " + values;
+    if (product.getProductName() != null) {
+      values += "name" + "='" + product.getProductName() + "' and ";
     }
-    sql += columns + "from" + "Product" + values;
+    if (values.length() > 6) {
+      values = " where " + values.substring(0, values.length() - 5);
+    }
+    sql += columns + " from " + "Product" + values;
+    System.out.println(sql);
     ResultSet set = stmt.executeQuery(sql);
-    List<Object> result = new ArrayList<Object>();
-    int i = 0;
+    Product foundProduct = new Product();
     while (set.next()) {
-      result.add(set.getObject(i + 1));
-      i++;
+      foundProduct = new Product();
+      foundProduct.setId(Integer.valueOf(set.getBigDecimal("id").intValue()));
+      foundProduct.setProductName(set.getString("name"));
     }
-    Product product = new Product();
-    i = 0;
-    product.setId((Integer) result.get(i));
-    i++;
-    product.setProductName((String) result.get(i));
-    i++;
-    return product;
+    return foundProduct;
   }
-
 
   public void addProduct(Product product) throws SQLException, ClassNotFoundException {
     String sql = "insert into " + "Product" + "(";
@@ -154,28 +150,4 @@ public class ProductDAO {
 
   }
 
-  private void pula(Product entity) throws SQLException, SQLException {
-    String sql = "";
-    {
-      List<String> columnVals = new LinkedList<String>();
-      List<String> valueVals = new LinkedList<String>();
-      {
-        Category parentCategory = entity.getParentCategory();
-        if (parentCategory != null) {
-          columnVals.add("categoryId");
-          valueVals.add(parentCategory.getId().toString());
-        }
-      }
-      sql = "update " + "Product" + " set";
-      for (int i = 0; i < columnVals.size(); i++) {
-        sql += columnVals.get(i) + "='" + valueVals.get(i) + "'" + (((i < columnVals.size() - 1) ? "," : ""));
-      }
-      sql += "where ";
-      sql += "id" + "=" + entity.getId() + "and";
-      sql = sql.substring(0, sql.length() - 3);
-      System.out.println(sql);
-      stmt.execute(sql);
-
-    }
-  }
 }

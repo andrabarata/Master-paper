@@ -8,7 +8,7 @@ import java.util.ArrayList;
 public class Shop {
   private Integer id;
   private String name;
-  private List<Customer> customers;
+  private List<User> users;
   private List<Category> categorys;
   public void setId(Integer attribute) {
     this.id = attribute;
@@ -16,8 +16,8 @@ public class Shop {
   public void setName(String attribute) {
     this.name = attribute;
   }
-  public void setCustomers(List<Customer> entities) {
-    this.customers = entities;
+  public void setUsers(List<User> entities) {
+    this.users = entities;
   }
   public void setCategorys(List<Category> entities) {
     this.categorys = entities;
@@ -28,20 +28,20 @@ public class Shop {
   public String getName() {
     return this.name;
   }
-  public List<Customer> getCustomers() {
-    return this.customers;
+  public List<User> getUsers() {
+    return this.users;
   }
   public List<Category> getCategorys() {
     return this.categorys;
   }
-  public void addCustomer(Customer customer) {
-    this.customers.add(customer);
+  public void addUser(User user) {
+    this.users.add(user);
   }
   public void addCategory(Category category) {
     this.categorys.add(category);
   }
   public Shop() {
-    this.customers = new ArrayList<Customer>();
+    this.users = new ArrayList<User>();
     this.categorys = new ArrayList<Category>();
   }
 }

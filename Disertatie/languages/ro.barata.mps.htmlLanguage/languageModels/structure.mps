@@ -244,6 +244,9 @@
     <property role="TrG5h" value="AllCondition" />
     <property role="34LRSv" value="All instances" />
     <ref role="1TJDcQ" node="5a6Q6gbwnmD" resolve="SelectCondition" />
+    <node concept="PrWs8" id="5wMj1WgoGM3" role="PzmwI">
+      <ref role="PrY4T" node="5wMj1WgoGM2" resolve="DBCondition" />
+    </node>
   </node>
   <node concept="1TIwiD" id="5a6Q6gbwnnj">
     <property role="3GE5qa" value="html.commands.model" />
@@ -710,8 +713,8 @@
     <ref role="1TJDcQ" node="5EdacSEwA7s" resolve="HTMLValue" />
     <node concept="1TJgyj" id="5EdacSEwA7L" role="1TKVEi">
       <property role="20lmBu" value="aggregation" />
-      <property role="20kJfa" value="value" />
-      <property role="20lbJX" value="0..1" />
+      <property role="20kJfa" value="values" />
+      <property role="20lbJX" value="0..n" />
       <ref role="20lvS9" node="5EdacSEwA7P" resolve="MixedHTMLCommand" />
     </node>
     <node concept="1TJgyj" id="5EdacSEwA7M" role="1TKVEi">
@@ -989,16 +992,28 @@
     <property role="3GE5qa" value="html.commands.operations" />
     <property role="TrG5h" value="QueryParameter" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="5wMj1WfC$2V" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="value" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" to="jel9:3ET5BXs7p5n" resolve="JavascriptValue" />
+    </node>
     <node concept="1TJgyj" id="3hPr9Quv5cA" role="1TKVEi">
       <property role="20lmBu" value="reference" />
       <property role="20kJfa" value="parameter" />
       <property role="20lbJX" value="1" />
       <ref role="20lvS9" to="tpce:f_TJgxF" resolve="PropertyDeclaration" />
     </node>
-    <node concept="1TJgyi" id="3hPr9Quv5c2" role="1TKVEl">
-      <property role="TrG5h" value="value" />
-      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
-    </node>
+  </node>
+  <node concept="1TIwiD" id="5wMj1WgetaC">
+    <property role="3GE5qa" value="html.commands.operations" />
+    <property role="TrG5h" value="SessionCondition" />
+    <property role="34LRSv" value="Session instance" />
+    <ref role="1TJDcQ" node="5a6Q6gbwnmD" resolve="SelectCondition" />
+  </node>
+  <node concept="PlHQZ" id="5wMj1WgoGM2">
+    <property role="3GE5qa" value="html.commands.operations" />
+    <property role="TrG5h" value="DBCondition" />
   </node>
 </model>
 

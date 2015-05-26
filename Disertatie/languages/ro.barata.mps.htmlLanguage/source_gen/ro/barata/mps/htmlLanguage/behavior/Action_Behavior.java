@@ -26,7 +26,16 @@ public class Action_Behavior {
     }
     return flag;
   }
-  public static List<SNode> call_getNonDupplicates_6352133620898804729(SNode thisNode) {
+  public static boolean call_hasReceiveOperations_3780046886497849920(SNode thisNode) {
+    boolean flag = false;
+    for (SNode operation : SLinkOperations.getChildren(thisNode, MetaAdapterFactory.getContainmentLink(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x4c7f2ab523e3fae4L, 0x40798aa2d3833ccdL, "operations"))) {
+      if (SNodeOperations.isInstanceOf(operation, MetaAdapterFactory.getConcept(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x34756c9d9e7c4538L, "ro.barata.mps.htmlLanguage.structure.ReceiveOperation"))) {
+        flag = true;
+      }
+    }
+    return flag;
+  }
+  public static List<SNode> call_getDBNonDupplicates_6352133620898804729(SNode thisNode) {
     final List<SNode> operations = ListSequence.fromList(new ArrayList<SNode>());
     ListSequence.fromList(SLinkOperations.getChildren(thisNode, MetaAdapterFactory.getContainmentLink(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x4c7f2ab523e3fae4L, 0x40798aa2d3833ccdL, "operations"))).where(new IWhereFilter<SNode>() {
       public boolean accept(SNode it) {

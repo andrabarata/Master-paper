@@ -4,15 +4,12 @@
     <modelRoot contentPath="${module}" type="default">
       <sourceRoot location="models" />
     </modelRoot>
-    <modelRoot contentPath="${module}" type="java_classes">
-      <sourceRoot location="lib/javax.servlet-3.0.0.v201112011016.jar" />
-      <sourceRoot location="lib/jetty-all-8.1.14.v20131031.jar" />
-    </modelRoot>
   </models>
   <stubModelEntries>
     <stubModelEntry path="C:/Users/Andra/Documents/GitHub/Master-paper/Disertatie/languages/ro.barata.mps.rootLanguage/lib/ojdbc6.jar" />
     <stubModelEntry path="C:/Users/Andra/Documents/GitHub/Master-paper/Disertatie/languages/ro.barata.mps.htmlLanguage/lib/javax.servlet-3.0.0.v201112011016.jar" />
     <stubModelEntry path="C:/Users/Andra/Documents/GitHub/Master-paper/Disertatie/languages/ro.barata.mps.htmlLanguage/lib/jetty-all-8.1.14.v20131031.jar" />
+    <stubModelEntry path="C:/Users/Andra/Documents/GitHub/Master-paper/Disertatie/languages/ro.barata.mps.htmlLanguage/lib/flexjson.jar" />
   </stubModelEntries>
   <sourcePath />
   <dependencies>
