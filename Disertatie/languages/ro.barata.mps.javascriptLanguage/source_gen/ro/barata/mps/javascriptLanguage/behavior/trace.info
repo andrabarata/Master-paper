@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <debug-info>
+  <concept fqn="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+  <concept fqn="jetbrains.mps.baseLanguage.structure.ForeachStatement" />
+  <concept fqn="jetbrains.mps.baseLanguage.structure.IfStatement" />
+  <concept fqn="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+  <concept fqn="jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" />
   <root>
     <file name="AbstractVarCommand_BehaviorDescriptor.java">
       <unit at="9,0,20,0" name="ro.barata.mps.javascriptLanguage.behavior.AbstractVarCommand_BehaviorDescriptor" />
@@ -20,7 +25,7 @@
       <unit at="6,0,14,0" name="ro.barata.mps.javascriptLanguage.behavior.AssignmentCommand_BehaviorDescriptor" />
     </file>
     <file name="BehaviorAspectDescriptor.java">
-      <unit at="9,0,78,0" name="ro.barata.mps.javascriptLanguage.behavior.BehaviorAspectDescriptor" />
+      <unit at="9,0,86,0" name="ro.barata.mps.javascriptLanguage.behavior.BehaviorAspectDescriptor" />
     </file>
     <file name="CallFunctionCommand_BehaviorDescriptor.java">
       <unit at="6,0,14,0" name="ro.barata.mps.javascriptLanguage.behavior.CallFunctionCommand_BehaviorDescriptor" />
@@ -46,9 +51,6 @@
     <file name="GetArrayValueCommand_BehaviorDescriptor.java">
       <unit at="6,0,14,0" name="ro.barata.mps.javascriptLanguage.behavior.GetArrayValueCommand_BehaviorDescriptor" />
     </file>
-    <file name="IfCommand_BehaviorDescriptor.java">
-      <unit at="6,0,14,0" name="ro.barata.mps.javascriptLanguage.behavior.IfCommand_BehaviorDescriptor" />
-    </file>
     <file name="InitializeVarCommand_BehaviorDescriptor.java">
       <unit at="6,0,14,0" name="ro.barata.mps.javascriptLanguage.behavior.InitializeVarCommand_BehaviorDescriptor" />
     </file>
@@ -56,7 +58,7 @@
       <unit at="6,0,14,0" name="ro.barata.mps.javascriptLanguage.behavior.InstanceValue_BehaviorDescriptor" />
     </file>
     <file name="IntValue_BehaviorDescriptor.java">
-      <unit at="6,0,14,0" name="ro.barata.mps.javascriptLanguage.behavior.IntValue_BehaviorDescriptor" />
+      <unit at="7,0,15,0" name="ro.barata.mps.javascriptLanguage.behavior.IntValue_BehaviorDescriptor" />
     </file>
     <file name="JavascriptCommand_BehaviorDescriptor.java">
       <unit at="7,0,15,0" name="ro.barata.mps.javascriptLanguage.behavior.JavascriptCommand_BehaviorDescriptor" />
@@ -67,6 +69,9 @@
     <file name="JavascriptFunction_BehaviorDescriptor.java">
       <unit at="10,0,21,0" name="ro.barata.mps.javascriptLanguage.behavior.JavascriptFunction_BehaviorDescriptor" />
     </file>
+    <file name="JavascriptIfCommand_BehaviorDescriptor.java">
+      <unit at="6,0,14,0" name="ro.barata.mps.javascriptLanguage.behavior.JavascriptIfCommand_BehaviorDescriptor" />
+    </file>
     <file name="JavascriptOperation_BehaviorDescriptor.java">
       <unit at="7,0,15,0" name="ro.barata.mps.javascriptLanguage.behavior.JavascriptOperation_BehaviorDescriptor" />
     </file>
@@ -74,16 +79,31 @@
       <unit at="6,0,14,0" name="ro.barata.mps.javascriptLanguage.behavior.JavascriptParameter_BehaviorDescriptor" />
     </file>
     <file name="JavascriptValue_BehaviorDescriptor.java">
-      <unit at="7,0,15,0" name="ro.barata.mps.javascriptLanguage.behavior.JavascriptValue_BehaviorDescriptor" />
+      <unit at="6,0,8,0" name="ro.barata.mps.javascriptLanguage.behavior.JavascriptValue_BehaviorDescriptor" />
+    </file>
+    <file name="NullValue_BehaviorDescriptor.java">
+      <unit at="7,0,15,0" name="ro.barata.mps.javascriptLanguage.behavior.NullValue_BehaviorDescriptor" />
+    </file>
+    <file name="ParameterRefence_BehaviorDescriptor.java">
+      <unit at="7,0,15,0" name="ro.barata.mps.javascriptLanguage.behavior.ParameterRefence_BehaviorDescriptor" />
+    </file>
+    <file name="Parameter_BehaviorDescriptor.java">
+      <unit at="10,0,21,0" name="ro.barata.mps.javascriptLanguage.behavior.Parameter_BehaviorDescriptor" />
     </file>
     <file name="PushHTMLCommand_BehaviorDescriptor.java">
       <unit at="6,0,14,0" name="ro.barata.mps.javascriptLanguage.behavior.PushHTMLCommand_BehaviorDescriptor" />
     </file>
+    <file name="StoreCommand_BehaviorDescriptor.java">
+      <unit at="6,0,14,0" name="ro.barata.mps.javascriptLanguage.behavior.StoreCommand_BehaviorDescriptor" />
+    </file>
     <file name="StringValue_BehaviorDescriptor.java">
-      <unit at="6,0,14,0" name="ro.barata.mps.javascriptLanguage.behavior.StringValue_BehaviorDescriptor" />
+      <unit at="7,0,15,0" name="ro.barata.mps.javascriptLanguage.behavior.StringValue_BehaviorDescriptor" />
     </file>
     <file name="SubmitCommand_BehaviorDescriptor.java">
       <unit at="6,0,14,0" name="ro.barata.mps.javascriptLanguage.behavior.SubmitCommand_BehaviorDescriptor" />
+    </file>
+    <file name="ValueUser_BehaviorDescriptor.java">
+      <unit at="6,0,8,0" name="ro.barata.mps.javascriptLanguage.behavior.ValueUser_BehaviorDescriptor" />
     </file>
     <file name="VarCommandValue_BehaviorDescriptor.java">
       <unit at="7,0,15,0" name="ro.barata.mps.javascriptLanguage.behavior.VarCommandValue_BehaviorDescriptor" />
@@ -98,10 +118,80 @@
       <unit at="6,0,14,0" name="ro.barata.mps.javascriptLanguage.behavior.VarNameCommand_BehaviorDescriptor" />
     </file>
     <file name="VarValueHREF_BehaviorDescriptor.java">
-      <unit at="7,0,15,0" name="ro.barata.mps.javascriptLanguage.behavior.VarValueHREF_BehaviorDescriptor" />
+      <unit at="8,0,16,0" name="ro.barata.mps.javascriptLanguage.behavior.VarValueHREF_BehaviorDescriptor" />
     </file>
     <file name="VarValue_BehaviorDescriptor.java">
-      <unit at="6,0,14,0" name="ro.barata.mps.javascriptLanguage.behavior.VarValue_BehaviorDescriptor" />
+      <unit at="7,0,15,0" name="ro.barata.mps.javascriptLanguage.behavior.VarValue_BehaviorDescriptor" />
+    </file>
+  </root>
+  <root nodeRef="r:5ee221f4-7770-4c2c-a503-39a43a001419(ro.barata.mps.javascriptLanguage.behavior)/1923253541719954612">
+    <file name="ChangePageCommand_Behavior.java">
+      <node id="1923253541701344633" at="15,89,16,251" concept="3" />
+      <node id="1923253541701344639" at="16,251,17,166" concept="0" />
+      <node id="1923253541701344645" at="17,166,18,236" concept="3" />
+      <node id="1923253541701344651" at="18,236,19,798" concept="0" />
+      <node id="1923253541701344663" at="19,798,20,239" concept="3" />
+      <node id="1923253541701344669" at="20,239,21,176" concept="0" />
+      <node id="1923253541701344675" at="21,176,22,182" concept="0" />
+      <node id="1923253541720262412" at="22,182,23,64" concept="0" />
+      <node id="1923253541701344690" at="24,522,25,244" concept="3" />
+      <node id="1923253541701344696" at="25,244,26,176" concept="0" />
+      <node id="1923253541701344702" at="26,176,27,170" concept="0" />
+      <node id="1923253541701344708" at="27,170,28,242" concept="3" />
+      <node id="1923253541701344716" at="29,358,30,241" concept="3" />
+      <node id="1923253541701344722" at="30,241,31,797" concept="0" />
+      <node id="1923253541701344732" at="31,797,32,658" concept="0" />
+      <node id="1923253541701344743" at="32,658,33,182" concept="0" />
+      <node id="1923253541701344763" at="34,371,35,238" concept="3" />
+      <node id="1923253541701344769" at="35,238,36,670" concept="0" />
+      <node id="1923253541701344780" at="36,670,37,182" concept="0" />
+      <node id="1923253541701344799" at="38,7,39,49" concept="3" />
+      <node id="1923253541701344805" at="39,49,40,242" concept="3" />
+      <node id="1923253541701344811" at="40,242,41,169" concept="0" />
+      <node id="1923253541704794576" at="41,169,42,54" concept="3" />
+      <node id="1923253541701344817" at="42,54,43,179" concept="0" />
+      <node id="1923253541701344823" at="43,179,44,176" concept="0" />
+      <node id="1923253541720016568" at="44,176,45,61" concept="0" />
+      <node id="1923253541701344786" at="45,61,46,179" concept="0" />
+      <node id="1923253541720020623" at="46,179,47,60" concept="0" />
+      <node id="1923253541701344841" at="48,5,49,239" concept="3" />
+      <node id="1923253541701344847" at="49,239,50,178" concept="0" />
+      <node id="1923253541719980182" at="50,178,51,178" concept="0" />
+      <node id="1923253541723261557" at="51,178,52,63" concept="0" />
+      <node id="1923253541719954612" at="13,0,15,0" concept="4" trace="init#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <node id="1923253541701344714" at="28,242,38,7" concept="2" />
+      <node id="1923253541701344688" at="23,64,48,5" concept="1" />
+      <node id="1923253541719954612" at="15,0,54,0" concept="4" trace="call_generateAdditionalSources_1923253541697062536#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <scope id="1923253541719954614" at="13,43,13,43" />
+      <scope id="1923253541719954612" at="13,0,15,0">
+        <var name="thisNode" id="1923253541719954612" />
+      </scope>
+      <scope id="1923253541701344762" at="34,371,37,182">
+        <var name="var2" id="1923253541701344764" />
+      </scope>
+      <scope id="1923253541701344715" at="29,358,33,182">
+        <var name="var2" id="1923253541701344717" />
+      </scope>
+      <scope id="1923253541701344689" at="24,522,47,60">
+        <var name="ass" id="1923253541701344691" />
+        <var name="ass2" id="1923253541701344800" />
+        <var name="comm" id="1923253541704794579" />
+        <var name="command2" id="1923253541701344709" />
+        <var name="strnode" id="1923253541701344806" />
+      </scope>
+      <scope id="1923253541701344688" at="23,64,48,5">
+        <var name="block" id="1923253541701344836" />
+      </scope>
+      <scope id="1923253541697062538" at="15,89,52,63">
+        <var name="command" id="1923253541701344664" />
+        <var name="hrefValue" id="1923253541701344634" />
+        <var name="var" id="1923253541701344646" />
+        <var name="varVl" id="1923253541701344842" />
+      </scope>
+      <scope id="1923253541719954612" at="15,0,54,0">
+        <var name="thisNode" id="1923253541719954612" />
+      </scope>
+      <unit id="1923253541719954612" at="12,0,55,0" name="ro.barata.mps.javascriptLanguage.behavior.ChangePageCommand_Behavior" />
     </file>
   </root>
 </debug-info>

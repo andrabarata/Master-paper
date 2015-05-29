@@ -4,25 +4,12 @@ package ro.barata.mps.javascriptLanguage.textGen;
 
 import jetbrains.mps.textGen.SNodeTextGen;
 import org.jetbrains.mps.openapi.model.SNode;
-import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
-import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
 
 public class ChangePageCommand_TextGen extends SNodeTextGen {
   public void doGenerateText(SNode node) {
     this.appendWithIndent("document.location.href=\"");
-    if (SNodeOperations.isInstanceOf(SLinkOperations.getTarget(node, MetaAdapterFactory.getContainmentLink(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x4c7f2ab523e8fea0L, 0x34756c9d9f074918L, "page")), MetaAdapterFactory.getConcept(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x3824c288b2065910L, "ro.barata.mps.htmlLanguage.structure.UserHREF"))) {
-      this.append(SPropertyOperations.getString(SNodeOperations.cast(SLinkOperations.getTarget(node, MetaAdapterFactory.getContainmentLink(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x4c7f2ab523e8fea0L, 0x34756c9d9f074918L, "page")), MetaAdapterFactory.getConcept(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x3824c288b2065910L, "ro.barata.mps.htmlLanguage.structure.UserHREF")), MetaAdapterFactory.getProperty(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x3824c288b2065910L, 0x3824c288b2065978L, "value")));
-      if ((SLinkOperations.getTarget(SNodeOperations.cast(SLinkOperations.getTarget(node, MetaAdapterFactory.getContainmentLink(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x4c7f2ab523e8fea0L, 0x34756c9d9f074918L, "page")), MetaAdapterFactory.getConcept(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x3824c288b2065910L, "ro.barata.mps.htmlLanguage.structure.UserHREF")), MetaAdapterFactory.getContainmentLink(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x3824c288b2065910L, 0x34756c9d9fddbf93L, "parameter")) != null)) {
-        this.append("/");
-        appendNode(SLinkOperations.getTarget(SNodeOperations.cast(SLinkOperations.getTarget(node, MetaAdapterFactory.getContainmentLink(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x4c7f2ab523e8fea0L, 0x34756c9d9f074918L, "page")), MetaAdapterFactory.getConcept(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x3824c288b2065910L, "ro.barata.mps.htmlLanguage.structure.UserHREF")), MetaAdapterFactory.getContainmentLink(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x3824c288b2065910L, 0x34756c9d9fddbf93L, "parameter")));
-        this.append(";");
-        this.appendNewLine();
-      } else {
-        this.append("\";");
-        this.appendNewLine();
-      }
-    }
+    appendNode(SLinkOperations.getTarget(node, MetaAdapterFactory.getContainmentLink(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x4c7f2ab523e8fea0L, 0x34756c9d9f074918L, "page")));
   }
 }

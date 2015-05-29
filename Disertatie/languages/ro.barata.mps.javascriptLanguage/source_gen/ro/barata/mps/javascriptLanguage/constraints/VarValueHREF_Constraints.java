@@ -4,19 +4,20 @@ package ro.barata.mps.javascriptLanguage.constraints;
 
 import jetbrains.mps.smodel.runtime.base.BaseConstraintsDescriptor;
 import jetbrains.mps.smodel.adapter.ids.MetaIdFactory;
+import org.jetbrains.annotations.Nullable;
+import org.jetbrains.mps.openapi.model.SNode;
+import jetbrains.mps.smodel.IOperationContext;
+import jetbrains.mps.smodel.runtime.CheckingNodeContext;
 import java.util.Map;
 import jetbrains.mps.smodel.adapter.ids.SReferenceLinkId;
 import jetbrains.mps.smodel.runtime.ReferenceConstraintsDescriptor;
 import java.util.HashMap;
 import jetbrains.mps.smodel.runtime.base.BaseReferenceConstraintsDescriptor;
-import org.jetbrains.annotations.Nullable;
 import jetbrains.mps.smodel.runtime.ReferenceScopeProvider;
 import jetbrains.mps.smodel.runtime.base.BaseScopeProvider;
 import org.jetbrains.mps.openapi.model.SNodeReference;
 import jetbrains.mps.scope.Scope;
-import jetbrains.mps.smodel.IOperationContext;
 import jetbrains.mps.smodel.runtime.ReferenceConstraintsContext;
-import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.internal.collections.runtime.ListSequence;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
@@ -35,6 +36,20 @@ public class VarValueHREF_Constraints extends BaseConstraintsDescriptor {
     super(MetaIdFactory.conceptId(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x34756c9d9fad5530L));
   }
   @Override
+  public boolean hasOwnCanBeChildMethod() {
+    return true;
+  }
+  @Override
+  public boolean canBeChild(@Nullable SNode node, SNode parentNode, SNode link, SNode childConcept, final IOperationContext operationContext, @Nullable final CheckingNodeContext checkingNodeContext) {
+    boolean result = static_canBeAChild(node, parentNode, link, childConcept, operationContext);
+
+    if (!(result) && checkingNodeContext != null) {
+      checkingNodeContext.setBreakingNode(canBeChildBreakingPoint);
+    }
+
+    return result;
+  }
+  @Override
   protected Map<SReferenceLinkId, ReferenceConstraintsDescriptor> getNotDefaultSReferenceLinks() {
     Map<SReferenceLinkId, ReferenceConstraintsDescriptor> references = new HashMap<SReferenceLinkId, ReferenceConstraintsDescriptor>();
     references.put(MetaIdFactory.refId(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x34756c9d9fad5530L, 0x34756c9d9fad56f4L), new BaseReferenceConstraintsDescriptor(MetaIdFactory.refId(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x34756c9d9fad5530L, 0x34756c9d9fad56f4L), this) {
@@ -48,7 +63,7 @@ public class VarValueHREF_Constraints extends BaseConstraintsDescriptor {
         return new BaseScopeProvider() {
           @Override
           public SNodeReference getSearchScopeValidatorNode() {
-            return breakingNode_acpjh2_a0a0a0a0a1a0b0a1a1;
+            return breakingNode_acpjh2_a0a0a0a0a1a0b0a1a3;
           }
           @Override
           public Scope createScope(final IOperationContext operationContext, final ReferenceConstraintsContext _context) {
@@ -97,5 +112,9 @@ public class VarValueHREF_Constraints extends BaseConstraintsDescriptor {
     });
     return references;
   }
-  private static SNodePointer breakingNode_acpjh2_a0a0a0a0a1a0b0a1a1 = new SNodePointer("r:bd500181-ba2c-4cc3-b9c2-c902c4a7aea7(ro.barata.mps.javascriptLanguage.constraints)", "3780046886492418350");
+  public static boolean static_canBeAChild(SNode node, SNode parentNode, SNode link, SNode childConcept, final IOperationContext operationContext) {
+    return (SNodeOperations.getNodeAncestor(parentNode, MetaAdapterFactory.getConcept(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x4c7f2ab523e8fea3L, "ro.barata.mps.javascriptLanguage.structure.JavascriptCommand"), false, false) != null);
+  }
+  private static SNodePointer canBeChildBreakingPoint = new SNodePointer("r:bd500181-ba2c-4cc3-b9c2-c902c4a7aea7(ro.barata.mps.javascriptLanguage.constraints)", "1923253541742566578");
+  private static SNodePointer breakingNode_acpjh2_a0a0a0a0a1a0b0a1a3 = new SNodePointer("r:bd500181-ba2c-4cc3-b9c2-c902c4a7aea7(ro.barata.mps.javascriptLanguage.constraints)", "3780046886492418350");
 }

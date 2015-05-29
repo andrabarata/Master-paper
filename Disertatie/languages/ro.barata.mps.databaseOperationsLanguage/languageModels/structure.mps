@@ -153,7 +153,7 @@
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
   </node>
   <node concept="1TIwiD" id="5wBjXY7qSi3">
-    <property role="TrG5h" value="StringValue" />
+    <property role="TrG5h" value="DBStringValue" />
     <property role="34LRSv" value="string" />
     <property role="3GE5qa" value="db.values" />
     <ref role="1TJDcQ" node="5wBjXY7qSgN" resolve="AbstractValue" />
@@ -163,7 +163,7 @@
     </node>
   </node>
   <node concept="1TIwiD" id="5wBjXY7qSiU">
-    <property role="TrG5h" value="IntValue" />
+    <property role="TrG5h" value="DBIntValue" />
     <property role="34LRSv" value="int" />
     <property role="3GE5qa" value="db.values" />
     <ref role="1TJDcQ" node="5wBjXY7qSgN" resolve="AbstractValue" />

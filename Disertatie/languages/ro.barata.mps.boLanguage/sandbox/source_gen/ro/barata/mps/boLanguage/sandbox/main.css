@@ -2,3 +2,12 @@
 visibility:hidden;
 color:red;
 }
+body{
+padding:2%;
+}
+.first{
+margin-top:50px;
+}
+.pure-menu{
+text-align:center;
+}

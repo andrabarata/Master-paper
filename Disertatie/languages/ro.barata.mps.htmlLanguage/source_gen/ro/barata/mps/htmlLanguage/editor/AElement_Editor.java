@@ -21,6 +21,9 @@ import jetbrains.mps.lang.editor.cellProviders.RefNodeListHandlerElementKeyMap;
 import jetbrains.mps.nodeEditor.cellMenu.DefaultReferenceSubstituteInfo;
 import jetbrains.mps.nodeEditor.cellMenu.DefaultChildSubstituteInfo;
 import jetbrains.mps.baseLanguage.editor.BaseLanguageStyle_StyleSheet;
+import jetbrains.mps.nodeEditor.cellProviders.CellProviderWithRole;
+import jetbrains.mps.lang.editor.cellProviders.RefNodeCellProvider;
+import jetbrains.mps.nodeEditor.EditorManager;
 
 public class AElement_Editor extends DefaultNodeEditor {
   public EditorCell createEditorCell(EditorContext editorContext, SNode node) {
@@ -33,6 +36,8 @@ public class AElement_Editor extends DefaultNodeEditor {
     editorCell.addEditorCell(this.createConstant_mkoko_a0(editorContext, node));
     editorCell.addEditorCell(this.createRefNodeList_mkoko_b0(editorContext, node));
     editorCell.addEditorCell(this.createConstant_mkoko_c0(editorContext, node));
+    editorCell.addEditorCell(this.createRefNode_mkoko_d0(editorContext, node));
+    editorCell.addEditorCell(this.createConstant_mkoko_e0(editorContext, node));
     return editorCell;
   }
   private EditorCell createConstant_mkoko_a0(EditorContext editorContext, SNode node) {
@@ -112,8 +117,35 @@ public class AElement_Editor extends DefaultNodeEditor {
     }
   }
   private EditorCell createConstant_mkoko_c0(EditorContext editorContext, SNode node) {
-    EditorCell_Constant editorCell = new EditorCell_Constant(editorContext, node, "/>");
+    EditorCell_Constant editorCell = new EditorCell_Constant(editorContext, node, ">");
     editorCell.setCellId("Constant_mkoko_c0");
+    Style style = new StyleImpl();
+    HTMLStyleSheet_StyleSheet.apply_tag(style, editorCell);
+    editorCell.getStyle().putAll(style);
+    editorCell.setDefaultText("");
+    return editorCell;
+  }
+  private EditorCell createRefNode_mkoko_d0(EditorContext editorContext, SNode node) {
+    CellProviderWithRole provider = new RefNodeCellProvider(node, editorContext);
+    provider.setRole("value");
+    provider.setNoTargetText("<no value>");
+    EditorCell editorCell;
+    editorCell = provider.createEditorCell(editorContext);
+    if (editorCell.getRole() == null) {
+      editorCell.setRole("value");
+    }
+    editorCell.setSubstituteInfo(provider.createDefaultSubstituteInfo());
+    SNode attributeConcept = provider.getRoleAttribute();
+    Class attributeKind = provider.getRoleAttributeClass();
+    if (attributeConcept != null) {
+      EditorManager manager = EditorManager.getInstanceFromContext(editorContext);
+      return manager.createNodeRoleAttributeCell(editorContext, attributeConcept, attributeKind, editorCell);
+    } else
+    return editorCell;
+  }
+  private EditorCell createConstant_mkoko_e0(EditorContext editorContext, SNode node) {
+    EditorCell_Constant editorCell = new EditorCell_Constant(editorContext, node, "</a>");
+    editorCell.setCellId("Constant_mkoko_e0");
     Style style = new StyleImpl();
     HTMLStyleSheet_StyleSheet.apply_tag(style, editorCell);
     editorCell.getStyle().putAll(style);

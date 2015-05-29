@@ -37,17 +37,17 @@ public class EditorAspectDescriptorImpl implements EditorAspectDescriptor {
       case 10:
         return Collections.<ConceptEditor>singletonList(new GetArrayValueCommand_Editor());
       case 11:
-        return Collections.<ConceptEditor>singletonList(new IfCommand_Editor());
-      case 12:
         return Collections.<ConceptEditor>singletonList(new InitializeVarCommand_Editor());
-      case 13:
+      case 12:
         return Collections.<ConceptEditor>singletonList(new InstanceValue_Editor());
-      case 14:
+      case 13:
         return Collections.<ConceptEditor>singletonList(new IntValue_Editor());
-      case 15:
+      case 14:
         return Collections.<ConceptEditor>singletonList(new JavascriptFile_Editor());
-      case 16:
+      case 15:
         return Collections.<ConceptEditor>singletonList(new JavascriptFunction_Editor());
+      case 16:
+        return Collections.<ConceptEditor>singletonList(new JavascriptIfCommand_Editor());
       case 17:
         return Collections.<ConceptEditor>singletonList(new JavascriptOperation_Editor());
       case 18:
@@ -55,22 +55,26 @@ public class EditorAspectDescriptorImpl implements EditorAspectDescriptor {
       case 19:
         return Collections.<ConceptEditor>singletonList(new NullValue_Editor());
       case 20:
-        return Collections.<ConceptEditor>singletonList(new PushHTMLCommand_Editor());
+        return Collections.<ConceptEditor>singletonList(new Parameter_Editor());
       case 21:
-        return Collections.<ConceptEditor>singletonList(new StoreCommand_Editor());
+        return Collections.<ConceptEditor>singletonList(new ParameterRefence_Editor());
       case 22:
-        return Collections.<ConceptEditor>singletonList(new StringValue_Editor());
+        return Collections.<ConceptEditor>singletonList(new PushHTMLCommand_Editor());
       case 23:
-        return Collections.<ConceptEditor>singletonList(new SubmitCommand_Editor());
+        return Collections.<ConceptEditor>singletonList(new StoreCommand_Editor());
       case 24:
-        return Collections.<ConceptEditor>singletonList(new VarCommand_Editor());
+        return Collections.<ConceptEditor>singletonList(new StringValue_Editor());
       case 25:
-        return Collections.<ConceptEditor>singletonList(new VarIdCommand_Editor());
+        return Collections.<ConceptEditor>singletonList(new SubmitCommand_Editor());
       case 26:
-        return Collections.<ConceptEditor>singletonList(new VarNameCommand_Editor());
+        return Collections.<ConceptEditor>singletonList(new VarCommand_Editor());
       case 27:
-        return Collections.<ConceptEditor>singletonList(new VarValue_Editor());
+        return Collections.<ConceptEditor>singletonList(new VarIdCommand_Editor());
       case 28:
+        return Collections.<ConceptEditor>singletonList(new VarNameCommand_Editor());
+      case 29:
+        return Collections.<ConceptEditor>singletonList(new VarValue_Editor());
+      case 30:
         return Collections.<ConceptEditor>singletonList(new VarValueHREF_Editor());
       default:
     }
@@ -81,5 +85,5 @@ public class EditorAspectDescriptorImpl implements EditorAspectDescriptor {
   }
 
 
-  private static String[] stringSwitchCases_xbvbvu_a0a0b = new String[]{"ro.barata.mps.javascriptLanguage.structure.ActionVarValue", "ro.barata.mps.javascriptLanguage.structure.AddArrayElementCommand", "ro.barata.mps.javascriptLanguage.structure.ArrayCommand", "ro.barata.mps.javascriptLanguage.structure.AssignmentCommand", "ro.barata.mps.javascriptLanguage.structure.CallFunctionCommand", "ro.barata.mps.javascriptLanguage.structure.ChangePageCommand", "ro.barata.mps.javascriptLanguage.structure.DocumentIdCommand", "ro.barata.mps.javascriptLanguage.structure.DotExpressionCommand", "ro.barata.mps.javascriptLanguage.structure.ForCommand", "ro.barata.mps.javascriptLanguage.structure.FunctionCommand", "ro.barata.mps.javascriptLanguage.structure.GetArrayValueCommand", "ro.barata.mps.javascriptLanguage.structure.IfCommand", "ro.barata.mps.javascriptLanguage.structure.InitializeVarCommand", "ro.barata.mps.javascriptLanguage.structure.InstanceValue", "ro.barata.mps.javascriptLanguage.structure.IntValue", "ro.barata.mps.javascriptLanguage.structure.JavascriptFile", "ro.barata.mps.javascriptLanguage.structure.JavascriptFunction", "ro.barata.mps.javascriptLanguage.structure.JavascriptOperation", "ro.barata.mps.javascriptLanguage.structure.JavascriptParameter", "ro.barata.mps.javascriptLanguage.structure.NullValue", "ro.barata.mps.javascriptLanguage.structure.PushHTMLCommand", "ro.barata.mps.javascriptLanguage.structure.StoreCommand", "ro.barata.mps.javascriptLanguage.structure.StringValue", "ro.barata.mps.javascriptLanguage.structure.SubmitCommand", "ro.barata.mps.javascriptLanguage.structure.VarCommand", "ro.barata.mps.javascriptLanguage.structure.VarIdCommand", "ro.barata.mps.javascriptLanguage.structure.VarNameCommand", "ro.barata.mps.javascriptLanguage.structure.VarValue", "ro.barata.mps.javascriptLanguage.structure.VarValueHREF"};
+  private static String[] stringSwitchCases_xbvbvu_a0a0b = new String[]{"ro.barata.mps.javascriptLanguage.structure.ActionVarValue", "ro.barata.mps.javascriptLanguage.structure.AddArrayElementCommand", "ro.barata.mps.javascriptLanguage.structure.ArrayCommand", "ro.barata.mps.javascriptLanguage.structure.AssignmentCommand", "ro.barata.mps.javascriptLanguage.structure.CallFunctionCommand", "ro.barata.mps.javascriptLanguage.structure.ChangePageCommand", "ro.barata.mps.javascriptLanguage.structure.DocumentIdCommand", "ro.barata.mps.javascriptLanguage.structure.DotExpressionCommand", "ro.barata.mps.javascriptLanguage.structure.ForCommand", "ro.barata.mps.javascriptLanguage.structure.FunctionCommand", "ro.barata.mps.javascriptLanguage.structure.GetArrayValueCommand", "ro.barata.mps.javascriptLanguage.structure.InitializeVarCommand", "ro.barata.mps.javascriptLanguage.structure.InstanceValue", "ro.barata.mps.javascriptLanguage.structure.IntValue", "ro.barata.mps.javascriptLanguage.structure.JavascriptFile", "ro.barata.mps.javascriptLanguage.structure.JavascriptFunction", "ro.barata.mps.javascriptLanguage.structure.JavascriptIfCommand", "ro.barata.mps.javascriptLanguage.structure.JavascriptOperation", "ro.barata.mps.javascriptLanguage.structure.JavascriptParameter", "ro.barata.mps.javascriptLanguage.structure.NullValue", "ro.barata.mps.javascriptLanguage.structure.Parameter", "ro.barata.mps.javascriptLanguage.structure.ParameterRefence", "ro.barata.mps.javascriptLanguage.structure.PushHTMLCommand", "ro.barata.mps.javascriptLanguage.structure.StoreCommand", "ro.barata.mps.javascriptLanguage.structure.StringValue", "ro.barata.mps.javascriptLanguage.structure.SubmitCommand", "ro.barata.mps.javascriptLanguage.structure.VarCommand", "ro.barata.mps.javascriptLanguage.structure.VarIdCommand", "ro.barata.mps.javascriptLanguage.structure.VarNameCommand", "ro.barata.mps.javascriptLanguage.structure.VarValue", "ro.barata.mps.javascriptLanguage.structure.VarValueHREF"};
 }

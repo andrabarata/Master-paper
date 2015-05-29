@@ -2052,7 +2052,7 @@
     </file>
   </root>
   <root nodeRef="r:1187c4f6-f428-448e-965a-7a67c289651d(ro.barata.mps.databaseOperationsLanguage.editor)/6352133620897657003">
-    <file name="IntValue_Editor.java">
+    <file name="DBIntValue_Editor.java">
       <node id="6352133620897657003" at="15,79,16,63" concept="6" />
       <node id="6352133620897657003" at="18,89,19,96" concept="5" />
       <node id="6352133620897657003" at="19,96,20,48" concept="2" />
@@ -2074,8 +2074,8 @@
       <node id="6352133620897940992" at="38,10,39,22" concept="6" />
       <node id="6352133620897657003" at="15,0,18,0" concept="4" trace="createEditorCell#(Ljetbrains/mps/openapi/editor/EditorContext;Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/openapi/editor/cells/EditorCell;" />
       <node id="6352133620897940992" at="34,59,39,22" concept="3" />
-      <node id="6352133620897657003" at="18,0,25,0" concept="4" trace="createCollection_nsrv7p_a#(Ljetbrains/mps/openapi/editor/EditorContext;Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/openapi/editor/cells/EditorCell;" />
-      <node id="6352133620897940992" at="25,0,41,0" concept="4" trace="createProperty_nsrv7p_a0#(Ljetbrains/mps/openapi/editor/EditorContext;Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/openapi/editor/cells/EditorCell;" />
+      <node id="6352133620897657003" at="18,0,25,0" concept="4" trace="createCollection_8x0jom_a#(Ljetbrains/mps/openapi/editor/EditorContext;Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/openapi/editor/cells/EditorCell;" />
+      <node id="6352133620897940992" at="25,0,41,0" concept="4" trace="createProperty_8x0jom_a0#(Ljetbrains/mps/openapi/editor/EditorContext;Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/openapi/editor/cells/EditorCell;" />
       <scope id="6352133620897657003" at="15,79,16,63" />
       <scope id="6352133620897657003" at="21,28,22,81" />
       <scope id="6352133620897940992" at="35,35,37,109">
@@ -2102,11 +2102,11 @@
         <var name="editorContext" id="6352133620897940992" />
         <var name="node" id="6352133620897940992" />
       </scope>
-      <unit id="6352133620897657003" at="14,0,42,0" name="ro.barata.mps.databaseOperationsLanguage.editor.IntValue_Editor" />
+      <unit id="6352133620897657003" at="14,0,42,0" name="ro.barata.mps.databaseOperationsLanguage.editor.DBIntValue_Editor" />
     </file>
   </root>
   <root nodeRef="r:1187c4f6-f428-448e-965a-7a67c289651d(ro.barata.mps.databaseOperationsLanguage.editor)/6352133620897657051">
-    <file name="StringValue_Editor.java">
+    <file name="DBStringValue_Editor.java">
       <node id="6352133620897657051" at="15,79,16,63" concept="6" />
       <node id="6352133620897657051" at="18,89,19,96" concept="5" />
       <node id="6352133620897657051" at="19,96,20,48" concept="2" />
@@ -2128,8 +2128,8 @@
       <node id="6352133620897657090" at="38,10,39,22" concept="6" />
       <node id="6352133620897657051" at="15,0,18,0" concept="4" trace="createEditorCell#(Ljetbrains/mps/openapi/editor/EditorContext;Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/openapi/editor/cells/EditorCell;" />
       <node id="6352133620897657090" at="34,59,39,22" concept="3" />
-      <node id="6352133620897657051" at="18,0,25,0" concept="4" trace="createCollection_iizcdy_a#(Ljetbrains/mps/openapi/editor/EditorContext;Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/openapi/editor/cells/EditorCell;" />
-      <node id="6352133620897657090" at="25,0,41,0" concept="4" trace="createProperty_iizcdy_a0#(Ljetbrains/mps/openapi/editor/EditorContext;Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/openapi/editor/cells/EditorCell;" />
+      <node id="6352133620897657051" at="18,0,25,0" concept="4" trace="createCollection_2k7cad_a#(Ljetbrains/mps/openapi/editor/EditorContext;Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/openapi/editor/cells/EditorCell;" />
+      <node id="6352133620897657090" at="25,0,41,0" concept="4" trace="createProperty_2k7cad_a0#(Ljetbrains/mps/openapi/editor/EditorContext;Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/openapi/editor/cells/EditorCell;" />
       <scope id="6352133620897657051" at="15,79,16,63" />
       <scope id="6352133620897657051" at="21,28,22,81" />
       <scope id="6352133620897657090" at="35,35,37,109">
@@ -2156,7 +2156,7 @@
         <var name="editorContext" id="6352133620897657090" />
         <var name="node" id="6352133620897657090" />
       </scope>
-      <unit id="6352133620897657051" at="14,0,42,0" name="ro.barata.mps.databaseOperationsLanguage.editor.StringValue_Editor" />
+      <unit id="6352133620897657051" at="14,0,42,0" name="ro.barata.mps.databaseOperationsLanguage.editor.DBStringValue_Editor" />
     </file>
   </root>
 </debug-info>

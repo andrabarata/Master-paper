@@ -21,7 +21,11 @@ public class UserDAO {
 
   public List<User> getAllUsers() throws SQLException {
     List<User> users = new ArrayList<User>();
-    String sql = "select * from " + "UserTable";
+    String sql = "select * from " + "UserTable" + " table0";
+    String innerJoins = "";
+    int i = 1;
+    sql += innerJoins;
+    System.out.println(sql);
     ResultSet set = stmt.executeQuery(sql);
     User foundUser = new User();
     while (set.next()) {
@@ -35,7 +39,8 @@ public class UserDAO {
     return users;
   }
 
-  public User findUser(User user) throws SQLException {
+  public List<User> findUsers(User user) throws SQLException {
+    List<User> users = new ArrayList<User>();
     String sql = "select ";
     String columns = "";
     columns += "id";
@@ -58,10 +63,12 @@ public class UserDAO {
     if (user.getPassword() != null) {
       values += "password" + "='" + user.getPassword() + "' and ";
     }
+    String leftJoins = "";
+    int i = 1;
     if (values.length() > 6) {
       values = " where " + values.substring(0, values.length() - 5);
     }
-    sql += columns + " from " + "UserTable" + values;
+    sql += columns + " from " + "UserTable" + " table0" + leftJoins + values;
     System.out.println(sql);
     ResultSet set = stmt.executeQuery(sql);
     User foundUser = new User();
@@ -71,8 +78,9 @@ public class UserDAO {
       foundUser.setPriviledge(set.getString("priviledge"));
       foundUser.setUserName(set.getString("userName"));
       foundUser.setPassword(set.getString("password"));
+      users.add(foundUser);
     }
-    return foundUser;
+    return users;
   }
 
   public void addUser(User user) throws SQLException, ClassNotFoundException {

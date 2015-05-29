@@ -13,6 +13,8 @@ import java.util.ArrayList;
 import jetbrains.mps.internal.collections.runtime.IVisitor;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 import jetbrains.mps.baseLanguage.closures.runtime.Wrappers;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SModelOperations;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SConceptOperations;
 
 public class HTMLPage_Behavior {
   public static void init(SNode thisNode) {
@@ -82,5 +84,64 @@ public class HTMLPage_Behavior {
       }
     });
     return operations;
+  }
+  public static List<SNode> call_findAdditionalCssFiles_1923253541740261995(SNode thisNode) {
+    final List<SNode> files = ListSequence.fromList(new ArrayList<SNode>());
+    ListSequence.fromList(SModelOperations.nodes(SNodeOperations.getModel(thisNode), MetaAdapterFactory.getConcept(0xedb2b9cf991f4100L, 0xab3c9444c4d6e26bL, 0x44b44eee30a28801L, "ro.barata.mps.styleLanguage.structure.File"))).where(new IWhereFilter<SNode>() {
+      public boolean accept(SNode it) {
+        return SPropertyOperations.getBoolean(it, MetaAdapterFactory.getProperty(0xedb2b9cf991f4100L, 0xab3c9444c4d6e26bL, 0x44b44eee30a28801L, 0x1ab0c4e8086dfb1fL, "include"));
+      }
+    }).visitAll(new IVisitor<SNode>() {
+      public void visit(SNode it) {
+        String path = SPropertyOperations.getString(it, MetaAdapterFactory.getProperty(0xedb2b9cf991f4100L, 0xab3c9444c4d6e26bL, 0x44b44eee30a28801L, 0x44b44eee30a28802L, "path"));
+        if ((path != null && path.length() > 0)) {
+          String extension = path.substring(path.lastIndexOf(".") + 1, path.length());
+          if (extension.equals("css")) {
+            ListSequence.fromList(files).addElement(it);
+          }
+        }
+      }
+    });
+    return files;
+  }
+  public static List<SNode> call_findAdditionalJsFiles_1923253541740383299(SNode thisNode) {
+    final List<SNode> files = ListSequence.fromList(new ArrayList<SNode>());
+    ListSequence.fromList(SModelOperations.nodes(SNodeOperations.getModel(thisNode), MetaAdapterFactory.getConcept(0xedb2b9cf991f4100L, 0xab3c9444c4d6e26bL, 0x44b44eee30a28801L, "ro.barata.mps.styleLanguage.structure.File"))).where(new IWhereFilter<SNode>() {
+      public boolean accept(SNode it) {
+        return SPropertyOperations.getBoolean(it, MetaAdapterFactory.getProperty(0xedb2b9cf991f4100L, 0xab3c9444c4d6e26bL, 0x44b44eee30a28801L, 0x1ab0c4e8086dfb1fL, "include"));
+      }
+    }).visitAll(new IVisitor<SNode>() {
+      public void visit(SNode it) {
+        String path = SPropertyOperations.getString(it, MetaAdapterFactory.getProperty(0xedb2b9cf991f4100L, 0xab3c9444c4d6e26bL, 0x44b44eee30a28801L, 0x44b44eee30a28802L, "path"));
+        if ((path != null && path.length() > 0)) {
+          String extension = path.substring(path.lastIndexOf(".") + 1, path.length());
+          if (extension.equals("js")) {
+            ListSequence.fromList(files).addElement(it);
+          }
+        }
+      }
+    });
+    return files;
+  }
+  public static List<SNode> call_getTileFunctions_7218876673584976873(final SNode thisNode) {
+    List<SNode> values = ListSequence.fromList(new ArrayList<SNode>());
+    for (final SNode tileRef : ListSequence.fromList(SModelOperations.nodes(SNodeOperations.getModel(thisNode), MetaAdapterFactory.getConcept(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x44b44eee30b2e8fdL, "ro.barata.mps.htmlLanguage.structure.HTMLTileReference"))).where(new IWhereFilter<SNode>() {
+      public boolean accept(SNode it) {
+        return SNodeOperations.getNodeAncestor(it, MetaAdapterFactory.getConcept(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x233f341bd1c976e1L, "ro.barata.mps.htmlLanguage.structure.HTMLPage"), false, false) == thisNode;
+      }
+    })) {
+      if (ListSequence.fromList(SLinkOperations.getChildren(SNodeOperations.getNodeAncestor(SLinkOperations.getTarget(tileRef, MetaAdapterFactory.getReferenceLink(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x44b44eee30b2e8fdL, 0x44b44eee30b2e91bL, "html")), MetaAdapterFactory.getConcept(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x233f341bd1c976e1L, "ro.barata.mps.htmlLanguage.structure.HTMLPage"), false, false), MetaAdapterFactory.getContainmentLink(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x233f341bd1c976e1L, 0x4c7f2ab523e43958L, "actions"))).isNotEmpty()) {
+        SNode val = SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(MetaAdapterFactory.getConcept(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x3ab9167f5c1a58d0L, "ro.barata.mps.javascriptLanguage.structure.StringValue")));
+        SPropertyOperations.set(val, MetaAdapterFactory.getProperty(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x3ab9167f5c1a58d0L, 0x3ab9167f5c1a58d1L, "value"), SPropertyOperations.getString(SNodeOperations.getNodeAncestor(SLinkOperations.getTarget(tileRef, MetaAdapterFactory.getReferenceLink(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x44b44eee30b2e8fdL, 0x44b44eee30b2e91bL, "html")), MetaAdapterFactory.getConcept(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x233f341bd1c976e1L, "ro.barata.mps.htmlLanguage.structure.HTMLPage"), false, false), MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name")));
+        if (ListSequence.fromList(values).where(new IWhereFilter<SNode>() {
+          public boolean accept(SNode it) {
+            return SPropertyOperations.getString(it, MetaAdapterFactory.getProperty(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x3ab9167f5c1a58d0L, 0x3ab9167f5c1a58d1L, "value")).equals(SPropertyOperations.getString(SNodeOperations.getNodeAncestor(SLinkOperations.getTarget(tileRef, MetaAdapterFactory.getReferenceLink(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x44b44eee30b2e8fdL, 0x44b44eee30b2e91bL, "html")), MetaAdapterFactory.getConcept(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x233f341bd1c976e1L, "ro.barata.mps.htmlLanguage.structure.HTMLPage"), false, false), MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name")));
+          }
+        }).isEmpty()) {
+          ListSequence.fromList(values).addElement(val);
+        }
+      }
+    }
+    return values;
   }
 }

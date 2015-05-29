@@ -60,4 +60,12 @@ public class HTMLCommand_Behavior {
     }
     return null;
   }
+  public static SNode call_getAttributeClassNode_1923253541741450536(SNode thisNode) {
+    for (SNode attribute : SLinkOperations.getChildren(thisNode, MetaAdapterFactory.getContainmentLink(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x5a8d28ce2a8261e4L, 0x5a8d28ce2a8261f2L, "attributes"))) {
+      if (SNodeOperations.isInstanceOf(attribute, MetaAdapterFactory.getConcept(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x1ab0c4e8087ed246L, "ro.barata.mps.htmlLanguage.structure.ClassAttribute"))) {
+        return SNodeOperations.cast(attribute, MetaAdapterFactory.getConcept(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x1ab0c4e8087ed246L, "ro.barata.mps.htmlLanguage.structure.ClassAttribute"));
+      }
+    }
+    return null;
+  }
 }

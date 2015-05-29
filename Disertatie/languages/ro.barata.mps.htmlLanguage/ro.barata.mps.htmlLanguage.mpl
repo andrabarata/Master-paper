@@ -27,6 +27,7 @@
         <dependency reexport="false">c02f1daf-1160-4f41-beef-10918af4e126(ro.barata.mps.databaseOperationsLanguage#7227310691964192368)</dependency>
         <dependency reexport="false">ceab5195-25ea-4f22-9b92-103b95ca8c0c(jetbrains.mps.lang.core)</dependency>
         <dependency reexport="false">b9cb18bd-a29f-47d8-9dd0-544a91c4eef2(ro.barata.mps.htmlLanguage)</dependency>
+        <dependency reexport="false">d3ddb860-292b-4451-8638-cec4e3c81b18(ro.barata.mps.javascriptLanguage)</dependency>
       </dependencies>
       <usedLanguages>
         <usedLanguage>b401a680-8325-4110-8fd3-84331ff25bef(jetbrains.mps.lang.generator)</usedLanguage>

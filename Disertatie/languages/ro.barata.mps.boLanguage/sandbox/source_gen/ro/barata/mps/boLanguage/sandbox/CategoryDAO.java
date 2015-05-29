@@ -21,7 +21,15 @@ public class CategoryDAO {
 
   public List<Category> getAllCategorys() throws SQLException {
     List<Category> categorys = new ArrayList<Category>();
-    String sql = "select * from " + "Category";
+    String sql = "select * from " + "Category" + " table0";
+    String innerJoins = "";
+    int i = 1;
+    innerJoins += " inner join " + "Product" + " table" + i + " on table" + i + "." + "categoryId" + "=table0." + "id";
+    i++;
+    innerJoins += " inner join " + "Category" + " table" + i + " on table" + i + "." + "subCategoryId" + "=table0." + "id";
+    i++;
+    sql += innerJoins;
+    System.out.println(sql);
     ResultSet set = stmt.executeQuery(sql);
     Category foundCategory = new Category();
     while (set.next()) {
@@ -33,7 +41,8 @@ public class CategoryDAO {
     return categorys;
   }
 
-  public Category findCategory(Category category) throws SQLException {
+  public List<Category> findCategorys(Category category) throws SQLException {
+    List<Category> categorys = new ArrayList<Category>();
     String sql = "select ";
     String columns = "";
     columns += "id";
@@ -46,10 +55,16 @@ public class CategoryDAO {
     if (category.getName() != null) {
       values += "name" + "='" + category.getName() + "' and ";
     }
+    String leftJoins = "";
+    int i = 1;
+    leftJoins += " inner join " + "Product" + " table" + i + " on table" + i + "." + "categoryId" + "=table0." + "id";
+    i++;
+    leftJoins += " inner join " + "Category" + " table" + i + " on table" + i + "." + "subCategoryId" + "=table0." + "id";
+    i++;
     if (values.length() > 6) {
       values = " where " + values.substring(0, values.length() - 5);
     }
-    sql += columns + " from " + "Category" + values;
+    sql += columns + " from " + "Category" + " table0" + leftJoins + values;
     System.out.println(sql);
     ResultSet set = stmt.executeQuery(sql);
     Category foundCategory = new Category();
@@ -57,8 +72,73 @@ public class CategoryDAO {
       foundCategory = new Category();
       foundCategory.setId(Integer.valueOf(set.getBigDecimal("id").intValue()));
       foundCategory.setName(set.getString("name"));
+      categorys.add(foundCategory);
     }
-    return foundCategory;
+    return categorys;
+  }
+  public List<Product> findChildProducts(Category parent) throws SQLException {
+    List<Product> products = new ArrayList<Product>();
+    String sql = "select ";
+    String columns = "";
+    columns += "id";
+    columns += ",";
+    columns += "name";
+    sql += columns;
+    sql += " from " + "Product" + " where " + "categoryId" + " in (select " + "id" + " from " + "Category";
+    if (parent != null) {
+      sql += " where ";
+      String values = "";
+      if (parent.getId() != null) {
+        values += "id" + "='" + parent.getId() + "'and ";
+      }
+      if (parent.getName() != null) {
+        values += "name" + "='" + parent.getName() + "'and ";
+      }
+      sql += values.substring(0, values.length() - 4);
+    }
+    sql += ")";
+    System.out.println(sql);
+    ResultSet set = stmt.executeQuery(sql);
+    Product foundProduct = new Product();
+    while (set.next()) {
+      foundProduct = new Product();
+      foundProduct.setId(Integer.valueOf(set.getBigDecimal("id").intValue()));
+      foundProduct.setProductName(set.getString("name"));
+      products.add(foundProduct);
+    }
+    return products;
+  }
+  public List<Category> findChildCategorys(Category parent) throws SQLException {
+    List<Category> categorys = new ArrayList<Category>();
+    String sql = "select ";
+    String columns = "";
+    columns += "id";
+    columns += ",";
+    columns += "name";
+    sql += columns;
+    sql += " from " + "Category" + " where " + "subCategoryId" + " in (select " + "id" + " from " + "Category";
+    if (parent != null) {
+      sql += " where ";
+      String values = "";
+      if (parent.getId() != null) {
+        values += "id" + "='" + parent.getId() + "'and ";
+      }
+      if (parent.getName() != null) {
+        values += "name" + "='" + parent.getName() + "'and ";
+      }
+      sql += values.substring(0, values.length() - 4);
+    }
+    sql += ")";
+    System.out.println(sql);
+    ResultSet set = stmt.executeQuery(sql);
+    Category foundCategory = new Category();
+    while (set.next()) {
+      foundCategory = new Category();
+      foundCategory.setId(Integer.valueOf(set.getBigDecimal("id").intValue()));
+      foundCategory.setName(set.getString("name"));
+      categorys.add(foundCategory);
+    }
+    return categorys;
   }
 
   public void addCategory(Category category) throws SQLException, ClassNotFoundException {

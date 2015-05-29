@@ -21,6 +21,12 @@
     <file name="DBCommands_BehaviorDescriptor.java">
       <unit at="10,0,24,0" name="ro.barata.mps.databaseOperationsLanguage.behavior.DBCommands_BehaviorDescriptor" />
     </file>
+    <file name="DBIntValue_BehaviorDescriptor.java">
+      <unit at="6,0,14,0" name="ro.barata.mps.databaseOperationsLanguage.behavior.DBIntValue_BehaviorDescriptor" />
+    </file>
+    <file name="DBStringValue_BehaviorDescriptor.java">
+      <unit at="6,0,14,0" name="ro.barata.mps.databaseOperationsLanguage.behavior.DBStringValue_BehaviorDescriptor" />
+    </file>
     <file name="DeleteOperation_BehaviorDescriptor.java">
       <unit at="6,0,14,0" name="ro.barata.mps.databaseOperationsLanguage.behavior.DeleteOperation_BehaviorDescriptor" />
     </file>
@@ -30,9 +36,6 @@
     <file name="Instance_BehaviorDescriptor.java">
       <unit at="7,0,15,0" name="ro.barata.mps.databaseOperationsLanguage.behavior.Instance_BehaviorDescriptor" />
     </file>
-    <file name="IntValue_BehaviorDescriptor.java">
-      <unit at="6,0,14,0" name="ro.barata.mps.databaseOperationsLanguage.behavior.IntValue_BehaviorDescriptor" />
-    </file>
     <file name="LinkDeclarationReference_BehaviorDescriptor.java">
       <unit at="7,0,15,0" name="ro.barata.mps.databaseOperationsLanguage.behavior.LinkDeclarationReference_BehaviorDescriptor" />
     </file>
@@ -41,9 +44,6 @@
     </file>
     <file name="PropertyReference_BehaviorDescriptor.java">
       <unit at="7,0,15,0" name="ro.barata.mps.databaseOperationsLanguage.behavior.PropertyReference_BehaviorDescriptor" />
-    </file>
-    <file name="StringValue_BehaviorDescriptor.java">
-      <unit at="6,0,14,0" name="ro.barata.mps.databaseOperationsLanguage.behavior.StringValue_BehaviorDescriptor" />
     </file>
     <file name="UpdateOperation_BehaviorDescriptor.java">
       <unit at="6,0,14,0" name="ro.barata.mps.databaseOperationsLanguage.behavior.UpdateOperation_BehaviorDescriptor" />

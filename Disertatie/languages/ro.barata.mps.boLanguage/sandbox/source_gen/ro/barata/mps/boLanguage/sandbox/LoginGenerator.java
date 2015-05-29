@@ -9,74 +9,66 @@ public class LoginGenerator {
   public static String getContent(HttpSession session) throws ClassNotFoundException, SQLException {
     String html = "<html>";
     String parameters = "";
+    String href = "";
     html += "<head>";
-    html += "<script src=\"" + "login.js" + "\"></script>";
-    html += "<script src=\"general.js\"></script>";
-    html += "<link rel=\"stylesheet\" type=\"text/css\" href=\"" + "main" + ".css\"/>";
+    html += "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">";
+    html += "<script src=\"/" + "login.js" + "\"></script>";
+    html += "<script src=\"/general.js\"></script>";
+    html += "<link rel=\"stylesheet\" type=\"text/css\" href=\"/" + "main.css" + "\"/>";
+    html += "<link rel=\"stylesheet\" type=\"text/css\" href=\"/" + "pure.css" + "\"/>";
     html += "</head>";
     html += "<body>";
+    html += "<form";
+    html += " class=\"" + "pure-form pure-form-aligned" + "\"";
+    html += ">";
     html += "<div";
-    html += ">";
-    html += "<table";
-    html += ">";
-    html += "<tr";
-    html += ">";
-    html += "<td";
+    html += " class=\"" + "pure-control-group" + "\"";
     html += ">";
     html += "<label";
-    html += ">" + "Insert username" + "</label>";
-    html += "</td>";
 
-    html += "<td";
-    html += ">";
+    html += ">" + "Username" + "</label>";
     html += "<input";
     html += " type=\"" + "text" + "\" ";
     html += " id='" + "userName" + "'";
+    html += " " + "placeholder" + "=\"" + "Username" + "\"";
+
     html += "/>";
-    html += "</td>";
+    html += "</div>";
 
-    html += "</tr>";
-
-    html += "<tr";
-    html += ">";
-    html += "<td";
+    html += "<div";
+    html += " class=\"" + "pure-control-group" + "\"";
     html += ">";
     html += "<label";
-    html += ">" + "Insert password" + "</label>";
-    html += "</td>";
 
-    html += "<td";
-    html += ">";
+    html += ">" + "Password" + "</label>";
     html += "<input";
     html += " type=\"" + "password" + "\" ";
     html += " id='" + "password" + "'";
+    html += " " + "placeholder" + "=\"" + "Password" + "\"";
+
     html += "/>";
-    html += "</td>";
+    html += "</div>";
 
-    html += "</tr>";
-
-    html += "<tr";
-    html += ">";
-    html += "<td";
-    html += " " + "colspan" + "=\"" + "2" + "\"";
-    html += " " + "colspan" + "=\"" + "2" + "\"";
+    html += "<div";
+    html += " class=\"" + "pure-controls" + "\"";
     html += ">";
     html += "<input";
     html += " type=\"" + "button" + "\" ";
+    html += " class=\"" + "pure-button pure-button-primary" + "\"";
+    parameters = "";
     html += "onclick" + "=\"" + "checkUser" + "(" + parameters + ")\"";
+
+
     html += " value=\"" + "Login" + "\" ";
     html += "/>";
-    html += "</td>";
+    html += "</div>";
 
-    html += "</tr>";
-
-    html += "</table>";
+    html += "</form>";
 
     html += "<label";
     html += " id='" + "authentificate" + "'";
-    html += ">" + "Authentification failed! Please try again!" + "</label>";
-    html += "</div>";
 
+    html += ">" + "Authentification failed! Please try again!" + "</label>";
     html += "</body>";
     html += "</html>";
     return html;

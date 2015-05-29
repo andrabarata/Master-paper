@@ -21,7 +21,11 @@ public class AttributeDAO {
 
   public List<Attribute> getAllAttributes() throws SQLException {
     List<Attribute> attributes = new ArrayList<Attribute>();
-    String sql = "select * from " + "Attribute";
+    String sql = "select * from " + "Attribute" + " table0";
+    String innerJoins = "";
+    int i = 1;
+    sql += innerJoins;
+    System.out.println(sql);
     ResultSet set = stmt.executeQuery(sql);
     Attribute foundAttribute = new Attribute();
     while (set.next()) {
@@ -34,7 +38,8 @@ public class AttributeDAO {
     return attributes;
   }
 
-  public Attribute findAttribute(Attribute attribute) throws SQLException {
+  public List<Attribute> findAttributes(Attribute attribute) throws SQLException {
+    List<Attribute> attributes = new ArrayList<Attribute>();
     String sql = "select ";
     String columns = "";
     columns += "id";
@@ -52,10 +57,12 @@ public class AttributeDAO {
     if (attribute.getAttributeValue() != null) {
       values += "value" + "='" + attribute.getAttributeValue() + "' and ";
     }
+    String leftJoins = "";
+    int i = 1;
     if (values.length() > 6) {
       values = " where " + values.substring(0, values.length() - 5);
     }
-    sql += columns + " from " + "Attribute" + values;
+    sql += columns + " from " + "Attribute" + " table0" + leftJoins + values;
     System.out.println(sql);
     ResultSet set = stmt.executeQuery(sql);
     Attribute foundAttribute = new Attribute();
@@ -64,8 +71,9 @@ public class AttributeDAO {
       foundAttribute.setId(Integer.valueOf(set.getBigDecimal("id").intValue()));
       foundAttribute.setAttributeName(set.getString("name"));
       foundAttribute.setAttributeValue(set.getString("value"));
+      attributes.add(foundAttribute);
     }
-    return foundAttribute;
+    return attributes;
   }
 
   public void addAttribute(Attribute attribute) throws SQLException, ClassNotFoundException {

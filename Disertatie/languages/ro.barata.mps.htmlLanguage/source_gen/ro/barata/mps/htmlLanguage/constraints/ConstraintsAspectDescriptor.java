@@ -12,54 +12,60 @@ public class ConstraintsAspectDescriptor implements jetbrains.mps.smodel.runtime
   }
   public ConstraintsDescriptor getDescriptor(String fqName) {
     switch (Arrays.binarySearch(stringSwitchCases_2qnle6_a0a0b, fqName)) {
-      case 13:
+      case 15:
         return new OperationCommand_Constraints();
-      case 21:
+      case 24:
         return new TagValueReference_Constraints();
-      case 8:
-        return new IdAttribute_Constraints();
-      case 12:
-        return new NameAttribute_Constraints();
-      case 1:
-        return new ActionType_Constraints();
-      case 18:
+      case 21:
         return new TDElement_Constraints();
-      case 19:
-        return new THElement_Constraints();
-      case 20:
-        return new TRElement_Constraints();
-      case 3:
-        return new CounterIdReference_Constraints();
       case 22:
-        return new TitleElement_Constraints();
-      case 7:
-        return new HTMLValueCommand_Constraints();
+        return new THElement_Constraints();
       case 23:
-        return new UserValue_Constraints();
-      case 6:
-        return new HTMLTileReference_Constraints();
+        return new TRElement_Constraints();
       case 2:
+        return new CounterIdReference_Constraints();
+      case 25:
+        return new TitleElement_Constraints();
+      case 6:
+        return new HTMLValueCommand_Constraints();
+      case 26:
+        return new UserValue_Constraints();
+      case 5:
+        return new HTMLTileReference_Constraints();
+      case 1:
         return new ContainerCommand_Constraints();
       case 9:
         return new LiElement_Constraints();
-      case 14:
+      case 16:
         return new OptionElement_Constraints();
-      case 11:
+      case 12:
         return new MixedHTMLCommand_Constraints();
-      case 5:
+      case 4:
         return new HREFAttribute_Constraints();
-      case 17:
+      case 19:
         return new SRCAttribute_Constraints();
-      case 10:
+      case 11:
         return new MethodAttribute_Constraints();
       case 0:
         return new ActionAttribute_Constraints();
-      case 16:
+      case 18:
         return new ReceiveOperation_Constraints();
-      case 15:
-        return new QueryParameter_Constraints();
-      case 4:
+      case 8:
+        return new JSQueryParameter_Constraints();
+      case 3:
         return new DatabaseOperation_Constraints();
+      case 20:
+        return new SelectCommand_Constraints();
+      case 17:
+        return new PropertyQueryParameter_Constraints();
+      case 7:
+        return new IfCommand_Constraints();
+      case 14:
+        return new NullValue_Constraints();
+      case 10:
+        return new LinkQueryParameter_Constraints();
+      case 13:
+        return new NotNullValue_Constraints();
       default:
         return new BaseConstraintsDescriptor(fqName);
     }
@@ -71,15 +77,6 @@ public class ConstraintsAspectDescriptor implements jetbrains.mps.smodel.runtime
     }
     if (id == 0x5286d8640b8174e5L) {
       return new TagValueReference_Constraints();
-    }
-    if (id == 0x7c208aae91bb9e2fL) {
-      return new IdAttribute_Constraints();
-    }
-    if (id == 0x7c208aae91bba3e1L) {
-      return new NameAttribute_Constraints();
-    }
-    if (id == 0x4c7f2ab523e57fdcL) {
-      return new ActionType_Constraints();
     }
     if (id == 0x5286d8640b7d66deL) {
       return new TDElement_Constraints();
@@ -133,12 +130,30 @@ public class ConstraintsAspectDescriptor implements jetbrains.mps.smodel.runtime
       return new ReceiveOperation_Constraints();
     }
     if (id == 0x34756c9d9e7c4fc4L) {
-      return new QueryParameter_Constraints();
+      return new JSQueryParameter_Constraints();
     }
     if (id == 0x40798aa2d38348a2L) {
       return new DatabaseOperation_Constraints();
     }
+    if (id == 0x5286d8640b8170dbL) {
+      return new SelectCommand_Constraints();
+    }
+    if (id == 0x2d12ba15feb076f9L) {
+      return new PropertyQueryParameter_Constraints();
+    }
+    if (id == 0x1ab0c4e807cff74fL) {
+      return new IfCommand_Constraints();
+    }
+    if (id == 0x1ab0c4e807f1d309L) {
+      return new NullValue_Constraints();
+    }
+    if (id == 0x642e9a165d4490edL) {
+      return new LinkQueryParameter_Constraints();
+    }
+    if (id == 0x642e9a165d452b68L) {
+      return new NotNullValue_Constraints();
+    }
     return new BaseConstraintsDescriptor(conceptId);
   }
-  private static String[] stringSwitchCases_2qnle6_a0a0b = new String[]{"ro.barata.mps.htmlLanguage.structure.ActionAttribute", "ro.barata.mps.htmlLanguage.structure.ActionType", "ro.barata.mps.htmlLanguage.structure.ContainerCommand", "ro.barata.mps.htmlLanguage.structure.CounterIdReference", "ro.barata.mps.htmlLanguage.structure.DatabaseOperation", "ro.barata.mps.htmlLanguage.structure.HREFAttribute", "ro.barata.mps.htmlLanguage.structure.HTMLTileReference", "ro.barata.mps.htmlLanguage.structure.HTMLValueCommand", "ro.barata.mps.htmlLanguage.structure.IdAttribute", "ro.barata.mps.htmlLanguage.structure.LiElement", "ro.barata.mps.htmlLanguage.structure.MethodAttribute", "ro.barata.mps.htmlLanguage.structure.MixedHTMLCommand", "ro.barata.mps.htmlLanguage.structure.NameAttribute", "ro.barata.mps.htmlLanguage.structure.OperationCommand", "ro.barata.mps.htmlLanguage.structure.OptionElement", "ro.barata.mps.htmlLanguage.structure.QueryParameter", "ro.barata.mps.htmlLanguage.structure.ReceiveOperation", "ro.barata.mps.htmlLanguage.structure.SRCAttribute", "ro.barata.mps.htmlLanguage.structure.TDElement", "ro.barata.mps.htmlLanguage.structure.THElement", "ro.barata.mps.htmlLanguage.structure.TRElement", "ro.barata.mps.htmlLanguage.structure.TagValueReference", "ro.barata.mps.htmlLanguage.structure.TitleElement", "ro.barata.mps.htmlLanguage.structure.UserValue"};
+  private static String[] stringSwitchCases_2qnle6_a0a0b = new String[]{"ro.barata.mps.htmlLanguage.structure.ActionAttribute", "ro.barata.mps.htmlLanguage.structure.ContainerCommand", "ro.barata.mps.htmlLanguage.structure.CounterIdReference", "ro.barata.mps.htmlLanguage.structure.DatabaseOperation", "ro.barata.mps.htmlLanguage.structure.HREFAttribute", "ro.barata.mps.htmlLanguage.structure.HTMLTileReference", "ro.barata.mps.htmlLanguage.structure.HTMLValueCommand", "ro.barata.mps.htmlLanguage.structure.IfCommand", "ro.barata.mps.htmlLanguage.structure.JSQueryParameter", "ro.barata.mps.htmlLanguage.structure.LiElement", "ro.barata.mps.htmlLanguage.structure.LinkQueryParameter", "ro.barata.mps.htmlLanguage.structure.MethodAttribute", "ro.barata.mps.htmlLanguage.structure.MixedHTMLCommand", "ro.barata.mps.htmlLanguage.structure.NotNullValue", "ro.barata.mps.htmlLanguage.structure.NullValue", "ro.barata.mps.htmlLanguage.structure.OperationCommand", "ro.barata.mps.htmlLanguage.structure.OptionElement", "ro.barata.mps.htmlLanguage.structure.PropertyQueryParameter", "ro.barata.mps.htmlLanguage.structure.ReceiveOperation", "ro.barata.mps.htmlLanguage.structure.SRCAttribute", "ro.barata.mps.htmlLanguage.structure.SelectCommand", "ro.barata.mps.htmlLanguage.structure.TDElement", "ro.barata.mps.htmlLanguage.structure.THElement", "ro.barata.mps.htmlLanguage.structure.TRElement", "ro.barata.mps.htmlLanguage.structure.TagValueReference", "ro.barata.mps.htmlLanguage.structure.TitleElement", "ro.barata.mps.htmlLanguage.structure.UserValue"};
 }

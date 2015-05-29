@@ -71,7 +71,7 @@
     <property role="TrG5h" value="BooleanType" />
     <property role="3GE5qa" value="db.model" />
     <property role="34LRSv" value="boolean" />
-    <ref role="1TJDcQ" node="6hc$cxbNw08" resolve="PrimaryType" />
+    <ref role="1TJDcQ" node="6hc$cxbNw08" resolve="PrimitiveType" />
   </node>
   <node concept="1TIwiD" id="6jza8L8c$AH">
     <property role="TrG5h" value="Entity" />
@@ -102,13 +102,13 @@
     <property role="TrG5h" value="IntType" />
     <property role="3GE5qa" value="db.model" />
     <property role="34LRSv" value="int" />
-    <ref role="1TJDcQ" node="6hc$cxbNw08" resolve="PrimaryType" />
+    <ref role="1TJDcQ" node="6hc$cxbNw08" resolve="PrimitiveType" />
   </node>
   <node concept="1TIwiD" id="6jza8L8c$Y5">
     <property role="TrG5h" value="StringType" />
     <property role="3GE5qa" value="db.model" />
     <property role="34LRSv" value="string" />
-    <ref role="1TJDcQ" node="6hc$cxbNw08" resolve="PrimaryType" />
+    <ref role="1TJDcQ" node="6hc$cxbNw08" resolve="PrimitiveType" />
   </node>
   <node concept="1TIwiD" id="6jza8L8c$VF">
     <property role="R5$K7" value="true" />
@@ -238,7 +238,7 @@
     <property role="3GE5qa" value="db.model" />
     <property role="R5$K7" value="true" />
     <property role="R5$K2" value="false" />
-    <property role="TrG5h" value="PrimaryType" />
+    <property role="TrG5h" value="PrimitiveType" />
     <ref role="1TJDcQ" node="6jza8L8c$VF" resolve="Type" />
   </node>
   <node concept="1TIwiD" id="6hc$cxbO1se">

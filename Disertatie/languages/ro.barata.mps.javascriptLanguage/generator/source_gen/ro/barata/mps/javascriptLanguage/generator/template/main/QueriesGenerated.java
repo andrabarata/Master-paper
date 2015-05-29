@@ -5,33 +5,24 @@ package ro.barata.mps.javascriptLanguage.generator.template.main;
 import jetbrains.mps.generator.runtime.Generated;
 import jetbrains.mps.generator.template.MappingScriptContext;
 import org.jetbrains.mps.openapi.model.SNode;
-import jetbrains.mps.lang.smodel.generator.smodelAdapter.SModelOperations;
-import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
-import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
-import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SConceptOperations;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
+import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
 import jetbrains.mps.internal.collections.runtime.ListSequence;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SModelOperations;
 import jetbrains.mps.baseLanguage.closures.runtime.Wrappers;
 import java.util.List;
 import java.util.ArrayList;
 import jetbrains.mps.internal.collections.runtime.IWhereFilter;
 import jetbrains.mps.internal.collections.runtime.IVisitor;
+import ro.barata.mps.javascriptLanguage.behavior.ChangePageCommand_Behavior;
 
 @Generated
 public class QueriesGenerated {
   public final boolean NEEDS_OPCONTEXT = false;
   public static void mappingScript_CodeBlock_5512171426409194905(final MappingScriptContext _context) {
-    for (SNode comm : SModelOperations.nodes(_context.getModel(), MetaAdapterFactory.getConcept(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x4c7f2ab523e8fea0L, "ro.barata.mps.javascriptLanguage.structure.ChangePageCommand"))) {
-      if (SNodeOperations.isInstanceOf(SLinkOperations.getTarget(SNodeOperations.cast(comm, MetaAdapterFactory.getConcept(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x4c7f2ab523e8fea0L, "ro.barata.mps.javascriptLanguage.structure.ChangePageCommand")), MetaAdapterFactory.getContainmentLink(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x4c7f2ab523e8fea0L, 0x34756c9d9f074918L, "page")), MetaAdapterFactory.getConcept(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x3824c288b2065907L, "ro.barata.mps.htmlLanguage.structure.PageHREF"))) {
-        SNode replacement = SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(MetaAdapterFactory.getConcept(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x3824c288b2065910L, "ro.barata.mps.htmlLanguage.structure.UserHREF")));
-        SNode val = SNodeOperations.cast(SLinkOperations.getTarget(SNodeOperations.cast(comm, MetaAdapterFactory.getConcept(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x4c7f2ab523e8fea0L, "ro.barata.mps.javascriptLanguage.structure.ChangePageCommand")), MetaAdapterFactory.getContainmentLink(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x4c7f2ab523e8fea0L, 0x34756c9d9f074918L, "page")), MetaAdapterFactory.getConcept(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x3824c288b2065907L, "ro.barata.mps.htmlLanguage.structure.PageHREF"));
-        String value = SPropertyOperations.getString(SLinkOperations.getTarget(val, MetaAdapterFactory.getReferenceLink(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x3824c288b2065907L, 0x3824c288b206597aL, "page")), MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"));
-        SPropertyOperations.set(replacement, MetaAdapterFactory.getProperty(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x3824c288b2065910L, 0x3824c288b2065978L, "value"), value);
-        SLinkOperations.setTarget(replacement, MetaAdapterFactory.getContainmentLink(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x3824c288b2065910L, 0x34756c9d9fddbf93L, "parameter"), SLinkOperations.getTarget(val, MetaAdapterFactory.getContainmentLink(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x3824c288b2065907L, 0x5a8d28ce2a7ccf5cL, "parameter")));
-        SLinkOperations.setTarget(SNodeOperations.cast(comm, MetaAdapterFactory.getConcept(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x4c7f2ab523e8fea0L, "ro.barata.mps.javascriptLanguage.structure.ChangePageCommand")), MetaAdapterFactory.getContainmentLink(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x4c7f2ab523e8fea0L, 0x34756c9d9f074918L, "page"), replacement);
-      }
-    }
     SNode sendDataFile = SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(MetaAdapterFactory.getConcept(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x4c7f2ab523e8fe08L, "ro.barata.mps.javascriptLanguage.structure.JavascriptFile")));
     SPropertyOperations.set(sendDataFile, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "general");
     final SNode function = SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(MetaAdapterFactory.getConcept(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x2addac2a6e9a9f66L, "ro.barata.mps.javascriptLanguage.structure.AjaxJavascriptFunction")));
@@ -40,9 +31,9 @@ public class QueriesGenerated {
     SModelOperations.addRootNode(_context.getModel(), sendDataFile);
 
     for (final SNode page : SModelOperations.roots(_context.getModel(), MetaAdapterFactory.getConcept(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x233f341bd1c976e1L, "ro.barata.mps.htmlLanguage.structure.HTMLPage"))) {
+      SNode file = SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(MetaAdapterFactory.getConcept(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x4c7f2ab523e8fe08L, "ro.barata.mps.javascriptLanguage.structure.JavascriptFile")));
+      SPropertyOperations.set(file, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), SPropertyOperations.getString(page, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name")));
       if (ListSequence.fromList(SLinkOperations.getChildren(page, MetaAdapterFactory.getContainmentLink(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x233f341bd1c976e1L, 0x4c7f2ab523e43958L, "actions"))).isNotEmpty()) {
-        SNode file = SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(MetaAdapterFactory.getConcept(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x4c7f2ab523e8fe08L, "ro.barata.mps.javascriptLanguage.structure.JavascriptFile")));
-        SPropertyOperations.set(file, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), SPropertyOperations.getString(page, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name")));
         for (SNode action : SLinkOperations.getChildren(page, MetaAdapterFactory.getContainmentLink(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x233f341bd1c976e1L, 0x4c7f2ab523e43958L, "actions"))) {
           final SNode function2 = SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(MetaAdapterFactory.getConcept(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x4c7f2ab523e8fe0bL, "ro.barata.mps.javascriptLanguage.structure.JavascriptFunction")));
           SPropertyOperations.set(function2, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), SPropertyOperations.getString(action, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name")));
@@ -187,6 +178,13 @@ public class QueriesGenerated {
         SModelOperations.addRootNode(_context.getModel(), file);
       }
     }
+    ListSequence.fromList(SModelOperations.nodes(_context.getModel(), MetaAdapterFactory.getConcept(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x4c7f2ab523e8fea0L, "ro.barata.mps.javascriptLanguage.structure.ChangePageCommand"))).visitAll(new IVisitor<SNode>() {
+      public void visit(SNode it) {
+        if (SNodeOperations.isInstanceOf(SLinkOperations.getTarget(it, MetaAdapterFactory.getContainmentLink(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x4c7f2ab523e8fea0L, 0x34756c9d9f074918L, "page")), MetaAdapterFactory.getConcept(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x3824c288b2065907L, "ro.barata.mps.htmlLanguage.structure.PageHREF"))) {
+          ChangePageCommand_Behavior.call_generateAdditionalSources_1923253541697062536(it);
+        }
+      }
+    });
 
   }
 }

@@ -20,7 +20,11 @@ public class PersonDAO {
 
   public List<Person> getAllPersons() throws SQLException {
     List<Person> persons = new ArrayList<Person>();
-    String sql = "select * from " + "Person";
+    String sql = "select * from " + "Person" + " table0";
+    String innerJoins = "";
+    int i = 1;
+    sql += innerJoins;
+    System.out.println(sql);
     ResultSet set = stmt.executeQuery(sql);
     Person foundPerson = new Person();
     while (set.next()) {
@@ -33,7 +37,8 @@ public class PersonDAO {
     return persons;
   }
 
-  public Person findPerson(Person person) throws SQLException {
+  public List<Person> findPersons(Person person) throws SQLException {
+    List<Person> persons = new ArrayList<Person>();
     String sql = "select ";
     String columns = "";
     columns += "id";
@@ -51,10 +56,12 @@ public class PersonDAO {
     if (person.getLastName() != null) {
       values += "lastName" + "='" + person.getLastName() + "' and ";
     }
+    String leftJoins = "";
+    int i = 1;
     if (values.length() > 6) {
       values = " where " + values.substring(0, values.length() - 5);
     }
-    sql += columns + " from " + "Person" + values;
+    sql += columns + " from " + "Person" + " table0" + leftJoins + values;
     System.out.println(sql);
     ResultSet set = stmt.executeQuery(sql);
     Person foundPerson = new Person();
@@ -63,8 +70,9 @@ public class PersonDAO {
       foundPerson.setId(Integer.valueOf(set.getBigDecimal("id").intValue()));
       foundPerson.setFirstName(set.getString("firstName"));
       foundPerson.setLastName(set.getString("lastName"));
+      persons.add(foundPerson);
     }
-    return foundPerson;
+    return persons;
   }
 
   public void addPerson(Person person) throws SQLException, ClassNotFoundException {

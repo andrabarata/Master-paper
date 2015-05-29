@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.ServletException;
 import java.io.IOException;
+import java.util.List;
 import javax.servlet.http.HttpSession;
 import flexjson.JSONSerializer;
 
@@ -23,8 +24,9 @@ public class LoginServlet extends HttpServlet {
     response.setContentType("text/html");
     response.setStatus(HttpServletResponse.SC_OK);
     try {
-      handleRequest(request, response);
       response.getWriter().println("<!DOCTYPE html>");
+      System.out.println("GET!");
+      handleRequest(request, response);
 
     } catch (Exception ex) {
       ex.printStackTrace();
@@ -72,7 +74,8 @@ public class LoginServlet extends HttpServlet {
     }
 
     UserDAO userDAO = new UserDAO(connection);
-    User user = userDAO.findUser(searchUser);
+    List<User> userList = userDAO.findUsers(searchUser);
+    User user = ((userList.size() > 0) ? userList.get(0) : new User());
     {
       HttpSession session = request.getSession();
       session.setAttribute("user", user);

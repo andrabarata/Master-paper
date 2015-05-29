@@ -55,5 +55,46 @@ public class FileStructureClass {
 
       }
     }
+    {
+      Path p = Paths.get("C:/Users/Andra/Desktop/pure-min.css");
+      String fileName = "pure.css";
+      InputStream input = null;
+      OutputStream output = null;
+
+      try {
+        String absPath = (rootPath + "/" + fileName);
+        absPath = absPath.substring(6, absPath.length());
+        System.out.println(absPath);
+        input = new FileInputStream("C:/Users/Andra/Desktop/pure-min.css");
+        File f = new File(absPath);
+        if (!(f.exists())) {
+          f.createNewFile();
+        }
+        output = new FileOutputStream(absPath);
+        int read = 0;
+        byte[] bytes = new byte[1024];
+        while ((read = input.read(bytes)) != -1) {
+          output.write(bytes, 0, read);
+        }
+      } catch (Exception ex) {
+        ex.printStackTrace();
+      } finally {
+        if (input != null) {
+          try {
+            input.close();
+          } catch (Exception ex) {
+            ex.printStackTrace();
+          }
+        }
+        if (output != null) {
+          try {
+            output.close();
+          } catch (Exception ex) {
+            ex.printStackTrace();
+          }
+        }
+
+      }
+    }
   }
 }

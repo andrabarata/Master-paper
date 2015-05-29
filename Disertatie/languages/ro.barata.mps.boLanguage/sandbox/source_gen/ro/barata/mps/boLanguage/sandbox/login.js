@@ -6,8 +6,10 @@ var names=["userName","password"];
 var values=[userName,userPassword];
 var callback=function(jsonObj){
 var name=jsonObj.userName;
+var abcd="abcd";
 if(name!=null){
-document.location.href="mainPage";
+var hrefValue="/home";
+document.location.href=""+hrefValue;
 } else {
 document.getElementById("authentificate").style.visibility="visible";
 }

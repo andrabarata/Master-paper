@@ -6,14 +6,19 @@ import javax.servlet.http.HttpSession;
 import java.sql.SQLException;
 import java.util.List;
 import java.util.ArrayList;
+import java.sql.Connection;
 
 public class FrameGenerator {
   public static String getContent(HttpSession session) throws ClassNotFoundException, SQLException {
     String html = "<html>";
     String parameters = "";
+    String href = "";
     html += "<head>";
-    html += "<script src=\"general.js\"></script>";
-    html += "<link rel=\"stylesheet\" type=\"text/css\" href=\"" + "main" + ".css\"/>";
+    html += "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">";
+    html += "<script src=\"/" + "frame.js" + "\"></script>";
+    html += "<script src=\"/general.js\"></script>";
+    html += "<link rel=\"stylesheet\" type=\"text/css\" href=\"/" + "main.css" + "\"/>";
+    html += "<link rel=\"stylesheet\" type=\"text/css\" href=\"/" + "pure.css" + "\"/>";
     html += "</head>";
     html += "<body>";
     html += "</body>";
@@ -23,19 +28,135 @@ public class FrameGenerator {
   public static String generateHeader(HttpSession session) throws ClassNotFoundException, SQLException {
     String html = "";
     String parameters = "";
-    List<User> users;
-    {
-      User entity = (User) session.getAttribute("user");
-      users = new ArrayList<User>();
-      users.add(entity);
-    }
+    String href = "";
+    List<User> sessionUsers = new ArrayList<User>();
 
-    for (User user : users) {
-      html += "<label";
-      html += ">" + "Welcome," + "</label>";
-      html += "<label";
-      html += ">" + user.getUserName() + "</label>";
+    {
+      User sessionUser = (User) session.getAttribute("user");
+      sessionUsers = new ArrayList<User>();
+      sessionUsers.add(sessionUser);
     }
+    for (User user : sessionUsers) {
+      {
+        String value = "val";
+        if (user != null && user.getUserName() != null) {
+          html += "<label";
+
+          html += ">" + "Welcome," + "</label>";
+          html += "<label";
+
+          html += ">" + user.getUserName() + "</label>";
+        } else {
+          html += "<a";
+          html += " href=\"" + "login" + href + "\"";
+
+          html += ">" + "Login" + "</a>";
+        }
+      }
+    }
+    return html;
+  }
+  public static String generateTopCategories(HttpSession session) throws ClassNotFoundException, SQLException {
+    String html = "";
+    String parameters = "";
+    String href = "";
+    Connection connection = DatabaseConnection.getConnection();
+    CategoryDAO categoryDAO = new CategoryDAO(connection);
+    Category searchCategory = new Category();
+    html += "<div";
+    html += " class=\"" + "pure-menu pure-menu-horizontal" + "\"";
+    html += ">";
+
+    for (Category category : categoryDAO.getAllCategorys()) {
+      html += "<a";
+      html += " href=\"" + "#" + "\"";
+      html += " class=\"" + "pure-menu-heading pure-menu-link" + "\"";
+      parameters = "";
+      parameters += "'" + category.getName() + "',";
+      parameters += "'" + category.getId() + "',";
+      parameters = parameters.substring(0, parameters.length() - 1);
+      html += "onclick" + "=\"" + "navigateToCategoryPromotion" + "(" + parameters + ")\"";
+
+
+      html += ">" + category.getName() + "</a>";
+    }
+    html += "</div>";
+
+    return html;
+  }
+  public static String generateLeftCategories(HttpSession session) throws ClassNotFoundException, SQLException {
+    String html = "";
+    String parameters = "";
+    String href = "";
+    Connection connection = DatabaseConnection.getConnection();
+    CategoryDAO categoryDAO = new CategoryDAO(connection);
+    Category searchCategory = new Category();
+    html += "<div";
+    html += " class=\"" + "pure-menu custom-restricted-width" + "\"";
+    html += ">";
+    html += "<span";
+    html += " class=\"" + "pure-menu-heading first" + "\"";
+    html += ">";
+    html += "Categories";
+    html += "</span>";
+
+    html += "<ul";
+    html += " class=\"" + "pure-menu-list" + "\"";
+
+    html += ">";
+
+    for (Category category : categoryDAO.getAllCategorys()) {
+      html += "<li";
+      html += " class=\"" + "pure-menu-item pure-menu-has-children" + "\"";
+      parameters = "";
+      parameters += "'" + category.getId() + "',";
+      parameters = parameters.substring(0, parameters.length() - 1);
+      html += "omouseover" + "=\"" + "showCategories" + "(" + parameters + ")\"";
+
+      parameters = "";
+      parameters += "'" + category.getId() + "',";
+      parameters = parameters.substring(0, parameters.length() - 1);
+      html += "onmouseout" + "=\"" + "hideCategories" + "(" + parameters + ")\"";
+
+      html += ">";
+      html += "<a";
+      html += " href=\"" + "#" + "\"";
+      html += " class=\"" + "pure-menu-link" + "\"";
+
+      html += ">" + category.getName() + "</a>";
+      html += "<ul";
+      html += " id='" + category.getId() + "'";
+      html += " class=\"" + "pure-menu-children pure-menu-allow-hover" + "\"";
+
+      html += ">";
+
+      {
+        searchCategory = new Category();
+        String value = "";
+        value = category.getId().toString();
+        searchCategory.setId(Integer.parseInt(value));
+
+      }
+      for (Category subCategories : categoryDAO.findChildCategorys(searchCategory)) {
+        html += "<li";
+        html += " class=\"" + "pure-menu-item" + "\"";
+        html += ">";
+        html += "<a";
+        html += " href=\"" + "#" + "\"";
+        html += " class=\"" + "pure-menu-link" + "\"";
+
+        html += ">" + subCategories.getName() + "</a>";
+        html += "</li>";
+
+      }
+      html += "</ul>";
+
+      html += "</li>";
+
+    }
+    html += "</ul>";
+
+    html += "</div>";
 
     return html;
   }

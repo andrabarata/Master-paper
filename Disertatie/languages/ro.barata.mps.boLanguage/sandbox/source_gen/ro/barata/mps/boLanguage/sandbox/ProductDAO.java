@@ -21,7 +21,13 @@ public class ProductDAO {
 
   public List<Product> getAllProducts() throws SQLException {
     List<Product> products = new ArrayList<Product>();
-    String sql = "select * from " + "Product";
+    String sql = "select * from " + "Product" + " table0";
+    String innerJoins = "";
+    int i = 1;
+    innerJoins += " inner join " + "Attribute" + " table" + i + " on table" + i + "." + "productId" + "=table0." + "id";
+    i++;
+    sql += innerJoins;
+    System.out.println(sql);
     ResultSet set = stmt.executeQuery(sql);
     Product foundProduct = new Product();
     while (set.next()) {
@@ -33,7 +39,8 @@ public class ProductDAO {
     return products;
   }
 
-  public Product findProduct(Product product) throws SQLException {
+  public List<Product> findProducts(Product product) throws SQLException {
+    List<Product> products = new ArrayList<Product>();
     String sql = "select ";
     String columns = "";
     columns += "id";
@@ -46,10 +53,14 @@ public class ProductDAO {
     if (product.getProductName() != null) {
       values += "name" + "='" + product.getProductName() + "' and ";
     }
+    String leftJoins = "";
+    int i = 1;
+    leftJoins += " inner join " + "Attribute" + " table" + i + " on table" + i + "." + "productId" + "=table0." + "id";
+    i++;
     if (values.length() > 6) {
       values = " where " + values.substring(0, values.length() - 5);
     }
-    sql += columns + " from " + "Product" + values;
+    sql += columns + " from " + "Product" + " table0" + leftJoins + values;
     System.out.println(sql);
     ResultSet set = stmt.executeQuery(sql);
     Product foundProduct = new Product();
@@ -57,8 +68,44 @@ public class ProductDAO {
       foundProduct = new Product();
       foundProduct.setId(Integer.valueOf(set.getBigDecimal("id").intValue()));
       foundProduct.setProductName(set.getString("name"));
+      products.add(foundProduct);
     }
-    return foundProduct;
+    return products;
+  }
+  public List<Attribute> findChildAttributes(Product parent) throws SQLException {
+    List<Attribute> attributes = new ArrayList<Attribute>();
+    String sql = "select ";
+    String columns = "";
+    columns += "id";
+    columns += ",";
+    columns += "name";
+    columns += ",";
+    columns += "value";
+    sql += columns;
+    sql += " from " + "Attribute" + " where " + "productId" + " in (select " + "id" + " from " + "Product";
+    if (parent != null) {
+      sql += " where ";
+      String values = "";
+      if (parent.getId() != null) {
+        values += "id" + "='" + parent.getId() + "'and ";
+      }
+      if (parent.getProductName() != null) {
+        values += "name" + "='" + parent.getProductName() + "'and ";
+      }
+      sql += values.substring(0, values.length() - 4);
+    }
+    sql += ")";
+    System.out.println(sql);
+    ResultSet set = stmt.executeQuery(sql);
+    Attribute foundAttribute = new Attribute();
+    while (set.next()) {
+      foundAttribute = new Attribute();
+      foundAttribute.setId(Integer.valueOf(set.getBigDecimal("id").intValue()));
+      foundAttribute.setAttributeName(set.getString("name"));
+      foundAttribute.setAttributeValue(set.getString("value"));
+      attributes.add(foundAttribute);
+    }
+    return attributes;
   }
 
   public void addProduct(Product product) throws SQLException, ClassNotFoundException {

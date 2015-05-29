@@ -32,17 +32,17 @@ public class HTTPServer {
     context.setHandler(handler);
 
     RewriteHandler rwHandler = new RewriteHandler();
-    context.addServlet(new ServletHolder(new LoginServlet()), "/" + "login");
+    context.addServlet(new ServletHolder(new LoginServlet()), "/" + "login" + "/*");
+    context.addServlet(new ServletHolder(new HomeServlet()), "/" + "home" + "/*");
     {
       rwHandler.setRewriteRequestURI(true);
       rwHandler.setRewritePathInfo(true);
       rwHandler.setOriginalPathAttribute("/");
       RedirectRegexRule rule = new RedirectRegexRule();
       rule.setRegex("/");
-      rule.setReplacement("login");
+      rule.setReplacement("home");
       rwHandler.addRule(rule);
     }
-    context.addServlet(new ServletHolder(new MainPageServlet()), "/" + "mainPage");
 
     Handler[] handlers = new Handler[]{rwHandler, context};
     HandlerList list = new HandlerList();

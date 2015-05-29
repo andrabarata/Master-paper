@@ -12,5 +12,6 @@ public class VarValueHREF_TextGen extends SNodeTextGen {
   public void doGenerateText(SNode node) {
     this.append("\"+");
     this.append(SPropertyOperations.getString(SLinkOperations.getTarget(node, MetaAdapterFactory.getReferenceLink(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x34756c9d9fad5530L, 0x34756c9d9fad56f4L, "value")), MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name")));
+    this.append(";");
   }
 }

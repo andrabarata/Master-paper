@@ -16,6 +16,8 @@ import jetbrains.mps.editor.runtime.style.StyleAttributes;
 import jetbrains.mps.openapi.editor.style.StyleRegistry;
 import jetbrains.mps.nodeEditor.MPSColors;
 import jetbrains.mps.nodeEditor.EditorManager;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
+import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 
 public class File_Editor extends DefaultNodeEditor {
   public EditorCell createEditorCell(EditorContext editorContext, SNode node) {
@@ -29,6 +31,12 @@ public class File_Editor extends DefaultNodeEditor {
     editorCell.addEditorCell(this.createProperty_jqfb9k_b0(editorContext, node));
     editorCell.addEditorCell(this.createConstant_jqfb9k_c0(editorContext, node));
     editorCell.addEditorCell(this.createProperty_jqfb9k_d0(editorContext, node));
+    if (renderingCondition_jqfb9k_a4a(node, editorContext)) {
+      editorCell.addEditorCell(this.createConstant_jqfb9k_e0(editorContext, node));
+    }
+    if (renderingCondition_jqfb9k_a5a(node, editorContext)) {
+      editorCell.addEditorCell(this.createProperty_jqfb9k_f0(editorContext, node));
+    }
     return editorCell;
   }
   private EditorCell createConstant_jqfb9k_a0(EditorContext editorContext, SNode node) {
@@ -75,6 +83,7 @@ public class File_Editor extends DefaultNodeEditor {
     editorCell.setCellId("property_path");
     Style style = new StyleImpl();
     style.set(StyleAttributes.TEXT_COLOR, 0, StyleRegistry.getInstance().getSimpleColor(MPSColors.blue));
+    style.set(StyleAttributes.INDENT_LAYOUT_NEW_LINE, 0, true);
     editorCell.getStyle().putAll(style);
     editorCell.setSubstituteInfo(provider.createDefaultSubstituteInfo());
     SNode attributeConcept = provider.getRoleAttribute();
@@ -84,5 +93,53 @@ public class File_Editor extends DefaultNodeEditor {
       return manager.createNodeRoleAttributeCell(editorContext, attributeConcept, attributeKind, editorCell);
     } else
     return editorCell;
+  }
+  private EditorCell createConstant_jqfb9k_e0(EditorContext editorContext, SNode node) {
+    EditorCell_Constant editorCell = new EditorCell_Constant(editorContext, node, "Include file in project?");
+    editorCell.setCellId("Constant_jqfb9k_e0");
+    Style style = new StyleImpl();
+    style.set(StyleAttributes.INDENT_LAYOUT_INDENT, 0, true);
+    editorCell.getStyle().putAll(style);
+    editorCell.setDefaultText("");
+    return editorCell;
+  }
+  private static boolean renderingCondition_jqfb9k_a4a(SNode node, EditorContext editorContext) {
+    String path = SPropertyOperations.getString(node, MetaAdapterFactory.getProperty(0xedb2b9cf991f4100L, 0xab3c9444c4d6e26bL, 0x44b44eee30a28801L, 0x44b44eee30a28802L, "path"));
+    if ((path != null && path.length() > 0)) {
+      String extension = path.substring(path.lastIndexOf(".") + 1, path.length());
+      if (extension.equals("css") || extension.equals("js")) {
+        return true;
+      }
+    }
+    return false;
+  }
+  private EditorCell createProperty_jqfb9k_f0(EditorContext editorContext, SNode node) {
+    CellProviderWithRole provider = new PropertyCellProvider(node, editorContext);
+    provider.setRole("include");
+    provider.setNoTargetText("<no include>");
+    EditorCell editorCell;
+    editorCell = provider.createEditorCell(editorContext);
+    editorCell.setCellId("property_include");
+    Style style = new StyleImpl();
+    style.set(StyleAttributes.TEXT_COLOR, 0, StyleRegistry.getInstance().getSimpleColor(MPSColors.blue));
+    editorCell.getStyle().putAll(style);
+    editorCell.setSubstituteInfo(provider.createDefaultSubstituteInfo());
+    SNode attributeConcept = provider.getRoleAttribute();
+    Class attributeKind = provider.getRoleAttributeClass();
+    if (attributeConcept != null) {
+      EditorManager manager = EditorManager.getInstanceFromContext(editorContext);
+      return manager.createNodeRoleAttributeCell(editorContext, attributeConcept, attributeKind, editorCell);
+    } else
+    return editorCell;
+  }
+  private static boolean renderingCondition_jqfb9k_a5a(SNode node, EditorContext editorContext) {
+    String path = SPropertyOperations.getString(node, MetaAdapterFactory.getProperty(0xedb2b9cf991f4100L, 0xab3c9444c4d6e26bL, 0x44b44eee30a28801L, 0x44b44eee30a28802L, "path"));
+    if ((path != null && path.length() > 0)) {
+      String extension = path.substring(path.lastIndexOf(".") + 1, path.length());
+      if (extension.equals("css") || extension.equals("js")) {
+        return true;
+      }
+    }
+    return false;
   }
 }
