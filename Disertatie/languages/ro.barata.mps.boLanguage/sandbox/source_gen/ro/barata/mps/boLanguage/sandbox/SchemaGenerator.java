@@ -50,6 +50,8 @@ public class SchemaGenerator {
     sql = "create table " + "Product" + "(";
     sql += "id" + " " + "integer" + ",";
     sql += "name" + " " + "varchar(256)" + ",";
+    sql += "price" + " " + "integer" + ",";
+    sql += "description" + " " + "varchar(256)" + ",";
     sql += "categoryId" + " " + "integer" + ",";
     if (primaryKey.length() == 0) {
       sql = sql.substring(0, sql.length() - 1);
@@ -99,7 +101,7 @@ public class SchemaGenerator {
     primaryKey = "primary key(";
     primaryKey += "id";
     primaryKey += ")";
-    sql = "create table " + "Person" + "(";
+    sql = "create table " + "PersonTable" + "(";
     sql += "id" + " " + "integer" + ",";
     sql += "firstName" + " " + "varchar(256)" + ",";
     sql += "lastName" + " " + "varchar(256)" + ",";
@@ -136,7 +138,7 @@ public class SchemaGenerator {
     stmt.execute(sql);
 
     sql = "alter table " + "UserTable" + " add constraint fk_" + "UserTable" + "_" + "personId";
-    sql += " foreign key (" + "personId" + ") references " + "Person" + "(" + "id" + ")";
+    sql += " foreign key (" + "personId" + ") references " + "PersonTable" + "(" + "id" + ")";
     System.out.println(sql);
     stmt.execute(sql);
     sql = "alter table " + "UserTable" + " add constraint fk_" + "UserTable" + "_" + "shopId";
@@ -163,7 +165,7 @@ public class SchemaGenerator {
     sql = "drop table " + "UserTable" + " cascade constraints";
     stmt.executeUpdate(sql);
 
-    sql = "drop table " + "Person" + " cascade constraints";
+    sql = "drop table " + "PersonTable" + " cascade constraints";
     stmt.executeUpdate(sql);
 
   }

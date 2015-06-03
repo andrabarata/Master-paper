@@ -6,18 +6,33 @@ import javax.servlet.http.HttpSession;
 import java.sql.SQLException;
 
 public class LoginGenerator {
-  public static String getContent(HttpSession session) throws ClassNotFoundException, SQLException {
+  public static String getContent(HttpSession session, String requestParameterValue) throws ClassNotFoundException, SQLException {
     String html = "<html>";
     String parameters = "";
     String href = "";
+    String value = "";
+    String expressions = "";
     html += "<head>";
     html += "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">";
+    html += "<script src=\"/" + "jquery.js" + "\"></script>";
+    html += "<script src=\"/" + "bootstrap.min.js" + "\"></script>";
+    html += "<script src=\"/" + "frame.js" + "\"></script>";
     html += "<script src=\"/" + "login.js" + "\"></script>";
     html += "<script src=\"/general.js\"></script>";
     html += "<link rel=\"stylesheet\" type=\"text/css\" href=\"/" + "main.css" + "\"/>";
-    html += "<link rel=\"stylesheet\" type=\"text/css\" href=\"/" + "pure.css" + "\"/>";
+    html += "<link rel=\"stylesheet\" type=\"text/css\" href=\"/" + "pure-min.css" + "\"/>";
+    html += "<link rel=\"stylesheet\" type=\"text/css\" href=\"/" + "bootstrap.min.css" + "\"/>";
+    html += "<link rel=\"stylesheet\" type=\"text/css\" href=\"/" + "bootstrap.combined.css" + "\"/>";
+    html += "<link rel=\"stylesheet\" type=\"text/css\" href=\"/" + "font-awesome.css" + "\"/>";
     html += "</head>";
     html += "<body>";
+    html += FrameGenerator.generateHeader(session);
+    html += "<div";
+    html += " class=\"" + "container" + "\"";
+    html += ">";
+    html += "<div";
+    html += " class=\"" + "row" + "\"";
+    html += ">";
     html += "<form";
     html += " class=\"" + "pure-form pure-form-aligned" + "\"";
     html += ">";
@@ -56,19 +71,23 @@ public class LoginGenerator {
     html += " type=\"" + "button" + "\" ";
     html += " class=\"" + "pure-button pure-button-primary" + "\"";
     parameters = "";
-    html += "onclick" + "=\"" + "checkUser" + "(" + parameters + ")\"";
+    html += " " + "onclick" + "=\"" + "checkUser" + "(" + parameters + ")\"";
 
 
     html += " value=\"" + "Login" + "\" ";
     html += "/>";
     html += "</div>";
 
-    html += "</form>";
-
     html += "<label";
     html += " id='" + "authentificate" + "'";
 
     html += ">" + "Authentification failed! Please try again!" + "</label>";
+    html += "</form>";
+
+    html += "</div>";
+
+    html += "</div>";
+
     html += "</body>";
     html += "</html>";
     return html;

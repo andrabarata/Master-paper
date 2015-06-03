@@ -20,22 +20,70 @@ public class ShopDAO {
 
   public List<Shop> getAllShops() throws SQLException {
     List<Shop> shops = new ArrayList<Shop>();
-    String sql = "select * from " + "Shop" + " table0";
-    String innerJoins = "";
+    String columns = "";
+    columns += "table0." + "id" + " \"parent" + "id" + "\",";
+    columns += "table0." + "name" + " \"parent" + "name" + "\",";
+    String sql = " from " + "Shop" + " table0";
+    String leftJoins = "";
     int i = 1;
-    innerJoins += " inner join " + "User" + " table" + i + " on table" + i + "." + "shopId" + "=table0." + "id";
+    columns += "table" + i + "." + "id" + " \"" + "UserTable" + "id" + "\",";
+    columns += "table" + i + "." + "priviledge" + " \"" + "UserTable" + "priviledge" + "\",";
+    columns += "table" + i + "." + "userName" + " \"" + "UserTable" + "userName" + "\",";
+    columns += "table" + i + "." + "password" + " \"" + "UserTable" + "password" + "\",";
+    leftJoins += " left join " + "UserTable" + " table" + i + " on table" + i + "." + "shopId" + "=table0." + "id" + " ";
     i++;
-    innerJoins += " inner join " + "Category" + " table" + i + " on table" + i + "." + "shopId" + "=table0." + "id";
+    columns += "table" + i + "." + "id" + " \"" + "Category" + "id" + "\",";
+    columns += "table" + i + "." + "name" + " \"" + "Category" + "name" + "\",";
+    leftJoins += " left join " + "Category" + " table" + i + " on table" + i + "." + "shopId" + "=table0." + "id" + " ";
     i++;
-    sql += innerJoins;
+
+    sql = "select " + columns.substring(0, columns.length() - 1) + sql + leftJoins;
     System.out.println(sql);
     ResultSet set = stmt.executeQuery(sql);
-    Shop foundShop = new Shop();
+    Shop foundShop = null;
     while (set.next()) {
       foundShop = new Shop();
-      foundShop.setId(Integer.valueOf(set.getBigDecimal("id").intValue()));
-      foundShop.setName(set.getString("name"));
-      shops.add(foundShop);
+      foundShop.setId(Integer.valueOf(set.getBigDecimal("parent" + "id").intValue()));
+      foundShop.setName(set.getString("parent" + "name"));
+      {
+        User child = new User();
+        if (set.getBigDecimal("UserTable" + "id") != null) {
+          child.setUserId(Integer.valueOf(set.getBigDecimal("UserTable" + "id").intValue()));
+        }
+        if (set.getString("UserTable" + "priviledge") != null) {
+          child.setPriviledge(set.getString("UserTable" + "priviledge"));
+        }
+        if (set.getString("UserTable" + "userName") != null) {
+          child.setUserName(set.getString("UserTable" + "userName"));
+        }
+        if (set.getString("UserTable" + "password") != null) {
+          child.setPassword(set.getString("UserTable" + "password"));
+        }
+        if (child.getUserId() != null) {
+          foundShop.addUser(child);
+        }
+      }
+      {
+        Category child = new Category();
+        if (set.getBigDecimal("Category" + "id") != null) {
+          child.setId(Integer.valueOf(set.getBigDecimal("Category" + "id").intValue()));
+        }
+        if (set.getString("Category" + "name") != null) {
+          child.setName(set.getString("Category" + "name"));
+        }
+        if (child.getId() != null) {
+          foundShop.addCategory(child);
+        }
+      }
+      boolean flag = true;
+      for (Shop entity : shops) {
+        if (entity.getId() == foundShop.getId()) {
+          flag = false;
+        }
+      }
+      if (flag) {
+        shops.add(foundShop);
+      }
     }
     return shops;
   }
@@ -54,17 +102,12 @@ public class ShopDAO {
     if (shop.getName() != null) {
       values += "name" + "='" + shop.getName() + "' and ";
     }
-    String leftJoins = "";
     int i = 1;
-    leftJoins += " inner join " + "User" + " table" + i + " on table" + i + "." + "shopId" + "=table0." + "id";
-    i++;
-    leftJoins += " inner join " + "Category" + " table" + i + " on table" + i + "." + "shopId" + "=table0." + "id";
-    i++;
     if (values.length() > 6) {
       values = " where " + values.substring(0, values.length() - 5);
     }
-    sql += columns + " from " + "Shop" + " table0" + leftJoins + values;
-    System.out.println(sql);
+    sql += columns + " from " + "Shop" + values;
+    System.out.println("Find entities: " + sql);
     ResultSet set = stmt.executeQuery(sql);
     Shop foundShop = new Shop();
     while (set.next()) {

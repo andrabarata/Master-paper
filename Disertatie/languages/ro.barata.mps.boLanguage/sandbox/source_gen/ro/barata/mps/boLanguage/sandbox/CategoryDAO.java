@@ -21,22 +21,70 @@ public class CategoryDAO {
 
   public List<Category> getAllCategorys() throws SQLException {
     List<Category> categorys = new ArrayList<Category>();
-    String sql = "select * from " + "Category" + " table0";
-    String innerJoins = "";
+    String columns = "";
+    columns += "table0." + "id" + " \"parent" + "id" + "\",";
+    columns += "table0." + "name" + " \"parent" + "name" + "\",";
+    String sql = " from " + "Category" + " table0";
+    String leftJoins = "";
     int i = 1;
-    innerJoins += " inner join " + "Product" + " table" + i + " on table" + i + "." + "categoryId" + "=table0." + "id";
+    columns += "table" + i + "." + "id" + " \"" + "Product" + "id" + "\",";
+    columns += "table" + i + "." + "name" + " \"" + "Product" + "name" + "\",";
+    columns += "table" + i + "." + "price" + " \"" + "Product" + "price" + "\",";
+    columns += "table" + i + "." + "description" + " \"" + "Product" + "description" + "\",";
+    leftJoins += " left join " + "Product" + " table" + i + " on table" + i + "." + "categoryId" + "=table0." + "id" + " ";
     i++;
-    innerJoins += " inner join " + "Category" + " table" + i + " on table" + i + "." + "subCategoryId" + "=table0." + "id";
+    columns += "table" + i + "." + "id" + " \"" + "Category" + "id" + "\",";
+    columns += "table" + i + "." + "name" + " \"" + "Category" + "name" + "\",";
+    leftJoins += " left join " + "Category" + " table" + i + " on table" + i + "." + "subCategoryId" + "=table0." + "id" + " ";
     i++;
-    sql += innerJoins;
+
+    sql = "select " + columns.substring(0, columns.length() - 1) + sql + leftJoins;
     System.out.println(sql);
     ResultSet set = stmt.executeQuery(sql);
-    Category foundCategory = new Category();
+    Category foundCategory = null;
     while (set.next()) {
       foundCategory = new Category();
-      foundCategory.setId(Integer.valueOf(set.getBigDecimal("id").intValue()));
-      foundCategory.setName(set.getString("name"));
-      categorys.add(foundCategory);
+      foundCategory.setId(Integer.valueOf(set.getBigDecimal("parent" + "id").intValue()));
+      foundCategory.setName(set.getString("parent" + "name"));
+      {
+        Product child = new Product();
+        if (set.getBigDecimal("Product" + "id") != null) {
+          child.setId(Integer.valueOf(set.getBigDecimal("Product" + "id").intValue()));
+        }
+        if (set.getString("Product" + "name") != null) {
+          child.setProductName(set.getString("Product" + "name"));
+        }
+        if (set.getBigDecimal("Product" + "price") != null) {
+          child.setPrice(Integer.valueOf(set.getBigDecimal("Product" + "price").intValue()));
+        }
+        if (set.getString("Product" + "description") != null) {
+          child.setDescription(set.getString("Product" + "description"));
+        }
+        if (child.getId() != null) {
+          foundCategory.addProduct(child);
+        }
+      }
+      {
+        Category child = new Category();
+        if (set.getBigDecimal("Category" + "id") != null) {
+          child.setId(Integer.valueOf(set.getBigDecimal("Category" + "id").intValue()));
+        }
+        if (set.getString("Category" + "name") != null) {
+          child.setName(set.getString("Category" + "name"));
+        }
+        if (child.getId() != null) {
+          foundCategory.addCategory(child);
+        }
+      }
+      boolean flag = true;
+      for (Category entity : categorys) {
+        if (entity.getId() == foundCategory.getId()) {
+          flag = false;
+        }
+      }
+      if (flag) {
+        categorys.add(foundCategory);
+      }
     }
     return categorys;
   }
@@ -55,17 +103,12 @@ public class CategoryDAO {
     if (category.getName() != null) {
       values += "name" + "='" + category.getName() + "' and ";
     }
-    String leftJoins = "";
     int i = 1;
-    leftJoins += " inner join " + "Product" + " table" + i + " on table" + i + "." + "categoryId" + "=table0." + "id";
-    i++;
-    leftJoins += " inner join " + "Category" + " table" + i + " on table" + i + "." + "subCategoryId" + "=table0." + "id";
-    i++;
     if (values.length() > 6) {
       values = " where " + values.substring(0, values.length() - 5);
     }
-    sql += columns + " from " + "Category" + " table0" + leftJoins + values;
-    System.out.println(sql);
+    sql += columns + " from " + "Category" + values;
+    System.out.println("Find entities: " + sql);
     ResultSet set = stmt.executeQuery(sql);
     Category foundCategory = new Category();
     while (set.next()) {
@@ -83,6 +126,10 @@ public class CategoryDAO {
     columns += "id";
     columns += ",";
     columns += "name";
+    columns += ",";
+    columns += "price";
+    columns += ",";
+    columns += "description";
     sql += columns;
     sql += " from " + "Product" + " where " + "categoryId" + " in (select " + "id" + " from " + "Category";
     if (parent != null) {
@@ -104,6 +151,8 @@ public class CategoryDAO {
       foundProduct = new Product();
       foundProduct.setId(Integer.valueOf(set.getBigDecimal("id").intValue()));
       foundProduct.setProductName(set.getString("name"));
+      foundProduct.setPrice(Integer.valueOf(set.getBigDecimal("price").intValue()));
+      foundProduct.setDescription(set.getString("description"));
       products.add(foundProduct);
     }
     return products;

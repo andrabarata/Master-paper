@@ -483,7 +483,7 @@
     <node concept="1TJgyj" id="41TyEbjin8o" role="1TKVEi">
       <property role="20lmBu" value="aggregation" />
       <property role="20kJfa" value="field2" />
-      <property role="20lbJX" value="1" />
+      <property role="20lbJX" value="1..n" />
       <ref role="20lvS9" node="5EdacSEwA7p" resolve="UserValue" />
     </node>
   </node>
@@ -876,9 +876,11 @@
     <property role="TrG5h" value="UserSrc" />
     <property role="34LRSv" value="outer location" />
     <ref role="1TJDcQ" node="5EdacSEG0RF" resolve="ImageSrc" />
-    <node concept="1TJgyi" id="5EdacSEG0RH" role="1TKVEl">
-      <property role="TrG5h" value="src" />
-      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    <node concept="1TJgyj" id="5MzsgMKsEST" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="src" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="41TyEbjfw9V" resolve="AttributeReference" />
     </node>
   </node>
   <node concept="1TIwiD" id="5EdacSEG0RT">
@@ -1083,12 +1085,6 @@
       <property role="TrG5h" value="condition" />
       <ref role="AX2Wp" node="3ET5BXs456u" resolve="BinaryCondition" />
     </node>
-    <node concept="1TJgyj" id="1EKLew7NZtq" role="1TKVEi">
-      <property role="20lmBu" value="reference" />
-      <property role="20kJfa" value="property" />
-      <property role="20lbJX" value="1" />
-      <ref role="20lvS9" to="tpce:f_TJgxF" resolve="PropertyDeclaration" />
-    </node>
     <node concept="1TJgyj" id="1EKLew7NZtk" role="1TKVEi">
       <property role="20lmBu" value="aggregation" />
       <property role="20kJfa" value="ifCommands" />
@@ -1106,6 +1102,12 @@
       <property role="20kJfa" value="value" />
       <property role="20lbJX" value="1" />
       <ref role="20lvS9" node="5EdacSEwA7p" resolve="UserValue" />
+    </node>
+    <node concept="1TJgyj" id="5MzsgMJ20ad" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="parameter" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="5MzsgMJ20a9" resolve="IfParameter" />
     </node>
   </node>
   <node concept="1TIwiD" id="1EKLew7Wtc9">
@@ -1202,6 +1204,56 @@
     <node concept="PrWs8" id="6gIAxptIUBC" role="PzmwI">
       <ref role="PrY4T" node="6gIAxpthiHt" resolve="INullable" />
     </node>
+  </node>
+  <node concept="1TIwiD" id="5MzsgMIGzY_">
+    <property role="TrG5h" value="NavContainer" />
+    <property role="34LRSv" value="nav" />
+    <property role="3GE5qa" value="html.container" />
+    <ref role="1TJDcQ" node="5EdacSEwA7P" resolve="MixedHTMLCommand" />
+  </node>
+  <node concept="1TIwiD" id="5MzsgMILv6d">
+    <property role="TrG5h" value="ButtonContainer" />
+    <property role="34LRSv" value="button" />
+    <property role="3GE5qa" value="html.container" />
+    <ref role="1TJDcQ" node="5EdacSEwA7P" resolve="MixedHTMLCommand" />
+  </node>
+  <node concept="1TIwiD" id="5MzsgMJ1ZDC">
+    <property role="3GE5qa" value="html.commands.model" />
+    <property role="TrG5h" value="IfProperty" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="5MzsgMJ26D0" role="1TKVEi">
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="property" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" to="tpce:f_TJgxF" resolve="PropertyDeclaration" />
+    </node>
+    <node concept="PrWs8" id="5MzsgMJaKwB" role="PzmwI">
+      <ref role="PrY4T" node="5MzsgMJ20a9" resolve="IfParameter" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="5MzsgMJ2059">
+    <property role="3GE5qa" value="html.commands.model" />
+    <property role="TrG5h" value="IfLink" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="5MzsgMJ205a" role="1TKVEi">
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="property" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" to="tpce:f_TJgxE" resolve="LinkDeclaration" />
+    </node>
+    <node concept="PrWs8" id="5MzsgMJaKwD" role="PzmwI">
+      <ref role="PrY4T" node="5MzsgMJ20a9" resolve="IfParameter" />
+    </node>
+  </node>
+  <node concept="PlHQZ" id="5MzsgMJ20a9">
+    <property role="3GE5qa" value="html.commands.model" />
+    <property role="TrG5h" value="IfParameter" />
+  </node>
+  <node concept="1TIwiD" id="5MzsgMKp9qU">
+    <property role="3GE5qa" value="html.miscelanous" />
+    <property role="TrG5h" value="IElement" />
+    <property role="34LRSv" value="i" />
+    <ref role="1TJDcQ" node="5a6Q6gbwnnj" resolve="HTMLValueCommand" />
   </node>
 </model>
 

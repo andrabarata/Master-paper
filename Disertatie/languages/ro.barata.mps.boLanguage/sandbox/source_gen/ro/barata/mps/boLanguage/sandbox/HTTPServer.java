@@ -14,6 +14,7 @@ import org.eclipse.jetty.server.handler.HandlerList;
 
 public class HTTPServer {
   public static void main(String[] args) throws Exception {
+    FileStructureGenerator.generateFiles();
     Server server = new Server();
     SelectChannelConnector connector = new SelectChannelConnector();
     connector.setHost("localhost");
@@ -43,6 +44,7 @@ public class HTTPServer {
       rule.setReplacement("home");
       rwHandler.addRule(rule);
     }
+    context.addServlet(new ServletHolder(new ProductsServlet()), "/" + "products" + "/*");
 
     Handler[] handlers = new Handler[]{rwHandler, context};
     HandlerList list = new HandlerList();

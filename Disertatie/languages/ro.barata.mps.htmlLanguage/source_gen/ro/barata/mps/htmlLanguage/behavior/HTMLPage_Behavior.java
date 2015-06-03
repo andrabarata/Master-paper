@@ -87,11 +87,7 @@ public class HTMLPage_Behavior {
   }
   public static List<SNode> call_findAdditionalCssFiles_1923253541740261995(SNode thisNode) {
     final List<SNode> files = ListSequence.fromList(new ArrayList<SNode>());
-    ListSequence.fromList(SModelOperations.nodes(SNodeOperations.getModel(thisNode), MetaAdapterFactory.getConcept(0xedb2b9cf991f4100L, 0xab3c9444c4d6e26bL, 0x44b44eee30a28801L, "ro.barata.mps.styleLanguage.structure.File"))).where(new IWhereFilter<SNode>() {
-      public boolean accept(SNode it) {
-        return SPropertyOperations.getBoolean(it, MetaAdapterFactory.getProperty(0xedb2b9cf991f4100L, 0xab3c9444c4d6e26bL, 0x44b44eee30a28801L, 0x1ab0c4e8086dfb1fL, "include"));
-      }
-    }).visitAll(new IVisitor<SNode>() {
+    ListSequence.fromList(SModelOperations.nodes(SNodeOperations.getModel(thisNode), MetaAdapterFactory.getConcept(0xedb2b9cf991f4100L, 0xab3c9444c4d6e26bL, 0x44b44eee30a28801L, "ro.barata.mps.styleLanguage.structure.File"))).visitAll(new IVisitor<SNode>() {
       public void visit(SNode it) {
         String path = SPropertyOperations.getString(it, MetaAdapterFactory.getProperty(0xedb2b9cf991f4100L, 0xab3c9444c4d6e26bL, 0x44b44eee30a28801L, 0x44b44eee30a28802L, "path"));
         if ((path != null && path.length() > 0)) {
@@ -106,11 +102,7 @@ public class HTMLPage_Behavior {
   }
   public static List<SNode> call_findAdditionalJsFiles_1923253541740383299(SNode thisNode) {
     final List<SNode> files = ListSequence.fromList(new ArrayList<SNode>());
-    ListSequence.fromList(SModelOperations.nodes(SNodeOperations.getModel(thisNode), MetaAdapterFactory.getConcept(0xedb2b9cf991f4100L, 0xab3c9444c4d6e26bL, 0x44b44eee30a28801L, "ro.barata.mps.styleLanguage.structure.File"))).where(new IWhereFilter<SNode>() {
-      public boolean accept(SNode it) {
-        return SPropertyOperations.getBoolean(it, MetaAdapterFactory.getProperty(0xedb2b9cf991f4100L, 0xab3c9444c4d6e26bL, 0x44b44eee30a28801L, 0x1ab0c4e8086dfb1fL, "include"));
-      }
-    }).visitAll(new IVisitor<SNode>() {
+    ListSequence.fromList(SModelOperations.nodes(SNodeOperations.getModel(thisNode), MetaAdapterFactory.getConcept(0xedb2b9cf991f4100L, 0xab3c9444c4d6e26bL, 0x44b44eee30a28801L, "ro.barata.mps.styleLanguage.structure.File"))).visitAll(new IVisitor<SNode>() {
       public void visit(SNode it) {
         String path = SPropertyOperations.getString(it, MetaAdapterFactory.getProperty(0xedb2b9cf991f4100L, 0xab3c9444c4d6e26bL, 0x44b44eee30a28801L, 0x44b44eee30a28802L, "path"));
         if ((path != null && path.length() > 0)) {

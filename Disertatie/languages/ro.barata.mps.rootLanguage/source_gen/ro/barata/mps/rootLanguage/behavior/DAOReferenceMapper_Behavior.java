@@ -13,6 +13,7 @@ import jetbrains.mps.internal.collections.runtime.IWhereFilter;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
 import jetbrains.mps.internal.collections.runtime.IVisitor;
+import jetbrains.mps.baseLanguage.closures.runtime.Wrappers;
 
 public class DAOReferenceMapper_Behavior {
   public static void init(SNode thisNode) {
@@ -32,5 +33,16 @@ public class DAOReferenceMapper_Behavior {
     });
     return mappers;
 
+  }
+  public static SNode call_getBelongingMapper_6675303371994802819(final SNode thisNode) {
+    final Wrappers._T<SNode> mapper = new Wrappers._T<SNode>(null);
+    ListSequence.fromList(SModelOperations.nodes(SNodeOperations.getModel(thisNode), MetaAdapterFactory.getConcept(0x5cba771a86ff496bL, 0xa1216ae83a039560L, 0x25b0b61fcc326122L, "ro.barata.mps.rootLanguage.structure.DAOEntityMapper"))).visitAll(new IVisitor<SNode>() {
+      public void visit(SNode it) {
+        if (SLinkOperations.getTarget(it, MetaAdapterFactory.getReferenceLink(0x5cba771a86ff496bL, 0xa1216ae83a039560L, 0x25b0b61fcc326122L, 0x25b0b61fcc4203bcL, "conceptReference")) == SLinkOperations.getTarget(SLinkOperations.getTarget(thisNode, MetaAdapterFactory.getReferenceLink(0x5cba771a86ff496bL, 0xa1216ae83a039560L, 0x17ad7b2456d2b6a7L, 0x17ad7b2456d8d2a1L, "rerefence")), MetaAdapterFactory.getReferenceLink(0xc72da2b97cce4447L, 0x8389f407dc1158b7L, 0xf979bd086aL, 0xf98055fef0L, "target"))) {
+          mapper.value = it;
+        }
+      }
+    });
+    return mapper.value;
   }
 }

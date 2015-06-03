@@ -40,11 +40,11 @@ public class HomeServlet extends HttpServlet {
 
   private void handleRequest(HttpServletRequest request, HttpServletResponse response) throws IOException, SQLException, ClassNotFoundException {
     String action = request.getParameter("actionName");
-    System.out.println(action);
+    String requestParameterValue = request.getParameter("");
     if (action != null && !(action.equals(""))) {
 
     } else {
-      response.getWriter().println(HomeGenerator.getContent(request.getSession()));
+      response.getWriter().println(HomeGenerator.getContent(request.getSession(), requestParameterValue));
     }
   }
 

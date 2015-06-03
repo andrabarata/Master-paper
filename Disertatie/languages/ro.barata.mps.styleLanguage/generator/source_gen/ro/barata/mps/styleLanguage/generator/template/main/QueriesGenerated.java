@@ -5,6 +5,7 @@ package ro.barata.mps.styleLanguage.generator.template.main;
 import jetbrains.mps.generator.runtime.Generated;
 import jetbrains.mps.generator.template.PropertyMacroContext;
 import ro.barata.mps.styleLanguage.behavior.File_Behavior;
+import jetbrains.mps.generator.template.ReferenceMacroContext;
 import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.generator.template.SourceSubstituteMacroNodesContext;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
@@ -13,6 +14,12 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 @Generated
 public class QueriesGenerated {
   public final boolean NEEDS_OPCONTEXT = false;
+  public static Object propertyMacro_GetPropertyValue_6675303371976688481(final PropertyMacroContext _context) {
+    return "rootPath";
+  }
+  public static Object propertyMacro_GetPropertyValue_7088060346152450050(final PropertyMacroContext _context) {
+    return "FileStructureGenerator";
+  }
   public static Object propertyMacro_GetPropertyValue_4950668675312938813(final PropertyMacroContext _context) {
     return File_Behavior.call_escapeSlash_4950668675312847128(_context.getNode());
   }
@@ -22,7 +29,25 @@ public class QueriesGenerated {
   public static Object propertyMacro_GetPropertyValue_4950668675312938845(final PropertyMacroContext _context) {
     return File_Behavior.call_escapeSlash_4950668675312847128(_context.getNode());
   }
-  public static Iterable<SNode> sourceNodesQuery_4950668675312732568(final SourceSubstituteMacroNodesContext _context) {
+  public static Object referenceMacro_GetReferent_7088060346152463796(final ReferenceMacroContext _context) {
+    return "FileStructureGenerator";
+  }
+  public static Object referenceMacro_GetReferent_6675303371976501168(final ReferenceMacroContext _context) {
+    return "FileStructureGenerator";
+  }
+  public static Object referenceMacro_GetReferent_6675303371976692639(final ReferenceMacroContext _context) {
+    return "rootPath";
+  }
+  public static Object referenceMacro_GetReferent_6675303371976693473(final ReferenceMacroContext _context) {
+    return "rootPath";
+  }
+  public static Object referenceMacro_GetReferent_6675303371976690784(final ReferenceMacroContext _context) {
+    return "rootPath";
+  }
+  public static Object referenceMacro_GetReferent_6675303371976695397(final ReferenceMacroContext _context) {
+    return "rootPath";
+  }
+  public static Iterable<SNode> sourceNodesQuery_6675303371977265830(final SourceSubstituteMacroNodesContext _context) {
     return SLinkOperations.getChildren(_context.getNode(), MetaAdapterFactory.getContainmentLink(0xedb2b9cf991f4100L, 0xab3c9444c4d6e26bL, 0x44b44eee30a28800L, 0x44b44eee30a28804L, "files"));
   }
 }

@@ -21,19 +21,32 @@ public class AttributeDAO {
 
   public List<Attribute> getAllAttributes() throws SQLException {
     List<Attribute> attributes = new ArrayList<Attribute>();
-    String sql = "select * from " + "Attribute" + " table0";
-    String innerJoins = "";
+    String columns = "";
+    columns += "table0." + "id" + " \"parent" + "id" + "\",";
+    columns += "table0." + "name" + " \"parent" + "name" + "\",";
+    columns += "table0." + "value" + " \"parent" + "value" + "\",";
+    String sql = " from " + "Attribute" + " table0";
+    String leftJoins = "";
     int i = 1;
-    sql += innerJoins;
+
+    sql = "select " + columns.substring(0, columns.length() - 1) + sql + leftJoins;
     System.out.println(sql);
     ResultSet set = stmt.executeQuery(sql);
-    Attribute foundAttribute = new Attribute();
+    Attribute foundAttribute = null;
     while (set.next()) {
       foundAttribute = new Attribute();
-      foundAttribute.setId(Integer.valueOf(set.getBigDecimal("id").intValue()));
-      foundAttribute.setAttributeName(set.getString("name"));
-      foundAttribute.setAttributeValue(set.getString("value"));
-      attributes.add(foundAttribute);
+      foundAttribute.setId(Integer.valueOf(set.getBigDecimal("parent" + "id").intValue()));
+      foundAttribute.setAttributeName(set.getString("parent" + "name"));
+      foundAttribute.setAttributeValue(set.getString("parent" + "value"));
+      boolean flag = true;
+      for (Attribute entity : attributes) {
+        if (entity.getId() == foundAttribute.getId()) {
+          flag = false;
+        }
+      }
+      if (flag) {
+        attributes.add(foundAttribute);
+      }
     }
     return attributes;
   }
@@ -57,13 +70,12 @@ public class AttributeDAO {
     if (attribute.getAttributeValue() != null) {
       values += "value" + "='" + attribute.getAttributeValue() + "' and ";
     }
-    String leftJoins = "";
     int i = 1;
     if (values.length() > 6) {
       values = " where " + values.substring(0, values.length() - 5);
     }
-    sql += columns + " from " + "Attribute" + " table0" + leftJoins + values;
-    System.out.println(sql);
+    sql += columns + " from " + "Attribute" + values;
+    System.out.println("Find entities: " + sql);
     ResultSet set = stmt.executeQuery(sql);
     Attribute foundAttribute = new Attribute();
     while (set.next()) {

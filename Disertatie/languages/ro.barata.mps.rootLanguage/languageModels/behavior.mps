@@ -641,6 +641,87 @@
         </node>
       </node>
     </node>
+    <node concept="13i0hz" id="5MzsgMJHUE3" role="13h7CS">
+      <property role="TrG5h" value="getBelongingMapper" />
+      <node concept="3Tm1VV" id="5MzsgMJHUE4" role="1B3o_S" />
+      <node concept="3clFbS" id="5MzsgMJHUE5" role="3clF47">
+        <node concept="3cpWs8" id="5MzsgMJHUE6" role="3cqZAp">
+          <node concept="3cpWsn" id="5MzsgMJHUE7" role="3cpWs9">
+            <property role="TrG5h" value="mapper" />
+            <node concept="3Tqbb2" id="5MzsgMJHUE8" role="1tU5fm">
+              <ref role="ehGHo" to="h5of:2mKHxZccA4y" resolve="DAOEntityMapper" />
+            </node>
+            <node concept="10Nm6u" id="5MzsgMJHUE9" role="33vP2m" />
+          </node>
+        </node>
+        <node concept="3clFbF" id="5MzsgMJHUEa" role="3cqZAp">
+          <node concept="2OqwBi" id="5MzsgMJHUEb" role="3clFbG">
+            <node concept="2OqwBi" id="5MzsgMJHUEc" role="2Oq$k0">
+              <node concept="2OqwBi" id="5MzsgMJHUEd" role="2Oq$k0">
+                <node concept="13iPFW" id="5MzsgMJHUEe" role="2Oq$k0" />
+                <node concept="I4A8Y" id="5MzsgMJHUEf" role="2OqNvi" />
+              </node>
+              <node concept="2SmgA7" id="5MzsgMJHUEg" role="2OqNvi">
+                <ref role="2SmgA8" to="h5of:2mKHxZccA4y" resolve="DAOEntityMapper" />
+              </node>
+            </node>
+            <node concept="2es0OD" id="5MzsgMJHUEh" role="2OqNvi">
+              <node concept="1bVj0M" id="5MzsgMJHUEi" role="23t8la">
+                <node concept="3clFbS" id="5MzsgMJHUEj" role="1bW5cS">
+                  <node concept="3clFbJ" id="5MzsgMJHUEk" role="3cqZAp">
+                    <node concept="3clFbS" id="5MzsgMJHUEl" role="3clFbx">
+                      <node concept="3clFbF" id="5MzsgMJHUEm" role="3cqZAp">
+                        <node concept="37vLTI" id="5MzsgMJHUEn" role="3clFbG">
+                          <node concept="37vLTw" id="5MzsgMJHUEo" role="37vLTx">
+                            <ref role="3cqZAo" node="5MzsgMJHUEz" resolve="it" />
+                          </node>
+                          <node concept="37vLTw" id="5MzsgMJHUEp" role="37vLTJ">
+                            <ref role="3cqZAo" node="5MzsgMJHUE7" resolve="mapper" />
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                    <node concept="3clFbC" id="5MzsgMJHUEq" role="3clFbw">
+                      <node concept="2OqwBi" id="5MzsgMJHUEr" role="3uHU7w">
+                        <node concept="2OqwBi" id="5MzsgMJHUEs" role="2Oq$k0">
+                          <node concept="13iPFW" id="5MzsgMJHUEt" role="2Oq$k0" />
+                          <node concept="3TrEf2" id="5MzsgMJHVcw" role="2OqNvi">
+                            <ref role="3Tt5mk" to="h5of:1uHuMhmQdax" />
+                          </node>
+                        </node>
+                        <node concept="3TrEf2" id="5MzsgMJHUEv" role="2OqNvi">
+                          <ref role="3Tt5mk" to="tpce:fA0lvVK" />
+                        </node>
+                      </node>
+                      <node concept="2OqwBi" id="5MzsgMJHUEw" role="3uHU7B">
+                        <node concept="37vLTw" id="5MzsgMJHUEx" role="2Oq$k0">
+                          <ref role="3cqZAo" node="5MzsgMJHUEz" resolve="it" />
+                        </node>
+                        <node concept="3TrEf2" id="5MzsgMJHUEy" role="2OqNvi">
+                          <ref role="3Tt5mk" to="h5of:2mKHxZcgweW" />
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+                <node concept="Rh6nW" id="5MzsgMJHUEz" role="1bW2Oz">
+                  <property role="TrG5h" value="it" />
+                  <node concept="2jxLKc" id="5MzsgMJHUE$" role="1tU5fm" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3cpWs6" id="5MzsgMJHUE_" role="3cqZAp">
+          <node concept="37vLTw" id="5MzsgMJHUEA" role="3cqZAk">
+            <ref role="3cqZAo" node="5MzsgMJHUE7" resolve="mapper" />
+          </node>
+        </node>
+      </node>
+      <node concept="3Tqbb2" id="5MzsgMJHUEB" role="3clF45">
+        <ref role="ehGHo" to="h5of:2mKHxZccA4y" resolve="DAOEntityMapper" />
+      </node>
+    </node>
     <node concept="13hLZK" id="3qNdxgIGAeu" role="13h7CW">
       <node concept="3clFbS" id="3qNdxgIGAev" role="2VODD2" />
     </node>

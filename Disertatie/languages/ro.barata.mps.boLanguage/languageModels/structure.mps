@@ -91,9 +91,13 @@
     <property role="TrG5h" value="Shop" />
     <property role="19KtqR" value="true" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyi" id="69tQliACmT7" role="1TKVEl">
+      <property role="TrG5h" value="id" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
     <node concept="1TJgyj" id="1uHuMhn0FD7" role="1TKVEi">
       <property role="20lmBu" value="aggregation" />
-      <property role="20kJfa" value="customers" />
+      <property role="20kJfa" value="users" />
       <property role="20lbJX" value="1..n" />
       <ref role="20lvS9" node="1uHuMhn0FCN" resolve="User" />
     </node>
@@ -105,10 +109,6 @@
     </node>
     <node concept="PrWs8" id="1uHuMhn4fbT" role="PzmwI">
       <ref role="PrY4T" to="h5of:6hc$cxbYn_3" resolve="DAOObject" />
-    </node>
-    <node concept="1TJgyi" id="1uHuMhn4gcS" role="1TKVEl">
-      <property role="TrG5h" value="id" />
-      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
     </node>
     <node concept="1TJgyi" id="1uHuMhn4gei" role="1TKVEl">
       <property role="TrG5h" value="name" />
@@ -141,6 +141,12 @@
       <property role="20lbJX" value="0..n" />
       <ref role="20lvS9" node="4iOjISKrwYi" resolve="Category" />
     </node>
+    <node concept="1TJgyj" id="3MXrPpfvncY" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="discounts" />
+      <property role="20lbJX" value="0..n" />
+      <ref role="20lvS9" node="3MXrPpfvjSv" resolve="Discount" />
+    </node>
   </node>
   <node concept="1TIwiD" id="4iOjISKrwYK">
     <property role="TrG5h" value="Product" />
@@ -162,6 +168,14 @@
       <property role="TrG5h" value="productName" />
       <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
     </node>
+    <node concept="1TJgyi" id="3MXrPpfvpoJ" role="1TKVEl">
+      <property role="TrG5h" value="price" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyi" id="3MXrPpfy1Fh" role="1TKVEl">
+      <property role="TrG5h" value="description" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
   </node>
   <node concept="1TIwiD" id="4iOjISKrxer">
     <property role="TrG5h" value="Attribute" />
@@ -179,6 +193,22 @@
     </node>
     <node concept="1TJgyi" id="4iOjISKrxew" role="1TKVEl">
       <property role="TrG5h" value="attributeValue" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="3MXrPpfvjSv">
+    <property role="TrG5h" value="Discount" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyi" id="3MXrPpfvk9A" role="1TKVEl">
+      <property role="TrG5h" value="id" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyi" id="3MXrPpfvk9C" role="1TKVEl">
+      <property role="TrG5h" value="subject" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
+    <node concept="1TJgyi" id="3MXrPpfvk9F" role="1TKVEl">
+      <property role="TrG5h" value="description" />
       <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
     </node>
   </node>

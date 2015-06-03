@@ -201,7 +201,7 @@
                     <ref role="3cqZAo" node="4iOjISKFAX4" resolve="fileName" />
                   </node>
                   <node concept="liA8E" id="2qrivhElZwi" role="2OqNvi">
-                    <ref role="37wK5l" to="e2lb:~String.indexOf(java.lang.String):int" resolve="indexOf" />
+                    <ref role="37wK5l" to="e2lb:~String.lastIndexOf(java.lang.String):int" resolve="lastIndexOf" />
                     <node concept="Xl_RD" id="2qrivhElZT_" role="37wK5m">
                       <property role="Xl_RC" value="." />
                     </node>

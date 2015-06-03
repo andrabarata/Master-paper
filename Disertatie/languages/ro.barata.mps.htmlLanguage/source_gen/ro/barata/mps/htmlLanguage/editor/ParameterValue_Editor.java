@@ -35,7 +35,7 @@ public class ParameterValue_Editor extends DefaultNodeEditor {
     return editorCell;
   }
   private EditorCell createConstant_2gjdwi_a0(EditorContext editorContext, SNode node) {
-    EditorCell_Constant editorCell = new EditorCell_Constant(editorContext, node, "(");
+    EditorCell_Constant editorCell = new EditorCell_Constant(editorContext, node, "?");
     editorCell.setCellId("Constant_2gjdwi_a0");
     Style style = new StyleImpl();
     JavascriptStylesheet_StyleSheet.apply_symbol(style, editorCell);
@@ -82,7 +82,7 @@ public class ParameterValue_Editor extends DefaultNodeEditor {
       editorCell = provider.createEditorCell(editorContext);
       editorCell.setCellId("property_name");
       Style style = new StyleImpl();
-      HTMLStyleSheet_StyleSheet.apply_attribute(style, editorCell);
+      HTMLStyleSheet_StyleSheet.apply_value(style, editorCell);
       style.set(StyleAttributes.UNDERLINED, 0, true);
       editorCell.getStyle().putAll(style);
       editorCell.setSubstituteInfo(provider.createDefaultSubstituteInfo());
@@ -123,7 +123,7 @@ public class ParameterValue_Editor extends DefaultNodeEditor {
     return editorCell;
   }
   private EditorCell createConstant_2gjdwi_e0(EditorContext editorContext, SNode node) {
-    EditorCell_Constant editorCell = new EditorCell_Constant(editorContext, node, ")");
+    EditorCell_Constant editorCell = new EditorCell_Constant(editorContext, node, "");
     editorCell.setCellId("Constant_2gjdwi_e0");
     Style style = new StyleImpl();
     JavascriptStylesheet_StyleSheet.apply_symbol(style, editorCell);

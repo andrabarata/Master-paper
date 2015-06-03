@@ -22,12 +22,13 @@
         <generator generatorUID="fd895b5e-d882-4eb2-9e29-37eb52ae5682(ro.barata.mps.rootLanguage#5152062499435996722)" />
       </external-templates>
       <dependencies>
+        <dependency reexport="false">d3ddb860-292b-4451-8638-cec4e3c81b18(ro.barata.mps.javascriptLanguage)</dependency>
         <dependency reexport="false">edb2b9cf-991f-4100-ab3c-9444c4d6e26b(ro.barata.mps.styleLanguage)</dependency>
         <dependency reexport="false">6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)</dependency>
-        <dependency reexport="false">c02f1daf-1160-4f41-beef-10918af4e126(ro.barata.mps.databaseOperationsLanguage#7227310691964192368)</dependency>
         <dependency reexport="false">ceab5195-25ea-4f22-9b92-103b95ca8c0c(jetbrains.mps.lang.core)</dependency>
+        <dependency reexport="false">c02f1daf-1160-4f41-beef-10918af4e126(ro.barata.mps.databaseOperationsLanguage#7227310691964192368)</dependency>
         <dependency reexport="false">b9cb18bd-a29f-47d8-9dd0-544a91c4eef2(ro.barata.mps.htmlLanguage)</dependency>
-        <dependency reexport="false">d3ddb860-292b-4451-8638-cec4e3c81b18(ro.barata.mps.javascriptLanguage)</dependency>
+        <dependency reexport="false">6ed3b561-02e5-4ad6-9d0f-b87eb240b142(ro.barata.mps.styleLanguage#4950668675312158657)</dependency>
       </dependencies>
       <usedLanguages>
         <usedLanguage>b401a680-8325-4110-8fd3-84331ff25bef(jetbrains.mps.lang.generator)</usedLanguage>
@@ -68,6 +69,20 @@
           </greater-priority-mapping>
           <lesser-priority-mapping>
             <generator generatorUID="c02f1daf-1160-4f41-beef-10918af4e126(ro.barata.mps.databaseOperationsLanguage#7227310691964192368)" />
+            <external-mapping>
+              <all-local-mappings />
+            </external-mapping>
+          </lesser-priority-mapping>
+        </mapping-priority-rule>
+        <mapping-priority-rule kind="strictly_after">
+          <greater-priority-mapping>
+            <generator generatorUID="6e5f652e-4e8c-44e2-a605-d58b38894c56(ro.barata.mps.htmlLanguage#2539806008948651149)" />
+            <external-mapping>
+              <all-local-mappings />
+            </external-mapping>
+          </greater-priority-mapping>
+          <lesser-priority-mapping>
+            <generator generatorUID="6ed3b561-02e5-4ad6-9d0f-b87eb240b142(ro.barata.mps.styleLanguage#4950668675312158657)" />
             <external-mapping>
               <all-local-mappings />
             </external-mapping>

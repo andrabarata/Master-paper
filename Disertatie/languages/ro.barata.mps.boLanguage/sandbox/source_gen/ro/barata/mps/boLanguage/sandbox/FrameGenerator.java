@@ -9,16 +9,23 @@ import java.util.ArrayList;
 import java.sql.Connection;
 
 public class FrameGenerator {
-  public static String getContent(HttpSession session) throws ClassNotFoundException, SQLException {
+  public static String getContent(HttpSession session, String requestParameterValue) throws ClassNotFoundException, SQLException {
     String html = "<html>";
     String parameters = "";
     String href = "";
+    String value = "";
+    String expressions = "";
     html += "<head>";
     html += "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">";
+    html += "<script src=\"/" + "jquery.js" + "\"></script>";
+    html += "<script src=\"/" + "bootstrap.min.js" + "\"></script>";
     html += "<script src=\"/" + "frame.js" + "\"></script>";
     html += "<script src=\"/general.js\"></script>";
     html += "<link rel=\"stylesheet\" type=\"text/css\" href=\"/" + "main.css" + "\"/>";
-    html += "<link rel=\"stylesheet\" type=\"text/css\" href=\"/" + "pure.css" + "\"/>";
+    html += "<link rel=\"stylesheet\" type=\"text/css\" href=\"/" + "pure-min.css" + "\"/>";
+    html += "<link rel=\"stylesheet\" type=\"text/css\" href=\"/" + "bootstrap.min.css" + "\"/>";
+    html += "<link rel=\"stylesheet\" type=\"text/css\" href=\"/" + "bootstrap.combined.css" + "\"/>";
+    html += "<link rel=\"stylesheet\" type=\"text/css\" href=\"/" + "font-awesome.css" + "\"/>";
     html += "</head>";
     html += "<body>";
     html += "</body>";
@@ -29,7 +36,81 @@ public class FrameGenerator {
     String html = "";
     String parameters = "";
     String href = "";
+    String value = "";
+    String expressions = "";
     List<User> sessionUsers = new ArrayList<User>();
+    html += "<nav";
+    html += " class=\"" + "navbar navbar-default" + "\"";
+    html += ">";
+    html += "<div";
+    html += " class=\"" + "container-fluid" + "\"";
+    html += ">";
+    html += "<div";
+    html += " class=\"" + "navbar-header" + "\"";
+    html += ">";
+    html += "<button";
+    html += " class=\"" + "navbar-toggle" + "\"";
+    html += " " + "type" + "=\"" + "button" + "\"";
+    html += " " + "data-toggle" + "=\"" + "navbar navbar-inverse navbar-fixed-top" + "\"";
+    html += " " + "role" + "=\"" + "navigation" + "\"";
+    html += " " + "type" + "=\"" + "button" + "\"";
+    html += " " + "data-toggle" + "=\"" + "navbar navbar-inverse navbar-fixed-top" + "\"";
+    html += " " + "role" + "=\"" + "navigation" + "\"";
+    html += ">";
+    html += "<span";
+    html += " class=\"" + "sr-only" + "\"";
+    html += ">";
+    html += "Toggle navigation";
+    html += "</span>";
+
+    html += "<span";
+    html += " class=\"" + "icon-bar" + "\"";
+    html += ">";
+    html += "</span>";
+
+    html += "<span";
+    html += " class=\"" + "icon-bar" + "\"";
+    html += ">";
+    html += "</span>";
+
+    html += "<span";
+    html += " class=\"" + "icon-bar" + "\"";
+    html += ">";
+    html += "</span>";
+
+    html += "</button>";
+
+    html += "<a";
+    html += " href=\"" + "#" + "\"";
+    html += " class=\"" + "navbar-brand" + "\"";
+
+    html += ">" + "IT E-commerce" + "</a>";
+    html += "</div>";
+
+    html += "<div";
+    html += " id='" + "bs-example-navbar-collapse-1" + "'";
+    html += " class=\"" + "collapse navbar-collapse" + "\"";
+    html += ">";
+    html += "<ul";
+    html += " class=\"" + "nav navbar-nav" + "\"";
+
+    html += ">";
+    html += "<li";
+    html += ">";
+    html += "<a";
+    html += " href=\"" + "home" + href + "\"";
+
+    html += ">" + "Home" + "</a>";
+    html += "</li>";
+
+    html += "</ul>";
+
+    html += "<ul";
+    html += " class=\"" + "nav navbar-nav navbar-right" + "\"";
+
+    html += ">";
+    html += "<li";
+    html += ">";
 
     {
       User sessionUser = (User) session.getAttribute("user");
@@ -37,122 +118,147 @@ public class FrameGenerator {
       sessionUsers.add(sessionUser);
     }
     for (User user : sessionUsers) {
-      {
-        String value = "val";
-        if (user != null && user.getUserName() != null) {
-          html += "<label";
+      value = "val";
+      if (user != null && user.getPerson() != null) {
+        html += "<label";
 
-          html += ">" + "Welcome," + "</label>";
-          html += "<label";
+        html += ">" + "Welcome," + "</label>";
+        html += "<label";
 
-          html += ">" + user.getUserName() + "</label>";
-        } else {
-          html += "<a";
-          html += " href=\"" + "login" + href + "\"";
+        html += ">" + user.getUserName() + "</label>";
+      } else {
+        html += "<a";
+        html += " href=\"" + "login" + href + "\"";
 
-          html += ">" + "Login" + "</a>";
-        }
+        html += ">" + "Login" + "</a>";
       }
     }
+    html += "</li>";
+
+    html += "</ul>";
+
+    html += "</div>";
+
+    html += "</div>";
+
+    html += "</nav>";
+
     return html;
   }
-  public static String generateTopCategories(HttpSession session) throws ClassNotFoundException, SQLException {
+  public static String generateCategoryHeader(HttpSession session) throws ClassNotFoundException, SQLException {
     String html = "";
     String parameters = "";
     String href = "";
+    String value = "";
+    String expressions = "";
     Connection connection = DatabaseConnection.getConnection();
     CategoryDAO categoryDAO = new CategoryDAO(connection);
     Category searchCategory = new Category();
+    html += "<div";
+    html += " class=\"" + "row" + "\"";
+    html += ">";
     html += "<div";
     html += " class=\"" + "pure-menu pure-menu-horizontal" + "\"";
     html += ">";
 
     for (Category category : categoryDAO.getAllCategorys()) {
-      html += "<a";
-      html += " href=\"" + "#" + "\"";
-      html += " class=\"" + "pure-menu-heading pure-menu-link" + "\"";
-      parameters = "";
-      parameters += "'" + category.getName() + "',";
-      parameters += "'" + category.getId() + "',";
-      parameters = parameters.substring(0, parameters.length() - 1);
-      html += "onclick" + "=\"" + "navigateToCategoryPromotion" + "(" + parameters + ")\"";
+      value = "val";
+      if (category != null && category.getCategorys() != null) {
+        html += "<a";
+        html += " href=\"" + "#" + "\"";
+        html += " class=\"" + "pure-menu-heading pure-menu-link" + "\"";
+        parameters = "";
+        parameters += "'" + category.getName() + "',";
+        parameters += "'" + category.getId() + "',";
+        parameters = parameters.substring(0, parameters.length() - 1);
+        html += " " + "onclick" + "=\"" + "navigateToCategoryPromotion" + "(" + parameters + ")\"";
 
 
-      html += ">" + category.getName() + "</a>";
+        html += ">" + category.getName() + "</a>";
+      } else {
+      }
     }
+    html += "</div>";
+
     html += "</div>";
 
     return html;
   }
-  public static String generateLeftCategories(HttpSession session) throws ClassNotFoundException, SQLException {
+  public static String generateLeftBanner(HttpSession session) throws ClassNotFoundException, SQLException {
     String html = "";
     String parameters = "";
     String href = "";
+    String value = "";
+    String expressions = "";
     Connection connection = DatabaseConnection.getConnection();
     CategoryDAO categoryDAO = new CategoryDAO(connection);
     Category searchCategory = new Category();
     html += "<div";
-    html += " class=\"" + "pure-menu custom-restricted-width" + "\"";
+    html += " class=\"" + "col-md-3" + "\"";
+    html += " " + "style" + "=\"" + "margin-top:5%" + "\"";
+    html += " " + "style" + "=\"" + "margin-top:5%" + "\"";
     html += ">";
     html += "<span";
-    html += " class=\"" + "pure-menu-heading first" + "\"";
+    html += " class=\"" + "lead" + "\"";
     html += ">";
     html += "Categories";
     html += "</span>";
 
     html += "<ul";
-    html += " class=\"" + "pure-menu-list" + "\"";
+    html += " class=\"" + "dropdown-menu parent" + "\"";
+    html += " " + "role" + "=\"" + "menu" + "\"";
+    html += " " + "aria-labelledby" + "=\"" + "dropdownMenu" + "\"";
 
     html += ">";
 
     for (Category category : categoryDAO.getAllCategorys()) {
-      html += "<li";
-      html += " class=\"" + "pure-menu-item pure-menu-has-children" + "\"";
-      parameters = "";
-      parameters += "'" + category.getId() + "',";
-      parameters = parameters.substring(0, parameters.length() - 1);
-      html += "omouseover" + "=\"" + "showCategories" + "(" + parameters + ")\"";
-
-      parameters = "";
-      parameters += "'" + category.getId() + "',";
-      parameters = parameters.substring(0, parameters.length() - 1);
-      html += "onmouseout" + "=\"" + "hideCategories" + "(" + parameters + ")\"";
-
-      html += ">";
-      html += "<a";
-      html += " href=\"" + "#" + "\"";
-      html += " class=\"" + "pure-menu-link" + "\"";
-
-      html += ">" + category.getName() + "</a>";
-      html += "<ul";
-      html += " id='" + category.getId() + "'";
-      html += " class=\"" + "pure-menu-children pure-menu-allow-hover" + "\"";
-
-      html += ">";
-
-      {
-        searchCategory = new Category();
-        String value = "";
-        value = category.getId().toString();
-        searchCategory.setId(Integer.parseInt(value));
-
-      }
-      for (Category subCategories : categoryDAO.findChildCategorys(searchCategory)) {
+      value = "val";
+      if (category != null && category.getCategorys() != null) {
         html += "<li";
-        html += " class=\"" + "pure-menu-item" + "\"";
+        html += " class=\"" + "dropdown-submenu" + "\"";
         html += ">";
         html += "<a";
+        html += " " + "tabindex" + "=\"" + "-1" + "\"";
         html += " href=\"" + "#" + "\"";
-        html += " class=\"" + "pure-menu-link" + "\"";
+        parameters = "";
+        parameters += "'" + category.getId() + "',";
+        parameters += "'" + category.getName() + "',";
+        parameters = parameters.substring(0, parameters.length() - 1);
+        html += " " + "onclick" + "=\"" + "navigateToCategoryProducts" + "(" + parameters + ")\"";
 
-        html += ">" + subCategories.getName() + "</a>";
+
+        html += ">" + category.getName() + "</a>";
+        html += "<ul";
+        html += " class=\"" + "dropdown-menu" + "\"";
+
+        html += ">";
+
+        searchCategory = new Category();
+        value = category.getId().toString();
+        searchCategory.setId(Integer.parseInt(value));
+        for (Category subCategories : categoryDAO.findChildCategorys(searchCategory)) {
+          html += "<li";
+          html += ">";
+          html += "<a";
+          html += " " + "tabindex" + "=\"" + "-1" + "\"";
+          html += " href=\"" + "#" + "\"";
+          parameters = "";
+          parameters += "'" + subCategories.getId() + "',";
+          parameters += "'" + subCategories.getName() + "',";
+          parameters = parameters.substring(0, parameters.length() - 1);
+          html += " " + "onclick" + "=\"" + "navigateToCategoryProducts" + "(" + parameters + ")\"";
+
+
+          html += ">" + subCategories.getName() + "</a>";
+          html += "</li>";
+
+        }
+        html += "</ul>";
+
         html += "</li>";
 
+      } else {
       }
-      html += "</ul>";
-
-      html += "</li>";
-
     }
     html += "</ul>";
 

@@ -21,20 +21,54 @@ public class ProductDAO {
 
   public List<Product> getAllProducts() throws SQLException {
     List<Product> products = new ArrayList<Product>();
-    String sql = "select * from " + "Product" + " table0";
-    String innerJoins = "";
+    String columns = "";
+    columns += "table0." + "id" + " \"parent" + "id" + "\",";
+    columns += "table0." + "name" + " \"parent" + "name" + "\",";
+    columns += "table0." + "price" + " \"parent" + "price" + "\",";
+    columns += "table0." + "description" + " \"parent" + "description" + "\",";
+    String sql = " from " + "Product" + " table0";
+    String leftJoins = "";
     int i = 1;
-    innerJoins += " inner join " + "Attribute" + " table" + i + " on table" + i + "." + "productId" + "=table0." + "id";
+    columns += "table" + i + "." + "id" + " \"" + "Attribute" + "id" + "\",";
+    columns += "table" + i + "." + "name" + " \"" + "Attribute" + "name" + "\",";
+    columns += "table" + i + "." + "value" + " \"" + "Attribute" + "value" + "\",";
+    leftJoins += " left join " + "Attribute" + " table" + i + " on table" + i + "." + "productId" + "=table0." + "id" + " ";
     i++;
-    sql += innerJoins;
+
+    sql = "select " + columns.substring(0, columns.length() - 1) + sql + leftJoins;
     System.out.println(sql);
     ResultSet set = stmt.executeQuery(sql);
-    Product foundProduct = new Product();
+    Product foundProduct = null;
     while (set.next()) {
       foundProduct = new Product();
-      foundProduct.setId(Integer.valueOf(set.getBigDecimal("id").intValue()));
-      foundProduct.setProductName(set.getString("name"));
-      products.add(foundProduct);
+      foundProduct.setId(Integer.valueOf(set.getBigDecimal("parent" + "id").intValue()));
+      foundProduct.setProductName(set.getString("parent" + "name"));
+      foundProduct.setPrice(Integer.valueOf(set.getBigDecimal("parent" + "price").intValue()));
+      foundProduct.setDescription(set.getString("parent" + "description"));
+      {
+        Attribute child = new Attribute();
+        if (set.getBigDecimal("Attribute" + "id") != null) {
+          child.setId(Integer.valueOf(set.getBigDecimal("Attribute" + "id").intValue()));
+        }
+        if (set.getString("Attribute" + "name") != null) {
+          child.setAttributeName(set.getString("Attribute" + "name"));
+        }
+        if (set.getString("Attribute" + "value") != null) {
+          child.setAttributeValue(set.getString("Attribute" + "value"));
+        }
+        if (child.getId() != null) {
+          foundProduct.addAttribute(child);
+        }
+      }
+      boolean flag = true;
+      for (Product entity : products) {
+        if (entity.getId() == foundProduct.getId()) {
+          flag = false;
+        }
+      }
+      if (flag) {
+        products.add(foundProduct);
+      }
     }
     return products;
   }
@@ -46,6 +80,10 @@ public class ProductDAO {
     columns += "id";
     columns += ",";
     columns += "name";
+    columns += ",";
+    columns += "price";
+    columns += ",";
+    columns += "description";
     String values = "";
     if (product.getId() != null) {
       values += "id" + "='" + product.getId() + "' and ";
@@ -53,21 +91,26 @@ public class ProductDAO {
     if (product.getProductName() != null) {
       values += "name" + "='" + product.getProductName() + "' and ";
     }
-    String leftJoins = "";
+    if (product.getPrice() != null) {
+      values += "price" + "='" + product.getPrice() + "' and ";
+    }
+    if (product.getDescription() != null) {
+      values += "description" + "='" + product.getDescription() + "' and ";
+    }
     int i = 1;
-    leftJoins += " inner join " + "Attribute" + " table" + i + " on table" + i + "." + "productId" + "=table0." + "id";
-    i++;
     if (values.length() > 6) {
       values = " where " + values.substring(0, values.length() - 5);
     }
-    sql += columns + " from " + "Product" + " table0" + leftJoins + values;
-    System.out.println(sql);
+    sql += columns + " from " + "Product" + values;
+    System.out.println("Find entities: " + sql);
     ResultSet set = stmt.executeQuery(sql);
     Product foundProduct = new Product();
     while (set.next()) {
       foundProduct = new Product();
       foundProduct.setId(Integer.valueOf(set.getBigDecimal("id").intValue()));
       foundProduct.setProductName(set.getString("name"));
+      foundProduct.setPrice(Integer.valueOf(set.getBigDecimal("price").intValue()));
+      foundProduct.setDescription(set.getString("description"));
       products.add(foundProduct);
     }
     return products;
@@ -91,6 +134,12 @@ public class ProductDAO {
       }
       if (parent.getProductName() != null) {
         values += "name" + "='" + parent.getProductName() + "'and ";
+      }
+      if (parent.getPrice() != null) {
+        values += "price" + "='" + parent.getPrice() + "'and ";
+      }
+      if (parent.getDescription() != null) {
+        values += "description" + "='" + parent.getDescription() + "'and ";
       }
       sql += values.substring(0, values.length() - 4);
     }
@@ -120,6 +169,14 @@ public class ProductDAO {
       columns += "name" + ",";
       values += "'" + product.getProductName() + "',";
     }
+    if (product.getPrice() != null) {
+      columns += "price" + ",";
+      values += "'" + product.getPrice() + "',";
+    }
+    if (product.getDescription() != null) {
+      columns += "description" + ",";
+      values += "'" + product.getDescription() + "',";
+    }
     {
       Category parentCategory = product.getParentCategory();
       if (parentCategory != null) {
@@ -147,6 +204,12 @@ public class ProductDAO {
     if (newproduct.getProductName() != null) {
       values += "name" + "='" + newproduct.getProductName() + "',";
     }
+    if (newproduct.getPrice() != null) {
+      values += "price" + "='" + newproduct.getPrice() + "',";
+    }
+    if (newproduct.getDescription() != null) {
+      values += "description" + "='" + newproduct.getDescription() + "',";
+    }
     {
       List<String> columnsList = new LinkedList<String>();
       List<String> valuesList = new LinkedList<String>();
@@ -167,6 +230,12 @@ public class ProductDAO {
     }
     if (oldproduct.getProductName() != null) {
       condition += "name" + "='" + oldproduct.getProductName() + "' and ";
+    }
+    if (oldproduct.getPrice() != null) {
+      condition += "price" + "='" + oldproduct.getPrice() + "' and ";
+    }
+    if (oldproduct.getDescription() != null) {
+      condition += "description" + "='" + oldproduct.getDescription() + "' and ";
     }
     sql += values.substring(0, values.length() - 1) + condition.substring(0, condition.length() - 4);
     System.out.println(sql);
@@ -189,6 +258,14 @@ public class ProductDAO {
     }
     if (product.getProductName() != null) {
       condition += "name" + "='" + product.getProductName() + "'";
+      condition += " and ";
+    }
+    if (product.getPrice() != null) {
+      condition += "price" + "='" + product.getPrice() + "'";
+      condition += " and ";
+    }
+    if (product.getDescription() != null) {
+      condition += "description" + "='" + product.getDescription() + "'";
       condition += " and ";
     }
     sql += condition.substring(0, condition.length() - 5);

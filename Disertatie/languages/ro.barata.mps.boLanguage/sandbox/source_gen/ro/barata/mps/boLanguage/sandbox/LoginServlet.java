@@ -43,14 +43,14 @@ public class LoginServlet extends HttpServlet {
 
   private void handleRequest(HttpServletRequest request, HttpServletResponse response) throws IOException, SQLException, ClassNotFoundException {
     String action = request.getParameter("actionName");
-    System.out.println(action);
+    String requestParameterValue = request.getParameter("");
     if (action != null && !(action.equals(""))) {
       if (action.equals("jsonUser")) {
         jsonUser(request, response);
       }
 
     } else {
-      response.getWriter().println(LoginGenerator.getContent(request.getSession()));
+      response.getWriter().println(LoginGenerator.getContent(request.getSession(), requestParameterValue));
     }
   }
 

@@ -6,43 +6,53 @@ import javax.servlet.http.HttpSession;
 import java.sql.SQLException;
 
 public class HomeGenerator {
-  public static String getContent(HttpSession session) throws ClassNotFoundException, SQLException {
+  public static String getContent(HttpSession session, String requestParameterValue) throws ClassNotFoundException, SQLException {
     String html = "<html>";
     String parameters = "";
     String href = "";
+    String value = "";
+    String expressions = "";
     html += "<head>";
     html += "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">";
+    html += "<script src=\"/" + "jquery.js" + "\"></script>";
+    html += "<script src=\"/" + "bootstrap.min.js" + "\"></script>";
     html += "<script src=\"/" + "frame.js" + "\"></script>";
     html += "<script src=\"/general.js\"></script>";
     html += "<link rel=\"stylesheet\" type=\"text/css\" href=\"/" + "main.css" + "\"/>";
-    html += "<link rel=\"stylesheet\" type=\"text/css\" href=\"/" + "pure.css" + "\"/>";
+    html += "<link rel=\"stylesheet\" type=\"text/css\" href=\"/" + "pure-min.css" + "\"/>";
+    html += "<link rel=\"stylesheet\" type=\"text/css\" href=\"/" + "bootstrap.min.css" + "\"/>";
+    html += "<link rel=\"stylesheet\" type=\"text/css\" href=\"/" + "bootstrap.combined.css" + "\"/>";
+    html += "<link rel=\"stylesheet\" type=\"text/css\" href=\"/" + "font-awesome.css" + "\"/>";
     html += "</head>";
     html += "<body>";
-    html += "<div";
-    html += " class=\"" + "pure-g" + "\"";
-    html += ">";
-    html += "<div";
-    html += " class=\"" + "pure-u-1" + "\"";
-    html += ">";
     html += FrameGenerator.generateHeader(session);
+    html += "<div";
+    html += " class=\"" + "container" + "\"";
+    html += ">";
+    html += "<div";
+    html += " class=\"" + "row" + "\"";
+    html += ">";
+    html += FrameGenerator.generateLeftBanner(session);
+    html += "<div";
+    html += " class=\"" + "col-md-9" + "\"";
+    html += ">";
+    html += FrameGenerator.generateCategoryHeader(session);
     html += "</div>";
 
-    html += "<div";
-    html += " class=\"" + "pure-u-1-5" + "\"";
-    html += ">";
-    html += FrameGenerator.generateLeftCategories(session);
-    html += "</div>";
-
-    html += "<div";
-    html += " class=\"" + "pure-u-4-5" + "\"";
-    html += ">";
-    html += FrameGenerator.generateTopCategories(session);
     html += "</div>";
 
     html += "</div>";
 
     html += "</body>";
     html += "</html>";
+    return html;
+  }
+  public static String generateFooter(HttpSession session) throws ClassNotFoundException, SQLException {
+    String html = "";
+    String parameters = "";
+    String href = "";
+    String value = "";
+    String expressions = "";
     return html;
   }
 
