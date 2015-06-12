@@ -54,3 +54,17 @@ height:120px;
 text-align:center;
 border-bottom:1px solid rgb(199, 199, 199);
 }
+.attribute-title{
+font-weight:600;
+white-space:nowrap;
+}
+.section{
+background:url("logo.png") no-repeat scroll 0px 9px transparent;
+background-size:20px 20px;
+padding-left:25px;
+}
+.content{
+-webkit-column-count:2;
+-moz-column-count:2;
+column-count:2;
+}

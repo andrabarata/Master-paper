@@ -33,6 +33,7 @@ public class HTTPServer {
     context.setHandler(handler);
 
     RewriteHandler rwHandler = new RewriteHandler();
+    // Iterates through all HTMLPage models 
     context.addServlet(new ServletHolder(new LoginServlet()), "/" + "login" + "/*");
     context.addServlet(new ServletHolder(new HomeServlet()), "/" + "home" + "/*");
     {
@@ -45,6 +46,11 @@ public class HTTPServer {
       rwHandler.addRule(rule);
     }
     context.addServlet(new ServletHolder(new ProductsServlet()), "/" + "products" + "/*");
+    context.addServlet(new ServletHolder(new ProductServlet()), "/" + "product" + "/*");
+    context.addServlet(new ServletHolder(new AdmincategoryServlet()), "/" + "admincategory" + "/*");
+    context.addServlet(new ServletHolder(new OrdersServlet()), "/" + "orders" + "/*");
+    context.addServlet(new ServletHolder(new OrderServlet()), "/" + "order" + "/*");
+    context.addServlet(new ServletHolder(new AdminSubcategoryServlet()), "/" + "adminSubcategory" + "/*");
 
     Handler[] handlers = new Handler[]{rwHandler, context};
     HandlerList list = new HandlerList();

@@ -7,7 +7,7 @@ public class Attribute {
   private Integer id;
   private String attributeName;
   private String attributeValue;
-  private Product parentProduct;
+  private AttributeCategory parentAttributeCategory;
   public void setId(Integer attribute) {
     this.id = attribute;
   }
@@ -26,11 +26,11 @@ public class Attribute {
   public String getAttributeValue() {
     return this.attributeValue;
   }
-  public void setParentProduct(Product entity) {
-    this.parentProduct = entity;
+  public void setParentAttributeCategory(AttributeCategory entity) {
+    this.parentAttributeCategory = entity;
   }
-  public Product getParentProduct() {
-    return this.parentProduct;
+  public AttributeCategory getParentAttributeCategory() {
+    return this.parentAttributeCategory;
   }
   public Attribute() {
   }

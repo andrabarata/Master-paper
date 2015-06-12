@@ -148,6 +148,12 @@
       <concept id="1178549954367" name="jetbrains.mps.baseLanguage.structure.IVisible" flags="ng" index="1B3ioH">
         <child id="1178549979242" name="visibility" index="1B3o_S" />
       </concept>
+      <concept id="6329021646629104957" name="jetbrains.mps.baseLanguage.structure.TextCommentPart" flags="nn" index="3SKdUq">
+        <property id="6329021646629104958" name="text" index="3SKdUp" />
+      </concept>
+      <concept id="6329021646629104954" name="jetbrains.mps.baseLanguage.structure.SingleLineComment" flags="nn" index="3SKdUt">
+        <child id="6329021646629175155" name="commentPart" index="3SKWNk" />
+      </concept>
       <concept id="1146644602865" name="jetbrains.mps.baseLanguage.structure.PublicVisibility" flags="nn" index="3Tm1VV" />
       <concept id="1116615150612" name="jetbrains.mps.baseLanguage.structure.ClassifierClassExpression" flags="nn" index="3VsKOn">
         <reference id="1116615189566" name="classifier" index="3VsUkX" />
@@ -246,6 +252,11 @@
       <property role="od$2w" value="false" />
       <property role="2aFKle" value="false" />
       <node concept="3clFbS" id="69tQliACPsw" role="3clF47">
+        <node concept="3SKdUt" id="7Q78HI5LfmL" role="3cqZAp">
+          <node concept="3SKdUq" id="7Q78HI5LfBN" role="3SKWNk">
+            <property role="3SKdUp" value="Determine the application's location on disk" />
+          </node>
+        </node>
         <node concept="3cpWs8" id="69tQliACPsx" role="3cqZAp">
           <node concept="3cpWsn" id="69tQliACPsy" role="3cpWs9">
             <property role="TrG5h" value="rootPath" />
@@ -403,6 +414,11 @@
             </node>
           </node>
         </node>
+        <node concept="3SKdUt" id="7Q78HI5Lg0_" role="3cqZAp">
+          <node concept="3SKdUq" id="7Q78HI5LghD" role="3SKWNk">
+            <property role="3SKdUp" value="Include the CreateFile template" />
+          </node>
+        </node>
         <node concept="3clFbF" id="69tQliACPsZ" role="3cqZAp">
           <node concept="2OqwBi" id="69tQliACPt0" role="3clFbG">
             <node concept="10M0yZ" id="69tQliACPt1" role="2Oq$k0">
@@ -550,7 +566,6 @@
                 <node concept="10Nm6u" id="4iOjISKFAXi" role="33vP2m" />
               </node>
             </node>
-            <node concept="3clFbH" id="4iOjISKFAXj" role="3cqZAp" />
             <node concept="2GUZhq" id="4iOjISKFAXk" role="3cqZAp">
               <node concept="3clFbS" id="4iOjISKFAXl" role="2GV8ay">
                 <node concept="3cpWs8" id="4iOjISKG925" role="3cqZAp">
@@ -612,20 +627,6 @@
                     </node>
                     <node concept="37vLTw" id="4iOjISKGaSv" role="37vLTJ">
                       <ref role="3cqZAo" node="4iOjISKG926" resolve="absPath" />
-                    </node>
-                  </node>
-                </node>
-                <node concept="3clFbF" id="4iOjISKFE5U" role="3cqZAp">
-                  <node concept="2OqwBi" id="4iOjISKFE5R" role="3clFbG">
-                    <node concept="10M0yZ" id="4iOjISKFE5S" role="2Oq$k0">
-                      <ref role="1PxDUh" to="e2lb:~System" resolve="System" />
-                      <ref role="3cqZAo" to="e2lb:~System.out" resolve="out" />
-                    </node>
-                    <node concept="liA8E" id="4iOjISKFE5T" role="2OqNvi">
-                      <ref role="37wK5l" to="fxg7:~PrintStream.println(java.lang.String):void" resolve="println" />
-                      <node concept="37vLTw" id="4iOjISKGcKO" role="37wK5m">
-                        <ref role="3cqZAo" node="4iOjISKG926" resolve="absPath" />
-                      </node>
                     </node>
                   </node>
                 </node>

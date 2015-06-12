@@ -1306,7 +1306,7 @@
   </node>
   <node concept="WtQ9Q" id="3hPr9QvraeI">
     <property role="3GE5qa" value="javascript.commands" />
-    <ref role="WuzLi" to="jel9:2FtF2DJZtPZ" resolve="IfCommand" />
+    <ref role="WuzLi" to="jel9:2FtF2DJZtPZ" resolve="JavascriptIfCommand" />
     <node concept="11bSqf" id="3hPr9QvraeJ" role="11c4hB">
       <node concept="3clFbS" id="3hPr9QvraeK" role="2VODD2">
         <node concept="lc7rE" id="3hPr9QvraQX" role="3cqZAp">

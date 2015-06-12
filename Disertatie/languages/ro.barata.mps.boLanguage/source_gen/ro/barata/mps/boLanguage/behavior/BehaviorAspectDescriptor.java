@@ -11,23 +11,31 @@ public class BehaviorAspectDescriptor implements jetbrains.mps.smodel.runtime.Be
   }
   public BehaviorDescriptor getDescriptor(String fqName) {
     switch (Arrays.binarySearch(stringSwitchCases_846f5o_a0a0b, fqName)) {
-      case 3:
+      case 7:
         return new Person_BehaviorDescriptor();
-      case 6:
+      case 10:
         return new User_BehaviorDescriptor();
-      case 5:
+      case 9:
         return new Shop_BehaviorDescriptor();
-      case 1:
-        return new Category_BehaviorDescriptor();
       case 4:
+        return new Category_BehaviorDescriptor();
+      case 8:
         return new Product_BehaviorDescriptor();
-      case 0:
+      case 1:
         return new Attribute_BehaviorDescriptor();
-      case 2:
+      case 5:
         return new Discount_BehaviorDescriptor();
+      case 2:
+        return new AttributeCategory_BehaviorDescriptor();
+      case 3:
+        return new Cart_BehaviorDescriptor();
+      case 0:
+        return new Address_BehaviorDescriptor();
+      case 6:
+        return new Order_BehaviorDescriptor();
       default:
         return BehaviorAspectInterpreted.getInstance().getDescriptor(fqName);
     }
   }
-  private static String[] stringSwitchCases_846f5o_a0a0b = new String[]{"ro.barata.mps.boLanguage.structure.Attribute", "ro.barata.mps.boLanguage.structure.Category", "ro.barata.mps.boLanguage.structure.Discount", "ro.barata.mps.boLanguage.structure.Person", "ro.barata.mps.boLanguage.structure.Product", "ro.barata.mps.boLanguage.structure.Shop", "ro.barata.mps.boLanguage.structure.User"};
+  private static String[] stringSwitchCases_846f5o_a0a0b = new String[]{"ro.barata.mps.boLanguage.structure.Address", "ro.barata.mps.boLanguage.structure.Attribute", "ro.barata.mps.boLanguage.structure.AttributeCategory", "ro.barata.mps.boLanguage.structure.Cart", "ro.barata.mps.boLanguage.structure.Category", "ro.barata.mps.boLanguage.structure.Discount", "ro.barata.mps.boLanguage.structure.Order", "ro.barata.mps.boLanguage.structure.Person", "ro.barata.mps.boLanguage.structure.Product", "ro.barata.mps.boLanguage.structure.Shop", "ro.barata.mps.boLanguage.structure.User"};
 }

@@ -15,9 +15,11 @@ public class SchemaGenerator {
     primaryKey = "primary key(";
     primaryKey += "id";
     primaryKey += ")";
-    sql = "create table " + "Shop" + "(";
+    sql = "create table " + "categories" + "(";
     sql += "id" + " " + "integer" + ",";
     sql += "name" + " " + "varchar(256)" + ",";
+    sql += "categoryId" + " " + "integer" + ",";
+    sql += "categories" + " " + "integer" + ",";
     if (primaryKey.length() == 0) {
       sql = sql.substring(0, sql.length() - 1);
     }
@@ -30,29 +32,34 @@ public class SchemaGenerator {
     primaryKey = "primary key(";
     primaryKey += "id";
     primaryKey += ")";
-    sql = "create table " + "Category" + "(";
+    sql = "create table " + "products" + "(";
     sql += "id" + " " + "integer" + ",";
     sql += "name" + " " + "varchar(256)" + ",";
-    sql += "shopId" + " " + "integer" + ",";
-    sql += "subCategoryId" + " " + "integer" + ",";
-    if (primaryKey.length() == 0) {
-      sql = sql.substring(0, sql.length() - 1);
-    }
-    sql += primaryKey;
-    sql += ")";
-    System.out.println(sql);
-    stmt.execute(sql);
-
-    primaryKey = "";
-    primaryKey = "primary key(";
-    primaryKey += "id";
-    primaryKey += ")";
-    sql = "create table " + "Product" + "(";
-    sql += "id" + " " + "integer" + ",";
-    sql += "name" + " " + "varchar(256)" + ",";
+    sql += "description" + " " + "varchar(256)" + ",";
+    sql += "units" + " " + "integer" + ",";
     sql += "price" + " " + "integer" + ",";
+    sql += "categoryId" + " " + "integer" + ",";
+    sql += "orderI" + " " + "integer" + ",";
+    sql += "products" + " " + "integer" + ",";
+    if (primaryKey.length() == 0) {
+      sql = sql.substring(0, sql.length() - 1);
+    }
+    sql += primaryKey;
+    sql += ")";
+    System.out.println(sql);
+    stmt.execute(sql);
+
+    primaryKey = "";
+    primaryKey = "primary key(";
+    primaryKey += "id";
+    primaryKey += ")";
+    sql = "create table " + "discounts" + "(";
+    sql += "id" + " " + "integer" + ",";
+    sql += "subject" + " " + "varchar(256)" + ",";
     sql += "description" + " " + "varchar(256)" + ",";
     sql += "categoryId" + " " + "integer" + ",";
+    sql += "orderId" + " " + "integer" + ",";
+    sql += "discounts" + " " + "integer" + ",";
     if (primaryKey.length() == 0) {
       sql = sql.substring(0, sql.length() - 1);
     }
@@ -65,10 +72,9 @@ public class SchemaGenerator {
     primaryKey = "primary key(";
     primaryKey += "id";
     primaryKey += ")";
-    sql = "create table " + "Attribute" + "(";
+    sql = "create table " + "attributeCategories" + "(";
     sql += "id" + " " + "integer" + ",";
     sql += "name" + " " + "varchar(256)" + ",";
-    sql += "value" + " " + "varchar(256)" + ",";
     sql += "productId" + " " + "integer" + ",";
     if (primaryKey.length() == 0) {
       sql = sql.substring(0, sql.length() - 1);
@@ -82,13 +88,11 @@ public class SchemaGenerator {
     primaryKey = "primary key(";
     primaryKey += "id";
     primaryKey += ")";
-    sql = "create table " + "UserTable" + "(";
+    sql = "create table " + "attributes" + "(";
     sql += "id" + " " + "integer" + ",";
-    sql += "priviledge" + " " + "varchar(256)" + ",";
-    sql += "userName" + " " + "varchar(256)" + ",";
-    sql += "password" + " " + "varchar(256)" + ",";
-    sql += "personId" + " " + "integer" + ",";
-    sql += "shopId" + " " + "integer" + ",";
+    sql += "name" + " " + "varchar(256)" + ",";
+    sql += "value" + " " + "varchar(256)" + ",";
+    sql += "attributeCategoryId" + " " + "integer" + ",";
     if (primaryKey.length() == 0) {
       sql = sql.substring(0, sql.length() - 1);
     }
@@ -101,10 +105,88 @@ public class SchemaGenerator {
     primaryKey = "primary key(";
     primaryKey += "id";
     primaryKey += ")";
-    sql = "create table " + "PersonTable" + "(";
+    sql = "create table " + "users" + "(";
+    sql += "id" + " " + "integer" + ",";
+    sql += "name" + " " + "varchar(256)" + ",";
+    sql += "password" + " " + "varchar(256)" + ",";
+    sql += "priviledge" + " " + "varchar(256)" + ",";
+    sql += "userId" + " " + "integer" + ",";
+    sql += "users" + " " + "integer" + ",";
+    if (primaryKey.length() == 0) {
+      sql = sql.substring(0, sql.length() - 1);
+    }
+    sql += primaryKey;
+    sql += ")";
+    System.out.println(sql);
+    stmt.execute(sql);
+
+    primaryKey = "";
+    primaryKey = "primary key(";
+    primaryKey += "id";
+    primaryKey += ")";
+    sql = "create table " + "persons" + "(";
     sql += "id" + " " + "integer" + ",";
     sql += "firstName" + " " + "varchar(256)" + ",";
     sql += "lastName" + " " + "varchar(256)" + ",";
+    sql += "personId" + " " + "integer" + ",";
+    if (primaryKey.length() == 0) {
+      sql = sql.substring(0, sql.length() - 1);
+    }
+    sql += primaryKey;
+    sql += ")";
+    System.out.println(sql);
+    stmt.execute(sql);
+
+    primaryKey = "";
+    primaryKey = "primary key(";
+    primaryKey += "id";
+    primaryKey += ")";
+    sql = "create table " + "adresses" + "(";
+    sql += "id" + " " + "integer" + ",";
+    sql += "line1" + " " + "varchar(256)" + ",";
+    sql += "line2" + " " + "varchar(256)" + ",";
+    sql += "postcode" + " " + "integer" + ",";
+    sql += "state" + " " + "varchar(256)" + ",";
+    sql += "country" + " " + "varchar(256)" + ",";
+    sql += "city" + " " + "varchar(256)" + ",";
+    if (primaryKey.length() == 0) {
+      sql = sql.substring(0, sql.length() - 1);
+    }
+    sql += primaryKey;
+    sql += ")";
+    System.out.println(sql);
+    stmt.execute(sql);
+
+    primaryKey = "";
+    primaryKey = "primary key(";
+    primaryKey += "id";
+    primaryKey += ")";
+    sql = "create table " + "OrderTable" + "(";
+    sql += "id" + " " + "integer" + ",";
+    sql += "status" + " " + "varchar(256)" + ",";
+    sql += "creationDate" + " " + "integer" + ",";
+    if (primaryKey.length() == 0) {
+      sql = sql.substring(0, sql.length() - 1);
+    }
+    sql += primaryKey;
+    sql += ")";
+    System.out.println(sql);
+    stmt.execute(sql);
+
+    primaryKey = "";
+    sql = "create table " + "Cart" + "(";
+    if (primaryKey.length() == 0) {
+      sql = sql.substring(0, sql.length() - 1);
+    }
+    sql += primaryKey;
+    sql += ")";
+    System.out.println(sql);
+    stmt.execute(sql);
+
+    primaryKey = "";
+    sql = "create table " + "Shop" + "(";
+    sql += "id" + " " + "integer" + ",";
+    sql += "name" + " " + "varchar(256)" + ",";
     if (primaryKey.length() == 0) {
       sql = sql.substring(0, sql.length() - 1);
     }
@@ -117,55 +199,104 @@ public class SchemaGenerator {
   private static void constrainTables(Statement stmt) throws SQLException, ClassNotFoundException {
     String sql = "";
 
-    sql = "alter table " + "Category" + " add constraint fk_" + "Category" + "_" + "shopId";
-    sql += " foreign key (" + "shopId" + ") references " + "Shop" + "(" + "id" + ")";
+    sql = "alter table " + "categories" + " add constraint fk_" + "categories" + "_" + "categoryId";
+    sql += " foreign key (" + "categoryId" + ") references " + "categories" + "(" + "id" + ")";
     System.out.println(sql);
     stmt.execute(sql);
 
-    sql = "alter table " + "Category" + " add constraint fk_" + "Category" + "_" + "subCategoryId";
-    sql += " foreign key (" + "subCategoryId" + ") references " + "Category" + "(" + "id" + ")";
+    sql = "alter table " + "categories" + " add constraint fk_" + "categories" + "_" + "categories";
+    sql += " foreign key (" + "categories" + ") references " + "Shop" + "(" + "id" + ")";
     System.out.println(sql);
     stmt.execute(sql);
 
-    sql = "alter table " + "Product" + " add constraint fk_" + "Product" + "_" + "categoryId";
-    sql += " foreign key (" + "categoryId" + ") references " + "Category" + "(" + "id" + ")";
+    sql = "alter table " + "products" + " add constraint fk_" + "products" + "_" + "categoryId";
+    sql += " foreign key (" + "categoryId" + ") references " + "categories" + "(" + "id" + ")";
     System.out.println(sql);
     stmt.execute(sql);
 
-    sql = "alter table " + "Attribute" + " add constraint fk_" + "Attribute" + "_" + "productId";
-    sql += " foreign key (" + "productId" + ") references " + "Product" + "(" + "id" + ")";
+    sql = "alter table " + "products" + " add constraint fk_" + "products" + "_" + "orderI";
+    sql += " foreign key (" + "orderI" + ") references " + "OrderTable" + "(" + "id" + ")";
     System.out.println(sql);
     stmt.execute(sql);
 
-    sql = "alter table " + "UserTable" + " add constraint fk_" + "UserTable" + "_" + "personId";
-    sql += " foreign key (" + "personId" + ") references " + "PersonTable" + "(" + "id" + ")";
-    System.out.println(sql);
-    stmt.execute(sql);
-    sql = "alter table " + "UserTable" + " add constraint fk_" + "UserTable" + "_" + "shopId";
-    sql += " foreign key (" + "shopId" + ") references " + "Shop" + "(" + "id" + ")";
+    sql = "alter table " + "products" + " add constraint fk_" + "products" + "_" + "products";
+    sql += " foreign key (" + "products" + ") references " + "Cart" + "(" + "id" + ")";
     System.out.println(sql);
     stmt.execute(sql);
 
+    sql = "alter table " + "discounts" + " add constraint fk_" + "discounts" + "_" + "categoryId";
+    sql += " foreign key (" + "categoryId" + ") references " + "categories" + "(" + "id" + ")";
+    System.out.println(sql);
+    stmt.execute(sql);
+
+    sql = "alter table " + "discounts" + " add constraint fk_" + "discounts" + "_" + "orderId";
+    sql += " foreign key (" + "orderId" + ") references " + "OrderTable" + "(" + "id" + ")";
+    System.out.println(sql);
+    stmt.execute(sql);
+
+    sql = "alter table " + "discounts" + " add constraint fk_" + "discounts" + "_" + "discounts";
+    sql += " foreign key (" + "discounts" + ") references " + "Cart" + "(" + "id" + ")";
+    System.out.println(sql);
+    stmt.execute(sql);
+
+    sql = "alter table " + "attributeCategories" + " add constraint fk_" + "attributeCategories" + "_" + "productId";
+    sql += " foreign key (" + "productId" + ") references " + "products" + "(" + "id" + ")";
+    System.out.println(sql);
+    stmt.execute(sql);
+
+    sql = "alter table " + "attributes" + " add constraint fk_" + "attributes" + "_" + "attributeCategoryId";
+    sql += " foreign key (" + "attributeCategoryId" + ") references " + "attributeCategories" + "(" + "id" + ")";
+    System.out.println(sql);
+    stmt.execute(sql);
+
+    sql = "alter table " + "users" + " add constraint fk_" + "users" + "_" + "userId";
+    sql += " foreign key (" + "userId" + ") references " + "persons" + "(" + "id" + ")";
+    System.out.println(sql);
+    stmt.execute(sql);
+    sql = "alter table " + "users" + " add constraint fk_" + "users" + "_" + "users";
+    sql += " foreign key (" + "users" + ") references " + "Shop" + "(" + "id" + ")";
+    System.out.println(sql);
+    stmt.execute(sql);
+
+    sql = "alter table " + "persons" + " add constraint fk_" + "persons" + "_" + "personId";
+    sql += " foreign key (" + "personId" + ") references " + "adresses" + "(" + "id" + ")";
+    System.out.println(sql);
+    stmt.execute(sql);
   }
 
   private static void dropTables(Statement stmt) throws ClassNotFoundException, SQLException {
     String sql = "";
+    sql = "drop table " + "categories" + " cascade constraints";
+    stmt.executeUpdate(sql);
+
+    sql = "drop table " + "products" + " cascade constraints";
+    stmt.executeUpdate(sql);
+
+    sql = "drop table " + "discounts" + " cascade constraints";
+    stmt.executeUpdate(sql);
+
+    sql = "drop table " + "attributeCategories" + " cascade constraints";
+    stmt.executeUpdate(sql);
+
+    sql = "drop table " + "attributes" + " cascade constraints";
+    stmt.executeUpdate(sql);
+
+    sql = "drop table " + "users" + " cascade constraints";
+    stmt.executeUpdate(sql);
+
+    sql = "drop table " + "persons" + " cascade constraints";
+    stmt.executeUpdate(sql);
+
+    sql = "drop table " + "adresses" + " cascade constraints";
+    stmt.executeUpdate(sql);
+
+    sql = "drop table " + "OrderTable" + " cascade constraints";
+    stmt.executeUpdate(sql);
+
+    sql = "drop table " + "Cart" + " cascade constraints";
+    stmt.executeUpdate(sql);
+
     sql = "drop table " + "Shop" + " cascade constraints";
-    stmt.executeUpdate(sql);
-
-    sql = "drop table " + "Category" + " cascade constraints";
-    stmt.executeUpdate(sql);
-
-    sql = "drop table " + "Product" + " cascade constraints";
-    stmt.executeUpdate(sql);
-
-    sql = "drop table " + "Attribute" + " cascade constraints";
-    stmt.executeUpdate(sql);
-
-    sql = "drop table " + "UserTable" + " cascade constraints";
-    stmt.executeUpdate(sql);
-
-    sql = "drop table " + "PersonTable" + " cascade constraints";
     stmt.executeUpdate(sql);
 
   }

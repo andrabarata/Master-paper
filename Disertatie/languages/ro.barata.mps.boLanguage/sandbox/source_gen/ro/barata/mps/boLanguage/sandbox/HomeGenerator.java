@@ -4,6 +4,8 @@ package ro.barata.mps.boLanguage.sandbox;
 
 import javax.servlet.http.HttpSession;
 import java.sql.SQLException;
+import java.sql.Connection;
+import java.util.List;
 
 public class HomeGenerator {
   public static String getContent(HttpSession session, String requestParameterValue) throws ClassNotFoundException, SQLException {
@@ -16,7 +18,7 @@ public class HomeGenerator {
     html += "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">";
     html += "<script src=\"/" + "jquery.js" + "\"></script>";
     html += "<script src=\"/" + "bootstrap.min.js" + "\"></script>";
-    html += "<script src=\"/" + "frame.js" + "\"></script>";
+    html += "<script src=\"/" + "clientframe.js" + "\"></script>";
     html += "<script src=\"/general.js\"></script>";
     html += "<link rel=\"stylesheet\" type=\"text/css\" href=\"/" + "main.css" + "\"/>";
     html += "<link rel=\"stylesheet\" type=\"text/css\" href=\"/" + "pure-min.css" + "\"/>";
@@ -25,18 +27,38 @@ public class HomeGenerator {
     html += "<link rel=\"stylesheet\" type=\"text/css\" href=\"/" + "font-awesome.css" + "\"/>";
     html += "</head>";
     html += "<body>";
-    html += FrameGenerator.generateHeader(session);
+    Connection connection = DatabaseConnection.getConnection();
+    CategoryDAO categoryDAO = new CategoryDAO(connection);
+    Discount discounts = new Discount();
+    html += ClientframeGenerator.generateHeader(session);
     html += "<div";
     html += " class=\"" + "container" + "\"";
     html += ">";
     html += "<div";
     html += " class=\"" + "row" + "\"";
     html += ">";
-    html += FrameGenerator.generateLeftBanner(session);
+    html += ClientframeGenerator.generateLeftBanner(session);
     html += "<div";
     html += " class=\"" + "col-md-9" + "\"";
     html += ">";
-    html += FrameGenerator.generateCategoryHeader(session);
+    html += ClientframeGenerator.generateCategoryHeader(session);
+    html += "<div";
+    html += " class=\"" + "carousel-inner" + "\"";
+    html += ">";
+    {
+
+      List<Discount> loop_a1b0b0 = categoryDAO.findChildDiscounts(null);
+      for (int counter_a1b0b0 = 0; counter_a1b0b0 < loop_a1b0b0.size(); counter_a1b0b0++) {
+        discounts = loop_a1b0b0.get(counter_a1b0b0);
+        html += "<div";
+        html += " class=\"" + "item" + "\"";
+        html += ">";
+        html += "</div>";
+
+      }
+    }
+    html += "</div>";
+
     html += "</div>";
 
     html += "</div>";

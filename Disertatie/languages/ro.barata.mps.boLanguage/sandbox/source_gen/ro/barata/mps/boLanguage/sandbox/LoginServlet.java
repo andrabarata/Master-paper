@@ -32,7 +32,6 @@ public class LoginServlet extends HttpServlet {
       ex.printStackTrace();
     }
   }
-
   protected void doPost(HttpServletRequest request, HttpServletResponse response) {
     try {
       handleRequest(request, response);
@@ -53,16 +52,12 @@ public class LoginServlet extends HttpServlet {
       response.getWriter().println(LoginGenerator.getContent(request.getSession(), requestParameterValue));
     }
   }
-
   private void jsonUser(HttpServletRequest request, HttpServletResponse response) throws ClassNotFoundException, SQLException, IOException {
     User searchUser = new User();
+    // Initializes a new entity instance with values received from the client (browser) 
     if (request.getParameter("userId") != null && !(request.getParameter("userId").equals(""))) {
       String value = request.getParameter("userId");
       searchUser.setUserId(Integer.parseInt(value));
-    }
-    if (request.getParameter("priviledge") != null && !(request.getParameter("priviledge").equals(""))) {
-      String value = request.getParameter("priviledge");
-      searchUser.setPriviledge(value);
     }
     if (request.getParameter("userName") != null && !(request.getParameter("userName").equals(""))) {
       String value = request.getParameter("userName");
@@ -72,14 +67,19 @@ public class LoginServlet extends HttpServlet {
       String value = request.getParameter("password");
       searchUser.setPassword(value);
     }
-
+    if (request.getParameter("priviledge") != null && !(request.getParameter("priviledge").equals(""))) {
+      String value = request.getParameter("priviledge");
+      searchUser.setPriviledge(value);
+    }
     UserDAO userDAO = new UserDAO(connection);
+    // Returns the entity that matched the pattern from the DB 
     List<User> userList = userDAO.findUsers(searchUser);
     User user = ((userList.size() > 0) ? userList.get(0) : new User());
     {
       HttpSession session = request.getSession();
       session.setAttribute("user", user);
     }
+    // Serializes the entity in JSON format, and sends it back to the client 
     JSONSerializer serializer = new JSONSerializer();
     String json = serializer.serialize(user);
     response.getWriter().println(json);

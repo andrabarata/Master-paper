@@ -5,6 +5,7 @@ package ro.barata.mps.boLanguage.sandbox;
 import javax.servlet.http.HttpSession;
 import java.sql.SQLException;
 import java.sql.Connection;
+import java.util.List;
 
 public class ProductsGenerator {
   public static String getContent(HttpSession session, String requestParameterValue) throws ClassNotFoundException, SQLException {
@@ -17,7 +18,7 @@ public class ProductsGenerator {
     html += "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">";
     html += "<script src=\"/" + "jquery.js" + "\"></script>";
     html += "<script src=\"/" + "bootstrap.min.js" + "\"></script>";
-    html += "<script src=\"/" + "frame.js" + "\"></script>";
+    html += "<script src=\"/" + "clientframe.js" + "\"></script>";
     html += "<script src=\"/" + "products.js" + "\"></script>";
     html += "<script src=\"/general.js\"></script>";
     html += "<link rel=\"stylesheet\" type=\"text/css\" href=\"/" + "main.css" + "\"/>";
@@ -30,97 +31,114 @@ public class ProductsGenerator {
     Connection connection = DatabaseConnection.getConnection();
     CategoryDAO categoryDAO = new CategoryDAO(connection);
     Category searchCategory = new Category();
-    html += FrameGenerator.generateHeader(session);
+    Category category = new Category();
+    Product products = new Product();
+    html += ClientframeGenerator.generateHeader(session);
     html += "<div";
     html += " class=\"" + "container" + "\"";
     html += ">";
     html += "<div";
     html += " class=\"" + "row" + "\"";
     html += ">";
-    html += FrameGenerator.generateLeftBanner(session);
+    html += ClientframeGenerator.generateLeftBanner(session);
     html += "<div";
     html += " class=\"" + "col-md-9" + "\"";
     html += ">";
-    html += FrameGenerator.generateCategoryHeader(session);
+    html += ClientframeGenerator.generateCategoryHeader(session);
     html += "<div";
     html += " class=\"" + "row" + "\"";
     html += ">";
     html += "<div";
     html += ">";
+    {
 
-    searchCategory = new Category();
-    value = requestParameterValue;
-    searchCategory.setId(Integer.parseInt(value));
-    for (Category category : categoryDAO.findCategorys(searchCategory)) {
-      html += "<h3";
-      html += " " + "style" + "=\"" + "text-align:center" + "\"";
+      searchCategory = new Category();
+      value = requestParameterValue;
+      searchCategory.setId(Integer.parseInt(value));
+      List<Category> loop_a0b1a1a = categoryDAO.findCategorys(searchCategory);
+      for (int counter_a0b1a1a = 0; counter_a0b1a1a < loop_a0b1a1a.size(); counter_a0b1a1a++) {
+        category = loop_a0b1a1a.get(counter_a0b1a1a);
+        html += "<h3";
+        html += " " + "style" + "=\"" + "text-align:center" + "\"";
 
-      html += ">" + category.getName() + "</h3>";
+        html += ">" + category.getName() + "</h3>";
+      }
     }
     html += "</div>";
 
+    {
 
-    searchCategory = new Category();
-    value = requestParameterValue;
-    searchCategory.setId(Integer.parseInt(value));
-    for (Product products : categoryDAO.findChildProducts(searchCategory)) {
-      html += "<div";
-      html += " class=\"" + "col-sm-4 col-lg-4 col-md-4" + "\"";
-      html += ">";
-      html += "<div";
-      html += " class=\"" + "thumbnail" + "\"";
-      html += " " + "style" + "=\"" + "height: 280px" + "\"";
-      html += " " + "style" + "=\"" + "height: 280px" + "\"";
-      html += ">";
-      html += "<div";
-      html += " class=\"" + "imageholder" + "\"";
-      html += ">";
-      html += "<img";
-      expressions = "";
-      expressions += products.getId();
-      expressions += ".jpg";
-      html += " src=\"" + "img" + expressions + "\"";
+      searchCategory = new Category();
+      value = requestParameterValue;
+      searchCategory.setId(Integer.parseInt(value));
+      List<Product> loop_b1b0b0 = categoryDAO.findChildProducts(searchCategory);
+      for (int counter_b1b0b0 = 0; counter_b1b0b0 < loop_b1b0b0.size(); counter_b1b0b0++) {
+        products = loop_b1b0b0.get(counter_b1b0b0);
+        html += "<div";
+        html += " class=\"" + "col-sm-4 col-lg-4 col-md-4" + "\"";
+        html += ">";
+        html += "<div";
+        html += " class=\"" + "thumbnail" + "\"";
+        html += " " + "style" + "=\"" + "height: 280px" + "\"";
+        html += " " + "style" + "=\"" + "height: 280px" + "\"";
+        html += ">";
+        html += "<div";
+        html += " class=\"" + "imageholder" + "\"";
+        html += ">";
+        html += "<img";
+        expressions = "";
+        expressions += products.getId();
+        expressions += ".jpg";
+        html += " src=\"" + "img" + expressions + "\"";
+        html += " class=\"" + "img-responsive" + "\"";
 
-      html += "/>";
-      html += "</div>";
+        html += "/>";
+        html += "</div>";
 
-      html += "<div";
-      html += " class=\"" + "caption" + "\"";
-      html += ">";
-      html += "<h4";
-      parameters = "";
-      parameters += "'" + products.getProductName() + "',";
-      parameters = parameters.substring(0, parameters.length() - 1);
-      html += " " + "onclick" + "=\"" + "goToProductPage" + "(" + parameters + ")\"";
+        html += "<div";
+        html += " class=\"" + "caption" + "\"";
+        html += ">";
+        html += "<h4";
+        parameters = "";
+        parameters += "'" + products.getId() + "',";
+        parameters += "'" + products.getProductName() + "',";
+        parameters = parameters.substring(0, parameters.length() - 1);
+        html += " " + "onclick" + "=\"" + "goToProductPage" + "(" + parameters + ")\"";
 
 
-      html += ">" + products.getProductName() + "</h4>";
-      html += "<span";
-      html += ">";
-      html += products.getDescription();
-      html += "</span>";
+        html += ">" + products.getProductName() + "</h4>";
+        html += "<span";
+        html += ">";
+        html += products.getDescription();
+        html += "</span>";
 
-      html += "</div>";
+        html += "</div>";
 
-      html += "<div";
-      html += " class=\"" + "ratings" + "\"";
-      html += " " + "style" + "=\"" + "margin-top:-10px" + "\"";
-      html += " " + "style" + "=\"" + "margin-top:-10px" + "\"";
-      html += ">";
-      html += "<a";
-      html += " class=\"" + "pure-button" + "\"";
+        html += "<div";
+        html += " class=\"" + "ratings" + "\"";
+        html += " " + "style" + "=\"" + "margin-top:-10px" + "\"";
+        html += " " + "style" + "=\"" + "margin-top:-10px" + "\"";
+        html += ">";
+        html += "<a";
+        html += " class=\"" + "pure-button" + "\"";
+        parameters = "";
+        parameters += "'" + products.getId() + "',";
+        parameters = parameters.substring(0, parameters.length() - 1);
+        html += " " + "onclick" + "=\"" + "addProductToCart" + "(" + parameters + ")\"";
 
-      html += ">" + "<i class=\"fa fa-shopping-cart fa-lg\"></i>Add to cart" + "</a>";
-      html += "<h4";
-      html += " class=\"" + "pull-right" + "\"";
 
-      html += ">" + products.getPrice() + "</h4>";
-      html += "</div>";
+        html += ">" + "<i class=\"fa fa-shopping-cart fa-lg\"></i>Add to cart" + "</a>";
+        html += "<h4";
+        html += " class=\"" + "pull-right" + "\"";
 
-      html += "</div>";
+        html += ">" + products.getPrice() + "</h4>";
+        html += "</div>";
 
-      html += "</div>";
+        html += "</div>";
 
+        html += "</div>";
+
+      }
     }
     html += "</div>";
 

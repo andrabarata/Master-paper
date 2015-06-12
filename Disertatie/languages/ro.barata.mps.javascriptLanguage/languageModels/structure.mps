@@ -357,6 +357,9 @@
     <property role="TrG5h" value="JavascriptParameter" />
     <property role="34LRSv" value="parameter" />
     <ref role="1TJDcQ" node="3ET5BXsao0B" resolve="AbstractVarCommand" />
+    <node concept="PrWs8" id="63p_9b577cB" role="PzmwI">
+      <ref role="PrY4T" node="2OiIxnYG7OC" resolve="JavascriptValue" />
+    </node>
   </node>
   <node concept="AxPO7" id="3ET5BXs5dt8">
     <property role="3GE5qa" value="javascript" />

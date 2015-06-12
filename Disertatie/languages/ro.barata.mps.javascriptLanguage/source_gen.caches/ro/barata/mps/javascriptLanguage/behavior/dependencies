@@ -204,6 +204,8 @@
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="ro.barata.mps.javascriptLanguage.behavior.AbstractVarCommand_BehaviorDescriptor" />
+    <classNode dependClassName="ro.barata.mps.javascriptLanguage.behavior.JavascriptValue_BehaviorDescriptor" />
+    <classNode extendsClassName="java.lang.Cloneable" />
     <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
   </dependency>
   <dependency className="ro.barata.mps.javascriptLanguage.behavior.JavascriptValue_BehaviorDescriptor" file="JavascriptValue_BehaviorDescriptor.java" />

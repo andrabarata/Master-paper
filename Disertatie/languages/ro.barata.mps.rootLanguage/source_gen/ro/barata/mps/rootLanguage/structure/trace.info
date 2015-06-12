@@ -2,7 +2,7 @@
 <debug-info>
   <root>
     <file name="StructureAspectDescriptor.java">
-      <unit at="13,0,82,0" name="ro.barata.mps.rootLanguage.structure.StructureAspectDescriptor" />
+      <unit at="13,0,85,0" name="ro.barata.mps.rootLanguage.structure.StructureAspectDescriptor" />
     </file>
   </root>
 </debug-info>

@@ -29,7 +29,6 @@ public class HomeServlet extends HttpServlet {
       ex.printStackTrace();
     }
   }
-
   protected void doPost(HttpServletRequest request, HttpServletResponse response) {
     try {
       handleRequest(request, response);
@@ -47,5 +46,4 @@ public class HomeServlet extends HttpServlet {
       response.getWriter().println(HomeGenerator.getContent(request.getSession(), requestParameterValue));
     }
   }
-
 }

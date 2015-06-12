@@ -278,5 +278,9 @@
       <ref role="20lvS9" to="tpce:f_TJgxE" resolve="LinkDeclaration" />
     </node>
   </node>
+  <node concept="PlHQZ" id="5$5a_G9FdVO">
+    <property role="3GE5qa" value="db.dao" />
+    <property role="TrG5h" value="SessionObject" />
+  </node>
 </model>
 

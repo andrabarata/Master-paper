@@ -9,9 +9,10 @@ public class Category {
   private Integer id;
   private String name;
   private List<Product> products;
+  private List<Discount> discounts;
   private List<Category> categorys;
-  private Shop parentShop;
   private Category parentCategory;
+  private Shop parentShop;
   public void setId(Integer attribute) {
     this.id = attribute;
   }
@@ -20,6 +21,9 @@ public class Category {
   }
   public void setProducts(List<Product> entities) {
     this.products = entities;
+  }
+  public void setDiscounts(List<Discount> entities) {
+    this.discounts = entities;
   }
   public void setCategorys(List<Category> entities) {
     this.categorys = entities;
@@ -30,23 +34,26 @@ public class Category {
   public String getName() {
     return this.name;
   }
-  public void setParentShop(Shop entity) {
-    this.parentShop = entity;
-  }
   public void setParentCategory(Category entity) {
     this.parentCategory = entity;
+  }
+  public void setParentShop(Shop entity) {
+    this.parentShop = entity;
   }
   public List<Product> getProducts() {
     return this.products;
   }
+  public List<Discount> getDiscounts() {
+    return this.discounts;
+  }
   public List<Category> getCategorys() {
     return this.categorys;
   }
-  public Shop getParentShop() {
-    return this.parentShop;
-  }
   public Category getParentCategory() {
     return this.parentCategory;
+  }
+  public Shop getParentShop() {
+    return this.parentShop;
   }
   public void addProduct(Product product) {
     if (products == null) {
@@ -57,6 +64,17 @@ public class Category {
     }
     if (flag) {
       this.products.add(product);
+    }
+  }
+  public void addDiscount(Discount discount) {
+    if (discounts == null) {
+      discounts = new ArrayList<Discount>();
+    }
+    boolean flag = true;
+    for (Discount entity : discounts) {
+    }
+    if (flag) {
+      this.discounts.add(discount);
     }
   }
   public void addCategory(Category category) {

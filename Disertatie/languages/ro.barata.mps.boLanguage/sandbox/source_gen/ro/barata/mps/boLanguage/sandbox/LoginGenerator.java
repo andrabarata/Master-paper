@@ -16,7 +16,7 @@ public class LoginGenerator {
     html += "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">";
     html += "<script src=\"/" + "jquery.js" + "\"></script>";
     html += "<script src=\"/" + "bootstrap.min.js" + "\"></script>";
-    html += "<script src=\"/" + "frame.js" + "\"></script>";
+    html += "<script src=\"/" + "clientframe.js" + "\"></script>";
     html += "<script src=\"/" + "login.js" + "\"></script>";
     html += "<script src=\"/general.js\"></script>";
     html += "<link rel=\"stylesheet\" type=\"text/css\" href=\"/" + "main.css" + "\"/>";
@@ -26,7 +26,7 @@ public class LoginGenerator {
     html += "<link rel=\"stylesheet\" type=\"text/css\" href=\"/" + "font-awesome.css" + "\"/>";
     html += "</head>";
     html += "<body>";
-    html += FrameGenerator.generateHeader(session);
+    html += ClientframeGenerator.generateHeader(session);
     html += "<div";
     html += " class=\"" + "container" + "\"";
     html += ">";
@@ -35,6 +35,8 @@ public class LoginGenerator {
     html += ">";
     html += "<form";
     html += " class=\"" + "pure-form pure-form-aligned" + "\"";
+    html += " " + "style" + "=\"" + "text-align:center" + "\"";
+    html += " " + "style" + "=\"" + "text-align:center" + "\"";
     html += ">";
     html += "<div";
     html += " class=\"" + "pure-control-group" + "\"";

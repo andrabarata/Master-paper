@@ -12,8 +12,10 @@ public class DBCommands {
     UserDAO userDAO = new UserDAO(connection);
     User user = new User();
     user = new User();
+    // Iterates through the concept's properties and sets their values with values fetched 
+    // either from the input model, or from the HTTP data recevied from the client (browser) 
     user.setUserId(1);
-
+    // Iterates through the children/link entities, initializes them, and adds them to the parent 
     {
       Person person_1 = null;
       person_1 = new Person();

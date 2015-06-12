@@ -29,7 +29,6 @@ public class ProductsServlet extends HttpServlet {
       ex.printStackTrace();
     }
   }
-
   protected void doPost(HttpServletRequest request, HttpServletResponse response) {
     try {
       handleRequest(request, response);
@@ -47,5 +46,4 @@ public class ProductsServlet extends HttpServlet {
       response.getWriter().println(ProductsGenerator.getContent(request.getSession(), requestParameterValue));
     }
   }
-
 }

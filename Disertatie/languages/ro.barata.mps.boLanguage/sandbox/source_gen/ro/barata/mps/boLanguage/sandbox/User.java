@@ -5,16 +5,13 @@ package ro.barata.mps.boLanguage.sandbox;
 
 public class User {
   private Integer userId;
-  private String priviledge;
   private String userName;
   private String password;
+  private String priviledge;
   private Person person;
   private Shop parentShop;
   public void setUserId(Integer attribute) {
     this.userId = attribute;
-  }
-  public void setPriviledge(String attribute) {
-    this.priviledge = attribute;
   }
   public void setUserName(String attribute) {
     this.userName = attribute;
@@ -22,20 +19,23 @@ public class User {
   public void setPassword(String attribute) {
     this.password = attribute;
   }
+  public void setPriviledge(String attribute) {
+    this.priviledge = attribute;
+  }
   public void setPerson(Person entity) {
     this.person = entity;
   }
   public Integer getUserId() {
     return this.userId;
   }
-  public String getPriviledge() {
-    return this.priviledge;
-  }
   public String getUserName() {
     return this.userName;
   }
   public String getPassword() {
     return this.password;
+  }
+  public String getPriviledge() {
+    return this.priviledge;
   }
   public void setParentShop(Shop entity) {
     this.parentShop = entity;

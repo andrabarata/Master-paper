@@ -1,17 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <debug-info>
   <root>
+    <file name="Address_BehaviorDescriptor.java">
+      <unit at="8,0,16,0" name="ro.barata.mps.boLanguage.behavior.Address_BehaviorDescriptor" />
+    </file>
+    <file name="AttributeCategory_BehaviorDescriptor.java">
+      <unit at="8,0,16,0" name="ro.barata.mps.boLanguage.behavior.AttributeCategory_BehaviorDescriptor" />
+    </file>
     <file name="Attribute_BehaviorDescriptor.java">
       <unit at="8,0,16,0" name="ro.barata.mps.boLanguage.behavior.Attribute_BehaviorDescriptor" />
     </file>
     <file name="BehaviorAspectDescriptor.java">
-      <unit at="9,0,34,0" name="ro.barata.mps.boLanguage.behavior.BehaviorAspectDescriptor" />
+      <unit at="9,0,42,0" name="ro.barata.mps.boLanguage.behavior.BehaviorAspectDescriptor" />
+    </file>
+    <file name="Cart_BehaviorDescriptor.java">
+      <unit at="8,0,16,0" name="ro.barata.mps.boLanguage.behavior.Cart_BehaviorDescriptor" />
     </file>
     <file name="Category_BehaviorDescriptor.java">
       <unit at="8,0,16,0" name="ro.barata.mps.boLanguage.behavior.Category_BehaviorDescriptor" />
     </file>
     <file name="Discount_BehaviorDescriptor.java">
-      <unit at="7,0,15,0" name="ro.barata.mps.boLanguage.behavior.Discount_BehaviorDescriptor" />
+      <unit at="8,0,16,0" name="ro.barata.mps.boLanguage.behavior.Discount_BehaviorDescriptor" />
+    </file>
+    <file name="Order_BehaviorDescriptor.java">
+      <unit at="8,0,16,0" name="ro.barata.mps.boLanguage.behavior.Order_BehaviorDescriptor" />
     </file>
     <file name="Person_BehaviorDescriptor.java">
       <unit at="8,0,16,0" name="ro.barata.mps.boLanguage.behavior.Person_BehaviorDescriptor" />

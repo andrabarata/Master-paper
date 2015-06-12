@@ -27,18 +27,19 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptIntType = new ConceptDescriptorBuilder("ro.barata.mps.rootLanguage.structure.IntType", MetaIdFactory.conceptId(0x5cba771a86ff496bL, 0xa1216ae83a039560L, 0x64e3288c48324f42L)).super_("ro.barata.mps.rootLanguage.structure.PrimitiveType").super_(MetaIdFactory.conceptId(0x5cba771a86ff496bL, 0xa1216ae83a039560L, 0x644c90c84bce0008L)).parents("ro.barata.mps.rootLanguage.structure.PrimitiveType").parentIds(MetaIdFactory.conceptId(0x5cba771a86ff496bL, 0xa1216ae83a039560L, 0x644c90c84bce0008L)).alias("int", "").create();
   /*package*/ final ConceptDescriptor myConceptPrimitiveType = new ConceptDescriptorBuilder("ro.barata.mps.rootLanguage.structure.PrimitiveType", MetaIdFactory.conceptId(0x5cba771a86ff496bL, 0xa1216ae83a039560L, 0x644c90c84bce0008L)).super_("ro.barata.mps.rootLanguage.structure.Type").super_(MetaIdFactory.conceptId(0x5cba771a86ff496bL, 0xa1216ae83a039560L, 0x64e3288c48324eebL)).parents("ro.barata.mps.rootLanguage.structure.Type").parentIds(MetaIdFactory.conceptId(0x5cba771a86ff496bL, 0xa1216ae83a039560L, 0x64e3288c48324eebL)).abstract_().create();
   /*package*/ final ConceptDescriptor myConceptSchemaCreator = new ConceptDescriptorBuilder("ro.barata.mps.rootLanguage.structure.SchemaCreator", MetaIdFactory.conceptId(0x5cba771a86ff496bL, 0xa1216ae83a039560L, 0x477fcd8be39cc8cbL)).super_("jetbrains.mps.lang.core.structure.BaseConcept").super_(MetaIdFactory.conceptId(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x10802efe25aL)).parents("jetbrains.mps.lang.core.structure.BaseConcept", "jetbrains.mps.execution.util.structure.IMainClass").parentIds(MetaIdFactory.conceptId(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x10802efe25aL), MetaIdFactory.conceptId(0x4caf0310491e41f5L, 0x8a9b2006b3a94898L, 0x40c1a7cb987d20d5L)).propertyDescriptors(new ConceptDescriptorBuilder.Prop(5152062499437988135L, "createTables"), new ConceptDescriptorBuilder.Prop(5152062499437988137L, "dropTables")).properties("createTables", "dropTables").childDescriptors(new ConceptDescriptorBuilder.Link(7227310691965637162L, "databaseSettings", MetaIdFactory.conceptId(0x5cba771a86ff496bL, 0xa1216ae83a039560L, 0x477fcd8be37f324fL), false, false, false), new ConceptDescriptorBuilder.Link(7227310691965637214L, "mapping", MetaIdFactory.conceptId(0x5cba771a86ff496bL, 0xa1216ae83a039560L, 0x644c90c84bd0170eL), false, false, false)).children(new String[]{"databaseSettings", "mapping"}, new boolean[]{false, false}).create();
+  /*package*/ final ConceptDescriptor myConceptSessionObject = new ConceptDescriptorBuilder("ro.barata.mps.rootLanguage.structure.SessionObject", MetaIdFactory.conceptId(0x5cba771a86ff496bL, 0xa1216ae83a039560L, 0x59052a5b09acdef4L)).interface_().create();
   /*package*/ final ConceptDescriptor myConceptStringType = new ConceptDescriptorBuilder("ro.barata.mps.rootLanguage.structure.StringType", MetaIdFactory.conceptId(0x5cba771a86ff496bL, 0xa1216ae83a039560L, 0x64e3288c48324f85L)).super_("ro.barata.mps.rootLanguage.structure.PrimitiveType").super_(MetaIdFactory.conceptId(0x5cba771a86ff496bL, 0xa1216ae83a039560L, 0x644c90c84bce0008L)).parents("ro.barata.mps.rootLanguage.structure.PrimitiveType").parentIds(MetaIdFactory.conceptId(0x5cba771a86ff496bL, 0xa1216ae83a039560L, 0x644c90c84bce0008L)).alias("string", "").create();
   /*package*/ final ConceptDescriptor myConceptType = new ConceptDescriptorBuilder("ro.barata.mps.rootLanguage.structure.Type", MetaIdFactory.conceptId(0x5cba771a86ff496bL, 0xa1216ae83a039560L, 0x64e3288c48324eebL)).super_("jetbrains.mps.lang.core.structure.BaseConcept").super_(MetaIdFactory.conceptId(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x10802efe25aL)).parents("jetbrains.mps.lang.core.structure.BaseConcept", "jetbrains.mps.lang.core.structure.ScopeProvider").parentIds(MetaIdFactory.conceptId(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x10802efe25aL), MetaIdFactory.conceptId(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x33d23ee961a0cbf3L)).abstract_().create();
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptAttribute, myConceptBooleanType, myConceptDAOChildMapper, myConceptDAOEntity, myConceptDAOEntityMapper, myConceptDAOMapping, myConceptDAOObject, myConceptDAOPropertyMapper, myConceptDAOReferenceMapper, myConceptDatabaseSettings, myConceptEntity, myConceptEntityType, myConceptIntType, myConceptPrimitiveType, myConceptSchemaCreator, myConceptStringType, myConceptType);
+    return Arrays.asList(myConceptAttribute, myConceptBooleanType, myConceptDAOChildMapper, myConceptDAOEntity, myConceptDAOEntityMapper, myConceptDAOMapping, myConceptDAOObject, myConceptDAOPropertyMapper, myConceptDAOReferenceMapper, myConceptDatabaseSettings, myConceptEntity, myConceptEntityType, myConceptIntType, myConceptPrimitiveType, myConceptSchemaCreator, myConceptSessionObject, myConceptStringType, myConceptType);
   }
 
   @Override
   @Nullable
   public ConceptDescriptor getDescriptor(String conceptFqName) {
-    switch (Arrays.binarySearch(stringSwitchCases_1htk8d_a0a0v, conceptFqName)) {
+    switch (Arrays.binarySearch(stringSwitchCases_1htk8d_a0a0w, conceptFqName)) {
       case 0:
         return myConceptAttribute;
       case 1:
@@ -70,12 +71,14 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
       case 14:
         return myConceptSchemaCreator;
       case 15:
-        return myConceptStringType;
+        return myConceptSessionObject;
       case 16:
+        return myConceptStringType;
+      case 17:
         return myConceptType;
       default:
         return null;
     }
   }
-  private static String[] stringSwitchCases_1htk8d_a0a0v = new String[]{"ro.barata.mps.rootLanguage.structure.Attribute", "ro.barata.mps.rootLanguage.structure.BooleanType", "ro.barata.mps.rootLanguage.structure.DAOChildMapper", "ro.barata.mps.rootLanguage.structure.DAOEntity", "ro.barata.mps.rootLanguage.structure.DAOEntityMapper", "ro.barata.mps.rootLanguage.structure.DAOMapping", "ro.barata.mps.rootLanguage.structure.DAOObject", "ro.barata.mps.rootLanguage.structure.DAOPropertyMapper", "ro.barata.mps.rootLanguage.structure.DAOReferenceMapper", "ro.barata.mps.rootLanguage.structure.DatabaseSettings", "ro.barata.mps.rootLanguage.structure.Entity", "ro.barata.mps.rootLanguage.structure.EntityType", "ro.barata.mps.rootLanguage.structure.IntType", "ro.barata.mps.rootLanguage.structure.PrimitiveType", "ro.barata.mps.rootLanguage.structure.SchemaCreator", "ro.barata.mps.rootLanguage.structure.StringType", "ro.barata.mps.rootLanguage.structure.Type"};
+  private static String[] stringSwitchCases_1htk8d_a0a0w = new String[]{"ro.barata.mps.rootLanguage.structure.Attribute", "ro.barata.mps.rootLanguage.structure.BooleanType", "ro.barata.mps.rootLanguage.structure.DAOChildMapper", "ro.barata.mps.rootLanguage.structure.DAOEntity", "ro.barata.mps.rootLanguage.structure.DAOEntityMapper", "ro.barata.mps.rootLanguage.structure.DAOMapping", "ro.barata.mps.rootLanguage.structure.DAOObject", "ro.barata.mps.rootLanguage.structure.DAOPropertyMapper", "ro.barata.mps.rootLanguage.structure.DAOReferenceMapper", "ro.barata.mps.rootLanguage.structure.DatabaseSettings", "ro.barata.mps.rootLanguage.structure.Entity", "ro.barata.mps.rootLanguage.structure.EntityType", "ro.barata.mps.rootLanguage.structure.IntType", "ro.barata.mps.rootLanguage.structure.PrimitiveType", "ro.barata.mps.rootLanguage.structure.SchemaCreator", "ro.barata.mps.rootLanguage.structure.SessionObject", "ro.barata.mps.rootLanguage.structure.StringType", "ro.barata.mps.rootLanguage.structure.Type"};
 }

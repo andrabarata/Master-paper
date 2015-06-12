@@ -181,6 +181,7 @@
     <classNode extendsClassName="java.lang.Cloneable" />
     <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
   </dependency>
+  <dependency className="ro.barata.mps.rootLanguage.behavior.SessionObject_BehaviorDescriptor" file="SessionObject_BehaviorDescriptor.java" />
   <dependency className="ro.barata.mps.rootLanguage.behavior.StringType_BehaviorDescriptor" file="StringType_BehaviorDescriptor.java">
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="java.lang.String" />

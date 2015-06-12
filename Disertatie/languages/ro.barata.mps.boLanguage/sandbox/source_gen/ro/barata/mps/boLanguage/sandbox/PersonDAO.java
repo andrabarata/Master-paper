@@ -24,9 +24,18 @@ public class PersonDAO {
     columns += "table0." + "id" + " \"parent" + "id" + "\",";
     columns += "table0." + "firstName" + " \"parent" + "firstName" + "\",";
     columns += "table0." + "lastName" + " \"parent" + "lastName" + "\",";
-    String sql = " from " + "PersonTable" + " table0";
+    String sql = " from " + "persons" + " table0";
     String leftJoins = "";
     int i = 1;
+    columns += "table" + i + "." + "id" + " \"" + "adresses" + "id" + "\"," + ",";
+    columns += "table" + i + "." + "line1" + " \"" + "adresses" + "line1" + "\"," + ",";
+    columns += "table" + i + "." + "line2" + " \"" + "adresses" + "line2" + "\"," + ",";
+    columns += "table" + i + "." + "postcode" + " \"" + "adresses" + "postcode" + "\"," + ",";
+    columns += "table" + i + "." + "state" + " \"" + "adresses" + "state" + "\"," + ",";
+    columns += "table" + i + "." + "country" + " \"" + "adresses" + "country" + "\"," + ",";
+    columns += "table" + i + "." + "city" + " \"" + "adresses" + "city" + "\"," + ",";
+    leftJoins += " left join " + "adresses" + " table" + i + " on table" + i + "." + "personId" + "=table0." + "id" + " ";
+    i++;
 
     sql = "select " + columns.substring(0, columns.length() - 1) + sql + leftJoins;
     System.out.println(sql);
@@ -37,6 +46,34 @@ public class PersonDAO {
       foundPerson.setId(Integer.valueOf(set.getBigDecimal("parent" + "id").intValue()));
       foundPerson.setFirstName(set.getString("parent" + "firstName"));
       foundPerson.setLastName(set.getString("parent" + "lastName"));
+      {
+        Address reference = new Address();
+        if (set.getBigDecimal("adresses" + "id") != null) {
+          reference.setId(Integer.valueOf(set.getBigDecimal("adresses" + "id").intValue()));
+        }
+        if (set.getString("adresses" + "line1") != null) {
+          reference.setLine1(set.getString("adresses" + "line1"));
+        }
+        if (set.getString("adresses" + "line2") != null) {
+          reference.setLine2(set.getString("adresses" + "line2"));
+        }
+        if (set.getBigDecimal("adresses" + "postcode") != null) {
+          reference.setPostcode(Integer.valueOf(set.getBigDecimal("adresses" + "postcode").intValue()));
+        }
+        if (set.getString("adresses" + "state") != null) {
+          reference.setState(set.getString("adresses" + "state"));
+        }
+        if (set.getString("adresses" + "country") != null) {
+          reference.setCountry(set.getString("adresses" + "country"));
+        }
+        if (set.getString("adresses" + "city") != null) {
+          reference.setCity(set.getString("adresses" + "city"));
+        }
+
+        if (reference.getId() != null) {
+          foundPerson.setAddress(reference);
+        }
+      }
       boolean flag = true;
       for (Person entity : persons) {
         if (entity.getId() == foundPerson.getId()) {
@@ -73,7 +110,7 @@ public class PersonDAO {
     if (values.length() > 6) {
       values = " where " + values.substring(0, values.length() - 5);
     }
-    sql += columns + " from " + "PersonTable" + values;
+    sql += columns + " from " + "persons" + values;
     System.out.println("Find entities: " + sql);
     ResultSet set = stmt.executeQuery(sql);
     Person foundPerson = new Person();
@@ -88,9 +125,10 @@ public class PersonDAO {
   }
 
   public void addPerson(Person person) throws SQLException, ClassNotFoundException {
-    String sql = "insert into " + "PersonTable" + "(";
+    String sql = "insert into " + "persons" + "(";
     String columns = "";
     String values = "";
+    // Loops through the properties and sets column names and column values 
     if (person.getId() != null) {
       columns += "id" + ",";
       values += "'" + person.getId() + "',";
@@ -103,13 +141,23 @@ public class PersonDAO {
       columns += "lastName" + ",";
       values += "'" + person.getLastName() + "',";
     }
+    // Searches for the parent entity, such that it identifies and sets the foreign key columns 
+    // Searches for the reference entities, such that it identifies and sets the foreign key columns 
+    if (person.getAddress() != null) {
+      Address referenceAddress = person.getAddress();
+      AddressDAO referenceAddressDAO = new AddressDAO(connn);
+      referenceAddressDAO.addAddress(referenceAddress);
+      columns += "personId" + ",";
+      values += "'" + referenceAddress.getId() + "',";
+    }
     sql += columns.substring(0, columns.length() - 1) + ") values (" + values.substring(0, values.length() - 1) + ")";
     System.out.println(sql);
     stmt.execute(sql);
+    // Loops thhrough the children, and adds them recursively to the database 
   }
 
   public void updatePerson(Person oldperson, Person newperson) throws SQLException, ClassNotFoundException {
-    String sql = "update " + "PersonTable" + " set ";
+    String sql = "update " + "persons" + " set ";
     String values = "";
     if (newperson.getId() != null) {
       values += "id" + "='" + newperson.getId() + "',";
@@ -119,6 +167,12 @@ public class PersonDAO {
     }
     if (newperson.getLastName() != null) {
       values += "lastName" + "='" + newperson.getLastName() + "',";
+    }
+    if (newperson.getAddress() != null) {
+      Address referenceAddress = newperson.getAddress();
+      AddressDAO referenceAddressDAO = new AddressDAO(connn);
+      referenceAddressDAO.addAddress(referenceAddress);
+      values += "personId" + "=" + "'" + referenceAddress.getId() + "'";
     }
     String condition = " where ";
     if (oldperson.getId() != null) {
@@ -137,8 +191,9 @@ public class PersonDAO {
   }
 
   public void deletePerson(Person person) throws SQLException {
-    String sql = "delete from " + "PersonTable" + " where";
+    String sql = "delete from " + "persons" + " where";
     String condition = " ";
+    // Loops through the properties 
     if (person.getId() != null) {
       condition += "id" + "='" + person.getId() + "'";
       condition += " and ";
@@ -154,7 +209,6 @@ public class PersonDAO {
     sql += condition.substring(0, condition.length() - 5);
     System.out.println(sql);
     stmt.execute(sql);
-
   }
 
 }

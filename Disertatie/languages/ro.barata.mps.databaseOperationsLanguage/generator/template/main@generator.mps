@@ -145,6 +145,12 @@
       <concept id="1178549954367" name="jetbrains.mps.baseLanguage.structure.IVisible" flags="ng" index="1B3ioH">
         <child id="1178549979242" name="visibility" index="1B3o_S" />
       </concept>
+      <concept id="6329021646629104957" name="jetbrains.mps.baseLanguage.structure.TextCommentPart" flags="nn" index="3SKdUq">
+        <property id="6329021646629104958" name="text" index="3SKdUp" />
+      </concept>
+      <concept id="6329021646629104954" name="jetbrains.mps.baseLanguage.structure.SingleLineComment" flags="nn" index="3SKdUt">
+        <child id="6329021646629175155" name="commentPart" index="3SKWNk" />
+      </concept>
       <concept id="1146644602865" name="jetbrains.mps.baseLanguage.structure.PublicVisibility" flags="nn" index="3Tm1VV" />
       <concept id="1080120340718" name="jetbrains.mps.baseLanguage.structure.AndExpression" flags="nn" index="1Wc70l" />
     </language>
@@ -289,7 +295,7 @@
     <property role="TrG5h" value="main" />
     <property role="3GE5qa" value="db.values" />
     <node concept="3aamgX" id="2FtF2DJJqxm" role="3acgRq">
-      <ref role="30HIoZ" to="jkzc:5wBjXY7qSiU" resolve="IntValue" />
+      <ref role="30HIoZ" to="jkzc:5wBjXY7qSiU" resolve="DBIntValue" />
       <node concept="1Koe21" id="2FtF2DJJqxn" role="1lVwrX">
         <node concept="9aQIb" id="2FtF2DJJqxo" role="1Koe22">
           <node concept="3clFbS" id="2FtF2DJJqxp" role="9aQI4">
@@ -326,7 +332,7 @@
       </node>
     </node>
     <node concept="3aamgX" id="2FtF2DJJqx6" role="3acgRq">
-      <ref role="30HIoZ" to="jkzc:5wBjXY7qSi3" resolve="StringValue" />
+      <ref role="30HIoZ" to="jkzc:5wBjXY7qSi3" resolve="DBStringValue" />
       <node concept="1Koe21" id="2FtF2DJJqx7" role="1lVwrX">
         <node concept="9aQIb" id="2FtF2DJJqx8" role="1Koe22">
           <node concept="3clFbS" id="2FtF2DJJqx9" role="9aQI4">
@@ -811,6 +817,16 @@
                 </node>
               </node>
             </node>
+            <node concept="3SKdUt" id="7Q78HI5J6NY" role="3cqZAp">
+              <node concept="3SKdUq" id="7Q78HI5J6NZ" role="3SKWNk">
+                <property role="3SKdUp" value="Sets the given property with values fetched either from the input model, " />
+              </node>
+            </node>
+            <node concept="3SKdUt" id="7Q78HI5J6O0" role="3cqZAp">
+              <node concept="3SKdUq" id="7Q78HI5J6O1" role="3SKWNk">
+                <property role="3SKdUp" value="or from the HTTP data recevied from the client (browser)" />
+              </node>
+            </node>
             <node concept="3clFbF" id="2FtF2DJJxR3" role="3cqZAp">
               <node concept="2OqwBi" id="2FtF2DJJxR4" role="3clFbG">
                 <node concept="37vLTw" id="2FtF2DJJxR5" role="2Oq$k0">
@@ -845,7 +861,7 @@
                 <node concept="liA8E" id="2FtF2DJJxRk" role="2OqNvi">
                   <ref role="37wK5l" to="sh3x:6hc$cxbV$Yg" resolve="setAttribute" />
                   <node concept="Xl_RD" id="2FtF2DJJxRl" role="37wK5m">
-                    <property role="Xl_RC" value="a" />
+                    <property role="Xl_RC" value="attribute" />
                     <node concept="29HgVG" id="2FtF2DJJxRm" role="lGtFl">
                       <node concept="3NFfHV" id="2FtF2DJJxRn" role="3NFExx">
                         <node concept="3clFbS" id="2FtF2DJJxRo" role="2VODD2">
@@ -931,7 +947,7 @@
                             <node concept="liA8E" id="2FtF2DJJxRY" role="2OqNvi">
                               <ref role="37wK5l" to="5ccc:~ServletRequest.getParameter(java.lang.String):java.lang.String" resolve="getParameter" />
                               <node concept="Xl_RD" id="2FtF2DJJxRZ" role="37wK5m">
-                                <property role="Xl_RC" value="param" />
+                                <property role="Xl_RC" value="HTTP parameter" />
                                 <node concept="17Uvod" id="2FtF2DJJxS0" role="lGtFl">
                                   <property role="P4ACc" value="f3061a53-9226-4cc5-a443-f952ceaf5816/1070475926800/1070475926801" />
                                   <property role="2qtEX9" value="value" />
@@ -2418,6 +2434,16 @@
                 </node>
               </node>
             </node>
+            <node concept="3SKdUt" id="7Q78HI5IXJB" role="3cqZAp">
+              <node concept="3SKdUq" id="7Q78HI5IY_G" role="3SKWNk">
+                <property role="3SKdUp" value="Iterates through the concept's properties and sets their values with values fetched" />
+              </node>
+            </node>
+            <node concept="3SKdUt" id="7Q78HI5IZrQ" role="3cqZAp">
+              <node concept="3SKdUq" id="7Q78HI5J0hX" role="3SKWNk">
+                <property role="3SKdUp" value="either from the input model, or from the HTTP data recevied from the client (browser)" />
+              </node>
+            </node>
             <node concept="3clFbF" id="5wBjXY7SjuH" role="3cqZAp">
               <node concept="2OqwBi" id="5wBjXY7SjuI" role="3clFbG">
                 <node concept="37vLTw" id="5wBjXY7SjuJ" role="2Oq$k0">
@@ -2458,7 +2484,7 @@
                 <node concept="liA8E" id="5wBjXY7SjuY" role="2OqNvi">
                   <ref role="37wK5l" to="sh3x:6hc$cxbV$Yg" resolve="setAttribute" />
                   <node concept="Xl_RD" id="5wBjXY7SjuZ" role="37wK5m">
-                    <property role="Xl_RC" value="a" />
+                    <property role="Xl_RC" value="attribute" />
                     <node concept="29HgVG" id="5wBjXY7Sjv0" role="lGtFl">
                       <node concept="3NFfHV" id="5wBjXY7Sjv1" role="3NFExx">
                         <node concept="3clFbS" id="5wBjXY7Sjv2" role="2VODD2">
@@ -2543,7 +2569,7 @@
                             <node concept="liA8E" id="2FtF2DJDcTR" role="2OqNvi">
                               <ref role="37wK5l" to="5ccc:~ServletRequest.getParameter(java.lang.String):java.lang.String" resolve="getParameter" />
                               <node concept="Xl_RD" id="2FtF2DJDcTS" role="37wK5m">
-                                <property role="Xl_RC" value="param" />
+                                <property role="Xl_RC" value="HTTP parameter" />
                                 <node concept="17Uvod" id="2FtF2DJDcTT" role="lGtFl">
                                   <property role="P4ACc" value="f3061a53-9226-4cc5-a443-f952ceaf5816/1070475926800/1070475926801" />
                                   <property role="2qtEX9" value="value" />
@@ -2676,7 +2702,11 @@
                 </node>
               </node>
             </node>
-            <node concept="3clFbH" id="3qNdxgIPtXe" role="3cqZAp" />
+            <node concept="3SKdUt" id="7Q78HI5J0i6" role="3cqZAp">
+              <node concept="3SKdUq" id="7Q78HI5J3o7" role="3SKWNk">
+                <property role="3SKdUp" value="Iterates through the children/link entities, initializes them, and adds them to the parent" />
+              </node>
+            </node>
             <node concept="3clFbF" id="3qNdxgIPuMb" role="3cqZAp">
               <node concept="2OqwBi" id="3qNdxgIPuM8" role="3clFbG">
                 <node concept="10M0yZ" id="3qNdxgIPuM9" role="2Oq$k0">

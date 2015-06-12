@@ -8,24 +8,30 @@ import java.util.ArrayList;
 public class Product {
   private Integer id;
   private String productName;
-  private Integer price;
   private String description;
-  private List<Attribute> attributes;
+  private Integer units;
+  private Integer price;
+  private List<AttributeCategory> attributecategorys;
   private Category parentCategory;
+  private Order parentOrder;
+  private Cart parentCart;
   public void setId(Integer attribute) {
     this.id = attribute;
   }
   public void setProductName(String attribute) {
     this.productName = attribute;
   }
-  public void setPrice(Integer attribute) {
-    this.price = attribute;
-  }
   public void setDescription(String attribute) {
     this.description = attribute;
   }
-  public void setAttributes(List<Attribute> entities) {
-    this.attributes = entities;
+  public void setUnits(Integer attribute) {
+    this.units = attribute;
+  }
+  public void setPrice(Integer attribute) {
+    this.price = attribute;
+  }
+  public void setAttributeCategorys(List<AttributeCategory> entities) {
+    this.attributecategorys = entities;
   }
   public Integer getId() {
     return this.id;
@@ -33,30 +39,45 @@ public class Product {
   public String getProductName() {
     return this.productName;
   }
-  public Integer getPrice() {
-    return this.price;
-  }
   public String getDescription() {
     return this.description;
+  }
+  public Integer getUnits() {
+    return this.units;
+  }
+  public Integer getPrice() {
+    return this.price;
   }
   public void setParentCategory(Category entity) {
     this.parentCategory = entity;
   }
-  public List<Attribute> getAttributes() {
-    return this.attributes;
+  public void setParentOrder(Order entity) {
+    this.parentOrder = entity;
+  }
+  public void setParentCart(Cart entity) {
+    this.parentCart = entity;
+  }
+  public List<AttributeCategory> getAttributeCategorys() {
+    return this.attributecategorys;
   }
   public Category getParentCategory() {
     return this.parentCategory;
   }
-  public void addAttribute(Attribute attribute) {
-    if (attributes == null) {
-      attributes = new ArrayList<Attribute>();
+  public Order getParentOrder() {
+    return this.parentOrder;
+  }
+  public Cart getParentCart() {
+    return this.parentCart;
+  }
+  public void addAttributeCategory(AttributeCategory attributecategory) {
+    if (attributecategorys == null) {
+      attributecategorys = new ArrayList<AttributeCategory>();
     }
     boolean flag = true;
-    for (Attribute entity : attributes) {
+    for (AttributeCategory entity : attributecategorys) {
     }
     if (flag) {
-      this.attributes.add(attribute);
+      this.attributecategorys.add(attributecategory);
     }
   }
   public Product() {

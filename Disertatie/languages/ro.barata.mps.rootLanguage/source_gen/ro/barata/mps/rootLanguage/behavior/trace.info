@@ -57,6 +57,9 @@
     <file name="SchemaCreator_BehaviorDescriptor.java">
       <unit at="10,0,24,0" name="ro.barata.mps.rootLanguage.behavior.SchemaCreator_BehaviorDescriptor" />
     </file>
+    <file name="SessionObject_BehaviorDescriptor.java">
+      <unit at="6,0,8,0" name="ro.barata.mps.rootLanguage.behavior.SessionObject_BehaviorDescriptor" />
+    </file>
     <file name="StringType_BehaviorDescriptor.java">
       <unit at="6,0,14,0" name="ro.barata.mps.rootLanguage.behavior.StringType_BehaviorDescriptor" />
     </file>

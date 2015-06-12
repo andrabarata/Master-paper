@@ -25,7 +25,7 @@ public class AttributeDAO {
     columns += "table0." + "id" + " \"parent" + "id" + "\",";
     columns += "table0." + "name" + " \"parent" + "name" + "\",";
     columns += "table0." + "value" + " \"parent" + "value" + "\",";
-    String sql = " from " + "Attribute" + " table0";
+    String sql = " from " + "attributes" + " table0";
     String leftJoins = "";
     int i = 1;
 
@@ -74,7 +74,7 @@ public class AttributeDAO {
     if (values.length() > 6) {
       values = " where " + values.substring(0, values.length() - 5);
     }
-    sql += columns + " from " + "Attribute" + values;
+    sql += columns + " from " + "attributes" + values;
     System.out.println("Find entities: " + sql);
     ResultSet set = stmt.executeQuery(sql);
     Attribute foundAttribute = new Attribute();
@@ -89,9 +89,10 @@ public class AttributeDAO {
   }
 
   public void addAttribute(Attribute attribute) throws SQLException, ClassNotFoundException {
-    String sql = "insert into " + "Attribute" + "(";
+    String sql = "insert into " + "attributes" + "(";
     String columns = "";
     String values = "";
+    // Loops through the properties and sets column names and column values 
     if (attribute.getId() != null) {
       columns += "id" + ",";
       values += "'" + attribute.getId() + "',";
@@ -104,20 +105,23 @@ public class AttributeDAO {
       columns += "value" + ",";
       values += "'" + attribute.getAttributeValue() + "',";
     }
+    // Searches for the parent entity, such that it identifies and sets the foreign key columns 
     {
-      Product parentProduct = attribute.getParentProduct();
-      if (parentProduct != null) {
-        columns += "productId" + ",";
-        values += "'" + parentProduct.getId().toString() + "',";
+      AttributeCategory parentAttributeCategory = attribute.getParentAttributeCategory();
+      if (parentAttributeCategory != null) {
+        columns += "attributeCategoryId" + ",";
+        values += "'" + parentAttributeCategory.getId().toString() + "',";
       }
     }
+    // Searches for the reference entities, such that it identifies and sets the foreign key columns 
     sql += columns.substring(0, columns.length() - 1) + ") values (" + values.substring(0, values.length() - 1) + ")";
     System.out.println(sql);
     stmt.execute(sql);
+    // Loops thhrough the children, and adds them recursively to the database 
   }
 
   public void updateAttribute(Attribute oldattribute, Attribute newattribute) throws SQLException, ClassNotFoundException {
-    String sql = "update " + "Attribute" + " set ";
+    String sql = "update " + "attributes" + " set ";
     String values = "";
     if (newattribute.getId() != null) {
       values += "id" + "='" + newattribute.getId() + "',";
@@ -132,10 +136,10 @@ public class AttributeDAO {
       List<String> columnsList = new LinkedList<String>();
       List<String> valuesList = new LinkedList<String>();
       {
-        Product parentProduct = newattribute.getParentProduct();
-        if (parentProduct != null) {
-          columnsList.add("productId");
-          valuesList.add(parentProduct.getId().toString());
+        AttributeCategory parentAttributeCategory = newattribute.getParentAttributeCategory();
+        if (parentAttributeCategory != null) {
+          columnsList.add("attributeCategoryId");
+          valuesList.add(parentAttributeCategory.getId().toString());
         }
       }
       for (int i = 0; i < columnsList.size(); i++) {
@@ -159,8 +163,9 @@ public class AttributeDAO {
   }
 
   public void deleteAttribute(Attribute attribute) throws SQLException {
-    String sql = "delete from " + "Attribute" + " where";
+    String sql = "delete from " + "attributes" + " where";
     String condition = " ";
+    // Loops through the properties 
     if (attribute.getId() != null) {
       condition += "id" + "='" + attribute.getId() + "'";
       condition += " and ";
@@ -176,7 +181,6 @@ public class AttributeDAO {
     sql += condition.substring(0, condition.length() - 5);
     System.out.println(sql);
     stmt.execute(sql);
-
   }
 
 }

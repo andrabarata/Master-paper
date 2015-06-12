@@ -23,16 +23,16 @@ public class UserDAO {
     List<User> users = new ArrayList<User>();
     String columns = "";
     columns += "table0." + "id" + " \"parent" + "id" + "\",";
-    columns += "table0." + "priviledge" + " \"parent" + "priviledge" + "\",";
-    columns += "table0." + "userName" + " \"parent" + "userName" + "\",";
+    columns += "table0." + "name" + " \"parent" + "name" + "\",";
     columns += "table0." + "password" + " \"parent" + "password" + "\",";
-    String sql = " from " + "UserTable" + " table0";
+    columns += "table0." + "priviledge" + " \"parent" + "priviledge" + "\",";
+    String sql = " from " + "users" + " table0";
     String leftJoins = "";
     int i = 1;
-    columns += "table" + i + "." + "id" + " \"" + "PersonTable" + "id" + "\"," + ",";
-    columns += "table" + i + "." + "firstName" + " \"" + "PersonTable" + "firstName" + "\"," + ",";
-    columns += "table" + i + "." + "lastName" + " \"" + "PersonTable" + "lastName" + "\"," + ",";
-    leftJoins += " left join " + "PersonTable" + " table" + i + " on table" + i + "." + "personId" + "=table0." + "id" + " ";
+    columns += "table" + i + "." + "id" + " \"" + "persons" + "id" + "\"," + ",";
+    columns += "table" + i + "." + "firstName" + " \"" + "persons" + "firstName" + "\"," + ",";
+    columns += "table" + i + "." + "lastName" + " \"" + "persons" + "lastName" + "\"," + ",";
+    leftJoins += " left join " + "persons" + " table" + i + " on table" + i + "." + "userId" + "=table0." + "id" + " ";
     i++;
 
     sql = "select " + columns.substring(0, columns.length() - 1) + sql + leftJoins;
@@ -42,19 +42,19 @@ public class UserDAO {
     while (set.next()) {
       foundUser = new User();
       foundUser.setUserId(Integer.valueOf(set.getBigDecimal("parent" + "id").intValue()));
-      foundUser.setPriviledge(set.getString("parent" + "priviledge"));
-      foundUser.setUserName(set.getString("parent" + "userName"));
+      foundUser.setUserName(set.getString("parent" + "name"));
       foundUser.setPassword(set.getString("parent" + "password"));
+      foundUser.setPriviledge(set.getString("parent" + "priviledge"));
       {
         Person reference = new Person();
-        if (set.getBigDecimal("PersonTable" + "id") != null) {
-          reference.setId(Integer.valueOf(set.getBigDecimal("PersonTable" + "id").intValue()));
+        if (set.getBigDecimal("persons" + "id") != null) {
+          reference.setId(Integer.valueOf(set.getBigDecimal("persons" + "id").intValue()));
         }
-        if (set.getString("PersonTable" + "firstName") != null) {
-          reference.setFirstName(set.getString("PersonTable" + "firstName"));
+        if (set.getString("persons" + "firstName") != null) {
+          reference.setFirstName(set.getString("persons" + "firstName"));
         }
-        if (set.getString("PersonTable" + "lastName") != null) {
-          reference.setLastName(set.getString("PersonTable" + "lastName"));
+        if (set.getString("persons" + "lastName") != null) {
+          reference.setLastName(set.getString("persons" + "lastName"));
         }
 
         if (reference.getId() != null) {
@@ -80,96 +80,99 @@ public class UserDAO {
     String columns = "";
     columns += "id";
     columns += ",";
-    columns += "priviledge";
-    columns += ",";
-    columns += "userName";
+    columns += "name";
     columns += ",";
     columns += "password";
+    columns += ",";
+    columns += "priviledge";
     String values = "";
     if (user.getUserId() != null) {
       values += "id" + "='" + user.getUserId() + "' and ";
     }
-    if (user.getPriviledge() != null) {
-      values += "priviledge" + "='" + user.getPriviledge() + "' and ";
-    }
     if (user.getUserName() != null) {
-      values += "userName" + "='" + user.getUserName() + "' and ";
+      values += "name" + "='" + user.getUserName() + "' and ";
     }
     if (user.getPassword() != null) {
       values += "password" + "='" + user.getPassword() + "' and ";
+    }
+    if (user.getPriviledge() != null) {
+      values += "priviledge" + "='" + user.getPriviledge() + "' and ";
     }
     int i = 1;
     if (values.length() > 6) {
       values = " where " + values.substring(0, values.length() - 5);
     }
-    sql += columns + " from " + "UserTable" + values;
+    sql += columns + " from " + "users" + values;
     System.out.println("Find entities: " + sql);
     ResultSet set = stmt.executeQuery(sql);
     User foundUser = new User();
     while (set.next()) {
       foundUser = new User();
       foundUser.setUserId(Integer.valueOf(set.getBigDecimal("id").intValue()));
-      foundUser.setPriviledge(set.getString("priviledge"));
-      foundUser.setUserName(set.getString("userName"));
+      foundUser.setUserName(set.getString("name"));
       foundUser.setPassword(set.getString("password"));
+      foundUser.setPriviledge(set.getString("priviledge"));
       users.add(foundUser);
     }
     return users;
   }
 
   public void addUser(User user) throws SQLException, ClassNotFoundException {
-    String sql = "insert into " + "UserTable" + "(";
+    String sql = "insert into " + "users" + "(";
     String columns = "";
     String values = "";
+    // Loops through the properties and sets column names and column values 
     if (user.getUserId() != null) {
       columns += "id" + ",";
       values += "'" + user.getUserId() + "',";
     }
-    if (user.getPriviledge() != null) {
-      columns += "priviledge" + ",";
-      values += "'" + user.getPriviledge() + "',";
-    }
     if (user.getUserName() != null) {
-      columns += "userName" + ",";
+      columns += "name" + ",";
       values += "'" + user.getUserName() + "',";
     }
     if (user.getPassword() != null) {
       columns += "password" + ",";
       values += "'" + user.getPassword() + "',";
     }
+    if (user.getPriviledge() != null) {
+      columns += "priviledge" + ",";
+      values += "'" + user.getPriviledge() + "',";
+    }
+    // Searches for the parent entity, such that it identifies and sets the foreign key columns 
     {
       Shop parentShop = user.getParentShop();
       if (parentShop != null) {
-        columns += "shopId" + ",";
-        values += "'" + parentShop.getId().toString() + "',";
+        columns += "users" + ",";
       }
     }
+    // Searches for the reference entities, such that it identifies and sets the foreign key columns 
     if (user.getPerson() != null) {
       Person referencePerson = user.getPerson();
       PersonDAO referencePersonDAO = new PersonDAO(connn);
       referencePersonDAO.addPerson(referencePerson);
-      columns += "personId" + ",";
+      columns += "userId" + ",";
       values += "'" + referencePerson.getId() + "',";
     }
     sql += columns.substring(0, columns.length() - 1) + ") values (" + values.substring(0, values.length() - 1) + ")";
     System.out.println(sql);
     stmt.execute(sql);
+    // Loops thhrough the children, and adds them recursively to the database 
   }
 
   public void updateUser(User olduser, User newuser) throws SQLException, ClassNotFoundException {
-    String sql = "update " + "UserTable" + " set ";
+    String sql = "update " + "users" + " set ";
     String values = "";
     if (newuser.getUserId() != null) {
       values += "id" + "='" + newuser.getUserId() + "',";
     }
-    if (newuser.getPriviledge() != null) {
-      values += "priviledge" + "='" + newuser.getPriviledge() + "',";
-    }
     if (newuser.getUserName() != null) {
-      values += "userName" + "='" + newuser.getUserName() + "',";
+      values += "name" + "='" + newuser.getUserName() + "',";
     }
     if (newuser.getPassword() != null) {
       values += "password" + "='" + newuser.getPassword() + "',";
+    }
+    if (newuser.getPriviledge() != null) {
+      values += "priviledge" + "='" + newuser.getPriviledge() + "',";
     }
     {
       List<String> columnsList = new LinkedList<String>();
@@ -177,8 +180,7 @@ public class UserDAO {
       {
         Shop parentShop = newuser.getParentShop();
         if (parentShop != null) {
-          columnsList.add("shopId");
-          valuesList.add(parentShop.getId().toString());
+          columnsList.add("users");
         }
       }
       for (int i = 0; i < columnsList.size(); i++) {
@@ -189,20 +191,20 @@ public class UserDAO {
       Person referencePerson = newuser.getPerson();
       PersonDAO referencePersonDAO = new PersonDAO(connn);
       referencePersonDAO.addPerson(referencePerson);
-      values += "personId" + "=" + "'" + referencePerson.getId() + "'";
+      values += "userId" + "=" + "'" + referencePerson.getId() + "'";
     }
     String condition = " where ";
     if (olduser.getUserId() != null) {
       condition += "id" + "='" + olduser.getUserId() + "' and ";
     }
-    if (olduser.getPriviledge() != null) {
-      condition += "priviledge" + "='" + olduser.getPriviledge() + "' and ";
-    }
     if (olduser.getUserName() != null) {
-      condition += "userName" + "='" + olduser.getUserName() + "' and ";
+      condition += "name" + "='" + olduser.getUserName() + "' and ";
     }
     if (olduser.getPassword() != null) {
       condition += "password" + "='" + olduser.getPassword() + "' and ";
+    }
+    if (olduser.getPriviledge() != null) {
+      condition += "priviledge" + "='" + olduser.getPriviledge() + "' and ";
     }
     sql += values.substring(0, values.length() - 1) + condition.substring(0, condition.length() - 4);
     System.out.println(sql);
@@ -211,28 +213,28 @@ public class UserDAO {
   }
 
   public void deleteUser(User user) throws SQLException {
-    String sql = "delete from " + "UserTable" + " where";
+    String sql = "delete from " + "users" + " where";
     String condition = " ";
+    // Loops through the properties 
     if (user.getUserId() != null) {
       condition += "id" + "='" + user.getUserId() + "'";
       condition += " and ";
     }
-    if (user.getPriviledge() != null) {
-      condition += "priviledge" + "='" + user.getPriviledge() + "'";
-      condition += " and ";
-    }
     if (user.getUserName() != null) {
-      condition += "userName" + "='" + user.getUserName() + "'";
+      condition += "name" + "='" + user.getUserName() + "'";
       condition += " and ";
     }
     if (user.getPassword() != null) {
       condition += "password" + "='" + user.getPassword() + "'";
       condition += " and ";
     }
+    if (user.getPriviledge() != null) {
+      condition += "priviledge" + "='" + user.getPriviledge() + "'";
+      condition += " and ";
+    }
     sql += condition.substring(0, condition.length() - 5);
     System.out.println(sql);
     stmt.execute(sql);
-
   }
 
 }
