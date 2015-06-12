@@ -19,7 +19,6 @@ public class SchemaGenerator {
     sql += "id" + " " + "integer" + ",";
     sql += "name" + " " + "varchar(256)" + ",";
     sql += "categoryId" + " " + "integer" + ",";
-    sql += "categories" + " " + "integer" + ",";
     if (primaryKey.length() == 0) {
       sql = sql.substring(0, sql.length() - 1);
     }
@@ -39,8 +38,6 @@ public class SchemaGenerator {
     sql += "units" + " " + "integer" + ",";
     sql += "price" + " " + "integer" + ",";
     sql += "categoryId" + " " + "integer" + ",";
-    sql += "orderI" + " " + "integer" + ",";
-    sql += "products" + " " + "integer" + ",";
     if (primaryKey.length() == 0) {
       sql = sql.substring(0, sql.length() - 1);
     }
@@ -58,8 +55,6 @@ public class SchemaGenerator {
     sql += "subject" + " " + "varchar(256)" + ",";
     sql += "description" + " " + "varchar(256)" + ",";
     sql += "categoryId" + " " + "integer" + ",";
-    sql += "orderId" + " " + "integer" + ",";
-    sql += "discounts" + " " + "integer" + ",";
     if (primaryKey.length() == 0) {
       sql = sql.substring(0, sql.length() - 1);
     }
@@ -111,7 +106,6 @@ public class SchemaGenerator {
     sql += "password" + " " + "varchar(256)" + ",";
     sql += "priviledge" + " " + "varchar(256)" + ",";
     sql += "userId" + " " + "integer" + ",";
-    sql += "users" + " " + "integer" + ",";
     if (primaryKey.length() == 0) {
       sql = sql.substring(0, sql.length() - 1);
     }
@@ -161,32 +155,27 @@ public class SchemaGenerator {
     primaryKey = "primary key(";
     primaryKey += "id";
     primaryKey += ")";
-    sql = "create table " + "OrderTable" + "(";
+    sql = "create table " + "orderItems" + "(";
     sql += "id" + " " + "integer" + ",";
+    sql += "productId" + " " + "integer" + ",";
+    sql += "promotionId" + " " + "integer" + ",";
+    sql += "orderId" + " " + "integer" + ",";
+    if (primaryKey.length() == 0) {
+      sql = sql.substring(0, sql.length() - 1);
+    }
+    sql += primaryKey;
+    sql += ")";
+    System.out.println(sql);
+    stmt.execute(sql);
+
+    primaryKey = "";
+    primaryKey = "primary key(";
+    primaryKey += "id";
+    primaryKey += ")";
+    sql = "create table " + "orders" + "(";
+    sql += "id" + " " + "integer" + ",";
+    sql += "dateCreated" + " " + "integer" + ",";
     sql += "status" + " " + "varchar(256)" + ",";
-    sql += "creationDate" + " " + "integer" + ",";
-    if (primaryKey.length() == 0) {
-      sql = sql.substring(0, sql.length() - 1);
-    }
-    sql += primaryKey;
-    sql += ")";
-    System.out.println(sql);
-    stmt.execute(sql);
-
-    primaryKey = "";
-    sql = "create table " + "Cart" + "(";
-    if (primaryKey.length() == 0) {
-      sql = sql.substring(0, sql.length() - 1);
-    }
-    sql += primaryKey;
-    sql += ")";
-    System.out.println(sql);
-    stmt.execute(sql);
-
-    primaryKey = "";
-    sql = "create table " + "Shop" + "(";
-    sql += "id" + " " + "integer" + ",";
-    sql += "name" + " " + "varchar(256)" + ",";
     if (primaryKey.length() == 0) {
       sql = sql.substring(0, sql.length() - 1);
     }
@@ -204,23 +193,8 @@ public class SchemaGenerator {
     System.out.println(sql);
     stmt.execute(sql);
 
-    sql = "alter table " + "categories" + " add constraint fk_" + "categories" + "_" + "categories";
-    sql += " foreign key (" + "categories" + ") references " + "Shop" + "(" + "id" + ")";
-    System.out.println(sql);
-    stmt.execute(sql);
-
     sql = "alter table " + "products" + " add constraint fk_" + "products" + "_" + "categoryId";
     sql += " foreign key (" + "categoryId" + ") references " + "categories" + "(" + "id" + ")";
-    System.out.println(sql);
-    stmt.execute(sql);
-
-    sql = "alter table " + "products" + " add constraint fk_" + "products" + "_" + "orderI";
-    sql += " foreign key (" + "orderI" + ") references " + "OrderTable" + "(" + "id" + ")";
-    System.out.println(sql);
-    stmt.execute(sql);
-
-    sql = "alter table " + "products" + " add constraint fk_" + "products" + "_" + "products";
-    sql += " foreign key (" + "products" + ") references " + "Cart" + "(" + "id" + ")";
     System.out.println(sql);
     stmt.execute(sql);
 
@@ -229,22 +203,12 @@ public class SchemaGenerator {
     System.out.println(sql);
     stmt.execute(sql);
 
-    sql = "alter table " + "discounts" + " add constraint fk_" + "discounts" + "_" + "orderId";
-    sql += " foreign key (" + "orderId" + ") references " + "OrderTable" + "(" + "id" + ")";
-    System.out.println(sql);
-    stmt.execute(sql);
-
-    sql = "alter table " + "discounts" + " add constraint fk_" + "discounts" + "_" + "discounts";
-    sql += " foreign key (" + "discounts" + ") references " + "Cart" + "(" + "id" + ")";
-    System.out.println(sql);
-    stmt.execute(sql);
-
-    sql = "alter table " + "attributeCategories" + " add constraint fk_" + "attributeCategories" + "_" + "productId";
+    sql = "alter table " + "attributeCategories" + " add constraint fk_" + "attributeCat" + "_" + "productId";
     sql += " foreign key (" + "productId" + ") references " + "products" + "(" + "id" + ")";
     System.out.println(sql);
     stmt.execute(sql);
 
-    sql = "alter table " + "attributes" + " add constraint fk_" + "attributes" + "_" + "attributeCategoryId";
+    sql = "alter table " + "attributes" + " add constraint fk_" + "attributes" + "_" + "attributeCat";
     sql += " foreign key (" + "attributeCategoryId" + ") references " + "attributeCategories" + "(" + "id" + ")";
     System.out.println(sql);
     stmt.execute(sql);
@@ -253,15 +217,23 @@ public class SchemaGenerator {
     sql += " foreign key (" + "userId" + ") references " + "persons" + "(" + "id" + ")";
     System.out.println(sql);
     stmt.execute(sql);
-    sql = "alter table " + "users" + " add constraint fk_" + "users" + "_" + "users";
-    sql += " foreign key (" + "users" + ") references " + "Shop" + "(" + "id" + ")";
-    System.out.println(sql);
-    stmt.execute(sql);
-
     sql = "alter table " + "persons" + " add constraint fk_" + "persons" + "_" + "personId";
     sql += " foreign key (" + "personId" + ") references " + "adresses" + "(" + "id" + ")";
     System.out.println(sql);
     stmt.execute(sql);
+    sql = "alter table " + "orderItems" + " add constraint fk_" + "orderItems" + "_" + "productId";
+    sql += " foreign key (" + "productId" + ") references " + "products" + "(" + "id" + ")";
+    System.out.println(sql);
+    stmt.execute(sql);
+    sql = "alter table " + "orderItems" + " add constraint fk_" + "orderItems" + "_" + "promotionId";
+    sql += " foreign key (" + "promotionId" + ") references " + "discounts" + "(" + "id" + ")";
+    System.out.println(sql);
+    stmt.execute(sql);
+    sql = "alter table " + "orderItems" + " add constraint fk_" + "orderItems" + "_" + "orderId";
+    sql += " foreign key (" + "orderId" + ") references " + "orders" + "(" + "id" + ")";
+    System.out.println(sql);
+    stmt.execute(sql);
+
   }
 
   private static void dropTables(Statement stmt) throws ClassNotFoundException, SQLException {
@@ -290,13 +262,10 @@ public class SchemaGenerator {
     sql = "drop table " + "adresses" + " cascade constraints";
     stmt.executeUpdate(sql);
 
-    sql = "drop table " + "OrderTable" + " cascade constraints";
+    sql = "drop table " + "orderItems" + " cascade constraints";
     stmt.executeUpdate(sql);
 
-    sql = "drop table " + "Cart" + " cascade constraints";
-    stmt.executeUpdate(sql);
-
-    sql = "drop table " + "Shop" + " cascade constraints";
+    sql = "drop table " + "orders" + " cascade constraints";
     stmt.executeUpdate(sql);
 
   }

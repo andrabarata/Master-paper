@@ -114,13 +114,6 @@ public class DiscountDAO {
       }
     }
     {
-      Order parentOrder = discount.getParentOrder();
-      if (parentOrder != null) {
-        columns += "orderId" + ",";
-        values += "'" + parentOrder.getId().toString() + "',";
-      }
-    }
-    {
       Cart parentCart = discount.getParentCart();
       if (parentCart != null) {
         columns += "discounts" + ",";
@@ -153,13 +146,6 @@ public class DiscountDAO {
         if (parentCategory != null) {
           columnsList.add("categoryId");
           valuesList.add(parentCategory.getId().toString());
-        }
-      }
-      {
-        Order parentOrder = newdiscount.getParentOrder();
-        if (parentOrder != null) {
-          columnsList.add("orderId");
-          valuesList.add(parentOrder.getId().toString());
         }
       }
       {

@@ -244,7 +244,6 @@
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.Cart" />
     <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.Category" />
-    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.Order" />
   </dependency>
   <dependency className="ro.barata.mps.boLanguage.sandbox.DiscountDAO" file="DiscountDAO.java">
     <classNode dependClassName="java.lang.ClassNotFoundException" />
@@ -261,7 +260,6 @@
     <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.Cart" />
     <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.Category" />
     <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.Discount" />
-    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.Order" />
   </dependency>
   <dependency className="ro.barata.mps.boLanguage.sandbox.FileStructureGenerator" file="FileStructureGenerator.java">
     <classNode dependClassName="java.io.File" />
@@ -291,7 +289,6 @@
     <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.FileStructureGenerator" />
     <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.HomeServlet" />
     <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.LoginServlet" />
-    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.OrderServlet" />
     <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.OrdersServlet" />
     <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.ProductServlet" />
     <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.ProductsServlet" />
@@ -356,8 +353,7 @@
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.util.ArrayList" />
     <classNode dependClassName="java.util.List" />
-    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.Discount" />
-    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.Product" />
+    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.OrderItem" />
   </dependency>
   <dependency className="ro.barata.mps.boLanguage.sandbox.OrderDAO" file="OrderDAO.java">
     <classNode dependClassName="java.lang.ClassNotFoundException" />
@@ -370,38 +366,40 @@
     <classNode dependClassName="java.sql.Statement" />
     <classNode dependClassName="java.util.ArrayList" />
     <classNode dependClassName="java.util.List" />
-    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.Discount" />
-    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.DiscountDAO" />
     <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.Order" />
-    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.Product" />
-    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.ProductDAO" />
+    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.OrderItem" />
+    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.OrderItemDAO" />
   </dependency>
   <dependency className="ro.barata.mps.boLanguage.sandbox.OrderGenerator" file="OrderGenerator.java">
     <classNode dependClassName="java.lang.ClassNotFoundException" />
     <classNode dependClassName="java.lang.String" />
-    <classNode dependClassName="java.sql.Connection" />
     <classNode dependClassName="java.sql.SQLException" />
-    <classNode dependClassName="java.util.List" />
     <classNode dependClassName="javax.servlet.http.HttpSession" />
-    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.ClientframeGenerator" />
-    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.DatabaseConnection" />
-    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.Order" />
-    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.OrderDAO" />
   </dependency>
-  <dependency className="ro.barata.mps.boLanguage.sandbox.OrderServlet" file="OrderServlet.java">
-    <classNode dependClassName="java.io.IOException" />
+  <dependency className="ro.barata.mps.boLanguage.sandbox.OrderItem" file="OrderItem.java">
+    <classNode dependClassName="java.lang.Integer" />
+    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.Discount" />
+    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.Order" />
+    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.Product" />
+  </dependency>
+  <dependency className="ro.barata.mps.boLanguage.sandbox.OrderItemDAO" file="OrderItemDAO.java">
     <classNode dependClassName="java.lang.ClassNotFoundException" />
-    <classNode dependClassName="java.lang.Exception" />
+    <classNode dependClassName="java.lang.Integer" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.lang.System" />
     <classNode dependClassName="java.sql.Connection" />
+    <classNode dependClassName="java.sql.ResultSet" />
     <classNode dependClassName="java.sql.SQLException" />
-    <classNode dependClassName="javax.servlet.ServletException" />
-    <classNode dependClassName="javax.servlet.http.HttpServletRequest" />
-    <classNode dependClassName="javax.servlet.http.HttpServletResponse" />
-    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.DatabaseConnection" />
-    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.OrderGenerator" />
-    <classNode extendsClassName="javax.servlet.http.HttpServlet" />
+    <classNode dependClassName="java.sql.Statement" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.LinkedList" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.Discount" />
+    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.DiscountDAO" />
+    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.Order" />
+    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.OrderItem" />
+    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.Product" />
+    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.ProductDAO" />
   </dependency>
   <dependency className="ro.barata.mps.boLanguage.sandbox.OrdersGenerator" file="OrdersGenerator.java">
     <classNode dependClassName="java.lang.ClassNotFoundException" />
@@ -458,7 +456,6 @@
     <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.AttributeCategory" />
     <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.Cart" />
     <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.Category" />
-    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.Order" />
   </dependency>
   <dependency className="ro.barata.mps.boLanguage.sandbox.ProductDAO" file="ProductDAO.java">
     <classNode dependClassName="java.lang.ClassNotFoundException" />
@@ -476,7 +473,6 @@
     <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.AttributeCategoryDAO" />
     <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.Cart" />
     <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.Category" />
-    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.Order" />
     <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.Product" />
   </dependency>
   <dependency className="ro.barata.mps.boLanguage.sandbox.ProductGenerator" file="ProductGenerator.java">
@@ -590,7 +586,6 @@
   <dependency className="ro.barata.mps.boLanguage.sandbox.general" file="general.js" />
   <dependency className="ro.barata.mps.boLanguage.sandbox.login" file="login.js" />
   <dependency className="ro.barata.mps.boLanguage.sandbox.main" file="main.css" />
-  <dependency className="ro.barata.mps.boLanguage.sandbox.order" file="order.js" />
   <dependency className="ro.barata.mps.boLanguage.sandbox.products" file="products.js" />
 </dependenciesRoot>
 

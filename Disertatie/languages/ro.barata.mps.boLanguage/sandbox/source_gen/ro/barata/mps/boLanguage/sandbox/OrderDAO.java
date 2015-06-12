@@ -22,22 +22,13 @@ public class OrderDAO {
     List<Order> orders = new ArrayList<Order>();
     String columns = "";
     columns += "table0." + "id" + " \"parent" + "id" + "\",";
+    columns += "table0." + "dateCreated" + " \"parent" + "dateCreated" + "\",";
     columns += "table0." + "status" + " \"parent" + "status" + "\",";
-    columns += "table0." + "creationDate" + " \"parent" + "creationDate" + "\",";
-    String sql = " from " + "OrderTable" + " table0";
+    String sql = " from " + "orders" + " table0";
     String leftJoins = "";
     int i = 1;
-    columns += "table" + i + "." + "id" + " \"" + "products" + "id" + "\",";
-    columns += "table" + i + "." + "name" + " \"" + "products" + "name" + "\",";
-    columns += "table" + i + "." + "description" + " \"" + "products" + "description" + "\",";
-    columns += "table" + i + "." + "units" + " \"" + "products" + "units" + "\",";
-    columns += "table" + i + "." + "price" + " \"" + "products" + "price" + "\",";
-    leftJoins += " left join " + "products" + " table" + i + " on table" + i + "." + "orderI" + "=table0." + "id" + " ";
-    i++;
-    columns += "table" + i + "." + "id" + " \"" + "discounts" + "id" + "\",";
-    columns += "table" + i + "." + "subject" + " \"" + "discounts" + "subject" + "\",";
-    columns += "table" + i + "." + "description" + " \"" + "discounts" + "description" + "\",";
-    leftJoins += " left join " + "discounts" + " table" + i + " on table" + i + "." + "orderId" + "=table0." + "id" + " ";
+    columns += "table" + i + "." + "id" + " \"" + "orderItems" + "id" + "\",";
+    leftJoins += " left join " + "orderItems" + " table" + i + " on table" + i + "." + "orderId" + "=table0." + "id" + " ";
     i++;
 
     sql = "select " + columns.substring(0, columns.length() - 1) + sql + leftJoins;
@@ -47,42 +38,15 @@ public class OrderDAO {
     while (set.next()) {
       foundOrder = new Order();
       foundOrder.setId(Integer.valueOf(set.getBigDecimal("parent" + "id").intValue()));
+      foundOrder.setDateCreated(Integer.valueOf(set.getBigDecimal("parent" + "dateCreated").intValue()));
       foundOrder.setStatus(set.getString("parent" + "status"));
-      foundOrder.setDateCreated(Integer.valueOf(set.getBigDecimal("parent" + "creationDate").intValue()));
       {
-        Product child = new Product();
-        if (set.getBigDecimal("products" + "id") != null) {
-          child.setId(Integer.valueOf(set.getBigDecimal("products" + "id").intValue()));
-        }
-        if (set.getString("products" + "name") != null) {
-          child.setProductName(set.getString("products" + "name"));
-        }
-        if (set.getString("products" + "description") != null) {
-          child.setDescription(set.getString("products" + "description"));
-        }
-        if (set.getBigDecimal("products" + "units") != null) {
-          child.setUnits(Integer.valueOf(set.getBigDecimal("products" + "units").intValue()));
-        }
-        if (set.getBigDecimal("products" + "price") != null) {
-          child.setPrice(Integer.valueOf(set.getBigDecimal("products" + "price").intValue()));
+        OrderItem child = new OrderItem();
+        if (set.getBigDecimal("orderItems" + "id") != null) {
+          child.setId(Integer.valueOf(set.getBigDecimal("orderItems" + "id").intValue()));
         }
         if (child.getId() != null) {
-          foundOrder.addProduct(child);
-        }
-      }
-      {
-        Discount child = new Discount();
-        if (set.getBigDecimal("discounts" + "id") != null) {
-          child.setId(Integer.valueOf(set.getBigDecimal("discounts" + "id").intValue()));
-        }
-        if (set.getString("discounts" + "subject") != null) {
-          child.setSubject(set.getString("discounts" + "subject"));
-        }
-        if (set.getString("discounts" + "description") != null) {
-          child.setDescription(set.getString("discounts" + "description"));
-        }
-        if (child.getId() != null) {
-          foundOrder.addDiscount(child);
+          foundOrder.addOrderItem(child);
         }
       }
       boolean flag = true;
@@ -104,121 +68,71 @@ public class OrderDAO {
     String columns = "";
     columns += "id";
     columns += ",";
-    columns += "status";
+    columns += "dateCreated";
     columns += ",";
-    columns += "creationDate";
+    columns += "status";
     String values = "";
     if (order.getId() != null) {
       values += "id" + "='" + order.getId() + "' and ";
     }
+    if (order.getDateCreated() != null) {
+      values += "dateCreated" + "='" + order.getDateCreated() + "' and ";
+    }
     if (order.getStatus() != null) {
       values += "status" + "='" + order.getStatus() + "' and ";
-    }
-    if (order.getDateCreated() != null) {
-      values += "creationDate" + "='" + order.getDateCreated() + "' and ";
     }
     int i = 1;
     if (values.length() > 6) {
       values = " where " + values.substring(0, values.length() - 5);
     }
-    sql += columns + " from " + "OrderTable" + values;
+    sql += columns + " from " + "orders" + values;
     System.out.println("Find entities: " + sql);
     ResultSet set = stmt.executeQuery(sql);
     Order foundOrder = new Order();
     while (set.next()) {
       foundOrder = new Order();
       foundOrder.setId(Integer.valueOf(set.getBigDecimal("id").intValue()));
+      foundOrder.setDateCreated(Integer.valueOf(set.getBigDecimal("dateCreated").intValue()));
       foundOrder.setStatus(set.getString("status"));
-      foundOrder.setDateCreated(Integer.valueOf(set.getBigDecimal("creationDate").intValue()));
       orders.add(foundOrder);
     }
     return orders;
   }
-  public List<Product> findChildProducts(Order parent) throws SQLException {
-    List<Product> products = new ArrayList<Product>();
+  public List<OrderItem> findChildOrderItems(Order parent) throws SQLException {
+    List<OrderItem> orderitems = new ArrayList<OrderItem>();
     String sql = "select ";
     String columns = "";
     columns += "id";
-    columns += ",";
-    columns += "name";
-    columns += ",";
-    columns += "description";
-    columns += ",";
-    columns += "units";
-    columns += ",";
-    columns += "price";
     sql += columns;
-    sql += " from " + "products" + " where " + "orderI" + " in (select " + "id" + " from " + "OrderTable";
+    sql += " from " + "orderItems" + " where " + "orderId" + " in (select " + "id" + " from " + "orders";
     if (parent != null) {
       sql += " where ";
       String values = "";
       if (parent.getId() != null) {
         values += "id" + "='" + parent.getId() + "'and ";
       }
+      if (parent.getDateCreated() != null) {
+        values += "dateCreated" + "='" + parent.getDateCreated() + "'and ";
+      }
       if (parent.getStatus() != null) {
         values += "status" + "='" + parent.getStatus() + "'and ";
-      }
-      if (parent.getDateCreated() != null) {
-        values += "creationDate" + "='" + parent.getDateCreated() + "'and ";
       }
       sql += values.substring(0, values.length() - 4);
     }
     sql += ")";
     System.out.println(sql);
     ResultSet set = stmt.executeQuery(sql);
-    Product foundProduct = new Product();
+    OrderItem foundOrderItem = new OrderItem();
     while (set.next()) {
-      foundProduct = new Product();
-      foundProduct.setId(Integer.valueOf(set.getBigDecimal("id").intValue()));
-      foundProduct.setProductName(set.getString("name"));
-      foundProduct.setDescription(set.getString("description"));
-      foundProduct.setUnits(Integer.valueOf(set.getBigDecimal("units").intValue()));
-      foundProduct.setPrice(Integer.valueOf(set.getBigDecimal("price").intValue()));
-      products.add(foundProduct);
+      foundOrderItem = new OrderItem();
+      foundOrderItem.setId(Integer.valueOf(set.getBigDecimal("id").intValue()));
+      orderitems.add(foundOrderItem);
     }
-    return products;
-  }
-  public List<Discount> findChildDiscounts(Order parent) throws SQLException {
-    List<Discount> discounts = new ArrayList<Discount>();
-    String sql = "select ";
-    String columns = "";
-    columns += "id";
-    columns += ",";
-    columns += "subject";
-    columns += ",";
-    columns += "description";
-    sql += columns;
-    sql += " from " + "discounts" + " where " + "orderId" + " in (select " + "id" + " from " + "OrderTable";
-    if (parent != null) {
-      sql += " where ";
-      String values = "";
-      if (parent.getId() != null) {
-        values += "id" + "='" + parent.getId() + "'and ";
-      }
-      if (parent.getStatus() != null) {
-        values += "status" + "='" + parent.getStatus() + "'and ";
-      }
-      if (parent.getDateCreated() != null) {
-        values += "creationDate" + "='" + parent.getDateCreated() + "'and ";
-      }
-      sql += values.substring(0, values.length() - 4);
-    }
-    sql += ")";
-    System.out.println(sql);
-    ResultSet set = stmt.executeQuery(sql);
-    Discount foundDiscount = new Discount();
-    while (set.next()) {
-      foundDiscount = new Discount();
-      foundDiscount.setId(Integer.valueOf(set.getBigDecimal("id").intValue()));
-      foundDiscount.setSubject(set.getString("subject"));
-      foundDiscount.setDescription(set.getString("description"));
-      discounts.add(foundDiscount);
-    }
-    return discounts;
+    return orderitems;
   }
 
   public void addOrder(Order order) throws SQLException, ClassNotFoundException {
-    String sql = "insert into " + "OrderTable" + "(";
+    String sql = "insert into " + "orders" + "(";
     String columns = "";
     String values = "";
     // Loops through the properties and sets column names and column values 
@@ -226,13 +140,13 @@ public class OrderDAO {
       columns += "id" + ",";
       values += "'" + order.getId() + "',";
     }
+    if (order.getDateCreated() != null) {
+      columns += "dateCreated" + ",";
+      values += "'" + order.getDateCreated() + "',";
+    }
     if (order.getStatus() != null) {
       columns += "status" + ",";
       values += "'" + order.getStatus() + "',";
-    }
-    if (order.getDateCreated() != null) {
-      columns += "creationDate" + ",";
-      values += "'" + order.getDateCreated() + "',";
     }
     // Searches for the parent entity, such that it identifies and sets the foreign key columns 
     // Searches for the reference entities, such that it identifies and sets the foreign key columns 
@@ -240,74 +154,62 @@ public class OrderDAO {
     System.out.println(sql);
     stmt.execute(sql);
     // Loops thhrough the children, and adds them recursively to the database 
-    if (order.getProducts() != null) {
-      ProductDAO childProductDAO = new ProductDAO(connn);
-      for (Product childProduct : order.getProducts()) {
-        childProductDAO.addProduct(childProduct);
-      }
-    }
-    if (order.getDiscounts() != null) {
-      DiscountDAO childDiscountDAO = new DiscountDAO(connn);
-      for (Discount childDiscount : order.getDiscounts()) {
-        childDiscountDAO.addDiscount(childDiscount);
+    if (order.getOrderItems() != null) {
+      OrderItemDAO childOrderItemDAO = new OrderItemDAO(connn);
+      for (OrderItem childOrderItem : order.getOrderItems()) {
+        childOrderItemDAO.addOrderItem(childOrderItem);
       }
     }
   }
 
   public void updateOrder(Order oldorder, Order neworder) throws SQLException, ClassNotFoundException {
-    String sql = "update " + "OrderTable" + " set ";
+    String sql = "update " + "orders" + " set ";
     String values = "";
     if (neworder.getId() != null) {
       values += "id" + "='" + neworder.getId() + "',";
     }
+    if (neworder.getDateCreated() != null) {
+      values += "dateCreated" + "='" + neworder.getDateCreated() + "',";
+    }
     if (neworder.getStatus() != null) {
       values += "status" + "='" + neworder.getStatus() + "',";
-    }
-    if (neworder.getDateCreated() != null) {
-      values += "creationDate" + "='" + neworder.getDateCreated() + "',";
     }
     String condition = " where ";
     if (oldorder.getId() != null) {
       condition += "id" + "='" + oldorder.getId() + "' and ";
     }
+    if (oldorder.getDateCreated() != null) {
+      condition += "dateCreated" + "='" + oldorder.getDateCreated() + "' and ";
+    }
     if (oldorder.getStatus() != null) {
       condition += "status" + "='" + oldorder.getStatus() + "' and ";
-    }
-    if (oldorder.getDateCreated() != null) {
-      condition += "creationDate" + "='" + oldorder.getDateCreated() + "' and ";
     }
     sql += values.substring(0, values.length() - 1) + condition.substring(0, condition.length() - 4);
     System.out.println(sql);
     stmt.execute(sql);
-    if (neworder.getProducts() != null) {
-      ProductDAO childProductDAO = new ProductDAO(connn);
-      for (Product childProduct : neworder.getProducts()) {
-        childProductDAO.addProduct(childProduct);
-      }
-    }
-    if (neworder.getDiscounts() != null) {
-      DiscountDAO childDiscountDAO = new DiscountDAO(connn);
-      for (Discount childDiscount : neworder.getDiscounts()) {
-        childDiscountDAO.addDiscount(childDiscount);
+    if (neworder.getOrderItems() != null) {
+      OrderItemDAO childOrderItemDAO = new OrderItemDAO(connn);
+      for (OrderItem childOrderItem : neworder.getOrderItems()) {
+        childOrderItemDAO.addOrderItem(childOrderItem);
       }
     }
 
   }
 
   public void deleteOrder(Order order) throws SQLException {
-    String sql = "delete from " + "OrderTable" + " where";
+    String sql = "delete from " + "orders" + " where";
     String condition = " ";
     // Loops through the properties 
     if (order.getId() != null) {
       condition += "id" + "='" + order.getId() + "'";
       condition += " and ";
     }
-    if (order.getStatus() != null) {
-      condition += "status" + "='" + order.getStatus() + "'";
+    if (order.getDateCreated() != null) {
+      condition += "dateCreated" + "='" + order.getDateCreated() + "'";
       condition += " and ";
     }
-    if (order.getDateCreated() != null) {
-      condition += "creationDate" + "='" + order.getDateCreated() + "'";
+    if (order.getStatus() != null) {
+      condition += "status" + "='" + order.getStatus() + "'";
       condition += " and ";
     }
     sql += condition.substring(0, condition.length() - 5);

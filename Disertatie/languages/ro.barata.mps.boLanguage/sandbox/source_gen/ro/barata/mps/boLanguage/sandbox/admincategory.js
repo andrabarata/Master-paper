@@ -1,7 +1,6 @@
 function changeCategory(id,name){
-var a=id;
 var names=["name","id"];
-var values=[name,a];
+var values=[name,id];
 doAjaxRequest("admincategory","dbCategory",names,values);
 }
 function deleteCategory(id){

@@ -49,7 +49,6 @@ public class HTTPServer {
     context.addServlet(new ServletHolder(new ProductServlet()), "/" + "product" + "/*");
     context.addServlet(new ServletHolder(new AdmincategoryServlet()), "/" + "admincategory" + "/*");
     context.addServlet(new ServletHolder(new OrdersServlet()), "/" + "orders" + "/*");
-    context.addServlet(new ServletHolder(new OrderServlet()), "/" + "order" + "/*");
     context.addServlet(new ServletHolder(new AdminSubcategoryServlet()), "/" + "adminSubcategory" + "/*");
 
     Handler[] handlers = new Handler[]{rwHandler, context};

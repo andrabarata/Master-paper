@@ -195,13 +195,6 @@ public class ProductDAO {
       }
     }
     {
-      Order parentOrder = product.getParentOrder();
-      if (parentOrder != null) {
-        columns += "orderI" + ",";
-        values += "'" + parentOrder.getId().toString() + "',";
-      }
-    }
-    {
       Cart parentCart = product.getParentCart();
       if (parentCart != null) {
         columns += "products" + ",";
@@ -246,13 +239,6 @@ public class ProductDAO {
         if (parentCategory != null) {
           columnsList.add("categoryId");
           valuesList.add(parentCategory.getId().toString());
-        }
-      }
-      {
-        Order parentOrder = newproduct.getParentOrder();
-        if (parentOrder != null) {
-          columnsList.add("orderI");
-          valuesList.add(parentOrder.getId().toString());
         }
       }
       {

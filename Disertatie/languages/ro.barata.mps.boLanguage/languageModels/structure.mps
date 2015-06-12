@@ -301,33 +301,49 @@
     </node>
   </node>
   <node concept="1TIwiD" id="3ExIzsyPZ64">
-    <property role="TrG5h" value="Order" />
+    <property role="TrG5h" value="OrderItem" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
-    <node concept="1TJgyj" id="3ExIzsyPZ9k" role="1TKVEi">
-      <property role="20lmBu" value="aggregation" />
-      <property role="20kJfa" value="products" />
-      <property role="20lbJX" value="0..n" />
+    <node concept="1TJgyj" id="63p_9b5psxe" role="1TKVEi">
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="product" />
+      <property role="20lbJX" value="0..1" />
       <ref role="20lvS9" node="4iOjISKrwYK" resolve="Product" />
     </node>
-    <node concept="1TJgyj" id="3ExIzsyPZ9m" role="1TKVEi">
-      <property role="20lmBu" value="aggregation" />
-      <property role="20kJfa" value="discounts" />
-      <property role="20lbJX" value="0..n" />
+    <node concept="1TJgyj" id="63p_9b5psxk" role="1TKVEi">
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="promotion" />
       <ref role="20lvS9" node="3MXrPpfvjSv" resolve="Discount" />
     </node>
     <node concept="1TJgyi" id="3ExIzsyPZ76" role="1TKVEl">
       <property role="TrG5h" value="id" />
       <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
     </node>
-    <node concept="1TJgyi" id="3ExIzsyPZ78" role="1TKVEl">
+    <node concept="PrWs8" id="3ExIzsyPZ74" role="PzmwI">
+      <ref role="PrY4T" to="h5of:6hc$cxbYn_3" resolve="DAOObject" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="63p_9b5psxN">
+    <property role="TrG5h" value="Order" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="63p_9b5ps_1" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="orderItems" />
+      <property role="20lbJX" value="1..n" />
+      <ref role="20lvS9" node="3ExIzsyPZ64" resolve="OrderItem" />
+    </node>
+    <node concept="1TJgyi" id="63p_9b5psxQ" role="1TKVEl">
+      <property role="TrG5h" value="id" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyi" id="63p_9b5psxR" role="1TKVEl">
       <property role="TrG5h" value="dateCreated" />
       <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
     </node>
-    <node concept="1TJgyi" id="3ExIzsyPZ8d" role="1TKVEl">
+    <node concept="1TJgyi" id="63p_9b5psxS" role="1TKVEl">
       <property role="TrG5h" value="status" />
       <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
     </node>
-    <node concept="PrWs8" id="3ExIzsyPZ74" role="PzmwI">
+    <node concept="PrWs8" id="63p_9b5psxT" role="PzmwI">
       <ref role="PrY4T" to="h5of:6hc$cxbYn_3" resolve="DAOObject" />
     </node>
   </node>

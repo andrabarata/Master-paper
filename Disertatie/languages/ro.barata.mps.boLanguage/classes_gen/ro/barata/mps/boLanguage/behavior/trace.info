@@ -11,7 +11,7 @@
       <unit at="8,0,16,0" name="ro.barata.mps.boLanguage.behavior.Attribute_BehaviorDescriptor" />
     </file>
     <file name="BehaviorAspectDescriptor.java">
-      <unit at="9,0,42,0" name="ro.barata.mps.boLanguage.behavior.BehaviorAspectDescriptor" />
+      <unit at="9,0,44,0" name="ro.barata.mps.boLanguage.behavior.BehaviorAspectDescriptor" />
     </file>
     <file name="Cart_BehaviorDescriptor.java">
       <unit at="8,0,16,0" name="ro.barata.mps.boLanguage.behavior.Cart_BehaviorDescriptor" />
@@ -21,6 +21,9 @@
     </file>
     <file name="Discount_BehaviorDescriptor.java">
       <unit at="8,0,16,0" name="ro.barata.mps.boLanguage.behavior.Discount_BehaviorDescriptor" />
+    </file>
+    <file name="OrderItem_BehaviorDescriptor.java">
+      <unit at="8,0,16,0" name="ro.barata.mps.boLanguage.behavior.OrderItem_BehaviorDescriptor" />
     </file>
     <file name="Order_BehaviorDescriptor.java">
       <unit at="8,0,16,0" name="ro.barata.mps.boLanguage.behavior.Order_BehaviorDescriptor" />

@@ -13,7 +13,6 @@ public class Product {
   private Integer price;
   private List<AttributeCategory> attributecategorys;
   private Category parentCategory;
-  private Order parentOrder;
   private Cart parentCart;
   public void setId(Integer attribute) {
     this.id = attribute;
@@ -51,9 +50,6 @@ public class Product {
   public void setParentCategory(Category entity) {
     this.parentCategory = entity;
   }
-  public void setParentOrder(Order entity) {
-    this.parentOrder = entity;
-  }
   public void setParentCart(Cart entity) {
     this.parentCart = entity;
   }
@@ -62,9 +58,6 @@ public class Product {
   }
   public Category getParentCategory() {
     return this.parentCategory;
-  }
-  public Order getParentOrder() {
-    return this.parentOrder;
   }
   public Cart getParentCart() {
     return this.parentCart;

@@ -7,60 +7,42 @@ import java.util.ArrayList;
 
 public class Order {
   private Integer id;
-  private String status;
   private Integer dateCreated;
-  private List<Product> products;
-  private List<Discount> discounts;
+  private String status;
+  private List<OrderItem> orderitems;
   public void setId(Integer attribute) {
     this.id = attribute;
-  }
-  public void setStatus(String attribute) {
-    this.status = attribute;
   }
   public void setDateCreated(Integer attribute) {
     this.dateCreated = attribute;
   }
-  public void setProducts(List<Product> entities) {
-    this.products = entities;
+  public void setStatus(String attribute) {
+    this.status = attribute;
   }
-  public void setDiscounts(List<Discount> entities) {
-    this.discounts = entities;
+  public void setOrderItems(List<OrderItem> entities) {
+    this.orderitems = entities;
   }
   public Integer getId() {
     return this.id;
   }
-  public String getStatus() {
-    return this.status;
-  }
   public Integer getDateCreated() {
     return this.dateCreated;
   }
-  public List<Product> getProducts() {
-    return this.products;
+  public String getStatus() {
+    return this.status;
   }
-  public List<Discount> getDiscounts() {
-    return this.discounts;
+  public List<OrderItem> getOrderItems() {
+    return this.orderitems;
   }
-  public void addProduct(Product product) {
-    if (products == null) {
-      products = new ArrayList<Product>();
+  public void addOrderItem(OrderItem orderitem) {
+    if (orderitems == null) {
+      orderitems = new ArrayList<OrderItem>();
     }
     boolean flag = true;
-    for (Product entity : products) {
+    for (OrderItem entity : orderitems) {
     }
     if (flag) {
-      this.products.add(product);
-    }
-  }
-  public void addDiscount(Discount discount) {
-    if (discounts == null) {
-      discounts = new ArrayList<Discount>();
-    }
-    boolean flag = true;
-    for (Discount entity : discounts) {
-    }
-    if (flag) {
-      this.discounts.add(discount);
+      this.orderitems.add(orderitem);
     }
   }
   public Order() {
