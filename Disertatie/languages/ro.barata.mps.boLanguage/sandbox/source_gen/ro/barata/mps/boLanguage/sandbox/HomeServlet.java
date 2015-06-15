@@ -12,7 +12,7 @@ import java.io.IOException;
 
 public class HomeServlet extends HttpServlet {
   private Connection connection;
-  public HomeServlet() throws SQLException, ClassNotFoundException {
+  public HomeServlet() throws SQLException, ClassNotFoundException, CloneNotSupportedException {
     if (connection == null) {
       connection = DatabaseConnection.getConnection();
     }
@@ -37,9 +37,9 @@ public class HomeServlet extends HttpServlet {
     }
   }
 
-  private void handleRequest(HttpServletRequest request, HttpServletResponse response) throws IOException, SQLException, ClassNotFoundException {
+  private void handleRequest(HttpServletRequest request, HttpServletResponse response) throws IOException, SQLException, ClassNotFoundException, CloneNotSupportedException {
     String action = request.getParameter("actionName");
-    String requestParameterValue = request.getParameter("");
+    String requestParameterValue = "";
     if (action != null && !(action.equals(""))) {
 
     } else {

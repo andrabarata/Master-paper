@@ -8,7 +8,7 @@ import java.sql.Connection;
 import java.util.List;
 
 public class HomeGenerator {
-  public static String getContent(HttpSession session, String requestParameterValue) throws ClassNotFoundException, SQLException {
+  public static String getContent(HttpSession session, String requestParameterValue) throws ClassNotFoundException, SQLException, CloneNotSupportedException {
     String html = "<html>";
     String parameters = "";
     String href = "";
@@ -32,25 +32,30 @@ public class HomeGenerator {
     Discount discounts = new Discount();
     html += ClientframeGenerator.generateHeader(session);
     html += "<div";
+    href = "";
     html += " class=\"" + "container" + "\"";
     html += ">";
     html += "<div";
+    href = "";
     html += " class=\"" + "row" + "\"";
     html += ">";
     html += ClientframeGenerator.generateLeftBanner(session);
     html += "<div";
+    href = "";
     html += " class=\"" + "col-md-9" + "\"";
     html += ">";
     html += ClientframeGenerator.generateCategoryHeader(session);
     html += "<div";
+    href = "";
     html += " class=\"" + "carousel-inner" + "\"";
     html += ">";
-    {
 
+    {
       List<Discount> loop_a1b0b0 = categoryDAO.findChildDiscounts(null);
       for (int counter_a1b0b0 = 0; counter_a1b0b0 < loop_a1b0b0.size(); counter_a1b0b0++) {
         discounts = loop_a1b0b0.get(counter_a1b0b0);
         html += "<div";
+        href = "";
         html += " class=\"" + "item" + "\"";
         html += ">";
         html += "</div>";
@@ -69,7 +74,7 @@ public class HomeGenerator {
     html += "</html>";
     return html;
   }
-  public static String generateFooter(HttpSession session) throws ClassNotFoundException, SQLException {
+  public static String generateFooter(HttpSession session) throws ClassNotFoundException, SQLException, CloneNotSupportedException {
     String html = "";
     String parameters = "";
     String href = "";

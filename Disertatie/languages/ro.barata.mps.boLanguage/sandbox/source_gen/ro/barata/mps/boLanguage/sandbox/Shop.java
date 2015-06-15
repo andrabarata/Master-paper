@@ -5,7 +5,7 @@ package ro.barata.mps.boLanguage.sandbox;
 import java.util.List;
 import java.util.ArrayList;
 
-public class Shop {
+public class Shop implements Cloneable {
   private Integer id;
   private String name;
   private List<User> users;
@@ -55,6 +55,9 @@ public class Shop {
     if (flag) {
       this.categorys.add(category);
     }
+  }
+  public Object clone() throws CloneNotSupportedException {
+    return super.clone();
   }
   public Shop() {
   }

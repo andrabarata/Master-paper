@@ -161,7 +161,8 @@ public class ProductDAO {
     return attributecategorys;
   }
 
-  public void addProduct(Product product) throws SQLException, ClassNotFoundException {
+
+  public void addProduct(Product product) throws SQLException, ClassNotFoundException, CloneNotSupportedException {
     String sql = "insert into " + "products" + "(";
     String columns = "";
     String values = "";
@@ -208,12 +209,22 @@ public class ProductDAO {
     if (product.getAttributeCategorys() != null) {
       AttributeCategoryDAO childAttributeCategoryDAO = new AttributeCategoryDAO(connn);
       for (AttributeCategory childAttributeCategory : product.getAttributeCategorys()) {
-        childAttributeCategoryDAO.addAttributeCategory(childAttributeCategory);
+        List<AttributeCategory> children = childAttributeCategoryDAO.findAttributeCategorys(childAttributeCategory);
+        if (children.size() == 0) {
+          childAttributeCategoryDAO.addAttributeCategory(childAttributeCategory);
+        } else {
+          for (AttributeCategory child : children) {
+            AttributeCategory copy = (AttributeCategory) child.clone();
+            child.setParentProduct(product);
+            childAttributeCategoryDAO.updateAttributeCategory(copy, child);
+
+          }
+        }
       }
     }
   }
 
-  public void updateProduct(Product oldproduct, Product newproduct) throws SQLException, ClassNotFoundException {
+  public void updateProduct(Product oldproduct, Product newproduct) throws SQLException, ClassNotFoundException, CloneNotSupportedException {
     String sql = "update " + "products" + " set ";
     String values = "";
     if (newproduct.getId() != null) {
@@ -273,7 +284,17 @@ public class ProductDAO {
     if (newproduct.getAttributeCategorys() != null) {
       AttributeCategoryDAO childAttributeCategoryDAO = new AttributeCategoryDAO(connn);
       for (AttributeCategory childAttributeCategory : newproduct.getAttributeCategorys()) {
-        childAttributeCategoryDAO.addAttributeCategory(childAttributeCategory);
+        List<AttributeCategory> children = childAttributeCategoryDAO.findAttributeCategorys(childAttributeCategory);
+        if (children.size() == 0) {
+          childAttributeCategoryDAO.addAttributeCategory(childAttributeCategory);
+        } else {
+          for (AttributeCategory child : children) {
+            AttributeCategory copy = (AttributeCategory) child.clone();
+            child.setParentProduct(newproduct);
+            childAttributeCategoryDAO.updateAttributeCategory(copy, child);
+
+          }
+        }
       }
     }
 

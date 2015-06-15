@@ -10,7 +10,12 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 public class StringValue_TextGen extends SNodeTextGen {
   public void doGenerateText(SNode node) {
     this.append("\"");
-    this.append(SPropertyOperations.getString(node, MetaAdapterFactory.getProperty(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x3ab9167f5c1a58d0L, 0x3ab9167f5c1a58d1L, "value")));
+    if (isNotEmptyString(SPropertyOperations.getString(node, MetaAdapterFactory.getProperty(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x3ab9167f5c1a58d0L, 0x3ab9167f5c1a58d1L, "value")))) {
+      this.append(SPropertyOperations.getString(node, MetaAdapterFactory.getProperty(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x3ab9167f5c1a58d0L, 0x3ab9167f5c1a58d1L, "value")));
+    }
     this.append("\"");
+  }
+  private static boolean isNotEmptyString(String str) {
+    return str != null && str.length() > 0;
   }
 }

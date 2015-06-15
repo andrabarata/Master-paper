@@ -15,7 +15,7 @@ import flexjson.JSONSerializer;
 
 public class LoginServlet extends HttpServlet {
   private Connection connection;
-  public LoginServlet() throws SQLException, ClassNotFoundException {
+  public LoginServlet() throws SQLException, ClassNotFoundException, CloneNotSupportedException {
     if (connection == null) {
       connection = DatabaseConnection.getConnection();
     }
@@ -40,9 +40,9 @@ public class LoginServlet extends HttpServlet {
     }
   }
 
-  private void handleRequest(HttpServletRequest request, HttpServletResponse response) throws IOException, SQLException, ClassNotFoundException {
+  private void handleRequest(HttpServletRequest request, HttpServletResponse response) throws IOException, SQLException, ClassNotFoundException, CloneNotSupportedException {
     String action = request.getParameter("actionName");
-    String requestParameterValue = request.getParameter("");
+    String requestParameterValue = "";
     if (action != null && !(action.equals(""))) {
       if (action.equals("jsonUser")) {
         jsonUser(request, response);
@@ -52,7 +52,7 @@ public class LoginServlet extends HttpServlet {
       response.getWriter().println(LoginGenerator.getContent(request.getSession(), requestParameterValue));
     }
   }
-  private void jsonUser(HttpServletRequest request, HttpServletResponse response) throws ClassNotFoundException, SQLException, IOException {
+  private void jsonUser(HttpServletRequest request, HttpServletResponse response) throws ClassNotFoundException, SQLException, IOException, CloneNotSupportedException {
     User searchUser = new User();
     // Initializes a new entity instance with values received from the client (browser) 
     if (request.getParameter("userId") != null && !(request.getParameter("userId").equals(""))) {

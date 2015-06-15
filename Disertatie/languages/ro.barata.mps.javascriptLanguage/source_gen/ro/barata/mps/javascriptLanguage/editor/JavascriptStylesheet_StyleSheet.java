@@ -32,7 +32,6 @@ public class JavascriptStylesheet_StyleSheet {
   }
   public static void apply_IndicatorSymbol(Style style, EditorCell editorCell) {
     style.set(StyleAttributes.TEXT_COLOR, 0, StyleRegistry.getInstance().getSimpleColor(MPSColors.blue));
-    style.set(StyleAttributes.PUNCTUATION_LEFT, 0, true);
     style.set(StyleAttributes.PUNCTUATION_RIGHT, 0, true);
   }
   public static void apply_Indicator(Style style, EditorCell editorCell) {

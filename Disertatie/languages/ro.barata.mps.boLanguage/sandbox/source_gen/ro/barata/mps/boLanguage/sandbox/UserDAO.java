@@ -29,9 +29,9 @@ public class UserDAO {
     String sql = " from " + "users" + " table0";
     String leftJoins = "";
     int i = 1;
-    columns += "table" + i + "." + "id" + " \"" + "persons" + "id" + "\"," + ",";
-    columns += "table" + i + "." + "firstName" + " \"" + "persons" + "firstName" + "\"," + ",";
-    columns += "table" + i + "." + "lastName" + " \"" + "persons" + "lastName" + "\"," + ",";
+    columns += "table" + i + "." + "id" + " \"" + "persons" + "id" + "\",";
+    columns += "table" + i + "." + "firstName" + " \"" + "persons" + "firstName" + "\",";
+    columns += "table" + i + "." + "lastName" + " \"" + "persons" + "lastName" + "\",";
     leftJoins += " left join " + "persons" + " table" + i + " on table" + i + "." + "userId" + "=table0." + "id" + " ";
     i++;
 
@@ -117,7 +117,46 @@ public class UserDAO {
     return users;
   }
 
-  public void addUser(User user) throws SQLException, ClassNotFoundException {
+  public Person findReferencePerson(User parent) throws SQLException {
+    Person reference = new Person();
+    String sql = "select ";
+    String columns = "";
+    columns += "id";
+    columns += ",";
+    columns += "firstName";
+    columns += ",";
+    columns += "lastName";
+    sql += columns;
+    sql += " from " + "persons" + " where " + "id" + " in (select " + "userId" + " from " + "users";
+    if (parent != null) {
+      sql += " where ";
+      String values = "";
+      if (parent.getUserId() != null) {
+        values += "id" + "='" + parent.getUserId() + "'and ";
+      }
+      if (parent.getUserName() != null) {
+        values += "name" + "='" + parent.getUserName() + "'and ";
+      }
+      if (parent.getPassword() != null) {
+        values += "password" + "='" + parent.getPassword() + "'and ";
+      }
+      if (parent.getPriviledge() != null) {
+        values += "priviledge" + "='" + parent.getPriviledge() + "'and ";
+      }
+      sql += values.substring(0, values.length() - 4);
+    }
+    sql += ")";
+    System.out.println(sql);
+    ResultSet set = stmt.executeQuery(sql);
+    while (set.next()) {
+      reference.setId(Integer.valueOf(set.getBigDecimal("id").intValue()));
+      reference.setFirstName(set.getString("firstName"));
+      reference.setLastName(set.getString("lastName"));
+    }
+    return reference;
+  }
+
+  public void addUser(User user) throws SQLException, ClassNotFoundException, CloneNotSupportedException {
     String sql = "insert into " + "users" + "(";
     String columns = "";
     String values = "";
@@ -149,7 +188,9 @@ public class UserDAO {
     if (user.getPerson() != null) {
       Person referencePerson = user.getPerson();
       PersonDAO referencePersonDAO = new PersonDAO(connn);
-      referencePersonDAO.addPerson(referencePerson);
+      if (referencePersonDAO.findPersons(referencePerson).size() == 0) {
+        referencePersonDAO.addPerson(referencePerson);
+      }
       columns += "userId" + ",";
       values += "'" + referencePerson.getId() + "',";
     }
@@ -159,7 +200,7 @@ public class UserDAO {
     // Loops thhrough the children, and adds them recursively to the database 
   }
 
-  public void updateUser(User olduser, User newuser) throws SQLException, ClassNotFoundException {
+  public void updateUser(User olduser, User newuser) throws SQLException, ClassNotFoundException, CloneNotSupportedException {
     String sql = "update " + "users" + " set ";
     String values = "";
     if (newuser.getUserId() != null) {
@@ -190,7 +231,9 @@ public class UserDAO {
     if (newuser.getPerson() != null) {
       Person referencePerson = newuser.getPerson();
       PersonDAO referencePersonDAO = new PersonDAO(connn);
-      referencePersonDAO.addPerson(referencePerson);
+      if (referencePersonDAO.findPersons(referencePerson).size() == 0) {
+        referencePersonDAO.addPerson(referencePerson);
+      }
       values += "userId" + "=" + "'" + referencePerson.getId() + "'";
     }
     String condition = " where ";

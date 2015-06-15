@@ -135,7 +135,8 @@ public class AttributeCategoryDAO {
     return attributes;
   }
 
-  public void addAttributeCategory(AttributeCategory attributecategory) throws SQLException, ClassNotFoundException {
+
+  public void addAttributeCategory(AttributeCategory attributecategory) throws SQLException, ClassNotFoundException, CloneNotSupportedException {
     String sql = "insert into " + "attributeCategories" + "(";
     String columns = "";
     String values = "";
@@ -164,12 +165,22 @@ public class AttributeCategoryDAO {
     if (attributecategory.getAttributes() != null) {
       AttributeDAO childAttributeDAO = new AttributeDAO(connn);
       for (Attribute childAttribute : attributecategory.getAttributes()) {
-        childAttributeDAO.addAttribute(childAttribute);
+        List<Attribute> children = childAttributeDAO.findAttributes(childAttribute);
+        if (children.size() == 0) {
+          childAttributeDAO.addAttribute(childAttribute);
+        } else {
+          for (Attribute child : children) {
+            Attribute copy = (Attribute) child.clone();
+            child.setParentAttributeCategory(attributecategory);
+            childAttributeDAO.updateAttribute(copy, child);
+
+          }
+        }
       }
     }
   }
 
-  public void updateAttributeCategory(AttributeCategory oldattributecategory, AttributeCategory newattributecategory) throws SQLException, ClassNotFoundException {
+  public void updateAttributeCategory(AttributeCategory oldattributecategory, AttributeCategory newattributecategory) throws SQLException, ClassNotFoundException, CloneNotSupportedException {
     String sql = "update " + "attributeCategories" + " set ";
     String values = "";
     if (newattributecategory.getId() != null) {
@@ -205,7 +216,17 @@ public class AttributeCategoryDAO {
     if (newattributecategory.getAttributes() != null) {
       AttributeDAO childAttributeDAO = new AttributeDAO(connn);
       for (Attribute childAttribute : newattributecategory.getAttributes()) {
-        childAttributeDAO.addAttribute(childAttribute);
+        List<Attribute> children = childAttributeDAO.findAttributes(childAttribute);
+        if (children.size() == 0) {
+          childAttributeDAO.addAttribute(childAttribute);
+        } else {
+          for (Attribute child : children) {
+            Attribute copy = (Attribute) child.clone();
+            child.setParentAttributeCategory(newattributecategory);
+            childAttributeDAO.updateAttribute(copy, child);
+
+          }
+        }
       }
     }
 

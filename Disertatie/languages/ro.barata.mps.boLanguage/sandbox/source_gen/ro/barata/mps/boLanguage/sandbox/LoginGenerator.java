@@ -6,7 +6,7 @@ import javax.servlet.http.HttpSession;
 import java.sql.SQLException;
 
 public class LoginGenerator {
-  public static String getContent(HttpSession session, String requestParameterValue) throws ClassNotFoundException, SQLException {
+  public static String getContent(HttpSession session, String requestParameterValue) throws ClassNotFoundException, SQLException, CloneNotSupportedException {
     String html = "<html>";
     String parameters = "";
     String href = "";
@@ -28,24 +28,30 @@ public class LoginGenerator {
     html += "<body>";
     html += ClientframeGenerator.generateHeader(session);
     html += "<div";
+    href = "";
     html += " class=\"" + "container" + "\"";
     html += ">";
     html += "<div";
+    href = "";
     html += " class=\"" + "row" + "\"";
     html += ">";
     html += "<form";
+    href = "";
     html += " class=\"" + "pure-form pure-form-aligned" + "\"";
     html += " " + "style" + "=\"" + "text-align:center" + "\"";
     html += " " + "style" + "=\"" + "text-align:center" + "\"";
     html += ">";
     html += "<div";
+    href = "";
     html += " class=\"" + "pure-control-group" + "\"";
     html += ">";
     html += "<label";
+    href = "";
 
     html += ">" + "Username" + "</label>";
     html += "<input";
     html += " type=\"" + "text" + "\" ";
+    href = "";
     html += " id='" + "userName" + "'";
     html += " " + "placeholder" + "=\"" + "Username" + "\"";
 
@@ -53,13 +59,16 @@ public class LoginGenerator {
     html += "</div>";
 
     html += "<div";
+    href = "";
     html += " class=\"" + "pure-control-group" + "\"";
     html += ">";
     html += "<label";
+    href = "";
 
     html += ">" + "Password" + "</label>";
     html += "<input";
     html += " type=\"" + "password" + "\" ";
+    href = "";
     html += " id='" + "password" + "'";
     html += " " + "placeholder" + "=\"" + "Password" + "\"";
 
@@ -67,10 +76,12 @@ public class LoginGenerator {
     html += "</div>";
 
     html += "<div";
+    href = "";
     html += " class=\"" + "pure-controls" + "\"";
     html += ">";
     html += "<input";
     html += " type=\"" + "button" + "\" ";
+    href = "";
     html += " class=\"" + "pure-button pure-button-primary" + "\"";
     parameters = "";
     html += " " + "onclick" + "=\"" + "checkUser" + "(" + parameters + ")\"";
@@ -81,6 +92,7 @@ public class LoginGenerator {
     html += "</div>";
 
     html += "<label";
+    href = "";
     html += " id='" + "authentificate" + "'";
 
     html += ">" + "Authentification failed! Please try again!" + "</label>";

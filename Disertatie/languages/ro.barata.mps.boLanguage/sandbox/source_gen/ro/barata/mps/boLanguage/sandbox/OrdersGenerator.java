@@ -8,7 +8,7 @@ import java.sql.Connection;
 import java.util.List;
 
 public class OrdersGenerator {
-  public static String getContent(HttpSession session, String requestParameterValue) throws ClassNotFoundException, SQLException {
+  public static String getContent(HttpSession session, String requestParameterValue) throws ClassNotFoundException, SQLException, CloneNotSupportedException {
     String html = "<html>";
     String parameters = "";
     String href = "";
@@ -32,17 +32,21 @@ public class OrdersGenerator {
     Order order = new Order();
     html += ClientframeGenerator.generateHeader(session);
     html += "<div";
+    href = "";
     html += " class=\"" + "container" + "\"";
     html += ">";
     html += "<div";
+    href = "";
     html += " class=\"" + "row" + "\"";
     html += ">";
     html += ClientframeGenerator.generateLeftBanner(session);
     html += "<div";
+    href = "";
     html += " class=\"" + "col-md-9" + "\"";
     html += ">";
     html += ClientframeGenerator.generateCategoryHeader(session);
     html += "<div";
+    href = "";
     html += " class=\"" + "row" + "\"";
     html += ">";
     html += "<table";
@@ -52,21 +56,25 @@ public class OrdersGenerator {
 
     html += ">";
     html += "<th";
+    href = "";
     html += ">";
     html += "No";
     html += "</th>";
 
     html += "<th";
+    href = "";
     html += ">";
     html += "Order";
     html += "</th>";
 
     html += "<th";
+    href = "";
     html += ">";
     html += "Date";
     html += "</th>";
 
     html += "<th";
+    href = "";
     html += ">";
     html += "Status";
     html += "</th>";
@@ -76,38 +84,45 @@ public class OrdersGenerator {
     {
 
       int discountCounter = 0;
-      List<Order> loop_b0b1a1a = orderDAO.getAllOrders();
-      for (int counter_b0b1a1a = 0; counter_b0b1a1a < loop_b0b1a1a.size(); counter_b0b1a1a++) {
-        order = loop_b0b1a1a.get(counter_b0b1a1a);
-        html += "<tr";
+      {
+        List<Order> loop_b0b1a1a = orderDAO.getAllOrders();
+        for (int counter_b0b1a1a = 0; counter_b0b1a1a < loop_b0b1a1a.size(); counter_b0b1a1a++) {
+          order = loop_b0b1a1a.get(counter_b0b1a1a);
+          html += "<tr";
 
-        html += ">";
-        html += "<td";
-        html += ">";
-        html += discountCounter + "";
-        html += "</td>";
+          html += ">";
+          html += "<td";
+          href = "";
+          html += ">";
+          html += discountCounter + "";
+          html += "</td>";
 
-        html += "<td";
-        html += ">";
-        html += "<a";
-        html += " href=\"" + "order" + href + "\"";
+          html += "<td";
+          href = "";
+          html += ">";
+          html += "<a";
+          href = "";
+          html += " href=\"" + "/" + "order" + href + "\"";
 
-        html += ">" + order.getId() + "</a>";
-        html += "</td>";
+          html += ">" + order.getId() + "</a>";
+          html += "</td>";
 
-        html += "<td";
-        html += ">";
-        html += order.getDateCreated();
-        html += "</td>";
+          html += "<td";
+          href = "";
+          html += ">";
+          html += order.getDateCreated();
+          html += "</td>";
 
-        html += "<td";
-        html += ">";
-        html += order.getStatus();
-        html += "</td>";
+          html += "<td";
+          href = "";
+          html += ">";
+          html += order.getStatus();
+          html += "</td>";
 
-        html += "</tr>";
+          html += "</tr>";
 
-        discountCounter++;
+          discountCounter++;
+        }
       }
     }
     html += "</table>";

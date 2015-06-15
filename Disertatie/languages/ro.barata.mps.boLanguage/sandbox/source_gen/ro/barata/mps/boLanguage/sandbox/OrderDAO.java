@@ -131,7 +131,8 @@ public class OrderDAO {
     return orderitems;
   }
 
-  public void addOrder(Order order) throws SQLException, ClassNotFoundException {
+
+  public void addOrder(Order order) throws SQLException, ClassNotFoundException, CloneNotSupportedException {
     String sql = "insert into " + "orders" + "(";
     String columns = "";
     String values = "";
@@ -157,12 +158,22 @@ public class OrderDAO {
     if (order.getOrderItems() != null) {
       OrderItemDAO childOrderItemDAO = new OrderItemDAO(connn);
       for (OrderItem childOrderItem : order.getOrderItems()) {
-        childOrderItemDAO.addOrderItem(childOrderItem);
+        List<OrderItem> children = childOrderItemDAO.findOrderItems(childOrderItem);
+        if (children.size() == 0) {
+          childOrderItemDAO.addOrderItem(childOrderItem);
+        } else {
+          for (OrderItem child : children) {
+            OrderItem copy = (OrderItem) child.clone();
+            child.setParentOrder(order);
+            childOrderItemDAO.updateOrderItem(copy, child);
+
+          }
+        }
       }
     }
   }
 
-  public void updateOrder(Order oldorder, Order neworder) throws SQLException, ClassNotFoundException {
+  public void updateOrder(Order oldorder, Order neworder) throws SQLException, ClassNotFoundException, CloneNotSupportedException {
     String sql = "update " + "orders" + " set ";
     String values = "";
     if (neworder.getId() != null) {
@@ -190,7 +201,17 @@ public class OrderDAO {
     if (neworder.getOrderItems() != null) {
       OrderItemDAO childOrderItemDAO = new OrderItemDAO(connn);
       for (OrderItem childOrderItem : neworder.getOrderItems()) {
-        childOrderItemDAO.addOrderItem(childOrderItem);
+        List<OrderItem> children = childOrderItemDAO.findOrderItems(childOrderItem);
+        if (children.size() == 0) {
+          childOrderItemDAO.addOrderItem(childOrderItem);
+        } else {
+          for (OrderItem child : children) {
+            OrderItem copy = (OrderItem) child.clone();
+            child.setParentOrder(neworder);
+            childOrderItemDAO.updateOrderItem(copy, child);
+
+          }
+        }
       }
     }
 

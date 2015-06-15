@@ -44,6 +44,31 @@ public class HTMLBody_Behavior {
     });
     return commands;
   }
+  public static List<SNode> call_getSearchNonDupplicates_4343835666062284456(final SNode thisNode) {
+    final List<SNode> commands = ListSequence.fromList(new ArrayList<SNode>());
+    Iterable<SNode> foundCommands = ListSequence.fromList(SModelOperations.nodes(SNodeOperations.getModel(thisNode), MetaAdapterFactory.getConcept(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x5286d8640b8170dbL, "ro.barata.mps.htmlLanguage.structure.SelectCommand"))).where(new IWhereFilter<SNode>() {
+      public boolean accept(SNode it) {
+        return SNodeOperations.getNodeAncestor(it, MetaAdapterFactory.getConcept(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x233f341bd1ca2cb7L, "ro.barata.mps.htmlLanguage.structure.HTMLBody"), false, false) == thisNode;
+      }
+    });
+    Sequence.fromIterable(foundCommands).visitAll(new IVisitor<SNode>() {
+      public void visit(SNode it) {
+        final Wrappers._boolean contains = new Wrappers._boolean(false);
+        final String name = SPropertyOperations.getString(SLinkOperations.getTarget(SNodeOperations.cast(it, MetaAdapterFactory.getConcept(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x5286d8640b8170dbL, "ro.barata.mps.htmlLanguage.structure.SelectCommand")), MetaAdapterFactory.getReferenceLink(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x5286d8640b80e58eL, 0x5286d8640b8170f9L, "classReference")), MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"));
+        ListSequence.fromList(commands).visitAll(new IVisitor<SNode>() {
+          public void visit(SNode it2) {
+            if (SPropertyOperations.hasValue(SLinkOperations.getTarget(it2, MetaAdapterFactory.getReferenceLink(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x5286d8640b80e58eL, 0x5286d8640b8170f9L, "classReference")), MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), name)) {
+              contains.value = true;
+            }
+          }
+        });
+        if (!(contains.value) && SNodeOperations.isInstanceOf(SLinkOperations.getTarget(it, MetaAdapterFactory.getContainmentLink(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x5286d8640b8170dbL, 0x5286d8640b8175ccL, "condition")), MetaAdapterFactory.getConcept(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x58324c1f1085599dL, "ro.barata.mps.htmlLanguage.structure.QueryCondition"))) {
+          ListSequence.fromList(commands).addElement(SNodeOperations.cast(it, MetaAdapterFactory.getConcept(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x5286d8640b8170dbL, "ro.barata.mps.htmlLanguage.structure.SelectCommand")));
+        }
+      }
+    });
+    return commands;
+  }
   public static List<SNode> call_getNonDupplicateLabels_6978772455672627736(final SNode thisNode) {
     final List<SNode> commands = ListSequence.fromList(new ArrayList<SNode>());
     final List<String> vals = ListSequence.fromList(new ArrayList<String>());

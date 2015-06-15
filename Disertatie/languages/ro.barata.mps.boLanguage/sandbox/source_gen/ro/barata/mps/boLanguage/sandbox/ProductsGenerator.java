@@ -8,7 +8,7 @@ import java.sql.Connection;
 import java.util.List;
 
 public class ProductsGenerator {
-  public static String getContent(HttpSession session, String requestParameterValue) throws ClassNotFoundException, SQLException {
+  public static String getContent(HttpSession session, String requestParameterValue) throws ClassNotFoundException, SQLException, CloneNotSupportedException {
     String html = "<html>";
     String parameters = "";
     String href = "";
@@ -35,30 +35,36 @@ public class ProductsGenerator {
     Product products = new Product();
     html += ClientframeGenerator.generateHeader(session);
     html += "<div";
+    href = "";
     html += " class=\"" + "container" + "\"";
     html += ">";
     html += "<div";
+    href = "";
     html += " class=\"" + "row" + "\"";
     html += ">";
     html += ClientframeGenerator.generateLeftBanner(session);
     html += "<div";
+    href = "";
     html += " class=\"" + "col-md-9" + "\"";
     html += ">";
     html += ClientframeGenerator.generateCategoryHeader(session);
     html += "<div";
+    href = "";
     html += " class=\"" + "row" + "\"";
     html += ">";
     html += "<div";
+    href = "";
     html += ">";
-    {
 
-      searchCategory = new Category();
-      value = requestParameterValue;
-      searchCategory.setId(Integer.parseInt(value));
+    searchCategory = new Category();
+    value = requestParameterValue;
+    searchCategory.setId(Integer.parseInt(value));
+    {
       List<Category> loop_a0b1a1a = categoryDAO.findCategorys(searchCategory);
       for (int counter_a0b1a1a = 0; counter_a0b1a1a < loop_a0b1a1a.size(); counter_a0b1a1a++) {
         category = loop_a0b1a1a.get(counter_a0b1a1a);
         html += "<h3";
+        href = "";
         html += " " + "style" + "=\"" + "text-align:center" + "\"";
 
         html += ">" + category.getName() + "</h3>";
@@ -66,26 +72,30 @@ public class ProductsGenerator {
     }
     html += "</div>";
 
-    {
 
-      searchCategory = new Category();
-      value = requestParameterValue;
-      searchCategory.setId(Integer.parseInt(value));
+    searchCategory = new Category();
+    value = requestParameterValue;
+    searchCategory.setId(Integer.parseInt(value));
+    {
       List<Product> loop_b1b0b0 = categoryDAO.findChildProducts(searchCategory);
       for (int counter_b1b0b0 = 0; counter_b1b0b0 < loop_b1b0b0.size(); counter_b1b0b0++) {
         products = loop_b1b0b0.get(counter_b1b0b0);
         html += "<div";
+        href = "";
         html += " class=\"" + "col-sm-4 col-lg-4 col-md-4" + "\"";
         html += ">";
         html += "<div";
+        href = "";
         html += " class=\"" + "thumbnail" + "\"";
         html += " " + "style" + "=\"" + "height: 280px" + "\"";
         html += " " + "style" + "=\"" + "height: 280px" + "\"";
         html += ">";
         html += "<div";
+        href = "";
         html += " class=\"" + "imageholder" + "\"";
         html += ">";
         html += "<img";
+        href = "";
         expressions = "";
         expressions += products.getId();
         expressions += ".jpg";
@@ -96,9 +106,11 @@ public class ProductsGenerator {
         html += "</div>";
 
         html += "<div";
+        href = "";
         html += " class=\"" + "caption" + "\"";
         html += ">";
         html += "<h4";
+        href = "";
         parameters = "";
         parameters += "'" + products.getId() + "',";
         parameters += "'" + products.getProductName() + "',";
@@ -108,6 +120,7 @@ public class ProductsGenerator {
 
         html += ">" + products.getProductName() + "</h4>";
         html += "<span";
+        href = "";
         html += ">";
         html += products.getDescription();
         html += "</span>";
@@ -115,11 +128,13 @@ public class ProductsGenerator {
         html += "</div>";
 
         html += "<div";
+        href = "";
         html += " class=\"" + "ratings" + "\"";
         html += " " + "style" + "=\"" + "margin-top:-10px" + "\"";
         html += " " + "style" + "=\"" + "margin-top:-10px" + "\"";
         html += ">";
         html += "<a";
+        href = "";
         html += " class=\"" + "pure-button" + "\"";
         parameters = "";
         parameters += "'" + products.getId() + "',";
@@ -129,6 +144,7 @@ public class ProductsGenerator {
 
         html += ">" + "<i class=\"fa fa-shopping-cart fa-lg\"></i>Add to cart" + "</a>";
         html += "<h4";
+        href = "";
         html += " class=\"" + "pull-right" + "\"";
 
         html += ">" + products.getPrice() + "</h4>";

@@ -1649,11 +1649,11 @@
     <ref role="1XX52x" to="jozm:5EdacSEAW0I" resolve="OptionElement" />
     <node concept="3EZMnI" id="5EdacSEAW9v" role="2wV5jI">
       <node concept="3F0ifn" id="5EdacSEAW9w" role="3EZMnx">
-        <property role="3F0ifm" value="&lt;option&gt;" />
+        <property role="3F0ifm" value="&lt;option" />
         <ref role="1k5W1q" node="4LZaFk$dH30" resolve="tag" />
       </node>
-      <node concept="3F1sOY" id="5EdacSEAW9x" role="3EZMnx">
-        <ref role="1NtTu8" to="jozm:4Ma6LuSPGjt" />
+      <node concept="PMmxH" id="63p_9b5FuFr" role="3EZMnx">
+        <ref role="PMmxG" node="7KwyEUhIwiv" resolve="HTMLAttributesEditor" />
       </node>
       <node concept="3F0ifn" id="5EdacSEAW9y" role="3EZMnx">
         <property role="3F0ifm" value="&lt;/option&gt;" />
@@ -2017,7 +2017,7 @@
   </node>
   <node concept="24kQdi" id="5wMj1WgxlAD">
     <property role="3GE5qa" value="html.commands.operations.conditions" />
-    <ref role="1XX52x" to="jozm:5wMj1WgxlAt" resolve="QueryCondition" />
+    <ref role="1XX52x" to="jozm:5wMj1WgxlAt" resolve="ChildQueryCondition" />
     <node concept="3EZMnI" id="5wMj1WgxlAF" role="2wV5jI">
       <node concept="3F0ifn" id="5wMj1WgxlAM" role="3EZMnx">
         <property role="3F0ifm" value="where" />
@@ -2356,6 +2356,45 @@
         <ref role="1k5W1q" node="4LZaFk$dH30" resolve="tag" />
       </node>
       <node concept="l2Vlx" id="5MzsgMKp9v0" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="1FiypT6gOwn">
+    <property role="3GE5qa" value="html.miscelanous" />
+    <ref role="1XX52x" to="jozm:7ow4wvzMu_z" resolve="LegendElement" />
+    <node concept="3EZMnI" id="1FiypT6h3vS" role="2wV5jI">
+      <node concept="3F0ifn" id="1FiypT6h3vT" role="3EZMnx">
+        <property role="3F0ifm" value="&lt;legend" />
+        <ref role="1k5W1q" node="4LZaFk$dH30" resolve="tag" />
+      </node>
+      <node concept="PMmxH" id="1FiypT6h3vU" role="3EZMnx">
+        <ref role="PMmxG" node="7KwyEUhIwiv" resolve="HTMLAttributesEditor" />
+      </node>
+      <node concept="3F0ifn" id="1FiypT6h3vV" role="3EZMnx">
+        <property role="3F0ifm" value="&lt;/legend&gt;" />
+        <ref role="1k5W1q" node="4LZaFk$dH30" resolve="tag" />
+      </node>
+      <node concept="l2Vlx" id="1FiypT6h3vW" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="1FiypT6h4YT">
+    <property role="3GE5qa" value="html.container" />
+    <ref role="1XX52x" to="jozm:1FiypT6h4YN" resolve="FieldsetContainer" />
+    <node concept="3EZMnI" id="3L8pSoe8D8C" role="2wV5jI">
+      <node concept="3F0ifn" id="3L8pSoe8D90" role="3EZMnx">
+        <property role="3F0ifm" value="&lt;fieldset" />
+        <ref role="1k5W1q" node="4LZaFk$dH30" resolve="tag" />
+      </node>
+      <node concept="PMmxH" id="3L8pSoe8D91" role="3EZMnx">
+        <ref role="PMmxG" node="5EdacSExbdR" resolve="MixedContainerAttributesEditor" />
+      </node>
+      <node concept="3F0ifn" id="3L8pSoe8D92" role="3EZMnx">
+        <property role="3F0ifm" value="&lt;/fieldset&gt;" />
+        <ref role="1k5W1q" node="4LZaFk$dH30" resolve="tag" />
+        <node concept="pVoyu" id="3L8pSoe8D93" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="l2Vlx" id="3L8pSoe8D8F" role="2iSdaV" />
     </node>
   </node>
 </model>

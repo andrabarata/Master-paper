@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.sql.Connection;
 
 public class ClientframeGenerator {
-  public static String getContent(HttpSession session, String requestParameterValue) throws ClassNotFoundException, SQLException {
+  public static String getContent(HttpSession session, String requestParameterValue) throws ClassNotFoundException, SQLException, CloneNotSupportedException {
     String html = "<html>";
     String parameters = "";
     String href = "";
@@ -32,7 +32,7 @@ public class ClientframeGenerator {
     html += "</html>";
     return html;
   }
-  public static String generateHeader(HttpSession session) throws ClassNotFoundException, SQLException {
+  public static String generateHeader(HttpSession session) throws ClassNotFoundException, SQLException, CloneNotSupportedException {
     String html = "";
     String parameters = "";
     String href = "";
@@ -41,15 +41,19 @@ public class ClientframeGenerator {
     User user = new User();
     List<User> sessionUsers = new ArrayList<User>();
     html += "<nav";
+    href = "";
     html += " class=\"" + "navbar navbar-default" + "\"";
     html += ">";
     html += "<div";
+    href = "";
     html += " class=\"" + "container-fluid" + "\"";
     html += ">";
     html += "<div";
+    href = "";
     html += " class=\"" + "navbar-header" + "\"";
     html += ">";
     html += "<button";
+    href = "";
     html += " class=\"" + "navbar-toggle" + "\"";
     html += " " + "type" + "=\"" + "button" + "\"";
     html += " " + "data-toggle" + "=\"" + "navbar navbar-inverse navbar-fixed-top" + "\"";
@@ -59,22 +63,26 @@ public class ClientframeGenerator {
     html += " " + "role" + "=\"" + "navigation" + "\"";
     html += ">";
     html += "<span";
+    href = "";
     html += " class=\"" + "sr-only" + "\"";
     html += ">";
     html += "Toggle navigation";
     html += "</span>";
 
     html += "<span";
+    href = "";
     html += " class=\"" + "icon-bar" + "\"";
     html += ">";
     html += "</span>";
 
     html += "<span";
+    href = "";
     html += " class=\"" + "icon-bar" + "\"";
     html += ">";
     html += "</span>";
 
     html += "<span";
+    href = "";
     html += " class=\"" + "icon-bar" + "\"";
     html += ">";
     html += "</span>";
@@ -82,6 +90,7 @@ public class ClientframeGenerator {
     html += "</button>";
 
     html += "<a";
+    href = "";
     html += " href=\"" + "#" + "\"";
     html += " class=\"" + "navbar-brand" + "\"";
 
@@ -89,6 +98,7 @@ public class ClientframeGenerator {
     html += "</div>";
 
     html += "<div";
+    href = "";
     html += " id='" + "bs-example-navbar-collapse-1" + "'";
     html += " class=\"" + "collapse navbar-collapse" + "\"";
     html += ">";
@@ -97,9 +107,11 @@ public class ClientframeGenerator {
 
     html += ">";
     html += "<li";
+    href = "";
     html += ">";
     html += "<a";
-    html += " href=\"" + "home" + href + "\"";
+    href = "";
+    html += " href=\"" + "/" + "home" + href + "\"";
 
     html += ">" + "Home" + "</a>";
     html += "</li>";
@@ -111,28 +123,32 @@ public class ClientframeGenerator {
 
     html += ">";
     html += "<li";
+    href = "";
     html += ">";
-    {
 
-      {
-        User sessionUser = (User) session.getAttribute("user");
-        sessionUsers = new ArrayList<User>();
-        sessionUsers.add(sessionUser);
-      }
+    {
+      User sessionUser = (User) session.getAttribute("user");
+      sessionUsers = new ArrayList<User>();
+      sessionUsers.add(sessionUser);
+    }
+    {
       List<User> loop_a0b1a0a = sessionUsers;
       for (int counter_a0b1a0a = 0; counter_a0b1a0a < loop_a0b1a0a.size(); counter_a0b1a0a++) {
         user = loop_a0b1a0a.get(counter_a0b1a0a);
         value = "val";
         if (user != null && user.getPerson() != null) {
           html += "<label";
+          href = "";
 
           html += ">" + "Welcome," + "</label>";
           html += "<label";
+          href = "";
 
           html += ">" + user.getUserName() + "</label>";
         } else {
           html += "<a";
-          html += " href=\"" + "login" + href + "\"";
+          href = "";
+          html += " href=\"" + "/" + "login" + href + "\"";
 
           html += ">" + "Login" + "</a>";
         }
@@ -150,7 +166,7 @@ public class ClientframeGenerator {
 
     return html;
   }
-  public static String generateCategoryHeader(HttpSession session) throws ClassNotFoundException, SQLException {
+  public static String generateCategoryHeader(HttpSession session) throws ClassNotFoundException, SQLException, CloneNotSupportedException {
     String html = "";
     String parameters = "";
     String href = "";
@@ -158,22 +174,24 @@ public class ClientframeGenerator {
     String expressions = "";
     Connection connection = DatabaseConnection.getConnection();
     CategoryDAO categoryDAO = new CategoryDAO(connection);
-    Category searchCategory = new Category();
     Category category = new Category();
     html += "<div";
+    href = "";
     html += " class=\"" + "row" + "\"";
     html += ">";
     html += "<div";
+    href = "";
     html += " class=\"" + "pure-menu pure-menu-horizontal" + "\"";
     html += ">";
-    {
 
+    {
       List<Category> loop_a0a1 = categoryDAO.getAllCategorys();
       for (int counter_a0a1 = 0; counter_a0a1 < loop_a0a1.size(); counter_a0a1++) {
         category = loop_a0a1.get(counter_a0a1);
         value = "val";
         if (category != null && category.getCategorys() != null) {
           html += "<a";
+          href = "";
           html += " href=\"" + "#" + "\"";
           html += " class=\"" + "pure-menu-heading pure-menu-link" + "\"";
           parameters = "";
@@ -194,7 +212,7 @@ public class ClientframeGenerator {
 
     return html;
   }
-  public static String generateLeftBanner(HttpSession session) throws ClassNotFoundException, SQLException {
+  public static String generateLeftBanner(HttpSession session) throws ClassNotFoundException, SQLException, CloneNotSupportedException {
     String html = "";
     String parameters = "";
     String href = "";
@@ -206,11 +224,13 @@ public class ClientframeGenerator {
     Category category = new Category();
     Category subCategories = new Category();
     html += "<div";
+    href = "";
     html += " class=\"" + "col-md-3" + "\"";
     html += " " + "style" + "=\"" + "margin-top:5%" + "\"";
     html += " " + "style" + "=\"" + "margin-top:5%" + "\"";
     html += ">";
     html += "<span";
+    href = "";
     html += " class=\"" + "lead" + "\"";
     html += ">";
     html += "Categories";
@@ -222,17 +242,19 @@ public class ClientframeGenerator {
     html += " " + "aria-labelledby" + "=\"" + "dropdownMenu" + "\"";
 
     html += ">";
-    {
 
+    {
       List<Category> loop_a1a2 = categoryDAO.getAllCategorys();
       for (int counter_a1a2 = 0; counter_a1a2 < loop_a1a2.size(); counter_a1a2++) {
         category = loop_a1a2.get(counter_a1a2);
         value = "val";
         if (category != null && category.getCategorys() != null) {
           html += "<li";
+          href = "";
           html += " class=\"" + "dropdown-submenu" + "\"";
           html += ">";
           html += "<a";
+          href = "";
           html += " " + "tabindex" + "=\"" + "-1" + "\"";
           html += " href=\"" + "#" + "\"";
           parameters = "";
@@ -247,17 +269,19 @@ public class ClientframeGenerator {
           html += " class=\"" + "dropdown-menu" + "\"";
 
           html += ">";
-          {
 
-            searchCategory = new Category();
-            value = searchCategory.getId().toString();
-            searchCategory.setId(Integer.parseInt(value));
+          searchCategory = new Category();
+          value = category.getId().toString();
+          searchCategory.setId(Integer.parseInt(value));
+          {
             List<Category> loop_a1a0a1a2 = categoryDAO.findChildCategorys(searchCategory);
             for (int counter_a1a0a1a2 = 0; counter_a1a0a1a2 < loop_a1a0a1a2.size(); counter_a1a0a1a2++) {
               subCategories = loop_a1a0a1a2.get(counter_a1a0a1a2);
               html += "<li";
+              href = "";
               html += ">";
               html += "<a";
+              href = "";
               html += " " + "tabindex" + "=\"" + "-1" + "\"";
               html += " href=\"" + "#" + "\"";
               parameters = "";

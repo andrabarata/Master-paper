@@ -21,11 +21,14 @@
     <file name="ArrayCommand_BehaviorDescriptor.java">
       <unit at="6,0,14,0" name="ro.barata.mps.javascriptLanguage.behavior.ArrayCommand_BehaviorDescriptor" />
     </file>
+    <file name="ArrayExpresion_BehaviorDescriptor.java">
+      <unit at="7,0,15,0" name="ro.barata.mps.javascriptLanguage.behavior.ArrayExpresion_BehaviorDescriptor" />
+    </file>
     <file name="AssignmentCommand_BehaviorDescriptor.java">
       <unit at="6,0,14,0" name="ro.barata.mps.javascriptLanguage.behavior.AssignmentCommand_BehaviorDescriptor" />
     </file>
     <file name="BehaviorAspectDescriptor.java">
-      <unit at="9,0,86,0" name="ro.barata.mps.javascriptLanguage.behavior.BehaviorAspectDescriptor" />
+      <unit at="9,0,90,0" name="ro.barata.mps.javascriptLanguage.behavior.BehaviorAspectDescriptor" />
     </file>
     <file name="CallFunctionCommand_BehaviorDescriptor.java">
       <unit at="6,0,14,0" name="ro.barata.mps.javascriptLanguage.behavior.CallFunctionCommand_BehaviorDescriptor" />
@@ -38,6 +41,9 @@
     </file>
     <file name="DotExpressionCommand_BehaviorDescriptor.java">
       <unit at="9,0,20,0" name="ro.barata.mps.javascriptLanguage.behavior.DotExpressionCommand_BehaviorDescriptor" />
+    </file>
+    <file name="DotExpression_BehaviorDescriptor.java">
+      <unit at="6,0,8,0" name="ro.barata.mps.javascriptLanguage.behavior.DotExpression_BehaviorDescriptor" />
     </file>
     <file name="DummyCommand_BehaviorDescriptor.java">
       <unit at="6,0,14,0" name="ro.barata.mps.javascriptLanguage.behavior.DummyCommand_BehaviorDescriptor" />
@@ -92,6 +98,9 @@
     </file>
     <file name="PushHTMLCommand_BehaviorDescriptor.java">
       <unit at="6,0,14,0" name="ro.barata.mps.javascriptLanguage.behavior.PushHTMLCommand_BehaviorDescriptor" />
+    </file>
+    <file name="SimpleExpresion_BehaviorDescriptor.java">
+      <unit at="7,0,15,0" name="ro.barata.mps.javascriptLanguage.behavior.SimpleExpresion_BehaviorDescriptor" />
     </file>
     <file name="StoreCommand_BehaviorDescriptor.java">
       <unit at="6,0,14,0" name="ro.barata.mps.javascriptLanguage.behavior.StoreCommand_BehaviorDescriptor" />

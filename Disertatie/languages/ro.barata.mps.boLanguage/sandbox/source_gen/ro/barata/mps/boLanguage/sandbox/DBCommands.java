@@ -7,24 +7,35 @@ import java.sql.Connection;
 
 public class DBCommands {
 
-  public static void executeCommands() throws ClassNotFoundException, SQLException {
+  public static void executeCommands() throws ClassNotFoundException, SQLException, CloneNotSupportedException {
     Connection connection = DatabaseConnection.getConnection();
-    UserDAO userDAO = new UserDAO(connection);
-    User user = new User();
-    user = new User();
-    // Iterates through the concept's properties and sets their values with values fetched 
-    // either from the input model, or from the HTTP data recevied from the client (browser) 
-    user.setUserId(1);
-    // Iterates through the children/link entities, initializes them, and adds them to the parent 
+    CategoryDAO categoryDAO = new CategoryDAO(connection);
+    Category category = new Category();
     {
-      Person person_1 = null;
-      person_1 = new Person();
-      person_1.setId(1);
-      person_1.setFirstName("firstName1");
-      person_1.setLastName("lastName1");
-      user.setPerson(person_1);
+      Category newCategory = null;
+      category = null;
+      if (newCategory == null) {
+        newCategory = new Category();
+      }
+      if (category == null) {
+        category = new Category();
+      }
+      category.setId(3);
+      newCategory.setId(3);
+
+      if (category != null && newCategory != null) {
+        {
+          Category category_0 = null;
+          if (category_0 == null) {
+            category_0 = new Category();
+          }
+          category_0.setId(1);
+          newCategory.addCategory(category_0);
+
+        }
+        categoryDAO.updateCategory(category, newCategory);
+      }
     }
-    userDAO.addUser(user);
   }
 
   public static void main(String[] args) {

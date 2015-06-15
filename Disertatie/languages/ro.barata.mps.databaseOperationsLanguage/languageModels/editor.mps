@@ -425,7 +425,7 @@
   </node>
   <node concept="24kQdi" id="5wBjXY7qV2F">
     <property role="3GE5qa" value="db.values" />
-    <ref role="1XX52x" to="jkzc:5wBjXY7qSiU" resolve="IntValue" />
+    <ref role="1XX52x" to="jkzc:5wBjXY7qSiU" resolve="DBIntValue" />
     <node concept="3EZMnI" id="5wBjXY7qV38" role="2wV5jI">
       <node concept="3F0A7n" id="5wBjXY7s0o0" role="3EZMnx">
         <ref role="1NtTu8" to="jkzc:5wBjXY7qSjm" resolve="value" />
@@ -435,7 +435,7 @@
   </node>
   <node concept="24kQdi" id="5wBjXY7qV3r">
     <property role="3GE5qa" value="db.values" />
-    <ref role="1XX52x" to="jkzc:5wBjXY7qSi3" resolve="StringValue" />
+    <ref role="1XX52x" to="jkzc:5wBjXY7qSi3" resolve="DBStringValue" />
     <node concept="3EZMnI" id="5wBjXY7qV3S" role="2wV5jI">
       <node concept="3F0A7n" id="5wBjXY7qV42" role="3EZMnx">
         <ref role="1NtTu8" to="jkzc:5wBjXY7qSiN" resolve="value" />
@@ -445,7 +445,7 @@
   </node>
   <node concept="24kQdi" id="2qrivhEnm6K">
     <property role="3GE5qa" value="db.references" />
-    <ref role="1XX52x" to="jkzc:2qrivhEnlvc" resolve="LinkDeclarationReference" />
+    <ref role="1XX52x" to="jkzc:2qrivhEnlvc" resolve="AddLinkDeclarationReference" />
     <node concept="3EZMnI" id="2qrivhEnnU7" role="2wV5jI">
       <node concept="3F0ifn" id="2qrivhEvpFW" role="3EZMnx">
         <property role="3F0ifm" value="add" />
@@ -472,7 +472,7 @@
         </node>
       </node>
       <node concept="3F2HdR" id="2qrivhEp4h_" role="3EZMnx">
-        <ref role="1NtTu8" to="jkzc:2qrivhEnm6C" />
+        <ref role="1NtTu8" to="jkzc:63p_9b5V069" />
         <node concept="2iRkQZ" id="2qrivhEp4hC" role="2czzBx" />
         <node concept="VPM3Z" id="2qrivhEp4hD" role="3F10Kt">
           <property role="VOm3f" value="false" />
@@ -559,6 +559,37 @@
         </node>
       </node>
       <node concept="l2Vlx" id="2qrivhEo$7W" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="63p_9b5TMKq">
+    <property role="3GE5qa" value="db.references" />
+    <ref role="1XX52x" to="jkzc:63p_9b5TMKg" resolve="SetLinkDeclarationReference" />
+    <node concept="3EZMnI" id="63p_9b5TMPc" role="2wV5jI">
+      <node concept="3F0ifn" id="63p_9b5TMPd" role="3EZMnx">
+        <property role="3F0ifm" value="set" />
+        <node concept="lj46D" id="63p_9b5TMPe" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="1iCGBv" id="63p_9b5TMPf" role="3EZMnx">
+        <ref role="1NtTu8" to="jkzc:2qrivhEnlR7" />
+        <node concept="1sVBvm" id="63p_9b5TMPg" role="1sWHZn">
+          <node concept="3F0A7n" id="63p_9b5TMPh" role="2wV5jI">
+            <property role="1Intyy" value="true" />
+            <ref role="1NtTu8" to="tpce:fA0kJcN" resolve="role" />
+            <node concept="VechU" id="63p_9b5TMPi" role="3F10Kt">
+              <property role="Vb096" value="LIGHT_BLUE" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="3F0ifn" id="63p_9b5TMPr" role="3EZMnx">
+        <property role="3F0ifm" value="=" />
+      </node>
+      <node concept="3F1sOY" id="63p_9b5XhAr" role="3EZMnx">
+        <ref role="1NtTu8" to="jkzc:63p_9b5WrKK" />
+      </node>
+      <node concept="l2Vlx" id="63p_9b5TMPt" role="2iSdaV" />
     </node>
   </node>
 </model>

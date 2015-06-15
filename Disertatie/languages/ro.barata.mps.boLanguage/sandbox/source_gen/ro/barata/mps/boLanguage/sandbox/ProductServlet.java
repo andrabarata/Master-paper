@@ -12,7 +12,7 @@ import java.io.IOException;
 
 public class ProductServlet extends HttpServlet {
   private Connection connection;
-  public ProductServlet() throws SQLException, ClassNotFoundException {
+  public ProductServlet() throws SQLException, ClassNotFoundException, CloneNotSupportedException {
     if (connection == null) {
       connection = DatabaseConnection.getConnection();
     }
@@ -37,9 +37,15 @@ public class ProductServlet extends HttpServlet {
     }
   }
 
-  private void handleRequest(HttpServletRequest request, HttpServletResponse response) throws IOException, SQLException, ClassNotFoundException {
+  private void handleRequest(HttpServletRequest request, HttpServletResponse response) throws IOException, SQLException, ClassNotFoundException, CloneNotSupportedException {
     String action = request.getParameter("actionName");
-    String requestParameterValue = request.getParameter("productId");
+    String requestParameterValue = "";
+    if (request.getParameter("productId") != null) {
+      requestParameterValue = request.getParameter("productId");
+      request.getSession().setAttribute("productId", requestParameterValue);
+    } else {
+      requestParameterValue = request.getSession().getAttribute("productId").toString();
+    }
     if (action != null && !(action.equals(""))) {
 
     } else {

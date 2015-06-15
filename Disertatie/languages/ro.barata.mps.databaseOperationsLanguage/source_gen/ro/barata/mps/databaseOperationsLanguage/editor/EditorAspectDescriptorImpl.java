@@ -15,24 +15,26 @@ public class EditorAspectDescriptorImpl implements EditorAspectDescriptor {
   public Collection<ConceptEditor> getEditors(ConceptDescriptor descriptor) {
     switch (Arrays.binarySearch(stringSwitchCases_xbvbvu_a0a0b, descriptor.getConceptFqName())) {
       case 0:
-        return Collections.<ConceptEditor>singletonList(new BooleanValue_Editor());
+        return Collections.<ConceptEditor>singletonList(new AddLinkDeclarationReference_Editor());
       case 1:
-        return Collections.<ConceptEditor>singletonList(new DBCommands_Editor());
+        return Collections.<ConceptEditor>singletonList(new BooleanValue_Editor());
       case 2:
-        return Collections.<ConceptEditor>singletonList(new DBIntValue_Editor());
+        return Collections.<ConceptEditor>singletonList(new DBCommands_Editor());
       case 3:
-        return Collections.<ConceptEditor>singletonList(new DBStringValue_Editor());
+        return Collections.<ConceptEditor>singletonList(new DBIntValue_Editor());
       case 4:
-        return Collections.<ConceptEditor>singletonList(new DeleteOperation_Editor());
+        return Collections.<ConceptEditor>singletonList(new DBStringValue_Editor());
       case 5:
-        return Collections.<ConceptEditor>singletonList(new InsertOperation_Editor());
+        return Collections.<ConceptEditor>singletonList(new DeleteOperation_Editor());
       case 6:
-        return Collections.<ConceptEditor>singletonList(new Instance_Editor());
+        return Collections.<ConceptEditor>singletonList(new InsertOperation_Editor());
       case 7:
-        return Collections.<ConceptEditor>singletonList(new LinkDeclarationReference_Editor());
+        return Collections.<ConceptEditor>singletonList(new Instance_Editor());
       case 8:
         return Collections.<ConceptEditor>singletonList(new PropertyReference_Editor());
       case 9:
+        return Collections.<ConceptEditor>singletonList(new SetLinkDeclarationReference_Editor());
+      case 10:
         return Collections.<ConceptEditor>singletonList(new UpdateOperation_Editor());
       default:
     }
@@ -43,5 +45,5 @@ public class EditorAspectDescriptorImpl implements EditorAspectDescriptor {
   }
 
 
-  private static String[] stringSwitchCases_xbvbvu_a0a0b = new String[]{"ro.barata.mps.databaseOperationsLanguage.structure.BooleanValue", "ro.barata.mps.databaseOperationsLanguage.structure.DBCommands", "ro.barata.mps.databaseOperationsLanguage.structure.DBIntValue", "ro.barata.mps.databaseOperationsLanguage.structure.DBStringValue", "ro.barata.mps.databaseOperationsLanguage.structure.DeleteOperation", "ro.barata.mps.databaseOperationsLanguage.structure.InsertOperation", "ro.barata.mps.databaseOperationsLanguage.structure.Instance", "ro.barata.mps.databaseOperationsLanguage.structure.LinkDeclarationReference", "ro.barata.mps.databaseOperationsLanguage.structure.PropertyReference", "ro.barata.mps.databaseOperationsLanguage.structure.UpdateOperation"};
+  private static String[] stringSwitchCases_xbvbvu_a0a0b = new String[]{"ro.barata.mps.databaseOperationsLanguage.structure.AddLinkDeclarationReference", "ro.barata.mps.databaseOperationsLanguage.structure.BooleanValue", "ro.barata.mps.databaseOperationsLanguage.structure.DBCommands", "ro.barata.mps.databaseOperationsLanguage.structure.DBIntValue", "ro.barata.mps.databaseOperationsLanguage.structure.DBStringValue", "ro.barata.mps.databaseOperationsLanguage.structure.DeleteOperation", "ro.barata.mps.databaseOperationsLanguage.structure.InsertOperation", "ro.barata.mps.databaseOperationsLanguage.structure.Instance", "ro.barata.mps.databaseOperationsLanguage.structure.PropertyReference", "ro.barata.mps.databaseOperationsLanguage.structure.SetLinkDeclarationReference", "ro.barata.mps.databaseOperationsLanguage.structure.UpdateOperation"};
 }

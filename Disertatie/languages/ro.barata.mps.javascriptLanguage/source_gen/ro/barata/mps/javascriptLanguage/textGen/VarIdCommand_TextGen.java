@@ -6,14 +6,13 @@ import jetbrains.mps.textGen.SNodeTextGen;
 import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
-import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
 
 public class VarIdCommand_TextGen extends SNodeTextGen {
   public void doGenerateText(SNode node) {
     this.append("document.getElementById(");
     appendNode(SLinkOperations.getTarget(node, MetaAdapterFactory.getContainmentLink(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x4c7f2ab523e8fe54L, 0x2addac2a6f880beeL, "id")));
     this.append(").");
-    this.append(SPropertyOperations.getString_def(node, MetaAdapterFactory.getProperty(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x4c7f2ab523e8fe54L, 0x2addac2a6fcca779L, "expression"), "value"));
+    appendNode(SLinkOperations.getTarget(node, MetaAdapterFactory.getContainmentLink(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x4c7f2ab523e8fe54L, 0x60d99492c6c50b61L, "expression")));
     this.append(";");
     this.appendNewLine();
   }

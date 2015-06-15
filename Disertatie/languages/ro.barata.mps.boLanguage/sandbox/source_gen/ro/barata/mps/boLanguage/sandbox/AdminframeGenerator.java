@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.sql.Connection;
 
 public class AdminframeGenerator {
-  public static String getContent(HttpSession session, String requestParameterValue) throws ClassNotFoundException, SQLException {
+  public static String getContent(HttpSession session, String requestParameterValue) throws ClassNotFoundException, SQLException, CloneNotSupportedException {
     String html = "<html>";
     String parameters = "";
     String href = "";
@@ -31,7 +31,7 @@ public class AdminframeGenerator {
     html += "</html>";
     return html;
   }
-  public static String generateAdminHeader(HttpSession session) throws ClassNotFoundException, SQLException {
+  public static String generateAdminHeader(HttpSession session) throws ClassNotFoundException, SQLException, CloneNotSupportedException {
     String html = "";
     String parameters = "";
     String href = "";
@@ -40,15 +40,19 @@ public class AdminframeGenerator {
     User user = new User();
     List<User> sessionUsers = new ArrayList<User>();
     html += "<nav";
+    href = "";
     html += " class=\"" + "navbar navbar-default" + "\"";
     html += ">";
     html += "<div";
+    href = "";
     html += " class=\"" + "container-fluid" + "\"";
     html += ">";
     html += "<div";
+    href = "";
     html += " class=\"" + "navbar-header" + "\"";
     html += ">";
     html += "<button";
+    href = "";
     html += " class=\"" + "navbar-toggle" + "\"";
     html += " " + "type" + "=\"" + "button" + "\"";
     html += " " + "data-toggle" + "=\"" + "navbar navbar-inverse navbar-fixed-top" + "\"";
@@ -58,22 +62,26 @@ public class AdminframeGenerator {
     html += " " + "role" + "=\"" + "navigation" + "\"";
     html += ">";
     html += "<span";
+    href = "";
     html += " class=\"" + "sr-only" + "\"";
     html += ">";
     html += "Toggle navigation";
     html += "</span>";
 
     html += "<span";
+    href = "";
     html += " class=\"" + "icon-bar" + "\"";
     html += ">";
     html += "</span>";
 
     html += "<span";
+    href = "";
     html += " class=\"" + "icon-bar" + "\"";
     html += ">";
     html += "</span>";
 
     html += "<span";
+    href = "";
     html += " class=\"" + "icon-bar" + "\"";
     html += ">";
     html += "</span>";
@@ -81,6 +89,7 @@ public class AdminframeGenerator {
     html += "</button>";
 
     html += "<a";
+    href = "";
     html += " href=\"" + "#" + "\"";
     html += " class=\"" + "navbar-brand" + "\"";
 
@@ -88,6 +97,7 @@ public class AdminframeGenerator {
     html += "</div>";
 
     html += "<div";
+    href = "";
     html += " id='" + "bs-example-navbar-collapse-1" + "'";
     html += " class=\"" + "collapse navbar-collapse" + "\"";
     html += ">";
@@ -96,17 +106,31 @@ public class AdminframeGenerator {
 
     html += ">";
     html += "<li";
+    href = "";
     html += ">";
     html += "<a";
-    html += " href=\"" + "adminHome" + href + "\"";
+    href = "";
+    html += " href=\"" + "/" + "adminHome" + href + "\"";
 
     html += ">" + "Categories" + "</a>";
+    html += "</li>";
+
+    html += "<li";
+    href = "";
+    html += ">";
     html += "<a";
-    html += " href=\"" + "adminproducts" + href + "\"";
+    href = "";
+    html += " href=\"" + "/" + "adminHomeproducts" + href + "\"";
 
     html += ">" + "Products" + "</a>";
+    html += "</li>";
+
+    html += "<li";
+    href = "";
+    html += ">";
     html += "<a";
-    html += " href=\"" + "adminAttributes" + href + "\"";
+    href = "";
+    html += " href=\"" + "/" + "adminAttributes" + href + "\"";
 
     html += ">" + "Attributes" + "</a>";
     html += "</li>";
@@ -117,31 +141,36 @@ public class AdminframeGenerator {
     html += " class=\"" + "nav navbar-nav navbar-right" + "\"";
 
     html += ">";
-    {
 
-      {
-        User sessionUser = (User) session.getAttribute("user");
-        sessionUsers = new ArrayList<User>();
-        sessionUsers.add(sessionUser);
-      }
+    {
+      User sessionUser = (User) session.getAttribute("user");
+      sessionUsers = new ArrayList<User>();
+      sessionUsers.add(sessionUser);
+    }
+    {
       List<User> loop_a1b0a0 = sessionUsers;
       for (int counter_a1b0a0 = 0; counter_a1b0a0 < loop_a1b0a0.size(); counter_a1b0a0++) {
         user = loop_a1b0a0.get(counter_a1b0a0);
         value = "val";
         if (user != null && user.getPerson() != null) {
           html += "<li";
+          href = "";
           html += ">";
           html += "<label";
+          href = "";
 
           html += ">" + "Welcome," + "</label>";
           html += "<label";
+          href = "";
 
           html += ">" + user.getUserName() + "</label>";
           html += "</li>";
 
           html += "<li";
+          href = "";
           html += ">";
           html += "<a";
+          href = "";
           html += " href=\"" + "#" + "\"";
 
           html += ">" + "Sign out" + "</a>";
@@ -149,9 +178,11 @@ public class AdminframeGenerator {
 
         } else {
           html += "<li";
+          href = "";
           html += ">";
           html += "<a";
-          html += " href=\"" + "login" + href + "\"";
+          href = "";
+          html += " href=\"" + "/" + "login" + href + "\"";
 
           html += ">" + "Login" + "</a>";
           html += "</li>";
@@ -169,7 +200,7 @@ public class AdminframeGenerator {
 
     return html;
   }
-  public static String generateLeftBannerAdmin(HttpSession session) throws ClassNotFoundException, SQLException {
+  public static String generateLeftBannerAdmin(HttpSession session) throws ClassNotFoundException, SQLException, CloneNotSupportedException {
     String html = "";
     String parameters = "";
     String href = "";
@@ -181,11 +212,13 @@ public class AdminframeGenerator {
     Category category = new Category();
     Category subCategories = new Category();
     html += "<div";
+    href = "";
     html += " class=\"" + "col-md-3" + "\"";
     html += " " + "style" + "=\"" + "margin-top:5%" + "\"";
     html += " " + "style" + "=\"" + "margin-top:5%" + "\"";
     html += ">";
     html += "<span";
+    href = "";
     html += " class=\"" + "lead" + "\"";
     html += ">";
     html += "Categories";
@@ -197,50 +230,46 @@ public class AdminframeGenerator {
     html += " " + "aria-labelledby" + "=\"" + "dropdownMenu" + "\"";
 
     html += ">";
-    {
 
+    {
       List<Category> loop_a1a1 = categoryDAO.getAllCategorys();
       for (int counter_a1a1 = 0; counter_a1a1 < loop_a1a1.size(); counter_a1a1++) {
         category = loop_a1a1.get(counter_a1a1);
         value = "val";
         if (category != null && category.getCategorys() != null) {
           html += "<li";
+          href = "";
           html += " class=\"" + "dropdown-submenu" + "\"";
           html += ">";
           html += "<a";
+          href = "";
           html += " " + "tabindex" + "=\"" + "-1" + "\"";
-          html += " href=\"" + "#" + "\"";
-          parameters = "";
-          parameters += "'" + category.getId() + "',";
-          parameters += "'" + category.getName() + "',";
-          parameters = parameters.substring(0, parameters.length() - 1);
-          html += " " + "onclick" + "=\"" + "navigateToCategoryProducts" + "(" + parameters + ")\"";
-
+          href += "/" + category.getName();
+          href += "?" + "categoryId" + "=" + category.getId();
+          html += " href=\"" + "/" + "editCategory" + href + "\"";
 
           html += ">" + category.getName() + "</a>";
           html += "<ul";
           html += " class=\"" + "dropdown-menu" + "\"";
 
           html += ">";
-          {
 
-            searchCategory = new Category();
-            value = searchCategory.getId().toString();
-            searchCategory.setId(Integer.parseInt(value));
+          searchCategory = new Category();
+          value = category.getId().toString();
+          searchCategory.setId(Integer.parseInt(value));
+          {
             List<Category> loop_a1a0a1a1 = categoryDAO.findChildCategorys(searchCategory);
             for (int counter_a1a0a1a1 = 0; counter_a1a0a1a1 < loop_a1a0a1a1.size(); counter_a1a0a1a1++) {
               subCategories = loop_a1a0a1a1.get(counter_a1a0a1a1);
               html += "<li";
+              href = "";
               html += ">";
               html += "<a";
+              href = "";
               html += " " + "tabindex" + "=\"" + "-1" + "\"";
-              html += " href=\"" + "#" + "\"";
-              parameters = "";
-              parameters += "'" + subCategories.getId() + "',";
-              parameters += "'" + subCategories.getName() + "',";
-              parameters = parameters.substring(0, parameters.length() - 1);
-              html += " " + "onclick" + "=\"" + "navigateToCategoryProducts" + "(" + parameters + ")\"";
-
+              href += "/" + subCategories.getName();
+              href += "?" + "categoryId" + "=" + subCategories.getId();
+              html += " href=\"" + "/" + "editCategory" + href + "\"";
 
               html += ">" + subCategories.getName() + "</a>";
               html += "</li>";

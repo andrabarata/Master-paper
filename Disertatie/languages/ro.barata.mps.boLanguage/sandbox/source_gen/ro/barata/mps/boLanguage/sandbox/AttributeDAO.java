@@ -88,7 +88,8 @@ public class AttributeDAO {
     return attributes;
   }
 
-  public void addAttribute(Attribute attribute) throws SQLException, ClassNotFoundException {
+
+  public void addAttribute(Attribute attribute) throws SQLException, ClassNotFoundException, CloneNotSupportedException {
     String sql = "insert into " + "attributes" + "(";
     String columns = "";
     String values = "";
@@ -120,7 +121,7 @@ public class AttributeDAO {
     // Loops thhrough the children, and adds them recursively to the database 
   }
 
-  public void updateAttribute(Attribute oldattribute, Attribute newattribute) throws SQLException, ClassNotFoundException {
+  public void updateAttribute(Attribute oldattribute, Attribute newattribute) throws SQLException, ClassNotFoundException, CloneNotSupportedException {
     String sql = "update " + "attributes" + " set ";
     String values = "";
     if (newattribute.getId() != null) {

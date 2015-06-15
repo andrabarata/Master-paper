@@ -1255,5 +1255,17 @@
     <property role="34LRSv" value="i" />
     <ref role="1TJDcQ" node="5a6Q6gbwnnj" resolve="HTMLValueCommand" />
   </node>
+  <node concept="1TIwiD" id="7ow4wvzMu_z">
+    <property role="3GE5qa" value="html.miscelanous" />
+    <property role="TrG5h" value="LegendElement" />
+    <property role="34LRSv" value="legend" />
+    <ref role="1TJDcQ" node="5a6Q6gbwnnj" resolve="HTMLValueCommand" />
+  </node>
+  <node concept="1TIwiD" id="1FiypT6h4YN">
+    <property role="TrG5h" value="FieldsetContainer" />
+    <property role="34LRSv" value="fieldset" />
+    <property role="3GE5qa" value="html.container" />
+    <ref role="1TJDcQ" node="5EdacSEwA7P" resolve="MixedHTMLCommand" />
+  </node>
 </model>
 

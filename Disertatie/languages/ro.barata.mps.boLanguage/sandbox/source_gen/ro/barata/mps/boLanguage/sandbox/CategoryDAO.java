@@ -43,6 +43,10 @@ public class CategoryDAO {
     columns += "table" + i + "." + "name" + " \"" + "categories" + "name" + "\",";
     leftJoins += " left join " + "categories" + " table" + i + " on table" + i + "." + "categoryId" + "=table0." + "id" + " ";
     i++;
+    columns += "table" + i + "." + "id" + " \"" + "categories" + "id" + "\",";
+    columns += "table" + i + "." + "name" + " \"" + "categories" + "name" + "\",";
+    leftJoins += " left join " + "categories" + " table" + i + " on table" + i + "." + "parentId" + "=table0." + "id" + " ";
+    i++;
 
     sql = "select " + columns.substring(0, columns.length() - 1) + sql + leftJoins;
     System.out.println(sql);
@@ -98,6 +102,19 @@ public class CategoryDAO {
         }
         if (child.getId() != null) {
           foundCategory.addCategory(child);
+        }
+      }
+      {
+        Category reference = new Category();
+        if (set.getBigDecimal("categories" + "id") != null) {
+          reference.setId(Integer.valueOf(set.getBigDecimal("categories" + "id").intValue()));
+        }
+        if (set.getString("categories" + "name") != null) {
+          reference.setName(set.getString("categories" + "name"));
+        }
+
+        if (reference.getId() != null) {
+          foundCategory.setCategory(reference);
         }
       }
       boolean flag = true;
@@ -252,7 +269,37 @@ public class CategoryDAO {
     return categorys;
   }
 
-  public void addCategory(Category category) throws SQLException, ClassNotFoundException {
+  public Category findReferenceCategory(Category parent) throws SQLException {
+    Category reference = new Category();
+    String sql = "select ";
+    String columns = "";
+    columns += "id";
+    columns += ",";
+    columns += "name";
+    sql += columns;
+    sql += " from " + "categories" + " where " + "id" + " in (select " + "parentId" + " from " + "categories";
+    if (parent != null) {
+      sql += " where ";
+      String values = "";
+      if (parent.getId() != null) {
+        values += "id" + "='" + parent.getId() + "'and ";
+      }
+      if (parent.getName() != null) {
+        values += "name" + "='" + parent.getName() + "'and ";
+      }
+      sql += values.substring(0, values.length() - 4);
+    }
+    sql += ")";
+    System.out.println(sql);
+    ResultSet set = stmt.executeQuery(sql);
+    while (set.next()) {
+      reference.setId(Integer.valueOf(set.getBigDecimal("id").intValue()));
+      reference.setName(set.getString("name"));
+    }
+    return reference;
+  }
+
+  public void addCategory(Category category) throws SQLException, ClassNotFoundException, CloneNotSupportedException {
     String sql = "insert into " + "categories" + "(";
     String columns = "";
     String values = "";
@@ -280,6 +327,15 @@ public class CategoryDAO {
       }
     }
     // Searches for the reference entities, such that it identifies and sets the foreign key columns 
+    if (category.getCategory() != null) {
+      Category referenceCategory = category.getCategory();
+      CategoryDAO referenceCategoryDAO = new CategoryDAO(connn);
+      if (referenceCategoryDAO.findCategorys(referenceCategory).size() == 0) {
+        referenceCategoryDAO.addCategory(referenceCategory);
+      }
+      columns += "parentId" + ",";
+      values += "'" + referenceCategory.getId() + "',";
+    }
     sql += columns.substring(0, columns.length() - 1) + ") values (" + values.substring(0, values.length() - 1) + ")";
     System.out.println(sql);
     stmt.execute(sql);
@@ -287,24 +343,54 @@ public class CategoryDAO {
     if (category.getProducts() != null) {
       ProductDAO childProductDAO = new ProductDAO(connn);
       for (Product childProduct : category.getProducts()) {
-        childProductDAO.addProduct(childProduct);
+        List<Product> children = childProductDAO.findProducts(childProduct);
+        if (children.size() == 0) {
+          childProductDAO.addProduct(childProduct);
+        } else {
+          for (Product child : children) {
+            Product copy = (Product) child.clone();
+            child.setParentCategory(category);
+            childProductDAO.updateProduct(copy, child);
+
+          }
+        }
       }
     }
     if (category.getDiscounts() != null) {
       DiscountDAO childDiscountDAO = new DiscountDAO(connn);
       for (Discount childDiscount : category.getDiscounts()) {
-        childDiscountDAO.addDiscount(childDiscount);
+        List<Discount> children = childDiscountDAO.findDiscounts(childDiscount);
+        if (children.size() == 0) {
+          childDiscountDAO.addDiscount(childDiscount);
+        } else {
+          for (Discount child : children) {
+            Discount copy = (Discount) child.clone();
+            child.setParentCategory(category);
+            childDiscountDAO.updateDiscount(copy, child);
+
+          }
+        }
       }
     }
     if (category.getCategorys() != null) {
       CategoryDAO childCategoryDAO = new CategoryDAO(connn);
       for (Category childCategory : category.getCategorys()) {
-        childCategoryDAO.addCategory(childCategory);
+        List<Category> children = childCategoryDAO.findCategorys(childCategory);
+        if (children.size() == 0) {
+          childCategoryDAO.addCategory(childCategory);
+        } else {
+          for (Category child : children) {
+            Category copy = (Category) child.clone();
+            child.setParentCategory(category);
+            childCategoryDAO.updateCategory(copy, child);
+
+          }
+        }
       }
     }
   }
 
-  public void updateCategory(Category oldcategory, Category newcategory) throws SQLException, ClassNotFoundException {
+  public void updateCategory(Category oldcategory, Category newcategory) throws SQLException, ClassNotFoundException, CloneNotSupportedException {
     String sql = "update " + "categories" + " set ";
     String values = "";
     if (newcategory.getId() != null) {
@@ -333,6 +419,14 @@ public class CategoryDAO {
         values += columnsList.get(i) + "='" + valuesList.get(i) + "',";
       }
     }
+    if (newcategory.getCategory() != null) {
+      Category referenceCategory = newcategory.getCategory();
+      CategoryDAO referenceCategoryDAO = new CategoryDAO(connn);
+      if (referenceCategoryDAO.findCategorys(referenceCategory).size() == 0) {
+        referenceCategoryDAO.addCategory(referenceCategory);
+      }
+      values += "parentId" + "=" + "'" + referenceCategory.getId() + "'";
+    }
     String condition = " where ";
     if (oldcategory.getId() != null) {
       condition += "id" + "='" + oldcategory.getId() + "' and ";
@@ -346,19 +440,49 @@ public class CategoryDAO {
     if (newcategory.getProducts() != null) {
       ProductDAO childProductDAO = new ProductDAO(connn);
       for (Product childProduct : newcategory.getProducts()) {
-        childProductDAO.addProduct(childProduct);
+        List<Product> children = childProductDAO.findProducts(childProduct);
+        if (children.size() == 0) {
+          childProductDAO.addProduct(childProduct);
+        } else {
+          for (Product child : children) {
+            Product copy = (Product) child.clone();
+            child.setParentCategory(newcategory);
+            childProductDAO.updateProduct(copy, child);
+
+          }
+        }
       }
     }
     if (newcategory.getDiscounts() != null) {
       DiscountDAO childDiscountDAO = new DiscountDAO(connn);
       for (Discount childDiscount : newcategory.getDiscounts()) {
-        childDiscountDAO.addDiscount(childDiscount);
+        List<Discount> children = childDiscountDAO.findDiscounts(childDiscount);
+        if (children.size() == 0) {
+          childDiscountDAO.addDiscount(childDiscount);
+        } else {
+          for (Discount child : children) {
+            Discount copy = (Discount) child.clone();
+            child.setParentCategory(newcategory);
+            childDiscountDAO.updateDiscount(copy, child);
+
+          }
+        }
       }
     }
     if (newcategory.getCategorys() != null) {
       CategoryDAO childCategoryDAO = new CategoryDAO(connn);
       for (Category childCategory : newcategory.getCategorys()) {
-        childCategoryDAO.addCategory(childCategory);
+        List<Category> children = childCategoryDAO.findCategorys(childCategory);
+        if (children.size() == 0) {
+          childCategoryDAO.addCategory(childCategory);
+        } else {
+          for (Category child : children) {
+            Category copy = (Category) child.clone();
+            child.setParentCategory(newcategory);
+            childCategoryDAO.updateCategory(copy, child);
+
+          }
+        }
       }
     }
 

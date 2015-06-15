@@ -88,7 +88,8 @@ public class DiscountDAO {
     return discounts;
   }
 
-  public void addDiscount(Discount discount) throws SQLException, ClassNotFoundException {
+
+  public void addDiscount(Discount discount) throws SQLException, ClassNotFoundException, CloneNotSupportedException {
     String sql = "insert into " + "discounts" + "(";
     String columns = "";
     String values = "";
@@ -126,7 +127,7 @@ public class DiscountDAO {
     // Loops thhrough the children, and adds them recursively to the database 
   }
 
-  public void updateDiscount(Discount olddiscount, Discount newdiscount) throws SQLException, ClassNotFoundException {
+  public void updateDiscount(Discount olddiscount, Discount newdiscount) throws SQLException, ClassNotFoundException, CloneNotSupportedException {
     String sql = "update " + "discounts" + " set ";
     String values = "";
     if (newdiscount.getId() != null) {

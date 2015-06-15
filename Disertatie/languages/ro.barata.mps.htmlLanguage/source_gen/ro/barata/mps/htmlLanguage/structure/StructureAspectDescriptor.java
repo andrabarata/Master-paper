@@ -31,6 +31,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptDatabaseOperation = new ConceptDescriptorBuilder("ro.barata.mps.htmlLanguage.structure.DatabaseOperation", MetaIdFactory.conceptId(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x40798aa2d38348a2L)).super_("ro.barata.mps.htmlLanguage.structure.AbstractOperation").super_(MetaIdFactory.conceptId(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x40798aa2d38348dcL)).parents("ro.barata.mps.htmlLanguage.structure.AbstractOperation").parentIds(MetaIdFactory.conceptId(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x40798aa2d38348dcL)).childDescriptors(new ConceptDescriptorBuilder.Link(4645896922547308870L, "command", MetaIdFactory.conceptId(0x58b9e0aa66634086L, 0x8f84dfaa697f9989L, 0x58274fdf875ad2a1L), false, false, false)).children(new String[]{"command"}, new boolean[]{false}).create();
   /*package*/ final ConceptDescriptor myConceptDivContainer = new ConceptDescriptorBuilder("ro.barata.mps.htmlLanguage.structure.DivContainer", MetaIdFactory.conceptId(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x62619ddfe2f6e1aL)).super_("ro.barata.mps.htmlLanguage.structure.MixedHTMLCommand").super_(MetaIdFactory.conceptId(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x5a8d28ce2a8261f5L)).parents("ro.barata.mps.htmlLanguage.structure.MixedHTMLCommand").parentIds(MetaIdFactory.conceptId(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x5a8d28ce2a8261f5L)).alias("div", "").create();
   /*package*/ final ConceptDescriptor myConceptExpressionReference = new ConceptDescriptorBuilder("ro.barata.mps.htmlLanguage.structure.ExpressionReference", MetaIdFactory.conceptId(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x40798aa2d33e0411L)).super_("ro.barata.mps.htmlLanguage.structure.AttributeReference").super_(MetaIdFactory.conceptId(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x40798aa2d33e027bL)).parents("ro.barata.mps.htmlLanguage.structure.AttributeReference").parentIds(MetaIdFactory.conceptId(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x40798aa2d33e027bL)).childDescriptors(new ConceptDescriptorBuilder.Link(4645896922542769206L, "field1", MetaIdFactory.conceptId(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x5a8d28ce2a8261d9L), false, false, false), new ConceptDescriptorBuilder.Link(4645896922543518232L, "field2", MetaIdFactory.conceptId(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x5a8d28ce2a8261d9L), false, true, false)).children(new String[]{"field1", "field2"}, new boolean[]{false, true}).create();
+  /*package*/ final ConceptDescriptor myConceptFieldsetContainer = new ConceptDescriptorBuilder("ro.barata.mps.htmlLanguage.structure.FieldsetContainer", MetaIdFactory.conceptId(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x1ad2899e46444fb3L)).super_("ro.barata.mps.htmlLanguage.structure.MixedHTMLCommand").super_(MetaIdFactory.conceptId(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x5a8d28ce2a8261f5L)).parents("ro.barata.mps.htmlLanguage.structure.MixedHTMLCommand").parentIds(MetaIdFactory.conceptId(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x5a8d28ce2a8261f5L)).alias("fieldset", "").create();
   /*package*/ final ConceptDescriptor myConceptFormContainer = new ConceptDescriptorBuilder("ro.barata.mps.htmlLanguage.structure.FormContainer", MetaIdFactory.conceptId(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x5a8d28ce2a9bb4e1L)).super_("ro.barata.mps.htmlLanguage.structure.MixedHTMLCommand").super_(MetaIdFactory.conceptId(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x5a8d28ce2a8261f5L)).parents("ro.barata.mps.htmlLanguage.structure.MixedHTMLCommand").parentIds(MetaIdFactory.conceptId(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x5a8d28ce2a8261f5L)).alias("form", "").create();
   /*package*/ final ConceptDescriptor myConceptH1Element = new ConceptDescriptorBuilder("ro.barata.mps.htmlLanguage.structure.H1Element", MetaIdFactory.conceptId(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x5286d8640b562066L)).super_("ro.barata.mps.htmlLanguage.structure.HTMLValueCommand").super_(MetaIdFactory.conceptId(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x5286d8640b8175d3L)).parents("ro.barata.mps.htmlLanguage.structure.HTMLValueCommand").parentIds(MetaIdFactory.conceptId(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x5286d8640b8175d3L)).alias("h1", "").create();
   /*package*/ final ConceptDescriptor myConceptH2Element = new ConceptDescriptorBuilder("ro.barata.mps.htmlLanguage.structure.H2Element", MetaIdFactory.conceptId(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x5a8d28ce2a9bb586L)).super_("ro.barata.mps.htmlLanguage.structure.HTMLValueCommand").super_(MetaIdFactory.conceptId(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x5286d8640b8175d3L)).parents("ro.barata.mps.htmlLanguage.structure.HTMLValueCommand").parentIds(MetaIdFactory.conceptId(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x5286d8640b8175d3L)).alias("h2", "").create();
@@ -64,6 +65,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptInputElement = new ConceptDescriptorBuilder("ro.barata.mps.htmlLanguage.structure.InputElement", MetaIdFactory.conceptId(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x4c7f2ab523a2c4adL)).super_("ro.barata.mps.htmlLanguage.structure.HTMLValueCommand").super_(MetaIdFactory.conceptId(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x5286d8640b8175d3L)).parents("ro.barata.mps.htmlLanguage.structure.HTMLValueCommand", "ro.barata.mps.htmlLanguage.structure.ValueIncludedHTML").parentIds(MetaIdFactory.conceptId(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x5286d8640b8175d3L), MetaIdFactory.conceptId(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x425265b0cdd10bffL)).propertyDescriptors(new ConceptDescriptorBuilder.Prop(3780046886471270874L, "type")).properties("type").alias("input", "").create();
   /*package*/ final ConceptDescriptor myConceptJSQueryParameter = new ConceptDescriptorBuilder("ro.barata.mps.htmlLanguage.structure.JSQueryParameter", MetaIdFactory.conceptId(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x34756c9d9e7c4fc4L)).super_("jetbrains.mps.lang.core.structure.BaseConcept").super_(MetaIdFactory.conceptId(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x10802efe25aL)).parents("jetbrains.mps.lang.core.structure.BaseConcept").parentIds(MetaIdFactory.conceptId(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x10802efe25aL)).referenceDescriptors(new ConceptDescriptorBuilder.Ref(3780046886472012582L, "parameter", MetaIdFactory.conceptId(0xc72da2b97cce4447L, 0x8389f407dc1158b7L, 0xf979bd086bL), false)).references("parameter").childDescriptors(new ConceptDescriptorBuilder.Link(6355225720463179963L, "value", MetaIdFactory.conceptId(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x2d12ba15feb07d28L), false, false, false)).children(new String[]{"value"}, new boolean[]{false}).create();
   /*package*/ final ConceptDescriptor myConceptLabelElement = new ConceptDescriptorBuilder("ro.barata.mps.htmlLanguage.structure.LabelElement", MetaIdFactory.conceptId(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x4c7f2ab523b31e39L)).super_("ro.barata.mps.htmlLanguage.structure.HTMLValueCommand").super_(MetaIdFactory.conceptId(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x5286d8640b8175d3L)).parents("ro.barata.mps.htmlLanguage.structure.HTMLValueCommand").parentIds(MetaIdFactory.conceptId(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x5286d8640b8175d3L)).alias("label", "").create();
+  /*package*/ final ConceptDescriptor myConceptLegendElement = new ConceptDescriptorBuilder("ro.barata.mps.htmlLanguage.structure.LegendElement", MetaIdFactory.conceptId(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x76201207e3c9e963L)).super_("ro.barata.mps.htmlLanguage.structure.HTMLValueCommand").super_(MetaIdFactory.conceptId(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x5286d8640b8175d3L)).parents("ro.barata.mps.htmlLanguage.structure.HTMLValueCommand").parentIds(MetaIdFactory.conceptId(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x5286d8640b8175d3L)).alias("legend", "").create();
   /*package*/ final ConceptDescriptor myConceptLiElement = new ConceptDescriptorBuilder("ro.barata.mps.htmlLanguage.structure.LiElement", MetaIdFactory.conceptId(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x5a8d28ce2a9b175fL)).super_("ro.barata.mps.htmlLanguage.structure.MixedHTMLCommand").super_(MetaIdFactory.conceptId(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x5a8d28ce2a8261f5L)).parents("ro.barata.mps.htmlLanguage.structure.MixedHTMLCommand", "ro.barata.mps.htmlLanguage.structure.SpecialCaseCommand").parentIds(MetaIdFactory.conceptId(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x5a8d28ce2a8261f5L), MetaIdFactory.conceptId(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x5a8d28ce2aa5b1d3L)).alias("li", "").create();
   /*package*/ final ConceptDescriptor myConceptLinkQueryParameter = new ConceptDescriptorBuilder("ro.barata.mps.htmlLanguage.structure.LinkQueryParameter", MetaIdFactory.conceptId(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x642e9a165d4490edL)).super_("jetbrains.mps.lang.core.structure.BaseConcept").super_(MetaIdFactory.conceptId(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x10802efe25aL)).parents("jetbrains.mps.lang.core.structure.BaseConcept", "ro.barata.mps.htmlLanguage.structure.IParameter").parentIds(MetaIdFactory.conceptId(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x10802efe25aL), MetaIdFactory.conceptId(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x642e9a165d449005L)).referenceDescriptors(new ConceptDescriptorBuilder.Ref(7218876673566216431L, "parameter", MetaIdFactory.conceptId(0xc72da2b97cce4447L, 0x8389f407dc1158b7L, 0xf979bd086aL), false)).references("parameter").childDescriptors(new ConceptDescriptorBuilder.Link(7218876673566216430L, "value", MetaIdFactory.conceptId(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x642e9a165d452b5dL), false, false, false)).children(new String[]{"value"}, new boolean[]{false}).alias("link query", "").create();
   /*package*/ final ConceptDescriptor myConceptMethodAttribute = new ConceptDescriptorBuilder("ro.barata.mps.htmlLanguage.structure.MethodAttribute", MetaIdFactory.conceptId(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x425265b0cddba142L)).super_("jetbrains.mps.lang.core.structure.BaseConcept").super_(MetaIdFactory.conceptId(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x10802efe25aL)).parents("jetbrains.mps.lang.core.structure.BaseConcept", "ro.barata.mps.htmlLanguage.structure.IAttribute").parentIds(MetaIdFactory.conceptId(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x10802efe25aL), MetaIdFactory.conceptId(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x7c208aae91aedf7eL)).propertyDescriptors(new ConceptDescriptorBuilder.Prop(4778993964635889987L, "method")).properties("method").alias("method", "").create();
@@ -109,13 +111,13 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptAElement, myConceptAbstractCommand, myConceptAbstractOperation, myConceptAction, myConceptActionAttribute, myConceptActionType, myConceptAllCondition, myConceptAttribute, myConceptAttributeReference, myConceptButtonContainer, myConceptClassAttribute, myConceptContainerCommand, myConceptCounterId, myConceptCounterIdReference, myConceptDBCondition, myConceptDatabaseLocation, myConceptDatabaseOperation, myConceptDivContainer, myConceptExpressionReference, myConceptFormContainer, myConceptH1Element, myConceptH2Element, myConceptH3Element, myConceptH4Element, myConceptH5Element, myConceptH6Element, myConceptHREFAttribute, myConceptHTMLBody, myConceptHTMLCommand, myConceptHTMLHead, myConceptHTMLPage, myConceptHTMLStructure, myConceptHTMLTagValue, myConceptHTMLTile, myConceptHTMLTileReference, myConceptHTMLValue, myConceptHTMLValueCommand, myConceptIAttribute, myConceptIElement, myConceptINullable, myConceptIParameter, myConceptIdAttribute, myConceptIfCommand, myConceptIfLink, myConceptIfParameter, myConceptIfProperty, myConceptImageElement, myConceptImageReference, myConceptImageSrc, myConceptInputElement, myConceptJSQueryParameter, myConceptLabelElement, myConceptLiElement, myConceptLinkQueryParameter, myConceptMethodAttribute, myConceptMixedHTMLCommand, myConceptNameAttribute, myConceptNavContainer, myConceptNotNullValue, myConceptNullValue, myConceptOperationCommand, myConceptOptionElement, myConceptPageHREF, myConceptParameterValue, myConceptPropertyQueryParameter, myConceptQueryCondition, myConceptReceiveLocation, myConceptReceiveOperation, myConceptSRCAttribute, myConceptSelectCommand, myConceptSelectCondition, myConceptSelectContainer, myConceptServer, myConceptSessionCondition, myConceptSessionLocation, myConceptSpanContainer, myConceptSpecialCaseCommand, myConceptSpecialCaseRootCommand, myConceptStaticAttributeReference, myConceptTDElement, myConceptTHElement, myConceptTRElement, myConceptTableContainer, myConceptTagValue, myConceptTagValueReference, myConceptTextareaElement, myConceptTitleElement, myConceptULContainer, myConceptURLParameter, myConceptURLValue, myConceptUserHREF, myConceptUserSrc, myConceptUserValue, myConceptValueIncludedHTML);
+    return Arrays.asList(myConceptAElement, myConceptAbstractCommand, myConceptAbstractOperation, myConceptAction, myConceptActionAttribute, myConceptActionType, myConceptAllCondition, myConceptAttribute, myConceptAttributeReference, myConceptButtonContainer, myConceptClassAttribute, myConceptContainerCommand, myConceptCounterId, myConceptCounterIdReference, myConceptDBCondition, myConceptDatabaseLocation, myConceptDatabaseOperation, myConceptDivContainer, myConceptExpressionReference, myConceptFieldsetContainer, myConceptFormContainer, myConceptH1Element, myConceptH2Element, myConceptH3Element, myConceptH4Element, myConceptH5Element, myConceptH6Element, myConceptHREFAttribute, myConceptHTMLBody, myConceptHTMLCommand, myConceptHTMLHead, myConceptHTMLPage, myConceptHTMLStructure, myConceptHTMLTagValue, myConceptHTMLTile, myConceptHTMLTileReference, myConceptHTMLValue, myConceptHTMLValueCommand, myConceptIAttribute, myConceptIElement, myConceptINullable, myConceptIParameter, myConceptIdAttribute, myConceptIfCommand, myConceptIfLink, myConceptIfParameter, myConceptIfProperty, myConceptImageElement, myConceptImageReference, myConceptImageSrc, myConceptInputElement, myConceptJSQueryParameter, myConceptLabelElement, myConceptLegendElement, myConceptLiElement, myConceptLinkQueryParameter, myConceptMethodAttribute, myConceptMixedHTMLCommand, myConceptNameAttribute, myConceptNavContainer, myConceptNotNullValue, myConceptNullValue, myConceptOperationCommand, myConceptOptionElement, myConceptPageHREF, myConceptParameterValue, myConceptPropertyQueryParameter, myConceptQueryCondition, myConceptReceiveLocation, myConceptReceiveOperation, myConceptSRCAttribute, myConceptSelectCommand, myConceptSelectCondition, myConceptSelectContainer, myConceptServer, myConceptSessionCondition, myConceptSessionLocation, myConceptSpanContainer, myConceptSpecialCaseCommand, myConceptSpecialCaseRootCommand, myConceptStaticAttributeReference, myConceptTDElement, myConceptTHElement, myConceptTRElement, myConceptTableContainer, myConceptTagValue, myConceptTagValueReference, myConceptTextareaElement, myConceptTitleElement, myConceptULContainer, myConceptURLParameter, myConceptURLValue, myConceptUserHREF, myConceptUserSrc, myConceptUserValue, myConceptValueIncludedHTML);
   }
 
   @Override
   @Nullable
   public ConceptDescriptor getDescriptor(String conceptFqName) {
-    switch (Arrays.binarySearch(stringSwitchCases_1htk8d_a0a0ud, conceptFqName)) {
+    switch (Arrays.binarySearch(stringSwitchCases_1htk8d_a0a0wd, conceptFqName)) {
       case 0:
         return myConceptAElement;
       case 1:
@@ -155,158 +157,162 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
       case 18:
         return myConceptExpressionReference;
       case 19:
-        return myConceptFormContainer;
+        return myConceptFieldsetContainer;
       case 20:
-        return myConceptH1Element;
+        return myConceptFormContainer;
       case 21:
-        return myConceptH2Element;
+        return myConceptH1Element;
       case 22:
-        return myConceptH3Element;
+        return myConceptH2Element;
       case 23:
-        return myConceptH4Element;
+        return myConceptH3Element;
       case 24:
-        return myConceptH5Element;
+        return myConceptH4Element;
       case 25:
-        return myConceptH6Element;
+        return myConceptH5Element;
       case 26:
-        return myConceptHREFAttribute;
+        return myConceptH6Element;
       case 27:
-        return myConceptHTMLBody;
+        return myConceptHREFAttribute;
       case 28:
-        return myConceptHTMLCommand;
+        return myConceptHTMLBody;
       case 29:
-        return myConceptHTMLHead;
+        return myConceptHTMLCommand;
       case 30:
-        return myConceptHTMLPage;
+        return myConceptHTMLHead;
       case 31:
-        return myConceptHTMLStructure;
+        return myConceptHTMLPage;
       case 32:
-        return myConceptHTMLTagValue;
+        return myConceptHTMLStructure;
       case 33:
-        return myConceptHTMLTile;
+        return myConceptHTMLTagValue;
       case 34:
-        return myConceptHTMLTileReference;
+        return myConceptHTMLTile;
       case 35:
-        return myConceptHTMLValue;
+        return myConceptHTMLTileReference;
       case 36:
-        return myConceptHTMLValueCommand;
+        return myConceptHTMLValue;
       case 37:
-        return myConceptIAttribute;
+        return myConceptHTMLValueCommand;
       case 38:
-        return myConceptIElement;
+        return myConceptIAttribute;
       case 39:
-        return myConceptINullable;
+        return myConceptIElement;
       case 40:
-        return myConceptIParameter;
+        return myConceptINullable;
       case 41:
-        return myConceptIdAttribute;
+        return myConceptIParameter;
       case 42:
-        return myConceptIfCommand;
+        return myConceptIdAttribute;
       case 43:
-        return myConceptIfLink;
+        return myConceptIfCommand;
       case 44:
-        return myConceptIfParameter;
+        return myConceptIfLink;
       case 45:
-        return myConceptIfProperty;
+        return myConceptIfParameter;
       case 46:
-        return myConceptImageElement;
+        return myConceptIfProperty;
       case 47:
-        return myConceptImageReference;
+        return myConceptImageElement;
       case 48:
-        return myConceptImageSrc;
+        return myConceptImageReference;
       case 49:
-        return myConceptInputElement;
+        return myConceptImageSrc;
       case 50:
-        return myConceptJSQueryParameter;
+        return myConceptInputElement;
       case 51:
-        return myConceptLabelElement;
+        return myConceptJSQueryParameter;
       case 52:
-        return myConceptLiElement;
+        return myConceptLabelElement;
       case 53:
-        return myConceptLinkQueryParameter;
+        return myConceptLegendElement;
       case 54:
-        return myConceptMethodAttribute;
+        return myConceptLiElement;
       case 55:
-        return myConceptMixedHTMLCommand;
+        return myConceptLinkQueryParameter;
       case 56:
-        return myConceptNameAttribute;
+        return myConceptMethodAttribute;
       case 57:
-        return myConceptNavContainer;
+        return myConceptMixedHTMLCommand;
       case 58:
-        return myConceptNotNullValue;
+        return myConceptNameAttribute;
       case 59:
-        return myConceptNullValue;
+        return myConceptNavContainer;
       case 60:
-        return myConceptOperationCommand;
+        return myConceptNotNullValue;
       case 61:
-        return myConceptOptionElement;
+        return myConceptNullValue;
       case 62:
-        return myConceptPageHREF;
+        return myConceptOperationCommand;
       case 63:
-        return myConceptParameterValue;
+        return myConceptOptionElement;
       case 64:
-        return myConceptPropertyQueryParameter;
+        return myConceptPageHREF;
       case 65:
-        return myConceptQueryCondition;
+        return myConceptParameterValue;
       case 66:
-        return myConceptReceiveLocation;
+        return myConceptPropertyQueryParameter;
       case 67:
-        return myConceptReceiveOperation;
+        return myConceptQueryCondition;
       case 68:
-        return myConceptSRCAttribute;
+        return myConceptReceiveLocation;
       case 69:
-        return myConceptSelectCommand;
+        return myConceptReceiveOperation;
       case 70:
-        return myConceptSelectCondition;
+        return myConceptSRCAttribute;
       case 71:
-        return myConceptSelectContainer;
+        return myConceptSelectCommand;
       case 72:
-        return myConceptServer;
+        return myConceptSelectCondition;
       case 73:
-        return myConceptSessionCondition;
+        return myConceptSelectContainer;
       case 74:
-        return myConceptSessionLocation;
+        return myConceptServer;
       case 75:
-        return myConceptSpanContainer;
+        return myConceptSessionCondition;
       case 76:
-        return myConceptSpecialCaseCommand;
+        return myConceptSessionLocation;
       case 77:
-        return myConceptSpecialCaseRootCommand;
+        return myConceptSpanContainer;
       case 78:
-        return myConceptStaticAttributeReference;
+        return myConceptSpecialCaseCommand;
       case 79:
-        return myConceptTDElement;
+        return myConceptSpecialCaseRootCommand;
       case 80:
-        return myConceptTHElement;
+        return myConceptStaticAttributeReference;
       case 81:
-        return myConceptTRElement;
+        return myConceptTDElement;
       case 82:
-        return myConceptTableContainer;
+        return myConceptTHElement;
       case 83:
-        return myConceptTagValue;
+        return myConceptTRElement;
       case 84:
-        return myConceptTagValueReference;
+        return myConceptTableContainer;
       case 85:
-        return myConceptTextareaElement;
+        return myConceptTagValue;
       case 86:
-        return myConceptTitleElement;
+        return myConceptTagValueReference;
       case 87:
-        return myConceptULContainer;
+        return myConceptTextareaElement;
       case 88:
-        return myConceptURLParameter;
+        return myConceptTitleElement;
       case 89:
-        return myConceptURLValue;
+        return myConceptULContainer;
       case 90:
-        return myConceptUserHREF;
+        return myConceptURLParameter;
       case 91:
-        return myConceptUserSrc;
+        return myConceptURLValue;
       case 92:
-        return myConceptUserValue;
+        return myConceptUserHREF;
       case 93:
+        return myConceptUserSrc;
+      case 94:
+        return myConceptUserValue;
+      case 95:
         return myConceptValueIncludedHTML;
       default:
         return null;
     }
   }
-  private static String[] stringSwitchCases_1htk8d_a0a0ud = new String[]{"ro.barata.mps.htmlLanguage.structure.AElement", "ro.barata.mps.htmlLanguage.structure.AbstractCommand", "ro.barata.mps.htmlLanguage.structure.AbstractOperation", "ro.barata.mps.htmlLanguage.structure.Action", "ro.barata.mps.htmlLanguage.structure.ActionAttribute", "ro.barata.mps.htmlLanguage.structure.ActionType", "ro.barata.mps.htmlLanguage.structure.AllCondition", "ro.barata.mps.htmlLanguage.structure.Attribute", "ro.barata.mps.htmlLanguage.structure.AttributeReference", "ro.barata.mps.htmlLanguage.structure.ButtonContainer", "ro.barata.mps.htmlLanguage.structure.ClassAttribute", "ro.barata.mps.htmlLanguage.structure.ContainerCommand", "ro.barata.mps.htmlLanguage.structure.CounterId", "ro.barata.mps.htmlLanguage.structure.CounterIdReference", "ro.barata.mps.htmlLanguage.structure.DBCondition", "ro.barata.mps.htmlLanguage.structure.DatabaseLocation", "ro.barata.mps.htmlLanguage.structure.DatabaseOperation", "ro.barata.mps.htmlLanguage.structure.DivContainer", "ro.barata.mps.htmlLanguage.structure.ExpressionReference", "ro.barata.mps.htmlLanguage.structure.FormContainer", "ro.barata.mps.htmlLanguage.structure.H1Element", "ro.barata.mps.htmlLanguage.structure.H2Element", "ro.barata.mps.htmlLanguage.structure.H3Element", "ro.barata.mps.htmlLanguage.structure.H4Element", "ro.barata.mps.htmlLanguage.structure.H5Element", "ro.barata.mps.htmlLanguage.structure.H6Element", "ro.barata.mps.htmlLanguage.structure.HREFAttribute", "ro.barata.mps.htmlLanguage.structure.HTMLBody", "ro.barata.mps.htmlLanguage.structure.HTMLCommand", "ro.barata.mps.htmlLanguage.structure.HTMLHead", "ro.barata.mps.htmlLanguage.structure.HTMLPage", "ro.barata.mps.htmlLanguage.structure.HTMLStructure", "ro.barata.mps.htmlLanguage.structure.HTMLTagValue", "ro.barata.mps.htmlLanguage.structure.HTMLTile", "ro.barata.mps.htmlLanguage.structure.HTMLTileReference", "ro.barata.mps.htmlLanguage.structure.HTMLValue", "ro.barata.mps.htmlLanguage.structure.HTMLValueCommand", "ro.barata.mps.htmlLanguage.structure.IAttribute", "ro.barata.mps.htmlLanguage.structure.IElement", "ro.barata.mps.htmlLanguage.structure.INullable", "ro.barata.mps.htmlLanguage.structure.IParameter", "ro.barata.mps.htmlLanguage.structure.IdAttribute", "ro.barata.mps.htmlLanguage.structure.IfCommand", "ro.barata.mps.htmlLanguage.structure.IfLink", "ro.barata.mps.htmlLanguage.structure.IfParameter", "ro.barata.mps.htmlLanguage.structure.IfProperty", "ro.barata.mps.htmlLanguage.structure.ImageElement", "ro.barata.mps.htmlLanguage.structure.ImageReference", "ro.barata.mps.htmlLanguage.structure.ImageSrc", "ro.barata.mps.htmlLanguage.structure.InputElement", "ro.barata.mps.htmlLanguage.structure.JSQueryParameter", "ro.barata.mps.htmlLanguage.structure.LabelElement", "ro.barata.mps.htmlLanguage.structure.LiElement", "ro.barata.mps.htmlLanguage.structure.LinkQueryParameter", "ro.barata.mps.htmlLanguage.structure.MethodAttribute", "ro.barata.mps.htmlLanguage.structure.MixedHTMLCommand", "ro.barata.mps.htmlLanguage.structure.NameAttribute", "ro.barata.mps.htmlLanguage.structure.NavContainer", "ro.barata.mps.htmlLanguage.structure.NotNullValue", "ro.barata.mps.htmlLanguage.structure.NullValue", "ro.barata.mps.htmlLanguage.structure.OperationCommand", "ro.barata.mps.htmlLanguage.structure.OptionElement", "ro.barata.mps.htmlLanguage.structure.PageHREF", "ro.barata.mps.htmlLanguage.structure.ParameterValue", "ro.barata.mps.htmlLanguage.structure.PropertyQueryParameter", "ro.barata.mps.htmlLanguage.structure.QueryCondition", "ro.barata.mps.htmlLanguage.structure.ReceiveLocation", "ro.barata.mps.htmlLanguage.structure.ReceiveOperation", "ro.barata.mps.htmlLanguage.structure.SRCAttribute", "ro.barata.mps.htmlLanguage.structure.SelectCommand", "ro.barata.mps.htmlLanguage.structure.SelectCondition", "ro.barata.mps.htmlLanguage.structure.SelectContainer", "ro.barata.mps.htmlLanguage.structure.Server", "ro.barata.mps.htmlLanguage.structure.SessionCondition", "ro.barata.mps.htmlLanguage.structure.SessionLocation", "ro.barata.mps.htmlLanguage.structure.SpanContainer", "ro.barata.mps.htmlLanguage.structure.SpecialCaseCommand", "ro.barata.mps.htmlLanguage.structure.SpecialCaseRootCommand", "ro.barata.mps.htmlLanguage.structure.StaticAttributeReference", "ro.barata.mps.htmlLanguage.structure.TDElement", "ro.barata.mps.htmlLanguage.structure.THElement", "ro.barata.mps.htmlLanguage.structure.TRElement", "ro.barata.mps.htmlLanguage.structure.TableContainer", "ro.barata.mps.htmlLanguage.structure.TagValue", "ro.barata.mps.htmlLanguage.structure.TagValueReference", "ro.barata.mps.htmlLanguage.structure.TextareaElement", "ro.barata.mps.htmlLanguage.structure.TitleElement", "ro.barata.mps.htmlLanguage.structure.ULContainer", "ro.barata.mps.htmlLanguage.structure.URLParameter", "ro.barata.mps.htmlLanguage.structure.URLValue", "ro.barata.mps.htmlLanguage.structure.UserHREF", "ro.barata.mps.htmlLanguage.structure.UserSrc", "ro.barata.mps.htmlLanguage.structure.UserValue", "ro.barata.mps.htmlLanguage.structure.ValueIncludedHTML"};
+  private static String[] stringSwitchCases_1htk8d_a0a0wd = new String[]{"ro.barata.mps.htmlLanguage.structure.AElement", "ro.barata.mps.htmlLanguage.structure.AbstractCommand", "ro.barata.mps.htmlLanguage.structure.AbstractOperation", "ro.barata.mps.htmlLanguage.structure.Action", "ro.barata.mps.htmlLanguage.structure.ActionAttribute", "ro.barata.mps.htmlLanguage.structure.ActionType", "ro.barata.mps.htmlLanguage.structure.AllCondition", "ro.barata.mps.htmlLanguage.structure.Attribute", "ro.barata.mps.htmlLanguage.structure.AttributeReference", "ro.barata.mps.htmlLanguage.structure.ButtonContainer", "ro.barata.mps.htmlLanguage.structure.ClassAttribute", "ro.barata.mps.htmlLanguage.structure.ContainerCommand", "ro.barata.mps.htmlLanguage.structure.CounterId", "ro.barata.mps.htmlLanguage.structure.CounterIdReference", "ro.barata.mps.htmlLanguage.structure.DBCondition", "ro.barata.mps.htmlLanguage.structure.DatabaseLocation", "ro.barata.mps.htmlLanguage.structure.DatabaseOperation", "ro.barata.mps.htmlLanguage.structure.DivContainer", "ro.barata.mps.htmlLanguage.structure.ExpressionReference", "ro.barata.mps.htmlLanguage.structure.FieldsetContainer", "ro.barata.mps.htmlLanguage.structure.FormContainer", "ro.barata.mps.htmlLanguage.structure.H1Element", "ro.barata.mps.htmlLanguage.structure.H2Element", "ro.barata.mps.htmlLanguage.structure.H3Element", "ro.barata.mps.htmlLanguage.structure.H4Element", "ro.barata.mps.htmlLanguage.structure.H5Element", "ro.barata.mps.htmlLanguage.structure.H6Element", "ro.barata.mps.htmlLanguage.structure.HREFAttribute", "ro.barata.mps.htmlLanguage.structure.HTMLBody", "ro.barata.mps.htmlLanguage.structure.HTMLCommand", "ro.barata.mps.htmlLanguage.structure.HTMLHead", "ro.barata.mps.htmlLanguage.structure.HTMLPage", "ro.barata.mps.htmlLanguage.structure.HTMLStructure", "ro.barata.mps.htmlLanguage.structure.HTMLTagValue", "ro.barata.mps.htmlLanguage.structure.HTMLTile", "ro.barata.mps.htmlLanguage.structure.HTMLTileReference", "ro.barata.mps.htmlLanguage.structure.HTMLValue", "ro.barata.mps.htmlLanguage.structure.HTMLValueCommand", "ro.barata.mps.htmlLanguage.structure.IAttribute", "ro.barata.mps.htmlLanguage.structure.IElement", "ro.barata.mps.htmlLanguage.structure.INullable", "ro.barata.mps.htmlLanguage.structure.IParameter", "ro.barata.mps.htmlLanguage.structure.IdAttribute", "ro.barata.mps.htmlLanguage.structure.IfCommand", "ro.barata.mps.htmlLanguage.structure.IfLink", "ro.barata.mps.htmlLanguage.structure.IfParameter", "ro.barata.mps.htmlLanguage.structure.IfProperty", "ro.barata.mps.htmlLanguage.structure.ImageElement", "ro.barata.mps.htmlLanguage.structure.ImageReference", "ro.barata.mps.htmlLanguage.structure.ImageSrc", "ro.barata.mps.htmlLanguage.structure.InputElement", "ro.barata.mps.htmlLanguage.structure.JSQueryParameter", "ro.barata.mps.htmlLanguage.structure.LabelElement", "ro.barata.mps.htmlLanguage.structure.LegendElement", "ro.barata.mps.htmlLanguage.structure.LiElement", "ro.barata.mps.htmlLanguage.structure.LinkQueryParameter", "ro.barata.mps.htmlLanguage.structure.MethodAttribute", "ro.barata.mps.htmlLanguage.structure.MixedHTMLCommand", "ro.barata.mps.htmlLanguage.structure.NameAttribute", "ro.barata.mps.htmlLanguage.structure.NavContainer", "ro.barata.mps.htmlLanguage.structure.NotNullValue", "ro.barata.mps.htmlLanguage.structure.NullValue", "ro.barata.mps.htmlLanguage.structure.OperationCommand", "ro.barata.mps.htmlLanguage.structure.OptionElement", "ro.barata.mps.htmlLanguage.structure.PageHREF", "ro.barata.mps.htmlLanguage.structure.ParameterValue", "ro.barata.mps.htmlLanguage.structure.PropertyQueryParameter", "ro.barata.mps.htmlLanguage.structure.QueryCondition", "ro.barata.mps.htmlLanguage.structure.ReceiveLocation", "ro.barata.mps.htmlLanguage.structure.ReceiveOperation", "ro.barata.mps.htmlLanguage.structure.SRCAttribute", "ro.barata.mps.htmlLanguage.structure.SelectCommand", "ro.barata.mps.htmlLanguage.structure.SelectCondition", "ro.barata.mps.htmlLanguage.structure.SelectContainer", "ro.barata.mps.htmlLanguage.structure.Server", "ro.barata.mps.htmlLanguage.structure.SessionCondition", "ro.barata.mps.htmlLanguage.structure.SessionLocation", "ro.barata.mps.htmlLanguage.structure.SpanContainer", "ro.barata.mps.htmlLanguage.structure.SpecialCaseCommand", "ro.barata.mps.htmlLanguage.structure.SpecialCaseRootCommand", "ro.barata.mps.htmlLanguage.structure.StaticAttributeReference", "ro.barata.mps.htmlLanguage.structure.TDElement", "ro.barata.mps.htmlLanguage.structure.THElement", "ro.barata.mps.htmlLanguage.structure.TRElement", "ro.barata.mps.htmlLanguage.structure.TableContainer", "ro.barata.mps.htmlLanguage.structure.TagValue", "ro.barata.mps.htmlLanguage.structure.TagValueReference", "ro.barata.mps.htmlLanguage.structure.TextareaElement", "ro.barata.mps.htmlLanguage.structure.TitleElement", "ro.barata.mps.htmlLanguage.structure.ULContainer", "ro.barata.mps.htmlLanguage.structure.URLParameter", "ro.barata.mps.htmlLanguage.structure.URLValue", "ro.barata.mps.htmlLanguage.structure.UserHREF", "ro.barata.mps.htmlLanguage.structure.UserSrc", "ro.barata.mps.htmlLanguage.structure.UserValue", "ro.barata.mps.htmlLanguage.structure.ValueIncludedHTML"};
 }

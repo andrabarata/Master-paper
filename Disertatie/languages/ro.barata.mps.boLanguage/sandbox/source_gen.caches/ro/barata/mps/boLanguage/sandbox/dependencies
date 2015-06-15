@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dependenciesRoot>
   <dependency className="ro.barata.mps.boLanguage.sandbox.Address" file="Address.java">
+    <classNode dependClassName="java.lang.CloneNotSupportedException" />
     <classNode dependClassName="java.lang.Integer" />
+    <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.Person" />
+    <classNode extendsClassName="java.lang.Cloneable" />
   </dependency>
   <dependency className="ro.barata.mps.boLanguage.sandbox.AddressDAO" file="AddressDAO.java">
     <classNode dependClassName="java.lang.ClassNotFoundException" />
+    <classNode dependClassName="java.lang.CloneNotSupportedException" />
     <classNode dependClassName="java.lang.Integer" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.lang.System" />
@@ -14,23 +19,60 @@
     <classNode dependClassName="java.sql.SQLException" />
     <classNode dependClassName="java.sql.Statement" />
     <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.LinkedList" />
     <classNode dependClassName="java.util.List" />
     <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.Address" />
+    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.Person" />
   </dependency>
   <dependency className="ro.barata.mps.boLanguage.sandbox.AdminAttributesGenerator" file="AdminAttributesGenerator.java">
     <classNode dependClassName="java.lang.ClassNotFoundException" />
+    <classNode dependClassName="java.lang.CloneNotSupportedException" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.sql.SQLException" />
     <classNode dependClassName="javax.servlet.http.HttpSession" />
   </dependency>
   <dependency className="ro.barata.mps.boLanguage.sandbox.AdminHomeGenerator" file="AdminHomeGenerator.java">
     <classNode dependClassName="java.lang.ClassNotFoundException" />
+    <classNode dependClassName="java.lang.CloneNotSupportedException" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.sql.Connection" />
+    <classNode dependClassName="java.sql.SQLException" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="javax.servlet.http.HttpSession" />
+    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.AdminframeGenerator" />
+    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.Category" />
+    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.CategoryDAO" />
+    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.DatabaseConnection" />
+  </dependency>
+  <dependency className="ro.barata.mps.boLanguage.sandbox.AdminHomeServlet" file="AdminHomeServlet.java">
+    <classNode dependClassName="java.io.IOException" />
+    <classNode dependClassName="java.lang.ClassNotFoundException" />
+    <classNode dependClassName="java.lang.CloneNotSupportedException" />
+    <classNode dependClassName="java.lang.Exception" />
+    <classNode dependClassName="java.lang.Integer" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.System" />
+    <classNode dependClassName="java.sql.Connection" />
+    <classNode dependClassName="java.sql.SQLException" />
+    <classNode dependClassName="javax.servlet.ServletException" />
+    <classNode dependClassName="javax.servlet.http.HttpServletRequest" />
+    <classNode dependClassName="javax.servlet.http.HttpServletResponse" />
+    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.AdminHomeGenerator" />
+    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.Category" />
+    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.CategoryDAO" />
+    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.DatabaseConnection" />
+    <classNode extendsClassName="javax.servlet.http.HttpServlet" />
+  </dependency>
+  <dependency className="ro.barata.mps.boLanguage.sandbox.AdminHomeproductsGenerator" file="AdminHomeproductsGenerator.java">
+    <classNode dependClassName="java.lang.ClassNotFoundException" />
+    <classNode dependClassName="java.lang.CloneNotSupportedException" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.sql.SQLException" />
     <classNode dependClassName="javax.servlet.http.HttpSession" />
   </dependency>
   <dependency className="ro.barata.mps.boLanguage.sandbox.AdminSubcategoryGenerator" file="AdminSubcategoryGenerator.java">
     <classNode dependClassName="java.lang.ClassNotFoundException" />
+    <classNode dependClassName="java.lang.CloneNotSupportedException" />
     <classNode dependClassName="java.lang.Integer" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.sql.Connection" />
@@ -45,6 +87,7 @@
   <dependency className="ro.barata.mps.boLanguage.sandbox.AdminSubcategoryServlet" file="AdminSubcategoryServlet.java">
     <classNode dependClassName="java.io.IOException" />
     <classNode dependClassName="java.lang.ClassNotFoundException" />
+    <classNode dependClassName="java.lang.CloneNotSupportedException" />
     <classNode dependClassName="java.lang.Exception" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.lang.System" />
@@ -57,39 +100,9 @@
     <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.DatabaseConnection" />
     <classNode extendsClassName="javax.servlet.http.HttpServlet" />
   </dependency>
-  <dependency className="ro.barata.mps.boLanguage.sandbox.AdmincategoryGenerator" file="AdmincategoryGenerator.java">
-    <classNode dependClassName="java.lang.ClassNotFoundException" />
-    <classNode dependClassName="java.lang.Integer" />
-    <classNode dependClassName="java.lang.String" />
-    <classNode dependClassName="java.sql.Connection" />
-    <classNode dependClassName="java.sql.SQLException" />
-    <classNode dependClassName="java.util.List" />
-    <classNode dependClassName="javax.servlet.http.HttpSession" />
-    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.AdminframeGenerator" />
-    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.Category" />
-    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.CategoryDAO" />
-    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.DatabaseConnection" />
-  </dependency>
-  <dependency className="ro.barata.mps.boLanguage.sandbox.AdmincategoryServlet" file="AdmincategoryServlet.java">
-    <classNode dependClassName="java.io.IOException" />
-    <classNode dependClassName="java.lang.ClassNotFoundException" />
-    <classNode dependClassName="java.lang.Exception" />
-    <classNode dependClassName="java.lang.Integer" />
-    <classNode dependClassName="java.lang.String" />
-    <classNode dependClassName="java.lang.System" />
-    <classNode dependClassName="java.sql.Connection" />
-    <classNode dependClassName="java.sql.SQLException" />
-    <classNode dependClassName="javax.servlet.ServletException" />
-    <classNode dependClassName="javax.servlet.http.HttpServletRequest" />
-    <classNode dependClassName="javax.servlet.http.HttpServletResponse" />
-    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.AdmincategoryGenerator" />
-    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.Category" />
-    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.CategoryDAO" />
-    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.DatabaseConnection" />
-    <classNode extendsClassName="javax.servlet.http.HttpServlet" />
-  </dependency>
   <dependency className="ro.barata.mps.boLanguage.sandbox.AdminframeGenerator" file="AdminframeGenerator.java">
     <classNode dependClassName="java.lang.ClassNotFoundException" />
+    <classNode dependClassName="java.lang.CloneNotSupportedException" />
     <classNode dependClassName="java.lang.Integer" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.sql.Connection" />
@@ -104,43 +117,54 @@
   </dependency>
   <dependency className="ro.barata.mps.boLanguage.sandbox.AdminproductGenerator" file="AdminproductGenerator.java">
     <classNode dependClassName="java.lang.ClassNotFoundException" />
+    <classNode dependClassName="java.lang.CloneNotSupportedException" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.sql.SQLException" />
     <classNode dependClassName="javax.servlet.http.HttpSession" />
   </dependency>
   <dependency className="ro.barata.mps.boLanguage.sandbox.AdminproductsGenerator" file="AdminproductsGenerator.java">
     <classNode dependClassName="java.lang.ClassNotFoundException" />
+    <classNode dependClassName="java.lang.CloneNotSupportedException" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.sql.SQLException" />
     <classNode dependClassName="javax.servlet.http.HttpSession" />
   </dependency>
   <dependency className="ro.barata.mps.boLanguage.sandbox.AdminpromotionGenerator" file="AdminpromotionGenerator.java">
     <classNode dependClassName="java.lang.ClassNotFoundException" />
+    <classNode dependClassName="java.lang.CloneNotSupportedException" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.sql.SQLException" />
     <classNode dependClassName="javax.servlet.http.HttpSession" />
   </dependency>
   <dependency className="ro.barata.mps.boLanguage.sandbox.AdminpromotionsGenerator" file="AdminpromotionsGenerator.java">
     <classNode dependClassName="java.lang.ClassNotFoundException" />
+    <classNode dependClassName="java.lang.CloneNotSupportedException" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.sql.SQLException" />
     <classNode dependClassName="javax.servlet.http.HttpSession" />
   </dependency>
   <dependency className="ro.barata.mps.boLanguage.sandbox.Attribute" file="Attribute.java">
+    <classNode dependClassName="java.lang.CloneNotSupportedException" />
     <classNode dependClassName="java.lang.Integer" />
+    <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.AttributeCategory" />
+    <classNode extendsClassName="java.lang.Cloneable" />
   </dependency>
   <dependency className="ro.barata.mps.boLanguage.sandbox.AttributeCategory" file="AttributeCategory.java">
+    <classNode dependClassName="java.lang.CloneNotSupportedException" />
     <classNode dependClassName="java.lang.Integer" />
+    <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.util.ArrayList" />
     <classNode dependClassName="java.util.List" />
     <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.Attribute" />
     <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.Product" />
+    <classNode extendsClassName="java.lang.Cloneable" />
   </dependency>
   <dependency className="ro.barata.mps.boLanguage.sandbox.AttributeCategoryDAO" file="AttributeCategoryDAO.java">
     <classNode dependClassName="java.lang.ClassNotFoundException" />
+    <classNode dependClassName="java.lang.CloneNotSupportedException" />
     <classNode dependClassName="java.lang.Integer" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.lang.System" />
@@ -158,6 +182,7 @@
   </dependency>
   <dependency className="ro.barata.mps.boLanguage.sandbox.AttributeDAO" file="AttributeDAO.java">
     <classNode dependClassName="java.lang.ClassNotFoundException" />
+    <classNode dependClassName="java.lang.CloneNotSupportedException" />
     <classNode dependClassName="java.lang.Integer" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.lang.System" />
@@ -172,22 +197,29 @@
     <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.AttributeCategory" />
   </dependency>
   <dependency className="ro.barata.mps.boLanguage.sandbox.Cart" file="Cart.java">
+    <classNode dependClassName="java.lang.CloneNotSupportedException" />
+    <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.util.ArrayList" />
     <classNode dependClassName="java.util.List" />
     <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.Discount" />
     <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.Product" />
+    <classNode extendsClassName="java.lang.Cloneable" />
   </dependency>
   <dependency className="ro.barata.mps.boLanguage.sandbox.Category" file="Category.java">
+    <classNode dependClassName="java.lang.CloneNotSupportedException" />
     <classNode dependClassName="java.lang.Integer" />
+    <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.util.ArrayList" />
     <classNode dependClassName="java.util.List" />
     <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.Discount" />
     <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.Product" />
     <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.Shop" />
+    <classNode extendsClassName="java.lang.Cloneable" />
   </dependency>
   <dependency className="ro.barata.mps.boLanguage.sandbox.CategoryDAO" file="CategoryDAO.java">
     <classNode dependClassName="java.lang.ClassNotFoundException" />
+    <classNode dependClassName="java.lang.CloneNotSupportedException" />
     <classNode dependClassName="java.lang.Integer" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.lang.System" />
@@ -207,6 +239,7 @@
   </dependency>
   <dependency className="ro.barata.mps.boLanguage.sandbox.ClientframeGenerator" file="ClientframeGenerator.java">
     <classNode dependClassName="java.lang.ClassNotFoundException" />
+    <classNode dependClassName="java.lang.CloneNotSupportedException" />
     <classNode dependClassName="java.lang.Integer" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.sql.Connection" />
@@ -221,14 +254,14 @@
   </dependency>
   <dependency className="ro.barata.mps.boLanguage.sandbox.DBCommands" file="DBCommands.java">
     <classNode dependClassName="java.lang.ClassNotFoundException" />
+    <classNode dependClassName="java.lang.CloneNotSupportedException" />
     <classNode dependClassName="java.lang.Exception" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.sql.Connection" />
     <classNode dependClassName="java.sql.SQLException" />
+    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.Category" />
+    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.CategoryDAO" />
     <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.DatabaseConnection" />
-    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.Person" />
-    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.User" />
-    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.UserDAO" />
   </dependency>
   <dependency className="ro.barata.mps.boLanguage.sandbox.DatabaseConnection" file="DatabaseConnection.java">
     <classNode dependClassName="java.lang.Class" />
@@ -240,13 +273,17 @@
     <classNode dependClassName="java.sql.SQLException" />
   </dependency>
   <dependency className="ro.barata.mps.boLanguage.sandbox.Discount" file="Discount.java">
+    <classNode dependClassName="java.lang.CloneNotSupportedException" />
     <classNode dependClassName="java.lang.Integer" />
+    <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.Cart" />
     <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.Category" />
+    <classNode extendsClassName="java.lang.Cloneable" />
   </dependency>
   <dependency className="ro.barata.mps.boLanguage.sandbox.DiscountDAO" file="DiscountDAO.java">
     <classNode dependClassName="java.lang.ClassNotFoundException" />
+    <classNode dependClassName="java.lang.CloneNotSupportedException" />
     <classNode dependClassName="java.lang.Integer" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.lang.System" />
@@ -260,6 +297,39 @@
     <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.Cart" />
     <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.Category" />
     <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.Discount" />
+  </dependency>
+  <dependency className="ro.barata.mps.boLanguage.sandbox.EditCategoryGenerator" file="EditCategoryGenerator.java">
+    <classNode dependClassName="java.lang.ClassNotFoundException" />
+    <classNode dependClassName="java.lang.CloneNotSupportedException" />
+    <classNode dependClassName="java.lang.Integer" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.sql.Connection" />
+    <classNode dependClassName="java.sql.SQLException" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="javax.servlet.http.HttpSession" />
+    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.AdminframeGenerator" />
+    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.Category" />
+    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.CategoryDAO" />
+    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.DatabaseConnection" />
+  </dependency>
+  <dependency className="ro.barata.mps.boLanguage.sandbox.EditCategoryServlet" file="EditCategoryServlet.java">
+    <classNode dependClassName="java.io.IOException" />
+    <classNode dependClassName="java.lang.ClassNotFoundException" />
+    <classNode dependClassName="java.lang.CloneNotSupportedException" />
+    <classNode dependClassName="java.lang.Exception" />
+    <classNode dependClassName="java.lang.Integer" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.System" />
+    <classNode dependClassName="java.sql.Connection" />
+    <classNode dependClassName="java.sql.SQLException" />
+    <classNode dependClassName="javax.servlet.ServletException" />
+    <classNode dependClassName="javax.servlet.http.HttpServletRequest" />
+    <classNode dependClassName="javax.servlet.http.HttpServletResponse" />
+    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.Category" />
+    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.CategoryDAO" />
+    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.DatabaseConnection" />
+    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.EditCategoryGenerator" />
+    <classNode extendsClassName="javax.servlet.http.HttpServlet" />
   </dependency>
   <dependency className="ro.barata.mps.boLanguage.sandbox.FileStructureGenerator" file="FileStructureGenerator.java">
     <classNode dependClassName="java.io.File" />
@@ -284,8 +354,9 @@
     <classNode dependClassName="org.eclipse.jetty.server.nio.SelectChannelConnector" />
     <classNode dependClassName="org.eclipse.jetty.servlet.ServletContextHandler" />
     <classNode dependClassName="org.eclipse.jetty.servlet.ServletHolder" />
+    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.AdminHomeServlet" />
     <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.AdminSubcategoryServlet" />
-    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.AdmincategoryServlet" />
+    <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.EditCategoryServlet" />
     <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.FileStructureGenerator" />
     <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.HomeServlet" />
     <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.LoginServlet" />
@@ -295,6 +366,7 @@
   </dependency>
   <dependency className="ro.barata.mps.boLanguage.sandbox.HomeGenerator" file="HomeGenerator.java">
     <classNode dependClassName="java.lang.ClassNotFoundException" />
+    <classNode dependClassName="java.lang.CloneNotSupportedException" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.sql.Connection" />
     <classNode dependClassName="java.sql.SQLException" />
@@ -308,6 +380,7 @@
   <dependency className="ro.barata.mps.boLanguage.sandbox.HomeServlet" file="HomeServlet.java">
     <classNode dependClassName="java.io.IOException" />
     <classNode dependClassName="java.lang.ClassNotFoundException" />
+    <classNode dependClassName="java.lang.CloneNotSupportedException" />
     <classNode dependClassName="java.lang.Exception" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.lang.System" />
@@ -322,6 +395,7 @@
   </dependency>
   <dependency className="ro.barata.mps.boLanguage.sandbox.LoginGenerator" file="LoginGenerator.java">
     <classNode dependClassName="java.lang.ClassNotFoundException" />
+    <classNode dependClassName="java.lang.CloneNotSupportedException" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.sql.SQLException" />
     <classNode dependClassName="javax.servlet.http.HttpSession" />
@@ -331,6 +405,7 @@
     <classNode dependClassName="flexjson.JSONSerializer" />
     <classNode dependClassName="java.io.IOException" />
     <classNode dependClassName="java.lang.ClassNotFoundException" />
+    <classNode dependClassName="java.lang.CloneNotSupportedException" />
     <classNode dependClassName="java.lang.Exception" />
     <classNode dependClassName="java.lang.Integer" />
     <classNode dependClassName="java.lang.String" />
@@ -349,14 +424,18 @@
     <classNode extendsClassName="javax.servlet.http.HttpServlet" />
   </dependency>
   <dependency className="ro.barata.mps.boLanguage.sandbox.Order" file="Order.java">
+    <classNode dependClassName="java.lang.CloneNotSupportedException" />
     <classNode dependClassName="java.lang.Integer" />
+    <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.util.ArrayList" />
     <classNode dependClassName="java.util.List" />
     <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.OrderItem" />
+    <classNode extendsClassName="java.lang.Cloneable" />
   </dependency>
   <dependency className="ro.barata.mps.boLanguage.sandbox.OrderDAO" file="OrderDAO.java">
     <classNode dependClassName="java.lang.ClassNotFoundException" />
+    <classNode dependClassName="java.lang.CloneNotSupportedException" />
     <classNode dependClassName="java.lang.Integer" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.lang.System" />
@@ -372,18 +451,23 @@
   </dependency>
   <dependency className="ro.barata.mps.boLanguage.sandbox.OrderGenerator" file="OrderGenerator.java">
     <classNode dependClassName="java.lang.ClassNotFoundException" />
+    <classNode dependClassName="java.lang.CloneNotSupportedException" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.sql.SQLException" />
     <classNode dependClassName="javax.servlet.http.HttpSession" />
   </dependency>
   <dependency className="ro.barata.mps.boLanguage.sandbox.OrderItem" file="OrderItem.java">
+    <classNode dependClassName="java.lang.CloneNotSupportedException" />
     <classNode dependClassName="java.lang.Integer" />
+    <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.Discount" />
     <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.Order" />
     <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.Product" />
+    <classNode extendsClassName="java.lang.Cloneable" />
   </dependency>
   <dependency className="ro.barata.mps.boLanguage.sandbox.OrderItemDAO" file="OrderItemDAO.java">
     <classNode dependClassName="java.lang.ClassNotFoundException" />
+    <classNode dependClassName="java.lang.CloneNotSupportedException" />
     <classNode dependClassName="java.lang.Integer" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.lang.System" />
@@ -403,6 +487,7 @@
   </dependency>
   <dependency className="ro.barata.mps.boLanguage.sandbox.OrdersGenerator" file="OrdersGenerator.java">
     <classNode dependClassName="java.lang.ClassNotFoundException" />
+    <classNode dependClassName="java.lang.CloneNotSupportedException" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.sql.Connection" />
     <classNode dependClassName="java.sql.SQLException" />
@@ -416,6 +501,7 @@
   <dependency className="ro.barata.mps.boLanguage.sandbox.OrdersServlet" file="OrdersServlet.java">
     <classNode dependClassName="java.io.IOException" />
     <classNode dependClassName="java.lang.ClassNotFoundException" />
+    <classNode dependClassName="java.lang.CloneNotSupportedException" />
     <classNode dependClassName="java.lang.Exception" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.lang.System" />
@@ -429,12 +515,16 @@
     <classNode extendsClassName="javax.servlet.http.HttpServlet" />
   </dependency>
   <dependency className="ro.barata.mps.boLanguage.sandbox.Person" file="Person.java">
+    <classNode dependClassName="java.lang.CloneNotSupportedException" />
     <classNode dependClassName="java.lang.Integer" />
+    <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.Address" />
+    <classNode extendsClassName="java.lang.Cloneable" />
   </dependency>
   <dependency className="ro.barata.mps.boLanguage.sandbox.PersonDAO" file="PersonDAO.java">
     <classNode dependClassName="java.lang.ClassNotFoundException" />
+    <classNode dependClassName="java.lang.CloneNotSupportedException" />
     <classNode dependClassName="java.lang.Integer" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.lang.System" />
@@ -449,16 +539,20 @@
     <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.Person" />
   </dependency>
   <dependency className="ro.barata.mps.boLanguage.sandbox.Product" file="Product.java">
+    <classNode dependClassName="java.lang.CloneNotSupportedException" />
     <classNode dependClassName="java.lang.Integer" />
+    <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.util.ArrayList" />
     <classNode dependClassName="java.util.List" />
     <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.AttributeCategory" />
     <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.Cart" />
     <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.Category" />
+    <classNode extendsClassName="java.lang.Cloneable" />
   </dependency>
   <dependency className="ro.barata.mps.boLanguage.sandbox.ProductDAO" file="ProductDAO.java">
     <classNode dependClassName="java.lang.ClassNotFoundException" />
+    <classNode dependClassName="java.lang.CloneNotSupportedException" />
     <classNode dependClassName="java.lang.Integer" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.lang.System" />
@@ -477,6 +571,7 @@
   </dependency>
   <dependency className="ro.barata.mps.boLanguage.sandbox.ProductGenerator" file="ProductGenerator.java">
     <classNode dependClassName="java.lang.ClassNotFoundException" />
+    <classNode dependClassName="java.lang.CloneNotSupportedException" />
     <classNode dependClassName="java.lang.Integer" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.sql.Connection" />
@@ -494,6 +589,7 @@
   <dependency className="ro.barata.mps.boLanguage.sandbox.ProductServlet" file="ProductServlet.java">
     <classNode dependClassName="java.io.IOException" />
     <classNode dependClassName="java.lang.ClassNotFoundException" />
+    <classNode dependClassName="java.lang.CloneNotSupportedException" />
     <classNode dependClassName="java.lang.Exception" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.lang.System" />
@@ -508,6 +604,7 @@
   </dependency>
   <dependency className="ro.barata.mps.boLanguage.sandbox.ProductsGenerator" file="ProductsGenerator.java">
     <classNode dependClassName="java.lang.ClassNotFoundException" />
+    <classNode dependClassName="java.lang.CloneNotSupportedException" />
     <classNode dependClassName="java.lang.Integer" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.sql.Connection" />
@@ -523,6 +620,7 @@
   <dependency className="ro.barata.mps.boLanguage.sandbox.ProductsServlet" file="ProductsServlet.java">
     <classNode dependClassName="java.io.IOException" />
     <classNode dependClassName="java.lang.ClassNotFoundException" />
+    <classNode dependClassName="java.lang.CloneNotSupportedException" />
     <classNode dependClassName="java.lang.Exception" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.lang.System" />
@@ -537,6 +635,7 @@
   </dependency>
   <dependency className="ro.barata.mps.boLanguage.sandbox.PromotionsGenerator" file="PromotionsGenerator.java">
     <classNode dependClassName="java.lang.ClassNotFoundException" />
+    <classNode dependClassName="java.lang.CloneNotSupportedException" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.sql.SQLException" />
     <classNode dependClassName="javax.servlet.http.HttpSession" />
@@ -551,21 +650,28 @@
     <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.DatabaseConnection" />
   </dependency>
   <dependency className="ro.barata.mps.boLanguage.sandbox.Shop" file="Shop.java">
+    <classNode dependClassName="java.lang.CloneNotSupportedException" />
     <classNode dependClassName="java.lang.Integer" />
+    <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.util.ArrayList" />
     <classNode dependClassName="java.util.List" />
     <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.Category" />
     <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.User" />
+    <classNode extendsClassName="java.lang.Cloneable" />
   </dependency>
   <dependency className="ro.barata.mps.boLanguage.sandbox.User" file="User.java">
+    <classNode dependClassName="java.lang.CloneNotSupportedException" />
     <classNode dependClassName="java.lang.Integer" />
+    <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.Person" />
     <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.Shop" />
+    <classNode extendsClassName="java.lang.Cloneable" />
   </dependency>
   <dependency className="ro.barata.mps.boLanguage.sandbox.UserDAO" file="UserDAO.java">
     <classNode dependClassName="java.lang.ClassNotFoundException" />
+    <classNode dependClassName="java.lang.CloneNotSupportedException" />
     <classNode dependClassName="java.lang.Integer" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.lang.System" />
@@ -581,8 +687,9 @@
     <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.Shop" />
     <classNode dependClassName="ro.barata.mps.boLanguage.sandbox.User" />
   </dependency>
-  <dependency className="ro.barata.mps.boLanguage.sandbox.admincategory" file="admincategory.js" />
+  <dependency className="ro.barata.mps.boLanguage.sandbox.adminHome" file="adminHome.js" />
   <dependency className="ro.barata.mps.boLanguage.sandbox.clientframe" file="clientframe.js" />
+  <dependency className="ro.barata.mps.boLanguage.sandbox.editCategory" file="editCategory.js" />
   <dependency className="ro.barata.mps.boLanguage.sandbox.general" file="general.js" />
   <dependency className="ro.barata.mps.boLanguage.sandbox.login" file="login.js" />
   <dependency className="ro.barata.mps.boLanguage.sandbox.main" file="main.css" />

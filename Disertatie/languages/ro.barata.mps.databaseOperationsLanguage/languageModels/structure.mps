@@ -86,7 +86,7 @@
       <property role="20lmBu" value="aggregation" />
       <property role="20kJfa" value="references" />
       <property role="20lbJX" value="0..n" />
-      <ref role="20lvS9" node="2qrivhEnlvc" resolve="LinkDeclarationReference" />
+      <ref role="20lvS9" node="63p_9b5TPFc" resolve="LinkDeclarationReference" />
     </node>
   </node>
   <node concept="1TIwiD" id="5wBjXY7nXme">
@@ -128,7 +128,7 @@
       <property role="20lmBu" value="aggregation" />
       <property role="20kJfa" value="references" />
       <property role="20lbJX" value="0..n" />
-      <ref role="20lvS9" node="2qrivhEnlvc" resolve="LinkDeclarationReference" />
+      <ref role="20lvS9" node="63p_9b5TPFc" resolve="LinkDeclarationReference" />
     </node>
   </node>
   <node concept="1TIwiD" id="5wBjXY7nXwr">
@@ -184,24 +184,14 @@
   </node>
   <node concept="1TIwiD" id="2qrivhEnlvc">
     <property role="3GE5qa" value="db.references" />
-    <property role="TrG5h" value="LinkDeclarationReference" />
-    <property role="34LRSv" value="Child or reference" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
-    <node concept="1TJgyj" id="2qrivhEnlR7" role="1TKVEi">
-      <property role="20lmBu" value="reference" />
-      <property role="20kJfa" value="reference" />
-      <property role="20lbJX" value="1" />
-      <ref role="20lvS9" to="tpce:f_TJgxE" resolve="LinkDeclaration" />
-    </node>
-    <node concept="1TJgyj" id="2qrivhEnm6C" role="1TKVEi">
+    <property role="TrG5h" value="AddLinkDeclarationReference" />
+    <property role="34LRSv" value="add child or reference" />
+    <ref role="1TJDcQ" node="63p_9b5TPFc" resolve="LinkDeclarationReference" />
+    <node concept="1TJgyj" id="63p_9b5V069" role="1TKVEi">
       <property role="20lmBu" value="aggregation" />
       <property role="20kJfa" value="instances" />
       <property role="20lbJX" value="0..n" />
       <ref role="20lvS9" node="2qrivhEo$4k" resolve="Instance" />
-    </node>
-    <node concept="1TJgyi" id="3qNdxgIR4jC" role="1TKVEl">
-      <property role="TrG5h" value="level" />
-      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
     </node>
   </node>
   <node concept="1TIwiD" id="2qrivhEo$4k">
@@ -218,7 +208,36 @@
       <property role="20lmBu" value="aggregation" />
       <property role="20kJfa" value="references" />
       <property role="20lbJX" value="0..n" />
-      <ref role="20lvS9" node="2qrivhEnlvc" resolve="LinkDeclarationReference" />
+      <ref role="20lvS9" node="2qrivhEnlvc" resolve="AddLinkDeclarationReference" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="63p_9b5TMKg">
+    <property role="3GE5qa" value="db.references" />
+    <property role="TrG5h" value="SetLinkDeclarationReference" />
+    <property role="34LRSv" value="set child or reference" />
+    <ref role="1TJDcQ" node="63p_9b5TPFc" resolve="LinkDeclarationReference" />
+    <node concept="1TJgyj" id="63p_9b5WrKK" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="value" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="5wBjXY7qSgN" resolve="AbstractValue" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="63p_9b5TPFc">
+    <property role="3GE5qa" value="db.references" />
+    <property role="TrG5h" value="LinkDeclarationReference" />
+    <property role="R5$K7" value="true" />
+    <property role="R5$K2" value="false" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="2qrivhEnlR7" role="1TKVEi">
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="reference" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" to="tpce:f_TJgxE" resolve="LinkDeclaration" />
+    </node>
+    <node concept="1TJgyi" id="63p_9b5TPFd" role="1TKVEl">
+      <property role="TrG5h" value="level" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
     </node>
   </node>
 </model>

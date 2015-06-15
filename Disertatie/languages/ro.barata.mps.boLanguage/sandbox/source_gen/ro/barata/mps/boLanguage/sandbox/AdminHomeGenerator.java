@@ -4,9 +4,11 @@ package ro.barata.mps.boLanguage.sandbox;
 
 import javax.servlet.http.HttpSession;
 import java.sql.SQLException;
+import java.sql.Connection;
+import java.util.List;
 
 public class AdminHomeGenerator {
-  public static String getContent(HttpSession session, String requestParameterValue) throws ClassNotFoundException, SQLException {
+  public static String getContent(HttpSession session, String requestParameterValue) throws ClassNotFoundException, SQLException, CloneNotSupportedException {
     String html = "<html>";
     String parameters = "";
     String href = "";
@@ -16,6 +18,7 @@ public class AdminHomeGenerator {
     html += "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">";
     html += "<script src=\"/" + "jquery.js" + "\"></script>";
     html += "<script src=\"/" + "bootstrap.min.js" + "\"></script>";
+    html += "<script src=\"/" + "adminHome.js" + "\"></script>";
     html += "<script src=\"/general.js\"></script>";
     html += "<link rel=\"stylesheet\" type=\"text/css\" href=\"/" + "main.css" + "\"/>";
     html += "<link rel=\"stylesheet\" type=\"text/css\" href=\"/" + "pure-min.css" + "\"/>";
@@ -24,6 +27,157 @@ public class AdminHomeGenerator {
     html += "<link rel=\"stylesheet\" type=\"text/css\" href=\"/" + "font-awesome.css" + "\"/>";
     html += "</head>";
     html += "<body>";
+    Connection connection = DatabaseConnection.getConnection();
+    CategoryDAO categoryDAO = new CategoryDAO(connection);
+    Category category = new Category();
+    html += AdminframeGenerator.generateAdminHeader(session);
+    html += "<div";
+    href = "";
+    html += " class=\"" + "container" + "\"";
+    html += ">";
+    html += "<div";
+    href = "";
+    html += " class=\"" + "col-md-3" + "\"";
+    html += ">";
+    html += "<span";
+    href = "";
+    html += " class=\"" + "lead" + "\"";
+    html += ">";
+    html += "Categories";
+    html += "</span>";
+
+    html += "<div";
+    href = "";
+    html += " class=\"" + "list-group" + "\"";
+    html += ">";
+
+    {
+      List<Category> loop_a1a1a = categoryDAO.getAllCategorys();
+      for (int counter_a1a1a = 0; counter_a1a1a < loop_a1a1a.size(); counter_a1a1a++) {
+        category = loop_a1a1a.get(counter_a1a1a);
+        html += "<a";
+        href = "";
+        href += "/" + category.getName();
+        href += "?" + "categoryId" + "=" + category.getId();
+        html += " href=\"" + "/" + "editCategory" + href + "\"";
+        html += " class=\"" + "list-group-item" + "\"";
+
+        html += ">" + category.getName() + "</a>";
+      }
+    }
+    html += "</div>";
+
+    html += "</div>";
+
+    html += "<div";
+    href = "";
+    html += " class=\"" + "col-md-9" + "\"";
+    html += ">";
+    html += "<div";
+    href = "";
+    html += ">";
+    html += "Please select a category to begin with or ";
+    html += "<a";
+    href = "";
+    html += " href=\"" + "#" + "\"";
+    html += " class=\"" + "pure-button pure-button-primary" + "\"";
+    parameters = "";
+    html += " " + "onclick" + "=\"" + "showPanel" + "(" + parameters + ")\"";
+
+
+    html += ">" + "add" + "</a>";
+    html += " a new category";
+    html += "<form";
+    href = "";
+    html += " id='" + "addData" + "'";
+    html += " class=\"" + "pure-form pure-form-stacked" + "\"";
+    html += " " + "style" + "=\"" + "display:none" + "\"";
+    html += " " + "style" + "=\"" + "display:none" + "\"";
+    html += ">";
+    html += "<fieldset";
+    href = "";
+    html += ">";
+    html += "<legend";
+    href = "";
+
+    html += ">" + "Category Details" + "</legend>";
+    html += "<div";
+    href = "";
+    html += " id='" + "addCategoryData" + "'";
+    html += ">";
+    html += "<label";
+    href = "";
+
+    html += ">" + "Parent" + "</label>";
+    html += "<select";
+    html += " id='" + "select-parent" + "'";
+
+    html += ">";
+    html += "<option";
+    href = "";
+    html += " id='" + "-1" + "'";
+
+    html += ">" + "" + "</option>";
+
+    {
+      List<Category> loop_b1b0d0b1a = categoryDAO.getAllCategorys();
+      for (int counter_b1b0d0b1a = 0; counter_b1b0d0b1a < loop_b1b0d0b1a.size(); counter_b1b0d0b1a++) {
+        category = loop_b1b0d0b1a.get(counter_b1b0d0b1a);
+        value = "val";
+        if (category == null || category.getCategory() == null) {
+          html += "<option";
+          href = "";
+          html += " id='" + category.getId() + "'";
+
+          html += ">" + category.getName() + "</option>";
+        } else {
+        }
+      }
+    }
+    html += "</select>";
+
+    html += "<label";
+    href = "";
+
+    html += ">" + "Id" + "</label>";
+    html += "<input";
+    html += " type=\"" + "text" + "\" ";
+    href = "";
+    html += " id='" + "fieldId" + "'";
+
+    html += "/>";
+    html += "<label";
+    href = "";
+
+    html += ">" + "Name" + "</label>";
+    html += "<input";
+    html += " type=\"" + "text" + "\" ";
+    href = "";
+    html += " id='" + "fieldName" + "'";
+
+    html += "/>";
+    html += "<input";
+    html += " type=\"" + "button" + "\" ";
+    href = "";
+    html += " class=\"" + "pure-button pull-left button-success" + "\"";
+    parameters = "";
+    html += " " + "onclick" + "=\"" + "saveCategory" + "(" + parameters + ")\"";
+
+
+    html += " value=\"" + "Save" + "\" ";
+    html += "/>";
+    html += "</div>";
+
+    html += "</fieldset>";
+
+    html += "</form>";
+
+    html += "</div>";
+
+    html += "</div>";
+
+    html += "</div>";
+
     html += "</body>";
     html += "</html>";
     return html;

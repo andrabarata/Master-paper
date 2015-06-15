@@ -5,13 +5,16 @@ package ro.barata.mps.databaseOperationsLanguage.behavior;
 import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 
 public class InsertOperation_Behavior {
   public static void init(SNode thisNode) {
   }
   public static void call_addDepths_3941553559192742794(SNode thisNode) {
     for (SNode ref : SLinkOperations.getChildren(thisNode, MetaAdapterFactory.getContainmentLink(0x58b9e0aa66634086L, 0x8f84dfaa697f9989L, 0x58274fdf875fd520L, 0x269b49f46a60c76bL, "references"))) {
-      LinkDeclarationReference_Behavior.call_addLinkDepths_3941553559192751486(ref, 1);
+      if (SNodeOperations.isInstanceOf(ref, MetaAdapterFactory.getConcept(0x58b9e0aa66634086L, 0x8f84dfaa697f9989L, 0x269b49f46a5d57ccL, "ro.barata.mps.databaseOperationsLanguage.structure.AddLinkDeclarationReference"))) {
+        AddLinkDeclarationReference_Behavior.call_addLinkDepths_3941553559192751486(SNodeOperations.cast(ref, MetaAdapterFactory.getConcept(0x58b9e0aa66634086L, 0x8f84dfaa697f9989L, 0x269b49f46a5d57ccL, "ro.barata.mps.databaseOperationsLanguage.structure.AddLinkDeclarationReference")), 1);
+      }
     }
   }
 }

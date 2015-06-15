@@ -68,3 +68,17 @@ padding-left:25px;
 -moz-column-count:2;
 column-count:2;
 }
+body{
+background-color:rgb(243,253,253)!important;
+}
+.button-success,.button-error,.button-warning,.button-secondary {
+color:white !important;
+border-radius:4px !important;
+text-shadow:0 1px 1px rgba(0, 0, 0, 0.2) !important;
+}
+.button-success{
+background:rgb(28, 184, 65) !important;
+}
+.button-error{
+background:rgb(202, 60, 60) !important;
+}

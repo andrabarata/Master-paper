@@ -27,13 +27,13 @@ public class PersonDAO {
     String sql = " from " + "persons" + " table0";
     String leftJoins = "";
     int i = 1;
-    columns += "table" + i + "." + "id" + " \"" + "adresses" + "id" + "\"," + ",";
-    columns += "table" + i + "." + "line1" + " \"" + "adresses" + "line1" + "\"," + ",";
-    columns += "table" + i + "." + "line2" + " \"" + "adresses" + "line2" + "\"," + ",";
-    columns += "table" + i + "." + "postcode" + " \"" + "adresses" + "postcode" + "\"," + ",";
-    columns += "table" + i + "." + "state" + " \"" + "adresses" + "state" + "\"," + ",";
-    columns += "table" + i + "." + "country" + " \"" + "adresses" + "country" + "\"," + ",";
-    columns += "table" + i + "." + "city" + " \"" + "adresses" + "city" + "\"," + ",";
+    columns += "table" + i + "." + "id" + " \"" + "adresses" + "id" + "\",";
+    columns += "table" + i + "." + "line1" + " \"" + "adresses" + "line1" + "\",";
+    columns += "table" + i + "." + "line2" + " \"" + "adresses" + "line2" + "\",";
+    columns += "table" + i + "." + "postcode" + " \"" + "adresses" + "postcode" + "\",";
+    columns += "table" + i + "." + "state" + " \"" + "adresses" + "state" + "\",";
+    columns += "table" + i + "." + "country" + " \"" + "adresses" + "country" + "\",";
+    columns += "table" + i + "." + "city" + " \"" + "adresses" + "city" + "\",";
     leftJoins += " left join " + "adresses" + " table" + i + " on table" + i + "." + "personId" + "=table0." + "id" + " ";
     i++;
 
@@ -47,31 +47,30 @@ public class PersonDAO {
       foundPerson.setFirstName(set.getString("parent" + "firstName"));
       foundPerson.setLastName(set.getString("parent" + "lastName"));
       {
-        Address reference = new Address();
+        Address child = new Address();
         if (set.getBigDecimal("adresses" + "id") != null) {
-          reference.setId(Integer.valueOf(set.getBigDecimal("adresses" + "id").intValue()));
+          child.setId(Integer.valueOf(set.getBigDecimal("adresses" + "id").intValue()));
         }
         if (set.getString("adresses" + "line1") != null) {
-          reference.setLine1(set.getString("adresses" + "line1"));
+          child.setLine1(set.getString("adresses" + "line1"));
         }
         if (set.getString("adresses" + "line2") != null) {
-          reference.setLine2(set.getString("adresses" + "line2"));
+          child.setLine2(set.getString("adresses" + "line2"));
         }
         if (set.getBigDecimal("adresses" + "postcode") != null) {
-          reference.setPostcode(Integer.valueOf(set.getBigDecimal("adresses" + "postcode").intValue()));
+          child.setPostcode(Integer.valueOf(set.getBigDecimal("adresses" + "postcode").intValue()));
         }
         if (set.getString("adresses" + "state") != null) {
-          reference.setState(set.getString("adresses" + "state"));
+          child.setState(set.getString("adresses" + "state"));
         }
         if (set.getString("adresses" + "country") != null) {
-          reference.setCountry(set.getString("adresses" + "country"));
+          child.setCountry(set.getString("adresses" + "country"));
         }
         if (set.getString("adresses" + "city") != null) {
-          reference.setCity(set.getString("adresses" + "city"));
+          child.setCity(set.getString("adresses" + "city"));
         }
-
-        if (reference.getId() != null) {
-          foundPerson.setAddress(reference);
+        if (child.getId() != null) {
+          foundPerson.setAddress(child);
         }
       }
       boolean flag = true;
@@ -123,8 +122,57 @@ public class PersonDAO {
     }
     return persons;
   }
+  public Address findChildAddress(Person parent) throws SQLException {
+    String sql = "select ";
+    String columns = "";
+    columns += "id";
+    columns += ",";
+    columns += "line1";
+    columns += ",";
+    columns += "line2";
+    columns += ",";
+    columns += "postcode";
+    columns += ",";
+    columns += "state";
+    columns += ",";
+    columns += "country";
+    columns += ",";
+    columns += "city";
+    sql += columns;
+    sql += " from " + "adresses" + " where " + "personId" + " in (select " + "id" + " from " + "persons";
+    if (parent != null) {
+      sql += " where ";
+      String values = "";
+      if (parent.getId() != null) {
+        values += "id" + "='" + parent.getId() + "'and ";
+      }
+      if (parent.getFirstName() != null) {
+        values += "firstName" + "='" + parent.getFirstName() + "'and ";
+      }
+      if (parent.getLastName() != null) {
+        values += "lastName" + "='" + parent.getLastName() + "'and ";
+      }
+      sql += values.substring(0, values.length() - 4);
+    }
+    sql += ")";
+    System.out.println(sql);
+    ResultSet set = stmt.executeQuery(sql);
+    Address foundAddress = new Address();
+    while (set.next()) {
+      foundAddress = new Address();
+      foundAddress.setId(Integer.valueOf(set.getBigDecimal("id").intValue()));
+      foundAddress.setLine1(set.getString("line1"));
+      foundAddress.setLine2(set.getString("line2"));
+      foundAddress.setPostcode(Integer.valueOf(set.getBigDecimal("postcode").intValue()));
+      foundAddress.setState(set.getString("state"));
+      foundAddress.setCountry(set.getString("country"));
+      foundAddress.setCity(set.getString("city"));
+    }
+    return foundAddress;
+  }
 
-  public void addPerson(Person person) throws SQLException, ClassNotFoundException {
+
+  public void addPerson(Person person) throws SQLException, ClassNotFoundException, CloneNotSupportedException {
     String sql = "insert into " + "persons" + "(";
     String columns = "";
     String values = "";
@@ -143,20 +191,30 @@ public class PersonDAO {
     }
     // Searches for the parent entity, such that it identifies and sets the foreign key columns 
     // Searches for the reference entities, such that it identifies and sets the foreign key columns 
-    if (person.getAddress() != null) {
-      Address referenceAddress = person.getAddress();
-      AddressDAO referenceAddressDAO = new AddressDAO(connn);
-      referenceAddressDAO.addAddress(referenceAddress);
-      columns += "personId" + ",";
-      values += "'" + referenceAddress.getId() + "',";
-    }
     sql += columns.substring(0, columns.length() - 1) + ") values (" + values.substring(0, values.length() - 1) + ")";
     System.out.println(sql);
     stmt.execute(sql);
     // Loops thhrough the children, and adds them recursively to the database 
+    {
+      Address childAddress = person.getAddress();
+      if (childAddress != null) {
+        AddressDAO childAddressDAO = new AddressDAO(connn);
+        List<Address> children = childAddressDAO.findAddresss(childAddress);
+        if (children.size() == 0) {
+          childAddressDAO.addAddress(childAddress);
+        } else {
+          for (Address child : children) {
+            Address copy = (Address) child.clone();
+            child.setParentPerson(person);
+            childAddressDAO.updateAddress(copy, child);
+
+          }
+        }
+      }
+    }
   }
 
-  public void updatePerson(Person oldperson, Person newperson) throws SQLException, ClassNotFoundException {
+  public void updatePerson(Person oldperson, Person newperson) throws SQLException, ClassNotFoundException, CloneNotSupportedException {
     String sql = "update " + "persons" + " set ";
     String values = "";
     if (newperson.getId() != null) {
@@ -167,12 +225,6 @@ public class PersonDAO {
     }
     if (newperson.getLastName() != null) {
       values += "lastName" + "='" + newperson.getLastName() + "',";
-    }
-    if (newperson.getAddress() != null) {
-      Address referenceAddress = newperson.getAddress();
-      AddressDAO referenceAddressDAO = new AddressDAO(connn);
-      referenceAddressDAO.addAddress(referenceAddress);
-      values += "personId" + "=" + "'" + referenceAddress.getId() + "'";
     }
     String condition = " where ";
     if (oldperson.getId() != null) {
@@ -187,6 +239,21 @@ public class PersonDAO {
     sql += values.substring(0, values.length() - 1) + condition.substring(0, condition.length() - 4);
     System.out.println(sql);
     stmt.execute(sql);
+    if (newperson.getAddress() != null) {
+      AddressDAO childAddressDAO = new AddressDAO(connn);
+      Address childAddress = newperson.getAddress();
+      List<Address> children = childAddressDAO.findAddresss(childAddress);
+      if (children.size() == 0) {
+        childAddressDAO.addAddress(childAddress);
+      } else {
+        for (Address child : children) {
+          Address copy = (Address) child.clone();
+          child.setParentPerson(newperson);
+          childAddressDAO.updateAddress(copy, child);
+
+        }
+      }
+    }
 
   }
 

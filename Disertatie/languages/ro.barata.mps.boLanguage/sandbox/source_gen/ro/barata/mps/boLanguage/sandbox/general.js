@@ -16,8 +16,13 @@ return false;
 }ajaxRequest.onreadystatechange = function(){
 if(ajaxRequest.readyState == 4){
 if (typeof refreshFunction!="undefined"){
+try{
 var jsonObj = JSON.parse(ajaxRequest.responseText);
-refreshFunction(jsonObj);}else
+refreshFunction(jsonObj);
+} catch (err) {
+refreshFunction();
+}
+}else
 document.documentElement.innerHTML = ajaxRequest.responseText;
 }
 };

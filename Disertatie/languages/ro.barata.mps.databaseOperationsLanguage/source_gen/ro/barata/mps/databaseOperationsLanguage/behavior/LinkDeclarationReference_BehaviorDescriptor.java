@@ -4,7 +4,7 @@ package ro.barata.mps.databaseOperationsLanguage.behavior;
 
 import jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor;
 
-public class LinkDeclarationReference_BehaviorDescriptor extends BaseConcept_BehaviorDescriptor {
+public abstract class LinkDeclarationReference_BehaviorDescriptor extends BaseConcept_BehaviorDescriptor {
   public LinkDeclarationReference_BehaviorDescriptor() {
   }
   @Override

@@ -8,6 +8,7 @@ import java.sql.SQLException;
 import java.util.List;
 import java.util.ArrayList;
 import java.sql.ResultSet;
+import java.util.LinkedList;
 
 public class AddressDAO {
   private Connection connn;
@@ -119,7 +120,8 @@ public class AddressDAO {
     return addresss;
   }
 
-  public void addAddress(Address address) throws SQLException, ClassNotFoundException {
+
+  public void addAddress(Address address) throws SQLException, ClassNotFoundException, CloneNotSupportedException {
     String sql = "insert into " + "adresses" + "(";
     String columns = "";
     String values = "";
@@ -153,6 +155,13 @@ public class AddressDAO {
       values += "'" + address.getCity() + "',";
     }
     // Searches for the parent entity, such that it identifies and sets the foreign key columns 
+    {
+      Person parentPerson = address.getParentPerson();
+      if (parentPerson != null) {
+        columns += "personId" + ",";
+        values += "'" + parentPerson.getId().toString() + "',";
+      }
+    }
     // Searches for the reference entities, such that it identifies and sets the foreign key columns 
     sql += columns.substring(0, columns.length() - 1) + ") values (" + values.substring(0, values.length() - 1) + ")";
     System.out.println(sql);
@@ -160,7 +169,7 @@ public class AddressDAO {
     // Loops thhrough the children, and adds them recursively to the database 
   }
 
-  public void updateAddress(Address oldaddress, Address newaddress) throws SQLException, ClassNotFoundException {
+  public void updateAddress(Address oldaddress, Address newaddress) throws SQLException, ClassNotFoundException, CloneNotSupportedException {
     String sql = "update " + "adresses" + " set ";
     String values = "";
     if (newaddress.getId() != null) {
@@ -183,6 +192,20 @@ public class AddressDAO {
     }
     if (newaddress.getCity() != null) {
       values += "city" + "='" + newaddress.getCity() + "',";
+    }
+    {
+      List<String> columnsList = new LinkedList<String>();
+      List<String> valuesList = new LinkedList<String>();
+      {
+        Person parentPerson = newaddress.getParentPerson();
+        if (parentPerson != null) {
+          columnsList.add("personId");
+          valuesList.add(parentPerson.getId().toString());
+        }
+      }
+      for (int i = 0; i < columnsList.size(); i++) {
+        values += columnsList.get(i) + "='" + valuesList.get(i) + "',";
+      }
     }
     String condition = " where ";
     if (oldaddress.getId() != null) {

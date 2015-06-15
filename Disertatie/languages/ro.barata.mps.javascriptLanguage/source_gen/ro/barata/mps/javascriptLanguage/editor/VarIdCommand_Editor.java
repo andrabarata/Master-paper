@@ -13,7 +13,6 @@ import jetbrains.mps.lang.editor.cellProviders.RefNodeCellProvider;
 import jetbrains.mps.nodeEditor.EditorManager;
 import jetbrains.mps.openapi.editor.style.Style;
 import jetbrains.mps.editor.runtime.style.StyleImpl;
-import jetbrains.mps.lang.editor.cellProviders.PropertyCellProvider;
 
 public class VarIdCommand_Editor extends DefaultNodeEditor {
   public EditorCell createEditorCell(EditorContext editorContext, SNode node) {
@@ -27,7 +26,7 @@ public class VarIdCommand_Editor extends DefaultNodeEditor {
     editorCell.addEditorCell(this.createRefNode_2twjyp_b0(editorContext, node));
     editorCell.addEditorCell(this.createConstant_2twjyp_c0(editorContext, node));
     editorCell.addEditorCell(this.createConstant_2twjyp_d0(editorContext, node));
-    editorCell.addEditorCell(this.createProperty_2twjyp_e0(editorContext, node));
+    editorCell.addEditorCell(this.createRefNode_2twjyp_e0(editorContext, node));
     return editorCell;
   }
   private EditorCell createConstant_2twjyp_a0(EditorContext editorContext, SNode node) {
@@ -64,18 +63,20 @@ public class VarIdCommand_Editor extends DefaultNodeEditor {
     EditorCell_Constant editorCell = new EditorCell_Constant(editorContext, node, ".");
     editorCell.setCellId("Constant_2twjyp_d0");
     Style style = new StyleImpl();
-    JavascriptStylesheet_StyleSheet.apply_symbol(style, editorCell);
+    JavascriptStylesheet_StyleSheet.apply_IndicatorSymbol(style, editorCell);
     editorCell.getStyle().putAll(style);
     editorCell.setDefaultText("");
     return editorCell;
   }
-  private EditorCell createProperty_2twjyp_e0(EditorContext editorContext, SNode node) {
-    CellProviderWithRole provider = new PropertyCellProvider(node, editorContext);
+  private EditorCell createRefNode_2twjyp_e0(EditorContext editorContext, SNode node) {
+    CellProviderWithRole provider = new RefNodeCellProvider(node, editorContext);
     provider.setRole("expression");
     provider.setNoTargetText("<no expression>");
     EditorCell editorCell;
     editorCell = provider.createEditorCell(editorContext);
-    editorCell.setCellId("property_expression");
+    if (editorCell.getRole() == null) {
+      editorCell.setRole("expression");
+    }
     editorCell.setSubstituteInfo(provider.createDefaultSubstituteInfo());
     SNode attributeConcept = provider.getRoleAttribute();
     Class attributeKind = provider.getRoleAttributeClass();

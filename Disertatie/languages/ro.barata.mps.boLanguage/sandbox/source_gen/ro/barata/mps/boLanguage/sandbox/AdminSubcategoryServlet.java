@@ -12,7 +12,7 @@ import java.io.IOException;
 
 public class AdminSubcategoryServlet extends HttpServlet {
   private Connection connection;
-  public AdminSubcategoryServlet() throws SQLException, ClassNotFoundException {
+  public AdminSubcategoryServlet() throws SQLException, ClassNotFoundException, CloneNotSupportedException {
     if (connection == null) {
       connection = DatabaseConnection.getConnection();
     }
@@ -37,9 +37,15 @@ public class AdminSubcategoryServlet extends HttpServlet {
     }
   }
 
-  private void handleRequest(HttpServletRequest request, HttpServletResponse response) throws IOException, SQLException, ClassNotFoundException {
+  private void handleRequest(HttpServletRequest request, HttpServletResponse response) throws IOException, SQLException, ClassNotFoundException, CloneNotSupportedException {
     String action = request.getParameter("actionName");
-    String requestParameterValue = request.getParameter("categoryId");
+    String requestParameterValue = "";
+    if (request.getParameter("categoryId") != null) {
+      requestParameterValue = request.getParameter("categoryId");
+      request.getSession().setAttribute("categoryId", requestParameterValue);
+    } else {
+      requestParameterValue = request.getSession().getAttribute("categoryId").toString();
+    }
     if (action != null && !(action.equals(""))) {
 
     } else {

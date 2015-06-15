@@ -9,7 +9,10 @@ import jetbrains.mps.internal.collections.runtime.backports.LinkedList;
 public enum DotExpressionValues {
   value("value", "value"),
   innerHTML("innerHTML", "innerHTML"),
-  length("length", "lenght");
+  length("length", "lenght"),
+  text("text", "text"),
+  id("id", "id"),
+  selectedIndex("selectedIndex", "selectedIndex");
 
   private String myName;
   public String getName() {
@@ -23,6 +26,9 @@ public enum DotExpressionValues {
     ListSequence.fromList(list).addElement(DotExpressionValues.value);
     ListSequence.fromList(list).addElement(DotExpressionValues.innerHTML);
     ListSequence.fromList(list).addElement(DotExpressionValues.length);
+    ListSequence.fromList(list).addElement(DotExpressionValues.text);
+    ListSequence.fromList(list).addElement(DotExpressionValues.id);
+    ListSequence.fromList(list).addElement(DotExpressionValues.selectedIndex);
     return list;
   }
   public static DotExpressionValues getDefault() {
@@ -40,6 +46,15 @@ public enum DotExpressionValues {
     }
     if (value.equals(DotExpressionValues.length.getValueAsString())) {
       return DotExpressionValues.length;
+    }
+    if (value.equals(DotExpressionValues.text.getValueAsString())) {
+      return DotExpressionValues.text;
+    }
+    if (value.equals(DotExpressionValues.id.getValueAsString())) {
+      return DotExpressionValues.id;
+    }
+    if (value.equals(DotExpressionValues.selectedIndex.getValueAsString())) {
+      return DotExpressionValues.selectedIndex;
     }
     return DotExpressionValues.getDefault();
   }

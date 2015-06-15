@@ -18,6 +18,7 @@ public class SchemaGenerator {
     sql = "create table " + "categories" + "(";
     sql += "id" + " " + "integer" + ",";
     sql += "name" + " " + "varchar(256)" + ",";
+    sql += "parentId" + " " + "integer" + ",";
     sql += "categoryId" + " " + "integer" + ",";
     if (primaryKey.length() == 0) {
       sql = sql.substring(0, sql.length() - 1);
@@ -122,7 +123,6 @@ public class SchemaGenerator {
     sql += "id" + " " + "integer" + ",";
     sql += "firstName" + " " + "varchar(256)" + ",";
     sql += "lastName" + " " + "varchar(256)" + ",";
-    sql += "personId" + " " + "integer" + ",";
     if (primaryKey.length() == 0) {
       sql = sql.substring(0, sql.length() - 1);
     }
@@ -143,6 +143,7 @@ public class SchemaGenerator {
     sql += "state" + " " + "varchar(256)" + ",";
     sql += "country" + " " + "varchar(256)" + ",";
     sql += "city" + " " + "varchar(256)" + ",";
+    sql += "personId" + " " + "integer" + ",";
     if (primaryKey.length() == 0) {
       sql = sql.substring(0, sql.length() - 1);
     }
@@ -188,49 +189,54 @@ public class SchemaGenerator {
   private static void constrainTables(Statement stmt) throws SQLException, ClassNotFoundException {
     String sql = "";
 
+    sql = "alter table " + "categories" + " add constraint fk_" + "categories" + "_" + "parentId";
+    sql += " foreign key (" + "parentId" + ") references " + "categories" + "(" + "id" + ") on delete set null";
+    System.out.println(sql);
+    stmt.execute(sql);
     sql = "alter table " + "categories" + " add constraint fk_" + "categories" + "_" + "categoryId";
-    sql += " foreign key (" + "categoryId" + ") references " + "categories" + "(" + "id" + ")";
+    sql += " foreign key (" + "categoryId" + ") references " + "categories" + "(" + "id" + ") on delete cascade";
     System.out.println(sql);
     stmt.execute(sql);
 
     sql = "alter table " + "products" + " add constraint fk_" + "products" + "_" + "categoryId";
-    sql += " foreign key (" + "categoryId" + ") references " + "categories" + "(" + "id" + ")";
+    sql += " foreign key (" + "categoryId" + ") references " + "categories" + "(" + "id" + ") on delete cascade";
     System.out.println(sql);
     stmt.execute(sql);
 
     sql = "alter table " + "discounts" + " add constraint fk_" + "discounts" + "_" + "categoryId";
-    sql += " foreign key (" + "categoryId" + ") references " + "categories" + "(" + "id" + ")";
+    sql += " foreign key (" + "categoryId" + ") references " + "categories" + "(" + "id" + ") on delete cascade";
     System.out.println(sql);
     stmt.execute(sql);
 
     sql = "alter table " + "attributeCategories" + " add constraint fk_" + "attributeCat" + "_" + "productId";
-    sql += " foreign key (" + "productId" + ") references " + "products" + "(" + "id" + ")";
+    sql += " foreign key (" + "productId" + ") references " + "products" + "(" + "id" + ") on delete cascade";
     System.out.println(sql);
     stmt.execute(sql);
 
     sql = "alter table " + "attributes" + " add constraint fk_" + "attributes" + "_" + "attributeCat";
-    sql += " foreign key (" + "attributeCategoryId" + ") references " + "attributeCategories" + "(" + "id" + ")";
+    sql += " foreign key (" + "attributeCategoryId" + ") references " + "attributeCategories" + "(" + "id" + ") on delete cascade";
     System.out.println(sql);
     stmt.execute(sql);
 
     sql = "alter table " + "users" + " add constraint fk_" + "users" + "_" + "userId";
-    sql += " foreign key (" + "userId" + ") references " + "persons" + "(" + "id" + ")";
+    sql += " foreign key (" + "userId" + ") references " + "persons" + "(" + "id" + ") on delete set null";
     System.out.println(sql);
     stmt.execute(sql);
-    sql = "alter table " + "persons" + " add constraint fk_" + "persons" + "_" + "personId";
-    sql += " foreign key (" + "personId" + ") references " + "adresses" + "(" + "id" + ")";
+    sql = "alter table " + "adresses" + " add constraint fk_" + "adresses" + "_" + "personId";
+    sql += " foreign key (" + "personId" + ") references " + "persons" + "(" + "id" + ") on delete cascade";
     System.out.println(sql);
     stmt.execute(sql);
+
     sql = "alter table " + "orderItems" + " add constraint fk_" + "orderItems" + "_" + "productId";
-    sql += " foreign key (" + "productId" + ") references " + "products" + "(" + "id" + ")";
+    sql += " foreign key (" + "productId" + ") references " + "products" + "(" + "id" + ") on delete set null";
     System.out.println(sql);
     stmt.execute(sql);
     sql = "alter table " + "orderItems" + " add constraint fk_" + "orderItems" + "_" + "promotionId";
-    sql += " foreign key (" + "promotionId" + ") references " + "discounts" + "(" + "id" + ")";
+    sql += " foreign key (" + "promotionId" + ") references " + "discounts" + "(" + "id" + ") on delete set null";
     System.out.println(sql);
     stmt.execute(sql);
     sql = "alter table " + "orderItems" + " add constraint fk_" + "orderItems" + "_" + "orderId";
-    sql += " foreign key (" + "orderId" + ") references " + "orders" + "(" + "id" + ")";
+    sql += " foreign key (" + "orderId" + ") references " + "orders" + "(" + "id" + ") on delete cascade";
     System.out.println(sql);
     stmt.execute(sql);
 

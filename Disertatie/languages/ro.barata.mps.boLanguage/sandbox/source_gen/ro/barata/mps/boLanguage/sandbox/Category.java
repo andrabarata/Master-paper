@@ -5,9 +5,10 @@ package ro.barata.mps.boLanguage.sandbox;
 import java.util.List;
 import java.util.ArrayList;
 
-public class Category {
+public class Category implements Cloneable {
   private Integer id;
   private String name;
+  private Category parent;
   private List<Product> products;
   private List<Discount> discounts;
   private List<Category> categorys;
@@ -18,6 +19,9 @@ public class Category {
   }
   public void setName(String attribute) {
     this.name = attribute;
+  }
+  public void setCategory(Category entity) {
+    this.parent = entity;
   }
   public void setProducts(List<Product> entities) {
     this.products = entities;
@@ -39,6 +43,9 @@ public class Category {
   }
   public void setParentShop(Shop entity) {
     this.parentShop = entity;
+  }
+  public Category getCategory() {
+    return this.parent;
   }
   public List<Product> getProducts() {
     return this.products;
@@ -87,6 +94,9 @@ public class Category {
     if (flag) {
       this.categorys.add(category);
     }
+  }
+  public Object clone() throws CloneNotSupportedException {
+    return super.clone();
   }
   public Category() {
   }

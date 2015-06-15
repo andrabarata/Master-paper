@@ -5,7 +5,7 @@ package ro.barata.mps.boLanguage.sandbox;
 import java.util.List;
 import java.util.ArrayList;
 
-public class Product {
+public class Product implements Cloneable {
   private Integer id;
   private String productName;
   private String description;
@@ -72,6 +72,9 @@ public class Product {
     if (flag) {
       this.attributecategorys.add(attributecategory);
     }
+  }
+  public Object clone() throws CloneNotSupportedException {
+    return super.clone();
   }
   public Product() {
   }

@@ -5,7 +5,7 @@ package ro.barata.mps.boLanguage.sandbox;
 import java.util.List;
 import java.util.ArrayList;
 
-public class Order {
+public class Order implements Cloneable {
   private Integer id;
   private Integer dateCreated;
   private String status;
@@ -44,6 +44,9 @@ public class Order {
     if (flag) {
       this.orderitems.add(orderitem);
     }
+  }
+  public Object clone() throws CloneNotSupportedException {
+    return super.clone();
   }
   public Order() {
   }

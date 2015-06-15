@@ -5,7 +5,7 @@ package ro.barata.mps.boLanguage.sandbox;
 import java.util.List;
 import java.util.ArrayList;
 
-public class AttributeCategory {
+public class AttributeCategory implements Cloneable {
   private Integer id;
   private String name;
   private List<Attribute> attributes;
@@ -44,6 +44,9 @@ public class AttributeCategory {
     if (flag) {
       this.attributes.add(attribute);
     }
+  }
+  public Object clone() throws CloneNotSupportedException {
+    return super.clone();
   }
   public AttributeCategory() {
   }

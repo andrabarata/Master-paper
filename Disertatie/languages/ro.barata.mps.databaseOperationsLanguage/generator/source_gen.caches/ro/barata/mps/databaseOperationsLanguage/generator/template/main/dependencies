@@ -22,6 +22,7 @@
     <classNode dependClassName="ro.barata.mps.databaseOperationsLanguage.behavior.DBCommands_Behavior" />
     <classNode dependClassName="ro.barata.mps.databaseOperationsLanguage.behavior.InsertOperation_Behavior" />
     <classNode dependClassName="ro.barata.mps.databaseOperationsLanguage.behavior.PropertyReference_Behavior" />
+    <classNode dependClassName="ro.barata.mps.databaseOperationsLanguage.behavior.SetLinkDeclarationReference_Behavior" />
     <classNode dependClassName="ro.barata.mps.databaseOperationsLanguage.behavior.UpdateOperation_Behavior" />
   </dependency>
 </dependenciesRoot>

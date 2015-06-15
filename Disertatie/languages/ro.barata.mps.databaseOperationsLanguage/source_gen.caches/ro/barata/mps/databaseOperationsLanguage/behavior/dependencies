@@ -6,11 +6,24 @@
     <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />
     <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
   </dependency>
+  <dependency className="ro.barata.mps.databaseOperationsLanguage.behavior.AddLinkDeclarationReference_Behavior" file="AddLinkDeclarationReference_Behavior.java">
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
+  </dependency>
+  <dependency className="ro.barata.mps.databaseOperationsLanguage.behavior.AddLinkDeclarationReference_BehaviorDescriptor" file="AddLinkDeclarationReference_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="ro.barata.mps.databaseOperationsLanguage.behavior.LinkDeclarationReference_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
   <dependency className="ro.barata.mps.databaseOperationsLanguage.behavior.BehaviorAspectDescriptor" file="BehaviorAspectDescriptor.java">
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.util.Arrays" />
     <classNode dependClassName="jetbrains.mps.smodel.runtime.BehaviorDescriptor" />
     <classNode dependClassName="jetbrains.mps.smodel.runtime.interpreted.BehaviorAspectInterpreted" />
+    <classNode dependClassName="ro.barata.mps.databaseOperationsLanguage.behavior.AddLinkDeclarationReference_BehaviorDescriptor" />
     <classNode dependClassName="ro.barata.mps.databaseOperationsLanguage.behavior.BooleanValue_BehaviorDescriptor" />
     <classNode dependClassName="ro.barata.mps.databaseOperationsLanguage.behavior.DBCommands_BehaviorDescriptor" />
     <classNode dependClassName="ro.barata.mps.databaseOperationsLanguage.behavior.DBIntValue_BehaviorDescriptor" />
@@ -18,8 +31,8 @@
     <classNode dependClassName="ro.barata.mps.databaseOperationsLanguage.behavior.DeleteOperation_BehaviorDescriptor" />
     <classNode dependClassName="ro.barata.mps.databaseOperationsLanguage.behavior.InsertOperation_BehaviorDescriptor" />
     <classNode dependClassName="ro.barata.mps.databaseOperationsLanguage.behavior.Instance_BehaviorDescriptor" />
-    <classNode dependClassName="ro.barata.mps.databaseOperationsLanguage.behavior.LinkDeclarationReference_BehaviorDescriptor" />
     <classNode dependClassName="ro.barata.mps.databaseOperationsLanguage.behavior.PropertyReference_BehaviorDescriptor" />
+    <classNode dependClassName="ro.barata.mps.databaseOperationsLanguage.behavior.SetLinkDeclarationReference_BehaviorDescriptor" />
     <classNode dependClassName="ro.barata.mps.databaseOperationsLanguage.behavior.UpdateOperation_BehaviorDescriptor" />
     <classNode extendsClassName="jetbrains.mps.smodel.runtime.BehaviorAspectDescriptor" />
   </dependency>
@@ -70,9 +83,10 @@
   </dependency>
   <dependency className="ro.barata.mps.databaseOperationsLanguage.behavior.InsertOperation_Behavior" file="InsertOperation_Behavior.java">
     <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
     <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />
     <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
-    <classNode dependClassName="ro.barata.mps.databaseOperationsLanguage.behavior.LinkDeclarationReference_Behavior" />
+    <classNode dependClassName="ro.barata.mps.databaseOperationsLanguage.behavior.AddLinkDeclarationReference_Behavior" />
   </dependency>
   <dependency className="ro.barata.mps.databaseOperationsLanguage.behavior.InsertOperation_BehaviorDescriptor" file="InsertOperation_BehaviorDescriptor.java">
     <classNode dependClassName="java.lang.Override" />
@@ -85,12 +99,6 @@
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />
     <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
-  </dependency>
-  <dependency className="ro.barata.mps.databaseOperationsLanguage.behavior.LinkDeclarationReference_Behavior" file="LinkDeclarationReference_Behavior.java">
-    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
-    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations" />
-    <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />
-    <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
   </dependency>
   <dependency className="ro.barata.mps.databaseOperationsLanguage.behavior.LinkDeclarationReference_BehaviorDescriptor" file="LinkDeclarationReference_BehaviorDescriptor.java">
     <classNode dependClassName="java.lang.Override" />
@@ -117,11 +125,29 @@
     <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />
     <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
   </dependency>
-  <dependency className="ro.barata.mps.databaseOperationsLanguage.behavior.UpdateOperation_Behavior" file="UpdateOperation_Behavior.java">
+  <dependency className="ro.barata.mps.databaseOperationsLanguage.behavior.SetLinkDeclarationReference_Behavior" file="SetLinkDeclarationReference_Behavior.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.IWhereFilter" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
     <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SModelOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations" />
     <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />
     <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
-    <classNode dependClassName="ro.barata.mps.databaseOperationsLanguage.behavior.LinkDeclarationReference_Behavior" />
+  </dependency>
+  <dependency className="ro.barata.mps.databaseOperationsLanguage.behavior.SetLinkDeclarationReference_BehaviorDescriptor" file="SetLinkDeclarationReference_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="ro.barata.mps.databaseOperationsLanguage.behavior.LinkDeclarationReference_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="ro.barata.mps.databaseOperationsLanguage.behavior.UpdateOperation_Behavior" file="UpdateOperation_Behavior.java">
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
+    <classNode dependClassName="ro.barata.mps.databaseOperationsLanguage.behavior.AddLinkDeclarationReference_Behavior" />
   </dependency>
   <dependency className="ro.barata.mps.databaseOperationsLanguage.behavior.UpdateOperation_BehaviorDescriptor" file="UpdateOperation_BehaviorDescriptor.java">
     <classNode dependClassName="java.lang.Override" />

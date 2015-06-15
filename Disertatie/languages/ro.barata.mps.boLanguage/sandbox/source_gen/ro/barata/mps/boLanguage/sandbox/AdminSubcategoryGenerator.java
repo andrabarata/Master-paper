@@ -8,7 +8,7 @@ import java.sql.Connection;
 import java.util.List;
 
 public class AdminSubcategoryGenerator {
-  public static String getContent(HttpSession session, String requestParameterValue) throws ClassNotFoundException, SQLException {
+  public static String getContent(HttpSession session, String requestParameterValue) throws ClassNotFoundException, SQLException, CloneNotSupportedException {
     String html = "<html>";
     String parameters = "";
     String href = "";
@@ -32,43 +32,50 @@ public class AdminSubcategoryGenerator {
     Category category = new Category();
     html += AdminframeGenerator.generateAdminHeader(session);
     html += "<div";
+    href = "";
     html += " class=\"" + "container" + "\"";
     html += ">";
     html += "<div";
+    href = "";
     html += " class=\"" + "row" + "\"";
     html += ">";
     html += AdminframeGenerator.generateLeftBannerAdmin(session);
     html += "<form";
+    href = "";
     html += " class=\"" + "pure-form pure-form-stacked" + "\"";
     html += ">";
     html += "<label";
+    href = "";
 
     html += ">" + "Category details" + "</label>";
-    {
 
-      searchCategory = new Category();
-      value = requestParameterValue;
-      searchCategory.setId(Integer.parseInt(value));
-      List<Category> loop_b1a1a_0 = categoryDAO.findCategorys(searchCategory);
-      for (int counter_b1a1a_0 = 0; counter_b1a1a_0 < loop_b1a1a_0.size(); counter_b1a1a_0++) {
-        category = loop_b1a1a_0.get(counter_b1a1a_0);
+    searchCategory = new Category();
+    value = requestParameterValue;
+    searchCategory.setId(Integer.parseInt(value));
+    {
+      List<Category> loop_b1a1a = categoryDAO.findCategorys(searchCategory);
+      for (int counter_b1a1a = 0; counter_b1a1a < loop_b1a1a.size(); counter_b1a1a++) {
+        category = loop_b1a1a.get(counter_b1a1a);
         html += "<div";
+        href = "";
         html += " class=\"" + "col-md-5" + "\"";
         html += ">";
         html += "<label";
+        href = "";
 
         html += ">" + "Parent" + "</label>";
         html += "<select";
 
         html += ">";
-        {
 
-          List<Category> loop_a1a1b0b0_0 = categoryDAO.getAllCategorys();
-          for (int counter_a1a1b0b0_0 = 0; counter_a1a1b0b0_0 < loop_a1a1b0b0_0.size(); counter_a1a1b0b0_0++) {
-            category = loop_a1a1b0b0_0.get(counter_a1a1b0b0_0);
+        {
+          List<Category> loop_a1a1b0b0 = categoryDAO.getAllCategorys();
+          for (int counter_a1a1b0b0 = 0; counter_a1a1b0b0 < loop_a1a1b0b0.size(); counter_a1a1b0b0++) {
+            category = loop_a1a1b0b0.get(counter_a1a1b0b0);
             value = "val";
             if (category != null && category.getCategorys() != null) {
               html += "<option";
+              href = "";
 
               html += ">" + category.getName() + "</option>";
             } else {
@@ -78,31 +85,37 @@ public class AdminSubcategoryGenerator {
         html += "</select>";
 
         html += "<label";
+        href = "";
 
         html += ">" + "Id" + "</label>";
         html += "<input";
         html += " type=\"" + "text" + "\" ";
+        href = "";
         html += " " + "readonly" + "=\"" + "readonly" + "\"";
 
         html += " value=\"" + category.getId() + "\" ";
         html += "/>";
         html += "<label";
+        href = "";
 
         html += ">" + "Name" + "</label>";
         html += "<input";
         html += " type=\"" + "text" + "\" ";
+        href = "";
         html += " " + "readonly" + "=\"" + "readonly" + "\"";
 
         html += " value=\"" + category.getName() + "\" ";
         html += "/>";
         html += "<input";
         html += " type=\"" + "button" + "\" ";
+        href = "";
         html += " class=\"" + "pure-button pull-left button-success" + "\"";
 
         html += " value=\"" + "Change" + "\" ";
         html += "/>";
         html += "<input";
         html += " type=\"" + "button" + "\" ";
+        href = "";
         html += " class=\"" + "pure-button pull-right button-error" + "\"";
 
         html += " value=\"" + "Delete" + "\" ";
@@ -110,11 +123,14 @@ public class AdminSubcategoryGenerator {
         html += "</div>";
 
         html += "<div";
+        href = "";
         html += " class=\"" + "col-md-4" + "\"";
         html += ">";
         html += "<a";
+        href = "";
         href += "/" + category.getName();
-        html += " href=\"" + "adminSubcategory" + href + "\"";
+        href += "?" + "categoryId" + "=" + requestParameterValue;
+        html += " href=\"" + "/" + "adminSubcategory" + href + "\"";
         html += " class=\"" + "pure-button pure-button-primary" + "\"";
 
         html += ">" + "" + "</a>";
