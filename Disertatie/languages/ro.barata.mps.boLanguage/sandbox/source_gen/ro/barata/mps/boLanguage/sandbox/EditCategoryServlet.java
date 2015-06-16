@@ -60,6 +60,7 @@ public class EditCategoryServlet extends HttpServlet {
   }
   private void dbupdateCategory(HttpServletRequest request, HttpServletResponse response, String requestParameterValue) throws SQLException, ClassNotFoundException, IOException, CloneNotSupportedException {
     String value;
+    String splitter;
     CategoryDAO categoryDAO = new CategoryDAO(connection);
     Category category = new Category();
     {
@@ -102,6 +103,7 @@ public class EditCategoryServlet extends HttpServlet {
   }
   private void dbdeleteCategory(HttpServletRequest request, HttpServletResponse response, String requestParameterValue) throws SQLException, ClassNotFoundException, IOException, CloneNotSupportedException {
     String value;
+    String splitter;
     CategoryDAO categoryDAO = new CategoryDAO(connection);
     Category category = new Category();
     category = new Category();

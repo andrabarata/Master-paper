@@ -12,21 +12,19 @@ public class ConstraintsAspectDescriptor implements jetbrains.mps.smodel.runtime
   }
   public ConstraintsDescriptor getDescriptor(String fqName) {
     switch (Arrays.binarySearch(stringSwitchCases_2qnle6_a0a0b, fqName)) {
-      case 2:
-        return new ForCommand_Constraints();
       case 1:
-        return new DotExpressionCommand_Constraints();
-      case 6:
+        return new ForCommand_Constraints();
+      case 5:
         return new VarValue_Constraints();
       case 0:
         return new ActionVarValue_Constraints();
-      case 4:
-        return new InstanceValue_Constraints();
       case 3:
+        return new InstanceValue_Constraints();
+      case 2:
         return new GetArrayValueCommand_Constraints();
-      case 7:
+      case 6:
         return new VarValueHREF_Constraints();
-      case 5:
+      case 4:
         return new StoreCommand_Constraints();
       default:
         return new BaseConstraintsDescriptor(fqName);
@@ -36,9 +34,6 @@ public class ConstraintsAspectDescriptor implements jetbrains.mps.smodel.runtime
     long id = conceptId.getIdValue();
     if (id == 0x3ab9167f5c1019d6L) {
       return new ForCommand_Constraints();
-    }
-    if (id == 0x3ab9167f5c2d22a6L) {
-      return new DotExpressionCommand_Constraints();
     }
     if (id == 0x3ab9167f5c29802aL) {
       return new VarValue_Constraints();
@@ -60,5 +55,5 @@ public class ConstraintsAspectDescriptor implements jetbrains.mps.smodel.runtime
     }
     return new BaseConstraintsDescriptor(conceptId);
   }
-  private static String[] stringSwitchCases_2qnle6_a0a0b = new String[]{"ro.barata.mps.javascriptLanguage.structure.ActionVarValue", "ro.barata.mps.javascriptLanguage.structure.DotExpressionCommand", "ro.barata.mps.javascriptLanguage.structure.ForCommand", "ro.barata.mps.javascriptLanguage.structure.GetArrayValueCommand", "ro.barata.mps.javascriptLanguage.structure.InstanceValue", "ro.barata.mps.javascriptLanguage.structure.StoreCommand", "ro.barata.mps.javascriptLanguage.structure.VarValue", "ro.barata.mps.javascriptLanguage.structure.VarValueHREF"};
+  private static String[] stringSwitchCases_2qnle6_a0a0b = new String[]{"ro.barata.mps.javascriptLanguage.structure.ActionVarValue", "ro.barata.mps.javascriptLanguage.structure.ForCommand", "ro.barata.mps.javascriptLanguage.structure.GetArrayValueCommand", "ro.barata.mps.javascriptLanguage.structure.InstanceValue", "ro.barata.mps.javascriptLanguage.structure.StoreCommand", "ro.barata.mps.javascriptLanguage.structure.VarValue", "ro.barata.mps.javascriptLanguage.structure.VarValueHREF"};
 }

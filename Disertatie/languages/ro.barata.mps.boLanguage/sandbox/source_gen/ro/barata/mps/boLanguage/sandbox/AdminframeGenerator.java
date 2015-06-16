@@ -130,9 +130,9 @@ public class AdminframeGenerator {
     html += ">";
     html += "<a";
     href = "";
-    html += " href=\"" + "/" + "adminAttributes" + href + "\"";
+    html += " href=\"" + "/" + "adminHomepromotions" + href + "\"";
 
-    html += ">" + "Attributes" + "</a>";
+    html += ">" + "Promotions" + "</a>";
     html += "</li>";
 
     html += "</ul>";
@@ -163,7 +163,7 @@ public class AdminframeGenerator {
           html += "<label";
           href = "";
 
-          html += ">" + user.getUserName() + "</label>";
+          html += ">" + user.getUserName().toString() + "</label>";
           html += "</li>";
 
           html += "<li";
@@ -188,6 +188,7 @@ public class AdminframeGenerator {
           html += "</li>";
 
         }
+
       }
     }
     html += "</ul>";
@@ -244,11 +245,11 @@ public class AdminframeGenerator {
           html += "<a";
           href = "";
           html += " " + "tabindex" + "=\"" + "-1" + "\"";
-          href += "/" + category.getName();
-          href += "?" + "categoryId" + "=" + category.getId();
+          href += "/" + category.getName().toString();
+          href += "?" + "categoryId" + "=" + category.getId().toString();
           html += " href=\"" + "/" + "editCategory" + href + "\"";
 
-          html += ">" + category.getName() + "</a>";
+          html += ">" + category.getName().toString() + "</a>";
           html += "<ul";
           html += " class=\"" + "dropdown-menu" + "\"";
 
@@ -267,11 +268,11 @@ public class AdminframeGenerator {
               html += "<a";
               href = "";
               html += " " + "tabindex" + "=\"" + "-1" + "\"";
-              href += "/" + subCategories.getName();
-              href += "?" + "categoryId" + "=" + subCategories.getId();
+              href += "/" + subCategories.getName().toString();
+              href += "?" + "categoryId" + "=" + subCategories.getId().toString();
               html += " href=\"" + "/" + "editCategory" + href + "\"";
 
-              html += ">" + subCategories.getName() + "</a>";
+              html += ">" + subCategories.getName().toString() + "</a>";
               html += "</li>";
 
             }
@@ -282,6 +283,7 @@ public class AdminframeGenerator {
 
         } else {
         }
+
       }
     }
     html += "</ul>";

@@ -82,3 +82,15 @@ background:rgb(28, 184, 65) !important;
 .button-error{
 background:rgb(202, 60, 60) !important;
 }
+.admin-box{
+height:120px;
+text-align:center;
+border-bottom:1px solid rgb(199, 199, 199);
+}
+.link-h4{
+color:#0088cc;
+}
+.link-h4:hover{
+text-decoration:underline;
+cursor:pointer;
+}

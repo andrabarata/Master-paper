@@ -11,8 +11,11 @@ public class VarIdCommand_TextGen extends SNodeTextGen {
   public void doGenerateText(SNode node) {
     this.append("document.getElementById(");
     appendNode(SLinkOperations.getTarget(node, MetaAdapterFactory.getContainmentLink(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x4c7f2ab523e8fe54L, 0x2addac2a6f880beeL, "id")));
-    this.append(").");
-    appendNode(SLinkOperations.getTarget(node, MetaAdapterFactory.getContainmentLink(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x4c7f2ab523e8fe54L, 0x60d99492c6c50b61L, "expression")));
+    this.append(")");
+    if ((SLinkOperations.getTarget(node, MetaAdapterFactory.getContainmentLink(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x4c7f2ab523e8fe54L, 0x60d99492c6c50b61L, "expression")) != null)) {
+      this.append(".");
+      appendNode(SLinkOperations.getTarget(node, MetaAdapterFactory.getContainmentLink(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x4c7f2ab523e8fe54L, 0x60d99492c6c50b61L, "expression")));
+    }
     this.append(";");
     this.appendNewLine();
   }

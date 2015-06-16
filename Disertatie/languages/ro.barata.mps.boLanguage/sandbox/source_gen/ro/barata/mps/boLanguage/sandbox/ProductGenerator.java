@@ -69,7 +69,7 @@ public class ProductGenerator {
         html += "<img";
         href = "";
         expressions = "";
-        expressions += product.getId();
+        expressions += product.getId().toString();
         expressions += ".jpg";
         html += " src=\"" + "img" + expressions + "\"";
         html += " class=\"" + "img-responsive" + "\"";
@@ -100,7 +100,7 @@ public class ProductGenerator {
         html += "<h4";
         href = "";
 
-        html += ">" + product.getPrice() + "</h4>";
+        html += ">" + product.getPrice().toString() + "</h4>";
         value = "0";
         if (product.getUnits().equals(Integer.parseInt(value))) {
           html += "<h6";
@@ -115,6 +115,7 @@ public class ProductGenerator {
 
           html += ">" + "Available" + "</h6>";
         }
+
         html += "</div>";
 
         html += "<div";
@@ -144,7 +145,7 @@ public class ProductGenerator {
         html += "<span";
         href = "";
         html += ">";
-        html += product.getDescription();
+        html += product.getDescription().toString();
         html += "</span>";
 
         html += "</div>";
@@ -195,7 +196,7 @@ public class ProductGenerator {
             html += " " + "colspan" + "=\"" + "2" + "\"";
             html += " " + "style" + "=\"" + "color: #d17581" + "\"";
             html += ">";
-            html += attributeCategories.getName();
+            html += attributeCategories.getName().toString();
             html += "</th>";
 
             html += "</tr>";
@@ -215,7 +216,7 @@ public class ProductGenerator {
                 href = "";
                 html += " class=\"" + "attribute-title" + "\"";
                 html += ">";
-                html += attributes.getAttributeName();
+                html += attributes.getAttributeName().toString();
                 html += "</td>";
 
                 html += "<td";
@@ -223,7 +224,7 @@ public class ProductGenerator {
                 html += " " + "style" + "=\"" + "padding-left:10px" + "\"";
                 html += " " + "style" + "=\"" + "padding-left:10px" + "\"";
                 html += ">";
-                html += attributes.getAttributeValue();
+                html += attributes.getAttributeValue().toString();
                 html += "</td>";
 
                 html += "</tr>";

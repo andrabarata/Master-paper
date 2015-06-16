@@ -4,6 +4,8 @@ package ro.barata.mps.boLanguage.sandbox;
 
 import javax.servlet.http.HttpSession;
 import java.sql.SQLException;
+import java.sql.Connection;
+import java.util.List;
 
 public class AdminproductsGenerator {
   public static String getContent(HttpSession session, String requestParameterValue) throws ClassNotFoundException, SQLException, CloneNotSupportedException {
@@ -16,6 +18,7 @@ public class AdminproductsGenerator {
     html += "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">";
     html += "<script src=\"/" + "jquery.js" + "\"></script>";
     html += "<script src=\"/" + "bootstrap.min.js" + "\"></script>";
+    html += "<script src=\"/" + "adminproducts.js" + "\"></script>";
     html += "<script src=\"/general.js\"></script>";
     html += "<link rel=\"stylesheet\" type=\"text/css\" href=\"/" + "main.css" + "\"/>";
     html += "<link rel=\"stylesheet\" type=\"text/css\" href=\"/" + "pure-min.css" + "\"/>";
@@ -24,6 +27,121 @@ public class AdminproductsGenerator {
     html += "<link rel=\"stylesheet\" type=\"text/css\" href=\"/" + "font-awesome.css" + "\"/>";
     html += "</head>";
     html += "<body>";
+    Connection connection = DatabaseConnection.getConnection();
+    CategoryDAO categoryDAO = new CategoryDAO(connection);
+    Category searchCategory = new Category();
+    Product products = new Product();
+    html += AdminframeGenerator.generateAdminHeader(session);
+    html += "<div";
+    href = "";
+    html += " class=\"" + "container" + "\"";
+    html += ">";
+    html += "<div";
+    href = "";
+    html += " class=\"" + "row" + "\"";
+    html += ">";
+    html += "Please select a product to begin with or ";
+    html += "<a";
+    href = "";
+    html += " " + "style" + "=\"" + "margin-bttom:15px" + "\"";
+    href += "?" + "categoryId" + "=" + requestParameterValue;
+    html += " href=\"" + "/" + "addAdminproduct" + href + "\"";
+    html += " class=\"" + "pure-button pure-button-primary" + "\"";
+
+    html += ">" + "add" + "</a>";
+    html += " a new product";
+    html += "</div>";
+
+    html += "<div";
+    href = "";
+    html += " class=\"" + "row" + "\"";
+    html += ">";
+
+    searchCategory = new Category();
+    value = requestParameterValue;
+    searchCategory.setId(Integer.parseInt(value));
+    {
+      List<Product> loop_a1b0 = categoryDAO.findChildProducts(searchCategory);
+      for (int counter_a1b0 = 0; counter_a1b0 < loop_a1b0.size(); counter_a1b0++) {
+        products = loop_a1b0.get(counter_a1b0);
+        html += "<div";
+        href = "";
+        html += " class=\"" + "col-sm-3 col-lg-3 col-md-3" + "\"";
+        html += ">";
+        html += "<div";
+        href = "";
+        html += " class=\"" + "thumbnail" + "\"";
+        html += " " + "style" + "=\"" + "height:250px" + "\"";
+        html += " " + "style" + "=\"" + "height:250px" + "\"";
+        html += ">";
+        html += "<div";
+        href = "";
+        html += " class=\"" + "admin-box" + "\"";
+        html += ">";
+        html += "<img";
+        href = "";
+        html += " " + "style" + "=\"" + "display:initial" + "\"";
+        expressions = "";
+        expressions += products.getId().toString();
+        expressions += ".jpg";
+        html += " src=\"" + "/img" + expressions + "\"";
+        html += " class=\"" + "img-responsive" + "\"";
+
+        html += "/>";
+        html += "</div>";
+
+        html += "<div";
+        href = "";
+        html += " class=\"" + "caption" + "\"";
+        html += ">";
+        html += "<h4";
+        href = "";
+        html += " class=\"" + "link-h4" + "\"";
+        parameters = "";
+        parameters += "'" + products.getId().toString() + "',";
+        parameters += "'" + products.getProductName().toString() + "',";
+        parameters = parameters.substring(0, parameters.length() - 1);
+        html += " " + "onclick" + "=\"" + "goToProductsPage" + "(" + parameters + ")\"";
+
+
+        html += ">" + products.getProductName().toString() + "</h4>";
+        html += "<input";
+        html += " type=\"" + "button" + "\" ";
+        href = "";
+        html += " class=\"" + "pure-button pull-left button-success" + "\"";
+        parameters = "";
+        parameters += "'" + products.getId().toString() + "',";
+        parameters += "'" + products.getProductName().toString() + "',";
+        parameters = parameters.substring(0, parameters.length() - 1);
+        html += " " + "onclick" + "=\"" + "goToProductsPage" + "(" + parameters + ")\"";
+
+
+        html += " value=\"" + "Change" + "\" ";
+        html += "/>";
+        html += "<input";
+        html += " type=\"" + "button" + "\" ";
+        href = "";
+        html += " class=\"" + "pure-button pull-right button-error" + "\"";
+        parameters = "";
+        parameters += "'" + products.getId().toString() + "',";
+        parameters = parameters.substring(0, parameters.length() - 1);
+        html += " " + "onclick" + "=\"" + "deleteProduct" + "(" + parameters + ")\"";
+
+
+        html += " value=\"" + "Delete" + "\" ";
+        html += "/>";
+        html += "</div>";
+
+        html += "</div>";
+
+        html += "</div>";
+
+      }
+    }
+    html += "</div>";
+
+    html += "</div>";
+
     html += "</body>";
     html += "</html>";
     return html;

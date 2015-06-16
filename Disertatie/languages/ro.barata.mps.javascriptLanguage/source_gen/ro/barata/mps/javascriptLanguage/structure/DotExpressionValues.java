@@ -9,7 +9,7 @@ import jetbrains.mps.internal.collections.runtime.backports.LinkedList;
 public enum DotExpressionValues {
   value("value", "value"),
   innerHTML("innerHTML", "innerHTML"),
-  length("length", "lenght"),
+  length("length", "length"),
   text("text", "text"),
   id("id", "id"),
   selectedIndex("selectedIndex", "selectedIndex");

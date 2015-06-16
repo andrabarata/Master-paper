@@ -144,7 +144,7 @@ public class ClientframeGenerator {
           html += "<label";
           href = "";
 
-          html += ">" + user.getUserName() + "</label>";
+          html += ">" + user.getUserName().toString() + "</label>";
         } else {
           html += "<a";
           href = "";
@@ -152,6 +152,7 @@ public class ClientframeGenerator {
 
           html += ">" + "Login" + "</a>";
         }
+
       }
     }
     html += "</li>";
@@ -195,15 +196,16 @@ public class ClientframeGenerator {
           html += " href=\"" + "#" + "\"";
           html += " class=\"" + "pure-menu-heading pure-menu-link" + "\"";
           parameters = "";
-          parameters += "'" + category.getName() + "',";
-          parameters += "'" + category.getId() + "',";
+          parameters += "'" + category.getName().toString() + "',";
+          parameters += "'" + category.getId().toString() + "',";
           parameters = parameters.substring(0, parameters.length() - 1);
           html += " " + "onclick" + "=\"" + "navigateToCategoryPromotion" + "(" + parameters + ")\"";
 
 
-          html += ">" + category.getName() + "</a>";
+          html += ">" + category.getName().toString() + "</a>";
         } else {
         }
+
       }
     }
     html += "</div>";
@@ -258,13 +260,13 @@ public class ClientframeGenerator {
           html += " " + "tabindex" + "=\"" + "-1" + "\"";
           html += " href=\"" + "#" + "\"";
           parameters = "";
-          parameters += "'" + category.getId() + "',";
-          parameters += "'" + category.getName() + "',";
+          parameters += "'" + category.getId().toString() + "',";
+          parameters += "'" + category.getName().toString() + "',";
           parameters = parameters.substring(0, parameters.length() - 1);
           html += " " + "onclick" + "=\"" + "navigateToCategoryProducts" + "(" + parameters + ")\"";
 
 
-          html += ">" + category.getName() + "</a>";
+          html += ">" + category.getName().toString() + "</a>";
           html += "<ul";
           html += " class=\"" + "dropdown-menu" + "\"";
 
@@ -285,13 +287,13 @@ public class ClientframeGenerator {
               html += " " + "tabindex" + "=\"" + "-1" + "\"";
               html += " href=\"" + "#" + "\"";
               parameters = "";
-              parameters += "'" + subCategories.getId() + "',";
-              parameters += "'" + subCategories.getName() + "',";
+              parameters += "'" + subCategories.getId().toString() + "',";
+              parameters += "'" + subCategories.getName().toString() + "',";
               parameters = parameters.substring(0, parameters.length() - 1);
               html += " " + "onclick" + "=\"" + "navigateToCategoryProducts" + "(" + parameters + ")\"";
 
 
-              html += ">" + subCategories.getName() + "</a>";
+              html += ">" + subCategories.getName().toString() + "</a>";
               html += "</li>";
 
             }
@@ -302,6 +304,7 @@ public class ClientframeGenerator {
 
         } else {
         }
+
       }
     }
     html += "</ul>";

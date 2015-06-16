@@ -60,6 +60,21 @@ public class VarValue_Constraints extends BaseConstraintsDescriptor {
               });
               List<SNode> vars = Sequence.fromIterable(vs).toListSequence();
               ListSequence.fromList(vars).addSequence(ListSequence.fromList(SLinkOperations.getChildren(SNodeOperations.getNodeAncestor(_context.getReferenceNode(), MetaAdapterFactory.getConcept(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x4c7f2ab523e8fe0bL, "ro.barata.mps.javascriptLanguage.structure.JavascriptFunction"), false, false), MetaAdapterFactory.getContainmentLink(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x4c7f2ab523e8fe0bL, 0x4b5fda9ef04f9ffeL, "parameters"))));
+              ListSequence.fromList(vars).addSequence(ListSequence.fromList(SLinkOperations.getChildren(SNodeOperations.getNodeAncestor(_context.getReferenceNode(), MetaAdapterFactory.getConcept(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x3ab9167f5c1019d6L, "ro.barata.mps.javascriptLanguage.structure.ForCommand"), false, false), MetaAdapterFactory.getContainmentLink(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x3ab9167f5c1019d6L, 0x3ab9167f5c102982L, "commands"))).where(new IWhereFilter<SNode>() {
+                public boolean accept(SNode it) {
+                  return SNodeOperations.isInstanceOf(it, MetaAdapterFactory.getConcept(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x3ab9167f5c298027L, "ro.barata.mps.javascriptLanguage.structure.AbstractVarCommand"));
+                }
+              }));
+              ListSequence.fromList(vars).addSequence(ListSequence.fromList(SLinkOperations.getChildren(SNodeOperations.getNodeAncestor(_context.getReferenceNode(), MetaAdapterFactory.getConcept(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x2addac2a6ffddd7fL, "ro.barata.mps.javascriptLanguage.structure.JavascriptIfCommand"), false, false), MetaAdapterFactory.getContainmentLink(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x2addac2a6ffddd7fL, 0x34756c9d9efb21ceL, "ifBodyCommands"))).where(new IWhereFilter<SNode>() {
+                public boolean accept(SNode it) {
+                  return SNodeOperations.isInstanceOf(it, MetaAdapterFactory.getConcept(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x3ab9167f5c298027L, "ro.barata.mps.javascriptLanguage.structure.AbstractVarCommand"));
+                }
+              }));
+              ListSequence.fromList(vars).addSequence(ListSequence.fromList(SLinkOperations.getChildren(SNodeOperations.getNodeAncestor(_context.getReferenceNode(), MetaAdapterFactory.getConcept(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x2addac2a6ffddd7fL, "ro.barata.mps.javascriptLanguage.structure.JavascriptIfCommand"), false, false), MetaAdapterFactory.getContainmentLink(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x2addac2a6ffddd7fL, 0x34756c9d9f0d55a7L, "elseBodyCommands"))).where(new IWhereFilter<SNode>() {
+                public boolean accept(SNode it) {
+                  return SNodeOperations.isInstanceOf(it, MetaAdapterFactory.getConcept(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x3ab9167f5c298027L, "ro.barata.mps.javascriptLanguage.structure.AbstractVarCommand"));
+                }
+              }));
               List<SNode> operations = ListSequence.fromList(SLinkOperations.getChildren(SNodeOperations.cast(SNodeOperations.getNodeAncestor(_context.getReferenceNode(), MetaAdapterFactory.getConcept(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x4c7f2ab523e3fae4L, "ro.barata.mps.htmlLanguage.structure.Action"), false, false), MetaAdapterFactory.getConcept(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x4c7f2ab523e3fae4L, "ro.barata.mps.htmlLanguage.structure.Action")), MetaAdapterFactory.getContainmentLink(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x4c7f2ab523e3fae4L, 0x40798aa2d3833ccdL, "operations"))).where(new IWhereFilter<SNode>() {
                 public boolean accept(SNode it) {
                   return SNodeOperations.isInstanceOf(it, MetaAdapterFactory.getConcept(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x40798aa2d38349e0L, "ro.barata.mps.javascriptLanguage.structure.JavascriptOperation")) || SNodeOperations.isInstanceOf(it, MetaAdapterFactory.getConcept(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x34756c9d9e7c4538L, "ro.barata.mps.htmlLanguage.structure.ReceiveOperation"));

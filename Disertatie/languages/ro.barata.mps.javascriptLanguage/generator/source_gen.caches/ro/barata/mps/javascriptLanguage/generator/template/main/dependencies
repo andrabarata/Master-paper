@@ -2,7 +2,6 @@
 <dependenciesRoot>
   <dependency className="ro.barata.mps.javascriptLanguage.generator.template.main.QueriesGenerated" file="QueriesGenerated.java">
     <classNode dependClassName="java.lang.String" />
-    <classNode dependClassName="java.util.ArrayList" />
     <classNode dependClassName="java.util.List" />
     <classNode dependClassName="jetbrains.mps.generator.runtime.Generated" />
     <classNode dependClassName="jetbrains.mps.generator.template.MappingScriptContext" />
@@ -16,6 +15,7 @@
     <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations" />
     <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />
     <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
+    <classNode dependClassName="ro.barata.mps.htmlLanguage.behavior.DatabaseOperation_Behavior" />
     <classNode dependClassName="ro.barata.mps.javascriptLanguage.behavior.ChangePageCommand_Behavior" />
   </dependency>
 </dependenciesRoot>

@@ -4,13 +4,14 @@ package ro.barata.mps.javascriptLanguage.textGen;
 
 import jetbrains.mps.textGen.SNodeTextGen;
 import org.jetbrains.mps.openapi.model.SNode;
-import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
-import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
+import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
 
 public class PushHTMLCommand_TextGen extends SNodeTextGen {
   public void doGenerateText(SNode node) {
-    this.append("document.body.insertAdjacentHTML('");
+    appendNode(SLinkOperations.getTarget(node, MetaAdapterFactory.getContainmentLink(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x76145524eeacf436L, 0x7807619441ddb180L, "var")));
+    this.append(".insertAdjacentHTML('");
     this.append(SPropertyOperations.getString_def(node, MetaAdapterFactory.getProperty(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x76145524eeacf436L, 0x76145524eeacf786L, "pushType"), "afterbegin"));
     this.append("', ");
     appendNode(SLinkOperations.getTarget(node, MetaAdapterFactory.getContainmentLink(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x76145524eeacf436L, 0x76145524eeacf803L, "value")));

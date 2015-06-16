@@ -4,9 +4,33 @@ package ro.barata.mps.javascriptLanguage.textGen;
 
 import jetbrains.mps.textGen.SNodeTextGen;
 import org.jetbrains.mps.openapi.model.SNode;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
+import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 
 public class NullValue_TextGen extends SNodeTextGen {
   public void doGenerateText(SNode node) {
     this.append("null");
+    if ((SNodeOperations.getNodeAncestor(node, MetaAdapterFactory.getConcept(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x2addac2a6ffddd7fL, "ro.barata.mps.javascriptLanguage.structure.JavascriptIfCommand"), false, false) != null)) {
+      if (SPropertyOperations.hasValue(SNodeOperations.getNodeAncestor(node, MetaAdapterFactory.getConcept(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x2addac2a6ffddd7fL, "ro.barata.mps.javascriptLanguage.structure.JavascriptIfCommand"), false, false), MetaAdapterFactory.getProperty(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x2addac2a6ffddd7fL, 0x34756c9d9efb215cL, "condition"), "!=", "==")) {
+        this.append(" && ");
+      } else {
+        this.append(" || ");
+      }
+      this.append(" typeof ");
+      appendNode(SLinkOperations.getTarget(SNodeOperations.getNodeAncestor(node, MetaAdapterFactory.getConcept(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x2addac2a6ffddd7fL, "ro.barata.mps.javascriptLanguage.structure.JavascriptIfCommand"), false, false), MetaAdapterFactory.getContainmentLink(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x2addac2a6ffddd7fL, 0x62619ddfe269093L, "left")));
+      this.append(SPropertyOperations.getString_def(SNodeOperations.getNodeAncestor(node, MetaAdapterFactory.getConcept(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x2addac2a6ffddd7fL, "ro.barata.mps.javascriptLanguage.structure.JavascriptIfCommand"), false, false), MetaAdapterFactory.getProperty(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x2addac2a6ffddd7fL, 0x34756c9d9efb215cL, "condition"), "=="));
+      this.append("\"undefined\"");
+      if (SPropertyOperations.hasValue(SNodeOperations.getNodeAncestor(node, MetaAdapterFactory.getConcept(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x2addac2a6ffddd7fL, "ro.barata.mps.javascriptLanguage.structure.JavascriptIfCommand"), false, false), MetaAdapterFactory.getProperty(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x2addac2a6ffddd7fL, 0x34756c9d9efb215cL, "condition"), "!=", "==")) {
+        this.append(" && ");
+      } else {
+        this.append(" || ");
+      }
+      appendNode(SLinkOperations.getTarget(SNodeOperations.getNodeAncestor(node, MetaAdapterFactory.getConcept(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x2addac2a6ffddd7fL, "ro.barata.mps.javascriptLanguage.structure.JavascriptIfCommand"), false, false), MetaAdapterFactory.getContainmentLink(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x2addac2a6ffddd7fL, 0x62619ddfe269093L, "left")));
+      this.append(SPropertyOperations.getString_def(SNodeOperations.getNodeAncestor(node, MetaAdapterFactory.getConcept(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x2addac2a6ffddd7fL, "ro.barata.mps.javascriptLanguage.structure.JavascriptIfCommand"), false, false), MetaAdapterFactory.getProperty(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x2addac2a6ffddd7fL, 0x34756c9d9efb215cL, "condition"), "=="));
+      this.append("\"\"");
+
+    }
   }
 }

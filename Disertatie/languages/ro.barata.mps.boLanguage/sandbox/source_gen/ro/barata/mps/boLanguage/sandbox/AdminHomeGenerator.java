@@ -57,12 +57,12 @@ public class AdminHomeGenerator {
         category = loop_a1a1a.get(counter_a1a1a);
         html += "<a";
         href = "";
-        href += "/" + category.getName();
-        href += "?" + "categoryId" + "=" + category.getId();
+        href += "/" + category.getName().toString();
+        href += "?" + "categoryId" + "=" + category.getId().toString();
         html += " href=\"" + "/" + "editCategory" + href + "\"";
         html += " class=\"" + "list-group-item" + "\"";
 
-        html += ">" + category.getName() + "</a>";
+        html += ">" + category.getName().toString() + "</a>";
       }
     }
     html += "</div>";
@@ -127,11 +127,12 @@ public class AdminHomeGenerator {
         if (category == null || category.getCategory() == null) {
           html += "<option";
           href = "";
-          html += " id='" + category.getId() + "'";
+          html += " id='" + category.getId().toString() + "'";
 
-          html += ">" + category.getName() + "</option>";
+          html += ">" + category.getName().toString() + "</option>";
         } else {
         }
+
       }
     }
     html += "</select>";

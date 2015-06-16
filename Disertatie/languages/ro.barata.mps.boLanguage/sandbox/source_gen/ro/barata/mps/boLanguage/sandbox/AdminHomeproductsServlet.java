@@ -10,9 +10,9 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.ServletException;
 import java.io.IOException;
 
-public class AdminSubcategoryServlet extends HttpServlet {
+public class AdminHomeproductsServlet extends HttpServlet {
   private Connection connection;
-  public AdminSubcategoryServlet() throws SQLException, ClassNotFoundException, CloneNotSupportedException {
+  public AdminHomeproductsServlet() throws SQLException, ClassNotFoundException, CloneNotSupportedException {
     if (connection == null) {
       connection = DatabaseConnection.getConnection();
     }
@@ -40,16 +40,31 @@ public class AdminSubcategoryServlet extends HttpServlet {
   private void handleRequest(HttpServletRequest request, HttpServletResponse response) throws IOException, SQLException, ClassNotFoundException, CloneNotSupportedException {
     String action = request.getParameter("actionName");
     String requestParameterValue = "";
-    if (request.getParameter("categoryId") != null) {
-      requestParameterValue = request.getParameter("categoryId");
-      request.getSession().setAttribute("categoryId", requestParameterValue);
-    } else {
-      requestParameterValue = request.getSession().getAttribute("categoryId").toString();
-    }
     if (action != null && !(action.equals(""))) {
+      if (action.equals("dbdeleteProduct")) {
+        dbdeleteProduct(request, response, requestParameterValue);
+      }
 
     } else {
-      response.getWriter().println(AdminSubcategoryGenerator.getContent(request.getSession(), requestParameterValue));
+      response.getWriter().println(AdminHomeproductsGenerator.getContent(request.getSession(), requestParameterValue));
     }
+  }
+  private void dbdeleteProduct(HttpServletRequest request, HttpServletResponse response, String requestParameterValue) throws SQLException, ClassNotFoundException, IOException, CloneNotSupportedException {
+    String value;
+    String splitter;
+    ProductDAO productDAO = new ProductDAO(connection);
+    Product product = new Product();
+    product = new Product();
+    // Sets the given property with values fetched either from the input model,  
+    // or from the HTTP data recevied from the client (browser) 
+    value = request.getParameter("id");
+    if (value != null && !(value.equals(""))) {
+      product.setId(Integer.parseInt(value));
+
+    }
+    productDAO.deleteProduct(product);
+
+    response.getWriter().println(AdminHomeproductsGenerator.getContent(request.getSession(), requestParameterValue));
+
   }
 }

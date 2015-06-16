@@ -2017,7 +2017,7 @@
   </node>
   <node concept="24kQdi" id="5wMj1WgxlAD">
     <property role="3GE5qa" value="html.commands.operations.conditions" />
-    <ref role="1XX52x" to="jozm:5wMj1WgxlAt" resolve="ChildQueryCondition" />
+    <ref role="1XX52x" to="jozm:5wMj1WgxlAt" resolve="QueryCondition" />
     <node concept="3EZMnI" id="5wMj1WgxlAF" role="2wV5jI">
       <node concept="3F0ifn" id="5wMj1WgxlAM" role="3EZMnx">
         <property role="3F0ifm" value="where" />
@@ -2337,6 +2337,19 @@
           </node>
         </node>
       </node>
+      <node concept="3F0ifn" id="7w7oph19Z1c" role="3EZMnx">
+        <property role="3F0ifm" value="." />
+        <ref role="1k5W1q" node="7KwyEUhJWTC" resolve="symbol" />
+      </node>
+      <node concept="1iCGBv" id="7w7oph19Z1o" role="3EZMnx">
+        <ref role="1NtTu8" to="jozm:7w7oph19Yyc" />
+        <node concept="1sVBvm" id="7w7oph19Z1q" role="1sWHZn">
+          <node concept="3F0A7n" id="7w7oph19Z1_" role="2wV5jI">
+            <property role="1Intyy" value="true" />
+            <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+          </node>
+        </node>
+      </node>
       <node concept="l2Vlx" id="5MzsgMJ211e" role="2iSdaV" />
     </node>
   </node>
@@ -2395,6 +2408,50 @@
         </node>
       </node>
       <node concept="l2Vlx" id="3L8pSoe8D8F" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="7w7oph2cGsW">
+    <property role="3GE5qa" value="html.commands.operations" />
+    <ref role="1XX52x" to="jozm:7w7oph2cGsM" resolve="LoopOperation" />
+    <node concept="3EZMnI" id="7w7oph2cGsY" role="2wV5jI">
+      <node concept="3F0ifn" id="7w7oph2cGt5" role="3EZMnx">
+        <property role="3F0ifm" value="@loop" />
+        <ref role="1k5W1q" node="4HNfSIoHqZP" resolve="ValueSymbol" />
+        <node concept="VQ3r3" id="7w7oph2cGuT" role="3F10Kt">
+          <property role="2USNnj" value="2" />
+        </node>
+      </node>
+      <node concept="3F0ifn" id="7w7oph2wWUq" role="3EZMnx">
+        <property role="3F0ifm" value=" " />
+      </node>
+      <node concept="3F0A7n" id="7w7oph2i0ko" role="3EZMnx">
+        <ref role="1NtTu8" to="jozm:7w7oph2i0kb" resolve="loopType" />
+      </node>
+      <node concept="3F0ifn" id="7w7oph2i0kI" role="3EZMnx">
+        <property role="3F0ifm" value="{" />
+        <ref role="1k5W1q" node="4HNfSIoHqZP" resolve="ValueSymbol" />
+      </node>
+      <node concept="3F0ifn" id="7w7oph2cGvV" role="3EZMnx">
+        <property role="3F0ifm" value="split:" />
+        <ref role="1k5W1q" node="4LZaFk$dInS" resolve="value" />
+      </node>
+      <node concept="3F0A7n" id="7w7oph2cGw7" role="3EZMnx">
+        <ref role="1NtTu8" to="jozm:7w7oph2cGsN" resolve="splitter" />
+      </node>
+      <node concept="l2Vlx" id="7w7oph2cGt1" role="2iSdaV" />
+      <node concept="3F0ifn" id="7w7oph2cGvN" role="3EZMnx">
+        <property role="3F0ifm" value=")" />
+        <ref role="1k5W1q" node="4HNfSIoHqZP" resolve="ValueSymbol" />
+        <node concept="ljvvj" id="7w7oph2cGwv" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="3F1sOY" id="7w7oph2cGwH" role="3EZMnx">
+        <ref role="1NtTu8" to="jozm:7w7oph2cGsP" />
+        <node concept="lj46D" id="7w7oph2cGwR" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
     </node>
   </node>
 </model>

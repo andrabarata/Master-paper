@@ -202,14 +202,8 @@
     <property role="3GE5qa" value="javascript.commands.var" />
     <ref role="1XX52x" to="jel9:3ET5BXsbiaA" resolve="DotExpressionCommand" />
     <node concept="3EZMnI" id="3ET5BXsbidD" role="2wV5jI">
-      <node concept="1iCGBv" id="3ET5BXsbidK" role="3EZMnx">
-        <ref role="1NtTu8" to="jel9:3ET5BXsbidw" />
-        <node concept="1sVBvm" id="3ET5BXsbidM" role="1sWHZn">
-          <node concept="3F0A7n" id="3ET5BXscpFI" role="2wV5jI">
-            <property role="1Intyy" value="true" />
-            <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
-          </node>
-        </node>
+      <node concept="3F1sOY" id="7w7oph31SFM" role="3EZMnx">
+        <ref role="1NtTu8" to="jel9:7w7oph31Ryc" />
       </node>
       <node concept="3F0ifn" id="3ET5BXsbie1" role="3EZMnx">
         <property role="3F0ifm" value="." />
@@ -355,8 +349,11 @@
     <property role="3GE5qa" value="javascript.commands" />
     <ref role="1XX52x" to="jel9:7oklijIFfgQ" resolve="PushHTMLCommand" />
     <node concept="3EZMnI" id="7oklijIFfwc" role="2wV5jI">
+      <node concept="3F1sOY" id="7w7oph1Rr6f" role="3EZMnx">
+        <ref role="1NtTu8" to="jel9:7w7oph1Rr60" />
+      </node>
       <node concept="3F0ifn" id="7oklijIFfEh" role="3EZMnx">
-        <property role="3F0ifm" value="document.body.insertAdjacentHTML(" />
+        <property role="3F0ifm" value=".insertAdjacentHTML(" />
       </node>
       <node concept="3F0A7n" id="7oklijIFfMp" role="3EZMnx">
         <ref role="1NtTu8" to="jel9:7oklijIFfu6" resolve="pushType" />

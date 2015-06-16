@@ -161,11 +161,11 @@
       <property role="20kJfa" value="expression" />
       <ref role="20lvS9" node="63p_9b6PS7h" resolve="DotExpression" />
     </node>
-    <node concept="1TJgyj" id="3ET5BXsbidw" role="1TKVEi">
-      <property role="20lmBu" value="reference" />
+    <node concept="1TJgyj" id="7w7oph31Ryc" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
       <property role="20kJfa" value="var" />
       <property role="20lbJX" value="1" />
-      <ref role="20lvS9" node="3ET5BXsao0B" resolve="AbstractVarCommand" />
+      <ref role="20lvS9" node="3ET5BXsao0E" resolve="VarValue" />
     </node>
     <node concept="PrWs8" id="7oklijIMpuZ" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
@@ -252,6 +252,11 @@
       <property role="20kJfa" value="value" />
       <property role="20lbJX" value="1" />
       <ref role="20lvS9" node="2OiIxnYG7OC" resolve="JavascriptValue" />
+    </node>
+    <node concept="1TJgyj" id="7w7oph1Rr60" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="var" />
+      <ref role="20lvS9" node="3ET5BXsao0E" resolve="VarValue" />
     </node>
   </node>
   <node concept="1TIwiD" id="7oklijIG3jL">
@@ -499,7 +504,7 @@
       <property role="1uS6qo" value="innerHTML" />
     </node>
     <node concept="M4N5e" id="2FtF2DJXB5T" role="M5hS2">
-      <property role="1uS6qv" value="lenght" />
+      <property role="1uS6qv" value="length" />
       <property role="1uS6qo" value="length" />
     </node>
     <node concept="M4N5e" id="63p_9b6PSa3" role="M5hS2">

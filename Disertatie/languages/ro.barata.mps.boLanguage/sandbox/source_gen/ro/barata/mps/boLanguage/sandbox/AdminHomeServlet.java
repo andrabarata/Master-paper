@@ -54,12 +54,12 @@ public class AdminHomeServlet extends HttpServlet {
   }
   private void dbinsertCategory(HttpServletRequest request, HttpServletResponse response, String requestParameterValue) throws SQLException, ClassNotFoundException, IOException, CloneNotSupportedException {
     String value;
+    String splitter;
     CategoryDAO categoryDAO = new CategoryDAO(connection);
     Category category = new Category();
     category = new Category();
     // Iterates through the concept's properties and sets their values with values fetched 
     // either from the input model, or from the HTTP data recevied from the client (browser) 
-
     value = request.getParameter("id");
     if (value != null && !(value.equals(""))) {
       category.setId(Integer.parseInt(value));
@@ -71,7 +71,7 @@ public class AdminHomeServlet extends HttpServlet {
     // Iterates through the children/link entities, initializes them, and adds them to the parent 
     {
       Category category_0 = null;
-      value = request.getParameter("parent");
+      value = request.getParameter("childparent");
       if (value != null && !(value.equals(""))) {
         if (category_0 == null) {
           category_0 = new Category();
@@ -88,6 +88,7 @@ public class AdminHomeServlet extends HttpServlet {
   }
   private void dbupdateCategory(HttpServletRequest request, HttpServletResponse response, String requestParameterValue) throws SQLException, ClassNotFoundException, IOException, CloneNotSupportedException {
     String value;
+    String splitter;
     CategoryDAO categoryDAO = new CategoryDAO(connection);
     Category category = new Category();
     {
@@ -115,7 +116,7 @@ public class AdminHomeServlet extends HttpServlet {
       if (category != null && newCategory != null) {
         {
           Category category_0 = null;
-          value = request.getParameter("subCategories");
+          value = request.getParameter("childsubCategories");
           if (value != null && !(value.equals(""))) {
             if (category_0 == null) {
               category_0 = new Category();

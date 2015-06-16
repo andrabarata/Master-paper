@@ -7,11 +7,11 @@ import jetbrains.mps.openapi.editor.cells.EditorCell;
 import jetbrains.mps.openapi.editor.EditorContext;
 import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.nodeEditor.cells.EditorCell_Collection;
-import jetbrains.mps.nodeEditor.cells.EditorCell_Constant;
 import jetbrains.mps.nodeEditor.cellProviders.CellProviderWithRole;
-import jetbrains.mps.lang.editor.cellProviders.PropertyCellProvider;
-import jetbrains.mps.nodeEditor.EditorManager;
 import jetbrains.mps.lang.editor.cellProviders.RefNodeCellProvider;
+import jetbrains.mps.nodeEditor.EditorManager;
+import jetbrains.mps.nodeEditor.cells.EditorCell_Constant;
+import jetbrains.mps.lang.editor.cellProviders.PropertyCellProvider;
 
 public class PushHTMLCommand_Editor extends DefaultNodeEditor {
   public EditorCell createEditorCell(EditorContext editorContext, SNode node) {
@@ -21,20 +21,39 @@ public class PushHTMLCommand_Editor extends DefaultNodeEditor {
     EditorCell_Collection editorCell = EditorCell_Collection.createIndent2(editorContext, node);
     editorCell.setCellId("Collection_tvh3j7_a");
     editorCell.setBig(true);
-    editorCell.addEditorCell(this.createConstant_tvh3j7_a0(editorContext, node));
-    editorCell.addEditorCell(this.createProperty_tvh3j7_b0(editorContext, node));
-    editorCell.addEditorCell(this.createConstant_tvh3j7_c0(editorContext, node));
-    editorCell.addEditorCell(this.createRefNode_tvh3j7_d0(editorContext, node));
-    editorCell.addEditorCell(this.createConstant_tvh3j7_e0(editorContext, node));
+    editorCell.addEditorCell(this.createRefNode_tvh3j7_a0(editorContext, node));
+    editorCell.addEditorCell(this.createConstant_tvh3j7_b0(editorContext, node));
+    editorCell.addEditorCell(this.createProperty_tvh3j7_c0(editorContext, node));
+    editorCell.addEditorCell(this.createConstant_tvh3j7_d0(editorContext, node));
+    editorCell.addEditorCell(this.createRefNode_tvh3j7_e0(editorContext, node));
+    editorCell.addEditorCell(this.createConstant_tvh3j7_f0(editorContext, node));
     return editorCell;
   }
-  private EditorCell createConstant_tvh3j7_a0(EditorContext editorContext, SNode node) {
-    EditorCell_Constant editorCell = new EditorCell_Constant(editorContext, node, "document.body.insertAdjacentHTML(");
-    editorCell.setCellId("Constant_tvh3j7_a0");
+  private EditorCell createRefNode_tvh3j7_a0(EditorContext editorContext, SNode node) {
+    CellProviderWithRole provider = new RefNodeCellProvider(node, editorContext);
+    provider.setRole("var");
+    provider.setNoTargetText("<no var>");
+    EditorCell editorCell;
+    editorCell = provider.createEditorCell(editorContext);
+    if (editorCell.getRole() == null) {
+      editorCell.setRole("var");
+    }
+    editorCell.setSubstituteInfo(provider.createDefaultSubstituteInfo());
+    SNode attributeConcept = provider.getRoleAttribute();
+    Class attributeKind = provider.getRoleAttributeClass();
+    if (attributeConcept != null) {
+      EditorManager manager = EditorManager.getInstanceFromContext(editorContext);
+      return manager.createNodeRoleAttributeCell(editorContext, attributeConcept, attributeKind, editorCell);
+    } else
+    return editorCell;
+  }
+  private EditorCell createConstant_tvh3j7_b0(EditorContext editorContext, SNode node) {
+    EditorCell_Constant editorCell = new EditorCell_Constant(editorContext, node, ".insertAdjacentHTML(");
+    editorCell.setCellId("Constant_tvh3j7_b0");
     editorCell.setDefaultText("");
     return editorCell;
   }
-  private EditorCell createProperty_tvh3j7_b0(EditorContext editorContext, SNode node) {
+  private EditorCell createProperty_tvh3j7_c0(EditorContext editorContext, SNode node) {
     CellProviderWithRole provider = new PropertyCellProvider(node, editorContext);
     provider.setRole("pushType");
     provider.setNoTargetText("<no pushType>");
@@ -50,13 +69,13 @@ public class PushHTMLCommand_Editor extends DefaultNodeEditor {
     } else
     return editorCell;
   }
-  private EditorCell createConstant_tvh3j7_c0(EditorContext editorContext, SNode node) {
+  private EditorCell createConstant_tvh3j7_d0(EditorContext editorContext, SNode node) {
     EditorCell_Constant editorCell = new EditorCell_Constant(editorContext, node, ",");
-    editorCell.setCellId("Constant_tvh3j7_c0");
+    editorCell.setCellId("Constant_tvh3j7_d0");
     editorCell.setDefaultText("");
     return editorCell;
   }
-  private EditorCell createRefNode_tvh3j7_d0(EditorContext editorContext, SNode node) {
+  private EditorCell createRefNode_tvh3j7_e0(EditorContext editorContext, SNode node) {
     CellProviderWithRole provider = new RefNodeCellProvider(node, editorContext);
     provider.setRole("value");
     provider.setNoTargetText("<no value>");
@@ -74,9 +93,9 @@ public class PushHTMLCommand_Editor extends DefaultNodeEditor {
     } else
     return editorCell;
   }
-  private EditorCell createConstant_tvh3j7_e0(EditorContext editorContext, SNode node) {
+  private EditorCell createConstant_tvh3j7_f0(EditorContext editorContext, SNode node) {
     EditorCell_Constant editorCell = new EditorCell_Constant(editorContext, node, ")");
-    editorCell.setCellId("Constant_tvh3j7_e0");
+    editorCell.setCellId("Constant_tvh3j7_f0");
     editorCell.setDefaultText("");
     return editorCell;
   }

@@ -67,7 +67,7 @@ public class ProductsGenerator {
         href = "";
         html += " " + "style" + "=\"" + "text-align:center" + "\"";
 
-        html += ">" + category.getName() + "</h3>";
+        html += ">" + category.getName().toString() + "</h3>";
       }
     }
     html += "</div>";
@@ -97,7 +97,7 @@ public class ProductsGenerator {
         html += "<img";
         href = "";
         expressions = "";
-        expressions += products.getId();
+        expressions += products.getId().toString();
         expressions += ".jpg";
         html += " src=\"" + "img" + expressions + "\"";
         html += " class=\"" + "img-responsive" + "\"";
@@ -112,17 +112,17 @@ public class ProductsGenerator {
         html += "<h4";
         href = "";
         parameters = "";
-        parameters += "'" + products.getId() + "',";
-        parameters += "'" + products.getProductName() + "',";
+        parameters += "'" + products.getId().toString() + "',";
+        parameters += "'" + products.getProductName().toString() + "',";
         parameters = parameters.substring(0, parameters.length() - 1);
         html += " " + "onclick" + "=\"" + "goToProductPage" + "(" + parameters + ")\"";
 
 
-        html += ">" + products.getProductName() + "</h4>";
+        html += ">" + products.getProductName().toString() + "</h4>";
         html += "<span";
         href = "";
         html += ">";
-        html += products.getDescription();
+        html += products.getDescription().toString();
         html += "</span>";
 
         html += "</div>";
@@ -137,7 +137,7 @@ public class ProductsGenerator {
         href = "";
         html += " class=\"" + "pure-button" + "\"";
         parameters = "";
-        parameters += "'" + products.getId() + "',";
+        parameters += "'" + products.getId().toString() + "',";
         parameters = parameters.substring(0, parameters.length() - 1);
         html += " " + "onclick" + "=\"" + "addProductToCart" + "(" + parameters + ")\"";
 
@@ -147,7 +147,7 @@ public class ProductsGenerator {
         href = "";
         html += " class=\"" + "pull-right" + "\"";
 
-        html += ">" + products.getPrice() + "</h4>";
+        html += ">" + products.getPrice().toString() + "</h4>";
         html += "</div>";
 
         html += "</div>";

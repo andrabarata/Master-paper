@@ -104,19 +104,19 @@ public class OrdersGenerator {
           href = "";
           html += " href=\"" + "/" + "order" + href + "\"";
 
-          html += ">" + order.getId() + "</a>";
+          html += ">" + order.getId().toString() + "</a>";
           html += "</td>";
 
           html += "<td";
           href = "";
           html += ">";
-          html += order.getDateCreated();
+          html += order.getDateCreated().toString();
           html += "</td>";
 
           html += "<td";
           href = "";
           html += ">";
-          html += order.getStatus();
+          html += order.getStatus().toString();
           html += "</td>";
 
           html += "</tr>";

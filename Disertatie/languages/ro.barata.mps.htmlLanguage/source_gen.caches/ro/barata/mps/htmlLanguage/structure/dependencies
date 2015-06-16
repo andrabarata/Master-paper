@@ -26,6 +26,19 @@
     <classNode dependClassName="ro.barata.mps.htmlLanguage.structure.BinaryCondition" />
     <classNode extendsClassName="jetbrains.mps.smodel.PropertySupport" />
   </dependency>
+  <dependency className="ro.barata.mps.htmlLanguage.structure.LoopType" file="LoopType.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.backports.LinkedList" />
+  </dependency>
+  <dependency className="ro.barata.mps.htmlLanguage.structure.LoopType_PropertySupport" file="LoopType_PropertySupport.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.Iterator" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode dependClassName="ro.barata.mps.htmlLanguage.structure.LoopType" />
+    <classNode extendsClassName="jetbrains.mps.smodel.PropertySupport" />
+  </dependency>
   <dependency className="ro.barata.mps.htmlLanguage.structure.MethodParameter" file="MethodParameter.java">
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.util.List" />

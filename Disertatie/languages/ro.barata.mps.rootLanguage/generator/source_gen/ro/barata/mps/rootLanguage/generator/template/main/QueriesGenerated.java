@@ -65,6 +65,18 @@ public class QueriesGenerated {
   public static boolean baseMappingRule_Condition_3088814217702339506(final BaseMappingRuleContext _context) {
     return DataTypeDeclaration_Behavior.call_isSimpleInteger_1220268868375(SLinkOperations.getTarget(_context.getNode(), MetaAdapterFactory.getReferenceLink(0xc72da2b97cce4447L, 0x8389f407dc1158b7L, 0xf979bd086bL, 0xfc26f42fe5L, "dataType")));
   }
+  public static boolean baseMappingRule_Condition_8648988898808670198(final BaseMappingRuleContext _context) {
+    return DataTypeDeclaration_Behavior.call_isSimpleBoolean_1220268891062(SLinkOperations.getTarget(_context.getNode(), MetaAdapterFactory.getReferenceLink(0xc72da2b97cce4447L, 0x8389f407dc1158b7L, 0xf979bd086bL, 0xfc26f42fe5L, "dataType")));
+  }
+  public static boolean baseMappingRule_Condition_8648988898808670219(final BaseMappingRuleContext _context) {
+    return DataTypeDeclaration_Behavior.call_isSimpleInteger_1220268868375(SLinkOperations.getTarget(_context.getNode(), MetaAdapterFactory.getReferenceLink(0xc72da2b97cce4447L, 0x8389f407dc1158b7L, 0xf979bd086bL, 0xfc26f42fe5L, "dataType")));
+  }
+  public static boolean baseMappingRule_Condition_8648988898808681911(final BaseMappingRuleContext _context) {
+    return DataTypeDeclaration_Behavior.call_isSimpleBoolean_1220268891062(SLinkOperations.getTarget(_context.getNode(), MetaAdapterFactory.getReferenceLink(0xc72da2b97cce4447L, 0x8389f407dc1158b7L, 0xf979bd086bL, 0xfc26f42fe5L, "dataType")));
+  }
+  public static boolean baseMappingRule_Condition_8648988898808681932(final BaseMappingRuleContext _context) {
+    return DataTypeDeclaration_Behavior.call_isSimpleInteger_1220268868375(SLinkOperations.getTarget(_context.getNode(), MetaAdapterFactory.getReferenceLink(0xc72da2b97cce4447L, 0x8389f407dc1158b7L, 0xf979bd086bL, 0xfc26f42fe5L, "dataType")));
+  }
   public static Object propertyMacro_GetPropertyValue_5152062499435584993(final PropertyMacroContext _context) {
     return SPropertyOperations.getString(_context.getNode(), MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"));
   }

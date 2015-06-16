@@ -20,7 +20,7 @@ public class Action_Behavior {
   public static boolean call_hasDatabaseOperations_3088814217696061506(SNode thisNode) {
     boolean flag = false;
     for (SNode operation : SLinkOperations.getChildren(thisNode, MetaAdapterFactory.getContainmentLink(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x4c7f2ab523e3fae4L, 0x40798aa2d3833ccdL, "operations"))) {
-      if (SNodeOperations.isInstanceOf(operation, MetaAdapterFactory.getConcept(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x40798aa2d38348a2L, "ro.barata.mps.htmlLanguage.structure.DatabaseOperation"))) {
+      if (SNodeOperations.isInstanceOf(operation, MetaAdapterFactory.getConcept(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x40798aa2d38348a2L, "ro.barata.mps.htmlLanguage.structure.DatabaseOperation")) || SNodeOperations.isInstanceOf(operation, MetaAdapterFactory.getConcept(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x780761944232c732L, "ro.barata.mps.htmlLanguage.structure.LoopOperation"))) {
         flag = true;
       }
     }
@@ -56,6 +56,30 @@ public class Action_Behavior {
         }
       }
     });
+    ListSequence.fromList(SLinkOperations.getChildren(thisNode, MetaAdapterFactory.getContainmentLink(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x4c7f2ab523e3fae4L, 0x40798aa2d3833ccdL, "operations"))).where(new IWhereFilter<SNode>() {
+      public boolean accept(SNode it) {
+        return SNodeOperations.isInstanceOf(it, MetaAdapterFactory.getConcept(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x780761944232c732L, "ro.barata.mps.htmlLanguage.structure.LoopOperation"));
+      }
+    }).visitAll(new IVisitor<SNode>() {
+      public void visit(final SNode it) {
+        final Wrappers._boolean contains = new Wrappers._boolean(false);
+        ListSequence.fromList(operations).visitAll(new IVisitor<SNode>() {
+          public void visit(SNode it2) {
+            if (SPropertyOperations.hasValue(SLinkOperations.getTarget(it2, MetaAdapterFactory.getReferenceLink(0x58b9e0aa66634086L, 0x8f84dfaa697f9989L, 0x58274fdf875ad2a1L, 0x58274fdf875b2b4cL, "object")), MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(SLinkOperations.getTarget(SNodeOperations.cast(it, MetaAdapterFactory.getConcept(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x780761944232c732L, "ro.barata.mps.htmlLanguage.structure.LoopOperation")), MetaAdapterFactory.getContainmentLink(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x780761944232c732L, 0x780761944232c735L, "databaseOperation")), MetaAdapterFactory.getContainmentLink(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x40798aa2d38348a2L, 0x40798aa2d3834946L, "command")), MetaAdapterFactory.getReferenceLink(0x58b9e0aa66634086L, 0x8f84dfaa697f9989L, 0x58274fdf875ad2a1L, 0x58274fdf875b2b4cL, "object")), MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name")))) {
+              contains.value = true;
+            }
+          }
+        });
+        if (!(contains.value)) {
+          if (SNodeOperations.isInstanceOf(it, MetaAdapterFactory.getConcept(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x40798aa2d38348a2L, "ro.barata.mps.htmlLanguage.structure.DatabaseOperation"))) {
+            ListSequence.fromList(operations).addElement(SLinkOperations.getTarget(SNodeOperations.cast(it, MetaAdapterFactory.getConcept(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x40798aa2d38348a2L, "ro.barata.mps.htmlLanguage.structure.DatabaseOperation")), MetaAdapterFactory.getContainmentLink(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x40798aa2d38348a2L, 0x40798aa2d3834946L, "command")));
+          } else if (SNodeOperations.isInstanceOf(it, MetaAdapterFactory.getConcept(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x780761944232c732L, "ro.barata.mps.htmlLanguage.structure.LoopOperation"))) {
+            ListSequence.fromList(operations).addElement(SLinkOperations.getTarget(SLinkOperations.getTarget(SNodeOperations.cast(it, MetaAdapterFactory.getConcept(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x780761944232c732L, "ro.barata.mps.htmlLanguage.structure.LoopOperation")), MetaAdapterFactory.getContainmentLink(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x780761944232c732L, 0x780761944232c735L, "databaseOperation")), MetaAdapterFactory.getContainmentLink(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x40798aa2d38348a2L, 0x40798aa2d3834946L, "command")));
+          }
+        }
+      }
+    });
+
     return operations;
   }
 }

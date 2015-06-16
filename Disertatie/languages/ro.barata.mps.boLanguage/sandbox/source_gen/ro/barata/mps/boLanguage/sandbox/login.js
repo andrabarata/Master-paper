@@ -6,7 +6,7 @@ var valuesJSON0=[userName,userPassword];
 var callback=function(jsonObj){
 var name=jsonObj.userName;
 var privilege=jsonObj.priviledge;
-if(name!=null){
+if(name!=null &&  typeof name!="undefined" && name!=""){
 if(privilege=="user"){
 var hrefValue="/home";
 document.location.href=""+hrefValue;

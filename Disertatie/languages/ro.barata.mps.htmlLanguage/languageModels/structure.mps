@@ -374,6 +374,10 @@
       <property role="1uS6qv" value="password" />
       <property role="1uS6qo" value="password" />
     </node>
+    <node concept="M4N5e" id="7w7oph35Iyu" role="M5hS2">
+      <property role="1uS6qv" value="hidden" />
+      <property role="1uS6qo" value="hidden" />
+    </node>
   </node>
   <node concept="1TIwiD" id="4LZaFkzGLST">
     <property role="3GE5qa" value="html.miscelanous" />
@@ -1241,6 +1245,12 @@
       <property role="20lbJX" value="1" />
       <ref role="20lvS9" to="tpce:f_TJgxE" resolve="LinkDeclaration" />
     </node>
+    <node concept="1TJgyj" id="7w7oph19Yyc" role="1TKVEi">
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="subProperty" />
+      <property role="20lbJX" value="0..1" />
+      <ref role="20lvS9" to="tpce:f_TJgxF" resolve="PropertyDeclaration" />
+    </node>
     <node concept="PrWs8" id="5MzsgMJaKwD" role="PzmwI">
       <ref role="PrY4T" node="5MzsgMJ20a9" resolve="IfParameter" />
     </node>
@@ -1266,6 +1276,42 @@
     <property role="34LRSv" value="fieldset" />
     <property role="3GE5qa" value="html.container" />
     <ref role="1TJDcQ" node="5EdacSEwA7P" resolve="MixedHTMLCommand" />
+  </node>
+  <node concept="1TIwiD" id="7w7oph2cGsM">
+    <property role="3GE5qa" value="html.commands.operations" />
+    <property role="TrG5h" value="LoopOperation" />
+    <ref role="1TJDcQ" node="41TyEbjwOzs" resolve="AbstractOperation" />
+    <node concept="1TJgyj" id="7w7oph2cGsP" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="databaseOperation" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="41TyEbjwOyy" resolve="DatabaseOperation" />
+    </node>
+    <node concept="1TJgyi" id="7w7oph2cGsN" role="1TKVEl">
+      <property role="TrG5h" value="splitter" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
+    <node concept="1TJgyi" id="7w7oph2i0kb" role="1TKVEl">
+      <property role="TrG5h" value="loopType" />
+      <ref role="AX2Wp" node="7w7oph2i0k2" resolve="LoopType" />
+    </node>
+  </node>
+  <node concept="AxPO7" id="7w7oph2i0k2">
+    <property role="3GE5qa" value="html.commands.operations" />
+    <property role="TrG5h" value="LoopType" />
+    <ref role="M4eZT" to="tpck:fKAOsGN" resolve="string" />
+    <node concept="M4N5e" id="7w7oph2i0k3" role="M5hS2">
+      <property role="1uS6qv" value="child" />
+      <property role="1uS6qo" value="child" />
+    </node>
+    <node concept="M4N5e" id="7w7oph2i0k4" role="M5hS2">
+      <property role="1uS6qv" value="parent" />
+      <property role="1uS6qo" value="parent" />
+    </node>
+    <node concept="M4N5e" id="7w7oph2i0k7" role="M5hS2">
+      <property role="1uS6qv" value="both" />
+      <property role="1uS6qo" value="both" />
+    </node>
   </node>
 </model>
 

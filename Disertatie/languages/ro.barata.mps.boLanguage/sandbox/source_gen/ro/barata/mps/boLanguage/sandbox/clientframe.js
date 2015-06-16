@@ -1,10 +1,10 @@
 function navigateToCategoryPromotion(name,id){
 var hrefValue="/promotions";
-???+="?categoryId=";
-???+=id;
+hrefValue+="?categoryId=";
+hrefValue+=id;
 document.location.href=""+hrefValue;}
 function navigateToCategoryProducts(id,name){
 var hrefValue="/products";
-???+="?categoryId=";
-???+=id;
+hrefValue+="?categoryId=";
+hrefValue+=id;
 document.location.href=""+hrefValue;}

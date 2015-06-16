@@ -11,7 +11,7 @@
   <concept fqn="jetbrains.mps.baseLanguage.structure.WhileStatement" />
   <root>
     <file name="StructureAspectDescriptor.java">
-      <unit at="13,0,319,0" name="ro.barata.mps.htmlLanguage.structure.StructureAspectDescriptor" />
+      <unit at="13,0,322,0" name="ro.barata.mps.htmlLanguage.structure.StructureAspectDescriptor" />
     </file>
   </root>
   <root nodeRef="r:48cdf645-21a6-4678-bd29-e449bcd0cd36(ro.barata.mps.htmlLanguage.structure)/4231438061152522654">
@@ -142,69 +142,73 @@
   </root>
   <root nodeRef="r:48cdf645-21a6-4678-bd29-e449bcd0cd36(ro.barata.mps.htmlLanguage.structure)/5512171426400093577">
     <file name="TypeValue.java">
-      <node id="5512171426400093577" at="16,0,17,0" concept="2" trace="myName" />
-      <node id="5512171426400093577" at="17,27,18,23" concept="6" />
-      <node id="5512171426400093577" at="20,36,21,24" concept="6" />
-      <node id="5512171426400093577" at="23,48,24,78" concept="5" />
-      <node id="5512171426400093577" at="24,78,25,61" concept="1" />
-      <node id="5512171426400093577" at="25,61,26,59" concept="1" />
-      <node id="5512171426400093577" at="26,59,27,60" concept="1" />
-      <node id="5512171426400093577" at="27,60,28,63" concept="1" />
-      <node id="5512171426400093577" at="28,63,29,63" concept="1" />
-      <node id="5512171426400093577" at="29,63,30,16" concept="6" />
-      <node id="5512171426400093577" at="32,40,33,26" concept="6" />
-      <node id="5512171426400093577" at="36,24,37,36" concept="6" />
-      <node id="5512171426400093577" at="39,60,40,30" concept="6" />
-      <node id="5512171426400093577" at="42,58,43,28" concept="6" />
-      <node id="5512171426400093577" at="45,59,46,29" concept="6" />
-      <node id="5512171426400093577" at="48,62,49,32" concept="6" />
-      <node id="5512171426400093577" at="51,62,52,32" concept="6" />
-      <node id="5512171426400093577" at="53,5,54,34" concept="6" />
-      <node id="5512171426400093577" at="56,0,57,0" concept="2" trace="myValue" />
-      <node id="5512171426400093577" at="57,40,58,23" concept="1" />
-      <node id="5512171426400093577" at="58,23,59,25" concept="1" />
-      <node id="5512171426400093577" at="61,28,62,24" concept="6" />
-      <node id="5512171426400093577" at="17,0,20,0" concept="4" trace="getName#()Ljava/lang/String;" />
-      <node id="5512171426400093577" at="20,0,23,0" concept="4" trace="getValueAsString#()Ljava/lang/String;" />
-      <node id="5512171426400093577" at="32,0,35,0" concept="7" trace="getDefault#()Lro/barata/mps/htmlLanguage/structure/TypeValue;" />
-      <node id="5512171426400093577" at="35,52,38,5" concept="3" />
-      <node id="5512171426400093577" at="38,5,41,5" concept="3" />
-      <node id="5512171426400093577" at="41,5,44,5" concept="3" />
-      <node id="5512171426400093577" at="44,5,47,5" concept="3" />
-      <node id="5512171426400093577" at="47,5,50,5" concept="3" />
-      <node id="5512171426400093577" at="50,5,53,5" concept="3" />
-      <node id="5512171426400093577" at="61,0,64,0" concept="4" trace="getValue#()Ljava/lang/String;" />
-      <node id="5512171426400093577" at="57,0,61,0" concept="0" trace="TypeValue#(Ljava/lang/String;Ljava/lang/String;)V" />
-      <node id="5512171426400093577" at="23,0,32,0" concept="7" trace="getConstants#()Ljava/util/List;" />
-      <node id="5512171426400093577" at="35,0,56,0" concept="7" trace="parseValue#(Ljava/lang/String;)Lro/barata/mps/htmlLanguage/structure/TypeValue;" />
-      <scope id="5512171426400093577" at="17,27,18,23" />
-      <scope id="5512171426400093577" at="20,36,21,24" />
-      <scope id="5512171426400093577" at="32,40,33,26" />
-      <scope id="5512171426400093577" at="36,24,37,36" />
-      <scope id="5512171426400093577" at="39,60,40,30" />
-      <scope id="5512171426400093577" at="42,58,43,28" />
-      <scope id="5512171426400093577" at="45,59,46,29" />
-      <scope id="5512171426400093577" at="48,62,49,32" />
-      <scope id="5512171426400093577" at="51,62,52,32" />
-      <scope id="5512171426400093577" at="61,28,62,24" />
-      <scope id="5512171426400093577" at="57,40,59,25" />
-      <scope id="5512171426400093577" at="17,0,20,0" />
-      <scope id="5512171426400093577" at="20,0,23,0" />
-      <scope id="5512171426400093577" at="32,0,35,0" />
-      <scope id="5512171426400093577" at="61,0,64,0" />
-      <scope id="5512171426400093577" at="57,0,61,0">
+      <node id="5512171426400093577" at="17,0,18,0" concept="2" trace="myName" />
+      <node id="5512171426400093577" at="18,27,19,23" concept="6" />
+      <node id="5512171426400093577" at="21,36,22,24" concept="6" />
+      <node id="5512171426400093577" at="24,48,25,78" concept="5" />
+      <node id="5512171426400093577" at="25,78,26,61" concept="1" />
+      <node id="5512171426400093577" at="26,61,27,59" concept="1" />
+      <node id="5512171426400093577" at="27,59,28,60" concept="1" />
+      <node id="5512171426400093577" at="28,60,29,63" concept="1" />
+      <node id="5512171426400093577" at="29,63,30,63" concept="1" />
+      <node id="5512171426400093577" at="30,63,31,61" concept="1" />
+      <node id="5512171426400093577" at="31,61,32,16" concept="6" />
+      <node id="5512171426400093577" at="34,40,35,26" concept="6" />
+      <node id="5512171426400093577" at="38,24,39,36" concept="6" />
+      <node id="5512171426400093577" at="41,60,42,30" concept="6" />
+      <node id="5512171426400093577" at="44,58,45,28" concept="6" />
+      <node id="5512171426400093577" at="47,59,48,29" concept="6" />
+      <node id="5512171426400093577" at="50,62,51,32" concept="6" />
+      <node id="5512171426400093577" at="53,62,54,32" concept="6" />
+      <node id="5512171426400093577" at="56,60,57,30" concept="6" />
+      <node id="5512171426400093577" at="58,5,59,34" concept="6" />
+      <node id="5512171426400093577" at="61,0,62,0" concept="2" trace="myValue" />
+      <node id="5512171426400093577" at="62,40,63,23" concept="1" />
+      <node id="5512171426400093577" at="63,23,64,25" concept="1" />
+      <node id="5512171426400093577" at="66,28,67,24" concept="6" />
+      <node id="5512171426400093577" at="18,0,21,0" concept="4" trace="getName#()Ljava/lang/String;" />
+      <node id="5512171426400093577" at="21,0,24,0" concept="4" trace="getValueAsString#()Ljava/lang/String;" />
+      <node id="5512171426400093577" at="34,0,37,0" concept="7" trace="getDefault#()Lro/barata/mps/htmlLanguage/structure/TypeValue;" />
+      <node id="5512171426400093577" at="37,52,40,5" concept="3" />
+      <node id="5512171426400093577" at="40,5,43,5" concept="3" />
+      <node id="5512171426400093577" at="43,5,46,5" concept="3" />
+      <node id="5512171426400093577" at="46,5,49,5" concept="3" />
+      <node id="5512171426400093577" at="49,5,52,5" concept="3" />
+      <node id="5512171426400093577" at="52,5,55,5" concept="3" />
+      <node id="5512171426400093577" at="55,5,58,5" concept="3" />
+      <node id="5512171426400093577" at="66,0,69,0" concept="4" trace="getValue#()Ljava/lang/String;" />
+      <node id="5512171426400093577" at="62,0,66,0" concept="0" trace="TypeValue#(Ljava/lang/String;Ljava/lang/String;)V" />
+      <node id="5512171426400093577" at="24,0,34,0" concept="7" trace="getConstants#()Ljava/util/List;" />
+      <node id="5512171426400093577" at="37,0,61,0" concept="7" trace="parseValue#(Ljava/lang/String;)Lro/barata/mps/htmlLanguage/structure/TypeValue;" />
+      <scope id="5512171426400093577" at="18,27,19,23" />
+      <scope id="5512171426400093577" at="21,36,22,24" />
+      <scope id="5512171426400093577" at="34,40,35,26" />
+      <scope id="5512171426400093577" at="38,24,39,36" />
+      <scope id="5512171426400093577" at="41,60,42,30" />
+      <scope id="5512171426400093577" at="44,58,45,28" />
+      <scope id="5512171426400093577" at="47,59,48,29" />
+      <scope id="5512171426400093577" at="50,62,51,32" />
+      <scope id="5512171426400093577" at="53,62,54,32" />
+      <scope id="5512171426400093577" at="56,60,57,30" />
+      <scope id="5512171426400093577" at="66,28,67,24" />
+      <scope id="5512171426400093577" at="62,40,64,25" />
+      <scope id="5512171426400093577" at="18,0,21,0" />
+      <scope id="5512171426400093577" at="21,0,24,0" />
+      <scope id="5512171426400093577" at="34,0,37,0" />
+      <scope id="5512171426400093577" at="66,0,69,0" />
+      <scope id="5512171426400093577" at="62,0,66,0">
         <var name="name" id="5512171426400093577" />
         <var name="value" id="5512171426400093577" />
       </scope>
-      <scope id="5512171426400093577" at="23,48,30,16">
+      <scope id="5512171426400093577" at="24,48,32,16">
         <var name="list" id="5512171426400093577" />
       </scope>
-      <scope id="5512171426400093577" at="23,0,32,0" />
-      <scope id="5512171426400093577" at="35,52,54,34" />
-      <scope id="5512171426400093577" at="35,0,56,0">
+      <scope id="5512171426400093577" at="24,0,34,0" />
+      <scope id="5512171426400093577" at="37,52,59,34" />
+      <scope id="5512171426400093577" at="37,0,61,0">
         <var name="value" id="5512171426400093577" />
       </scope>
-      <unit id="5512171426400093577" at="9,0,65,0" name="ro.barata.mps.htmlLanguage.structure.TypeValue" />
+      <unit id="5512171426400093577" at="9,0,70,0" name="ro.barata.mps.htmlLanguage.structure.TypeValue" />
     </file>
     <file name="TypeValue_PropertySupport.java">
       <node id="5512171426400093577" at="11,24,12,18" concept="6" />
@@ -492,6 +496,120 @@
         <var name="value" id="6524916301072942833" />
       </scope>
       <unit id="6524916301072942833" at="9,0,44,0" name="ro.barata.mps.htmlLanguage.structure.MethodParameter_PropertySupport" />
+    </file>
+  </root>
+  <root nodeRef="r:48cdf645-21a6-4678-bd29-e449bcd0cd36(ro.barata.mps.htmlLanguage.structure)/8648988898783397122">
+    <file name="LoopType.java">
+      <node id="8648988898783397122" at="14,0,15,0" concept="2" trace="myName" />
+      <node id="8648988898783397122" at="15,27,16,23" concept="6" />
+      <node id="8648988898783397122" at="18,36,19,24" concept="6" />
+      <node id="8648988898783397122" at="21,47,22,76" concept="5" />
+      <node id="8648988898783397122" at="22,76,23,59" concept="1" />
+      <node id="8648988898783397122" at="23,59,24,60" concept="1" />
+      <node id="8648988898783397122" at="24,60,25,58" concept="1" />
+      <node id="8648988898783397122" at="25,58,26,16" concept="6" />
+      <node id="8648988898783397122" at="28,39,29,26" concept="6" />
+      <node id="8648988898783397122" at="32,24,33,35" concept="6" />
+      <node id="8648988898783397122" at="35,58,36,28" concept="6" />
+      <node id="8648988898783397122" at="38,59,39,29" concept="6" />
+      <node id="8648988898783397122" at="41,57,42,27" concept="6" />
+      <node id="8648988898783397122" at="43,5,44,33" concept="6" />
+      <node id="8648988898783397122" at="46,0,47,0" concept="2" trace="myValue" />
+      <node id="8648988898783397122" at="47,39,48,23" concept="1" />
+      <node id="8648988898783397122" at="48,23,49,25" concept="1" />
+      <node id="8648988898783397122" at="51,28,52,24" concept="6" />
+      <node id="8648988898783397122" at="15,0,18,0" concept="4" trace="getName#()Ljava/lang/String;" />
+      <node id="8648988898783397122" at="18,0,21,0" concept="4" trace="getValueAsString#()Ljava/lang/String;" />
+      <node id="8648988898783397122" at="28,0,31,0" concept="7" trace="getDefault#()Lro/barata/mps/htmlLanguage/structure/LoopType;" />
+      <node id="8648988898783397122" at="31,51,34,5" concept="3" />
+      <node id="8648988898783397122" at="34,5,37,5" concept="3" />
+      <node id="8648988898783397122" at="37,5,40,5" concept="3" />
+      <node id="8648988898783397122" at="40,5,43,5" concept="3" />
+      <node id="8648988898783397122" at="51,0,54,0" concept="4" trace="getValue#()Ljava/lang/String;" />
+      <node id="8648988898783397122" at="47,0,51,0" concept="0" trace="LoopType#(Ljava/lang/String;Ljava/lang/String;)V" />
+      <node id="8648988898783397122" at="21,0,28,0" concept="7" trace="getConstants#()Ljava/util/List;" />
+      <node id="8648988898783397122" at="31,0,46,0" concept="7" trace="parseValue#(Ljava/lang/String;)Lro/barata/mps/htmlLanguage/structure/LoopType;" />
+      <scope id="8648988898783397122" at="15,27,16,23" />
+      <scope id="8648988898783397122" at="18,36,19,24" />
+      <scope id="8648988898783397122" at="28,39,29,26" />
+      <scope id="8648988898783397122" at="32,24,33,35" />
+      <scope id="8648988898783397122" at="35,58,36,28" />
+      <scope id="8648988898783397122" at="38,59,39,29" />
+      <scope id="8648988898783397122" at="41,57,42,27" />
+      <scope id="8648988898783397122" at="51,28,52,24" />
+      <scope id="8648988898783397122" at="47,39,49,25" />
+      <scope id="8648988898783397122" at="15,0,18,0" />
+      <scope id="8648988898783397122" at="18,0,21,0" />
+      <scope id="8648988898783397122" at="28,0,31,0" />
+      <scope id="8648988898783397122" at="51,0,54,0" />
+      <scope id="8648988898783397122" at="47,0,51,0">
+        <var name="name" id="8648988898783397122" />
+        <var name="value" id="8648988898783397122" />
+      </scope>
+      <scope id="8648988898783397122" at="21,47,26,16">
+        <var name="list" id="8648988898783397122" />
+      </scope>
+      <scope id="8648988898783397122" at="21,0,28,0" />
+      <scope id="8648988898783397122" at="31,51,44,33" />
+      <scope id="8648988898783397122" at="31,0,46,0">
+        <var name="value" id="8648988898783397122" />
+      </scope>
+      <unit id="8648988898783397122" at="9,0,55,0" name="ro.barata.mps.htmlLanguage.structure.LoopType" />
+    </file>
+    <file name="LoopType_PropertySupport.java">
+      <node id="8648988898783397122" at="11,24,12,18" concept="6" />
+      <node id="8648988898783397122" at="13,5,14,93" concept="5" />
+      <node id="8648988898783397122" at="15,33,16,43" concept="5" />
+      <node id="8648988898783397122" at="17,45,18,20" concept="6" />
+      <node id="8648988898783397122" at="20,5,21,17" concept="6" />
+      <node id="8648988898783397122" at="24,24,25,18" concept="6" />
+      <node id="8648988898783397122" at="26,5,27,93" concept="5" />
+      <node id="8648988898783397122" at="28,33,29,43" concept="5" />
+      <node id="8648988898783397122" at="30,45,31,43" concept="6" />
+      <node id="8648988898783397122" at="33,5,34,16" concept="6" />
+      <node id="8648988898783397122" at="36,49,37,51" concept="5" />
+      <node id="8648988898783397122" at="38,27,39,32" concept="6" />
+      <node id="8648988898783397122" at="40,5,41,14" concept="6" />
+      <node id="8648988898783397122" at="10,44,13,5" concept="3" />
+      <node id="8648988898783397122" at="16,43,19,7" concept="3" />
+      <node id="8648988898783397122" at="23,47,26,5" concept="3" />
+      <node id="8648988898783397122" at="29,43,32,7" concept="3" />
+      <node id="8648988898783397122" at="37,51,40,5" concept="3" />
+      <node id="8648988898783397122" at="14,93,20,5" concept="8" />
+      <node id="8648988898783397122" at="27,93,33,5" concept="8" />
+      <node id="8648988898783397122" at="36,0,43,0" concept="4" trace="fromInternalValue#(Ljava/lang/String;)Ljava/lang/String;" />
+      <node id="8648988898783397122" at="10,0,23,0" concept="4" trace="canSetValue#(Ljava/lang/String;)Z" />
+      <node id="8648988898783397122" at="23,0,36,0" concept="4" trace="toInternalValue#(Ljava/lang/String;)Ljava/lang/String;" />
+      <scope id="8648988898783397122" at="11,24,12,18" />
+      <scope id="8648988898783397122" at="17,45,18,20" />
+      <scope id="8648988898783397122" at="24,24,25,18" />
+      <scope id="8648988898783397122" at="30,45,31,43" />
+      <scope id="8648988898783397122" at="38,27,39,32" />
+      <scope id="8648988898783397122" at="15,33,19,7">
+        <var name="constant" id="8648988898783397122" />
+      </scope>
+      <scope id="8648988898783397122" at="28,33,32,7">
+        <var name="constant" id="8648988898783397122" />
+      </scope>
+      <scope id="8648988898783397122" at="36,49,41,14">
+        <var name="constant" id="8648988898783397122" />
+      </scope>
+      <scope id="8648988898783397122" at="36,0,43,0">
+        <var name="value" id="8648988898783397122" />
+      </scope>
+      <scope id="8648988898783397122" at="10,44,21,17">
+        <var name="constants" id="8648988898783397122" />
+      </scope>
+      <scope id="8648988898783397122" at="23,47,34,16">
+        <var name="constants" id="8648988898783397122" />
+      </scope>
+      <scope id="8648988898783397122" at="10,0,23,0">
+        <var name="value" id="8648988898783397122" />
+      </scope>
+      <scope id="8648988898783397122" at="23,0,36,0">
+        <var name="value" id="8648988898783397122" />
+      </scope>
+      <unit id="8648988898783397122" at="9,0,44,0" name="ro.barata.mps.htmlLanguage.structure.LoopType_PropertySupport" />
     </file>
   </root>
 </debug-info>
