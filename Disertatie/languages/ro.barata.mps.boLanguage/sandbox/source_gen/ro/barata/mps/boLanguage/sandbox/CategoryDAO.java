@@ -37,6 +37,7 @@ public class CategoryDAO {
     columns += "table" + i + "." + "id" + " \"" + "discounts" + "id" + "\",";
     columns += "table" + i + "." + "subject" + " \"" + "discounts" + "subject" + "\",";
     columns += "table" + i + "." + "description" + " \"" + "discounts" + "description" + "\",";
+    columns += "table" + i + "." + "price" + " \"" + "discounts" + "price" + "\",";
     leftJoins += " left join " + "discounts" + " table" + i + " on table" + i + "." + "categoryId" + "=table0." + "id" + " ";
     i++;
     columns += "table" + i + "." + "id" + " \"" + "categories" + "id" + "\",";
@@ -87,6 +88,9 @@ public class CategoryDAO {
         }
         if (set.getString("discounts" + "description") != null) {
           child.setDescription(set.getString("discounts" + "description"));
+        }
+        if (set.getBigDecimal("discounts" + "price") != null) {
+          child.setPrice(Integer.valueOf(set.getBigDecimal("discounts" + "price").intValue()));
         }
         if (child.getId() != null) {
           foundCategory.addDiscount(child);
@@ -210,6 +214,8 @@ public class CategoryDAO {
     columns += "subject";
     columns += ",";
     columns += "description";
+    columns += ",";
+    columns += "price";
     sql += columns;
     sql += " from " + "discounts" + " where " + "categoryId" + " in (select " + "id" + " from " + "categories";
     if (parent != null) {
@@ -232,6 +238,7 @@ public class CategoryDAO {
       foundDiscount.setId(Integer.valueOf(set.getBigDecimal("id").intValue()));
       foundDiscount.setSubject(set.getString("subject"));
       foundDiscount.setDescription(set.getString("description"));
+      foundDiscount.setPrice(Integer.valueOf(set.getBigDecimal("price").intValue()));
       discounts.add(foundDiscount);
     }
     return discounts;

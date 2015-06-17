@@ -25,9 +25,13 @@ public class DiscountDAO {
     columns += "table0." + "id" + " \"parent" + "id" + "\",";
     columns += "table0." + "subject" + " \"parent" + "subject" + "\",";
     columns += "table0." + "description" + " \"parent" + "description" + "\",";
+    columns += "table0." + "price" + " \"parent" + "price" + "\",";
     String sql = " from " + "discounts" + " table0";
     String leftJoins = "";
     int i = 1;
+    columns += "table" + i + "." + "id" + " \"" + "discountProducts" + "id" + "\",";
+    leftJoins += " left join " + "discountProducts" + " table" + i + " on table" + i + "." + "promotionId" + "=table0." + "id" + " ";
+    i++;
 
     sql = "select " + columns.substring(0, columns.length() - 1) + sql + leftJoins;
     System.out.println(sql);
@@ -38,6 +42,16 @@ public class DiscountDAO {
       foundDiscount.setId(Integer.valueOf(set.getBigDecimal("parent" + "id").intValue()));
       foundDiscount.setSubject(set.getString("parent" + "subject"));
       foundDiscount.setDescription(set.getString("parent" + "description"));
+      foundDiscount.setPrice(Integer.valueOf(set.getBigDecimal("parent" + "price").intValue()));
+      {
+        ProductReference child = new ProductReference();
+        if (set.getBigDecimal("discountProducts" + "id") != null) {
+          child.setId(Integer.valueOf(set.getBigDecimal("discountProducts" + "id").intValue()));
+        }
+        if (child.getId() != null) {
+          foundDiscount.addProductReference(child);
+        }
+      }
       boolean flag = true;
       for (Discount entity : discounts) {
         if (entity.getId() == foundDiscount.getId()) {
@@ -60,6 +74,8 @@ public class DiscountDAO {
     columns += "subject";
     columns += ",";
     columns += "description";
+    columns += ",";
+    columns += "price";
     String values = "";
     if (discount.getId() != null) {
       values += "id" + "='" + discount.getId() + "' and ";
@@ -69,6 +85,9 @@ public class DiscountDAO {
     }
     if (discount.getDescription() != null) {
       values += "description" + "='" + discount.getDescription() + "' and ";
+    }
+    if (discount.getPrice() != null) {
+      values += "price" + "='" + discount.getPrice() + "' and ";
     }
     int i = 1;
     if (values.length() > 6) {
@@ -83,9 +102,45 @@ public class DiscountDAO {
       foundDiscount.setId(Integer.valueOf(set.getBigDecimal("id").intValue()));
       foundDiscount.setSubject(set.getString("subject"));
       foundDiscount.setDescription(set.getString("description"));
+      foundDiscount.setPrice(Integer.valueOf(set.getBigDecimal("price").intValue()));
       discounts.add(foundDiscount);
     }
     return discounts;
+  }
+  public List<ProductReference> findChildProductReferences(Discount parent) throws SQLException {
+    List<ProductReference> productreferences = new ArrayList<ProductReference>();
+    String sql = "select ";
+    String columns = "";
+    columns += "id";
+    sql += columns;
+    sql += " from " + "discountProducts" + " where " + "promotionId" + " in (select " + "id" + " from " + "discounts";
+    if (parent != null) {
+      sql += " where ";
+      String values = "";
+      if (parent.getId() != null) {
+        values += "id" + "='" + parent.getId() + "'and ";
+      }
+      if (parent.getSubject() != null) {
+        values += "subject" + "='" + parent.getSubject() + "'and ";
+      }
+      if (parent.getDescription() != null) {
+        values += "description" + "='" + parent.getDescription() + "'and ";
+      }
+      if (parent.getPrice() != null) {
+        values += "price" + "='" + parent.getPrice() + "'and ";
+      }
+      sql += values.substring(0, values.length() - 4);
+    }
+    sql += ")";
+    System.out.println(sql);
+    ResultSet set = stmt.executeQuery(sql);
+    ProductReference foundProductReference = new ProductReference();
+    while (set.next()) {
+      foundProductReference = new ProductReference();
+      foundProductReference.setId(Integer.valueOf(set.getBigDecimal("id").intValue()));
+      productreferences.add(foundProductReference);
+    }
+    return productreferences;
   }
 
 
@@ -106,6 +161,10 @@ public class DiscountDAO {
       columns += "description" + ",";
       values += "'" + discount.getDescription() + "',";
     }
+    if (discount.getPrice() != null) {
+      columns += "price" + ",";
+      values += "'" + discount.getPrice() + "',";
+    }
     // Searches for the parent entity, such that it identifies and sets the foreign key columns 
     {
       Category parentCategory = discount.getParentCategory();
@@ -125,6 +184,22 @@ public class DiscountDAO {
     System.out.println(sql);
     stmt.execute(sql);
     // Loops thhrough the children, and adds them recursively to the database 
+    if (discount.getProductReferences() != null) {
+      ProductReferenceDAO childProductReferenceDAO = new ProductReferenceDAO(connn);
+      for (ProductReference childProductReference : discount.getProductReferences()) {
+        List<ProductReference> children = childProductReferenceDAO.findProductReferences(childProductReference);
+        if (children.size() == 0) {
+          childProductReferenceDAO.addProductReference(childProductReference);
+        } else {
+          for (ProductReference child : children) {
+            ProductReference copy = (ProductReference) child.clone();
+            child.setParentDiscount(discount);
+            childProductReferenceDAO.updateProductReference(copy, child);
+
+          }
+        }
+      }
+    }
   }
 
   public void updateDiscount(Discount olddiscount, Discount newdiscount) throws SQLException, ClassNotFoundException, CloneNotSupportedException {
@@ -138,6 +213,9 @@ public class DiscountDAO {
     }
     if (newdiscount.getDescription() != null) {
       values += "description" + "='" + newdiscount.getDescription() + "',";
+    }
+    if (newdiscount.getPrice() != null) {
+      values += "price" + "='" + newdiscount.getPrice() + "',";
     }
     {
       List<String> columnsList = new LinkedList<String>();
@@ -169,9 +247,28 @@ public class DiscountDAO {
     if (olddiscount.getDescription() != null) {
       condition += "description" + "='" + olddiscount.getDescription() + "' and ";
     }
+    if (olddiscount.getPrice() != null) {
+      condition += "price" + "='" + olddiscount.getPrice() + "' and ";
+    }
     sql += values.substring(0, values.length() - 1) + condition.substring(0, condition.length() - 4);
     System.out.println(sql);
     stmt.execute(sql);
+    if (newdiscount.getProductReferences() != null) {
+      ProductReferenceDAO childProductReferenceDAO = new ProductReferenceDAO(connn);
+      for (ProductReference childProductReference : newdiscount.getProductReferences()) {
+        List<ProductReference> children = childProductReferenceDAO.findProductReferences(childProductReference);
+        if (children.size() == 0) {
+          childProductReferenceDAO.addProductReference(childProductReference);
+        } else {
+          for (ProductReference child : children) {
+            ProductReference copy = (ProductReference) child.clone();
+            child.setParentDiscount(newdiscount);
+            childProductReferenceDAO.updateProductReference(copy, child);
+
+          }
+        }
+      }
+    }
 
   }
 
@@ -189,6 +286,10 @@ public class DiscountDAO {
     }
     if (discount.getDescription() != null) {
       condition += "description" + "='" + discount.getDescription() + "'";
+      condition += " and ";
+    }
+    if (discount.getPrice() != null) {
+      condition += "price" + "='" + discount.getPrice() + "'";
       condition += " and ";
     }
     sql += condition.substring(0, condition.length() - 5);

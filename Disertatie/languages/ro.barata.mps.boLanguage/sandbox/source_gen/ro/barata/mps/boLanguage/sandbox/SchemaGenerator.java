@@ -55,7 +55,24 @@ public class SchemaGenerator {
     sql += "id" + " " + "integer" + ",";
     sql += "subject" + " " + "varchar(256)" + ",";
     sql += "description" + " " + "varchar(256)" + ",";
+    sql += "price" + " " + "integer" + ",";
     sql += "categoryId" + " " + "integer" + ",";
+    if (primaryKey.length() == 0) {
+      sql = sql.substring(0, sql.length() - 1);
+    }
+    sql += primaryKey;
+    sql += ")";
+    System.out.println(sql);
+    stmt.execute(sql);
+
+    primaryKey = "";
+    primaryKey = "primary key(";
+    primaryKey += "id";
+    primaryKey += ")";
+    sql = "create table " + "discountProducts" + "(";
+    sql += "id" + " " + "integer" + ",";
+    sql += "productId" + " " + "integer" + ",";
+    sql += "promotionId" + " " + "integer" + ",";
     if (primaryKey.length() == 0) {
       sql = sql.substring(0, sql.length() - 1);
     }
@@ -208,6 +225,15 @@ public class SchemaGenerator {
     System.out.println(sql);
     stmt.execute(sql);
 
+    sql = "alter table " + "discountProducts" + " add constraint fk_" + "discountProd" + "_" + "productId";
+    sql += " foreign key (" + "productId" + ") references " + "products" + "(" + "id" + ") on delete set null";
+    System.out.println(sql);
+    stmt.execute(sql);
+    sql = "alter table " + "discountProducts" + " add constraint fk_" + "discountProd" + "_" + "promotionId";
+    sql += " foreign key (" + "promotionId" + ") references " + "discounts" + "(" + "id" + ") on delete cascade";
+    System.out.println(sql);
+    stmt.execute(sql);
+
     sql = "alter table " + "attributeCategories" + " add constraint fk_" + "attributeCat" + "_" + "productId";
     sql += " foreign key (" + "productId" + ") references " + "products" + "(" + "id" + ") on delete cascade";
     System.out.println(sql);
@@ -251,6 +277,9 @@ public class SchemaGenerator {
     stmt.executeUpdate(sql);
 
     sql = "drop table " + "discounts" + " cascade constraints";
+    stmt.executeUpdate(sql);
+
+    sql = "drop table " + "discountProducts" + " cascade constraints";
     stmt.executeUpdate(sql);
 
     sql = "drop table " + "attributeCategories" + " cascade constraints";

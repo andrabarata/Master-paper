@@ -50,13 +50,17 @@ public class HTTPServer {
     context.addServlet(new ServletHolder(new AdminHomeServlet()), "/" + "adminHome" + "/*");
     context.addServlet(new ServletHolder(new EditCategoryServlet()), "/" + "editCategory" + "/*");
     context.addServlet(new ServletHolder(new EditAdminproductServlet()), "/" + "editAdminproduct" + "/*");
+    context.addServlet(new ServletHolder(new AdminpromotionsServlet()), "/" + "adminpromotions" + "/*");
     context.addServlet(new ServletHolder(new OrdersServlet()), "/" + "orders" + "/*");
     context.addServlet(new ServletHolder(new AdminproductsServlet()), "/" + "adminproducts" + "/*");
     context.addServlet(new ServletHolder(new AddAdminproductServlet()), "/" + "addAdminproduct" + "/*");
     context.addServlet(new ServletHolder(new EditAttributesAdminServlet()), "/" + "editAttributesAdmin" + "/*");
     context.addServlet(new ServletHolder(new AdminHomeproductsServlet()), "/" + "adminHomeproducts" + "/*");
     context.addServlet(new ServletHolder(new AddAdminHomeproductServlet()), "/" + "addAdminHomeproduct" + "/*");
+    context.addServlet(new ServletHolder(new AdminHomepromotionsServlet()), "/" + "adminHomepromotions" + "/*");
     context.addServlet(new ServletHolder(new AddAdminAttributesServlet()), "/" + "addAdminAttributes" + "/*");
+    context.addServlet(new ServletHolder(new EditAdminPromotionServlet()), "/" + "editAdminPromotion" + "/*");
+    context.addServlet(new ServletHolder(new AddAdminPromotionServlet()), "/" + "addAdminPromotion" + "/*");
 
     Handler[] handlers = new Handler[]{rwHandler, context};
     HandlerList list = new HandlerList();

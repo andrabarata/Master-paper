@@ -111,7 +111,6 @@ public class AddAdminHomeproductServlet extends HttpServlet {
       value = request.getParameter("id");
       if (value != null && !(value.equals(""))) {
         newCategory.setId(Integer.parseInt(value));
-
       }
       if (category != null && newCategory != null) {
         {
@@ -123,7 +122,9 @@ public class AddAdminHomeproductServlet extends HttpServlet {
             }
             product_0.setId(Integer.parseInt(value));
           }
-          newCategory.addProduct(product_0);
+          if (product_0 != null) {
+            newCategory.addProduct(product_0);
+          }
 
         }
         categoryDAO.updateCategory(category, newCategory);

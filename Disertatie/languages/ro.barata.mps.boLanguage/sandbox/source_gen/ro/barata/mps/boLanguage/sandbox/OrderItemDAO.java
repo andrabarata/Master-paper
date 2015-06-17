@@ -36,6 +36,7 @@ public class OrderItemDAO {
     columns += "table" + i + "." + "id" + " \"" + "discounts" + "id" + "\",";
     columns += "table" + i + "." + "subject" + " \"" + "discounts" + "subject" + "\",";
     columns += "table" + i + "." + "description" + " \"" + "discounts" + "description" + "\",";
+    columns += "table" + i + "." + "price" + " \"" + "discounts" + "price" + "\",";
     leftJoins += " left join " + "discounts" + " table" + i + " on table" + i + "." + "promotionId" + "=table0." + "id" + " ";
     i++;
 
@@ -78,6 +79,9 @@ public class OrderItemDAO {
         }
         if (set.getString("discounts" + "description") != null) {
           reference.setDescription(set.getString("discounts" + "description"));
+        }
+        if (set.getBigDecimal("discounts" + "price") != null) {
+          reference.setPrice(Integer.valueOf(set.getBigDecimal("discounts" + "price").intValue()));
         }
 
         if (reference.getId() != null) {
@@ -166,6 +170,8 @@ public class OrderItemDAO {
     columns += "subject";
     columns += ",";
     columns += "description";
+    columns += ",";
+    columns += "price";
     sql += columns;
     sql += " from " + "discounts" + " where " + "id" + " in (select " + "promotionId" + " from " + "orderItems";
     if (parent != null) {
@@ -183,6 +189,7 @@ public class OrderItemDAO {
       reference.setId(Integer.valueOf(set.getBigDecimal("id").intValue()));
       reference.setSubject(set.getString("subject"));
       reference.setDescription(set.getString("description"));
+      reference.setPrice(Integer.valueOf(set.getBigDecimal("price").intValue()));
     }
     return reference;
   }

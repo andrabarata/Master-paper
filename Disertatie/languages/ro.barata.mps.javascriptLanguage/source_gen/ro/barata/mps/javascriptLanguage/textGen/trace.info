@@ -9,6 +9,40 @@
   <concept fqn="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
   <concept fqn="jetbrains.mps.baseLanguage.structure.Statement" />
   <concept fqn="jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" />
+  <root nodeRef="r:a7ecdaea-ea79-4711-8da6-b12ffac409ac(ro.barata.mps.javascriptLanguage.textGen)/1034904756203382159">
+    <file name="QuerySelectorCommand_TextGen.java">
+      <node id="1034904756203383004" at="12,42,13,176" concept="0" />
+      <node id="1034904756203383004" at="12,42,13,176" concept="1" />
+      <node id="1034904756203383004" at="13,176,14,40" concept="1" />
+      <node id="1034904756203383004" at="14,40,15,178" concept="1" />
+      <node id="1034904756203383004" at="15,178,16,24" concept="1" />
+      <node id="1034904756203383004" at="16,24,17,25" concept="1" />
+      <node id="1034904756203383004" at="12,42,17,25" concept="0" />
+      <node id="1034904756203382159" at="12,0,19,0" concept="4" trace="doGenerateText#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <scope id="1034904756203383004" at="12,42,13,176" />
+      <scope id="1034904756203382159" at="12,42,17,25" />
+      <scope id="1034904756203383004" at="12,42,17,25" />
+      <scope id="1034904756203382159" at="12,0,19,0">
+        <var name="node" id="1034904756203382159" />
+      </scope>
+      <unit id="1034904756203382159" at="11,0,20,0" name="ro.barata.mps.javascriptLanguage.textGen.QuerySelectorCommand_TextGen" />
+    </file>
+  </root>
+  <root nodeRef="r:a7ecdaea-ea79-4711-8da6-b12ffac409ac(ro.barata.mps.javascriptLanguage.textGen)/1034904756215115023">
+    <file name="GenericCommand_TextGen.java">
+      <node id="1034904756215115036" at="11,42,12,178" concept="1" />
+      <node id="1034904756215115036" at="12,178,13,21" concept="1" />
+      <node id="1034904756215115036" at="13,21,14,25" concept="1" />
+      <node id="1034904756215115036" at="11,42,14,25" concept="0" />
+      <node id="1034904756215115023" at="11,0,16,0" concept="4" trace="doGenerateText#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <scope id="1034904756215115023" at="11,42,14,25" />
+      <scope id="1034904756215115036" at="11,42,14,25" />
+      <scope id="1034904756215115023" at="11,0,16,0">
+        <var name="node" id="1034904756215115023" />
+      </scope>
+      <unit id="1034904756215115023" at="10,0,17,0" name="ro.barata.mps.javascriptLanguage.textGen.GenericCommand_TextGen" />
+    </file>
+  </root>
   <root nodeRef="r:a7ecdaea-ea79-4711-8da6-b12ffac409ac(ro.barata.mps.javascriptLanguage.textGen)/3088814217690280601">
     <file name="AjaxJavascriptFunction_TextGen.java">
       <node id="3088814217690345555" at="11,42,12,29" concept="1" />

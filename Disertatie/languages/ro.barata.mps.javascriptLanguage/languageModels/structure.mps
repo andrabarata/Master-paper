@@ -519,6 +519,10 @@
       <property role="1uS6qv" value="selectedIndex" />
       <property role="1uS6qo" value="selectedIndex" />
     </node>
+    <node concept="M4N5e" id="TsI6i1ujJp" role="M5hS2">
+      <property role="1uS6qv" value="className" />
+      <property role="1uS6qo" value="className" />
+    </node>
   </node>
   <node concept="1TIwiD" id="2FtF2DJW$C8">
     <property role="3GE5qa" value="javascript.commands.var" />
@@ -740,6 +744,35 @@
     <node concept="M4N5e" id="63p_9b6PSpZ" role="M5hS2">
       <property role="1uS6qv" value="options" />
       <property role="1uS6qo" value="options" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="TsI6i1Riqh">
+    <property role="3GE5qa" value="javascript.commands.var" />
+    <property role="TrG5h" value="QuerySelectorCommand" />
+    <property role="34LRSv" value="Var as query" />
+    <ref role="1TJDcQ" node="2FtF2DJxYDO" resolve="VarCommandValue" />
+    <node concept="1TJgyi" id="TsI6i1Risw" role="1TKVEl">
+      <property role="TrG5h" value="command" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
+    <node concept="1TJgyj" id="TsI6i1Riqj" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="var" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="3ET5BXsao0E" resolve="VarValue" />
+    </node>
+    <node concept="PrWs8" id="TsI6i1Riqk" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="TsI6i2$6NV">
+    <property role="3GE5qa" value="javascript.commands" />
+    <property role="TrG5h" value="GenericCommand" />
+    <property role="34LRSv" value="generic" />
+    <ref role="1TJDcQ" node="4LZaFkzUfUz" resolve="JavascriptCommand" />
+    <node concept="1TJgyi" id="TsI6i2$6NW" role="1TKVEl">
+      <property role="TrG5h" value="command" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
     </node>
   </node>
 </model>

@@ -83,7 +83,6 @@ public class EditAdminproductServlet extends HttpServlet {
       value = request.getParameter("productName");
       if (value != null && !(value.equals(""))) {
         newProduct.setProductName(value);
-
       }
       if (newProduct == null) {
         newProduct = new Product();
@@ -91,7 +90,6 @@ public class EditAdminproductServlet extends HttpServlet {
       value = request.getParameter("description");
       if (value != null && !(value.equals(""))) {
         newProduct.setDescription(value);
-
       }
       if (newProduct == null) {
         newProduct = new Product();
@@ -99,7 +97,6 @@ public class EditAdminproductServlet extends HttpServlet {
       value = request.getParameter("price");
       if (value != null && !(value.equals(""))) {
         newProduct.setPrice(Integer.parseInt(value));
-
       }
       if (newProduct == null) {
         newProduct = new Product();
@@ -107,7 +104,6 @@ public class EditAdminproductServlet extends HttpServlet {
       value = request.getParameter("units");
       if (value != null && !(value.equals(""))) {
         newProduct.setUnits(Integer.parseInt(value));
-
       }
       if (newProduct == null) {
         newProduct = new Product();
@@ -115,7 +111,6 @@ public class EditAdminproductServlet extends HttpServlet {
       value = request.getParameter("id");
       if (value != null && !(value.equals(""))) {
         newProduct.setId(Integer.parseInt(value));
-
       }
       if (product != null && newProduct != null) {
         productDAO.updateProduct(product, newProduct);
@@ -150,7 +145,6 @@ public class EditAdminproductServlet extends HttpServlet {
       value = request.getParameter("id");
       if (value != null && !(value.equals(""))) {
         newCategory.setId(Integer.parseInt(value));
-
       }
       if (category != null && newCategory != null) {
         {
@@ -162,7 +156,9 @@ public class EditAdminproductServlet extends HttpServlet {
             }
             product_0.setId(Integer.parseInt(value));
           }
-          newCategory.addProduct(product_0);
+          if (product_0 != null) {
+            newCategory.addProduct(product_0);
+          }
 
         }
         categoryDAO.updateCategory(category, newCategory);

@@ -4,6 +4,8 @@ package ro.barata.mps.boLanguage.sandbox;
 
 import javax.servlet.http.HttpSession;
 import java.sql.SQLException;
+import java.sql.Connection;
+import java.util.List;
 
 public class AdminpromotionsGenerator {
   public static String getContent(HttpSession session, String requestParameterValue) throws ClassNotFoundException, SQLException, CloneNotSupportedException {
@@ -16,6 +18,7 @@ public class AdminpromotionsGenerator {
     html += "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">";
     html += "<script src=\"/" + "jquery.js" + "\"></script>";
     html += "<script src=\"/" + "bootstrap.min.js" + "\"></script>";
+    html += "<script src=\"/" + "adminpromotions.js" + "\"></script>";
     html += "<script src=\"/general.js\"></script>";
     html += "<link rel=\"stylesheet\" type=\"text/css\" href=\"/" + "main.css" + "\"/>";
     html += "<link rel=\"stylesheet\" type=\"text/css\" href=\"/" + "pure-min.css" + "\"/>";
@@ -24,6 +27,123 @@ public class AdminpromotionsGenerator {
     html += "<link rel=\"stylesheet\" type=\"text/css\" href=\"/" + "font-awesome.css" + "\"/>";
     html += "</head>";
     html += "<body>";
+    Connection connection = DatabaseConnection.getConnection();
+    CategoryDAO categoryDAO = new CategoryDAO(connection);
+    Category searchCategory = new Category();
+    Discount discounts = new Discount();
+    html += AdminframeGenerator.generateAdminHeader(session);
+    html += "<div";
+    href = "";
+    html += " class=\"" + "container" + "\"";
+    html += ">";
+    html += "<div";
+    href = "";
+    html += " class=\"" + "row" + "\"";
+    html += ">";
+    html += "Please select a promotion to begin with or ";
+    html += "<a";
+    href = "";
+    html += " " + "style" + "=\"" + "margin-bttom:15px" + "\"";
+    href += "?" + "promCatId" + "=" + requestParameterValue;
+    html += " href=\"" + "/" + "addAdminPromotion" + href + "\"";
+    html += " class=\"" + "pure-button pure-button-primary" + "\"";
+
+    html += ">" + "add" + "</a>";
+    html += " a new promotion";
+    html += "</div>";
+
+    html += "<div";
+    href = "";
+    html += " class=\"" + "row" + "\"";
+    html += ">";
+    html += "<h2";
+    href = "";
+
+    html += ">" + "Promotions" + "</h2>";
+
+    searchCategory = new Category();
+    value = requestParameterValue;
+    searchCategory.setId(Integer.parseInt(value));
+    {
+      List<Discount> loop_b1b0 = categoryDAO.findChildDiscounts(searchCategory);
+      for (int counter_b1b0 = 0; counter_b1b0 < loop_b1b0.size(); counter_b1b0++) {
+        discounts = loop_b1b0.get(counter_b1b0);
+        html += "<div";
+        href = "";
+        html += " class=\"" + "col-sm-3 col-lg-3 col-md-3" + "\"";
+        html += ">";
+        html += "<div";
+        href = "";
+        html += " class=\"" + "thumbnail" + "\"";
+        html += " " + "style" + "=\"" + "height:250px" + "\"";
+        html += " " + "style" + "=\"" + "height:250px" + "\"";
+        html += ">";
+        html += "<div";
+        href = "";
+        html += " class=\"" + "admin-box" + "\"";
+        html += ">";
+        html += "<img";
+        href = "";
+        html += " " + "style" + "=\"" + "display:initial" + "\"";
+        expressions = "";
+        expressions += discounts.getId().toString();
+        expressions += ".jpg";
+        html += " src=\"" + "/promImg" + expressions + "\"";
+        html += " class=\"" + "img-responsive" + "\"";
+
+        html += "/>";
+        html += "</div>";
+
+        html += "<div";
+        href = "";
+        html += " class=\"" + "caption" + "\"";
+        html += ">";
+        html += "<h4";
+        href = "";
+        html += " class=\"" + "link-h4" + "\"";
+        parameters = "";
+        parameters += "'" + discounts.getId().toString() + "',";
+        parameters = parameters.substring(0, parameters.length() - 1);
+        html += " " + "onclick" + "=\"" + "goToPromotionPage" + "(" + parameters + ")\"";
+
+
+        html += ">" + discounts.getSubject().toString() + "</h4>";
+        html += "<input";
+        html += " type=\"" + "button" + "\" ";
+        href = "";
+        html += " class=\"" + "pure-button pull-left button-success" + "\"";
+        parameters = "";
+        parameters += "'" + discounts.getId().toString() + "',";
+        parameters = parameters.substring(0, parameters.length() - 1);
+        html += " " + "onclick" + "=\"" + "goToPromotionPage" + "(" + parameters + ")\"";
+
+
+        html += " value=\"" + "Change" + "\" ";
+        html += "/>";
+        html += "<input";
+        html += " type=\"" + "button" + "\" ";
+        href = "";
+        html += " class=\"" + "pure-button pull-right button-error" + "\"";
+        parameters = "";
+        parameters += "'" + discounts.getId().toString() + "',";
+        parameters = parameters.substring(0, parameters.length() - 1);
+        html += " " + "onclick" + "=\"" + "deletePromotion" + "(" + parameters + ")\"";
+
+
+        html += " value=\"" + "Delete" + "\" ";
+        html += "/>";
+        html += "</div>";
+
+        html += "</div>";
+
+        html += "</div>";
+
+      }
+    }
+    html += "</div>";
+
+    html += "</div>";
+
     html += "</body>";
     html += "</html>";
     return html;

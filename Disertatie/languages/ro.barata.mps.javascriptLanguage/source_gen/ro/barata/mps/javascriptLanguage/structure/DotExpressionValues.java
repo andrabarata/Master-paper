@@ -12,7 +12,8 @@ public enum DotExpressionValues {
   length("length", "length"),
   text("text", "text"),
   id("id", "id"),
-  selectedIndex("selectedIndex", "selectedIndex");
+  selectedIndex("selectedIndex", "selectedIndex"),
+  className("className", "className");
 
   private String myName;
   public String getName() {
@@ -29,6 +30,7 @@ public enum DotExpressionValues {
     ListSequence.fromList(list).addElement(DotExpressionValues.text);
     ListSequence.fromList(list).addElement(DotExpressionValues.id);
     ListSequence.fromList(list).addElement(DotExpressionValues.selectedIndex);
+    ListSequence.fromList(list).addElement(DotExpressionValues.className);
     return list;
   }
   public static DotExpressionValues getDefault() {
@@ -55,6 +57,9 @@ public enum DotExpressionValues {
     }
     if (value.equals(DotExpressionValues.selectedIndex.getValueAsString())) {
       return DotExpressionValues.selectedIndex;
+    }
+    if (value.equals(DotExpressionValues.className.getValueAsString())) {
+      return DotExpressionValues.className;
     }
     return DotExpressionValues.getDefault();
   }

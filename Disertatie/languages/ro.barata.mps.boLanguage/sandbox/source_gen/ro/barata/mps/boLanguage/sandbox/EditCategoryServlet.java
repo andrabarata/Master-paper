@@ -83,7 +83,6 @@ public class EditCategoryServlet extends HttpServlet {
       value = request.getParameter("name");
       if (value != null && !(value.equals(""))) {
         newCategory.setName(value);
-
       }
       if (newCategory == null) {
         newCategory = new Category();
@@ -91,7 +90,6 @@ public class EditCategoryServlet extends HttpServlet {
       value = request.getParameter("id");
       if (value != null && !(value.equals(""))) {
         newCategory.setId(Integer.parseInt(value));
-
       }
       if (category != null && newCategory != null) {
         categoryDAO.updateCategory(category, newCategory);

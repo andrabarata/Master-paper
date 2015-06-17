@@ -1969,5 +1969,60 @@
       </node>
     </node>
   </node>
+  <node concept="WtQ9Q" id="TsI6i1Rmmf">
+    <property role="3GE5qa" value="javascript.commands.var" />
+    <ref role="WuzLi" to="jel9:TsI6i1Riqh" resolve="QuerySelectorCommand" />
+    <node concept="11bSqf" id="TsI6i1Rmmg" role="11c4hB">
+      <node concept="3clFbS" id="TsI6i1Rmmh" role="2VODD2">
+        <node concept="lc7rE" id="TsI6i1Rmzs" role="3cqZAp">
+          <node concept="l9hG8" id="TsI6i1RmzF" role="lcghm">
+            <node concept="2OqwBi" id="TsI6i1RmAG" role="lb14g">
+              <node concept="117lpO" id="TsI6i1Rm$q" role="2Oq$k0" />
+              <node concept="3TrEf2" id="TsI6i1RmNA" role="2OqNvi">
+                <ref role="3Tt5mk" to="jel9:TsI6i1Riqj" />
+              </node>
+            </node>
+          </node>
+          <node concept="la8eA" id="TsI6i1RmQn" role="lcghm">
+            <property role="lacIc" value=".querySelectorAll(&quot;" />
+          </node>
+          <node concept="l9hG8" id="TsI6i1Rnrw" role="lcghm">
+            <node concept="2OqwBi" id="TsI6i1RnvI" role="lb14g">
+              <node concept="117lpO" id="TsI6i1Rnts" role="2Oq$k0" />
+              <node concept="3TrcHB" id="TsI6i1RnPS" role="2OqNvi">
+                <ref role="3TsBF5" to="jel9:TsI6i1Risw" resolve="command" />
+              </node>
+            </node>
+          </node>
+          <node concept="la8eA" id="TsI6i1Rnq0" role="lcghm">
+            <property role="lacIc" value="&quot;);" />
+          </node>
+          <node concept="l8MVK" id="TsI6i1ZMrr" role="lcghm" />
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="WtQ9Q" id="TsI6i2$6Of">
+    <property role="3GE5qa" value="javascript.commands" />
+    <ref role="WuzLi" to="jel9:TsI6i2$6NV" resolve="GenericCommand" />
+    <node concept="11bSqf" id="TsI6i2$6Og" role="11c4hB">
+      <node concept="3clFbS" id="TsI6i2$6Oh" role="2VODD2">
+        <node concept="lc7rE" id="TsI6i2$6Os" role="3cqZAp">
+          <node concept="l9hG8" id="TsI6i2$6OD" role="lcghm">
+            <node concept="2OqwBi" id="TsI6i2$6Rj" role="lb14g">
+              <node concept="117lpO" id="TsI6i2$6Po" role="2Oq$k0" />
+              <node concept="3TrcHB" id="TsI6i2$79V" role="2OqNvi">
+                <ref role="3TsBF5" to="jel9:TsI6i2$6NW" resolve="command" />
+              </node>
+            </node>
+          </node>
+          <node concept="la8eA" id="TsI6i2$7c6" role="lcghm">
+            <property role="lacIc" value=";" />
+          </node>
+          <node concept="l8MVK" id="TsI6i2$7dI" role="lcghm" />
+        </node>
+      </node>
+    </node>
+  </node>
 </model>
 

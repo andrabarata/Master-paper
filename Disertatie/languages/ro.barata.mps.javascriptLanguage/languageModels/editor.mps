@@ -1049,5 +1049,38 @@
       <node concept="l2Vlx" id="63p_9b6PSpO" role="2iSdaV" />
     </node>
   </node>
+  <node concept="24kQdi" id="TsI6i1RisB">
+    <property role="3GE5qa" value="javascript.commands.var" />
+    <ref role="1XX52x" to="jel9:TsI6i1Riqh" resolve="QuerySelectorCommand" />
+    <node concept="3EZMnI" id="TsI6i1RixW" role="2wV5jI">
+      <node concept="3F1sOY" id="TsI6i1Riy3" role="3EZMnx">
+        <ref role="1NtTu8" to="jel9:TsI6i1Riqj" />
+      </node>
+      <node concept="3F0ifn" id="TsI6i1Riy9" role="3EZMnx">
+        <property role="3F0ifm" value="." />
+        <ref role="1k5W1q" node="7KwyEUhVrMo" resolve="IndicatorSymbol" />
+      </node>
+      <node concept="3F0ifn" id="TsI6i1RmlM" role="3EZMnx">
+        <property role="3F0ifm" value="querySelectorAll(" />
+      </node>
+      <node concept="3F0A7n" id="TsI6i1RmlW" role="3EZMnx">
+        <ref role="1NtTu8" to="jel9:TsI6i1Risw" resolve="command" />
+      </node>
+      <node concept="3F0ifn" id="TsI6i1Rmm8" role="3EZMnx">
+        <property role="3F0ifm" value=")" />
+      </node>
+      <node concept="l2Vlx" id="TsI6i1RixZ" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="TsI6i2$6O3">
+    <property role="3GE5qa" value="javascript.commands" />
+    <ref role="1XX52x" to="jel9:TsI6i2$6NV" resolve="GenericCommand" />
+    <node concept="3EZMnI" id="TsI6i2$6O5" role="2wV5jI">
+      <node concept="3F0A7n" id="TsI6i2$6Oc" role="3EZMnx">
+        <ref role="1NtTu8" to="jel9:TsI6i2$6NW" resolve="command" />
+      </node>
+      <node concept="l2Vlx" id="TsI6i2$6O8" role="2iSdaV" />
+    </node>
+  </node>
 </model>
 

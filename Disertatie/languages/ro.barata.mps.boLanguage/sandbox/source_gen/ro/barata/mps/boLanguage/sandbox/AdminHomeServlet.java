@@ -78,7 +78,9 @@ public class AdminHomeServlet extends HttpServlet {
         }
         category_0.setId(Integer.parseInt(value));
       }
-      category.setCategory(category_0);
+      if (category_0 != null) {
+        category.setCategory(category_0);
+      }
 
     }
     categoryDAO.addCategory(category);
@@ -111,7 +113,6 @@ public class AdminHomeServlet extends HttpServlet {
       value = request.getParameter("id");
       if (value != null && !(value.equals(""))) {
         newCategory.setId(Integer.parseInt(value));
-
       }
       if (category != null && newCategory != null) {
         {
@@ -123,7 +124,9 @@ public class AdminHomeServlet extends HttpServlet {
             }
             category_0.setId(Integer.parseInt(value));
           }
-          newCategory.addCategory(category_0);
+          if (category_0 != null) {
+            newCategory.addCategory(category_0);
+          }
 
         }
         categoryDAO.updateCategory(category, newCategory);

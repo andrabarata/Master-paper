@@ -214,6 +214,12 @@
   <node concept="1TIwiD" id="3MXrPpfvjSv">
     <property role="TrG5h" value="Discount" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="TsI6i2hIVN" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="productReferences" />
+      <property role="20lbJX" value="0..n" />
+      <ref role="20lvS9" node="TsI6i2hIej" resolve="ProductReference" />
+    </node>
     <node concept="1TJgyi" id="3MXrPpfvk9A" role="1TKVEl">
       <property role="TrG5h" value="id" />
       <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
@@ -225,6 +231,10 @@
     <node concept="1TJgyi" id="3MXrPpfvk9F" role="1TKVEl">
       <property role="TrG5h" value="description" />
       <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
+    <node concept="1TJgyi" id="TsI6i2hIbQ" role="1TKVEl">
+      <property role="TrG5h" value="price" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
     </node>
     <node concept="PrWs8" id="5$5a_Ga81l8" role="PzmwI">
       <ref role="PrY4T" to="h5of:6hc$cxbYn_3" resolve="DAOObject" />
@@ -349,6 +359,23 @@
       <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
     </node>
     <node concept="PrWs8" id="63p_9b5psxT" role="PzmwI">
+      <ref role="PrY4T" to="h5of:6hc$cxbYn_3" resolve="DAOObject" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="TsI6i2hIej">
+    <property role="TrG5h" value="ProductReference" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyi" id="TsI6i2hOFe" role="1TKVEl">
+      <property role="TrG5h" value="id" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyj" id="TsI6i2hIek" role="1TKVEi">
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="product" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="4iOjISKrwYK" resolve="Product" />
+    </node>
+    <node concept="PrWs8" id="TsI6i2hIem" role="PzmwI">
       <ref role="PrY4T" to="h5of:6hc$cxbYn_3" resolve="DAOObject" />
     </node>
   </node>

@@ -9,6 +9,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.ServletException;
 import java.io.IOException;
+import java.util.Arrays;
+import java.util.List;
 
 public class EditAttributesAdminServlet extends HttpServlet {
   private Connection connection;
@@ -47,13 +49,186 @@ public class EditAttributesAdminServlet extends HttpServlet {
       requestParameterValue = request.getSession().getAttribute("productId").toString();
     }
     if (action != null && !(action.equals(""))) {
+      if (action.equals("dbupdateAttributeCategory")) {
+        dbupdateAttributeCategory(request, response, requestParameterValue);
+      }
+      if (action.equals("dbupdateAttribute")) {
+        dbupdateAttribute(request, response, requestParameterValue);
+      }
       if (action.equals("dbdeleteAttribute")) {
         dbdeleteAttribute(request, response, requestParameterValue);
+      }
+      if (action.equals("dbdeleteAttributeCategory")) {
+        dbdeleteAttributeCategory(request, response, requestParameterValue);
       }
 
     } else {
       response.getWriter().println(EditAttributesAdminGenerator.getContent(request.getSession(), requestParameterValue));
     }
+  }
+  private void dbupdateAttributeCategory(HttpServletRequest request, HttpServletResponse response, String requestParameterValue) throws SQLException, ClassNotFoundException, IOException, CloneNotSupportedException {
+    String value;
+    String splitter;
+    AttributeCategoryDAO attributecategoryDAO = new AttributeCategoryDAO(connection);
+    AttributeCategory attributecategory = new AttributeCategory();
+    {
+      AttributeCategory newAttributeCategory = null;
+      attributecategory = null;
+      value = request.getParameter("id");
+      if (value != null && !(value.equals(""))) {
+        if (newAttributeCategory == null) {
+          newAttributeCategory = new AttributeCategory();
+        }
+        if (attributecategory == null) {
+          attributecategory = new AttributeCategory();
+        }
+        attributecategory.setId(Integer.parseInt(value));
+        newAttributeCategory.setId(Integer.parseInt(value));
+      }
+      if (newAttributeCategory == null) {
+        newAttributeCategory = new AttributeCategory();
+      }
+      value = request.getParameter("name");
+      if (value != null && !(value.equals(""))) {
+        newAttributeCategory.setName(value);
+      }
+      if (newAttributeCategory == null) {
+        newAttributeCategory = new AttributeCategory();
+      }
+      value = request.getParameter("id");
+      if (value != null && !(value.equals(""))) {
+        newAttributeCategory.setId(Integer.parseInt(value));
+      }
+      if (attributecategory != null && newAttributeCategory != null) {
+        {
+          splitter = ";";
+          int size1 = 0;
+          value = request.getParameter("childid");
+          size1 = Arrays.asList(value.split(splitter)).size();
+          value = request.getParameter("childattributeName");
+          size1 = Arrays.asList(value.split(splitter)).size();
+          value = request.getParameter("childattributeValue");
+          size1 = Arrays.asList(value.split(splitter)).size();
+          for (int counter1 = 0; counter1 < size1; counter1++) {
+            Attribute attribute_1 = null;
+            {
+              value = request.getParameter("childid");
+              List<String> listidchild = Arrays.asList(value.split(splitter));
+              String subValue1 = listidchild.get(counter1);
+              if (subValue1 != null && !(subValue1.equals(""))) {
+                if (attribute_1 == null) {
+                  attribute_1 = new Attribute();
+                }
+                attribute_1.setId(Integer.parseInt(subValue1));
+              }
+            }
+            {
+              value = request.getParameter("childattributeName");
+              List<String> listattributeNamechild = Arrays.asList(value.split(splitter));
+              String subValue1 = listattributeNamechild.get(counter1);
+              if (subValue1 != null && !(subValue1.equals(""))) {
+                if (attribute_1 == null) {
+                  attribute_1 = new Attribute();
+                }
+                attribute_1.setAttributeName(subValue1);
+              }
+            }
+            {
+              value = request.getParameter("childattributeValue");
+              List<String> listattributeValuechild = Arrays.asList(value.split(splitter));
+              String subValue1 = listattributeValuechild.get(counter1);
+              if (subValue1 != null && !(subValue1.equals(""))) {
+                if (attribute_1 == null) {
+                  attribute_1 = new Attribute();
+                }
+                attribute_1.setAttributeValue(subValue1);
+              }
+            }
+            if (attribute_1 != null) {
+              newAttributeCategory.addAttribute(attribute_1);
+              attribute_1.setParentAttributeCategory(newAttributeCategory);
+            }
+          }
+        }
+        attributecategoryDAO.updateAttributeCategory(attributecategory, newAttributeCategory);
+      }
+    }
+
+    response.getWriter().println(EditAttributesAdminGenerator.getContent(request.getSession(), requestParameterValue));
+
+  }
+  private void dbupdateAttribute(HttpServletRequest request, HttpServletResponse response, String requestParameterValue) throws SQLException, ClassNotFoundException, IOException, CloneNotSupportedException {
+    String value;
+    String splitter;
+    AttributeDAO attributeDAO = new AttributeDAO(connection);
+    Attribute attribute = new Attribute();
+    {
+      Attribute newAttribute = null;
+      attribute = null;
+      splitter = ";";
+      value = request.getParameter("id");
+      List<String> searchValues = Arrays.asList(value.split(splitter));
+      int size = Arrays.asList(value.split(splitter)).size();
+      List<String> listattributeName;
+      List<String> listattributeValue;
+      List<String> listid;
+      value = request.getParameter("attributeName");
+      listattributeName = Arrays.asList(value.split(splitter));
+      value = request.getParameter("attributeValue");
+      listattributeValue = Arrays.asList(value.split(splitter));
+      value = request.getParameter("id");
+      listid = Arrays.asList(value.split(splitter));
+      for (int counter = 0; counter < size; counter++) {
+        String subValue = searchValues.get(counter);
+        if (subValue != null && !(subValue.equals(""))) {
+          if (newAttribute == null) {
+            newAttribute = new Attribute();
+          }
+          if (attribute == null) {
+            attribute = new Attribute();
+          }
+          attribute.setId(Integer.parseInt(subValue));
+          newAttribute.setId(Integer.parseInt(subValue));
+        }
+        {
+          if (newAttribute == null) {
+            newAttribute = new Attribute();
+          }
+          String subValue1 = listattributeName.get(counter);
+          if (subValue1 != null && !(subValue1.equals(""))) {
+            newAttribute.setAttributeName(subValue1);
+          }
+        }
+        {
+          if (newAttribute == null) {
+            newAttribute = new Attribute();
+          }
+          String subValue1 = listattributeValue.get(counter);
+          if (subValue1 != null && !(subValue1.equals(""))) {
+            newAttribute.setAttributeValue(subValue1);
+          }
+        }
+        {
+          if (newAttribute == null) {
+            newAttribute = new Attribute();
+          }
+          String subValue1 = listid.get(counter);
+          if (subValue1 != null && !(subValue1.equals(""))) {
+            newAttribute.setId(Integer.parseInt(subValue1));
+          }
+        }
+        if (attribute != null && newAttribute != null) {
+          attributeDAO.updateAttribute(attribute, newAttribute);
+        }
+      }
+
+
+
+
+    }
+
+    response.getWriter().println(EditAttributesAdminGenerator.getContent(request.getSession(), requestParameterValue));
+
   }
   private void dbdeleteAttribute(HttpServletRequest request, HttpServletResponse response, String requestParameterValue) throws SQLException, ClassNotFoundException, IOException, CloneNotSupportedException {
     String value;
@@ -69,6 +244,24 @@ public class EditAttributesAdminServlet extends HttpServlet {
 
     }
     attributeDAO.deleteAttribute(attribute);
+
+    response.getWriter().println(EditAttributesAdminGenerator.getContent(request.getSession(), requestParameterValue));
+
+  }
+  private void dbdeleteAttributeCategory(HttpServletRequest request, HttpServletResponse response, String requestParameterValue) throws SQLException, ClassNotFoundException, IOException, CloneNotSupportedException {
+    String value;
+    String splitter;
+    AttributeCategoryDAO attributecategoryDAO = new AttributeCategoryDAO(connection);
+    AttributeCategory attributecategory = new AttributeCategory();
+    attributecategory = new AttributeCategory();
+    // Sets the given property with values fetched either from the input model,  
+    // or from the HTTP data recevied from the client (browser) 
+    value = request.getParameter("id");
+    if (value != null && !(value.equals(""))) {
+      attributecategory.setId(Integer.parseInt(value));
+
+    }
+    attributecategoryDAO.deleteAttributeCategory(attributecategory);
 
     response.getWriter().println(EditAttributesAdminGenerator.getContent(request.getSession(), requestParameterValue));
 
