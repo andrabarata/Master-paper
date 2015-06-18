@@ -73,4 +73,5 @@ public class AdminpromotionsServlet extends HttpServlet {
     response.getWriter().println(AdminpromotionsGenerator.getContent(request.getSession(), requestParameterValue));
 
   }
+
 }

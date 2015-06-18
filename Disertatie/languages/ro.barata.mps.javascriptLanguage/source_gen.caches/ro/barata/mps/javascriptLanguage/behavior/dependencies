@@ -59,6 +59,7 @@
     <classNode dependClassName="ro.barata.mps.javascriptLanguage.behavior.ArrayCommand_BehaviorDescriptor" />
     <classNode dependClassName="ro.barata.mps.javascriptLanguage.behavior.ArrayExpresion_BehaviorDescriptor" />
     <classNode dependClassName="ro.barata.mps.javascriptLanguage.behavior.AssignmentCommand_BehaviorDescriptor" />
+    <classNode dependClassName="ro.barata.mps.javascriptLanguage.behavior.BooleanValue_BehaviorDescriptor" />
     <classNode dependClassName="ro.barata.mps.javascriptLanguage.behavior.CallFunctionCommand_BehaviorDescriptor" />
     <classNode dependClassName="ro.barata.mps.javascriptLanguage.behavior.ChangePageCommand_BehaviorDescriptor" />
     <classNode dependClassName="ro.barata.mps.javascriptLanguage.behavior.DocumentIdCommand_BehaviorDescriptor" />
@@ -66,6 +67,7 @@
     <classNode dependClassName="ro.barata.mps.javascriptLanguage.behavior.DummyCommand_BehaviorDescriptor" />
     <classNode dependClassName="ro.barata.mps.javascriptLanguage.behavior.ForCommand_BehaviorDescriptor" />
     <classNode dependClassName="ro.barata.mps.javascriptLanguage.behavior.FunctionCommand_BehaviorDescriptor" />
+    <classNode dependClassName="ro.barata.mps.javascriptLanguage.behavior.GenericCommand_BehaviorDescriptor" />
     <classNode dependClassName="ro.barata.mps.javascriptLanguage.behavior.GetArrayValueCommand_BehaviorDescriptor" />
     <classNode dependClassName="ro.barata.mps.javascriptLanguage.behavior.InitializeVarCommand_BehaviorDescriptor" />
     <classNode dependClassName="ro.barata.mps.javascriptLanguage.behavior.InstanceValue_BehaviorDescriptor" />
@@ -90,6 +92,14 @@
     <classNode dependClassName="ro.barata.mps.javascriptLanguage.behavior.VarValueHREF_BehaviorDescriptor" />
     <classNode dependClassName="ro.barata.mps.javascriptLanguage.behavior.VarValue_BehaviorDescriptor" />
     <classNode extendsClassName="jetbrains.mps.smodel.runtime.BehaviorAspectDescriptor" />
+  </dependency>
+  <dependency className="ro.barata.mps.javascriptLanguage.behavior.BooleanValue_BehaviorDescriptor" file="BooleanValue_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept_BehaviorDescriptor" />
+    <classNode dependClassName="ro.barata.mps.javascriptLanguage.behavior.JavascriptValue_BehaviorDescriptor" />
+    <classNode extendsClassName="java.lang.Cloneable" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
   </dependency>
   <dependency className="ro.barata.mps.javascriptLanguage.behavior.CallFunctionCommand_BehaviorDescriptor" file="CallFunctionCommand_BehaviorDescriptor.java">
     <classNode dependClassName="java.lang.Override" />
@@ -146,6 +156,12 @@
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="ro.barata.mps.javascriptLanguage.behavior.VarCommandValue_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="ro.barata.mps.javascriptLanguage.behavior.GenericCommand_BehaviorDescriptor" file="GenericCommand_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="ro.barata.mps.javascriptLanguage.behavior.JavascriptCommand_BehaviorDescriptor" />
     <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
   </dependency>
   <dependency className="ro.barata.mps.javascriptLanguage.behavior.GetArrayValueCommand_BehaviorDescriptor" file="GetArrayValueCommand_BehaviorDescriptor.java">

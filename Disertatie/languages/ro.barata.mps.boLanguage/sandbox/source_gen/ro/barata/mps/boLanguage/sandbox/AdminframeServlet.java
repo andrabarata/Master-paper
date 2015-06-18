@@ -9,10 +9,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.ServletException;
 import java.io.IOException;
+import javax.servlet.http.HttpSession;
 
-public class AdminHomepromotionsServlet extends HttpServlet {
+public class AdminframeServlet extends HttpServlet {
   private Connection connection;
-  public AdminHomepromotionsServlet() throws SQLException, ClassNotFoundException, CloneNotSupportedException {
+  public AdminframeServlet() throws SQLException, ClassNotFoundException, CloneNotSupportedException {
     if (connection == null) {
       connection = DatabaseConnection.getConnection();
     }
@@ -41,10 +42,18 @@ public class AdminHomepromotionsServlet extends HttpServlet {
     String action = request.getParameter("actionName");
     String requestParameterValue = "";
     if (action != null && !(action.equals(""))) {
+      if (action.equals("jsonDeleteUser")) {
+        jsonDeleteUser(request, response, requestParameterValue);
+      }
 
     } else {
-      response.getWriter().println(AdminHomepromotionsGenerator.getContent(request.getSession(), requestParameterValue));
+      response.getWriter().println(AdminframeGenerator.getContent(request.getSession(), requestParameterValue));
     }
+  }
+  private void jsonDeleteUser(HttpServletRequest request, HttpServletResponse response, String requestParameterValue) throws ClassNotFoundException, SQLException, IOException, CloneNotSupportedException {
+    HttpSession session = request.getSession();
+    session.removeAttribute("user");
+    response.getWriter().println(AdminframeGenerator.getContent(request.getSession(), requestParameterValue));
   }
 
 }

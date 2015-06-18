@@ -58,6 +58,70 @@ public class AddressDAO {
     }
     return addresss;
   }
+  public List<Address> getQueryAddresss(Address address) throws SQLException {
+    List<Address> addresss = new ArrayList<Address>();
+    String columns = "";
+    columns += "table0." + "id" + " \"parent" + "id" + "\",";
+    columns += "table0." + "line1" + " \"parent" + "line1" + "\",";
+    columns += "table0." + "line2" + " \"parent" + "line2" + "\",";
+    columns += "table0." + "postcode" + " \"parent" + "postcode" + "\",";
+    columns += "table0." + "state" + " \"parent" + "state" + "\",";
+    columns += "table0." + "country" + " \"parent" + "country" + "\",";
+    columns += "table0." + "city" + " \"parent" + "city" + "\",";
+    String sql = " from " + "adresses" + " table0";
+    String leftJoins = "";
+    int i = 1;
+    String values = "";
+    if (address.getId() != null) {
+      values += "id" + "='" + address.getId() + "' and ";
+    }
+    if (address.getLine1() != null) {
+      values += "line1" + "='" + address.getLine1() + "' and ";
+    }
+    if (address.getLine2() != null) {
+      values += "line2" + "='" + address.getLine2() + "' and ";
+    }
+    if (address.getPostcode() != null) {
+      values += "postcode" + "='" + address.getPostcode() + "' and ";
+    }
+    if (address.getState() != null) {
+      values += "state" + "='" + address.getState() + "' and ";
+    }
+    if (address.getCountry() != null) {
+      values += "country" + "='" + address.getCountry() + "' and ";
+    }
+    if (address.getCity() != null) {
+      values += "city" + "='" + address.getCity() + "' and ";
+    }
+    if (values.length() > 6) {
+      values = " where " + values.substring(0, values.length() - 5);
+    }
+
+    sql = "select " + columns.substring(0, columns.length() - 1) + sql + leftJoins + values;
+    System.out.println(sql);
+    ResultSet set = stmt.executeQuery(sql);
+    Address foundAddress = null;
+    while (set.next()) {
+      foundAddress = new Address();
+      foundAddress.setId(Integer.valueOf(set.getBigDecimal("parent" + "id").intValue()));
+      foundAddress.setLine1(set.getString("parent" + "line1"));
+      foundAddress.setLine2(set.getString("parent" + "line2"));
+      foundAddress.setPostcode(Integer.valueOf(set.getBigDecimal("parent" + "postcode").intValue()));
+      foundAddress.setState(set.getString("parent" + "state"));
+      foundAddress.setCountry(set.getString("parent" + "country"));
+      foundAddress.setCity(set.getString("parent" + "city"));
+      boolean flag = true;
+      for (Address entity : addresss) {
+        if (entity.getId() == foundAddress.getId()) {
+          flag = false;
+        }
+      }
+      if (flag) {
+        addresss.add(foundAddress);
+      }
+    }
+    return addresss;
+  }
 
   public List<Address> findAddresss(Address address) throws SQLException {
     List<Address> addresss = new ArrayList<Address>();
@@ -98,7 +162,6 @@ public class AddressDAO {
     if (address.getCity() != null) {
       values += "city" + "='" + address.getCity() + "' and ";
     }
-    int i = 1;
     if (values.length() > 6) {
       values = " where " + values.substring(0, values.length() - 5);
     }

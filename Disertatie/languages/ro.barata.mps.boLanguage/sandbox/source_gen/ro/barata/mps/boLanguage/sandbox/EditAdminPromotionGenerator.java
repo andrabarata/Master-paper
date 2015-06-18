@@ -18,6 +18,8 @@ public class EditAdminPromotionGenerator {
     html += "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">";
     html += "<script src=\"/" + "jquery.js" + "\"></script>";
     html += "<script src=\"/" + "bootstrap.min.js" + "\"></script>";
+    html += "<script src=\"/" + "adminframe.js" + "\"></script>";
+    html += "<script src=\"/" + "main.js" + "\"></script>";
     html += "<script src=\"/" + "editAdminPromotion.js" + "\"></script>";
     html += "<script src=\"/general.js\"></script>";
     html += "<link rel=\"stylesheet\" type=\"text/css\" href=\"/" + "main.css" + "\"/>";
@@ -92,7 +94,7 @@ public class EditAdminPromotionGenerator {
 
         html += "<div";
         href = "";
-        html += " class=\"" + "col-md-3" + "\"";
+        html += " class=\"" + "col-md-7" + "\"";
         html += ">";
         html += "<form";
         href = "";
@@ -118,6 +120,7 @@ public class EditAdminPromotionGenerator {
         html += "<input";
         html += " type=\"" + "text" + "\" ";
         href = "";
+        html += " id='" + "id" + "'";
         html += " " + "readonly" + "=\"" + "readonly" + "\"";
 
         html += " value=\"" + discount.getId().toString() + "\" ";
@@ -142,6 +145,7 @@ public class EditAdminPromotionGenerator {
         href = "";
         html += " id='" + "price" + "'";
 
+        html += " value=\"" + discount.getPrice().toString() + "\" ";
         html += "/>";
         html += "<label";
         href = "";
@@ -151,7 +155,7 @@ public class EditAdminPromotionGenerator {
         href = "";
         html += " id='" + "description" + "'";
 
-        html += ">" + "" + "</textarea>";
+        html += ">" + discount.getDescription().toString() + "</textarea>";
         html += "</div>";
 
         html += "<div";
@@ -246,6 +250,8 @@ public class EditAdminPromotionGenerator {
         html += "<input";
         html += " type=\"" + "button" + "\" ";
         href = "";
+        html += " " + "data-target" + "=\"" + "#myModal" + "\"";
+        html += " " + "data-toggle" + "=\"" + "modal" + "\"";
         html += " class=\"" + "pure-button button-success pull-left" + "\"";
 
         html += " value=\"" + "Add" + "\" ";
@@ -254,6 +260,9 @@ public class EditAdminPromotionGenerator {
         html += " type=\"" + "button" + "\" ";
         href = "";
         html += " class=\"" + "pure-button button-error pull-right" + "\"";
+        parameters = "";
+        html += " " + "onclick" + "=\"" + "deleteProducts" + "(" + parameters + ")\"";
+
 
         html += " value=\"" + "Remove" + "\" ";
         html += "/>";
@@ -261,19 +270,22 @@ public class EditAdminPromotionGenerator {
 
         html += "</div>";
 
-        html += "<input";
-        html += " type=\"" + "button" + "\" ";
-        href = "";
-        html += " class=\"" + "pure-button pure-button-primary pull-right" + "\"";
-
-        html += " value=\"" + "Change" + "\" ";
-        html += "/>";
         html += "</fieldset>";
 
         html += "</form>";
 
         html += "</div>";
 
+        html += "<input";
+        html += " type=\"" + "button" + "\" ";
+        href = "";
+        html += " class=\"" + "pure-button pure-button-primary pull-right" + "\"";
+        parameters = "";
+        html += " " + "onclick" + "=\"" + "changePromotion" + "(" + parameters + ")\"";
+
+
+        html += " value=\"" + "Change" + "\" ";
+        html += "/>";
       }
     }
     html += "</div>";
@@ -283,46 +295,65 @@ public class EditAdminPromotionGenerator {
     html += "<div";
     href = "";
     html += " id='" + "myModal" + "'";
-    html += " class=\"" + "modal fade bs-example-modal-lg" + "\"";
-    html += " " + "tabindex" + "=\"" + "-1" + "\"";
+    html += " class=\"" + "modal fade" + "\"";
     html += " " + "role" + "=\"" + "dialog" + "\"";
-    html += " " + "aria-labelledby" + "=\"" + "myModal" + "\"";
-    html += " " + "tabindex" + "=\"" + "-1" + "\"";
     html += " " + "role" + "=\"" + "dialog" + "\"";
-    html += " " + "aria-labelledby" + "=\"" + "myModal" + "\"";
     html += ">";
     html += "<div";
     href = "";
-    html += " class=\"" + "modal-dialog modal-lg" + "\"";
+    html += " class=\"" + "modal-dialog" + "\"";
     html += ">";
     html += "<div";
     href = "";
     html += " class=\"" + "modal-content" + "\"";
     html += ">";
+    html += "<div";
+    href = "";
+    html += " class=\"" + "modal-header" + "\"";
+    html += ">";
+    html += "<input";
+    html += " type=\"" + "button" + "\" ";
+    href = "";
+    html += " " + "data-dismiss" + "=\"" + "modal" + "\"";
+    html += " class=\"" + "close" + "\"";
+
+    html += " value=\"" + "&times;" + "\" ";
+    html += "/>";
+    html += "<h4";
+    href = "";
+
+    html += ">" + "Select the available products" + "</h4>";
+    html += "</div>";
+
+    html += "<div";
+    href = "";
+    html += " class=\"" + "modal-body" + "\"";
+    html += ">";
     html += "<select";
+    html += " id='" + "cat-selected" + "'";
     html += " " + "multiple" + "=\"" + "multiple" + "\"";
 
     html += ">";
 
     {
-      List<Category> loop_a0a0c0 = categoryDAO.getAllCategorys();
-      for (int counter_a0a0c0 = 0; counter_a0a0c0 < loop_a0a0c0.size(); counter_a0a0c0++) {
-        category = loop_a0a0c0.get(counter_a0a0c0);
+      List<Category> loop_a0b0a2a = categoryDAO.getAllCategorys();
+      for (int counter_a0b0a2a = 0; counter_a0b0a2a < loop_a0b0a2a.size(); counter_a0b0a2a++) {
+        category = loop_a0b0a2a.get(counter_a0b0a2a);
         value = requestParameterValue;
         {
-          List<Discount> entities_a0a0a2a = category.getDiscounts();
-          if (entities_a0a0a2a == null) {
+          List<Discount> entities_a0a1a0c0 = category.getDiscounts();
+          if (entities_a0a1a0c0 == null) {
           } else {
-            for (Discount childDiscount : entities_a0a0a2a) {
+            for (Discount childDiscount : entities_a0a1a0c0) {
               if (childDiscount.getId().equals(Integer.parseInt(value))) {
 
                 searchCategory = new Category();
                 value = category.getId().toString();
                 searchCategory.setId(Integer.parseInt(value));
                 {
-                  List<Product> loop_a0a0a0c0 = categoryDAO.findChildProducts(searchCategory);
-                  for (int counter_a0a0a0c0 = 0; counter_a0a0a0c0 < loop_a0a0a0c0.size(); counter_a0a0a0c0++) {
-                    products = loop_a0a0a0c0.get(counter_a0a0a0c0);
+                  List<Product> loop_a0a0b0a2a = categoryDAO.findChildProducts(searchCategory);
+                  for (int counter_a0a0b0a2a = 0; counter_a0a0b0a2a < loop_a0a0b0a2a.size(); counter_a0a0b0a2a++) {
+                    products = loop_a0a0b0a2a.get(counter_a0a0b0a2a);
                     html += "<option";
                     href = "";
                     html += " id='" + products.getId().toString() + "'";
@@ -340,13 +371,25 @@ public class EditAdminPromotionGenerator {
     }
     html += "</select>";
 
+    html += "<div";
+    href = "";
+    html += " class=\"" + "modal-footer" + "\"";
+    html += ">";
     html += "<input";
     html += " type=\"" + "button" + "\" ";
     href = "";
+    html += " " + "data-dismiss" + "=\"" + "modal" + "\"";
     html += " class=\"" + "pure-button button-success pull-right" + "\"";
+    parameters = "";
+    html += " " + "onclick" + "=\"" + "loadProducts" + "(" + parameters + ")\"";
+
 
     html += " value=\"" + "Add" + "\" ";
     html += "/>";
+    html += "</div>";
+
+    html += "</div>";
+
     html += "</div>";
 
     html += "</div>";

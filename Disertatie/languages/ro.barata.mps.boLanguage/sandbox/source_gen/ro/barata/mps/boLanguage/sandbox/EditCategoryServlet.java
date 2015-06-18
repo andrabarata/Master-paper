@@ -117,4 +117,5 @@ public class EditCategoryServlet extends HttpServlet {
     response.getWriter().println(EditCategoryGenerator.getContent(request.getSession(), requestParameterValue));
 
   }
+
 }

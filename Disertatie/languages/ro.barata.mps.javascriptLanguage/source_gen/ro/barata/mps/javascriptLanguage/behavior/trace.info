@@ -28,7 +28,10 @@
       <unit at="6,0,14,0" name="ro.barata.mps.javascriptLanguage.behavior.AssignmentCommand_BehaviorDescriptor" />
     </file>
     <file name="BehaviorAspectDescriptor.java">
-      <unit at="9,0,92,0" name="ro.barata.mps.javascriptLanguage.behavior.BehaviorAspectDescriptor" />
+      <unit at="9,0,96,0" name="ro.barata.mps.javascriptLanguage.behavior.BehaviorAspectDescriptor" />
+    </file>
+    <file name="BooleanValue_BehaviorDescriptor.java">
+      <unit at="7,0,15,0" name="ro.barata.mps.javascriptLanguage.behavior.BooleanValue_BehaviorDescriptor" />
     </file>
     <file name="CallFunctionCommand_BehaviorDescriptor.java">
       <unit at="6,0,14,0" name="ro.barata.mps.javascriptLanguage.behavior.CallFunctionCommand_BehaviorDescriptor" />
@@ -53,6 +56,9 @@
     </file>
     <file name="FunctionCommand_BehaviorDescriptor.java">
       <unit at="6,0,14,0" name="ro.barata.mps.javascriptLanguage.behavior.FunctionCommand_BehaviorDescriptor" />
+    </file>
+    <file name="GenericCommand_BehaviorDescriptor.java">
+      <unit at="6,0,14,0" name="ro.barata.mps.javascriptLanguage.behavior.GenericCommand_BehaviorDescriptor" />
     </file>
     <file name="GetArrayValueCommand_BehaviorDescriptor.java">
       <unit at="6,0,14,0" name="ro.barata.mps.javascriptLanguage.behavior.GetArrayValueCommand_BehaviorDescriptor" />

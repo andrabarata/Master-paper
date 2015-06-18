@@ -47,6 +47,7 @@ public class HTTPServer {
     }
     context.addServlet(new ServletHolder(new ProductsServlet()), "/" + "products" + "/*");
     context.addServlet(new ServletHolder(new ProductServlet()), "/" + "product" + "/*");
+    context.addServlet(new ServletHolder(new AdminframeServlet()), "/" + "adminframe" + "/*");
     context.addServlet(new ServletHolder(new AdminHomeServlet()), "/" + "adminHome" + "/*");
     context.addServlet(new ServletHolder(new EditCategoryServlet()), "/" + "editCategory" + "/*");
     context.addServlet(new ServletHolder(new EditAdminproductServlet()), "/" + "editAdminproduct" + "/*");

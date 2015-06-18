@@ -73,6 +73,76 @@ public class UserDAO {
     }
     return users;
   }
+  public List<User> getQueryUsers(User user) throws SQLException {
+    List<User> users = new ArrayList<User>();
+    String columns = "";
+    columns += "table0." + "id" + " \"parent" + "id" + "\",";
+    columns += "table0." + "name" + " \"parent" + "name" + "\",";
+    columns += "table0." + "password" + " \"parent" + "password" + "\",";
+    columns += "table0." + "priviledge" + " \"parent" + "priviledge" + "\",";
+    String sql = " from " + "users" + " table0";
+    String leftJoins = "";
+    int i = 1;
+    columns += "table" + i + "." + "id" + " \"" + "persons" + "id" + "\",";
+    columns += "table" + i + "." + "firstName" + " \"" + "persons" + "firstName" + "\",";
+    columns += "table" + i + "." + "lastName" + " \"" + "persons" + "lastName" + "\",";
+    leftJoins += " left join " + "persons" + " table" + i + " on table" + i + "." + "id" + "=table0." + "userId" + " ";
+    i++;
+    String values = "";
+    if (user.getUserId() != null) {
+      values += "id" + "='" + user.getUserId() + "' and ";
+    }
+    if (user.getUserName() != null) {
+      values += "name" + "='" + user.getUserName() + "' and ";
+    }
+    if (user.getPassword() != null) {
+      values += "password" + "='" + user.getPassword() + "' and ";
+    }
+    if (user.getPriviledge() != null) {
+      values += "priviledge" + "='" + user.getPriviledge() + "' and ";
+    }
+    if (values.length() > 6) {
+      values = " where " + values.substring(0, values.length() - 5);
+    }
+
+    sql = "select " + columns.substring(0, columns.length() - 1) + sql + leftJoins + values;
+    System.out.println(sql);
+    ResultSet set = stmt.executeQuery(sql);
+    User foundUser = null;
+    while (set.next()) {
+      foundUser = new User();
+      foundUser.setUserId(Integer.valueOf(set.getBigDecimal("parent" + "id").intValue()));
+      foundUser.setUserName(set.getString("parent" + "name"));
+      foundUser.setPassword(set.getString("parent" + "password"));
+      foundUser.setPriviledge(set.getString("parent" + "priviledge"));
+      {
+        Person reference = new Person();
+        if (set.getBigDecimal("persons" + "id") != null) {
+          reference.setId(Integer.valueOf(set.getBigDecimal("persons" + "id").intValue()));
+        }
+        if (set.getString("persons" + "firstName") != null) {
+          reference.setFirstName(set.getString("persons" + "firstName"));
+        }
+        if (set.getString("persons" + "lastName") != null) {
+          reference.setLastName(set.getString("persons" + "lastName"));
+        }
+
+        if (reference.getId() != null) {
+          foundUser.setPerson(reference);
+        }
+      }
+      boolean flag = true;
+      for (User entity : users) {
+        if (entity.getUserId() == foundUser.getUserId()) {
+          flag = false;
+        }
+      }
+      if (flag) {
+        users.add(foundUser);
+      }
+    }
+    return users;
+  }
 
   public List<User> findUsers(User user) throws SQLException {
     List<User> users = new ArrayList<User>();
@@ -98,7 +168,6 @@ public class UserDAO {
     if (user.getPriviledge() != null) {
       values += "priviledge" + "='" + user.getPriviledge() + "' and ";
     }
-    int i = 1;
     if (values.length() > 6) {
       values = " where " + values.substring(0, values.length() - 5);
     }
@@ -234,7 +303,7 @@ public class UserDAO {
       if (referencePersonDAO.findPersons(referencePerson).size() == 0) {
         referencePersonDAO.addPerson(referencePerson);
       }
-      values += "userId" + "=" + "'" + referencePerson.getId() + "'";
+      values += "userId" + "=" + "'" + referencePerson.getId() + "',";
     }
     String condition = " where ";
     if (olduser.getUserId() != null) {

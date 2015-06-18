@@ -73,7 +73,7 @@ public class LoginServlet extends HttpServlet {
     }
     UserDAO userDAO = new UserDAO(connection);
     // Returns the entity that matched the pattern from the DB 
-    List<User> userList = userDAO.findUsers(searchUser);
+    List<User> userList = userDAO.getQueryUsers(searchUser);
     User user = ((userList.size() > 0) ? userList.get(0) : new User());
     {
       HttpSession session = request.getSession();
@@ -84,4 +84,5 @@ public class LoginServlet extends HttpServlet {
     String json = serializer.serialize(user);
     response.getWriter().println(json);
   }
+
 }

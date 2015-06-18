@@ -46,4 +46,5 @@ public class OrdersServlet extends HttpServlet {
       response.getWriter().println(OrdersGenerator.getContent(request.getSession(), requestParameterValue));
     }
   }
+
 }

@@ -1,3 +1,10 @@
+img{
+max-width:100%;
+max-height:100%;
+}
+body{
+background-color:rgb(243,253,253)!important;
+}
 #authentificate{
 visibility:hidden;
 color:red;
@@ -20,10 +27,6 @@ border-radius:4px;
 .caption{
 height:130px;
 overflow:hidden;
-}
-img{
-max-width:100%;
-max-height:100%;
 }
 .ratings{
 padding-right:10px;
@@ -67,9 +70,6 @@ padding-left:25px;
 -webkit-column-count:2;
 -moz-column-count:2;
 column-count:2;
-}
-body{
-background-color:rgb(243,253,253)!important;
 }
 .button-success,.button-error,.button-warning,.button-secondary {
 color:white !important;

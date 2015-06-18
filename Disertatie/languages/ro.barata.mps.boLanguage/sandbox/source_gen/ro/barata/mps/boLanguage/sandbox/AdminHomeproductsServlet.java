@@ -67,4 +67,5 @@ public class AdminHomeproductsServlet extends HttpServlet {
     response.getWriter().println(AdminHomeproductsGenerator.getContent(request.getSession(), requestParameterValue));
 
   }
+
 }

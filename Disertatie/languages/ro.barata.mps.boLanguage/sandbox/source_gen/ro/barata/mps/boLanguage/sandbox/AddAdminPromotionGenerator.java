@@ -18,6 +18,9 @@ public class AddAdminPromotionGenerator {
     html += "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">";
     html += "<script src=\"/" + "jquery.js" + "\"></script>";
     html += "<script src=\"/" + "bootstrap.min.js" + "\"></script>";
+    html += "<script src=\"/" + "adminframe.js" + "\"></script>";
+    html += "<script src=\"/" + "main.js" + "\"></script>";
+    html += "<script src=\"/" + "addAdminPromotion.js" + "\"></script>";
     html += "<script src=\"/general.js\"></script>";
     html += "<link rel=\"stylesheet\" type=\"text/css\" href=\"/" + "main.css" + "\"/>";
     html += "<link rel=\"stylesheet\" type=\"text/css\" href=\"/" + "pure-min.css" + "\"/>";
@@ -169,6 +172,9 @@ public class AddAdminPromotionGenerator {
     html += " type=\"" + "button" + "\" ";
     href = "";
     html += " class=\"" + "pure-button button-error pull-right" + "\"";
+    parameters = "";
+    html += " " + "onclick" + "=\"" + "deleteProducts" + "(" + parameters + ")\"";
+
 
     html += " value=\"" + "Remove" + "\" ";
     html += "/>";
@@ -186,6 +192,9 @@ public class AddAdminPromotionGenerator {
     html += " type=\"" + "button" + "\" ";
     href = "";
     html += " class=\"" + "pure-button pure-button-primary pull-right" + "\"";
+    parameters = "";
+    html += " " + "onclick" + "=\"" + "addPromotion" + "(" + parameters + ")\"";
+
 
     html += " value=\"" + "Change" + "\" ";
     html += "/>";
@@ -194,23 +203,42 @@ public class AddAdminPromotionGenerator {
     html += "<div";
     href = "";
     html += " id='" + "myModal" + "'";
-    html += " class=\"" + "modal fade bs-example-modal-lg" + "\"";
-    html += " " + "tabindex" + "=\"" + "-1" + "\"";
+    html += " class=\"" + "modal fade" + "\"";
     html += " " + "role" + "=\"" + "dialog" + "\"";
-    html += " " + "aria-labelledby" + "=\"" + "myModal" + "\"";
-    html += " " + "tabindex" + "=\"" + "-1" + "\"";
     html += " " + "role" + "=\"" + "dialog" + "\"";
-    html += " " + "aria-labelledby" + "=\"" + "myModal" + "\"";
     html += ">";
     html += "<div";
     href = "";
-    html += " class=\"" + "modal-dialog modal-lg" + "\"";
+    html += " class=\"" + "modal-dialog" + "\"";
     html += ">";
     html += "<div";
     href = "";
     html += " class=\"" + "modal-content" + "\"";
     html += ">";
+    html += "<div";
+    href = "";
+    html += " class=\"" + "modal-header" + "\"";
+    html += ">";
+    html += "<input";
+    html += " type=\"" + "button" + "\" ";
+    href = "";
+    html += " " + "data-dismiss" + "=\"" + "modal" + "\"";
+    html += " class=\"" + "close" + "\"";
+
+    html += " value=\"" + "&times;" + "\" ";
+    html += "/>";
+    html += "<h4";
+    href = "";
+
+    html += ">" + "Select the available products" + "</h4>";
+    html += "</div>";
+
+    html += "<div";
+    href = "";
+    html += " class=\"" + "modal-body" + "\"";
+    html += ">";
     html += "<select";
+    html += " id='" + "cat-selected" + "'";
     html += " " + "multiple" + "=\"" + "multiple" + "\"";
 
     html += ">";
@@ -219,9 +247,9 @@ public class AddAdminPromotionGenerator {
     value = requestParameterValue;
     searchCategory.setId(Integer.parseInt(value));
     {
-      List<Product> loop_a0a0c0_0 = categoryDAO.findChildProducts(searchCategory);
-      for (int counter_a0a0c0_0 = 0; counter_a0a0c0_0 < loop_a0a0c0_0.size(); counter_a0a0c0_0++) {
-        products = loop_a0a0c0_0.get(counter_a0a0c0_0);
+      List<Product> loop_a0b0a2a_0 = categoryDAO.findChildProducts(searchCategory);
+      for (int counter_a0b0a2a_0 = 0; counter_a0b0a2a_0 < loop_a0b0a2a_0.size(); counter_a0b0a2a_0++) {
+        products = loop_a0b0a2a_0.get(counter_a0b0a2a_0);
         html += "<option";
         href = "";
         html += " id='" + products.getId().toString() + "'";
@@ -231,14 +259,25 @@ public class AddAdminPromotionGenerator {
     }
     html += "</select>";
 
+    html += "</div>";
+
+    html += "<div";
+    href = "";
+    html += " class=\"" + "modal-footer" + "\"";
+    html += ">";
     html += "<input";
     html += " type=\"" + "button" + "\" ";
     href = "";
     html += " " + "data-dismiss" + "=\"" + "modal" + "\"";
     html += " class=\"" + "pure-button button-success pull-right" + "\"";
+    parameters = "";
+    html += " " + "onclick" + "=\"" + "loadProducts" + "(" + parameters + ")\"";
+
 
     html += " value=\"" + "Add" + "\" ";
     html += "/>";
+    html += "</div>";
+
     html += "</div>";
 
     html += "</div>";

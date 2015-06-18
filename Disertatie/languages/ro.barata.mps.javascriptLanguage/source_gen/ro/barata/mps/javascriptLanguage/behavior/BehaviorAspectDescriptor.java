@@ -17,75 +17,79 @@ public class BehaviorAspectDescriptor implements jetbrains.mps.smodel.runtime.Be
         return new ArrayCommand_BehaviorDescriptor();
       case 5:
         return new AssignmentCommand_BehaviorDescriptor();
-      case 6:
-        return new CallFunctionCommand_BehaviorDescriptor();
       case 7:
+        return new CallFunctionCommand_BehaviorDescriptor();
+      case 8:
         return new ChangePageCommand_BehaviorDescriptor();
-      case 9:
-        return new DotExpressionCommand_BehaviorDescriptor();
       case 10:
-        return new DummyCommand_BehaviorDescriptor();
+        return new DotExpressionCommand_BehaviorDescriptor();
       case 11:
+        return new DummyCommand_BehaviorDescriptor();
+      case 12:
         return new ForCommand_BehaviorDescriptor();
-      case 13:
+      case 15:
         return new GetArrayValueCommand_BehaviorDescriptor();
-      case 25:
+      case 27:
         return new PushHTMLCommand_BehaviorDescriptor();
-      case 30:
-        return new SubmitCommand_BehaviorDescriptor();
-      case 31:
-        return new VarCommand_BehaviorDescriptor();
       case 32:
+        return new SubmitCommand_BehaviorDescriptor();
+      case 33:
+        return new VarCommand_BehaviorDescriptor();
+      case 34:
         return new VarIdCommand_BehaviorDescriptor();
       case 2:
         return new AjaxJavascriptFunction_BehaviorDescriptor();
-      case 17:
+      case 19:
         return new JavascriptFile_BehaviorDescriptor();
-      case 18:
+      case 20:
         return new JavascriptFunction_BehaviorDescriptor();
-      case 16:
+      case 18:
         return new IntValue_BehaviorDescriptor();
-      case 21:
+      case 23:
         return new JavascriptParameter_BehaviorDescriptor();
-      case 29:
+      case 31:
         return new StringValue_BehaviorDescriptor();
-      case 34:
+      case 36:
         return new VarValue_BehaviorDescriptor();
       case 0:
         return new ActionVarValue_BehaviorDescriptor();
-      case 20:
-        return new JavascriptOperation_BehaviorDescriptor();
-      case 14:
-        return new InitializeVarCommand_BehaviorDescriptor();
-      case 33:
-        return new VarNameCommand_BehaviorDescriptor();
-      case 19:
-        return new JavascriptIfCommand_BehaviorDescriptor();
-      case 15:
-        return new InstanceValue_BehaviorDescriptor();
-      case 12:
-        return new FunctionCommand_BehaviorDescriptor();
-      case 35:
-        return new VarValueHREF_BehaviorDescriptor();
-      case 8:
-        return new DocumentIdCommand_BehaviorDescriptor();
       case 22:
-        return new NullValue_BehaviorDescriptor();
-      case 28:
-        return new StoreCommand_BehaviorDescriptor();
-      case 23:
-        return new Parameter_BehaviorDescriptor();
+        return new JavascriptOperation_BehaviorDescriptor();
+      case 16:
+        return new InitializeVarCommand_BehaviorDescriptor();
+      case 35:
+        return new VarNameCommand_BehaviorDescriptor();
+      case 21:
+        return new JavascriptIfCommand_BehaviorDescriptor();
+      case 17:
+        return new InstanceValue_BehaviorDescriptor();
+      case 13:
+        return new FunctionCommand_BehaviorDescriptor();
+      case 37:
+        return new VarValueHREF_BehaviorDescriptor();
+      case 9:
+        return new DocumentIdCommand_BehaviorDescriptor();
       case 24:
+        return new NullValue_BehaviorDescriptor();
+      case 30:
+        return new StoreCommand_BehaviorDescriptor();
+      case 25:
+        return new Parameter_BehaviorDescriptor();
+      case 26:
         return new ParameterRefence_BehaviorDescriptor();
-      case 27:
+      case 29:
         return new SimpleExpresion_BehaviorDescriptor();
       case 4:
         return new ArrayExpresion_BehaviorDescriptor();
-      case 26:
+      case 28:
         return new QuerySelectorCommand_BehaviorDescriptor();
+      case 14:
+        return new GenericCommand_BehaviorDescriptor();
+      case 6:
+        return new BooleanValue_BehaviorDescriptor();
       default:
         return BehaviorAspectInterpreted.getInstance().getDescriptor(fqName);
     }
   }
-  private static String[] stringSwitchCases_846f5o_a0a0b = new String[]{"ro.barata.mps.javascriptLanguage.structure.ActionVarValue", "ro.barata.mps.javascriptLanguage.structure.AddArrayElementCommand", "ro.barata.mps.javascriptLanguage.structure.AjaxJavascriptFunction", "ro.barata.mps.javascriptLanguage.structure.ArrayCommand", "ro.barata.mps.javascriptLanguage.structure.ArrayExpresion", "ro.barata.mps.javascriptLanguage.structure.AssignmentCommand", "ro.barata.mps.javascriptLanguage.structure.CallFunctionCommand", "ro.barata.mps.javascriptLanguage.structure.ChangePageCommand", "ro.barata.mps.javascriptLanguage.structure.DocumentIdCommand", "ro.barata.mps.javascriptLanguage.structure.DotExpressionCommand", "ro.barata.mps.javascriptLanguage.structure.DummyCommand", "ro.barata.mps.javascriptLanguage.structure.ForCommand", "ro.barata.mps.javascriptLanguage.structure.FunctionCommand", "ro.barata.mps.javascriptLanguage.structure.GetArrayValueCommand", "ro.barata.mps.javascriptLanguage.structure.InitializeVarCommand", "ro.barata.mps.javascriptLanguage.structure.InstanceValue", "ro.barata.mps.javascriptLanguage.structure.IntValue", "ro.barata.mps.javascriptLanguage.structure.JavascriptFile", "ro.barata.mps.javascriptLanguage.structure.JavascriptFunction", "ro.barata.mps.javascriptLanguage.structure.JavascriptIfCommand", "ro.barata.mps.javascriptLanguage.structure.JavascriptOperation", "ro.barata.mps.javascriptLanguage.structure.JavascriptParameter", "ro.barata.mps.javascriptLanguage.structure.NullValue", "ro.barata.mps.javascriptLanguage.structure.Parameter", "ro.barata.mps.javascriptLanguage.structure.ParameterRefence", "ro.barata.mps.javascriptLanguage.structure.PushHTMLCommand", "ro.barata.mps.javascriptLanguage.structure.QuerySelectorCommand", "ro.barata.mps.javascriptLanguage.structure.SimpleExpresion", "ro.barata.mps.javascriptLanguage.structure.StoreCommand", "ro.barata.mps.javascriptLanguage.structure.StringValue", "ro.barata.mps.javascriptLanguage.structure.SubmitCommand", "ro.barata.mps.javascriptLanguage.structure.VarCommand", "ro.barata.mps.javascriptLanguage.structure.VarIdCommand", "ro.barata.mps.javascriptLanguage.structure.VarNameCommand", "ro.barata.mps.javascriptLanguage.structure.VarValue", "ro.barata.mps.javascriptLanguage.structure.VarValueHREF"};
+  private static String[] stringSwitchCases_846f5o_a0a0b = new String[]{"ro.barata.mps.javascriptLanguage.structure.ActionVarValue", "ro.barata.mps.javascriptLanguage.structure.AddArrayElementCommand", "ro.barata.mps.javascriptLanguage.structure.AjaxJavascriptFunction", "ro.barata.mps.javascriptLanguage.structure.ArrayCommand", "ro.barata.mps.javascriptLanguage.structure.ArrayExpresion", "ro.barata.mps.javascriptLanguage.structure.AssignmentCommand", "ro.barata.mps.javascriptLanguage.structure.BooleanValue", "ro.barata.mps.javascriptLanguage.structure.CallFunctionCommand", "ro.barata.mps.javascriptLanguage.structure.ChangePageCommand", "ro.barata.mps.javascriptLanguage.structure.DocumentIdCommand", "ro.barata.mps.javascriptLanguage.structure.DotExpressionCommand", "ro.barata.mps.javascriptLanguage.structure.DummyCommand", "ro.barata.mps.javascriptLanguage.structure.ForCommand", "ro.barata.mps.javascriptLanguage.structure.FunctionCommand", "ro.barata.mps.javascriptLanguage.structure.GenericCommand", "ro.barata.mps.javascriptLanguage.structure.GetArrayValueCommand", "ro.barata.mps.javascriptLanguage.structure.InitializeVarCommand", "ro.barata.mps.javascriptLanguage.structure.InstanceValue", "ro.barata.mps.javascriptLanguage.structure.IntValue", "ro.barata.mps.javascriptLanguage.structure.JavascriptFile", "ro.barata.mps.javascriptLanguage.structure.JavascriptFunction", "ro.barata.mps.javascriptLanguage.structure.JavascriptIfCommand", "ro.barata.mps.javascriptLanguage.structure.JavascriptOperation", "ro.barata.mps.javascriptLanguage.structure.JavascriptParameter", "ro.barata.mps.javascriptLanguage.structure.NullValue", "ro.barata.mps.javascriptLanguage.structure.Parameter", "ro.barata.mps.javascriptLanguage.structure.ParameterRefence", "ro.barata.mps.javascriptLanguage.structure.PushHTMLCommand", "ro.barata.mps.javascriptLanguage.structure.QuerySelectorCommand", "ro.barata.mps.javascriptLanguage.structure.SimpleExpresion", "ro.barata.mps.javascriptLanguage.structure.StoreCommand", "ro.barata.mps.javascriptLanguage.structure.StringValue", "ro.barata.mps.javascriptLanguage.structure.SubmitCommand", "ro.barata.mps.javascriptLanguage.structure.VarCommand", "ro.barata.mps.javascriptLanguage.structure.VarIdCommand", "ro.barata.mps.javascriptLanguage.structure.VarNameCommand", "ro.barata.mps.javascriptLanguage.structure.VarValue", "ro.barata.mps.javascriptLanguage.structure.VarValueHREF"};
 }

@@ -75,6 +75,69 @@ public class ProductReferenceDAO {
     }
     return productreferences;
   }
+  public List<ProductReference> getQueryProductReferences(ProductReference productreference) throws SQLException {
+    List<ProductReference> productreferences = new ArrayList<ProductReference>();
+    String columns = "";
+    columns += "table0." + "id" + " \"parent" + "id" + "\",";
+    String sql = " from " + "discountProducts" + " table0";
+    String leftJoins = "";
+    int i = 1;
+    columns += "table" + i + "." + "id" + " \"" + "products" + "id" + "\",";
+    columns += "table" + i + "." + "name" + " \"" + "products" + "name" + "\",";
+    columns += "table" + i + "." + "description" + " \"" + "products" + "description" + "\",";
+    columns += "table" + i + "." + "units" + " \"" + "products" + "units" + "\",";
+    columns += "table" + i + "." + "price" + " \"" + "products" + "price" + "\",";
+    leftJoins += " left join " + "products" + " table" + i + " on table" + i + "." + "id" + "=table0." + "productId" + " ";
+    i++;
+    String values = "";
+    if (productreference.getId() != null) {
+      values += "id" + "='" + productreference.getId() + "' and ";
+    }
+    if (values.length() > 6) {
+      values = " where " + values.substring(0, values.length() - 5);
+    }
+
+    sql = "select " + columns.substring(0, columns.length() - 1) + sql + leftJoins + values;
+    System.out.println(sql);
+    ResultSet set = stmt.executeQuery(sql);
+    ProductReference foundProductReference = null;
+    while (set.next()) {
+      foundProductReference = new ProductReference();
+      foundProductReference.setId(Integer.valueOf(set.getBigDecimal("parent" + "id").intValue()));
+      {
+        Product reference = new Product();
+        if (set.getBigDecimal("products" + "id") != null) {
+          reference.setId(Integer.valueOf(set.getBigDecimal("products" + "id").intValue()));
+        }
+        if (set.getString("products" + "name") != null) {
+          reference.setProductName(set.getString("products" + "name"));
+        }
+        if (set.getString("products" + "description") != null) {
+          reference.setDescription(set.getString("products" + "description"));
+        }
+        if (set.getBigDecimal("products" + "units") != null) {
+          reference.setUnits(Integer.valueOf(set.getBigDecimal("products" + "units").intValue()));
+        }
+        if (set.getBigDecimal("products" + "price") != null) {
+          reference.setPrice(Integer.valueOf(set.getBigDecimal("products" + "price").intValue()));
+        }
+
+        if (reference.getId() != null) {
+          foundProductReference.setProduct(reference);
+        }
+      }
+      boolean flag = true;
+      for (ProductReference entity : productreferences) {
+        if (entity.getId() == foundProductReference.getId()) {
+          flag = false;
+        }
+      }
+      if (flag) {
+        productreferences.add(foundProductReference);
+      }
+    }
+    return productreferences;
+  }
 
   public List<ProductReference> findProductReferences(ProductReference productreference) throws SQLException {
     List<ProductReference> productreferences = new ArrayList<ProductReference>();
@@ -85,7 +148,6 @@ public class ProductReferenceDAO {
     if (productreference.getId() != null) {
       values += "id" + "='" + productreference.getId() + "' and ";
     }
-    int i = 1;
     if (values.length() > 6) {
       values = " where " + values.substring(0, values.length() - 5);
     }
@@ -196,7 +258,7 @@ public class ProductReferenceDAO {
       if (referenceProductDAO.findProducts(referenceProduct).size() == 0) {
         referenceProductDAO.addProduct(referenceProduct);
       }
-      values += "productId" + "=" + "'" + referenceProduct.getId() + "'";
+      values += "productId" + "=" + "'" + referenceProduct.getId() + "',";
     }
     String condition = " where ";
     if (oldproductreference.getId() != null) {

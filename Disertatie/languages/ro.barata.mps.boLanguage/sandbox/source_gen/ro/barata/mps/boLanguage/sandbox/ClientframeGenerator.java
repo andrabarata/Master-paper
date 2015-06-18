@@ -122,9 +122,6 @@ public class ClientframeGenerator {
     html += " class=\"" + "nav navbar-nav navbar-right" + "\"";
 
     html += ">";
-    html += "<li";
-    href = "";
-    html += ">";
 
     {
       User sessionUser = (User) session.getAttribute("user");
@@ -132,11 +129,14 @@ public class ClientframeGenerator {
       sessionUsers.add(sessionUser);
     }
     {
-      List<User> loop_a0b1a0a = sessionUsers;
-      for (int counter_a0b1a0a = 0; counter_a0b1a0a < loop_a0b1a0a.size(); counter_a0b1a0a++) {
-        user = loop_a0b1a0a.get(counter_a0b1a0a);
+      List<User> loop_a1b0a0 = sessionUsers;
+      for (int counter_a1b0a0 = 0; counter_a1b0a0 < loop_a1b0a0.size(); counter_a1b0a0++) {
+        user = loop_a1b0a0.get(counter_a1b0a0);
         value = "val";
         if (user != null && user.getPerson() != null) {
+          html += "<li";
+          href = "";
+          html += ">";
           html += "<label";
           href = "";
 
@@ -145,18 +145,33 @@ public class ClientframeGenerator {
           href = "";
 
           html += ">" + user.getUserName().toString() + "</label>";
+          html += "</li>";
+
         } else {
+          html += "<li";
+          href = "";
+          html += ">";
           html += "<a";
           href = "";
           html += " href=\"" + "/" + "login" + href + "\"";
 
           html += ">" + "Login" + "</a>";
+          html += "</li>";
+
+          html += "<li";
+          href = "";
+          html += ">";
+          html += "<a";
+          href = "";
+          html += " href=\"" + "/" + "register" + href + "\"";
+
+          html += ">" + "Register" + "</a>";
+          html += "</li>";
+
         }
 
       }
     }
-    html += "</li>";
-
     html += "</ul>";
 
     html += "</div>";

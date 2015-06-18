@@ -136,4 +136,5 @@ public class AdminHomeServlet extends HttpServlet {
     response.getWriter().println(AdminHomeGenerator.getContent(request.getSession(), requestParameterValue));
 
   }
+
 }

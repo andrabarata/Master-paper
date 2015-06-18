@@ -85,6 +85,86 @@ public class PersonDAO {
     }
     return persons;
   }
+  public List<Person> getQueryPersons(Person person) throws SQLException {
+    List<Person> persons = new ArrayList<Person>();
+    String columns = "";
+    columns += "table0." + "id" + " \"parent" + "id" + "\",";
+    columns += "table0." + "firstName" + " \"parent" + "firstName" + "\",";
+    columns += "table0." + "lastName" + " \"parent" + "lastName" + "\",";
+    String sql = " from " + "persons" + " table0";
+    String leftJoins = "";
+    int i = 1;
+    columns += "table" + i + "." + "id" + " \"" + "adresses" + "id" + "\",";
+    columns += "table" + i + "." + "line1" + " \"" + "adresses" + "line1" + "\",";
+    columns += "table" + i + "." + "line2" + " \"" + "adresses" + "line2" + "\",";
+    columns += "table" + i + "." + "postcode" + " \"" + "adresses" + "postcode" + "\",";
+    columns += "table" + i + "." + "state" + " \"" + "adresses" + "state" + "\",";
+    columns += "table" + i + "." + "country" + " \"" + "adresses" + "country" + "\",";
+    columns += "table" + i + "." + "city" + " \"" + "adresses" + "city" + "\",";
+    leftJoins += " left join " + "adresses" + " table" + i + " on table" + i + "." + "personId" + "=table0." + "id" + " ";
+    i++;
+    String values = "";
+    if (person.getId() != null) {
+      values += "id" + "='" + person.getId() + "' and ";
+    }
+    if (person.getFirstName() != null) {
+      values += "firstName" + "='" + person.getFirstName() + "' and ";
+    }
+    if (person.getLastName() != null) {
+      values += "lastName" + "='" + person.getLastName() + "' and ";
+    }
+    if (values.length() > 6) {
+      values = " where " + values.substring(0, values.length() - 5);
+    }
+
+    sql = "select " + columns.substring(0, columns.length() - 1) + sql + leftJoins + values;
+    System.out.println(sql);
+    ResultSet set = stmt.executeQuery(sql);
+    Person foundPerson = null;
+    while (set.next()) {
+      foundPerson = new Person();
+      foundPerson.setId(Integer.valueOf(set.getBigDecimal("parent" + "id").intValue()));
+      foundPerson.setFirstName(set.getString("parent" + "firstName"));
+      foundPerson.setLastName(set.getString("parent" + "lastName"));
+      {
+        Address child = new Address();
+        if (set.getBigDecimal("adresses" + "id") != null) {
+          child.setId(Integer.valueOf(set.getBigDecimal("adresses" + "id").intValue()));
+        }
+        if (set.getString("adresses" + "line1") != null) {
+          child.setLine1(set.getString("adresses" + "line1"));
+        }
+        if (set.getString("adresses" + "line2") != null) {
+          child.setLine2(set.getString("adresses" + "line2"));
+        }
+        if (set.getBigDecimal("adresses" + "postcode") != null) {
+          child.setPostcode(Integer.valueOf(set.getBigDecimal("adresses" + "postcode").intValue()));
+        }
+        if (set.getString("adresses" + "state") != null) {
+          child.setState(set.getString("adresses" + "state"));
+        }
+        if (set.getString("adresses" + "country") != null) {
+          child.setCountry(set.getString("adresses" + "country"));
+        }
+        if (set.getString("adresses" + "city") != null) {
+          child.setCity(set.getString("adresses" + "city"));
+        }
+        if (child.getId() != null) {
+          foundPerson.setAddress(child);
+        }
+      }
+      boolean flag = true;
+      for (Person entity : persons) {
+        if (entity.getId() == foundPerson.getId()) {
+          flag = false;
+        }
+      }
+      if (flag) {
+        persons.add(foundPerson);
+      }
+    }
+    return persons;
+  }
 
   public List<Person> findPersons(Person person) throws SQLException {
     List<Person> persons = new ArrayList<Person>();
@@ -105,7 +185,6 @@ public class PersonDAO {
     if (person.getLastName() != null) {
       values += "lastName" + "='" + person.getLastName() + "' and ";
     }
-    int i = 1;
     if (values.length() > 6) {
       values = " where " + values.substring(0, values.length() - 5);
     }

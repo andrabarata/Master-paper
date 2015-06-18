@@ -70,6 +70,76 @@ public class ProductDAO {
     }
     return products;
   }
+  public List<Product> getQueryProducts(Product product) throws SQLException {
+    List<Product> products = new ArrayList<Product>();
+    String columns = "";
+    columns += "table0." + "id" + " \"parent" + "id" + "\",";
+    columns += "table0." + "name" + " \"parent" + "name" + "\",";
+    columns += "table0." + "description" + " \"parent" + "description" + "\",";
+    columns += "table0." + "units" + " \"parent" + "units" + "\",";
+    columns += "table0." + "price" + " \"parent" + "price" + "\",";
+    String sql = " from " + "products" + " table0";
+    String leftJoins = "";
+    int i = 1;
+    columns += "table" + i + "." + "id" + " \"" + "attributeCategories" + "id" + "\",";
+    columns += "table" + i + "." + "name" + " \"" + "attributeCategories" + "name" + "\",";
+    leftJoins += " left join " + "attributeCategories" + " table" + i + " on table" + i + "." + "productId" + "=table0." + "id" + " ";
+    i++;
+    String values = "";
+    if (product.getId() != null) {
+      values += "id" + "='" + product.getId() + "' and ";
+    }
+    if (product.getProductName() != null) {
+      values += "name" + "='" + product.getProductName() + "' and ";
+    }
+    if (product.getDescription() != null) {
+      values += "description" + "='" + product.getDescription() + "' and ";
+    }
+    if (product.getUnits() != null) {
+      values += "units" + "='" + product.getUnits() + "' and ";
+    }
+    if (product.getPrice() != null) {
+      values += "price" + "='" + product.getPrice() + "' and ";
+    }
+    if (values.length() > 6) {
+      values = " where " + values.substring(0, values.length() - 5);
+    }
+
+    sql = "select " + columns.substring(0, columns.length() - 1) + sql + leftJoins + values;
+    System.out.println(sql);
+    ResultSet set = stmt.executeQuery(sql);
+    Product foundProduct = null;
+    while (set.next()) {
+      foundProduct = new Product();
+      foundProduct.setId(Integer.valueOf(set.getBigDecimal("parent" + "id").intValue()));
+      foundProduct.setProductName(set.getString("parent" + "name"));
+      foundProduct.setDescription(set.getString("parent" + "description"));
+      foundProduct.setUnits(Integer.valueOf(set.getBigDecimal("parent" + "units").intValue()));
+      foundProduct.setPrice(Integer.valueOf(set.getBigDecimal("parent" + "price").intValue()));
+      {
+        AttributeCategory child = new AttributeCategory();
+        if (set.getBigDecimal("attributeCategories" + "id") != null) {
+          child.setId(Integer.valueOf(set.getBigDecimal("attributeCategories" + "id").intValue()));
+        }
+        if (set.getString("attributeCategories" + "name") != null) {
+          child.setName(set.getString("attributeCategories" + "name"));
+        }
+        if (child.getId() != null) {
+          foundProduct.addAttributeCategory(child);
+        }
+      }
+      boolean flag = true;
+      for (Product entity : products) {
+        if (entity.getId() == foundProduct.getId()) {
+          flag = false;
+        }
+      }
+      if (flag) {
+        products.add(foundProduct);
+      }
+    }
+    return products;
+  }
 
   public List<Product> findProducts(Product product) throws SQLException {
     List<Product> products = new ArrayList<Product>();
@@ -100,7 +170,6 @@ public class ProductDAO {
     if (product.getPrice() != null) {
       values += "price" + "='" + product.getPrice() + "' and ";
     }
-    int i = 1;
     if (values.length() > 6) {
       values = " where " + values.substring(0, values.length() - 5);
     }

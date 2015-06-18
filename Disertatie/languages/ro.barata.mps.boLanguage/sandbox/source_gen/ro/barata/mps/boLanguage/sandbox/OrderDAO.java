@@ -61,6 +61,62 @@ public class OrderDAO {
     }
     return orders;
   }
+  public List<Order> getQueryOrders(Order order) throws SQLException {
+    List<Order> orders = new ArrayList<Order>();
+    String columns = "";
+    columns += "table0." + "id" + " \"parent" + "id" + "\",";
+    columns += "table0." + "dateCreated" + " \"parent" + "dateCreated" + "\",";
+    columns += "table0." + "status" + " \"parent" + "status" + "\",";
+    String sql = " from " + "orders" + " table0";
+    String leftJoins = "";
+    int i = 1;
+    columns += "table" + i + "." + "id" + " \"" + "orderItems" + "id" + "\",";
+    leftJoins += " left join " + "orderItems" + " table" + i + " on table" + i + "." + "orderId" + "=table0." + "id" + " ";
+    i++;
+    String values = "";
+    if (order.getId() != null) {
+      values += "id" + "='" + order.getId() + "' and ";
+    }
+    if (order.getDateCreated() != null) {
+      values += "dateCreated" + "='" + order.getDateCreated() + "' and ";
+    }
+    if (order.getStatus() != null) {
+      values += "status" + "='" + order.getStatus() + "' and ";
+    }
+    if (values.length() > 6) {
+      values = " where " + values.substring(0, values.length() - 5);
+    }
+
+    sql = "select " + columns.substring(0, columns.length() - 1) + sql + leftJoins + values;
+    System.out.println(sql);
+    ResultSet set = stmt.executeQuery(sql);
+    Order foundOrder = null;
+    while (set.next()) {
+      foundOrder = new Order();
+      foundOrder.setId(Integer.valueOf(set.getBigDecimal("parent" + "id").intValue()));
+      foundOrder.setDateCreated(Integer.valueOf(set.getBigDecimal("parent" + "dateCreated").intValue()));
+      foundOrder.setStatus(set.getString("parent" + "status"));
+      {
+        OrderItem child = new OrderItem();
+        if (set.getBigDecimal("orderItems" + "id") != null) {
+          child.setId(Integer.valueOf(set.getBigDecimal("orderItems" + "id").intValue()));
+        }
+        if (child.getId() != null) {
+          foundOrder.addOrderItem(child);
+        }
+      }
+      boolean flag = true;
+      for (Order entity : orders) {
+        if (entity.getId() == foundOrder.getId()) {
+          flag = false;
+        }
+      }
+      if (flag) {
+        orders.add(foundOrder);
+      }
+    }
+    return orders;
+  }
 
   public List<Order> findOrders(Order order) throws SQLException {
     List<Order> orders = new ArrayList<Order>();
@@ -81,7 +137,6 @@ public class OrderDAO {
     if (order.getStatus() != null) {
       values += "status" + "='" + order.getStatus() + "' and ";
     }
-    int i = 1;
     if (values.length() > 6) {
       values = " where " + values.substring(0, values.length() - 5);
     }

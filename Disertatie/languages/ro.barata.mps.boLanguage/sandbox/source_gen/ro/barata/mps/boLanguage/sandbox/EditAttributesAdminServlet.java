@@ -221,10 +221,6 @@ public class EditAttributesAdminServlet extends HttpServlet {
           attributeDAO.updateAttribute(attribute, newAttribute);
         }
       }
-
-
-
-
     }
 
     response.getWriter().println(EditAttributesAdminGenerator.getContent(request.getSession(), requestParameterValue));
@@ -266,4 +262,5 @@ public class EditAttributesAdminServlet extends HttpServlet {
     response.getWriter().println(EditAttributesAdminGenerator.getContent(request.getSession(), requestParameterValue));
 
   }
+
 }

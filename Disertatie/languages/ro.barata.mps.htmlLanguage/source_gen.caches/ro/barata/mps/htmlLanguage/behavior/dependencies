@@ -91,6 +91,7 @@
     <classNode dependClassName="ro.barata.mps.htmlLanguage.behavior.CounterId_BehaviorDescriptor" />
     <classNode dependClassName="ro.barata.mps.htmlLanguage.behavior.DatabaseLocation_BehaviorDescriptor" />
     <classNode dependClassName="ro.barata.mps.htmlLanguage.behavior.DatabaseOperation_BehaviorDescriptor" />
+    <classNode dependClassName="ro.barata.mps.htmlLanguage.behavior.DeleteFromSessionOperation_BehaviorDescriptor" />
     <classNode dependClassName="ro.barata.mps.htmlLanguage.behavior.DivContainer_BehaviorDescriptor" />
     <classNode dependClassName="ro.barata.mps.htmlLanguage.behavior.ExpressionReference_BehaviorDescriptor" />
     <classNode dependClassName="ro.barata.mps.htmlLanguage.behavior.FieldsetContainer_BehaviorDescriptor" />
@@ -224,6 +225,16 @@
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="ro.barata.mps.htmlLanguage.behavior.AbstractOperation_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="ro.barata.mps.htmlLanguage.behavior.DeleteFromSessionOperation_BehaviorDescriptor" file="DeleteFromSessionOperation_BehaviorDescriptor.java">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.INamedConcept_Behavior" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.INamedConcept_BehaviorDescriptor" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
+    <classNode dependClassName="ro.barata.mps.htmlLanguage.behavior.AbstractOperation_BehaviorDescriptor" />
+    <classNode extendsClassName="java.lang.Cloneable" />
     <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
   </dependency>
   <dependency className="ro.barata.mps.htmlLanguage.behavior.DivContainer_BehaviorDescriptor" file="DivContainer_BehaviorDescriptor.java">

@@ -1082,5 +1082,20 @@
       <node concept="l2Vlx" id="TsI6i2$6O8" role="2iSdaV" />
     </node>
   </node>
+  <node concept="24kQdi" id="VSIVkUgB3e">
+    <property role="3GE5qa" value="javascript" />
+    <ref role="1XX52x" to="jel9:VSIVkUgB36" resolve="BooleanValue" />
+    <node concept="3EZMnI" id="VSIVkUgCZ7" role="2wV5jI">
+      <node concept="3F0ifn" id="VSIVkUjiQL" role="3EZMnx">
+        <property role="3F0ifm" value="@" />
+        <ref role="1k5W1q" node="7KwyEUhVrMo" resolve="IndicatorSymbol" />
+      </node>
+      <node concept="3F0A7n" id="VSIVkUgCZe" role="3EZMnx">
+        <ref role="1NtTu8" to="jel9:VSIVkUgB37" resolve="value" />
+        <ref role="1k5W1q" node="7KwyEUhVrQm" resolve="Indicator" />
+      </node>
+      <node concept="l2Vlx" id="VSIVkUgCZa" role="2iSdaV" />
+    </node>
+  </node>
 </model>
 

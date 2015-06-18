@@ -100,6 +100,94 @@ public class OrderItemDAO {
     }
     return orderitems;
   }
+  public List<OrderItem> getQueryOrderItems(OrderItem orderitem) throws SQLException {
+    List<OrderItem> orderitems = new ArrayList<OrderItem>();
+    String columns = "";
+    columns += "table0." + "id" + " \"parent" + "id" + "\",";
+    String sql = " from " + "orderItems" + " table0";
+    String leftJoins = "";
+    int i = 1;
+    columns += "table" + i + "." + "id" + " \"" + "products" + "id" + "\",";
+    columns += "table" + i + "." + "name" + " \"" + "products" + "name" + "\",";
+    columns += "table" + i + "." + "description" + " \"" + "products" + "description" + "\",";
+    columns += "table" + i + "." + "units" + " \"" + "products" + "units" + "\",";
+    columns += "table" + i + "." + "price" + " \"" + "products" + "price" + "\",";
+    leftJoins += " left join " + "products" + " table" + i + " on table" + i + "." + "id" + "=table0." + "productId" + " ";
+    i++;
+    columns += "table" + i + "." + "id" + " \"" + "discounts" + "id" + "\",";
+    columns += "table" + i + "." + "subject" + " \"" + "discounts" + "subject" + "\",";
+    columns += "table" + i + "." + "description" + " \"" + "discounts" + "description" + "\",";
+    columns += "table" + i + "." + "price" + " \"" + "discounts" + "price" + "\",";
+    leftJoins += " left join " + "discounts" + " table" + i + " on table" + i + "." + "id" + "=table0." + "promotionId" + " ";
+    i++;
+    String values = "";
+    if (orderitem.getId() != null) {
+      values += "id" + "='" + orderitem.getId() + "' and ";
+    }
+    if (values.length() > 6) {
+      values = " where " + values.substring(0, values.length() - 5);
+    }
+
+    sql = "select " + columns.substring(0, columns.length() - 1) + sql + leftJoins + values;
+    System.out.println(sql);
+    ResultSet set = stmt.executeQuery(sql);
+    OrderItem foundOrderItem = null;
+    while (set.next()) {
+      foundOrderItem = new OrderItem();
+      foundOrderItem.setId(Integer.valueOf(set.getBigDecimal("parent" + "id").intValue()));
+      {
+        Product reference = new Product();
+        if (set.getBigDecimal("products" + "id") != null) {
+          reference.setId(Integer.valueOf(set.getBigDecimal("products" + "id").intValue()));
+        }
+        if (set.getString("products" + "name") != null) {
+          reference.setProductName(set.getString("products" + "name"));
+        }
+        if (set.getString("products" + "description") != null) {
+          reference.setDescription(set.getString("products" + "description"));
+        }
+        if (set.getBigDecimal("products" + "units") != null) {
+          reference.setUnits(Integer.valueOf(set.getBigDecimal("products" + "units").intValue()));
+        }
+        if (set.getBigDecimal("products" + "price") != null) {
+          reference.setPrice(Integer.valueOf(set.getBigDecimal("products" + "price").intValue()));
+        }
+
+        if (reference.getId() != null) {
+          foundOrderItem.setProduct(reference);
+        }
+      }
+      {
+        Discount reference = new Discount();
+        if (set.getBigDecimal("discounts" + "id") != null) {
+          reference.setId(Integer.valueOf(set.getBigDecimal("discounts" + "id").intValue()));
+        }
+        if (set.getString("discounts" + "subject") != null) {
+          reference.setSubject(set.getString("discounts" + "subject"));
+        }
+        if (set.getString("discounts" + "description") != null) {
+          reference.setDescription(set.getString("discounts" + "description"));
+        }
+        if (set.getBigDecimal("discounts" + "price") != null) {
+          reference.setPrice(Integer.valueOf(set.getBigDecimal("discounts" + "price").intValue()));
+        }
+
+        if (reference.getId() != null) {
+          foundOrderItem.setDiscount(reference);
+        }
+      }
+      boolean flag = true;
+      for (OrderItem entity : orderitems) {
+        if (entity.getId() == foundOrderItem.getId()) {
+          flag = false;
+        }
+      }
+      if (flag) {
+        orderitems.add(foundOrderItem);
+      }
+    }
+    return orderitems;
+  }
 
   public List<OrderItem> findOrderItems(OrderItem orderitem) throws SQLException {
     List<OrderItem> orderitems = new ArrayList<OrderItem>();
@@ -110,7 +198,6 @@ public class OrderItemDAO {
     if (orderitem.getId() != null) {
       values += "id" + "='" + orderitem.getId() + "' and ";
     }
-    int i = 1;
     if (values.length() > 6) {
       values = " where " + values.substring(0, values.length() - 5);
     }
@@ -262,7 +349,7 @@ public class OrderItemDAO {
       if (referenceProductDAO.findProducts(referenceProduct).size() == 0) {
         referenceProductDAO.addProduct(referenceProduct);
       }
-      values += "productId" + "=" + "'" + referenceProduct.getId() + "'";
+      values += "productId" + "=" + "'" + referenceProduct.getId() + "',";
     }
     if (neworderitem.getDiscount() != null) {
       Discount referenceDiscount = neworderitem.getDiscount();
@@ -270,7 +357,7 @@ public class OrderItemDAO {
       if (referenceDiscountDAO.findDiscounts(referenceDiscount).size() == 0) {
         referenceDiscountDAO.addDiscount(referenceDiscount);
       }
-      values += "promotionId" + "=" + "'" + referenceDiscount.getId() + "'";
+      values += "promotionId" + "=" + "'" + referenceDiscount.getId() + "',";
     }
     String condition = " where ";
     if (oldorderitem.getId() != null) {

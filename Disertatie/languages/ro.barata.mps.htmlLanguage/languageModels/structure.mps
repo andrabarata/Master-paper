@@ -1295,6 +1295,10 @@
       <property role="TrG5h" value="loopType" />
       <ref role="AX2Wp" node="7w7oph2i0k2" resolve="LoopType" />
     </node>
+    <node concept="1TJgyi" id="XdzFqpf9W6" role="1TKVEl">
+      <property role="TrG5h" value="individually" />
+      <ref role="AX2Wp" to="tpck:fKAQMTB" resolve="boolean" />
+    </node>
   </node>
   <node concept="AxPO7" id="7w7oph2i0k2">
     <property role="3GE5qa" value="html.commands.operations" />
@@ -1311,6 +1315,21 @@
     <node concept="M4N5e" id="7w7oph2i0k7" role="M5hS2">
       <property role="1uS6qv" value="both" />
       <property role="1uS6qo" value="both" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="XdzFqrxDO0">
+    <property role="3GE5qa" value="html.commands.operations" />
+    <property role="TrG5h" value="DeleteFromSessionOperation" />
+    <property role="34LRSv" value="delete from session" />
+    <ref role="1TJDcQ" node="41TyEbjwOzs" resolve="AbstractOperation" />
+    <node concept="1TJgyj" id="XdzFqrxDO3" role="1TKVEi">
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="classReference" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" to="tpce:f_TIwhg" resolve="ConceptDeclaration" />
+    </node>
+    <node concept="PrWs8" id="XdzFqrxDO4" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
   </node>
 </model>

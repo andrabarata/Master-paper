@@ -87,6 +87,21 @@
     <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
     <classNode extendsClassName="jetbrains.mps.nodeEditor.DefaultNodeEditor" />
   </dependency>
+  <dependency className="ro.barata.mps.javascriptLanguage.editor.BooleanValue_Editor" file="BooleanValue_Editor.java">
+    <classNode dependClassName="java.lang.Class" />
+    <classNode dependClassName="jetbrains.mps.editor.runtime.style.StyleImpl" />
+    <classNode dependClassName="jetbrains.mps.lang.editor.cellProviders.PropertyCellProvider" />
+    <classNode dependClassName="jetbrains.mps.nodeEditor.EditorManager" />
+    <classNode dependClassName="jetbrains.mps.nodeEditor.cellProviders.CellProviderWithRole" />
+    <classNode dependClassName="jetbrains.mps.nodeEditor.cells.EditorCell_Collection" />
+    <classNode dependClassName="jetbrains.mps.nodeEditor.cells.EditorCell_Constant" />
+    <classNode dependClassName="jetbrains.mps.openapi.editor.EditorContext" />
+    <classNode dependClassName="jetbrains.mps.openapi.editor.cells.EditorCell" />
+    <classNode dependClassName="jetbrains.mps.openapi.editor.style.Style" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
+    <classNode dependClassName="ro.barata.mps.javascriptLanguage.editor.JavascriptStylesheet_StyleSheet" />
+    <classNode extendsClassName="jetbrains.mps.nodeEditor.DefaultNodeEditor" />
+  </dependency>
   <dependency className="ro.barata.mps.javascriptLanguage.editor.CallFunctionCommand_Editor" file="CallFunctionCommand_Editor.java">
     <classNode dependClassName="java.lang.Class" />
     <classNode dependClassName="java.lang.Override" />
@@ -171,6 +186,7 @@
     <classNode dependClassName="ro.barata.mps.javascriptLanguage.editor.ArrayCommand_Editor" />
     <classNode dependClassName="ro.barata.mps.javascriptLanguage.editor.ArrayExpresion_Editor" />
     <classNode dependClassName="ro.barata.mps.javascriptLanguage.editor.AssignmentCommand_Editor" />
+    <classNode dependClassName="ro.barata.mps.javascriptLanguage.editor.BooleanValue_Editor" />
     <classNode dependClassName="ro.barata.mps.javascriptLanguage.editor.CallFunctionCommand_Editor" />
     <classNode dependClassName="ro.barata.mps.javascriptLanguage.editor.ChangePageCommand_Editor" />
     <classNode dependClassName="ro.barata.mps.javascriptLanguage.editor.DocumentIdCommand_Editor" />

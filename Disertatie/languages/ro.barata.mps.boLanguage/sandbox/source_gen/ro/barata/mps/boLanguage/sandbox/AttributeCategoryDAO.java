@@ -68,6 +68,65 @@ public class AttributeCategoryDAO {
     }
     return attributecategorys;
   }
+  public List<AttributeCategory> getQueryAttributeCategorys(AttributeCategory attributecategory) throws SQLException {
+    List<AttributeCategory> attributecategorys = new ArrayList<AttributeCategory>();
+    String columns = "";
+    columns += "table0." + "id" + " \"parent" + "id" + "\",";
+    columns += "table0." + "name" + " \"parent" + "name" + "\",";
+    String sql = " from " + "attributeCategories" + " table0";
+    String leftJoins = "";
+    int i = 1;
+    columns += "table" + i + "." + "id" + " \"" + "attributes" + "id" + "\",";
+    columns += "table" + i + "." + "name" + " \"" + "attributes" + "name" + "\",";
+    columns += "table" + i + "." + "value" + " \"" + "attributes" + "value" + "\",";
+    leftJoins += " left join " + "attributes" + " table" + i + " on table" + i + "." + "attributeCategoryId" + "=table0." + "id" + " ";
+    i++;
+    String values = "";
+    if (attributecategory.getId() != null) {
+      values += "id" + "='" + attributecategory.getId() + "' and ";
+    }
+    if (attributecategory.getName() != null) {
+      values += "name" + "='" + attributecategory.getName() + "' and ";
+    }
+    if (values.length() > 6) {
+      values = " where " + values.substring(0, values.length() - 5);
+    }
+
+    sql = "select " + columns.substring(0, columns.length() - 1) + sql + leftJoins + values;
+    System.out.println(sql);
+    ResultSet set = stmt.executeQuery(sql);
+    AttributeCategory foundAttributeCategory = null;
+    while (set.next()) {
+      foundAttributeCategory = new AttributeCategory();
+      foundAttributeCategory.setId(Integer.valueOf(set.getBigDecimal("parent" + "id").intValue()));
+      foundAttributeCategory.setName(set.getString("parent" + "name"));
+      {
+        Attribute child = new Attribute();
+        if (set.getBigDecimal("attributes" + "id") != null) {
+          child.setId(Integer.valueOf(set.getBigDecimal("attributes" + "id").intValue()));
+        }
+        if (set.getString("attributes" + "name") != null) {
+          child.setAttributeName(set.getString("attributes" + "name"));
+        }
+        if (set.getString("attributes" + "value") != null) {
+          child.setAttributeValue(set.getString("attributes" + "value"));
+        }
+        if (child.getId() != null) {
+          foundAttributeCategory.addAttribute(child);
+        }
+      }
+      boolean flag = true;
+      for (AttributeCategory entity : attributecategorys) {
+        if (entity.getId() == foundAttributeCategory.getId()) {
+          flag = false;
+        }
+      }
+      if (flag) {
+        attributecategorys.add(foundAttributeCategory);
+      }
+    }
+    return attributecategorys;
+  }
 
   public List<AttributeCategory> findAttributeCategorys(AttributeCategory attributecategory) throws SQLException {
     List<AttributeCategory> attributecategorys = new ArrayList<AttributeCategory>();
@@ -83,7 +142,6 @@ public class AttributeCategoryDAO {
     if (attributecategory.getName() != null) {
       values += "name" + "='" + attributecategory.getName() + "' and ";
     }
-    int i = 1;
     if (values.length() > 6) {
       values = " where " + values.substring(0, values.length() - 5);
     }

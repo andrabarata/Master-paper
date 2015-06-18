@@ -57,6 +57,34 @@ public class HTMLPage_Behavior {
     });
     return operations;
   }
+  public static List<SNode> call_getDeleteNonDupplicates_3501040996807816555(SNode thisNode) {
+    final List<SNode> operations = ListSequence.fromList(new ArrayList<SNode>());
+    ListSequence.fromList(SLinkOperations.getChildren(thisNode, MetaAdapterFactory.getContainmentLink(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x233f341bd1c976e1L, 0x4c7f2ab523e43958L, "actions"))).visitAll(new IVisitor<SNode>() {
+      public void visit(SNode action) {
+
+        ListSequence.fromList(SLinkOperations.getChildren(action, MetaAdapterFactory.getContainmentLink(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x4c7f2ab523e3fae4L, 0x40798aa2d3833ccdL, "operations"))).where(new IWhereFilter<SNode>() {
+          public boolean accept(SNode it) {
+            return SNodeOperations.isInstanceOf(it, MetaAdapterFactory.getConcept(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0xf4d8eb69b869d00L, "ro.barata.mps.htmlLanguage.structure.DeleteFromSessionOperation"));
+          }
+        }).visitAll(new IVisitor<SNode>() {
+          public void visit(final SNode it) {
+            final Wrappers._boolean contains = new Wrappers._boolean(false);
+            ListSequence.fromList(operations).visitAll(new IVisitor<SNode>() {
+              public void visit(SNode it2) {
+                if (SPropertyOperations.hasValue(SLinkOperations.getTarget(it2, MetaAdapterFactory.getReferenceLink(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0xf4d8eb69b869d00L, 0xf4d8eb69b869d03L, "classReference")), MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), SPropertyOperations.getString(SLinkOperations.getTarget(SNodeOperations.cast(it, MetaAdapterFactory.getConcept(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0xf4d8eb69b869d00L, "ro.barata.mps.htmlLanguage.structure.DeleteFromSessionOperation")), MetaAdapterFactory.getReferenceLink(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0xf4d8eb69b869d00L, 0xf4d8eb69b869d03L, "classReference")), MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name")))) {
+                  contains.value = true;
+                }
+              }
+            });
+            if (!(contains.value)) {
+              ListSequence.fromList(operations).addElement(SNodeOperations.cast(it, MetaAdapterFactory.getConcept(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0xf4d8eb69b869d00L, "ro.barata.mps.htmlLanguage.structure.DeleteFromSessionOperation")));
+            }
+          }
+        });
+      }
+    });
+    return operations;
+  }
   public static List<SNode> call_getDBNonDupplicates_6355225720458970057(SNode thisNode) {
     final List<SNode> operations = ListSequence.fromList(new ArrayList<SNode>());
     ListSequence.fromList(SLinkOperations.getChildren(thisNode, MetaAdapterFactory.getContainmentLink(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x233f341bd1c976e1L, 0x4c7f2ab523e43958L, "actions"))).visitAll(new IVisitor<SNode>() {
@@ -158,6 +186,30 @@ public class HTMLPage_Behavior {
         }
       }
     }
+    return values;
+  }
+  public static List<SNode> call_getCallFunctions_1078818497798623525(final SNode thisNode) {
+    final List<SNode> values = ListSequence.fromList(new ArrayList<SNode>());
+    final List<String> names = ListSequence.fromList(new ArrayList<String>());
+    ListSequence.fromList(SModelOperations.nodes(SNodeOperations.getModel(thisNode), MetaAdapterFactory.getConcept(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x40798aa2d3b06627L, "ro.barata.mps.javascriptLanguage.structure.CallFunctionCommand"))).where(new IWhereFilter<SNode>() {
+      public boolean accept(SNode it) {
+        return SPropertyOperations.hasValue(SNodeOperations.getNodeAncestor(it, MetaAdapterFactory.getConcept(0xb9cb18bda29f47d8L, 0x9dd0544a91c4eef2L, 0x233f341bd1c976e1L, "ro.barata.mps.htmlLanguage.structure.HTMLPage"), false, false), MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), SPropertyOperations.getString(thisNode, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name")));
+      }
+    }).visitAll(new IVisitor<SNode>() {
+      public void visit(SNode it) {
+        String fileName = SPropertyOperations.getString(SNodeOperations.getNodeAncestor(SLinkOperations.getTarget(it, MetaAdapterFactory.getReferenceLink(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x40798aa2d3b06627L, 0x40798aa2d3b0709aL, "function")), MetaAdapterFactory.getConcept(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x4c7f2ab523e8fe08L, "ro.barata.mps.javascriptLanguage.structure.JavascriptFile"), false, false), MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"));
+        if (!(ListSequence.fromList(names).contains(fileName))) {
+          ListSequence.fromList(names).addElement(fileName);
+        }
+      }
+    });
+    ListSequence.fromList(names).visitAll(new IVisitor<String>() {
+      public void visit(String it) {
+        SNode val = SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(MetaAdapterFactory.getConcept(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x3ab9167f5c1a58d0L, "ro.barata.mps.javascriptLanguage.structure.StringValue")));
+        SPropertyOperations.set(val, MetaAdapterFactory.getProperty(0xd3ddb860292b4451L, 0x8638cec4e3c81b18L, 0x3ab9167f5c1a58d0L, 0x3ab9167f5c1a58d1L, "value"), it);
+        ListSequence.fromList(values).addElement(val);
+      }
+    });
     return values;
   }
 }

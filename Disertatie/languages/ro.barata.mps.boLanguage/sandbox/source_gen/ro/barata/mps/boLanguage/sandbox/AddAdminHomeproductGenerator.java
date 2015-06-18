@@ -18,6 +18,7 @@ public class AddAdminHomeproductGenerator {
     html += "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">";
     html += "<script src=\"/" + "jquery.js" + "\"></script>";
     html += "<script src=\"/" + "bootstrap.min.js" + "\"></script>";
+    html += "<script src=\"/" + "adminframe.js" + "\"></script>";
     html += "<script src=\"/" + "addAdminHomeproduct.js" + "\"></script>";
     html += "<script src=\"/general.js\"></script>";
     html += "<link rel=\"stylesheet\" type=\"text/css\" href=\"/" + "main.css" + "\"/>";

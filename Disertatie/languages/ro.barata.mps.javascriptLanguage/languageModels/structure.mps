@@ -170,6 +170,9 @@
     <node concept="PrWs8" id="7oklijIMpuZ" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
+    <node concept="PrWs8" id="VSIVkUFo5N" role="PzmwI">
+      <ref role="PrY4T" node="2OiIxnYG7OC" resolve="JavascriptValue" />
+    </node>
   </node>
   <node concept="1TIwiD" id="2FtF2DIKQKc">
     <property role="3GE5qa" value="javascript.commands" />
@@ -523,6 +526,18 @@
       <property role="1uS6qv" value="className" />
       <property role="1uS6qo" value="className" />
     </node>
+    <node concept="M4N5e" id="VSIVkU6mDV" role="M5hS2">
+      <property role="1uS6qv" value="options" />
+      <property role="1uS6qo" value="options" />
+    </node>
+    <node concept="M4N5e" id="VSIVkU6F8c" role="M5hS2">
+      <property role="1uS6qv" value="selected" />
+      <property role="1uS6qo" value="selected" />
+    </node>
+    <node concept="M4N5e" id="VSIVkUmMBy" role="M5hS2">
+      <property role="1uS6qv" value="outerHTML" />
+      <property role="1uS6qo" value="outerHTML" />
+    </node>
   </node>
   <node concept="1TIwiD" id="2FtF2DJW$C8">
     <property role="3GE5qa" value="javascript.commands.var" />
@@ -773,6 +788,19 @@
     <node concept="1TJgyi" id="TsI6i2$6NW" role="1TKVEl">
       <property role="TrG5h" value="command" />
       <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="VSIVkUgB36">
+    <property role="3GE5qa" value="javascript" />
+    <property role="TrG5h" value="BooleanValue" />
+    <property role="34LRSv" value="boolean" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyi" id="VSIVkUgB37" role="1TKVEl">
+      <property role="TrG5h" value="value" />
+      <ref role="AX2Wp" to="tpck:fKAQMTB" resolve="boolean" />
+    </node>
+    <node concept="PrWs8" id="VSIVkUgB38" role="PzmwI">
+      <ref role="PrY4T" node="2OiIxnYG7OC" resolve="JavascriptValue" />
     </node>
   </node>
 </model>

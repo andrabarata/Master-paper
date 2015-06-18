@@ -52,4 +52,5 @@ public class ProductsServlet extends HttpServlet {
       response.getWriter().println(ProductsGenerator.getContent(request.getSession(), requestParameterValue));
     }
   }
+
 }

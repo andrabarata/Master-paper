@@ -18,6 +18,7 @@ public class AdminproductsGenerator {
     html += "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">";
     html += "<script src=\"/" + "jquery.js" + "\"></script>";
     html += "<script src=\"/" + "bootstrap.min.js" + "\"></script>";
+    html += "<script src=\"/" + "adminframe.js" + "\"></script>";
     html += "<script src=\"/" + "adminproducts.js" + "\"></script>";
     html += "<script src=\"/general.js\"></script>";
     html += "<link rel=\"stylesheet\" type=\"text/css\" href=\"/" + "main.css" + "\"/>";

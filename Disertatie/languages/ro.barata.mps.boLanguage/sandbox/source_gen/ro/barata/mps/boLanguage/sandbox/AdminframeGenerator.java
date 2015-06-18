@@ -19,6 +19,7 @@ public class AdminframeGenerator {
     html += "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">";
     html += "<script src=\"/" + "jquery.js" + "\"></script>";
     html += "<script src=\"/" + "bootstrap.min.js" + "\"></script>";
+    html += "<script src=\"/" + "adminframe.js" + "\"></script>";
     html += "<script src=\"/general.js\"></script>";
     html += "<link rel=\"stylesheet\" type=\"text/css\" href=\"/" + "main.css" + "\"/>";
     html += "<link rel=\"stylesheet\" type=\"text/css\" href=\"/" + "pure-min.css" + "\"/>";
@@ -148,9 +149,9 @@ public class AdminframeGenerator {
       sessionUsers.add(sessionUser);
     }
     {
-      List<User> loop_a1b0a0 = sessionUsers;
-      for (int counter_a1b0a0 = 0; counter_a1b0a0 < loop_a1b0a0.size(); counter_a1b0a0++) {
-        user = loop_a1b0a0.get(counter_a1b0a0);
+      List<User> loop_a1b0a0_0 = sessionUsers;
+      for (int counter_a1b0a0_0 = 0; counter_a1b0a0_0 < loop_a1b0a0_0.size(); counter_a1b0a0_0++) {
+        user = loop_a1b0a0_0.get(counter_a1b0a0_0);
         value = "val";
         if (user != null && user.getPerson() != null) {
           html += "<li";
@@ -172,6 +173,9 @@ public class AdminframeGenerator {
           html += "<a";
           href = "";
           html += " href=\"" + "#" + "\"";
+          parameters = "";
+          html += " " + "onclick" + "=\"" + "signOut" + "(" + parameters + ")\"";
+
 
           html += ">" + "Sign out" + "</a>";
           html += "</li>";

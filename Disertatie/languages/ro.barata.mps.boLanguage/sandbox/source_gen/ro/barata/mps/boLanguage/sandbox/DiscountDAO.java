@@ -64,6 +64,67 @@ public class DiscountDAO {
     }
     return discounts;
   }
+  public List<Discount> getQueryDiscounts(Discount discount) throws SQLException {
+    List<Discount> discounts = new ArrayList<Discount>();
+    String columns = "";
+    columns += "table0." + "id" + " \"parent" + "id" + "\",";
+    columns += "table0." + "subject" + " \"parent" + "subject" + "\",";
+    columns += "table0." + "description" + " \"parent" + "description" + "\",";
+    columns += "table0." + "price" + " \"parent" + "price" + "\",";
+    String sql = " from " + "discounts" + " table0";
+    String leftJoins = "";
+    int i = 1;
+    columns += "table" + i + "." + "id" + " \"" + "discountProducts" + "id" + "\",";
+    leftJoins += " left join " + "discountProducts" + " table" + i + " on table" + i + "." + "promotionId" + "=table0." + "id" + " ";
+    i++;
+    String values = "";
+    if (discount.getId() != null) {
+      values += "id" + "='" + discount.getId() + "' and ";
+    }
+    if (discount.getSubject() != null) {
+      values += "subject" + "='" + discount.getSubject() + "' and ";
+    }
+    if (discount.getDescription() != null) {
+      values += "description" + "='" + discount.getDescription() + "' and ";
+    }
+    if (discount.getPrice() != null) {
+      values += "price" + "='" + discount.getPrice() + "' and ";
+    }
+    if (values.length() > 6) {
+      values = " where " + values.substring(0, values.length() - 5);
+    }
+
+    sql = "select " + columns.substring(0, columns.length() - 1) + sql + leftJoins + values;
+    System.out.println(sql);
+    ResultSet set = stmt.executeQuery(sql);
+    Discount foundDiscount = null;
+    while (set.next()) {
+      foundDiscount = new Discount();
+      foundDiscount.setId(Integer.valueOf(set.getBigDecimal("parent" + "id").intValue()));
+      foundDiscount.setSubject(set.getString("parent" + "subject"));
+      foundDiscount.setDescription(set.getString("parent" + "description"));
+      foundDiscount.setPrice(Integer.valueOf(set.getBigDecimal("parent" + "price").intValue()));
+      {
+        ProductReference child = new ProductReference();
+        if (set.getBigDecimal("discountProducts" + "id") != null) {
+          child.setId(Integer.valueOf(set.getBigDecimal("discountProducts" + "id").intValue()));
+        }
+        if (child.getId() != null) {
+          foundDiscount.addProductReference(child);
+        }
+      }
+      boolean flag = true;
+      for (Discount entity : discounts) {
+        if (entity.getId() == foundDiscount.getId()) {
+          flag = false;
+        }
+      }
+      if (flag) {
+        discounts.add(foundDiscount);
+      }
+    }
+    return discounts;
+  }
 
   public List<Discount> findDiscounts(Discount discount) throws SQLException {
     List<Discount> discounts = new ArrayList<Discount>();
@@ -89,7 +150,6 @@ public class DiscountDAO {
     if (discount.getPrice() != null) {
       values += "price" + "='" + discount.getPrice() + "' and ";
     }
-    int i = 1;
     if (values.length() > 6) {
       values = " where " + values.substring(0, values.length() - 5);
     }
